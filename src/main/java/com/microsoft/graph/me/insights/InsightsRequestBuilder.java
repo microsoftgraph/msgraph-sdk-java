@@ -322,7 +322,7 @@ public class InsightsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.insights.shared.item collection
      * @param id Unique identifier of the item
-     * @return a sharedInsightItemRequestBuilder
+     * @return a SharedInsightItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedInsightItemRequestBuilder shared(@javax.annotation.Nonnull final String id) {
@@ -334,7 +334,7 @@ public class InsightsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.insights.trending.item collection
      * @param id Unique identifier of the item
-     * @return a trendingItemRequestBuilder
+     * @return a TrendingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TrendingItemRequestBuilder trending(@javax.annotation.Nonnull final String id) {
@@ -346,7 +346,7 @@ public class InsightsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.insights.used.item collection
      * @param id Unique identifier of the item
-     * @return a usedInsightItemRequestBuilder
+     * @return a UsedInsightItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UsedInsightItemRequestBuilder used(@javax.annotation.Nonnull final String id) {

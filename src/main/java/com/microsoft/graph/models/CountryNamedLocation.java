@@ -20,6 +20,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     public CountryNamedLocation() {
         super();
+        this.setOdataType("#microsoft.graph.countryNamedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

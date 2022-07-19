@@ -307,7 +307,7 @@ public class ConversationMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationMemberItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationMemberItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ConversationMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public ConversationMemberItemRequestBuilderGetQueryParameters queryParameters = new ConversationMemberItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conversationMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationMemberItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConversationMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationMemberItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationMemberItemRequestBuilderPatchRequestConfiguration() {

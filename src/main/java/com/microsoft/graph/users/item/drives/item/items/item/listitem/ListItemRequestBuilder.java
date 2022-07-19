@@ -350,7 +350,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item.items.item.listItem.versions.item collection
      * @param id Unique identifier of the item
-     * @return a listItemVersionItemRequestBuilder
+     * @return a ListItemVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {

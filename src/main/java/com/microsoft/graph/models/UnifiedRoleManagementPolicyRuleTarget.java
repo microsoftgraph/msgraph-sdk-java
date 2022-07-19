@@ -19,6 +19,8 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     private java.util.List<String> _inheritableSettings;
     /** The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment. */
     private String _level;
+    /** The OdataType property */
+    private String _odataType;
     /** The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
     private java.util.List<String> _operations;
     /** The targetObjects property */
@@ -29,6 +31,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     public UnifiedRoleManagementPolicyRuleTarget() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyRuleTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,11 +74,12 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyRuleTarget currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("caller", (n) -> { currentObject.setCaller(n.getStringValue()); });
             this.put("enforcedSettings", (n) -> { currentObject.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("targetObjects", (n) -> { currentObject.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         }};
@@ -95,6 +99,14 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     @javax.annotation.Nullable
     public String getLevel() {
         return this._level;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
@@ -123,6 +135,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         writer.writeCollectionOfPrimitiveValues("enforcedSettings", this.getEnforcedSettings());
         writer.writeCollectionOfPrimitiveValues("inheritableSettings", this.getInheritableSettings());
         writer.writeStringValue("level", this.getLevel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("targetObjects", this.getTargetObjects());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      */
     public void setLevel(@javax.annotation.Nullable final String value) {
         this._level = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.

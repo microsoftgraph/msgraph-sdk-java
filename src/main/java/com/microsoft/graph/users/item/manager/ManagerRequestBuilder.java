@@ -21,7 +21,7 @@ import microsoft.graph.users.item.manager.ref.RefRequestBuilder;
 public class ManagerRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

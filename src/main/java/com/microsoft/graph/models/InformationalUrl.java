@@ -15,6 +15,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     private String _logoUrl;
     /** Link to the application's marketing page. For example, https://www.contoso.com/app/marketing */
     private String _marketingUrl;
+    /** The OdataType property */
+    private String _odataType;
     /** Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy */
     private String _privacyStatementUrl;
     /** Link to the application's support page. For example, https://www.contoso.com/app/support */
@@ -27,6 +29,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.informationalUrl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,10 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationalUrl currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
             this.put("marketingUrl", (n) -> { currentObject.setMarketingUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("privacyStatementUrl", (n) -> { currentObject.setPrivacyStatementUrl(n.getStringValue()); });
             this.put("supportUrl", (n) -> { currentObject.setSupportUrl(n.getStringValue()); });
             this.put("termsOfServiceUrl", (n) -> { currentObject.setTermsOfServiceUrl(n.getStringValue()); });
@@ -76,6 +80,14 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMarketingUrl() {
         return this._marketingUrl;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
@@ -110,6 +122,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("logoUrl", this.getLogoUrl());
         writer.writeStringValue("marketingUrl", this.getMarketingUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("privacyStatementUrl", this.getPrivacyStatementUrl());
         writer.writeStringValue("supportUrl", this.getSupportUrl());
         writer.writeStringValue("termsOfServiceUrl", this.getTermsOfServiceUrl());
@@ -138,6 +151,14 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     public void setMarketingUrl(@javax.annotation.Nullable final String value) {
         this._marketingUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy

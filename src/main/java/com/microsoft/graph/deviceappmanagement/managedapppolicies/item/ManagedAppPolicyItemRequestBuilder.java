@@ -313,7 +313,7 @@ public class ManagedAppPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ManagedAppPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedAppPolicyItemRequestBuilderGetQueryParameters queryParameters = new ManagedAppPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedAppPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ManagedAppPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppPolicyItemRequestBuilderPatchRequestConfiguration() {

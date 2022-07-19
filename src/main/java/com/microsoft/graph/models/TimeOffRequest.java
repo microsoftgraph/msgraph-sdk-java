@@ -21,6 +21,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     public TimeOffRequest() {
         super();
+        this.setOdataType("#microsoft.graph.timeOffRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

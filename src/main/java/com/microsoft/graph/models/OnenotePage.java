@@ -38,6 +38,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     public OnenotePage() {
         super();
+        this.setOdataType("#microsoft.graph.onenotePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

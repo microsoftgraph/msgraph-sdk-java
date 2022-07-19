@@ -417,6 +417,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      */
     public Windows10GeneralConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10GeneralConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

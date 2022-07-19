@@ -16,6 +16,7 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
      */
     public DaylightTimeZoneOffset() {
         super();
+        this.setOdataType("#microsoft.graph.daylightTimeZoneOffset");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

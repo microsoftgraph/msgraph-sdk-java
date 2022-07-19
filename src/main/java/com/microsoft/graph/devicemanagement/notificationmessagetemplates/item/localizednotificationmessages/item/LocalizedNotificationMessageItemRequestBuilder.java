@@ -307,7 +307,7 @@ public class LocalizedNotificationMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new localizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class LocalizedNotificationMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public LocalizedNotificationMessageItemRequestBuilderGetQueryParameters queryParameters = new LocalizedNotificationMessageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new localizedNotificationMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class LocalizedNotificationMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new localizedNotificationMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration() {

@@ -308,7 +308,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.informationProtection.threatAssessmentRequests.item.results.item collection
      * @param id Unique identifier of the item
-     * @return a threatAssessmentResultItemRequestBuilder
+     * @return a ThreatAssessmentResultItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ThreatAssessmentResultItemRequestBuilder results(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new threatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public ThreatAssessmentRequestItemRequestBuilderGetQueryParameters queryParameters = new ThreatAssessmentRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new threatAssessmentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new threatAssessmentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration() {

@@ -259,7 +259,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewInstanceItemRequestBuilder
+     * @return a AccessReviewInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewInstanceItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewScheduleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewScheduleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration() {

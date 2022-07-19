@@ -20,7 +20,7 @@ import microsoft.graph.models.security.CaseOperationCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.operations.count.CountRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity. */
 public class OperationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

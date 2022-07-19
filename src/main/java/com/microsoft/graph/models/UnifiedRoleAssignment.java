@@ -33,6 +33,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      */
     public UnifiedRoleAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

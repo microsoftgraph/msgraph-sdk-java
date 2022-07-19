@@ -30,6 +30,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     public WorkbookWorksheet() {
         super();
+        this.setOdataType("#microsoft.graph.workbookWorksheet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

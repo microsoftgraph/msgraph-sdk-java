@@ -20,7 +20,7 @@ import microsoft.graph.models.security.SiteSourceCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.count.CountRequestBuilder;
 /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class SiteSourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

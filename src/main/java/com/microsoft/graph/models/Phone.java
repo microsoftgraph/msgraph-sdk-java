@@ -15,6 +15,8 @@ public class Phone implements AdditionalDataHolder, Parsable {
     private String _language;
     /** The phone number. */
     private String _number;
+    /** The OdataType property */
+    private String _odataType;
     /** The region property */
     private String _region;
     /** The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio. */
@@ -25,6 +27,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     public Phone() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.phone");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,9 +54,10 @@ public class Phone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Phone currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });
             this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PhoneType.class)); });
         }};
@@ -73,6 +77,14 @@ public class Phone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getNumber() {
         return this._number;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the region property value. The region property
@@ -99,6 +111,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("language", this.getLanguage());
         writer.writeStringValue("number", this.getNumber());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("region", this.getRegion());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class Phone implements AdditionalDataHolder, Parsable {
      */
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the region property value. The region property

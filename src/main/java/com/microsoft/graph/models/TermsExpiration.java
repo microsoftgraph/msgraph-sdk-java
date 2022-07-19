@@ -15,6 +15,8 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month. */
     private Period _frequency;
+    /** The OdataType property */
+    private String _odataType;
     /** The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _startDateTime;
     /**
@@ -23,6 +25,7 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
      */
     public TermsExpiration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.termsExpiration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsExpiration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("frequency", (n) -> { currentObject.setFrequency(n.getPeriodValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
@@ -61,6 +65,14 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Period getFrequency() {
         return this._frequency;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -78,6 +90,7 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("frequency", this.getFrequency());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -96,6 +109,14 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
      */
     public void setFrequency(@javax.annotation.Nullable final Period value) {
         this._frequency = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

@@ -20,6 +20,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      */
     public CallStartedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.callStartedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

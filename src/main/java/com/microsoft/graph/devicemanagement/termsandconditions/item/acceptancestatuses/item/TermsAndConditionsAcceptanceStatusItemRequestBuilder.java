@@ -313,7 +313,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAcceptanceStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public TermsAndConditionsAcceptanceStatusItemRequestBuilderGetQueryParameters queryParameters = new TermsAndConditionsAcceptanceStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new termsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAcceptanceStatusItemRequestBuilderPatchRequestConfiguration() {

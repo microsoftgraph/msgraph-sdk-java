@@ -20,7 +20,7 @@ import microsoft.graph.models.UsedInsight;
 import microsoft.graph.models.UsedInsightCollectionResponse;
 /** Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity. */
 public class UsedRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

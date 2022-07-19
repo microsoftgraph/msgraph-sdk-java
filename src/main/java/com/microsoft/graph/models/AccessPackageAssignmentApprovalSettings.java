@@ -15,6 +15,8 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     private Boolean _isApprovalRequiredForAdd;
     /** If false, then approval is not required for updates to requests in this policy. */
     private Boolean _isApprovalRequiredForUpdate;
+    /** The OdataType property */
+    private String _odataType;
     /** If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required. */
     private java.util.List<AccessPackageApprovalStage> _stages;
     /**
@@ -23,6 +25,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     public AccessPackageAssignmentApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentApprovalSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentApprovalSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
             this.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(AccessPackageApprovalStage::createFromDiscriminatorValue)); });
         }};
     }
@@ -72,6 +76,14 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         return this._isApprovalRequiredForUpdate;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      * @return a accessPackageApprovalStage
      */
@@ -88,6 +100,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
         writer.writeBooleanValue("isApprovalRequiredForUpdate", this.getIsApprovalRequiredForUpdate());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("stages", this.getStages());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      */
     public void setIsApprovalRequiredForUpdate(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequiredForUpdate = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.

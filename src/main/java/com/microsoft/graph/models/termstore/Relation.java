@@ -24,6 +24,7 @@ public class Relation extends Entity implements Parsable {
      */
     public Relation() {
         super();
+        this.setOdataType("#microsoft.graph.termStore.relation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,7 @@ import microsoft.graph.models.OnlineMeeting;
 import microsoft.graph.models.OnlineMeetingCollectionResponse;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
 public class OnlineMeetingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

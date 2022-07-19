@@ -66,7 +66,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -246,7 +246,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
+     * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -411,7 +411,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceMobileAppConfigurationItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceMobileAppConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -426,7 +426,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration() {

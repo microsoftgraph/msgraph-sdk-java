@@ -19,7 +19,7 @@ import microsoft.graph.models.OAuth2PermissionGrantCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity. */
 public class Oauth2PermissionGrantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -40,7 +40,7 @@ public class OnlineMeetingItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onlineMeetings.item.attendanceReports.item collection
      * @param id Unique identifier of the item
-     * @return a meetingAttendanceReportItemRequestBuilder
+     * @return a MeetingAttendanceReportItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MeetingAttendanceReportItemRequestBuilder attendanceReports(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public OnlineMeetingItemRequestBuilderGetQueryParameters queryParameters = new OnlineMeetingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class OnlineMeetingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onlineMeetingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnlineMeetingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnlineMeetingItemRequestBuilderPatchRequestConfiguration() {

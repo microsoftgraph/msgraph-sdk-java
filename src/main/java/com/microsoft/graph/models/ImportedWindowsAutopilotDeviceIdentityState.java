@@ -19,12 +19,15 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     private ImportedWindowsAutopilotDeviceIdentityImportStatus _deviceImportStatus;
     /** Device Registration ID for successfully added device reported by Device Directory Service(DDS). */
     private String _deviceRegistrationId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
      * @return a void
      */
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,12 +86,21 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentityState currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
             this.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
             this.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
             this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -101,6 +113,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         writer.writeStringValue("deviceErrorName", this.getDeviceErrorName());
         writer.writeEnumValue("deviceImportStatus", this.getDeviceImportStatus());
         writer.writeStringValue("deviceRegistrationId", this.getDeviceRegistrationId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     public void setDeviceRegistrationId(@javax.annotation.Nullable final String value) {
         this._deviceRegistrationId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

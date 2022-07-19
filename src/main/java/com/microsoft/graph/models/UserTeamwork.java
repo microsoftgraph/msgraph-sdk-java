@@ -18,6 +18,7 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     public UserTeamwork() {
         super();
+        this.setOdataType("#microsoft.graph.userTeamwork");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -27,6 +27,7 @@ public class PrintConnector extends Entity implements Parsable {
      */
     public PrintConnector() {
         super();
+        this.setOdataType("#microsoft.graph.printConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

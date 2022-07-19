@@ -22,7 +22,7 @@ public class NamedLocation extends Entity implements Parsable {
      */
     public NamedLocation() {
         super();
-        this.setType("#microsoft.graph.namedLocation");
+        this.setOdataType("#microsoft.graph.namedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

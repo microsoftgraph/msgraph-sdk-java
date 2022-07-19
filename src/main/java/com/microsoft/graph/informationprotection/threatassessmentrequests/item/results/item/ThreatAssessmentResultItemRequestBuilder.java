@@ -307,7 +307,7 @@ public class ThreatAssessmentResultItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new threatAssessmentResultItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ThreatAssessmentResultItemRequestBuilder {
         @javax.annotation.Nullable
         public ThreatAssessmentResultItemRequestBuilderGetQueryParameters queryParameters = new ThreatAssessmentResultItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new threatAssessmentResultItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentResultItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentResultItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ThreatAssessmentResultItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new threatAssessmentResultItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration() {

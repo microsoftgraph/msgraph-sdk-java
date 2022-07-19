@@ -23,6 +23,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      */
     public UserFlowLanguageConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.userFlowLanguageConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

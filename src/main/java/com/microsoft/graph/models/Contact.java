@@ -89,6 +89,7 @@ public class Contact extends OutlookItem implements Parsable {
      */
     public Contact() {
         super();
+        this.setOdataType("#microsoft.graph.contact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

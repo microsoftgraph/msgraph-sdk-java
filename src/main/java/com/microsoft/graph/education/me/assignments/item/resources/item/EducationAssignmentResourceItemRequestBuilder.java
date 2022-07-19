@@ -307,7 +307,7 @@ public class EducationAssignmentResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EducationAssignmentResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationAssignmentResourceItemRequestBuilderGetQueryParameters queryParameters = new EducationAssignmentResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationAssignmentResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EducationAssignmentResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationAssignmentResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration() {

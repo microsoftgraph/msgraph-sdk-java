@@ -20,7 +20,7 @@ import microsoft.graph.models.UnifiedRoleDefinitionCollectionResponse;
 import microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.count.CountRequestBuilder;
 /** Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity. */
 public class InheritsPermissionsFromRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -26,7 +26,7 @@ public class DataSource extends Entity implements Parsable {
      */
     public DataSource() {
         super();
-        this.setType("#microsoft.graph.security.dataSource");
+        this.setOdataType("#microsoft.graph.security.dataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,6 +26,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      */
     public WorkforceIntegration() {
         super();
+        this.setOdataType("#microsoft.graph.workforceIntegration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

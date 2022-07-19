@@ -155,7 +155,7 @@ public class SectionGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public SectionGroupItemRequestBuilderGetQueryParameters queryParameters = new SectionGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sectionGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SectionGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SectionGroupItemRequestBuilderGetRequestConfiguration() {

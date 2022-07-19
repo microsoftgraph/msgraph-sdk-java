@@ -14,6 +14,7 @@ public class AllLicensedUsersAssignmentTarget extends DeviceAndAppManagementAssi
      */
     public AllLicensedUsersAssignmentTarget() {
         super();
+        this.setOdataType("#microsoft.graph.allLicensedUsersAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

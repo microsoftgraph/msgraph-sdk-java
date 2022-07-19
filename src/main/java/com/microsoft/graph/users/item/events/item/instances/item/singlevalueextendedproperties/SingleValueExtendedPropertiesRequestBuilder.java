@@ -20,7 +20,7 @@ import microsoft.graph.models.SingleValueLegacyExtendedPropertyCollectionRespons
 import microsoft.graph.users.item.events.item.instances.item.singlevalueextendedproperties.count.CountRequestBuilder;
 /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity. */
 public class SingleValueExtendedPropertiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

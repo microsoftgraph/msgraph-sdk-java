@@ -45,6 +45,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _mediaTypes;
     /** The presentation directions supported by the printer. Supported values are described in the following table. */
     private java.util.List<String> _multipageLayouts;
+    /** The OdataType property */
+    private String _odataType;
     /** The print orientations supported by the printer. Valid values are described in the following table. */
     private java.util.List<String> _orientations;
     /** The printer's supported output bins (trays). */
@@ -67,6 +69,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     public PrinterCapabilities() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printerCapabilities");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -157,7 +160,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterCapabilities currentObject = this;
-        return new HashMap<>(25) {{
+        return new HashMap<>(26) {{
             this.put("bottomMargins", (n) -> { currentObject.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
             this.put("collation", (n) -> { currentObject.setCollation(n.getBooleanValue()); });
             this.put("colorModes", (n) -> { currentObject.setColorModes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -175,6 +178,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
             this.put("mediaSizes", (n) -> { currentObject.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("mediaTypes", (n) -> { currentObject.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("multipageLayouts", (n) -> { currentObject.setMultipageLayouts(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("orientations", (n) -> { currentObject.setOrientations(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("outputBins", (n) -> { currentObject.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
@@ -256,6 +260,14 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<String> getMultipageLayouts() {
         return this._multipageLayouts;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
@@ -345,6 +357,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("mediaSizes", this.getMediaSizes());
         writer.writeCollectionOfPrimitiveValues("mediaTypes", this.getMediaTypes());
         writer.writeCollectionOfPrimitiveValues("multipageLayouts", this.getMultipageLayouts());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("orientations", this.getOrientations());
         writer.writeCollectionOfPrimitiveValues("outputBins", this.getOutputBins());
         writer.writeCollectionOfPrimitiveValues("pagesPerSheet", this.getPagesPerSheet());
@@ -498,6 +511,14 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      */
     public void setMultipageLayouts(@javax.annotation.Nullable final java.util.List<String> value) {
         this._multipageLayouts = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.

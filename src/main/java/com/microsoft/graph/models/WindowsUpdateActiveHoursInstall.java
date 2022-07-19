@@ -19,6 +19,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     public WindowsUpdateActiveHoursInstall() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdateActiveHoursInstall");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

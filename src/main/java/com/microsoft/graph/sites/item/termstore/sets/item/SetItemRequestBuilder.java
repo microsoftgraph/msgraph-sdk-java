@@ -52,7 +52,7 @@ public class SetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.termStore.sets.item.children.item collection
      * @param id Unique identifier of the item
-     * @return a termItemRequestBuilder
+     * @return a TermItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.sites.item.termstore.sets.item.children.item.TermItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class SetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.termStore.sets.item.relations.item collection
      * @param id Unique identifier of the item
-     * @return a relationItemRequestBuilder
+     * @return a RelationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RelationItemRequestBuilder relations(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class SetItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.termStore.sets.item.terms.item collection
      * @param id Unique identifier of the item
-     * @return a termItemRequestBuilder
+     * @return a TermItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.sites.item.termstore.sets.item.terms.item.TermItemRequestBuilder terms(@javax.annotation.Nonnull final String id) {
@@ -368,7 +368,7 @@ public class SetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new setItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SetItemRequestBuilderDeleteRequestConfiguration() {
@@ -397,7 +397,7 @@ public class SetItemRequestBuilder {
         @javax.annotation.Nullable
         public SetItemRequestBuilderGetQueryParameters queryParameters = new SetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new setItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SetItemRequestBuilderGetRequestConfiguration() {
@@ -412,7 +412,7 @@ public class SetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new setItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SetItemRequestBuilderPatchRequestConfiguration() {

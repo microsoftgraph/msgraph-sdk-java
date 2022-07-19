@@ -21,7 +21,7 @@ import microsoft.graph.models.TodoTaskList;
 import microsoft.graph.models.TodoTaskListCollectionResponse;
 /** Provides operations to manage the lists property of the microsoft.graph.todo entity. */
 public class ListsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -253,7 +253,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item.instances.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewHistoryInstanceItemRequestBuilder
+     * @return a AccessReviewHistoryInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewHistoryInstanceItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewHistoryDefinitionItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewHistoryDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration() {

@@ -20,14 +20,14 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
 /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity. */
 public class TokenLifetimePoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

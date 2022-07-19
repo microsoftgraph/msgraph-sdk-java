@@ -20,6 +20,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      */
     public WorkbookChartAxisTitle() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartAxisTitle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

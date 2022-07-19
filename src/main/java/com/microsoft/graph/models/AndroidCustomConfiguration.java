@@ -16,6 +16,7 @@ public class AndroidCustomConfiguration extends DeviceConfiguration implements P
      */
     public AndroidCustomConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidCustomConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

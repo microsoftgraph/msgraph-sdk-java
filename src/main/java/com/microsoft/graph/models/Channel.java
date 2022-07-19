@@ -42,6 +42,7 @@ public class Channel extends Entity implements Parsable {
      */
     public Channel() {
         super();
+        this.setOdataType("#microsoft.graph.channel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

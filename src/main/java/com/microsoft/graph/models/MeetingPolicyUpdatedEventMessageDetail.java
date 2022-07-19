@@ -20,6 +20,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      */
     public MeetingPolicyUpdatedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.meetingPolicyUpdatedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

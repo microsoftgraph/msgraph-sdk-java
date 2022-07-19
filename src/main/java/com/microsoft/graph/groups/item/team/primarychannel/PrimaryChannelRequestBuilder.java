@@ -307,7 +307,7 @@ public class PrimaryChannelRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.primaryChannel.members.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -319,7 +319,7 @@ public class PrimaryChannelRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.primaryChannel.messages.item collection
      * @param id Unique identifier of the item
-     * @return a chatMessageItemRequestBuilder
+     * @return a ChatMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -386,7 +386,7 @@ public class PrimaryChannelRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.primaryChannel.sharedWithTeams.item collection
      * @param id Unique identifier of the item
-     * @return a sharedWithChannelTeamInfoItemRequestBuilder
+     * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
@@ -398,7 +398,7 @@ public class PrimaryChannelRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.primaryChannel.tabs.item collection
      * @param id Unique identifier of the item
-     * @return a teamsTabItemRequestBuilder
+     * @return a TeamsTabItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {

@@ -17,6 +17,8 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     private String _externalReplyMessage;
     /** The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled. */
     private String _internalReplyMessage;
+    /** The OdataType property */
+    private String _odataType;
     /** The date and time that automatic replies are set to end, if Status is set to Scheduled. */
     private DateTimeTimeZone _scheduledEndDateTime;
     /** The date and time that automatic replies are set to begin, if Status is set to Scheduled. */
@@ -29,6 +31,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      */
     public AutomaticRepliesSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.automaticRepliesSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,10 +74,11 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesSetting currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("externalAudience", (n) -> { currentObject.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
             this.put("externalReplyMessage", (n) -> { currentObject.setExternalReplyMessage(n.getStringValue()); });
             this.put("internalReplyMessage", (n) -> { currentObject.setInternalReplyMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scheduledEndDateTime", (n) -> { currentObject.setScheduledEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("scheduledStartDateTime", (n) -> { currentObject.setScheduledStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AutomaticRepliesStatus.class)); });
@@ -87,6 +91,14 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getInternalReplyMessage() {
         return this._internalReplyMessage;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
@@ -122,6 +134,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("externalAudience", this.getExternalAudience());
         writer.writeStringValue("externalReplyMessage", this.getExternalReplyMessage());
         writer.writeStringValue("internalReplyMessage", this.getInternalReplyMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("scheduledEndDateTime", this.getScheduledEndDateTime());
         writer.writeObjectValue("scheduledStartDateTime", this.getScheduledStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
@@ -158,6 +171,14 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      */
     public void setInternalReplyMessage(@javax.annotation.Nullable final String value) {
         this._internalReplyMessage = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.

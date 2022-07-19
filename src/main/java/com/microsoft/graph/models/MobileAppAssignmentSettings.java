@@ -12,15 +12,15 @@ import java.util.Objects;
 public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new mobileAppAssignmentSettings and sets the default values.
      * @return a void
      */
     public MobileAppAssignmentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.mobileAppAssignmentSettings");
+        this.setOdataType("#microsoft.graph.mobileAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,16 +59,16 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppAssignmentSettings currentObject = this;
         return new HashMap<>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,7 +77,7 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -89,11 +89,11 @@ public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsab
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

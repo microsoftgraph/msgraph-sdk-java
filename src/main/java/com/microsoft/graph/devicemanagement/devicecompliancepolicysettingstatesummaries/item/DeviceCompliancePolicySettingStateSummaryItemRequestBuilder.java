@@ -202,7 +202,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item.deviceComplianceSettingStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceSettingStateItemRequestBuilder
+     * @return a DeviceComplianceSettingStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceSettingStateItemRequestBuilder deviceComplianceSettingStates(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCompliancePolicySettingStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicySettingStateSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetQueryParameters queryParameters = new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCompliancePolicySettingStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicySettingStateSummaryItemRequestBuilderPatchRequestConfiguration() {

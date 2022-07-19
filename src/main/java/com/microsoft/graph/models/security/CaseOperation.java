@@ -32,7 +32,7 @@ public class CaseOperation extends Entity implements Parsable {
      */
     public CaseOperation() {
         super();
-        this.setType("#microsoft.graph.security.caseOperation");
+        this.setOdataType("#microsoft.graph.security.caseOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

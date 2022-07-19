@@ -18,6 +18,8 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     private Integer _iosCount;
     /** Number of Mac OS X device count. */
     private Integer _macOSCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Number of unknown device count. */
     private Integer _unknownCount;
     /** Number of Windows device count. */
@@ -30,6 +32,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     public DeviceOperatingSystemSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceOperatingSystemSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,10 +67,11 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceOperatingSystemSummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("androidCount", (n) -> { currentObject.setAndroidCount(n.getIntegerValue()); });
             this.put("iosCount", (n) -> { currentObject.setIosCount(n.getIntegerValue()); });
             this.put("macOSCount", (n) -> { currentObject.setMacOSCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
             this.put("windowsCount", (n) -> { currentObject.setWindowsCount(n.getIntegerValue()); });
             this.put("windowsMobileCount", (n) -> { currentObject.setWindowsMobileCount(n.getIntegerValue()); });
@@ -88,6 +92,14 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Integer getMacOSCount() {
         return this._macOSCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the unknownCount property value. Number of unknown device count.
@@ -123,6 +135,7 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
         writer.writeIntegerValue("androidCount", this.getAndroidCount());
         writer.writeIntegerValue("iosCount", this.getIosCount());
         writer.writeIntegerValue("macOSCount", this.getMacOSCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("unknownCount", this.getUnknownCount());
         writer.writeIntegerValue("windowsCount", this.getWindowsCount());
         writer.writeIntegerValue("windowsMobileCount", this.getWindowsMobileCount());
@@ -159,6 +172,14 @@ public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsa
      */
     public void setMacOSCount(@javax.annotation.Nullable final Integer value) {
         this._macOSCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the unknownCount property value. Number of unknown device count.

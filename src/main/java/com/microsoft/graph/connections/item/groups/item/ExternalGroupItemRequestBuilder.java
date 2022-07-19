@@ -253,7 +253,7 @@ public class ExternalGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.connections.item.groups.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a identityItemRequestBuilder
+     * @return a IdentityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ExternalGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ExternalGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public ExternalGroupItemRequestBuilderGetQueryParameters queryParameters = new ExternalGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new externalGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalGroupItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ExternalGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalGroupItemRequestBuilderPatchRequestConfiguration() {

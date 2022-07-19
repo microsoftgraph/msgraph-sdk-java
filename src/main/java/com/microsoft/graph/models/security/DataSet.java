@@ -23,7 +23,7 @@ public class DataSet extends Entity implements Parsable {
      */
     public DataSet() {
         super();
-        this.setType("#microsoft.graph.security.dataSet");
+        this.setOdataType("#microsoft.graph.security.dataSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

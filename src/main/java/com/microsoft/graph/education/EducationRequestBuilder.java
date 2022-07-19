@@ -54,7 +54,7 @@ public class EducationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
@@ -261,7 +261,7 @@ public class EducationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.schools.item collection
      * @param id Unique identifier of the item
-     * @return a educationSchoolItemRequestBuilder
+     * @return a EducationSchoolItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
@@ -273,7 +273,7 @@ public class EducationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item collection
      * @param id Unique identifier of the item
-     * @return a educationUserItemRequestBuilder
+     * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationUserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {

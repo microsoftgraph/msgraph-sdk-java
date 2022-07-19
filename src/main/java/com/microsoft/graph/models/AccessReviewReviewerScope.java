@@ -11,6 +11,8 @@ import java.util.Objects;
 public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The query specifying who will be the reviewer. See table for examples. */
     private String _query;
     /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions. */
@@ -23,6 +25,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     public AccessReviewReviewerScope() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewReviewerScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +52,20 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewReviewerScope currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
             this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the query property value. The query specifying who will be the reviewer. See table for examples.
@@ -86,6 +98,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("query", this.getQuery());
         writer.writeStringValue("queryRoot", this.getQueryRoot());
         writer.writeStringValue("queryType", this.getQueryType());
@@ -98,6 +111,14 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the query property value. The query specifying who will be the reviewer. See table for examples.

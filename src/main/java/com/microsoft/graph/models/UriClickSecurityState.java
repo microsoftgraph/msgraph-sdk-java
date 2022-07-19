@@ -18,6 +18,8 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _clickDateTime;
     /** The id property */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** The sourceId property */
     private String _sourceId;
     /** The uriDomain property */
@@ -30,6 +32,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      */
     public UriClickSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.uriClickSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,10 +75,11 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UriClickSecurityState currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("clickAction", (n) -> { currentObject.setClickAction(n.getStringValue()); });
             this.put("clickDateTime", (n) -> { currentObject.setClickDateTime(n.getOffsetDateTimeValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
             this.put("uriDomain", (n) -> { currentObject.setUriDomain(n.getStringValue()); });
             this.put("verdict", (n) -> { currentObject.setVerdict(n.getStringValue()); });
@@ -88,6 +92,14 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sourceId property value. The sourceId property
@@ -123,6 +135,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("clickAction", this.getClickAction());
         writer.writeOffsetDateTimeValue("clickDateTime", this.getClickDateTime());
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeStringValue("uriDomain", this.getUriDomain());
         writer.writeStringValue("verdict", this.getVerdict());
@@ -159,6 +172,14 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sourceId property value. The sourceId property

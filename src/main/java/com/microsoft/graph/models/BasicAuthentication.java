@@ -18,6 +18,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      */
     public BasicAuthentication() {
         super();
+        this.setOdataType("#microsoft.graph.basicAuthentication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

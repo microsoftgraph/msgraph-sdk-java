@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the admin singleton. */
 public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     /** Devices count for that user. */
     private Integer _devicesCount;
@@ -26,6 +26,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      */
     public DeviceConfigurationUserStatus() {
         super();
+        this.setOdataType("#microsoft.graph.deviceConfigurationUserStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

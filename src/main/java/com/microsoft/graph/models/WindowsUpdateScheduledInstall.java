@@ -19,6 +19,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     public WindowsUpdateScheduledInstall() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdateScheduledInstall");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

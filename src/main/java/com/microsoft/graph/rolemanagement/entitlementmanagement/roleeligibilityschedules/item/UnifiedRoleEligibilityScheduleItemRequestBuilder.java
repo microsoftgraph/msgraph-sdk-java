@@ -307,7 +307,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleEligibilityScheduleItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleEligibilityScheduleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleEligibilityScheduleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleEligibilityScheduleItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleEligibilityScheduleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleEligibilityScheduleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleEligibilityScheduleItemRequestBuilderPatchRequestConfiguration() {

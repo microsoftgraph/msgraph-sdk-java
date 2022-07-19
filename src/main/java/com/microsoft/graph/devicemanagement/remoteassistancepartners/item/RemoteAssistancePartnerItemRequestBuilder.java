@@ -319,7 +319,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new remoteAssistancePartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteAssistancePartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteAssistancePartnerItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public RemoteAssistancePartnerItemRequestBuilderGetQueryParameters queryParameters = new RemoteAssistancePartnerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new remoteAssistancePartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteAssistancePartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteAssistancePartnerItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new remoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration() {

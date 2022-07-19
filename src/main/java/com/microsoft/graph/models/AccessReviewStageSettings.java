@@ -19,6 +19,8 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     private Integer _durationInDays;
     /** If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object. */
     private java.util.List<AccessReviewReviewerScope> _fallbackReviewers;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object. */
     private Boolean _recommendationsEnabled;
     /** Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition. */
@@ -31,6 +33,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     public AccessReviewStageSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewStageSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,15 +92,24 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewStageSettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
             this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
             this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
             this.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
@@ -134,6 +146,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         writer.writeCollectionOfPrimitiveValues("dependsOn", this.getDependsOn());
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeStringValue("stageId", this.getStageId());
@@ -178,6 +191,14 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.

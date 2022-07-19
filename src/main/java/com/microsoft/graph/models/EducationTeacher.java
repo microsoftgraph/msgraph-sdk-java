@@ -13,6 +13,8 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Id of the Teacher in external source system. */
     private String _externalId;
+    /** The OdataType property */
+    private String _odataType;
     /** Teacher number. */
     private String _teacherNumber;
     /**
@@ -21,6 +23,7 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
      */
     public EducationTeacher() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationTeacher");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTeacher currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("teacherNumber", (n) -> { currentObject.setTeacherNumber(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the teacherNumber property value. Teacher number.
@@ -76,6 +88,7 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("externalId", this.getExternalId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("teacherNumber", this.getTeacherNumber());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
      */
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the teacherNumber property value. Teacher number.

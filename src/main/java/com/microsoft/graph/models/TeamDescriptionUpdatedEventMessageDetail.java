@@ -20,6 +20,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      */
     public TeamDescriptionUpdatedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamDescriptionUpdatedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -11,8 +11,8 @@ import java.util.Objects;
 public class Endpoint implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /** User-agent reported by this endpoint. */
     private UserAgent _userAgent;
     /**
@@ -21,7 +21,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     public Endpoint() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.callRecords.endpoint");
+        this.setOdataType("#microsoft.graph.callRecords.endpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,17 +57,17 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Endpoint currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getObjectValue(UserAgent::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the userAgent property value. User-agent reported by this endpoint.
@@ -84,7 +84,7 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("userAgent", this.getUserAgent());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -97,12 +97,12 @@ public class Endpoint implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the userAgent property value. User-agent reported by this endpoint.

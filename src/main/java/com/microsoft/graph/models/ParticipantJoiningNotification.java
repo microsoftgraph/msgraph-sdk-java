@@ -16,6 +16,7 @@ public class ParticipantJoiningNotification extends Entity implements Parsable {
      */
     public ParticipantJoiningNotification() {
         super();
+        this.setOdataType("#microsoft.graph.participantJoiningNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

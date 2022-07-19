@@ -307,7 +307,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public MdmWindowsInformationProtectionPolicyItemRequestBuilderGetQueryParameters queryParameters = new MdmWindowsInformationProtectionPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration() {

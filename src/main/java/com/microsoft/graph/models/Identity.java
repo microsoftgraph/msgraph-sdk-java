@@ -11,19 +11,19 @@ import java.util.Objects;
 public class Identity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta. */
+    /** The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta. */
     private String _displayName;
     /** Unique identifier for the identity. */
     private String _id;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new identity and sets the default values.
      * @return a void
      */
     public Identity() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.identity");
+        this.setOdataType("#microsoft.graph.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +61,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Gets the displayName property value. The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -90,12 +90,12 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -106,7 +106,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -118,7 +118,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Sets the displayName property value. The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -134,11 +134,11 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._id = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

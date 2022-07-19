@@ -271,7 +271,7 @@ public class BrandingRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.organization.item.branding.localizations.item collection
      * @param id Unique identifier of the item
-     * @return a organizationalBrandingLocalizationItemRequestBuilder
+     * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OrganizationalBrandingLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {

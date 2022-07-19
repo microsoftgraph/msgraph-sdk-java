@@ -298,7 +298,7 @@ public class ReportsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.reports.exportJobs.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementExportJobItemRequestBuilder
+     * @return a DeviceManagementExportJobItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementExportJobItemRequestBuilder exportJobs(@javax.annotation.Nonnull final String id) {

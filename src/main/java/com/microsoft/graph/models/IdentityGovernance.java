@@ -17,6 +17,8 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     private AppConsentApprovalRoute _appConsent;
     /** The entitlementManagement property */
     private EntitlementManagement _entitlementManagement;
+    /** The OdataType property */
+    private String _odataType;
     /** The termsOfUse property */
     private TermsOfUseContainer _termsOfUse;
     /**
@@ -25,6 +27,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     public IdentityGovernance() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.identityGovernance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,21 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityGovernance currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("accessReviews", (n) -> { currentObject.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
             this.put("appConsent", (n) -> { currentObject.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
             this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the termsOfUse property value. The termsOfUse property
@@ -100,6 +112,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("accessReviews", this.getAccessReviews());
         writer.writeObjectValue("appConsent", this.getAppConsent());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("termsOfUse", this.getTermsOfUse());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     public void setEntitlementManagement(@javax.annotation.Nullable final EntitlementManagement value) {
         this._entitlementManagement = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the termsOfUse property value. The termsOfUse property

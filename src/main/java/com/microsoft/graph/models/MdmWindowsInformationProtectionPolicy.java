@@ -14,6 +14,7 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
      */
     public MdmWindowsInformationProtectionPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.mdmWindowsInformationProtectionPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

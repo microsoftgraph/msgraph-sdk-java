@@ -61,7 +61,7 @@ public class IdentityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.apiConnectors.item collection
      * @param id Unique identifier of the item
-     * @return a identityApiConnectorItemRequestBuilder
+     * @return a IdentityApiConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityApiConnectorItemRequestBuilder apiConnectors(@javax.annotation.Nonnull final String id) {
@@ -73,7 +73,7 @@ public class IdentityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item collection
      * @param id Unique identifier of the item
-     * @return a b2xIdentityUserFlowItemRequestBuilder
+     * @return a B2xIdentityUserFlowItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public B2xIdentityUserFlowItemRequestBuilder b2xUserFlows(@javax.annotation.Nonnull final String id) {
@@ -225,7 +225,7 @@ public class IdentityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.identityProviders.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderBaseItemRequestBuilder
+     * @return a IdentityProviderBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder identityProviders(@javax.annotation.Nonnull final String id) {
@@ -292,7 +292,7 @@ public class IdentityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.userFlowAttributes.item collection
      * @param id Unique identifier of the item
-     * @return a identityUserFlowAttributeItemRequestBuilder
+     * @return a IdentityUserFlowAttributeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityUserFlowAttributeItemRequestBuilder userFlowAttributes(@javax.annotation.Nonnull final String id) {

@@ -259,7 +259,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.notificationMessageTemplates.item.localizedNotificationMessages.item collection
      * @param id Unique identifier of the item
-     * @return a localizedNotificationMessageItemRequestBuilder
+     * @return a LocalizedNotificationMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LocalizedNotificationMessageItemRequestBuilder localizedNotificationMessages(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public NotificationMessageTemplateItemRequestBuilderGetQueryParameters queryParameters = new NotificationMessageTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new notificationMessageTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notificationMessageTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration() {

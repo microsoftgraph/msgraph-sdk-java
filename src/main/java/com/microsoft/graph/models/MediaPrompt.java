@@ -16,6 +16,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      */
     public MediaPrompt() {
         super();
+        this.setOdataType("#microsoft.graph.mediaPrompt");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

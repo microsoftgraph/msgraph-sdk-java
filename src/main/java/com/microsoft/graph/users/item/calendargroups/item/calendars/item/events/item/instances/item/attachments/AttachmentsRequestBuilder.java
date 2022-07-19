@@ -21,7 +21,7 @@ import microsoft.graph.users.item.calendargroups.item.calendars.item.events.item
 import microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.instances.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
 /** Provides operations to manage the attachments property of the microsoft.graph.event entity. */
 public class AttachmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,6 +18,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      */
     public EventMessageResponse() {
         super();
+        this.setOdataType("#microsoft.graph.eventMessageResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

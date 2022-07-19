@@ -307,7 +307,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

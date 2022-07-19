@@ -30,6 +30,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
      */
     public AppRoleAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.appRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

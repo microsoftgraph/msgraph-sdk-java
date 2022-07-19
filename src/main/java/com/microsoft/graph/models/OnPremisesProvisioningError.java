@@ -16,6 +16,8 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
     private String _category;
     /** The date and time at which the error occurred. */
     private OffsetDateTime _occurredDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress */
     private String _propertyCausingError;
     /** Value of the property causing the error. */
@@ -26,6 +28,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     public OnPremisesProvisioningError() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onPremisesProvisioningError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +63,10 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesProvisioningError currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
             this.put("occurredDateTime", (n) -> { currentObject.setOccurredDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propertyCausingError", (n) -> { currentObject.setPropertyCausingError(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -74,6 +78,14 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public OffsetDateTime getOccurredDateTime() {
         return this._occurredDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
@@ -100,6 +112,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
         Objects.requireNonNull(writer);
         writer.writeStringValue("category", this.getCategory());
         writer.writeOffsetDateTimeValue("occurredDateTime", this.getOccurredDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("propertyCausingError", this.getPropertyCausingError());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
      */
     public void setOccurredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._occurredDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the propertyCausingError property value. Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress

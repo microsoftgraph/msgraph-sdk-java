@@ -12,6 +12,8 @@ import java.util.Objects;
 public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Windows version 10.0 or later. */
     private Boolean _v10_0;
     /** Windows version 8.0 or later. */
@@ -24,6 +26,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,11 +53,20 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
             this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
             this.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the v10_0 property value. Windows version 10.0 or later.
@@ -87,6 +99,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("v10_0", this.getV10_0());
         writer.writeBooleanValue("v8_0", this.getV8_0());
         writer.writeBooleanValue("v8_1", this.getV8_1());
@@ -99,6 +112,14 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the v10_0 property value. Windows version 10.0 or later.

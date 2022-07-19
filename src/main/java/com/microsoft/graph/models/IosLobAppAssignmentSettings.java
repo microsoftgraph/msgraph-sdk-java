@@ -16,6 +16,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     public IosLobAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.iosLobAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

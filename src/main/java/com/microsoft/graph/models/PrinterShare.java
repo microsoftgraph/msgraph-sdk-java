@@ -26,6 +26,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      */
     public PrinterShare() {
         super();
+        this.setOdataType("#microsoft.graph.printerShare");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -38,7 +38,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     public DeviceConfiguration() {
         super();
-        this.setType("#microsoft.graph.deviceConfiguration");
+        this.setOdataType("#microsoft.graph.deviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +60,11 @@ public class DeviceConfiguration extends Entity implements Parsable {
                 case "#microsoft.graph.editionUpgradeConfiguration": return new EditionUpgradeConfiguration();
                 case "#microsoft.graph.iosCertificateProfile": return new IosCertificateProfile();
                 case "#microsoft.graph.iosCustomConfiguration": return new IosCustomConfiguration();
+                case "#microsoft.graph.iosDeviceFeaturesConfiguration": return new IosDeviceFeaturesConfiguration();
                 case "#microsoft.graph.iosGeneralDeviceConfiguration": return new IosGeneralDeviceConfiguration();
                 case "#microsoft.graph.iosUpdateConfiguration": return new IosUpdateConfiguration();
                 case "#microsoft.graph.macOSCustomConfiguration": return new MacOSCustomConfiguration();
+                case "#microsoft.graph.macOSDeviceFeaturesConfiguration": return new MacOSDeviceFeaturesConfiguration();
                 case "#microsoft.graph.macOSGeneralDeviceConfiguration": return new MacOSGeneralDeviceConfiguration();
                 case "#microsoft.graph.sharedPCConfiguration": return new SharedPCConfiguration();
                 case "#microsoft.graph.windows10CustomConfiguration": return new Windows10CustomConfiguration();

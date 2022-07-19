@@ -27,6 +27,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     public ManagedIOSLobApp() {
         super();
+        this.setOdataType("#microsoft.graph.managedIOSLobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -19,6 +19,8 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     private String _id;
     /** When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed. */
     private Boolean _isEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The origin property */
     private String _origin;
     /** The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications. */
@@ -35,6 +37,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     public PermissionScope() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.permissionScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,11 +80,12 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionScope currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("adminConsentDescription", (n) -> { currentObject.setAdminConsentDescription(n.getStringValue()); });
             this.put("adminConsentDisplayName", (n) -> { currentObject.setAdminConsentDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("userConsentDescription", (n) -> { currentObject.setUserConsentDescription(n.getStringValue()); });
@@ -104,6 +108,14 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
         return this._isEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the origin property value. The origin property
@@ -156,6 +168,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("adminConsentDisplayName", this.getAdminConsentDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("origin", this.getOrigin());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("userConsentDescription", this.getUserConsentDescription());
@@ -202,6 +215,14 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the origin property value. The origin property

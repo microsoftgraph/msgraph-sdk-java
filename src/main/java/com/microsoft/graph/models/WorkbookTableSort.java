@@ -20,6 +20,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      */
     public WorkbookTableSort() {
         super();
+        this.setOdataType("#microsoft.graph.workbookTableSort");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

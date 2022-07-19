@@ -20,6 +20,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      */
     public TeamsAppUpgradedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAppUpgradedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      */
     public Windows10EnterpriseModernAppManagementConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

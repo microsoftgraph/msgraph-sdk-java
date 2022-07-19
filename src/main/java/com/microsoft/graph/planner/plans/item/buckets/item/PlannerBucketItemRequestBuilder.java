@@ -308,7 +308,7 @@ public class PlannerBucketItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.plans.item.buckets.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a plannerTaskItemRequestBuilder
+     * @return a PlannerTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class PlannerBucketItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerBucketItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerBucketItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerBucketItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class PlannerBucketItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerBucketItemRequestBuilderGetQueryParameters queryParameters = new PlannerBucketItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerBucketItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerBucketItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerBucketItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class PlannerBucketItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerBucketItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerBucketItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerBucketItemRequestBuilderPatchRequestConfiguration() {

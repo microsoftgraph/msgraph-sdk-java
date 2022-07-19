@@ -12,6 +12,8 @@ import java.util.Objects;
 public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Version 10.0 or later. */
     private Boolean _v10_0;
     /** Version 11.0 or later. */
@@ -32,6 +34,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     public IosMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +61,8 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
             this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
             this.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
@@ -67,6 +71,14 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
             this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
             this.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the v10_0 property value. Version 10.0 or later.
@@ -131,6 +143,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("v10_0", this.getV10_0());
         writer.writeBooleanValue("v11_0", this.getV11_0());
         writer.writeBooleanValue("v12_0", this.getV12_0());
@@ -147,6 +160,14 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the v10_0 property value. Version 10.0 or later.

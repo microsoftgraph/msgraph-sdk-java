@@ -20,7 +20,7 @@ import microsoft.graph.models.OnenotePageCollectionResponse;
 import microsoft.graph.sites.item.onenote.sections.item.pages.count.CountRequestBuilder;
 /** Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity. */
 public class PagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

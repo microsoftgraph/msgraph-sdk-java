@@ -16,15 +16,15 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
     private IdentitySet _gradedBy;
     /** Moment in time when the grade was applied to this submission object. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _gradedDateTime;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new educationAssignmentGrade and sets the default values.
      * @return a void
      */
     public EducationAssignmentGrade() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.educationAssignmentGrade");
+        this.setOdataType("#microsoft.graph.educationAssignmentGrade");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +61,7 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
         return new HashMap<>(3) {{
             this.put("gradedBy", (n) -> { currentObject.setGradedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("gradedDateTime", (n) -> { currentObject.setGradedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,12 +81,12 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
         return this._gradedDateTime;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -97,7 +97,7 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeObjectValue("gradedBy", this.getGradedBy());
         writer.writeOffsetDateTimeValue("gradedDateTime", this.getGradedDateTime());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -125,11 +125,11 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
         this._gradedDateTime = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

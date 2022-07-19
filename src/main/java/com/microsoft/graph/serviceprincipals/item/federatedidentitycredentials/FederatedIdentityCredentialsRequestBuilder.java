@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.federatedidentitycredentials.count.CountRequestBuilder;
 /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity. */
 public class FederatedIdentityCredentialsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

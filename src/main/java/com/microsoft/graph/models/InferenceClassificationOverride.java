@@ -19,6 +19,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
      */
     public InferenceClassificationOverride() {
         super();
+        this.setOdataType("#microsoft.graph.inferenceClassificationOverride");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

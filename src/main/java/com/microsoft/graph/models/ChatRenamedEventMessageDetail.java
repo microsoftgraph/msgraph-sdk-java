@@ -20,6 +20,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      */
     public ChatRenamedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.chatRenamedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

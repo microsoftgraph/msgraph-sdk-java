@@ -44,6 +44,7 @@ public class EducationSubmission extends Entity implements Parsable {
      */
     public EducationSubmission() {
         super();
+        this.setOdataType("#microsoft.graph.educationSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,7 +22,7 @@ public class Place extends Entity implements Parsable {
      */
     public Place() {
         super();
-        this.setType("#microsoft.graph.place");
+        this.setOdataType("#microsoft.graph.place");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

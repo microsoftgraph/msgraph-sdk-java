@@ -36,6 +36,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      */
     public Windows81CompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.windows81CompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

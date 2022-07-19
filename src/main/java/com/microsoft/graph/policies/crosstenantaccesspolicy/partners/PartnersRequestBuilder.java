@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.crosstenantaccesspolicy.partners.count.CountRequestBuilder;
 /** Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity. */
 public class PartnersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

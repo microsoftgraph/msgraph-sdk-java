@@ -32,7 +32,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     public PrinterBase() {
         super();
-        this.setType("#microsoft.graph.printerBase");
+        this.setOdataType("#microsoft.graph.printerBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

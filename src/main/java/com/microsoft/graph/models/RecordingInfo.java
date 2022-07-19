@@ -13,6 +13,8 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The identities of recording initiator. */
     private IdentitySet _initiator;
+    /** The OdataType property */
+    private String _odataType;
     /** The recordingStatus property */
     private RecordingStatus _recordingStatus;
     /**
@@ -21,6 +23,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.recordingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordingInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recordingStatus", (n) -> { currentObject.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
         }};
     }
@@ -59,6 +63,14 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
         return this._initiator;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recordingStatus property value. The recordingStatus property
@@ -76,6 +88,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("recordingStatus", this.getRecordingStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recordingStatus property value. The recordingStatus property

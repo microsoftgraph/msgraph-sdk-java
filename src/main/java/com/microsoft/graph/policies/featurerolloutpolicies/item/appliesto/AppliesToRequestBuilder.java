@@ -24,7 +24,7 @@ import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.ref.RefReq
 import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity. */
 public class AppliesToRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -41,7 +41,7 @@ public class AppliesToRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

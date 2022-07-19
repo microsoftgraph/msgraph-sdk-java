@@ -13,6 +13,8 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The item's unique identifier. */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** A string value that can be used to classify the item, such as 'microsoft.graph.driveItem' */
     private String _type;
     /** A URL leading to the referenced item. */
@@ -23,6 +25,7 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     public ResourceReference() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.resourceReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceReference currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
@@ -62,6 +66,14 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
@@ -87,6 +99,7 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("webUrl", this.getWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class ResourceReference implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'

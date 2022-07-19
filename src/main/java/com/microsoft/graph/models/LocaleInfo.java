@@ -15,12 +15,15 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2. */
     private String _locale;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new localeInfo and sets the default values.
      * @return a void
      */
     public LocaleInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.localeInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocaleInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
         return this._locale;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("locale", this.getLocale());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class LocaleInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLocale(@javax.annotation.Nullable final String value) {
         this._locale = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

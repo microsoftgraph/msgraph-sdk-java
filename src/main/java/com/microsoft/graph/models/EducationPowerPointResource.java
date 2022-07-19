@@ -16,6 +16,7 @@ public class EducationPowerPointResource extends EducationResource implements Pa
      */
     public EducationPowerPointResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationPowerPointResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

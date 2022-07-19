@@ -155,7 +155,7 @@ public class BitlockerRecoveryKeyItemRequestBuilder {
         @javax.annotation.Nullable
         public BitlockerRecoveryKeyItemRequestBuilderGetQueryParameters queryParameters = new BitlockerRecoveryKeyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bitlockerRecoveryKeyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BitlockerRecoveryKeyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BitlockerRecoveryKeyItemRequestBuilderGetRequestConfiguration() {

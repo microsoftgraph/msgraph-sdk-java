@@ -16,6 +16,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      */
     public EducationAssignmentPointsGrade() {
         super();
+        this.setOdataType("#microsoft.graph.educationAssignmentPointsGrade");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

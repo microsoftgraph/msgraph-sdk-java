@@ -34,7 +34,7 @@ public class AppConsentRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a appConsentRequestItemRequestBuilder
+     * @return a AppConsentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppConsentRequestItemRequestBuilder appConsentRequests(@javax.annotation.Nonnull final String id) {

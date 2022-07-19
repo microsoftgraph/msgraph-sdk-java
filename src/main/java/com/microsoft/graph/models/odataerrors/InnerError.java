@@ -16,6 +16,8 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     private String _clientRequestId;
     /** Date when the error occured. */
     private OffsetDateTime _date;
+    /** The OdataType property */
+    private String _odataType;
     /** Request Id as tracked internally by the service */
     private String _requestId;
     /**
@@ -24,6 +26,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     public InnerError() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.InnerError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InnerError currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("client-request-id", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
             this.put("date", (n) -> { currentObject.setDate(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("request-id", (n) -> { currentObject.setRequestId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the request-id property value. Request Id as tracked internally by the service
@@ -89,6 +101,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("client-request-id", this.getClientRequestId());
         writer.writeOffsetDateTimeValue("date", this.getDate());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("request-id", this.getRequestId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     public void setDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._date = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the request-id property value. Request Id as tracked internally by the service

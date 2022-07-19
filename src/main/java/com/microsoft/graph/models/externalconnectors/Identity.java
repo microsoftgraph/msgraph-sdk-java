@@ -8,14 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public class Identity extends Entity implements Parsable {
+    /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
+    private IdentityType _type;
     /**
      * Instantiates a new identity and sets the default values.
      * @return a void
      */
     public Identity() {
         super();
+        this.setOdataType("#microsoft.graph.externalConnectors.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,7 +38,16 @@ public class Identity extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(IdentityType.class)); });
         }};
+    }
+    /**
+     * Gets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * @return a identityType
+     */
+    @javax.annotation.Nullable
+    public IdentityType getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -45,5 +57,14 @@ public class Identity extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("type", this.getType());
+    }
+    /**
+     * Sets the type property value. The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final IdentityType value) {
+        this._type = value;
     }
 }

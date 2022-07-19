@@ -13,6 +13,8 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Name of the property serving as a detection trigger. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of the property in the key:value pair for interpretation. For example, String, Boolean etc. */
     private String _type;
     /** Value of the property serving as a detection trigger. */
@@ -23,6 +25,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     public AlertTrigger() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.alertTrigger");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertTrigger currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -62,6 +66,14 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
@@ -87,6 +99,7 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class AlertTrigger implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.

@@ -28,7 +28,7 @@ public class Request extends Entity implements Parsable {
      */
     public Request() {
         super();
-        this.setType("#microsoft.graph.request");
+        this.setOdataType("#microsoft.graph.request");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

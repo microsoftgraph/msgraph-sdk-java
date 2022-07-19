@@ -30,6 +30,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      */
     public Win32LobAppPowerShellScriptRule() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

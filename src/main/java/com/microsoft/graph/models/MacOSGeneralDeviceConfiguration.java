@@ -38,6 +38,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     public MacOSGeneralDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSGeneralDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

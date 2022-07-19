@@ -319,7 +319,7 @@ public class DriveItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new driveItemVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemVersionItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class DriveItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public DriveItemVersionItemRequestBuilderGetQueryParameters queryParameters = new DriveItemVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new driveItemVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemVersionItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class DriveItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new driveItemVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemVersionItemRequestBuilderPatchRequestConfiguration() {

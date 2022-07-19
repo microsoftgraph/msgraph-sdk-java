@@ -307,7 +307,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public EnrollmentConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new EnrollmentConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new enrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new enrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

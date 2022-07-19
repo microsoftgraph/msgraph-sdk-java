@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.featurerolloutpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
 public class FeatureRolloutPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

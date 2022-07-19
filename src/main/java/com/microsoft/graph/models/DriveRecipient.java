@@ -17,12 +17,15 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     private String _email;
     /** The unique identifier for the recipient in the directory. */
     private String _objectId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new driveRecipient and sets the default values.
      * @return a void
      */
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.driveRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveRecipient currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         return this._objectId;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("alias", this.getAlias());
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("objectId", this.getObjectId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      */
     public void setObjectId(@javax.annotation.Nullable final String value) {
         this._objectId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

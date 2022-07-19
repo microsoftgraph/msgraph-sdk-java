@@ -325,7 +325,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +354,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters queryParameters = new OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +369,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration() {

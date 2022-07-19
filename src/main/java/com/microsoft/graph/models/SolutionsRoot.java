@@ -15,12 +15,15 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
     private java.util.List<BookingBusiness> _bookingBusinesses;
     /** The bookingCurrencies property */
     private java.util.List<BookingCurrency> _bookingCurrencies;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new SolutionsRoot and sets the default values.
      * @return a void
      */
     public SolutionsRoot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.solutionsRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SolutionsRoot currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("bookingBusinesses", (n) -> { currentObject.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
             this.put("bookingCurrencies", (n) -> { currentObject.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      */
     public void setBookingCurrencies(@javax.annotation.Nullable final java.util.List<BookingCurrency> value) {
         this._bookingCurrencies = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

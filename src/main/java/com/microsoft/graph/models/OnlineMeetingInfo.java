@@ -15,6 +15,8 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     private String _conferenceId;
     /** The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting. */
     private String _joinUrl;
+    /** The OdataType property */
+    private String _odataType;
     /** All of the phone numbers associated with this conference. */
     private java.util.List<Phone> _phones;
     /** The pre-formatted quickdial for this call. */
@@ -29,6 +31,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     public OnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onlineMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,9 +66,10 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeetingInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
             this.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
             this.put("quickDial", (n) -> { currentObject.setQuickDial(n.getStringValue()); });
             this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -79,6 +83,14 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getJoinUrl() {
         return this._joinUrl;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the phones property value. All of the phone numbers associated with this conference.
@@ -121,6 +133,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
         writer.writeStringValue("joinUrl", this.getJoinUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("phones", this.getPhones());
         writer.writeStringValue("quickDial", this.getQuickDial());
         writer.writeCollectionOfPrimitiveValues("tollFreeNumbers", this.getTollFreeNumbers());
@@ -150,6 +163,14 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     public void setJoinUrl(@javax.annotation.Nullable final String value) {
         this._joinUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the phones property value. All of the phone numbers associated with this conference.

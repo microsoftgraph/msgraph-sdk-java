@@ -19,7 +19,7 @@ import microsoft.graph.models.DriveItemCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the children property of the microsoft.graph.driveItem entity. */
 public class ChildrenRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

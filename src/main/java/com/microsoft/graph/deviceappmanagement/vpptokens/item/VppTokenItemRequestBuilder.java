@@ -313,7 +313,7 @@ public class VppTokenItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new vppTokenItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new VppTokenItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public VppTokenItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class VppTokenItemRequestBuilder {
         @javax.annotation.Nullable
         public VppTokenItemRequestBuilderGetQueryParameters queryParameters = new VppTokenItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new vppTokenItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new VppTokenItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public VppTokenItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class VppTokenItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new vppTokenItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new VppTokenItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public VppTokenItemRequestBuilderPatchRequestConfiguration() {

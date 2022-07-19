@@ -38,6 +38,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     public DirectoryAudit() {
         super();
+        this.setOdataType("#microsoft.graph.directoryAudit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

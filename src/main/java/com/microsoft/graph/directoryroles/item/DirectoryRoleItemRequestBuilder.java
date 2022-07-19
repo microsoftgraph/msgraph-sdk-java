@@ -290,7 +290,7 @@ public class DirectoryRoleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directoryRoles.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -357,7 +357,7 @@ public class DirectoryRoleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directoryRoles.item.scopedMembers.item collection
      * @param id Unique identifier of the item
-     * @return a scopedRoleMembershipItemRequestBuilder
+     * @return a ScopedRoleMembershipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedMembers(@javax.annotation.Nonnull final String id) {
@@ -375,7 +375,7 @@ public class DirectoryRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleItemRequestBuilderDeleteRequestConfiguration() {
@@ -404,7 +404,7 @@ public class DirectoryRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public DirectoryRoleItemRequestBuilderGetQueryParameters queryParameters = new DirectoryRoleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new directoryRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleItemRequestBuilderGetRequestConfiguration() {
@@ -419,7 +419,7 @@ public class DirectoryRoleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleItemRequestBuilderPatchRequestConfiguration() {

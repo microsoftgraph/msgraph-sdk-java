@@ -343,7 +343,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryNoncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryNoncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryNoncustodialDataSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryNoncustodialDataSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryNoncustodialDataSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderPatchRequestConfiguration() {

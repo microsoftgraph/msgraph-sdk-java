@@ -20,7 +20,7 @@ import microsoft.graph.models.MultiValueLegacyExtendedPropertyCollectionResponse
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity. */
 public class MultiValueExtendedPropertiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

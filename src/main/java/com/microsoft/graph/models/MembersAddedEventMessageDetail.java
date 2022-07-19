@@ -21,6 +21,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      */
     public MembersAddedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.membersAddedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

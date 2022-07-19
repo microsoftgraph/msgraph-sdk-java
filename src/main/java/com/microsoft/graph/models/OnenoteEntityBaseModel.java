@@ -17,7 +17,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     public OnenoteEntityBaseModel() {
         super();
-        this.setType("#microsoft.graph.onenoteEntityBaseModel");
+        this.setOdataType("#microsoft.graph.onenoteEntityBaseModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,8 +31,13 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.notebook": return new Notebook();
+                case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
                 case "#microsoft.graph.onenoteEntitySchemaObjectModel": return new OnenoteEntitySchemaObjectModel();
+                case "#microsoft.graph.onenotePage": return new OnenotePage();
                 case "#microsoft.graph.onenoteResource": return new OnenoteResource();
+                case "#microsoft.graph.onenoteSection": return new OnenoteSection();
+                case "#microsoft.graph.sectionGroup": return new SectionGroup();
             }
         }
         return new OnenoteEntityBaseModel();

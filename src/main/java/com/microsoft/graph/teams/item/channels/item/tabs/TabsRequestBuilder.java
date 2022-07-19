@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsTabCollectionResponse;
 import microsoft.graph.teams.item.channels.item.tabs.count.CountRequestBuilder;
 /** Provides operations to manage the tabs property of the microsoft.graph.channel entity. */
 public class TabsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

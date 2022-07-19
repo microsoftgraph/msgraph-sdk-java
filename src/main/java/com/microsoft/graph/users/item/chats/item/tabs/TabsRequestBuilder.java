@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsTabCollectionResponse;
 import microsoft.graph.users.item.chats.item.tabs.count.CountRequestBuilder;
 /** Provides operations to manage the tabs property of the microsoft.graph.chat entity. */
 public class TabsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.teams.item.incomingchannels.count.CountRequestBuilder;
 /** Provides operations to manage the incomingChannels property of the microsoft.graph.team entity. */
 public class IncomingChannelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

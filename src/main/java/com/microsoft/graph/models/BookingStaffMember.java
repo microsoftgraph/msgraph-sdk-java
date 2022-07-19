@@ -28,6 +28,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      */
     public BookingStaffMember() {
         super();
+        this.setOdataType("#microsoft.graph.bookingStaffMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

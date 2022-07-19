@@ -19,6 +19,8 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     private String _emailAddress;
     /** Mobile phone number of the contact. */
     private String _mobilePhone;
+    /** The OdataType property */
+    private String _odataType;
     /** The relationship property */
     private ContactRelationship _relationship;
     /**
@@ -27,6 +29,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.relatedContact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,11 +80,12 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RelatedContact currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("accessConsent", (n) -> { currentObject.setAccessConsent(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(ContactRelationship.class)); });
         }};
     }
@@ -92,6 +96,14 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMobilePhone() {
         return this._mobilePhone;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the relationship property value. The relationship property
@@ -112,6 +124,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeStringValue("mobilePhone", this.getMobilePhone());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("relationship", this.getRelationship());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
         this._mobilePhone = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the relationship property value. The relationship property

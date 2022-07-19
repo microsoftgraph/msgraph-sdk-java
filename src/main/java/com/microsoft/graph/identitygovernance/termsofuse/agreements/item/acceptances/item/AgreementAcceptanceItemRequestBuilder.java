@@ -307,7 +307,7 @@ public class AgreementAcceptanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementAcceptanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementAcceptanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementAcceptanceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AgreementAcceptanceItemRequestBuilder {
         @javax.annotation.Nullable
         public AgreementAcceptanceItemRequestBuilderGetQueryParameters queryParameters = new AgreementAcceptanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new agreementAcceptanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementAcceptanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementAcceptanceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AgreementAcceptanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementAcceptanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementAcceptanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementAcceptanceItemRequestBuilderPatchRequestConfiguration() {

@@ -16,6 +16,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     private LocalDate _endDate;
     /** The number of times to repeat the event. Required and must be positive if type is numbered. */
     private Integer _numberOfOccurrences;
+    /** The OdataType property */
+    private String _odataType;
     /** Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used. */
     private String _recurrenceTimeZone;
     /** The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required. */
@@ -28,6 +30,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.recurrenceRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,9 +65,10 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecurrenceRange currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
             this.put("numberOfOccurrences", (n) -> { currentObject.setNumberOfOccurrences(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrenceTimeZone", (n) -> { currentObject.setRecurrenceTimeZone(n.getStringValue()); });
             this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrenceRangeType.class)); });
@@ -77,6 +81,14 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getNumberOfOccurrences() {
         return this._numberOfOccurrences;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
@@ -111,6 +123,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("endDate", this.getEndDate());
         writer.writeIntegerValue("numberOfOccurrences", this.getNumberOfOccurrences());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("recurrenceTimeZone", this.getRecurrenceTimeZone());
         writer.writeLocalDateValue("startDate", this.getStartDate());
         writer.writeEnumValue("type", this.getType());
@@ -139,6 +152,14 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      */
     public void setNumberOfOccurrences(@javax.annotation.Nullable final Integer value) {
         this._numberOfOccurrences = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.

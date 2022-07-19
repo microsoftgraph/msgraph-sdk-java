@@ -16,6 +16,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      */
     public TimeOffItem() {
         super();
+        this.setOdataType("#microsoft.graph.timeOffItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

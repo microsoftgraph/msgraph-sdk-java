@@ -307,7 +307,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsInformationProtectionPolicyItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration() {

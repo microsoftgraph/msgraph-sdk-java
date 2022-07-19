@@ -207,7 +207,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item.effectiveRules.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder effectiveRules(@javax.annotation.Nonnull final String id) {
@@ -325,7 +325,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item.rules.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder rules(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleManagementPolicyItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleManagementPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyItemRequestBuilderPatchRequestConfiguration() {

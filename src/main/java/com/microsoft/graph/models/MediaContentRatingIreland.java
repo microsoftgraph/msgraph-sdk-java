@@ -13,6 +13,8 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** Movies rating labels in Ireland */
     private RatingIrelandMoviesType _movieRating;
+    /** The OdataType property */
+    private String _odataType;
     /** TV content rating labels in Ireland */
     private RatingIrelandTelevisionType _tvRating;
     /**
@@ -21,6 +23,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
      */
     public MediaContentRatingIreland() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mediaContentRatingIreland");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaContentRatingIreland currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingIrelandMoviesType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingIrelandTelevisionType.class)); });
         }};
     }
@@ -59,6 +63,14 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public RatingIrelandMoviesType getMovieRating() {
         return this._movieRating;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Ireland
@@ -76,6 +88,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("movieRating", this.getMovieRating());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("tvRating", this.getTvRating());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
      */
     public void setMovieRating(@javax.annotation.Nullable final RatingIrelandMoviesType value) {
         this._movieRating = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tvRating property value. TV content rating labels in Ireland

@@ -62,6 +62,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     public OnlineMeeting() {
         super();
+        this.setOdataType("#microsoft.graph.onlineMeeting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

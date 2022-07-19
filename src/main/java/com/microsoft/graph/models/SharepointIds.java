@@ -17,6 +17,8 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     private String _listItemId;
     /** The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site. */
     private String _listItemUniqueId;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier (guid) for the item's site collection (SPSite). */
     private String _siteId;
     /** The SharePoint URL for the site that contains the item. */
@@ -31,6 +33,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sharepointIds");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,10 +60,11 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharepointIds currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
             this.put("listItemId", (n) -> { currentObject.setListItemId(n.getStringValue()); });
             this.put("listItemUniqueId", (n) -> { currentObject.setListItemUniqueId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
             this.put("siteUrl", (n) -> { currentObject.setSiteUrl(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
@@ -90,6 +94,14 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getListItemUniqueId() {
         return this._listItemUniqueId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
@@ -133,6 +145,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("listId", this.getListId());
         writer.writeStringValue("listItemId", this.getListItemId());
         writer.writeStringValue("listItemUniqueId", this.getListItemUniqueId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("siteId", this.getSiteId());
         writer.writeStringValue("siteUrl", this.getSiteUrl());
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -170,6 +183,14 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     public void setListItemUniqueId(@javax.annotation.Nullable final String value) {
         this._listItemUniqueId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).

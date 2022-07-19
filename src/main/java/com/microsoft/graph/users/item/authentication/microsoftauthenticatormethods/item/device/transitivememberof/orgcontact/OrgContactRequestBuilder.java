@@ -19,7 +19,7 @@ import microsoft.graph.models.OrgContactCollectionResponse;
 import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.transitivememberof.orgcontact.count.CountRequestBuilder;
 /** Casts the previous resource to orgContact. */
 public class OrgContactRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

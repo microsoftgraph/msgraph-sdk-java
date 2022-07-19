@@ -20,7 +20,7 @@ import microsoft.graph.models.OpenShift;
 import microsoft.graph.models.OpenShiftCollectionResponse;
 /** Provides operations to manage the openShifts property of the microsoft.graph.schedule entity. */
 public class OpenShiftsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

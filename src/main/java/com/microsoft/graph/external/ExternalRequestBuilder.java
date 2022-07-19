@@ -34,7 +34,7 @@ public class ExternalRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.external.connections.item collection
      * @param id Unique identifier of the item
-     * @return a externalConnectionItemRequestBuilder
+     * @return a ExternalConnectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExternalConnectionItemRequestBuilder connections(@javax.annotation.Nonnull final String id) {

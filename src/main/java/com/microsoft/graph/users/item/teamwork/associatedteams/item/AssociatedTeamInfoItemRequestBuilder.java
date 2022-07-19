@@ -307,7 +307,7 @@ public class AssociatedTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new associatedTeamInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AssociatedTeamInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssociatedTeamInfoItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AssociatedTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public AssociatedTeamInfoItemRequestBuilderGetQueryParameters queryParameters = new AssociatedTeamInfoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new associatedTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AssociatedTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new associatedTeamInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration() {

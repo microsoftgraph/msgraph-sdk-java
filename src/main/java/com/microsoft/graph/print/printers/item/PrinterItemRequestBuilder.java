@@ -54,7 +54,7 @@ public class PrinterItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.printers.item.connectors.item collection
      * @param id Unique identifier of the item
-     * @return a printConnectorItemRequestBuilder
+     * @return a PrintConnectorItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintConnectorItemRequestBuilder connectors(@javax.annotation.Nonnull final String id) {
@@ -340,7 +340,7 @@ public class PrinterItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.printers.item.shares.item collection
      * @param id Unique identifier of the item
-     * @return a printerShareItemRequestBuilder
+     * @return a PrinterShareItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrinterShareItemRequestBuilder shares(@javax.annotation.Nonnull final String id) {
@@ -352,7 +352,7 @@ public class PrinterItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.printers.item.taskTriggers.item collection
      * @param id Unique identifier of the item
-     * @return a printTaskTriggerItemRequestBuilder
+     * @return a PrintTaskTriggerItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintTaskTriggerItemRequestBuilder taskTriggers(@javax.annotation.Nonnull final String id) {
@@ -370,7 +370,7 @@ public class PrinterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterItemRequestBuilderDeleteRequestConfiguration() {
@@ -399,7 +399,7 @@ public class PrinterItemRequestBuilder {
         @javax.annotation.Nullable
         public PrinterItemRequestBuilderGetQueryParameters queryParameters = new PrinterItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterItemRequestBuilderGetRequestConfiguration() {
@@ -414,7 +414,7 @@ public class PrinterItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterItemRequestBuilderPatchRequestConfiguration() {

@@ -23,7 +23,7 @@ import microsoft.graph.models.ResourceSpecificPermissionGrant;
 import microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
 public class PermissionGrantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

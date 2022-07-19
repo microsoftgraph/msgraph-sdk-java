@@ -22,12 +22,15 @@ public class Certification implements AdditionalDataHolder, Parsable {
     private Boolean _isPublisherAttested;
     /** The timestamp when the certification for the application was most recently added or updated. */
     private OffsetDateTime _lastCertificationDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new certification and sets the default values.
      * @return a void
      */
     public Certification() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.certification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,12 +73,13 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Certification currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
             this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
             this.put("isPublisherAttested", (n) -> { currentObject.setIsPublisherAttested(n.getBooleanValue()); });
             this.put("lastCertificationDateTime", (n) -> { currentObject.setLastCertificationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -103,6 +107,14 @@ public class Certification implements AdditionalDataHolder, Parsable {
         return this._lastCertificationDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -114,6 +126,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isCertifiedByMicrosoft", this.getIsCertifiedByMicrosoft());
         writer.writeBooleanValue("isPublisherAttested", this.getIsPublisherAttested());
         writer.writeOffsetDateTimeValue("lastCertificationDateTime", this.getLastCertificationDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -163,5 +176,13 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     public void setLastCertificationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCertificationDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

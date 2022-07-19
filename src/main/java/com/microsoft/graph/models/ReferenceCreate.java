@@ -11,8 +11,8 @@ import java.util.Objects;
 public class ReferenceCreate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The id property */
-    private String _id;
+    /** The OdataId property */
+    private String _odataId;
     /**
      * Instantiates a new ReferenceCreate and sets the default values.
      * @return a void
@@ -46,16 +46,16 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceCreate currentObject = this;
         return new HashMap<>(1) {{
-            this.put("@odata.id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.id property value. The id property
+     * Gets the @odata.id property value. The OdataId property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getId() {
-        return this._id;
+    public String getOdataId() {
+        return this._odataId;
     }
     /**
      * Serializes information the current object
@@ -64,7 +64,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.id", this.getId());
+        writer.writeStringValue("@odata.id", this.getOdataId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -76,11 +76,11 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.id property value. The id property
-     * @param value Value to set for the id property.
+     * Sets the @odata.id property value. The OdataId property
+     * @param value Value to set for the OdataId property.
      * @return a void
      */
-    public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+    public void setOdataId(@javax.annotation.Nullable final String value) {
+        this._odataId = value;
     }
 }

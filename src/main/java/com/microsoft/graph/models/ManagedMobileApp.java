@@ -19,6 +19,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      */
     public ManagedMobileApp() {
         super();
+        this.setOdataType("#microsoft.graph.managedMobileApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

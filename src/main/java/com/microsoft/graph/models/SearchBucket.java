@@ -17,12 +17,15 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
     private Integer _count;
     /** The discrete value of the field that an aggregation was computed on. */
     private String _key;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new searchBucket and sets the default values.
      * @return a void
      */
     public SearchBucket() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchBucket currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("aggregationFilterToken", (n) -> { currentObject.setAggregationFilterToken(n.getStringValue()); });
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
         return this._key;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("aggregationFilterToken", this.getAggregationFilterToken());
         writer.writeIntegerValue("count", this.getCount());
         writer.writeStringValue("key", this.getKey());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
      */
     public void setKey(@javax.annotation.Nullable final String value) {
         this._key = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

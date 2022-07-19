@@ -325,7 +325,7 @@ public class RelationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new relationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RelationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RelationItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +354,7 @@ public class RelationItemRequestBuilder {
         @javax.annotation.Nullable
         public RelationItemRequestBuilderGetQueryParameters queryParameters = new RelationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new relationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RelationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RelationItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +369,7 @@ public class RelationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new relationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RelationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RelationItemRequestBuilderPatchRequestConfiguration() {

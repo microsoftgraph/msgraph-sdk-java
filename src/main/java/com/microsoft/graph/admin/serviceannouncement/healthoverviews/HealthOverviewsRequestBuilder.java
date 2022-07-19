@@ -20,7 +20,7 @@ import microsoft.graph.models.ServiceHealth;
 import microsoft.graph.models.ServiceHealthCollectionResponse;
 /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
 public class HealthOverviewsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

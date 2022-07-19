@@ -307,7 +307,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration() {

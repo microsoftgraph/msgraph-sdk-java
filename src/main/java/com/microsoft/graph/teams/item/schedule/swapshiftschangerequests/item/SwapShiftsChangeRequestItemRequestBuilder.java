@@ -307,7 +307,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new swapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public SwapShiftsChangeRequestItemRequestBuilderGetQueryParameters queryParameters = new SwapShiftsChangeRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new swapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new swapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration() {

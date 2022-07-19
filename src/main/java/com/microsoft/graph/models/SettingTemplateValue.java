@@ -17,6 +17,8 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
     private String _description;
     /** Name of the setting. Read-only. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of the setting. Read-only. */
     private String _type;
     /**
@@ -25,6 +27,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
      */
     public SettingTemplateValue() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.settingTemplateValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SettingTemplateValue currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Type of the setting. Read-only.
@@ -100,6 +112,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("defaultValue", this.getDefaultValue());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Type of the setting. Read-only.

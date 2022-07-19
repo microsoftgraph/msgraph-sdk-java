@@ -20,7 +20,7 @@ import microsoft.graph.models.WorkforceIntegrationCollectionResponse;
 import microsoft.graph.teamwork.workforceintegrations.count.CountRequestBuilder;
 /** Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity. */
 public class WorkforceIntegrationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -350,7 +350,7 @@ public class ListItemItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item.list.items.item.versions.item collection
      * @param id Unique identifier of the item
-     * @return a listItemVersionItemRequestBuilder
+     * @return a ListItemVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
@@ -368,7 +368,7 @@ public class ListItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -397,7 +397,7 @@ public class ListItemItemRequestBuilder {
         @javax.annotation.Nullable
         public ListItemItemRequestBuilderGetQueryParameters queryParameters = new ListItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new listItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemItemRequestBuilderGetRequestConfiguration() {
@@ -412,7 +412,7 @@ public class ListItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemItemRequestBuilderPatchRequestConfiguration() {

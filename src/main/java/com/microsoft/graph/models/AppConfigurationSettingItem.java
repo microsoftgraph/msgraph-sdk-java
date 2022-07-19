@@ -18,12 +18,15 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     private MdmAppConfigKeyType _appConfigKeyType;
     /** app configuration key value. */
     private String _appConfigKeyValue;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new appConfigurationSettingItem and sets the default values.
      * @return a void
      */
     public AppConfigurationSettingItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.appConfigurationSettingItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,11 +77,20 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppConfigurationSettingItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("appConfigKey", (n) -> { currentObject.setAppConfigKey(n.getStringValue()); });
             this.put("appConfigKeyType", (n) -> { currentObject.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
             this.put("appConfigKeyValue", (n) -> { currentObject.setAppConfigKeyValue(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -90,6 +102,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
         writer.writeStringValue("appConfigKey", this.getAppConfigKey());
         writer.writeEnumValue("appConfigKeyType", this.getAppConfigKeyType());
         writer.writeStringValue("appConfigKeyValue", this.getAppConfigKeyValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
      */
     public void setAppConfigKeyValue(@javax.annotation.Nullable final String value) {
         this._appConfigKeyValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -27,6 +27,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     public SectionGroup() {
         super();
+        this.setOdataType("#microsoft.graph.sectionGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

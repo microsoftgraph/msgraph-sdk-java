@@ -17,6 +17,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private String _label;
     /** The mediaType property */
     private Modality _mediaType;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates whether the media is muted by the server. */
     private Boolean _serverMuted;
     /** The source ID. */
@@ -27,6 +29,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mediaStream");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +64,11 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serverMuted", (n) -> { currentObject.setServerMuted(n.getBooleanValue()); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
         }};
@@ -84,6 +88,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Modality getMediaType() {
         return this._mediaType;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the serverMuted property value. Indicates whether the media is muted by the server.
@@ -111,6 +123,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("direction", this.getDirection());
         writer.writeStringValue("label", this.getLabel());
         writer.writeEnumValue("mediaType", this.getMediaType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("serverMuted", this.getServerMuted());
         writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public void setMediaType(@javax.annotation.Nullable final Modality value) {
         this._mediaType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the serverMuted property value. Indicates whether the media is muted by the server.

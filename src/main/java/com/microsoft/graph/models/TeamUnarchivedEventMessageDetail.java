@@ -18,6 +18,7 @@ public class TeamUnarchivedEventMessageDetail extends EventMessageDetail impleme
      */
     public TeamUnarchivedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamUnarchivedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -46,6 +46,7 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public PolicyRoot() {
         super();
+        this.setOdataType("#microsoft.graph.policyRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

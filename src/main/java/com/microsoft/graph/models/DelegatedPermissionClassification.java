@@ -21,6 +21,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      */
     public DelegatedPermissionClassification() {
         super();
+        this.setOdataType("#microsoft.graph.delegatedPermissionClassification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

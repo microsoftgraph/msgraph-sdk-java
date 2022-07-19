@@ -288,7 +288,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item collection
      * @param id Unique identifier of the item
-     * @return a notebookItemRequestBuilder
+     * @return a NotebookItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NotebookItemRequestBuilder notebooks(@javax.annotation.Nonnull final String id) {
@@ -300,7 +300,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.operations.item collection
      * @param id Unique identifier of the item
-     * @return a onenoteOperationItemRequestBuilder
+     * @return a OnenoteOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenoteOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -312,7 +312,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.pages.item collection
      * @param id Unique identifier of the item
-     * @return a onenotePageItemRequestBuilder
+     * @return a OnenotePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenotePageItemRequestBuilder pages(@javax.annotation.Nonnull final String id) {
@@ -379,7 +379,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.resources.item collection
      * @param id Unique identifier of the item
-     * @return a onenoteResourceItemRequestBuilder
+     * @return a OnenoteResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenoteResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
@@ -391,7 +391,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.sectionGroups.item collection
      * @param id Unique identifier of the item
-     * @return a sectionGroupItemRequestBuilder
+     * @return a SectionGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
@@ -403,7 +403,7 @@ public class OnenoteRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.sections.item collection
      * @param id Unique identifier of the item
-     * @return a onenoteSectionItemRequestBuilder
+     * @return a OnenoteSectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {

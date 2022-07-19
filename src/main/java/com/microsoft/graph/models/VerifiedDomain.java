@@ -19,6 +19,8 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     private Boolean _isInitial;
     /** The domain name; for example, contoso.onmicrosoft.com. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** For example, Managed. */
     private String _type;
     /**
@@ -27,6 +29,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     public VerifiedDomain() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.verifiedDomain");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,11 +64,12 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifiedDomain currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getStringValue()); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("isInitial", (n) -> { currentObject.setIsInitial(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -94,6 +98,14 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the type property value. For example, Managed.
      * @return a string
      */
@@ -112,6 +124,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isDefault", this.getIsDefault());
         writer.writeBooleanValue("isInitial", this.getIsInitial());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. For example, Managed.

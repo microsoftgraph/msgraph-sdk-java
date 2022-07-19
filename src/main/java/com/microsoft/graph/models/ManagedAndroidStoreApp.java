@@ -20,6 +20,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      */
     public ManagedAndroidStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.managedAndroidStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class RestrictedSignInItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new restrictedSignInItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedSignInItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedSignInItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RestrictedSignInItemRequestBuilder {
         @javax.annotation.Nullable
         public RestrictedSignInItemRequestBuilderGetQueryParameters queryParameters = new RestrictedSignInItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new restrictedSignInItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedSignInItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedSignInItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RestrictedSignInItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new restrictedSignInItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RestrictedSignInItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RestrictedSignInItemRequestBuilderPatchRequestConfiguration() {

@@ -21,7 +21,7 @@ import microsoft.graph.teams.count.CountRequestBuilder;
 import microsoft.graph.teams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the collection of team entities. */
 public class TeamsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class ResourceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ResourceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public ResourceOperationItemRequestBuilderGetQueryParameters queryParameters = new ResourceOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new resourceOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ResourceOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceOperationItemRequestBuilderPatchRequestConfiguration() {

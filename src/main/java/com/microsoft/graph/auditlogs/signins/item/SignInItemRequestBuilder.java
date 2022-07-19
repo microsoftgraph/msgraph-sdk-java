@@ -307,7 +307,7 @@ public class SignInItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new signInItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SignInItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SignInItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SignInItemRequestBuilder {
         @javax.annotation.Nullable
         public SignInItemRequestBuilderGetQueryParameters queryParameters = new SignInItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new signInItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SignInItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SignInItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SignInItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new signInItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SignInItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SignInItemRequestBuilderPatchRequestConfiguration() {

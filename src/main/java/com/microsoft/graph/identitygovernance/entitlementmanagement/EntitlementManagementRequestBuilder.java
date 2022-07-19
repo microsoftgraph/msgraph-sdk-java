@@ -82,7 +82,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
      * @param id Unique identifier of the item
-     * @return a approvalItemRequestBuilder
+     * @return a ApprovalItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalItemRequestBuilder accessPackageAssignmentApprovals(@javax.annotation.Nonnull final String id) {
@@ -94,7 +94,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
@@ -106,7 +106,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.assignmentPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentPolicyItemRequestBuilder
+     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentPolicyItemRequestBuilder assignmentPolicies(@javax.annotation.Nonnull final String id) {
@@ -118,7 +118,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.assignmentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentRequestItemRequestBuilder
+     * @return a AccessPackageAssignmentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentRequestItemRequestBuilder assignmentRequests(@javax.annotation.Nonnull final String id) {
@@ -130,7 +130,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageAssignmentItemRequestBuilder
+     * @return a AccessPackageAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -142,7 +142,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageCatalogItemRequestBuilder
+     * @return a AccessPackageCatalogItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageCatalogItemRequestBuilder catalogs(@javax.annotation.Nonnull final String id) {
@@ -154,7 +154,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
      * @param id Unique identifier of the item
-     * @return a connectedOrganizationItemRequestBuilder
+     * @return a ConnectedOrganizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConnectedOrganizationItemRequestBuilder connectedOrganizations(@javax.annotation.Nonnull final String id) {

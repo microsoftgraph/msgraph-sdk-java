@@ -20,7 +20,7 @@ import microsoft.graph.models.UnifiedRoleManagementPolicyRuleCollectionResponse;
 import microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.count.CountRequestBuilder;
 /** Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
 public class EffectiveRulesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

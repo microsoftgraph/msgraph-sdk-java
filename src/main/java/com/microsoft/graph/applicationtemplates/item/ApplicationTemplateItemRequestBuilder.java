@@ -313,7 +313,7 @@ public class ApplicationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ApplicationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public ApplicationTemplateItemRequestBuilderGetQueryParameters queryParameters = new ApplicationTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new applicationTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ApplicationTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationTemplateItemRequestBuilderPatchRequestConfiguration() {

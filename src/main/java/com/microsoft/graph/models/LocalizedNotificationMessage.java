@@ -26,6 +26,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      */
     public LocalizedNotificationMessage() {
         super();
+        this.setOdataType("#microsoft.graph.localizedNotificationMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

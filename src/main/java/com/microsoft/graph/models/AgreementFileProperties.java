@@ -29,7 +29,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     public AgreementFileProperties() {
         super();
-        this.setType("#microsoft.graph.agreementFileProperties");
+        this.setOdataType("#microsoft.graph.agreementFileProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

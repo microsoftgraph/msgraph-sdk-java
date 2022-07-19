@@ -30,6 +30,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     public SharedDriveItem() {
         super();
+        this.setOdataType("#microsoft.graph.sharedDriveItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

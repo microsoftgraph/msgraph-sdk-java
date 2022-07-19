@@ -34,6 +34,8 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     private NotebookLinks _links;
     /** The name property */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The sectionGroupsUrl property */
     private String _sectionGroupsUrl;
     /** The sectionsUrl property */
@@ -48,6 +50,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.CopyNotebookModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,7 +101,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyNotebookModel currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<>(16) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
             this.put("createdByIdentity", (n) -> { currentObject.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdTime", (n) -> { currentObject.setCreatedTime(n.getOffsetDateTimeValue()); });
@@ -110,6 +113,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
             this.put("lastModifiedTime", (n) -> { currentObject.setLastModifiedTime(n.getOffsetDateTimeValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
             this.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
             this.put("self", (n) -> { currentObject.setSelf(n.getStringValue()); });
@@ -181,6 +185,14 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @return a string
      */
@@ -230,6 +242,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedTime", this.getLastModifiedTime());
         writer.writeObjectValue("links", this.getLinks());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sectionGroupsUrl", this.getSectionGroupsUrl());
         writer.writeStringValue("sectionsUrl", this.getSectionsUrl());
         writer.writeStringValue("self", this.getSelf());
@@ -331,6 +344,14 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property

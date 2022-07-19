@@ -20,7 +20,7 @@ import microsoft.graph.models.PasswordAuthenticationMethodCollectionResponse;
 import microsoft.graph.users.item.authentication.passwordmethods.count.CountRequestBuilder;
 /** Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity. */
 public class PasswordMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

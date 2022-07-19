@@ -307,7 +307,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new federatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         @javax.annotation.Nullable
         public FederatedIdentityCredentialItemRequestBuilderGetQueryParameters queryParameters = new FederatedIdentityCredentialItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new federatedIdentityCredentialItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new federatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration() {

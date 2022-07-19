@@ -16,7 +16,7 @@ public class IdentityProviderBase extends Entity implements Parsable {
      */
     public IdentityProviderBase() {
         super();
-        this.setType("#microsoft.graph.identityProviderBase");
+        this.setOdataType("#microsoft.graph.identityProviderBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,6 +32,8 @@ public class IdentityProviderBase extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.appleManagedIdentityProvider": return new AppleManagedIdentityProvider();
                 case "#microsoft.graph.builtInIdentityProvider": return new BuiltInIdentityProvider();
+                case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
+                case "#microsoft.graph.samlOrWsFedExternalDomainFederation": return new SamlOrWsFedExternalDomainFederation();
                 case "#microsoft.graph.samlOrWsFedProvider": return new SamlOrWsFedProvider();
                 case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             }

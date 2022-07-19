@@ -17,12 +17,15 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _choices;
     /** How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons */
     private String _displayAs;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new choiceColumn and sets the default values.
      * @return a void
      */
     public ChoiceColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.choiceColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChoiceColumn currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("allowTextEntry", (n) -> { currentObject.setAllowTextEntry(n.getBooleanValue()); });
             this.put("choices", (n) -> { currentObject.setChoices(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowTextEntry", this.getAllowTextEntry());
         writer.writeCollectionOfPrimitiveValues("choices", this.getChoices());
         writer.writeStringValue("displayAs", this.getDisplayAs());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayAs(@javax.annotation.Nullable final String value) {
         this._displayAs = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

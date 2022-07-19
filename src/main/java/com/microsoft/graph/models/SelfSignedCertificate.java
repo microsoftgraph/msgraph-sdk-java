@@ -22,6 +22,8 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     private byte[] _key;
     /** The unique identifier (GUID) for the key. */
     private String _keyId;
+    /** The OdataType property */
+    private String _odataType;
     /** The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _startDateTime;
     /** The thumbprint value for the key. */
@@ -36,6 +38,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     public SelfSignedCertificate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.selfSignedCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,12 +89,13 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SelfSignedCertificate currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("customKeyIdentifier", (n) -> { currentObject.setCustomKeyIdentifier(n.getByteArrayValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("key", (n) -> { currentObject.setKey(n.getByteArrayValue()); });
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
@@ -113,6 +117,14 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getKeyId() {
         return this._keyId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -158,6 +170,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeByteArrayValue("key", this.getKey());
         writer.writeStringValue("keyId", this.getKeyId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("thumbprint", this.getThumbprint());
         writer.writeStringValue("type", this.getType());
@@ -211,6 +224,14 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
      */
     public void setKeyId(@javax.annotation.Nullable final String value) {
         this._keyId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

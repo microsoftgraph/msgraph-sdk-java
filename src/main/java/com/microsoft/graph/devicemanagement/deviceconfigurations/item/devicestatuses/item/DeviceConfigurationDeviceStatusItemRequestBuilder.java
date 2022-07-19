@@ -307,7 +307,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceConfigurationDeviceStatusItemRequestBuilderGetQueryParameters queryParameters = new DeviceConfigurationDeviceStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration() {

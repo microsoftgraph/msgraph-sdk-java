@@ -18,6 +18,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     public FileAssessmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.fileAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class InferenceClassificationOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new inferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class InferenceClassificationOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public InferenceClassificationOverrideItemRequestBuilderGetQueryParameters queryParameters = new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new inferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class InferenceClassificationOverrideItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new inferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration() {

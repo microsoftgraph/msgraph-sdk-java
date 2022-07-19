@@ -20,6 +20,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     public CallTranscriptEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.callTranscriptEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

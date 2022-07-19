@@ -314,7 +314,7 @@ public class ConversationThreadItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.conversations.item.threads.item.posts.item collection
      * @param id Unique identifier of the item
-     * @return a postItemRequestBuilder
+     * @return a PostItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PostItemRequestBuilder posts(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class ConversationThreadItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationThreadItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationThreadItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationThreadItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class ConversationThreadItemRequestBuilder {
         @javax.annotation.Nullable
         public ConversationThreadItemRequestBuilderGetQueryParameters queryParameters = new ConversationThreadItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conversationThreadItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationThreadItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationThreadItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class ConversationThreadItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationThreadItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationThreadItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationThreadItemRequestBuilderPatchRequestConfiguration() {

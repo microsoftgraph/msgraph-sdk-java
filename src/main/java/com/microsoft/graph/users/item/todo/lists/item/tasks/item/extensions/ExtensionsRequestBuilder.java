@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.todo.lists.item.tasks.item.extensions.count.CountRequestBuilder;
 /** Provides operations to manage the extensions property of the microsoft.graph.todoTask entity. */
 public class ExtensionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

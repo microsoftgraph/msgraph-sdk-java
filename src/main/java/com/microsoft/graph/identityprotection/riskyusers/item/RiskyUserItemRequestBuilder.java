@@ -253,7 +253,7 @@ public class RiskyUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityProtection.riskyUsers.item.history.item collection
      * @param id Unique identifier of the item
-     * @return a riskyUserHistoryItemItemRequestBuilder
+     * @return a RiskyUserHistoryItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RiskyUserHistoryItemItemRequestBuilder history(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class RiskyUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyUserItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class RiskyUserItemRequestBuilder {
         @javax.annotation.Nullable
         public RiskyUserItemRequestBuilderGetQueryParameters queryParameters = new RiskyUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new riskyUserItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyUserItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class RiskyUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskyUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RiskyUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskyUserItemRequestBuilderPatchRequestConfiguration() {

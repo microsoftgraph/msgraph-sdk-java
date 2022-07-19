@@ -307,7 +307,7 @@ public class ExternalItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ExternalItemItemRequestBuilder {
         @javax.annotation.Nullable
         public ExternalItemItemRequestBuilderGetQueryParameters queryParameters = new ExternalItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new externalItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalItemItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ExternalItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new externalItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExternalItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExternalItemItemRequestBuilderPatchRequestConfiguration() {

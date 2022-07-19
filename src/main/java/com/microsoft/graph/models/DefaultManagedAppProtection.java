@@ -38,6 +38,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     public DefaultManagedAppProtection() {
         super();
+        this.setOdataType("#microsoft.graph.defaultManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

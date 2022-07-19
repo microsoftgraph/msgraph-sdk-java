@@ -14,6 +14,7 @@ public class EdiscoveryHoldOperation extends CaseOperation implements Parsable {
      */
     public EdiscoveryHoldOperation() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryHoldOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

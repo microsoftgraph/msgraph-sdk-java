@@ -56,6 +56,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      */
     public AndroidWorkProfileCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfileCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

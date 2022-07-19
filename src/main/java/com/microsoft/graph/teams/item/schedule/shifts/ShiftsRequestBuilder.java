@@ -20,7 +20,7 @@ import microsoft.graph.models.ShiftCollectionResponse;
 import microsoft.graph.teams.item.schedule.shifts.count.CountRequestBuilder;
 /** Provides operations to manage the shifts property of the microsoft.graph.schedule entity. */
 public class ShiftsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

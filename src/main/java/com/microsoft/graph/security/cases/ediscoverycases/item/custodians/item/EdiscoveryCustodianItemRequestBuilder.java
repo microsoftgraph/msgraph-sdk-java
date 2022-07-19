@@ -358,7 +358,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.siteSources.item collection
      * @param id Unique identifier of the item
-     * @return a siteSourceItemRequestBuilder
+     * @return a SiteSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteSourceItemRequestBuilder siteSources(@javax.annotation.Nonnull final String id) {
@@ -370,7 +370,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.unifiedGroupSources.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedGroupSourceItemRequestBuilder
+     * @return a UnifiedGroupSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedGroupSourceItemRequestBuilder unifiedGroupSources(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.userSources.item collection
      * @param id Unique identifier of the item
-     * @return a userSourceItemRequestBuilder
+     * @return a UserSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserSourceItemRequestBuilder userSources(@javax.annotation.Nonnull final String id) {
@@ -400,7 +400,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryCustodianItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCustodianItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCustodianItemRequestBuilderDeleteRequestConfiguration() {
@@ -429,7 +429,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryCustodianItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryCustodianItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryCustodianItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration() {
@@ -444,7 +444,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryCustodianItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration() {

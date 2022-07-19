@@ -23,6 +23,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     private CrossTenantAccessPolicyInboundTrust _inboundTrust;
     /** Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization. */
     private Boolean _isServiceProvider;
+    /** The OdataType property */
+    private String _odataType;
     /** The tenant identifier for the partner Azure AD organization. Read-only. Key. */
     private String _tenantId;
     /**
@@ -31,6 +33,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public CrossTenantAccessPolicyConfigurationPartner() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyConfigurationPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,13 +92,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyConfigurationPartner currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("b2bCollaborationInbound", (n) -> { currentObject.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("b2bCollaborationOutbound", (n) -> { currentObject.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("b2bDirectConnectInbound", (n) -> { currentObject.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("b2bDirectConnectOutbound", (n) -> { currentObject.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("inboundTrust", (n) -> { currentObject.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
             this.put("isServiceProvider", (n) -> { currentObject.setIsServiceProvider(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
     }
@@ -114,6 +118,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     @javax.annotation.Nullable
     public Boolean getIsServiceProvider() {
         return this._isServiceProvider;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
@@ -136,6 +148,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -194,6 +207,14 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setIsServiceProvider(@javax.annotation.Nullable final Boolean value) {
         this._isServiceProvider = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.

@@ -307,7 +307,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

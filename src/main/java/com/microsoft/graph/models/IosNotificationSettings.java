@@ -22,6 +22,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     private String _bundleID;
     /** Indicates whether notifications are allowed for this app. */
     private Boolean _enabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Publisher to be associated with the bundleID. */
     private String _publisher;
     /** Indicates whether notifications can be shown in notification center. */
@@ -36,6 +38,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     public IosNotificationSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosNotificationSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -102,17 +105,26 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNotificationSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("alertType", (n) -> { currentObject.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
             this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
             this.put("badgesEnabled", (n) -> { currentObject.setBadgesEnabled(n.getBooleanValue()); });
             this.put("bundleID", (n) -> { currentObject.setBundleID(n.getStringValue()); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
             this.put("showInNotificationCenter", (n) -> { currentObject.setShowInNotificationCenter(n.getBooleanValue()); });
             this.put("showOnLockScreen", (n) -> { currentObject.setShowOnLockScreen(n.getBooleanValue()); });
             this.put("soundsEnabled", (n) -> { currentObject.setSoundsEnabled(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
@@ -158,6 +170,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("badgesEnabled", this.getBadgesEnabled());
         writer.writeStringValue("bundleID", this.getBundleID());
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeBooleanValue("showInNotificationCenter", this.getShowInNotificationCenter());
         writer.writeBooleanValue("showOnLockScreen", this.getShowOnLockScreen());
@@ -211,6 +224,14 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.

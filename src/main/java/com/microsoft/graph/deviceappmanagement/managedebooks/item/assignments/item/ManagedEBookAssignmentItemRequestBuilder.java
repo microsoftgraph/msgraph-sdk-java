@@ -307,7 +307,7 @@ public class ManagedEBookAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedEBookAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedEBookAssignmentItemRequestBuilderGetQueryParameters queryParameters = new ManagedEBookAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedEBookAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedEBookAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedEBookAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration() {

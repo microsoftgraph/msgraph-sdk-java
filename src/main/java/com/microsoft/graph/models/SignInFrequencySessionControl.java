@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
+    /** Possible values are: days, hours, or null if frequencyInterval is everyTime . */
+    private SigninFrequencyType _type;
     /** The number of days or hours. */
     private Integer _value;
     /**
@@ -16,6 +18,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      */
     public SignInFrequencySessionControl() {
         super();
+        this.setOdataType("#microsoft.graph.signInFrequencySessionControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,8 +38,17 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInFrequencySessionControl currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SigninFrequencyType.class)); });
             this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * @return a signinFrequencyType
+     */
+    @javax.annotation.Nullable
+    public SigninFrequencyType getType() {
+        return this._type;
     }
     /**
      * Gets the value property value. The number of days or hours.
@@ -54,7 +66,16 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("type", this.getType());
         writer.writeIntegerValue("value", this.getValue());
+    }
+    /**
+     * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final SigninFrequencyType value) {
+        this._type = value;
     }
     /**
      * Sets the value property value. The number of days or hours.

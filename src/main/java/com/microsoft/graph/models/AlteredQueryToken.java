@@ -13,6 +13,8 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Defines the length of a changed segment. */
     private Integer _length;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines the offset of a changed segment. */
     private Integer _offset;
     /** Represents the corrected segment string. */
@@ -23,6 +25,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
      */
     public AlteredQueryToken() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.alteredQueryToken");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlteredQueryToken currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
             this.put("suggestion", (n) -> { currentObject.setSuggestion(n.getStringValue()); });
         }};
@@ -62,6 +66,14 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getLength() {
         return this._length;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the offset property value. Defines the offset of a changed segment.
@@ -87,6 +99,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("length", this.getLength());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("offset", this.getOffset());
         writer.writeStringValue("suggestion", this.getSuggestion());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
      */
     public void setLength(@javax.annotation.Nullable final Integer value) {
         this._length = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offset property value. Defines the offset of a changed segment.

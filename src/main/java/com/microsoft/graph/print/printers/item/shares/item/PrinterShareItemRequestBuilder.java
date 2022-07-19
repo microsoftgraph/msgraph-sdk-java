@@ -155,7 +155,7 @@ public class PrinterShareItemRequestBuilder {
         @javax.annotation.Nullable
         public PrinterShareItemRequestBuilderGetQueryParameters queryParameters = new PrinterShareItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printerShareItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterShareItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterShareItemRequestBuilderGetRequestConfiguration() {

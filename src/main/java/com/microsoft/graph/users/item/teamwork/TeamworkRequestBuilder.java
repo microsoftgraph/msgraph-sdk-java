@@ -47,7 +47,7 @@ public class TeamworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.teamwork.associatedTeams.item collection
      * @param id Unique identifier of the item
-     * @return a associatedTeamInfoItemRequestBuilder
+     * @return a AssociatedTeamInfoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AssociatedTeamInfoItemRequestBuilder associatedTeams(@javax.annotation.Nonnull final String id) {
@@ -278,7 +278,7 @@ public class TeamworkRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.teamwork.installedApps.item collection
      * @param id Unique identifier of the item
-     * @return a userScopeTeamsAppInstallationItemRequestBuilder
+     * @return a UserScopeTeamsAppInstallationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserScopeTeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {

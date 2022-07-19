@@ -20,7 +20,7 @@ import microsoft.graph.models.RiskDetection;
 import microsoft.graph.models.RiskDetectionCollectionResponse;
 /** Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskDetectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

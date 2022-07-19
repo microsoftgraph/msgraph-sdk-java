@@ -20,6 +20,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      */
     public TimeOffReason() {
         super();
+        this.setOdataType("#microsoft.graph.timeOffReason");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

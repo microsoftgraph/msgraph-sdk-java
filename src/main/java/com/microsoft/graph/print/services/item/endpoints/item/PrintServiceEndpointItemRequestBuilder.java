@@ -307,7 +307,7 @@ public class PrintServiceEndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printServiceEndpointItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceEndpointItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceEndpointItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PrintServiceEndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintServiceEndpointItemRequestBuilderGetQueryParameters queryParameters = new PrintServiceEndpointItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printServiceEndpointItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceEndpointItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceEndpointItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PrintServiceEndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printServiceEndpointItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceEndpointItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceEndpointItemRequestBuilderPatchRequestConfiguration() {

@@ -27,6 +27,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     private Boolean _justificationRequiredOnApproval;
     /** Indicates whether emails are enabled or disabled. Default value is false. */
     private Boolean _mailNotificationsEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property. */
     private Boolean _recommendationsEnabled;
     /** Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts. */
@@ -39,6 +41,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -105,7 +108,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<>(12) {{
             this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
             this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
             this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
@@ -114,6 +117,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
             this.put("instanceDurationInDays", (n) -> { currentObject.setInstanceDurationInDays(n.getIntegerValue()); });
             this.put("justificationRequiredOnApproval", (n) -> { currentObject.setJustificationRequiredOnApproval(n.getBooleanValue()); });
             this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("reminderNotificationsEnabled", (n) -> { currentObject.setReminderNotificationsEnabled(n.getBooleanValue()); });
@@ -142,6 +146,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
         return this._mailNotificationsEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
@@ -182,6 +194,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         writer.writeIntegerValue("instanceDurationInDays", this.getInstanceDurationInDays());
         writer.writeBooleanValue("justificationRequiredOnApproval", this.getJustificationRequiredOnApproval());
         writer.writeBooleanValue("mailNotificationsEnabled", this.getMailNotificationsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeBooleanValue("reminderNotificationsEnabled", this.getReminderNotificationsEnabled());
@@ -258,6 +271,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.

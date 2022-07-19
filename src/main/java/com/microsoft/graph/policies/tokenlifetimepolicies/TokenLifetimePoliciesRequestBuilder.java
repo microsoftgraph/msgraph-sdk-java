@@ -20,7 +20,7 @@ import microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
 import microsoft.graph.policies.tokenlifetimepolicies.count.CountRequestBuilder;
 /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity. */
 public class TokenLifetimePoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

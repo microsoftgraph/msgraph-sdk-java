@@ -30,6 +30,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      */
     public Notebook() {
         super();
+        this.setOdataType("#microsoft.graph.notebook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

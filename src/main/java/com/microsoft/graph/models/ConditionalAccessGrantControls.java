@@ -15,6 +15,8 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     private java.util.List<String> _builtInControls;
     /** List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview). */
     private java.util.List<String> _customAuthenticationFactors;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines the relationship of the grant controls. Possible values: AND, OR. */
     private String _operator;
     /** List of terms of use IDs required by the policy. */
@@ -25,6 +27,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     public ConditionalAccessGrantControls() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessGrantControls");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,21 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
             this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operator property value. Defines the relationship of the grant controls. Possible values: AND, OR.
@@ -99,6 +111,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("builtInControls", this.getBuiltInControls());
         writer.writeCollectionOfPrimitiveValues("customAuthenticationFactors", this.getCustomAuthenticationFactors());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operator", this.getOperator());
         writer.writeCollectionOfPrimitiveValues("termsOfUse", this.getTermsOfUse());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     public void setCustomAuthenticationFactors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._customAuthenticationFactors = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operator property value. Defines the relationship of the grant controls. Possible values: AND, OR.

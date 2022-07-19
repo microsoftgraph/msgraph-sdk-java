@@ -72,6 +72,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     public WindowsPhone81GeneralConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81GeneralConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

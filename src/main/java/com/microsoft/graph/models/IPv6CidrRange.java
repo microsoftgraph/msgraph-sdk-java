@@ -16,6 +16,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
      */
     public IPv6CidrRange() {
         super();
+        this.setOdataType("#microsoft.graph.iPv6CidrRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

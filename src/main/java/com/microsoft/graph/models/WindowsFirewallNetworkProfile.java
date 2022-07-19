@@ -26,6 +26,8 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     private Boolean _inboundNotificationsBlocked;
     /** Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority. */
     private Boolean _incomingTrafficBlocked;
+    /** The OdataType property */
+    private String _odataType;
     /** Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above. */
     private Boolean _outboundConnectionsBlocked;
     /** Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority. */
@@ -42,6 +44,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      */
     public WindowsFirewallNetworkProfile() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsFirewallNetworkProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +87,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallNetworkProfile currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
             this.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
             this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
@@ -92,6 +95,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
             this.put("inboundConnectionsBlocked", (n) -> { currentObject.setInboundConnectionsBlocked(n.getBooleanValue()); });
             this.put("inboundNotificationsBlocked", (n) -> { currentObject.setInboundNotificationsBlocked(n.getBooleanValue()); });
             this.put("incomingTrafficBlocked", (n) -> { currentObject.setIncomingTrafficBlocked(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("outboundConnectionsBlocked", (n) -> { currentObject.setOutboundConnectionsBlocked(n.getBooleanValue()); });
             this.put("policyRulesFromGroupPolicyMerged", (n) -> { currentObject.setPolicyRulesFromGroupPolicyMerged(n.getBooleanValue()); });
             this.put("securedPacketExemptionAllowed", (n) -> { currentObject.setSecuredPacketExemptionAllowed(n.getBooleanValue()); });
@@ -138,6 +142,14 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public Boolean getIncomingTrafficBlocked() {
         return this._incomingTrafficBlocked;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
@@ -193,6 +205,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         writer.writeBooleanValue("inboundConnectionsBlocked", this.getInboundConnectionsBlocked());
         writer.writeBooleanValue("inboundNotificationsBlocked", this.getInboundNotificationsBlocked());
         writer.writeBooleanValue("incomingTrafficBlocked", this.getIncomingTrafficBlocked());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("outboundConnectionsBlocked", this.getOutboundConnectionsBlocked());
         writer.writeBooleanValue("policyRulesFromGroupPolicyMerged", this.getPolicyRulesFromGroupPolicyMerged());
         writer.writeBooleanValue("securedPacketExemptionAllowed", this.getSecuredPacketExemptionAllowed());
@@ -263,6 +276,14 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      */
     public void setIncomingTrafficBlocked(@javax.annotation.Nullable final Boolean value) {
         this._incomingTrafficBlocked = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the outboundConnectionsBlocked property value. Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.

@@ -20,7 +20,7 @@ import microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import microsoft.graph.models.TargetedManagedAppPolicyAssignmentCollectionResponse;
 /** Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity. */
 public class AssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

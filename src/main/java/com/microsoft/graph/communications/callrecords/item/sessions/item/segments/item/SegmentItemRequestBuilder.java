@@ -307,7 +307,7 @@ public class SegmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new segmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SegmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SegmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SegmentItemRequestBuilder {
         @javax.annotation.Nullable
         public SegmentItemRequestBuilderGetQueryParameters queryParameters = new SegmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new segmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SegmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SegmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SegmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new segmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SegmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SegmentItemRequestBuilderPatchRequestConfiguration() {

@@ -53,6 +53,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Float _maxRatioOfConcealedSamples;
     /** Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator. */
     private Period _maxRoundTripTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Packet count for the stream. */
     private Long _packetUtilization;
     /** Packet loss rate after FEC has been applied aggregated across all video streams and codecs. */
@@ -73,6 +75,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.mediaStream");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -203,7 +206,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(27) {{
+        return new HashMap<>(28) {{
             this.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
             this.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
             this.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
@@ -224,6 +227,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
             this.put("maxPacketLossRate", (n) -> { currentObject.setMaxPacketLossRate(n.getFloatValue()); });
             this.put("maxRatioOfConcealedSamples", (n) -> { currentObject.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
             this.put("maxRoundTripTime", (n) -> { currentObject.setMaxRoundTripTime(n.getPeriodValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("packetUtilization", (n) -> { currentObject.setPacketUtilization(n.getLongValue()); });
             this.put("postForwardErrorCorrectionPacketLossRate", (n) -> { currentObject.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -288,6 +292,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Period getMaxRoundTripTime() {
         return this._maxRoundTripTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the packetUtilization property value. Packet count for the stream.
@@ -372,6 +384,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeFloatValue("maxPacketLossRate", this.getMaxPacketLossRate());
         writer.writeFloatValue("maxRatioOfConcealedSamples", this.getMaxRatioOfConcealedSamples());
         writer.writePeriodValue("maxRoundTripTime", this.getMaxRoundTripTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("packetUtilization", this.getPacketUtilization());
         writer.writeFloatValue("postForwardErrorCorrectionPacketLossRate", this.getPostForwardErrorCorrectionPacketLossRate());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -548,6 +561,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public void setMaxRoundTripTime(@javax.annotation.Nullable final Period value) {
         this._maxRoundTripTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the packetUtilization property value. Packet count for the stream.

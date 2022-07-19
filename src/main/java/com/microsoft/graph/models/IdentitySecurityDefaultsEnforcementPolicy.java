@@ -16,6 +16,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      */
     public IdentitySecurityDefaultsEnforcementPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.identitySecurityDefaultsEnforcementPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

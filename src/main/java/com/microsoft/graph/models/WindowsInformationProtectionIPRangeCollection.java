@@ -14,6 +14,8 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     private Map<String, Object> _additionalData;
     /** Display name */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Collection of ip ranges */
     private java.util.List<IpRange> _ranges;
     /**
@@ -22,6 +24,7 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
      */
     public WindowsInformationProtectionIPRangeCollection() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionIPRangeCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionIPRangeCollection currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ranges", (n) -> { currentObject.setRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the ranges property value. Collection of ip ranges
@@ -77,6 +89,7 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("ranges", this.getRanges());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the ranges property value. Collection of ip ranges

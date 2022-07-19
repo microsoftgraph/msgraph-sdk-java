@@ -14,6 +14,7 @@ public class HomeRealmDiscoveryPolicy extends StsPolicy implements Parsable {
      */
     public HomeRealmDiscoveryPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.homeRealmDiscoveryPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -17,6 +17,8 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     private Boolean _isPrivate;
     /** The location where the corresponding event is held or attended from. Optional. */
     private String _location;
+    /** The OdataType property */
+    private String _odataType;
     /** The date, time, and time zone that the corresponding event starts. */
     private DateTimeTimeZone _start;
     /** The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
@@ -29,6 +31,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      */
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.scheduleItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,11 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleItem currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("isPrivate", (n) -> { currentObject.setIsPrivate(n.getBooleanValue()); });
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(FreeBusyStatus.class)); });
             this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
@@ -87,6 +91,14 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLocation() {
         return this._location;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the start property value. The date, time, and time zone that the corresponding event starts.
@@ -122,6 +134,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("end", this.getEnd());
         writer.writeBooleanValue("isPrivate", this.getIsPrivate());
         writer.writeStringValue("location", this.getLocation());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("start", this.getStart());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("subject", this.getSubject());
@@ -158,6 +171,14 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      */
     public void setLocation(@javax.annotation.Nullable final String value) {
         this._location = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the start property value. The date, time, and time zone that the corresponding event starts.

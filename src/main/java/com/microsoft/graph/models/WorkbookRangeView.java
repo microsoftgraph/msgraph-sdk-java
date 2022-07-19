@@ -38,6 +38,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      */
     public WorkbookRangeView() {
         super();
+        this.setOdataType("#microsoft.graph.workbookRangeView");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

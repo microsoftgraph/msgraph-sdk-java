@@ -18,6 +18,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      */
     public WindowsDeviceADAccount() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDeviceADAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

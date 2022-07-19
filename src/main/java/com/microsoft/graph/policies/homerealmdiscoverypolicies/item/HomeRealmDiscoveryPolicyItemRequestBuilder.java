@@ -307,7 +307,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new homeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters queryParameters = new HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new homeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new homeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration() {

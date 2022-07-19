@@ -307,7 +307,7 @@ public class PrintUsageByUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printUsageByUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintUsageByUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintUsageByUserItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PrintUsageByUserItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintUsageByUserItemRequestBuilderGetQueryParameters queryParameters = new PrintUsageByUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printUsageByUserItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintUsageByUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintUsageByUserItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PrintUsageByUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printUsageByUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintUsageByUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintUsageByUserItemRequestBuilderPatchRequestConfiguration() {

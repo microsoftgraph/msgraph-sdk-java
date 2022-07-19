@@ -13,6 +13,8 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
     private Map<String, Object> _additionalData;
     /** ID of the selected level for this quality. */
     private String _columnId;
+    /** The OdataType property */
+    private String _odataType;
     /** ID of the associated quality. */
     private String _qualityId;
     /**
@@ -21,6 +23,7 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
      */
     public RubricQualitySelectedColumnModel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rubricQualitySelectedColumnModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricQualitySelectedColumnModel currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("columnId", (n) -> { currentObject.setColumnId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the qualityId property value. ID of the associated quality.
@@ -76,6 +88,7 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("columnId", this.getColumnId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
      */
     public void setColumnId(@javax.annotation.Nullable final String value) {
         this._columnId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the qualityId property value. ID of the associated quality.

@@ -16,6 +16,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     public OrganizationalBranding() {
         super();
+        this.setOdataType("#microsoft.graph.organizationalBranding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

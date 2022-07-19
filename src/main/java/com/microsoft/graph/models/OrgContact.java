@@ -51,6 +51,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      */
     public OrgContact() {
         super();
+        this.setOdataType("#microsoft.graph.orgContact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

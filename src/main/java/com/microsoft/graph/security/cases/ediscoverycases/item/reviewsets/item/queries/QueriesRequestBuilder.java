@@ -20,7 +20,7 @@ import microsoft.graph.models.security.EdiscoveryReviewSetQueryCollectionRespons
 import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.count.CountRequestBuilder;
 /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class QueriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

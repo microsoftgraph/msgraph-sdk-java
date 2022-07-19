@@ -15,6 +15,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     private String _availabilityView;
     /** Error information from attempting to get the availability of the user, distribution list, or resource. */
     private FreeBusyError _error;
+    /** The OdataType property */
+    private String _odataType;
     /** An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation. */
     private String _scheduleId;
     /** Contains the items that describe the availability of the user or resource. */
@@ -27,6 +29,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     public ScheduleInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.scheduleInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +72,22 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("availabilityView", (n) -> { currentObject.setAvailabilityView(n.getStringValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(FreeBusyError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scheduleId", (n) -> { currentObject.setScheduleId(n.getStringValue()); });
             this.put("scheduleItems", (n) -> { currentObject.setScheduleItems(n.getCollectionOfObjectValues(ScheduleItem::createFromDiscriminatorValue)); });
             this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
@@ -110,6 +122,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("availabilityView", this.getAvailabilityView());
         writer.writeObjectValue("error", this.getError());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("scheduleId", this.getScheduleId());
         writer.writeCollectionOfObjectValues("scheduleItems", this.getScheduleItems());
         writer.writeObjectValue("workingHours", this.getWorkingHours());
@@ -138,6 +151,14 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      */
     public void setError(@javax.annotation.Nullable final FreeBusyError value) {
         this._error = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.

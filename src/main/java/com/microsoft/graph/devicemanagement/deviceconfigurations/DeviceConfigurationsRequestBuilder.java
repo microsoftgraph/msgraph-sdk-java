@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceConfigurationCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -202,7 +202,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceInstallStateItemRequestBuilder
+     * @return a DeviceInstallStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceInstallStateItemRequestBuilder deviceStates(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public UserInstallStateSummaryItemRequestBuilderGetQueryParameters queryParameters = new UserInstallStateSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userInstallStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userInstallStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration() {

@@ -22,6 +22,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     public AppleManagedIdentityProvider() {
         super();
+        this.setOdataType("#microsoft.graph.appleManagedIdentityProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

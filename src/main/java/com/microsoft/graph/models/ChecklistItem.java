@@ -24,6 +24,7 @@ public class ChecklistItem extends Entity implements Parsable {
      */
     public ChecklistItem() {
         super();
+        this.setOdataType("#microsoft.graph.checklistItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

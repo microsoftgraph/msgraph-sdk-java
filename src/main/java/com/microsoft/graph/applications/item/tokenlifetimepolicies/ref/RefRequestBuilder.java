@@ -259,7 +259,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public RefRequestBuilderGetQueryParameters queryParameters = new RefRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new refRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderGetRequestConfiguration() {
@@ -274,7 +274,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new refRequestBuilderPostRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderPostRequestConfiguration() {

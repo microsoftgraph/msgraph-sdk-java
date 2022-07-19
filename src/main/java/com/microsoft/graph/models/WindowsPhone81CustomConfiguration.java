@@ -16,6 +16,7 @@ public class WindowsPhone81CustomConfiguration extends DeviceConfiguration imple
      */
     public WindowsPhone81CustomConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81CustomConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

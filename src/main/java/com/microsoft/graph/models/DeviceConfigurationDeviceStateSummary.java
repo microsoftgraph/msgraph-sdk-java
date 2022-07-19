@@ -28,6 +28,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements Par
      */
     public DeviceConfigurationDeviceStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceConfigurationDeviceStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

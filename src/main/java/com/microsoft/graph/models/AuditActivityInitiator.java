@@ -13,6 +13,8 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName. */
     private AppIdentity _app;
+    /** The OdataType property */
+    private String _odataType;
     /** If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName. */
     private UserIdentity _user;
     /**
@@ -21,6 +23,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     public AuditActivityInitiator() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.auditActivityInitiator");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditActivityInitiator currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("app", (n) -> { currentObject.setApp(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
@@ -76,6 +88,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("app", this.getApp());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class AuditActivityInitiator implements AdditionalDataHolder, Parsable {
      */
     public void setApp(@javax.annotation.Nullable final AppIdentity value) {
         this._app = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.

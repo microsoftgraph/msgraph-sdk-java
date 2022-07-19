@@ -33,6 +33,7 @@ public class Term extends Entity implements Parsable {
      */
     public Term() {
         super();
+        this.setOdataType("#microsoft.graph.termStore.term");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

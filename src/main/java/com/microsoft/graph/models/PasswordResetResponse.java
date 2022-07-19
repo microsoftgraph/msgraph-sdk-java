@@ -13,12 +13,15 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The newPassword property */
     private String _newPassword;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new passwordResetResponse and sets the default values.
      * @return a void
      */
     public PasswordResetResponse() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.passwordResetResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordResetResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
         return this._newPassword;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("newPassword", this.getNewPassword());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      */
     public void setNewPassword(@javax.annotation.Nullable final String value) {
         this._newPassword = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

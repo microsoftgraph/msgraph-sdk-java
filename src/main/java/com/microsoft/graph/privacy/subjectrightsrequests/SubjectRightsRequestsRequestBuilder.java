@@ -20,7 +20,7 @@ import microsoft.graph.models.SubjectRightsRequestCollectionResponse;
 import microsoft.graph.privacy.subjectrightsrequests.count.CountRequestBuilder;
 /** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity. */
 public class SubjectRightsRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

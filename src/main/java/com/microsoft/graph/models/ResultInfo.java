@@ -15,6 +15,8 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     private Integer _code;
     /** The message. */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /** The result sub-code. */
     private Integer _subcode;
     /**
@@ -23,6 +25,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      */
     public ResultInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.resultInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResultInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("code", (n) -> { currentObject.setCode(n.getIntegerValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("subcode", (n) -> { currentObject.setSubcode(n.getIntegerValue()); });
         }};
     }
@@ -70,6 +74,14 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the subcode property value. The result sub-code.
@@ -88,6 +100,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("code", this.getCode());
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("subcode", this.getSubcode());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the subcode property value. The result sub-code.

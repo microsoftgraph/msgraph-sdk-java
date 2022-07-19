@@ -50,6 +50,8 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     private OffsetDateTime _issuedDateTime;
     /** The Timestamp of the last update. */
     private String _lastUpdateDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** When operatingSystemKernelDebugging is enabled, the device is used in development and testing */
     private String _operatingSystemKernelDebugging;
     /** The Operating System Revision List that was loaded during initial boot on the attested device */
@@ -82,6 +84,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceHealthAttestationState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -228,7 +231,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthAttestationState currentObject = this;
-        return new HashMap<>(32) {{
+        return new HashMap<>(33) {{
             this.put("attestationIdentityKey", (n) -> { currentObject.setAttestationIdentityKey(n.getStringValue()); });
             this.put("bitLockerStatus", (n) -> { currentObject.setBitLockerStatus(n.getStringValue()); });
             this.put("bootAppSecurityVersion", (n) -> { currentObject.setBootAppSecurityVersion(n.getStringValue()); });
@@ -248,6 +251,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
             this.put("healthStatusMismatchInfo", (n) -> { currentObject.setHealthStatusMismatchInfo(n.getStringValue()); });
             this.put("issuedDateTime", (n) -> { currentObject.setIssuedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operatingSystemKernelDebugging", (n) -> { currentObject.setOperatingSystemKernelDebugging(n.getStringValue()); });
             this.put("operatingSystemRevListInfo", (n) -> { currentObject.setOperatingSystemRevListInfo(n.getStringValue()); });
             this.put("pcr0", (n) -> { currentObject.setPcr0(n.getStringValue()); });
@@ -294,6 +298,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public String getLastUpdateDateTime() {
         return this._lastUpdateDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
@@ -425,6 +437,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         writer.writeStringValue("healthStatusMismatchInfo", this.getHealthStatusMismatchInfo());
         writer.writeOffsetDateTimeValue("issuedDateTime", this.getIssuedDateTime());
         writer.writeStringValue("lastUpdateDateTime", this.getLastUpdateDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operatingSystemKernelDebugging", this.getOperatingSystemKernelDebugging());
         writer.writeStringValue("operatingSystemRevListInfo", this.getOperatingSystemRevListInfo());
         writer.writeStringValue("pcr0", this.getPcr0());
@@ -599,6 +612,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     public void setLastUpdateDateTime(@javax.annotation.Nullable final String value) {
         this._lastUpdateDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing

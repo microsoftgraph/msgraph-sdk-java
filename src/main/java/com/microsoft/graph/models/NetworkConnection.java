@@ -38,6 +38,8 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     private String _natSourceAddress;
     /** Network Address Translation source port. */
     private String _natSourcePort;
+    /** The OdataType property */
+    private String _odataType;
     /** Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII. */
     private SecurityNetworkProtocol _protocol;
     /** Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage. */
@@ -58,6 +60,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     public NetworkConnection() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.networkConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -148,7 +151,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkConnection currentObject = this;
-        return new HashMap<>(20) {{
+        return new HashMap<>(21) {{
             this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
             this.put("destinationAddress", (n) -> { currentObject.setDestinationAddress(n.getStringValue()); });
             this.put("destinationDomain", (n) -> { currentObject.setDestinationDomain(n.getStringValue()); });
@@ -162,6 +165,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
             this.put("natDestinationPort", (n) -> { currentObject.setNatDestinationPort(n.getStringValue()); });
             this.put("natSourceAddress", (n) -> { currentObject.setNatSourceAddress(n.getStringValue()); });
             this.put("natSourcePort", (n) -> { currentObject.setNatSourcePort(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
             this.put("sourceAddress", (n) -> { currentObject.setSourceAddress(n.getStringValue()); });
@@ -210,6 +214,14 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getNatSourcePort() {
         return this._natSourcePort;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
@@ -287,6 +299,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("natDestinationPort", this.getNatDestinationPort());
         writer.writeStringValue("natSourceAddress", this.getNatSourceAddress());
         writer.writeStringValue("natSourcePort", this.getNatSourcePort());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("protocol", this.getProtocol());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeStringValue("sourceAddress", this.getSourceAddress());
@@ -407,6 +420,14 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      */
     public void setNatSourcePort(@javax.annotation.Nullable final String value) {
         this._natSourcePort = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.

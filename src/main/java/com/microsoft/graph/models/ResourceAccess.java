@@ -13,6 +13,8 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The unique identifier of an app role or delegated permission exposed by the resource application. For delegated permissions, this should match the id property of one of the delegated permissions in the oauth2PermissionScopes collection of the resource application's service principal. For app roles (application permissions), this should match the id property of an app role in the appRoles collection of the resource application's service principal. */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies whether the id property references a delegated permission or an app role (application permission). The possible values are: Scope (for delegated permissions) or Role (for app roles). */
     private String _type;
     /**
@@ -21,6 +23,7 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
      */
     public ResourceAccess() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.resourceAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceAccess currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. Specifies whether the id property references a delegated permission or an app role (application permission). The possible values are: Scope (for delegated permissions) or Role (for app roles).
@@ -76,6 +88,7 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Specifies whether the id property references a delegated permission or an app role (application permission). The possible values are: Scope (for delegated permissions) or Role (for app roles).

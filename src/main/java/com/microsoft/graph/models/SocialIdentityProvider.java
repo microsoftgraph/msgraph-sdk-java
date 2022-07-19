@@ -20,6 +20,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
      */
     public SocialIdentityProvider() {
         super();
+        this.setOdataType("#microsoft.graph.socialIdentityProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

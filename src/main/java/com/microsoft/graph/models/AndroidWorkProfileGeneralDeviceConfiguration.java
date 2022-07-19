@@ -82,6 +82,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     public AndroidWorkProfileGeneralDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

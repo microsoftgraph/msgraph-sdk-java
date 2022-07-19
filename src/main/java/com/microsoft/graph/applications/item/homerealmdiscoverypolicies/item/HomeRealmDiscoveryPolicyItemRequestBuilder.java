@@ -155,7 +155,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters queryParameters = new HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new homeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration() {

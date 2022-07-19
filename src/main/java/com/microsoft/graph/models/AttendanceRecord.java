@@ -25,6 +25,7 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     public AttendanceRecord() {
         super();
+        this.setOdataType("#microsoft.graph.attendanceRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

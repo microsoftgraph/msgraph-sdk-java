@@ -30,7 +30,7 @@ public class Case_escaped extends Entity implements Parsable {
      */
     public Case_escaped() {
         super();
-        this.setType("#microsoft.graph.security.case");
+        this.setOdataType("#microsoft.graph.security.case");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

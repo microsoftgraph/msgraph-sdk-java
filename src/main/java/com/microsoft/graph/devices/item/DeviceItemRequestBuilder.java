@@ -256,7 +256,7 @@ public class DeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.devices.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -319,7 +319,7 @@ public class DeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.devices.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -386,7 +386,7 @@ public class DeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.devices.item.registeredOwners.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
@@ -398,7 +398,7 @@ public class DeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.devices.item.registeredUsers.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
@@ -410,7 +410,7 @@ public class DeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.devices.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.devices.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -428,7 +428,7 @@ public class DeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceItemRequestBuilderDeleteRequestConfiguration() {
@@ -457,7 +457,7 @@ public class DeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceItemRequestBuilderGetQueryParameters queryParameters = new DeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceItemRequestBuilderGetRequestConfiguration() {
@@ -472,7 +472,7 @@ public class DeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceItemRequestBuilderPatchRequestConfiguration() {

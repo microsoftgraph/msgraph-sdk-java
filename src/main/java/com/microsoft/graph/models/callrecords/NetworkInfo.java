@@ -29,6 +29,8 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private String _macAddress;
     /** The networkTransportProtocol property */
     private NetworkTransportProtocol _networkTransportProtocol;
+    /** The OdataType property */
+    private String _odataType;
     /** Network port number used by media endpoint. */
     private Integer _port;
     /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received. */
@@ -69,6 +71,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     public NetworkInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.networkInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -135,7 +138,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkInfo currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<>(27) {{
             this.put("bandwidthLowEventRatio", (n) -> { currentObject.setBandwidthLowEventRatio(n.getFloatValue()); });
             this.put("basicServiceSetIdentifier", (n) -> { currentObject.setBasicServiceSetIdentifier(n.getStringValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });
@@ -145,6 +148,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
             this.put("linkSpeed", (n) -> { currentObject.setLinkSpeed(n.getLongValue()); });
             this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
             this.put("networkTransportProtocol", (n) -> { currentObject.setNetworkTransportProtocol(n.getEnumValue(NetworkTransportProtocol.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
             this.put("receivedQualityEventRatio", (n) -> { currentObject.setReceivedQualityEventRatio(n.getFloatValue()); });
             this.put("reflexiveIPAddress", (n) -> { currentObject.setReflexiveIPAddress(n.getStringValue()); });
@@ -195,6 +199,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public NetworkTransportProtocol getNetworkTransportProtocol() {
         return this._networkTransportProtocol;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the port property value. Network port number used by media endpoint.
@@ -348,6 +360,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         writer.writeLongValue("linkSpeed", this.getLinkSpeed());
         writer.writeStringValue("macAddress", this.getMacAddress());
         writer.writeEnumValue("networkTransportProtocol", this.getNetworkTransportProtocol());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeFloatValue("receivedQualityEventRatio", this.getReceivedQualityEventRatio());
         writer.writeStringValue("reflexiveIPAddress", this.getReflexiveIPAddress());
@@ -446,6 +459,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     public void setNetworkTransportProtocol(@javax.annotation.Nullable final NetworkTransportProtocol value) {
         this._networkTransportProtocol = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the port property value. Network port number used by media endpoint.

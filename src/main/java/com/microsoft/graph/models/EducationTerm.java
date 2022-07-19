@@ -18,6 +18,8 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
     private LocalDate _endDate;
     /** ID of term in the syncing system. */
     private String _externalId;
+    /** The OdataType property */
+    private String _odataType;
     /** Start of the term. */
     private LocalDate _startDate;
     /**
@@ -26,6 +28,7 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
      */
     public EducationTerm() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationTerm");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -76,12 +79,21 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTerm currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDate property value. Start of the term.
@@ -101,6 +113,7 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeLocalDateValue("endDate", this.getEndDate());
         writer.writeStringValue("externalId", this.getExternalId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalDateValue("startDate", this.getStartDate());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
      */
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDate property value. Start of the term.

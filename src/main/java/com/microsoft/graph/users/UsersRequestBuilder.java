@@ -24,7 +24,7 @@ import microsoft.graph.users.getbyids.GetByIdsRequestBuilder;
 import microsoft.graph.users.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of user entities. */
 public class UsersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

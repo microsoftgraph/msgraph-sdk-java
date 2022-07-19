@@ -253,7 +253,7 @@ public class TodoRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item collection
      * @param id Unique identifier of the item
-     * @return a todoTaskListItemRequestBuilder
+     * @return a TodoTaskListItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TodoTaskListItemRequestBuilder lists(@javax.annotation.Nonnull final String id) {

@@ -17,12 +17,15 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     private String _generalText;
     /** The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'. */
     private java.util.List<String> _matchedConditionDescriptions;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new chatMessagePolicyViolationPolicyTip and sets the default values.
      * @return a void
      */
     public ChatMessagePolicyViolationPolicyTip() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.chatMessagePolicyViolationPolicyTip");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,10 +60,11 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessagePolicyViolationPolicyTip currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("complianceUrl", (n) -> { currentObject.setComplianceUrl(n.getStringValue()); });
             this.put("generalText", (n) -> { currentObject.setGeneralText(n.getStringValue()); });
             this.put("matchedConditionDescriptions", (n) -> { currentObject.setMatchedConditionDescriptions(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         return this._matchedConditionDescriptions;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
         writer.writeStringValue("complianceUrl", this.getComplianceUrl());
         writer.writeStringValue("generalText", this.getGeneralText());
         writer.writeCollectionOfPrimitiveValues("matchedConditionDescriptions", this.getMatchedConditionDescriptions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      */
     public void setMatchedConditionDescriptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._matchedConditionDescriptions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

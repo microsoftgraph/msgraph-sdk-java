@@ -34,7 +34,7 @@ public class AccessPackageCatalogItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
      * @param id Unique identifier of the item
-     * @return a accessPackageItemRequestBuilder
+     * @return a AccessPackageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessPackageItemRequestBuilder accessPackages(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageCatalogItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageCatalogItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageCatalogItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageCatalogItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageCatalogItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageCatalogItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageCatalogItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration() {

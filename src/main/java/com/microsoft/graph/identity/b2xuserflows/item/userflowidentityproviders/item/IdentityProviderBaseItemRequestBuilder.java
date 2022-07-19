@@ -8,7 +8,7 @@ import microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item
 public class IdentityProviderBaseItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

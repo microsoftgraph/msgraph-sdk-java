@@ -16,6 +16,8 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     private Integer _allowedDeviceCount;
     /** Total count of devices with Exchange Access State: Blocked. */
     private Integer _blockedDeviceCount;
+    /** The OdataType property */
+    private String _odataType;
     /** Total count of devices with Exchange Access State: Quarantined. */
     private Integer _quarantinedDeviceCount;
     /** Total count of devices for which no Exchange Access State could be found. */
@@ -28,6 +30,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     public DeviceExchangeAccessStateSummary() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceExchangeAccessStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,13 +73,22 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceExchangeAccessStateSummary currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowedDeviceCount", (n) -> { currentObject.setAllowedDeviceCount(n.getIntegerValue()); });
             this.put("blockedDeviceCount", (n) -> { currentObject.setBlockedDeviceCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("quarantinedDeviceCount", (n) -> { currentObject.setQuarantinedDeviceCount(n.getIntegerValue()); });
             this.put("unavailableDeviceCount", (n) -> { currentObject.setUnavailableDeviceCount(n.getIntegerValue()); });
             this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
@@ -111,6 +123,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("allowedDeviceCount", this.getAllowedDeviceCount());
         writer.writeIntegerValue("blockedDeviceCount", this.getBlockedDeviceCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("quarantinedDeviceCount", this.getQuarantinedDeviceCount());
         writer.writeIntegerValue("unavailableDeviceCount", this.getUnavailableDeviceCount());
         writer.writeIntegerValue("unknownDeviceCount", this.getUnknownDeviceCount());
@@ -139,6 +152,14 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      */
     public void setBlockedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._blockedDeviceCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.

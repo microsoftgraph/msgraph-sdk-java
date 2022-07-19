@@ -41,7 +41,7 @@ public class SolutionsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item collection
      * @param id Unique identifier of the item
-     * @return a bookingBusinessItemRequestBuilder
+     * @return a BookingBusinessItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingBusinessItemRequestBuilder bookingBusinesses(@javax.annotation.Nonnull final String id) {
@@ -53,7 +53,7 @@ public class SolutionsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.solutions.bookingCurrencies.item collection
      * @param id Unique identifier of the item
-     * @return a bookingCurrencyItemRequestBuilder
+     * @return a BookingCurrencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BookingCurrencyItemRequestBuilder bookingCurrencies(@javax.annotation.Nonnull final String id) {

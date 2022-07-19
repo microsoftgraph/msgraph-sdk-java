@@ -307,7 +307,7 @@ public class ConnectionOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectionOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectionOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectionOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ConnectionOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public ConnectionOperationItemRequestBuilderGetQueryParameters queryParameters = new ConnectionOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new connectionOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectionOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectionOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConnectionOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectionOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectionOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectionOperationItemRequestBuilderPatchRequestConfiguration() {

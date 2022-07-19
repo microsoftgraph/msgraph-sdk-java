@@ -19,6 +19,8 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     private String _columnName;
     /** The unique identifier of the lookup source list. */
     private String _listId;
+    /** The OdataType property */
+    private String _odataType;
     /** If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here. */
     private String _primaryLookupColumnId;
     /**
@@ -27,6 +29,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     public LookupColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.lookupColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,11 +80,12 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LookupColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
             this.put("allowUnlimitedLength", (n) -> { currentObject.setAllowUnlimitedLength(n.getBooleanValue()); });
             this.put("columnName", (n) -> { currentObject.setColumnName(n.getStringValue()); });
             this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("primaryLookupColumnId", (n) -> { currentObject.setPrimaryLookupColumnId(n.getStringValue()); });
         }};
     }
@@ -92,6 +96,14 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getListId() {
         return this._listId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
@@ -112,6 +124,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowUnlimitedLength", this.getAllowUnlimitedLength());
         writer.writeStringValue("columnName", this.getColumnName());
         writer.writeStringValue("listId", this.getListId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("primaryLookupColumnId", this.getPrimaryLookupColumnId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
      */
     public void setListId(@javax.annotation.Nullable final String value) {
         this._listId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.

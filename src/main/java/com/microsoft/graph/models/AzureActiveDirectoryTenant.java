@@ -18,6 +18,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      */
     public AzureActiveDirectoryTenant() {
         super();
+        this.setOdataType("#microsoft.graph.azureActiveDirectoryTenant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

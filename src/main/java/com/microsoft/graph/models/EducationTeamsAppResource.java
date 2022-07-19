@@ -22,6 +22,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      */
     public EducationTeamsAppResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationTeamsAppResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

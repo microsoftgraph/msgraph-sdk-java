@@ -14,6 +14,7 @@ public class DisableAndDeleteUserApplyAction extends AccessReviewApplyAction imp
      */
     public DisableAndDeleteUserApplyAction() {
         super();
+        this.setOdataType("#microsoft.graph.disableAndDeleteUserApplyAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

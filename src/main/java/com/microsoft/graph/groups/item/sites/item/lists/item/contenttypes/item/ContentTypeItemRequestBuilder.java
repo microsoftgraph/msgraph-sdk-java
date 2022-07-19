@@ -83,7 +83,7 @@ public class ContentTypeItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item.baseTypes.item collection
      * @param id Unique identifier of the item
-     * @return a contentTypeItemRequestBuilder
+     * @return a ContentTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContentTypeItemRequestBuilder baseTypes(@javax.annotation.Nonnull final String id) {
@@ -95,7 +95,7 @@ public class ContentTypeItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item.columnLinks.item collection
      * @param id Unique identifier of the item
-     * @return a columnLinkItemRequestBuilder
+     * @return a ColumnLinkItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ColumnLinkItemRequestBuilder columnLinks(@javax.annotation.Nonnull final String id) {
@@ -107,7 +107,7 @@ public class ContentTypeItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item.columnPositions.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder columnPositions(@javax.annotation.Nonnull final String id) {
@@ -119,7 +119,7 @@ public class ContentTypeItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item.columns.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
@@ -419,7 +419,7 @@ public class ContentTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contentTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ContentTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentTypeItemRequestBuilderDeleteRequestConfiguration() {
@@ -448,7 +448,7 @@ public class ContentTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public ContentTypeItemRequestBuilderGetQueryParameters queryParameters = new ContentTypeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contentTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContentTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentTypeItemRequestBuilderGetRequestConfiguration() {
@@ -463,7 +463,7 @@ public class ContentTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contentTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ContentTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentTypeItemRequestBuilderPatchRequestConfiguration() {

@@ -315,7 +315,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.extensionProperties.item collection
      * @param id Unique identifier of the item
-     * @return a extensionPropertyItemRequestBuilder
+     * @return a ExtensionPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionPropertyItemRequestBuilder extensionProperties(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.federatedIdentityCredentials.item collection
      * @param id Unique identifier of the item
-     * @return a federatedIdentityCredentialItemRequestBuilder
+     * @return a FederatedIdentityCredentialItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public FederatedIdentityCredentialItemRequestBuilder federatedIdentityCredentials(@javax.annotation.Nonnull final String id) {
@@ -390,7 +390,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a homeRealmDiscoveryPolicyItemRequestBuilder
+     * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPolicyItemRequestBuilder homeRealmDiscoveryPolicies(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.owners.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
@@ -469,7 +469,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenIssuancePolicyItemRequestBuilder
+     * @return a TokenIssuancePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenIssuancePolicyItemRequestBuilder tokenIssuancePolicies(@javax.annotation.Nonnull final String id) {
@@ -481,7 +481,7 @@ public class ApplicationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a tokenLifetimePolicyItemRequestBuilder
+     * @return a TokenLifetimePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TokenLifetimePolicyItemRequestBuilder tokenLifetimePolicies(@javax.annotation.Nonnull final String id) {
@@ -499,7 +499,7 @@ public class ApplicationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationItemRequestBuilderDeleteRequestConfiguration() {
@@ -528,7 +528,7 @@ public class ApplicationItemRequestBuilder {
         @javax.annotation.Nullable
         public ApplicationItemRequestBuilderGetQueryParameters queryParameters = new ApplicationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new applicationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationItemRequestBuilderGetRequestConfiguration() {
@@ -543,7 +543,7 @@ public class ApplicationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new applicationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApplicationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApplicationItemRequestBuilderPatchRequestConfiguration() {

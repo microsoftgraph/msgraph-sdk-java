@@ -22,7 +22,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     public BaseItemVersion() {
         super();
-        this.setType("#microsoft.graph.baseItemVersion");
+        this.setOdataType("#microsoft.graph.baseItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      */
     public DomainDnsCnameRecord() {
         super();
+        this.setOdataType("#microsoft.graph.domainDnsCnameRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

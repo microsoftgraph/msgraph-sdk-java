@@ -20,6 +20,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      */
     public CustomTimeZone() {
         super();
+        this.setOdataType("#microsoft.graph.customTimeZone");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

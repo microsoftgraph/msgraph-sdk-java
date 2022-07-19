@@ -77,7 +77,7 @@ public class CalendarRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendar.calendarPermissions.item collection
      * @param id Unique identifier of the item
-     * @return a calendarPermissionItemRequestBuilder
+     * @return a CalendarPermissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarPermissionItemRequestBuilder calendarPermissions(@javax.annotation.Nonnull final String id) {
@@ -89,7 +89,7 @@ public class CalendarRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendar.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.calendar.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -269,7 +269,7 @@ public class CalendarRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendar.events.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.calendar.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class CalendarRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendar.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -399,7 +399,7 @@ public class CalendarRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendar.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {

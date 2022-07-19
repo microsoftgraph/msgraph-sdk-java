@@ -13,6 +13,8 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required. */
     private String _from;
+    /** The OdataType property */
+    private String _odataType;
     /** Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required. */
     private String _to;
     /**
@@ -21,6 +23,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      */
     public BucketAggregationRange() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bucketAggregationRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BucketAggregationRange currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("from", (n) -> { currentObject.setFrom(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("to", (n) -> { currentObject.setTo(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getFrom() {
         return this._from;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the to property value. Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
@@ -76,6 +88,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("from", this.getFrom());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("to", this.getTo());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      */
     public void setFrom(@javax.annotation.Nullable final String value) {
         this._from = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the to property value. Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.

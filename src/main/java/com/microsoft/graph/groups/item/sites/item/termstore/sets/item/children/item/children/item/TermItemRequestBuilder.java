@@ -314,7 +314,7 @@ public class TermItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.children.item.children.item.relations.item collection
      * @param id Unique identifier of the item
-     * @return a relationItemRequestBuilder
+     * @return a RelationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RelationItemRequestBuilder relations(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class TermItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TermItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class TermItemRequestBuilder {
         @javax.annotation.Nullable
         public TermItemRequestBuilderGetQueryParameters queryParameters = new TermItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new termItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TermItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class TermItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TermItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermItemRequestBuilderPatchRequestConfiguration() {

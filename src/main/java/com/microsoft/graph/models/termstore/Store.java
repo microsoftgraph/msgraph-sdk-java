@@ -23,6 +23,7 @@ public class Store extends Entity implements Parsable {
      */
     public Store() {
         super();
+        this.setOdataType("#microsoft.graph.termStore.store");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

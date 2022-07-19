@@ -14,6 +14,7 @@ public class TargetApplicationOwners extends SubjectSet implements Parsable {
      */
     public TargetApplicationOwners() {
         super();
+        this.setOdataType("#microsoft.graph.targetApplicationOwners");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

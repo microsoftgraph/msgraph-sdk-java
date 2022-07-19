@@ -15,6 +15,8 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     private Boolean _isDescending;
     /** The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional. */
     private Integer _minimumCount;
+    /** The OdataType property */
+    private String _odataType;
     /** A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional. */
     private String _prefixFilter;
     /** Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional. */
@@ -27,6 +29,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     public BucketAggregationDefinition() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bucketAggregationDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,10 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BucketAggregationDefinition currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("isDescending", (n) -> { currentObject.setIsDescending(n.getBooleanValue()); });
             this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("prefixFilter", (n) -> { currentObject.setPrefixFilter(n.getStringValue()); });
             this.put("ranges", (n) -> { currentObject.setRanges(n.getCollectionOfObjectValues(BucketAggregationRange::createFromDiscriminatorValue)); });
             this.put("sortBy", (n) -> { currentObject.setSortBy(n.getEnumValue(BucketAggregationSortProperty.class)); });
@@ -76,6 +80,14 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public Integer getMinimumCount() {
         return this._minimumCount;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
@@ -110,6 +122,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDescending", this.getIsDescending());
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("prefixFilter", this.getPrefixFilter());
         writer.writeCollectionOfObjectValues("ranges", this.getRanges());
         writer.writeEnumValue("sortBy", this.getSortBy());
@@ -138,6 +151,14 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
         this._minimumCount = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.

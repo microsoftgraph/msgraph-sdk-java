@@ -21,6 +21,8 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     private Boolean _isCompliant;
     /** Indicates if the device is managed or not. */
     private Boolean _isManaged;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the OS name and version used for signing-in. */
     private String _operatingSystem;
     /** Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
@@ -31,6 +33,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,12 +84,13 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceDetail currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isCompliant", (n) -> { currentObject.setIsCompliant(n.getBooleanValue()); });
             this.put("isManaged", (n) -> { currentObject.setIsManaged(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
             this.put("trustType", (n) -> { currentObject.setTrustType(n.getStringValue()); });
         }};
@@ -106,6 +110,14 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsManaged() {
         return this._isManaged;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operatingSystem property value. Indicates the OS name and version used for signing-in.
@@ -135,6 +147,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isCompliant", this.getIsCompliant());
         writer.writeBooleanValue("isManaged", this.getIsManaged());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("trustType", this.getTrustType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -186,6 +199,14 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
         this._isManaged = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operatingSystem property value. Indicates the OS name and version used for signing-in.

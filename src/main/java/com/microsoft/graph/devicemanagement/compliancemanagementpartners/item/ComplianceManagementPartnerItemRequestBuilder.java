@@ -307,7 +307,7 @@ public class ComplianceManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new complianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ComplianceManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public ComplianceManagementPartnerItemRequestBuilderGetQueryParameters queryParameters = new ComplianceManagementPartnerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new complianceManagementPartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ComplianceManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new complianceManagementPartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration() {

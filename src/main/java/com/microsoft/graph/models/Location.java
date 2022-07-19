@@ -23,8 +23,8 @@ public class Location implements AdditionalDataHolder, Parsable {
     private LocationType _locationType;
     /** Optional URI representing the location. */
     private String _locationUri;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /** For internal use only. */
     private String _uniqueId;
     /** For internal use only. */
@@ -35,7 +35,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     public Location() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.location");
+        this.setOdataType("#microsoft.graph.location");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,7 +100,7 @@ public class Location implements AdditionalDataHolder, Parsable {
             this.put("locationEmailAddress", (n) -> { currentObject.setLocationEmailAddress(n.getStringValue()); });
             this.put("locationType", (n) -> { currentObject.setLocationType(n.getEnumValue(LocationType.class)); });
             this.put("locationUri", (n) -> { currentObject.setLocationUri(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
             this.put("uniqueIdType", (n) -> { currentObject.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
         }};
@@ -130,12 +130,12 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._locationUri;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the uniqueId property value. For internal use only.
@@ -166,7 +166,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("locationEmailAddress", this.getLocationEmailAddress());
         writer.writeEnumValue("locationType", this.getLocationType());
         writer.writeStringValue("locationUri", this.getLocationUri());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("uniqueId", this.getUniqueId());
         writer.writeEnumValue("uniqueIdType", this.getUniqueIdType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -228,12 +228,12 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._locationUri = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the uniqueId property value. For internal use only.

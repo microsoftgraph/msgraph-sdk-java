@@ -16,6 +16,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     private String _address;
     /** Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node. */
     private java.util.List<String> _exceptions;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies whether the proxy server should be used for local (intranet) addresses. */
     private Boolean _useForLocalAddresses;
     /**
@@ -24,6 +26,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windows10NetworkProxyServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10NetworkProxyServer currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("exceptions", (n) -> { currentObject.setExceptions(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("useForLocalAddresses", (n) -> { currentObject.setUseForLocalAddresses(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
@@ -89,6 +101,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeCollectionOfPrimitiveValues("exceptions", this.getExceptions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("useForLocalAddresses", this.getUseForLocalAddresses());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      */
     public void setExceptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._exceptions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.

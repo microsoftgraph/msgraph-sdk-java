@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsInformationProtectionPolicy;
 import microsoft.graph.models.WindowsInformationProtectionPolicyCollectionResponse;
 /** Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity. */
 public class WindowsInformationProtectionPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

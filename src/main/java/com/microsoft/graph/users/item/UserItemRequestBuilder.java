@@ -425,7 +425,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.activities.item collection
      * @param id Unique identifier of the item
-     * @return a userActivityItemRequestBuilder
+     * @return a UserActivityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
@@ -437,7 +437,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.agreementAcceptances.item collection
      * @param id Unique identifier of the item
-     * @return a agreementAcceptanceItemRequestBuilder
+     * @return a AgreementAcceptanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
@@ -449,7 +449,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -461,7 +461,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item collection
      * @param id Unique identifier of the item
-     * @return a calendarGroupItemRequestBuilder
+     * @return a CalendarGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarGroupItemRequestBuilder calendarGroups(@javax.annotation.Nonnull final String id) {
@@ -473,7 +473,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendars.item collection
      * @param id Unique identifier of the item
-     * @return a calendarItemRequestBuilder
+     * @return a CalendarItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
@@ -485,7 +485,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -497,7 +497,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.chats.item collection
      * @param id Unique identifier of the item
-     * @return a chatItemRequestBuilder
+     * @return a ChatItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
@@ -536,7 +536,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contactFolders.item collection
      * @param id Unique identifier of the item
-     * @return a contactFolderItemRequestBuilder
+     * @return a ContactFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactFolderItemRequestBuilder contactFolders(@javax.annotation.Nonnull final String id) {
@@ -548,7 +548,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contacts.item collection
      * @param id Unique identifier of the item
-     * @return a contactItemRequestBuilder
+     * @return a ContactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
@@ -588,7 +588,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.createdObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
@@ -713,7 +713,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.deviceManagementTroubleshootingEvents.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementTroubleshootingEventItemRequestBuilder
+     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventItemRequestBuilder deviceManagementTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
@@ -725,7 +725,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.directReports.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
@@ -737,7 +737,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.drives.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemRequestBuilder
+     * @return a DriveItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
@@ -749,7 +749,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.events.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -761,7 +761,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -773,7 +773,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.followedSites.item collection
      * @param id Unique identifier of the item
-     * @return a siteItemRequestBuilder
+     * @return a SiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder followedSites(@javax.annotation.Nonnull final String id) {
@@ -852,7 +852,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.joinedTeams.item collection
      * @param id Unique identifier of the item
-     * @return a teamItemRequestBuilder
+     * @return a TeamItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamItemRequestBuilder joinedTeams(@javax.annotation.Nonnull final String id) {
@@ -864,7 +864,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.licenseDetails.item collection
      * @param id Unique identifier of the item
-     * @return a licenseDetailsItemRequestBuilder
+     * @return a LicenseDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LicenseDetailsItemRequestBuilder licenseDetails(@javax.annotation.Nonnull final String id) {
@@ -876,7 +876,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.mailFolders.item collection
      * @param id Unique identifier of the item
-     * @return a mailFolderItemRequestBuilder
+     * @return a MailFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MailFolderItemRequestBuilder mailFolders(@javax.annotation.Nonnull final String id) {
@@ -888,7 +888,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.managedAppRegistrations.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppRegistrationItemRequestBuilder
+     * @return a ManagedAppRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
@@ -900,7 +900,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.managedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceItemRequestBuilder
+     * @return a ManagedDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
@@ -912,7 +912,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -924,7 +924,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.messages.item collection
      * @param id Unique identifier of the item
-     * @return a messageItemRequestBuilder
+     * @return a MessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -936,7 +936,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a oAuth2PermissionGrantItemRequestBuilder
+     * @return a OAuth2PermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
@@ -948,7 +948,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.onlineMeetings.item collection
      * @param id Unique identifier of the item
-     * @return a onlineMeetingItemRequestBuilder
+     * @return a OnlineMeetingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
@@ -960,7 +960,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.ownedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
@@ -972,7 +972,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.ownedObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
@@ -1039,7 +1039,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.people.item collection
      * @param id Unique identifier of the item
-     * @return a personItemRequestBuilder
+     * @return a PersonItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonItemRequestBuilder people(@javax.annotation.Nonnull final String id) {
@@ -1051,7 +1051,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.photos.item collection
      * @param id Unique identifier of the item
-     * @return a profilePhotoItemRequestBuilder
+     * @return a ProfilePhotoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
@@ -1063,7 +1063,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.registeredDevices.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
@@ -1087,7 +1087,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.scopedRoleMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a scopedRoleMembershipItemRequestBuilder
+     * @return a ScopedRoleMembershipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberOf(@javax.annotation.Nonnull final String id) {
@@ -1099,7 +1099,7 @@ public class UserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -1117,7 +1117,7 @@ public class UserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserItemRequestBuilderDeleteRequestConfiguration() {
@@ -1146,7 +1146,7 @@ public class UserItemRequestBuilder {
         @javax.annotation.Nullable
         public UserItemRequestBuilderGetQueryParameters queryParameters = new UserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserItemRequestBuilderGetRequestConfiguration() {
@@ -1161,7 +1161,7 @@ public class UserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserItemRequestBuilderPatchRequestConfiguration() {

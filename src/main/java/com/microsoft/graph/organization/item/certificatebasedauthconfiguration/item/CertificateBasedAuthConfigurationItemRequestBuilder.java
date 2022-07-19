@@ -155,7 +155,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters queryParameters = new CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new certificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration() {

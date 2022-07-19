@@ -14,6 +14,8 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     private Map<String, Object> _additionalData;
     /** The gracePeriodBeforeAccessRemoval property */
     private Period _gracePeriodBeforeAccessRemoval;
+    /** The OdataType property */
+    private String _odataType;
     /** The removeAccessWhenTargetLeavesAllowedTargets property */
     private Boolean _removeAccessWhenTargetLeavesAllowedTargets;
     /** The requestAccessForAllowedTargets property */
@@ -24,6 +26,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     public AccessPackageAutomaticRequestSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAutomaticRequestSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,8 +53,9 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAutomaticRequestSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("gracePeriodBeforeAccessRemoval", (n) -> { currentObject.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { currentObject.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
             this.put("requestAccessForAllowedTargets", (n) -> { currentObject.setRequestAccessForAllowedTargets(n.getBooleanValue()); });
         }};
@@ -63,6 +67,14 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nullable
     public Period getGracePeriodBeforeAccessRemoval() {
         return this._gracePeriodBeforeAccessRemoval;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
@@ -88,6 +100,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("gracePeriodBeforeAccessRemoval", this.getGracePeriodBeforeAccessRemoval());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("removeAccessWhenTargetLeavesAllowedTargets", this.getRemoveAccessWhenTargetLeavesAllowedTargets());
         writer.writeBooleanValue("requestAccessForAllowedTargets", this.getRequestAccessForAllowedTargets());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +120,14 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      */
     public void setGracePeriodBeforeAccessRemoval(@javax.annotation.Nullable final Period value) {
         this._gracePeriodBeforeAccessRemoval = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property

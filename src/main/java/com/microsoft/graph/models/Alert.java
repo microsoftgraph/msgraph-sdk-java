@@ -94,6 +94,7 @@ public class Alert extends Entity implements Parsable {
      */
     public Alert() {
         super();
+        this.setOdataType("#microsoft.graph.alert");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

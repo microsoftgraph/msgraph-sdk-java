@@ -16,6 +16,7 @@ public class WorkbookApplication extends Entity implements Parsable {
      */
     public WorkbookApplication() {
         super();
+        this.setOdataType("#microsoft.graph.workbookApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

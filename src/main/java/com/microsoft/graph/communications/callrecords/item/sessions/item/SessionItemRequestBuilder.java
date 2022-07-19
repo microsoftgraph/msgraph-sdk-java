@@ -308,7 +308,7 @@ public class SessionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.callRecords.item.sessions.item.segments.item collection
      * @param id Unique identifier of the item
-     * @return a segmentItemRequestBuilder
+     * @return a SegmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SegmentItemRequestBuilder segments(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class SessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SessionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SessionItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class SessionItemRequestBuilder {
         @javax.annotation.Nullable
         public SessionItemRequestBuilderGetQueryParameters queryParameters = new SessionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sessionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SessionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SessionItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class SessionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SessionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SessionItemRequestBuilderPatchRequestConfiguration() {

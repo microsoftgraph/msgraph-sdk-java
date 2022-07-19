@@ -21,6 +21,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      */
     public WindowsInformationProtectionAppLearningSummary() {
         super();
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionAppLearningSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

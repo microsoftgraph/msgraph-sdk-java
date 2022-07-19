@@ -16,6 +16,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      */
     public ServicePrincipalIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.servicePrincipalIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

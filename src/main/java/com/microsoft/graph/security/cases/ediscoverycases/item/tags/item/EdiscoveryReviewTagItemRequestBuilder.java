@@ -39,7 +39,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item.childTags.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryReviewTagItemRequestBuilder
+     * @return a EdiscoveryReviewTagItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryReviewTagItemRequestBuilder childTags(@javax.annotation.Nonnull final String id) {
@@ -331,7 +331,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryReviewTagItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryReviewTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryReviewTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new ediscoveryReviewTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration() {

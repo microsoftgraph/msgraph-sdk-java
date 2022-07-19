@@ -20,7 +20,7 @@ import microsoft.graph.models.PersonCollectionResponse;
 import microsoft.graph.users.item.people.count.CountRequestBuilder;
 /** Provides operations to manage the people property of the microsoft.graph.user entity. */
 public class PeopleRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -20,6 +20,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     public FileAttachment() {
         super();
+        this.setOdataType("#microsoft.graph.fileAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

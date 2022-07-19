@@ -14,6 +14,7 @@ public class EducationAssignmentClassRecipient extends EducationAssignmentRecipi
      */
     public EducationAssignmentClassRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.educationAssignmentClassRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

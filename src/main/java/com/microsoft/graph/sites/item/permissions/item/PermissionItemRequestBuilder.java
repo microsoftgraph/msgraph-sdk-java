@@ -313,7 +313,7 @@ public class PermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class PermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public PermissionItemRequestBuilderGetQueryParameters queryParameters = new PermissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new permissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class PermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionItemRequestBuilderPatchRequestConfiguration() {

@@ -15,12 +15,15 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     private RbacApplication _directory;
     /** Container for roles and assignments for entitlement management resources. */
     private RbacApplication _entitlementManagement;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new RoleManagement and sets the default values.
      * @return a void
      */
     public RoleManagement() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.roleManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleManagement currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("directory", (n) -> { currentObject.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
             this.put("entitlementManagement", (n) -> { currentObject.setEntitlementManagement(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("directory", this.getDirectory());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      */
     public void setEntitlementManagement(@javax.annotation.Nullable final RbacApplication value) {
         this._entitlementManagement = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

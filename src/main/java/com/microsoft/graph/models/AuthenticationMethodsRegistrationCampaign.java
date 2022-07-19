@@ -15,6 +15,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     private java.util.List<ExcludeTarget> _excludeTargets;
     /** Users and groups of users that are prompted to set up the authentication method. */
     private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> _includeTargets;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt. */
     private Integer _snoozeDurationInDays;
     /** The state property */
@@ -25,6 +27,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.authenticationMethodsRegistrationCampaign");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodsRegistrationCampaign currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("excludeTargets", (n) -> { currentObject.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("snoozeDurationInDays", (n) -> { currentObject.setSnoozeDurationInDays(n.getIntegerValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AdvancedConfigState.class)); });
         }};
@@ -73,6 +77,14 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
         return this._includeTargets;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
@@ -99,6 +111,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("snoozeDurationInDays", this.getSnoozeDurationInDays());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
         this._includeTargets = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.

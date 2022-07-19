@@ -313,7 +313,7 @@ public class InvitationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new invitationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new InvitationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public InvitationItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class InvitationItemRequestBuilder {
         @javax.annotation.Nullable
         public InvitationItemRequestBuilderGetQueryParameters queryParameters = new InvitationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new invitationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new InvitationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public InvitationItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class InvitationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new invitationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new InvitationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public InvitationItemRequestBuilderPatchRequestConfiguration() {

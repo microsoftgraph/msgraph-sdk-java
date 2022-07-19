@@ -20,7 +20,7 @@ import microsoft.graph.models.SchemaExtensionCollectionResponse;
 import microsoft.graph.schemaextensions.count.CountRequestBuilder;
 /** Provides operations to manage the collection of schemaExtension entities. */
 public class SchemaExtensionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

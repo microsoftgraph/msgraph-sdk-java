@@ -155,7 +155,7 @@ public class MobileAppCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppCategoryItemRequestBuilderGetQueryParameters queryParameters = new MobileAppCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppCategoryItemRequestBuilderGetRequestConfiguration() {

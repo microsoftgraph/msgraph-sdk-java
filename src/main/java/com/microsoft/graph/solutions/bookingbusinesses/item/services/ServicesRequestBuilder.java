@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.solutions.bookingbusinesses.item.services.count.CountRequestBuilder;
 /** Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity. */
 public class ServicesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

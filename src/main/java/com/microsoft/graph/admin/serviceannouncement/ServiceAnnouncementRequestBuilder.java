@@ -267,7 +267,7 @@ public class ServiceAnnouncementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item collection
      * @param id Unique identifier of the item
-     * @return a serviceHealthItemRequestBuilder
+     * @return a ServiceHealthItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServiceHealthItemRequestBuilder healthOverviews(@javax.annotation.Nonnull final String id) {
@@ -279,7 +279,7 @@ public class ServiceAnnouncementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.issues.item collection
      * @param id Unique identifier of the item
-     * @return a serviceHealthIssueItemRequestBuilder
+     * @return a ServiceHealthIssueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServiceHealthIssueItemRequestBuilder issues(@javax.annotation.Nonnull final String id) {
@@ -291,7 +291,7 @@ public class ServiceAnnouncementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.messages.item collection
      * @param id Unique identifier of the item
-     * @return a serviceUpdateMessageItemRequestBuilder
+     * @return a ServiceUpdateMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServiceUpdateMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {

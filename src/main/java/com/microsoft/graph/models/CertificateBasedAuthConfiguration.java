@@ -17,6 +17,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      */
     public CertificateBasedAuthConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.certificateBasedAuthConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

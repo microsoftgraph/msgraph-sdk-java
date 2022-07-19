@@ -16,6 +16,7 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Par
      */
     public OpenShiftChangeRequest() {
         super();
+        this.setOdataType("#microsoft.graph.openShiftChangeRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

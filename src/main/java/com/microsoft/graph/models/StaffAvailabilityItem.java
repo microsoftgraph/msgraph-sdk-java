@@ -13,6 +13,8 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Each item in this collection indicates a slot and the status of the staff member. */
     private java.util.List<AvailabilityItem> _availabilityItems;
+    /** The OdataType property */
+    private String _odataType;
     /** The ID of the staff member. */
     private String _staffId;
     /**
@@ -21,6 +23,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     public StaffAvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.staffAvailabilityItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StaffAvailabilityItem currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("availabilityItems", (n) -> { currentObject.setAvailabilityItems(n.getCollectionOfObjectValues(AvailabilityItem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("staffId", (n) -> { currentObject.setStaffId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the staffId property value. The ID of the staff member.
@@ -76,6 +88,7 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("availabilityItems", this.getAvailabilityItems());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("staffId", this.getStaffId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     public void setAvailabilityItems(@javax.annotation.Nullable final java.util.List<AvailabilityItem> value) {
         this._availabilityItems = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the staffId property value. The ID of the staff member.

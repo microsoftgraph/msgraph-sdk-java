@@ -20,7 +20,7 @@ import microsoft.graph.models.OnenoteOperationCollectionResponse;
 import microsoft.graph.sites.item.onenote.operations.count.CountRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.onenote entity. */
 public class OperationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

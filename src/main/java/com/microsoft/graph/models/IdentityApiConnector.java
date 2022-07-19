@@ -20,6 +20,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      */
     public IdentityApiConnector() {
         super();
+        this.setOdataType("#microsoft.graph.identityApiConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

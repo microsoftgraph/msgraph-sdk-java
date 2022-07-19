@@ -21,6 +21,8 @@ public class Media implements AdditionalDataHolder, Parsable {
     private NetworkInfo _callerNetwork;
     /** How the media was identified during media negotiation stage. */
     private String _label;
+    /** The OdataType property */
+    private String _odataType;
     /** Network streams associated with this media. */
     private java.util.List<MediaStream> _streams;
     /**
@@ -29,6 +31,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      */
     public Media() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.media");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,12 +90,13 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Media currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("calleeDevice", (n) -> { currentObject.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
             this.put("calleeNetwork", (n) -> { currentObject.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
             this.put("callerDevice", (n) -> { currentObject.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
             this.put("callerNetwork", (n) -> { currentObject.setCallerNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("streams", (n) -> { currentObject.setStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
         }};
     }
@@ -103,6 +107,14 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLabel() {
         return this._label;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the streams property value. Network streams associated with this media.
@@ -124,6 +136,7 @@ public class Media implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("callerDevice", this.getCallerDevice());
         writer.writeObjectValue("callerNetwork", this.getCallerNetwork());
         writer.writeStringValue("label", this.getLabel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("streams", this.getStreams());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -174,6 +187,14 @@ public class Media implements AdditionalDataHolder, Parsable {
      */
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the streams property value. Network streams associated with this media.

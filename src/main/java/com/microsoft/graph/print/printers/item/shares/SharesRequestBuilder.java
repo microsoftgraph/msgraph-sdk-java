@@ -19,7 +19,7 @@ import microsoft.graph.models.PrinterShareCollectionResponse;
 import microsoft.graph.print.printers.item.shares.count.CountRequestBuilder;
 /** Provides operations to manage the shares property of the microsoft.graph.printer entity. */
 public class SharesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

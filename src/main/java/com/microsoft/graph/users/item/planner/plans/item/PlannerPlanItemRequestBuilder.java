@@ -47,7 +47,7 @@ public class PlannerPlanItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.planner.plans.item.buckets.item collection
      * @param id Unique identifier of the item
-     * @return a plannerBucketItemRequestBuilder
+     * @return a PlannerBucketItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerBucketItemRequestBuilder buckets(@javax.annotation.Nonnull final String id) {
@@ -333,7 +333,7 @@ public class PlannerPlanItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.planner.plans.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a plannerTaskItemRequestBuilder
+     * @return a PlannerTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class PlannerPlanItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerPlanItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerPlanItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerPlanItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class PlannerPlanItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerPlanItemRequestBuilderGetQueryParameters queryParameters = new PlannerPlanItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerPlanItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerPlanItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerPlanItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class PlannerPlanItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerPlanItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerPlanItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerPlanItemRequestBuilderPatchRequestConfiguration() {

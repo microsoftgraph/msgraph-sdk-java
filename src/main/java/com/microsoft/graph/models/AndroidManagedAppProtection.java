@@ -34,6 +34,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     public AndroidManagedAppProtection() {
         super();
+        this.setOdataType("#microsoft.graph.androidManagedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

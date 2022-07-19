@@ -307,7 +307,7 @@ public class DirectoryAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryAuditItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryAuditItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryAuditItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DirectoryAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public DirectoryAuditItemRequestBuilderGetQueryParameters queryParameters = new DirectoryAuditItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new directoryAuditItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryAuditItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryAuditItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DirectoryAuditItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryAuditItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryAuditItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryAuditItemRequestBuilderPatchRequestConfiguration() {

@@ -313,7 +313,7 @@ public class TeamsTabItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsTabItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTabItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTabItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class TeamsTabItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamsTabItemRequestBuilderGetQueryParameters queryParameters = new TeamsTabItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamsTabItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTabItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTabItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class TeamsTabItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsTabItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTabItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTabItemRequestBuilderPatchRequestConfiguration() {

@@ -16,6 +16,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      */
     public EdgeSearchEngine() {
         super();
+        this.setOdataType("#microsoft.graph.edgeSearchEngine");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

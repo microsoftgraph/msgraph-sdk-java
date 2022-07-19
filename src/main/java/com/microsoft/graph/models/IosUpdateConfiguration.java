@@ -23,6 +23,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     public IosUpdateConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosUpdateConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

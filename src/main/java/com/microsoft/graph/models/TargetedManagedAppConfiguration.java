@@ -24,6 +24,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     public TargetedManagedAppConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.targetedManagedAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

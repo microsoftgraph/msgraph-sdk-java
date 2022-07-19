@@ -21,7 +21,7 @@ import microsoft.graph.users.item.todo.lists.item.tasks.count.CountRequestBuilde
 import microsoft.graph.users.item.todo.lists.item.tasks.delta.DeltaRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity. */
 public class TasksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -24,6 +24,7 @@ public class SchemaExtension extends Entity implements Parsable {
      */
     public SchemaExtension() {
         super();
+        this.setOdataType("#microsoft.graph.schemaExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -167,7 +167,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _onPremisesSamAccountName;
     /** Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq including on null values). */
     private String _onPremisesSecurityIdentifier;
-    /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values). */
+    /** true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values). */
     private Boolean _onPremisesSyncEnabled;
     /** Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
     private String _onPremisesUserPrincipalName;
@@ -199,7 +199,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _preferredDataLocation;
     /** The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _preferredLanguage;
-    /** The preferred name for the user. Returned only on $select. */
+    /** The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select. */
     private String _preferredName;
     /** The presence property */
     private Presence _presence;
@@ -247,6 +247,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     public User() {
         super();
+        this.setOdataType("#microsoft.graph.user");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -1017,7 +1018,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._onPremisesSecurityIdentifier;
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1145,7 +1146,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._preferredLanguage;
     }
     /**
-     * Gets the preferredName property value. The preferred name for the user. Returned only on $select.
+     * Gets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -2070,7 +2071,7 @@ public class User extends DirectoryObject implements Parsable {
         this._onPremisesSecurityIdentifier = value;
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
@@ -2198,7 +2199,7 @@ public class User extends DirectoryObject implements Parsable {
         this._preferredLanguage = value;
     }
     /**
-     * Sets the preferredName property value. The preferred name for the user. Returned only on $select.
+     * Sets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      * @param value Value to set for the preferredName property.
      * @return a void
      */

@@ -15,6 +15,8 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Specifies whether the column will allow more than one value */
     private Boolean _allowMultipleValues;
+    /** The OdataType property */
+    private String _odataType;
     /** The parentTerm property */
     private Term _parentTerm;
     /** Specifies whether to display the entire term path or only the term label. */
@@ -27,6 +29,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     public TermColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.termColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,21 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermColumn currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentTerm", (n) -> { currentObject.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
             this.put("showFullyQualifiedName", (n) -> { currentObject.setShowFullyQualifiedName(n.getBooleanValue()); });
             this.put("termSet", (n) -> { currentObject.setTermSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parentTerm property value. The parentTerm property
@@ -100,6 +112,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleValues", this.getAllowMultipleValues());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("parentTerm", this.getParentTerm());
         writer.writeBooleanValue("showFullyQualifiedName", this.getShowFullyQualifiedName());
         writer.writeObjectValue("termSet", this.getTermSet());
@@ -120,6 +133,14 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      */
     public void setAllowMultipleValues(@javax.annotation.Nullable final Boolean value) {
         this._allowMultipleValues = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parentTerm property value. The parentTerm property

@@ -307,7 +307,7 @@ public class InternalDomainFederationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new internalDomainFederationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class InternalDomainFederationItemRequestBuilder {
         @javax.annotation.Nullable
         public InternalDomainFederationItemRequestBuilderGetQueryParameters queryParameters = new InternalDomainFederationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new internalDomainFederationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new InternalDomainFederationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public InternalDomainFederationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class InternalDomainFederationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new internalDomainFederationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new InternalDomainFederationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public InternalDomainFederationItemRequestBuilderPatchRequestConfiguration() {

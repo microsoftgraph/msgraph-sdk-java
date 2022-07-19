@@ -27,6 +27,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      */
     public OnenoteSection() {
         super();
+        this.setOdataType("#microsoft.graph.onenoteSection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

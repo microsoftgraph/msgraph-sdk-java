@@ -21,6 +21,8 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     private DelegateMeetingMessageDeliveryOptions _delegateMeetingMessageDeliveryOptions;
     /** The locale information for the user, including the preferred language and country/region. */
     private LocaleInfo _language;
+    /** The OdataType property */
+    private String _odataType;
     /** The time format for the user's mailbox. */
     private String _timeFormat;
     /** The default time zone for the user's mailbox. */
@@ -35,6 +37,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      */
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mailboxSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,12 +96,13 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailboxSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("archiveFolder", (n) -> { currentObject.setArchiveFolder(n.getStringValue()); });
             this.put("automaticRepliesSetting", (n) -> { currentObject.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
             this.put("delegateMeetingMessageDeliveryOptions", (n) -> { currentObject.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
             this.put("language", (n) -> { currentObject.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeFormat", (n) -> { currentObject.setTimeFormat(n.getStringValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
             this.put("userPurpose", (n) -> { currentObject.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
@@ -112,6 +116,14 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LocaleInfo getLanguage() {
         return this._language;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the timeFormat property value. The time format for the user's mailbox.
@@ -157,6 +169,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("dateFormat", this.getDateFormat());
         writer.writeEnumValue("delegateMeetingMessageDeliveryOptions", this.getDelegateMeetingMessageDeliveryOptions());
         writer.writeObjectValue("language", this.getLanguage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("timeFormat", this.getTimeFormat());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeEnumValue("userPurpose", this.getUserPurpose());
@@ -210,6 +223,14 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      */
     public void setLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._language = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the timeFormat property value. The time format for the user's mailbox.

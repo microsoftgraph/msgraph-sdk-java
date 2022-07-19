@@ -12,17 +12,17 @@ import java.util.Objects;
 public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Contains rule types for Win32 LOB apps. */
     private Win32LobAppRuleType _ruleType;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new win32LobAppRule and sets the default values.
      * @return a void
      */
     public Win32LobAppRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.win32LobAppRule");
+        this.setOdataType("#microsoft.graph.win32LobAppRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,9 +60,17 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRule currentObject = this;
         return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(Win32LobAppRuleType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the ruleType property value. Contains rule types for Win32 LOB apps.
@@ -73,22 +81,14 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
         return this._ruleType;
     }
     /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("ruleType", this.getRuleType());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -100,19 +100,19 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the ruleType property value. Contains rule types for Win32 LOB apps.
      * @param value Value to set for the ruleType property.
      * @return a void
      */
     public void setRuleType(@javax.annotation.Nullable final Win32LobAppRuleType value) {
         this._ruleType = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

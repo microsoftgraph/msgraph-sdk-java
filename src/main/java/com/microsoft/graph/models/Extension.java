@@ -15,7 +15,7 @@ public class Extension extends Entity implements Parsable {
      */
     public Extension() {
         super();
-        this.setType("#microsoft.graph.extension");
+        this.setOdataType("#microsoft.graph.extension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

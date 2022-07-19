@@ -41,12 +41,15 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     private String _extensionAttribute8;
     /** Ninth customizable extension attribute. */
     private String _extensionAttribute9;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new onPremisesExtensionAttributes and sets the default values.
      * @return a void
      */
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onPremisesExtensionAttributes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -193,7 +196,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesExtensionAttributes currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<>(16) {{
             this.put("extensionAttribute1", (n) -> { currentObject.setExtensionAttribute1(n.getStringValue()); });
             this.put("extensionAttribute10", (n) -> { currentObject.setExtensionAttribute10(n.getStringValue()); });
             this.put("extensionAttribute11", (n) -> { currentObject.setExtensionAttribute11(n.getStringValue()); });
@@ -209,7 +212,16 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
             this.put("extensionAttribute7", (n) -> { currentObject.setExtensionAttribute7(n.getStringValue()); });
             this.put("extensionAttribute8", (n) -> { currentObject.setExtensionAttribute8(n.getStringValue()); });
             this.put("extensionAttribute9", (n) -> { currentObject.setExtensionAttribute9(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -233,6 +245,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
         writer.writeStringValue("extensionAttribute7", this.getExtensionAttribute7());
         writer.writeStringValue("extensionAttribute8", this.getExtensionAttribute8());
         writer.writeStringValue("extensionAttribute9", this.getExtensionAttribute9());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -362,5 +375,13 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      */
     public void setExtensionAttribute9(@javax.annotation.Nullable final String value) {
         this._extensionAttribute9 = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

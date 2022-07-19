@@ -14,6 +14,7 @@ public class IosManagedAppRegistration extends ManagedAppRegistration implements
      */
     public IosManagedAppRegistration() {
         super();
+        this.setOdataType("#microsoft.graph.iosManagedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

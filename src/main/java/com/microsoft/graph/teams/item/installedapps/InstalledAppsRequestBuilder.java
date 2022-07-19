@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsAppInstallationCollectionResponse;
 import microsoft.graph.teams.item.installedapps.count.CountRequestBuilder;
 /** Provides operations to manage the installedApps property of the microsoft.graph.team entity. */
 public class InstalledAppsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

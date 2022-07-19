@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the admin singleton. */
 public enum WebBrowserCookieSettings implements ValuedEnum {
     /** Browser default value, no intent. */
     BrowserDefault("browserDefault"),

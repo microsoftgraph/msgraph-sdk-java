@@ -14,6 +14,7 @@ public class ProvisioningServicePrincipal extends Identity implements Parsable {
      */
     public ProvisioningServicePrincipal() {
         super();
+        this.setOdataType("#microsoft.graph.provisioningServicePrincipal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

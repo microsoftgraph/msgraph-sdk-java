@@ -13,6 +13,8 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The id of the participant that is under observation. Read-only. */
     private String _observedParticipantId;
+    /** The OdataType property */
+    private String _odataType;
     /** The identity that the call is happening on behalf of. */
     private IdentitySet _onBehalfOf;
     /** The id of the participant that triggered the incoming call. Read-only. */
@@ -25,6 +27,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.incomingContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncomingContext currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("observedParticipantId", (n) -> { currentObject.setObservedParticipantId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onBehalfOf", (n) -> { currentObject.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("sourceParticipantId", (n) -> { currentObject.setSourceParticipantId(n.getStringValue()); });
             this.put("transferor", (n) -> { currentObject.setTransferor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -65,6 +69,14 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getObservedParticipantId() {
         return this._observedParticipantId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the onBehalfOf property value. The identity that the call is happening on behalf of.
@@ -98,6 +110,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("observedParticipantId", this.getObservedParticipantId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("onBehalfOf", this.getOnBehalfOf());
         writer.writeStringValue("sourceParticipantId", this.getSourceParticipantId());
         writer.writeObjectValue("transferor", this.getTransferor());
@@ -118,6 +131,14 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      */
     public void setObservedParticipantId(@javax.annotation.Nullable final String value) {
         this._observedParticipantId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the onBehalfOf property value. The identity that the call is happening on behalf of.

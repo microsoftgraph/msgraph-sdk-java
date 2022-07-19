@@ -21,7 +21,7 @@ import microsoft.graph.users.item.onlinemeetings.count.CountRequestBuilder;
 import microsoft.graph.users.item.onlinemeetings.createorget.CreateOrGetRequestBuilder;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity. */
 public class OnlineMeetingsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

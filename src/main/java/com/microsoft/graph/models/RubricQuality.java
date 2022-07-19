@@ -17,6 +17,8 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
     private EducationItemBody _description;
     /** The name of this rubric quality. */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** The ID of this resource. */
     private String _qualityId;
     /** If present, a numerical weight for this quality.  Weights must add up to 100. */
@@ -27,6 +29,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     public RubricQuality() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rubricQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,22 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricQuality currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("criteria", (n) -> { currentObject.setCriteria(n.getCollectionOfObjectValues(RubricCriterion::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
             this.put("weight", (n) -> { currentObject.setWeight(n.getFloatValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the qualityId property value. The ID of this resource.
@@ -111,6 +123,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("criteria", this.getCriteria());
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
         writer.writeFloatValue("weight", this.getWeight());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the qualityId property value. The ID of this resource.

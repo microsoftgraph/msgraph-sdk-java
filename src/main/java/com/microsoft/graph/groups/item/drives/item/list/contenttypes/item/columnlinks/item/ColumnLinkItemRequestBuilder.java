@@ -307,7 +307,7 @@ public class ColumnLinkItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new columnLinkItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnLinkItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnLinkItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ColumnLinkItemRequestBuilder {
         @javax.annotation.Nullable
         public ColumnLinkItemRequestBuilderGetQueryParameters queryParameters = new ColumnLinkItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new columnLinkItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnLinkItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnLinkItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ColumnLinkItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new columnLinkItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnLinkItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnLinkItemRequestBuilderPatchRequestConfiguration() {

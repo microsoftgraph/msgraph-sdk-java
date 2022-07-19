@@ -307,7 +307,7 @@ public class ThumbnailSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new thumbnailSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ThumbnailSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThumbnailSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ThumbnailSetItemRequestBuilder {
         @javax.annotation.Nullable
         public ThumbnailSetItemRequestBuilderGetQueryParameters queryParameters = new ThumbnailSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new thumbnailSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ThumbnailSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThumbnailSetItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ThumbnailSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new thumbnailSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ThumbnailSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ThumbnailSetItemRequestBuilderPatchRequestConfiguration() {

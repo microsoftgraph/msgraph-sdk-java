@@ -20,7 +20,7 @@ import microsoft.graph.models.PrintTaskCollectionResponse;
 import microsoft.graph.print.taskdefinitions.item.tasks.count.CountRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity. */
 public class TasksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

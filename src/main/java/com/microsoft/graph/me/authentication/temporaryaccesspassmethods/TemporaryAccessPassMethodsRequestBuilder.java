@@ -20,7 +20,7 @@ import microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import microsoft.graph.models.TemporaryAccessPassAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity. */
 public class TemporaryAccessPassMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

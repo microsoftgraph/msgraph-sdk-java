@@ -323,7 +323,7 @@ public class ManagedDeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.managedDevices.item.deviceCompliancePolicyStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCompliancePolicyStateItemRequestBuilder
+     * @return a DeviceCompliancePolicyStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyStateItemRequestBuilder deviceCompliancePolicyStates(@javax.annotation.Nonnull final String id) {
@@ -335,7 +335,7 @@ public class ManagedDeviceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.managedDevices.item.deviceConfigurationStates.item collection
      * @param id Unique identifier of the item
-     * @return a deviceConfigurationStateItemRequestBuilder
+     * @return a DeviceConfigurationStateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceConfigurationStateItemRequestBuilder deviceConfigurationStates(@javax.annotation.Nonnull final String id) {
@@ -459,7 +459,7 @@ public class ManagedDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceItemRequestBuilderDeleteRequestConfiguration() {
@@ -488,7 +488,7 @@ public class ManagedDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceItemRequestBuilderGetRequestConfiguration() {
@@ -503,7 +503,7 @@ public class ManagedDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceItemRequestBuilderPatchRequestConfiguration() {

@@ -78,7 +78,7 @@ public class EducationClassItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignmentCategories.item collection
      * @param id Unique identifier of the item
-     * @return a educationCategoryItemRequestBuilder
+     * @return a EducationCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationCategoryItemRequestBuilder assignmentCategories(@javax.annotation.Nonnull final String id) {
@@ -90,7 +90,7 @@ public class EducationClassItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a educationAssignmentItemRequestBuilder
+     * @return a EducationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -321,7 +321,7 @@ public class EducationClassItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a educationUserItemRequestBuilder
+     * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class EducationClassItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.schools.item collection
      * @param id Unique identifier of the item
-     * @return a educationSchoolItemRequestBuilder
+     * @return a EducationSchoolItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
@@ -400,7 +400,7 @@ public class EducationClassItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.teachers.item collection
      * @param id Unique identifier of the item
-     * @return a educationUserItemRequestBuilder
+     * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder teachers(@javax.annotation.Nonnull final String id) {
@@ -418,7 +418,7 @@ public class EducationClassItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationClassItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationClassItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationClassItemRequestBuilderDeleteRequestConfiguration() {
@@ -447,7 +447,7 @@ public class EducationClassItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationClassItemRequestBuilderGetQueryParameters queryParameters = new EducationClassItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationClassItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationClassItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationClassItemRequestBuilderGetRequestConfiguration() {
@@ -462,7 +462,7 @@ public class EducationClassItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationClassItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationClassItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationClassItemRequestBuilderPatchRequestConfiguration() {

@@ -40,7 +40,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item.apps.item collection
      * @param id Unique identifier of the item
-     * @return a managedMobileAppItemRequestBuilder
+     * @return a ManagedMobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public AndroidManagedAppProtectionItemRequestBuilderGetQueryParameters queryParameters = new AndroidManagedAppProtectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new androidManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new androidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration() {

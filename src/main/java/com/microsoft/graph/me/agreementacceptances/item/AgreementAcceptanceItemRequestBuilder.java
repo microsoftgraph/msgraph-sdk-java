@@ -155,7 +155,7 @@ public class AgreementAcceptanceItemRequestBuilder {
         @javax.annotation.Nullable
         public AgreementAcceptanceItemRequestBuilderGetQueryParameters queryParameters = new AgreementAcceptanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new agreementAcceptanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementAcceptanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementAcceptanceItemRequestBuilderGetRequestConfiguration() {

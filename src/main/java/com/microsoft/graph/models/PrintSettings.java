@@ -13,12 +13,15 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (xps to pdf) when needed. */
     private Boolean _documentConversionEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new printSettings and sets the default values.
      * @return a void
      */
     public PrintSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintSettings currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("documentConversionEnabled", (n) -> { currentObject.setDocumentConversionEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("documentConversionEnabled", this.getDocumentConversionEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class PrintSettings implements AdditionalDataHolder, Parsable {
      */
     public void setDocumentConversionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._documentConversionEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

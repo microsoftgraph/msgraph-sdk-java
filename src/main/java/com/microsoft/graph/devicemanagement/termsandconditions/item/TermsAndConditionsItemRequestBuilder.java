@@ -41,7 +41,7 @@ public class TermsAndConditionsItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a termsAndConditionsAcceptanceStatusItemRequestBuilder
+     * @return a TermsAndConditionsAcceptanceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TermsAndConditionsAcceptanceStatusItemRequestBuilder acceptanceStatuses(@javax.annotation.Nonnull final String id) {
@@ -53,7 +53,7 @@ public class TermsAndConditionsItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a termsAndConditionsAssignmentItemRequestBuilder
+     * @return a TermsAndConditionsAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TermsAndConditionsAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class TermsAndConditionsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class TermsAndConditionsItemRequestBuilder {
         @javax.annotation.Nullable
         public TermsAndConditionsItemRequestBuilderGetQueryParameters queryParameters = new TermsAndConditionsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new termsAndConditionsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class TermsAndConditionsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsItemRequestBuilderPatchRequestConfiguration() {

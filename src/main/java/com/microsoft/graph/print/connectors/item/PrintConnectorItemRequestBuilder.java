@@ -307,7 +307,7 @@ public class PrintConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PrintConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintConnectorItemRequestBuilderGetQueryParameters queryParameters = new PrintConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PrintConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintConnectorItemRequestBuilderPatchRequestConfiguration() {

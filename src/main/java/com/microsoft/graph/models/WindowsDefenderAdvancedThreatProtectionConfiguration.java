@@ -18,6 +18,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      */
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,7 +24,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     public PrintUsage() {
         super();
-        this.setType("#microsoft.graph.printUsage");
+        this.setOdataType("#microsoft.graph.printUsage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

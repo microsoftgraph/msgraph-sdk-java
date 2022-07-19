@@ -30,12 +30,15 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     private String _messageSubject;
     /** The networkMessageId property */
     private String _networkMessageId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new messageSecurityState and sets the default values.
      * @return a void
      */
     public MessageSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.messageSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,7 +97,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageSecurityState currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("connectingIP", (n) -> { currentObject.setConnectingIP(n.getStringValue()); });
             this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
             this.put("deliveryLocation", (n) -> { currentObject.setDeliveryLocation(n.getStringValue()); });
@@ -104,6 +107,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
             this.put("messageReceivedDateTime", (n) -> { currentObject.setMessageReceivedDateTime(n.getOffsetDateTimeValue()); });
             this.put("messageSubject", (n) -> { currentObject.setMessageSubject(n.getStringValue()); });
             this.put("networkMessageId", (n) -> { currentObject.setNetworkMessageId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -147,6 +151,14 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
         return this._networkMessageId;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -162,6 +174,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("messageReceivedDateTime", this.getMessageReceivedDateTime());
         writer.writeStringValue("messageSubject", this.getMessageSubject());
         writer.writeStringValue("networkMessageId", this.getNetworkMessageId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -243,5 +256,13 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setNetworkMessageId(@javax.annotation.Nullable final String value) {
         this._networkMessageId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -15,6 +15,8 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     private Integer _deviceComplianceCheckinThresholdDays;
     /** Is feature enabled or not for scheduled action for rule. */
     private Boolean _isScheduledActionEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Device should be noncompliant when there is no compliance policy targeted when this is true */
     private Boolean _secureByDefault;
     /**
@@ -23,6 +25,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     public DeviceManagementSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceManagementSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("deviceComplianceCheckinThresholdDays", (n) -> { currentObject.setDeviceComplianceCheckinThresholdDays(n.getIntegerValue()); });
             this.put("isScheduledActionEnabled", (n) -> { currentObject.setIsScheduledActionEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("secureByDefault", (n) -> { currentObject.setSecureByDefault(n.getBooleanValue()); });
         }};
     }
@@ -70,6 +74,14 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
         return this._isScheduledActionEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
@@ -88,6 +100,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceComplianceCheckinThresholdDays", this.getDeviceComplianceCheckinThresholdDays());
         writer.writeBooleanValue("isScheduledActionEnabled", this.getIsScheduledActionEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("secureByDefault", this.getSecureByDefault());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     public void setIsScheduledActionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isScheduledActionEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true

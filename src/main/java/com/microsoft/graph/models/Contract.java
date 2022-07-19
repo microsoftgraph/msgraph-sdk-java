@@ -22,6 +22,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     public Contract() {
         super();
+        this.setOdataType("#microsoft.graph.contract");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

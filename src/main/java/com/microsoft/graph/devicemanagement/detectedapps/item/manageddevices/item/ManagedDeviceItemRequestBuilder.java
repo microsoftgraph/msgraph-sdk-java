@@ -155,7 +155,7 @@ public class ManagedDeviceItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceItemRequestBuilderGetRequestConfiguration() {

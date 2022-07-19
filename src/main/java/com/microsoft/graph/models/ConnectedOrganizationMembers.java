@@ -18,6 +18,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      */
     public ConnectedOrganizationMembers() {
         super();
+        this.setOdataType("#microsoft.graph.connectedOrganizationMembers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

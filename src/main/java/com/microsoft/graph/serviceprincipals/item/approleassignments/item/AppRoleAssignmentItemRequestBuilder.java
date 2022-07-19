@@ -307,7 +307,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public AppRoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new AppRoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppRoleAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppRoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppRoleAssignmentItemRequestBuilderPatchRequestConfiguration() {

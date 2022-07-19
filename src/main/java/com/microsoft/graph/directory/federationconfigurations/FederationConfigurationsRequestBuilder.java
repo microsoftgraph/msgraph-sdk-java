@@ -21,7 +21,7 @@ import microsoft.graph.models.IdentityProviderBaseCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity. */
 public class FederationConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

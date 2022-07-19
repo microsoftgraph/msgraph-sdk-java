@@ -22,6 +22,7 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public ReportRoot() {
         super();
+        this.setOdataType("#microsoft.graph.reportRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

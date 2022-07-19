@@ -37,6 +37,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      */
     public DeviceCompliancePolicySettingStateSummary() {
         super();
+        this.setOdataType("#microsoft.graph.deviceCompliancePolicySettingStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

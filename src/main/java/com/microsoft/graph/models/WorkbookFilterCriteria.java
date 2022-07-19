@@ -23,6 +23,8 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     private String _filterOn;
     /** The icon property */
     private WorkbookIcon _icon;
+    /** The OdataType property */
+    private String _odataType;
     /** The operator property */
     private String _operator;
     /** The values property */
@@ -33,6 +35,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     public WorkbookFilterCriteria() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.workbookFilterCriteria");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,13 +94,14 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFilterCriteria currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("criterion1", (n) -> { currentObject.setCriterion1(n.getStringValue()); });
             this.put("criterion2", (n) -> { currentObject.setCriterion2(n.getStringValue()); });
             this.put("dynamicCriteria", (n) -> { currentObject.setDynamicCriteria(n.getStringValue()); });
             this.put("filterOn", (n) -> { currentObject.setFilterOn(n.getStringValue()); });
             this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
             this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
         }};
@@ -117,6 +121,14 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookIcon getIcon() {
         return this._icon;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operator property value. The operator property
@@ -147,6 +159,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("dynamicCriteria", this.getDynamicCriteria());
         writer.writeStringValue("filterOn", this.getFilterOn());
         writer.writeObjectValue("icon", this.getIcon());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operator", this.getOperator());
         writer.writeObjectValue("values", this.getValues());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -206,6 +219,14 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
      */
     public void setIcon(@javax.annotation.Nullable final WorkbookIcon value) {
         this._icon = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operator property value. The operator property

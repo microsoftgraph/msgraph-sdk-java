@@ -308,7 +308,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.groups.item.sets.item collection
      * @param id Unique identifier of the item
-     * @return a setItemRequestBuilder
+     * @return a SetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupItemRequestBuilderGetQueryParameters queryParameters = new GroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderPatchRequestConfiguration() {

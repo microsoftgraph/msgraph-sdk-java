@@ -13,6 +13,8 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     private ActivityDomain _activityDomain;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The timeSlots property */
     private java.util.List<TimeSlot> _timeSlots;
     /**
@@ -21,6 +23,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      */
     public TimeConstraint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.timeConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeConstraint currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("activityDomain", (n) -> { currentObject.setActivityDomain(n.getEnumValue(ActivityDomain.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeSlots", (n) -> { currentObject.setTimeSlots(n.getCollectionOfObjectValues(TimeSlot::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the timeSlots property value. The timeSlots property
@@ -76,6 +88,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("activityDomain", this.getActivityDomain());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("timeSlots", this.getTimeSlots());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the timeSlots property value. The timeSlots property

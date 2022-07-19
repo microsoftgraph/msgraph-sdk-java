@@ -32,6 +32,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
      */
     public TeamsAsyncOperation() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAsyncOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -38,6 +38,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

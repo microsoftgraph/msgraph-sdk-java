@@ -28,6 +28,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      */
     public InternalDomainFederation() {
         super();
+        this.setOdataType("#microsoft.graph.internalDomainFederation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

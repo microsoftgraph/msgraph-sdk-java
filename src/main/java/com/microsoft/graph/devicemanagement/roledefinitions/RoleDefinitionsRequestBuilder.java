@@ -20,7 +20,7 @@ import microsoft.graph.models.RoleDefinition;
 import microsoft.graph.models.RoleDefinitionCollectionResponse;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity. */
 public class RoleDefinitionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,12 +18,15 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastAccessedDateTime;
     /** The UTC date and time the file was last modified on a client. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new fileSystemInfo and sets the default values.
      * @return a void
      */
     public FileSystemInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.fileSystemInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,10 +61,11 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileSystemInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastAccessedDateTime", (n) -> { currentObject.setLastAccessedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("lastAccessedDateTime", this.getLastAccessedDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class FileSystemInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

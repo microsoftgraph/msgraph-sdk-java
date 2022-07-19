@@ -13,12 +13,15 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Run campaigns to remind users to setup targeted authentication methods. */
     private AuthenticationMethodsRegistrationCampaign _authenticationMethodsRegistrationCampaign;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new registrationEnforcement and sets the default values.
      * @return a void
      */
     public RegistrationEnforcement() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.registrationEnforcement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistrationEnforcement currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("authenticationMethodsRegistrationCampaign", (n) -> { currentObject.setAuthenticationMethodsRegistrationCampaign(n.getObjectValue(AuthenticationMethodsRegistrationCampaign::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationMethodsRegistrationCampaign", this.getAuthenticationMethodsRegistrationCampaign());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
      */
     public void setAuthenticationMethodsRegistrationCampaign(@javax.annotation.Nullable final AuthenticationMethodsRegistrationCampaign value) {
         this._authenticationMethodsRegistrationCampaign = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

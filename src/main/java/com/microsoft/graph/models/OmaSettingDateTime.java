@@ -17,6 +17,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      */
     public OmaSettingDateTime() {
         super();
+        this.setOdataType("#microsoft.graph.omaSettingDateTime");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

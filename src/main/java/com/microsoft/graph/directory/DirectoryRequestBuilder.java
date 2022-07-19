@@ -48,7 +48,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item collection
      * @param id Unique identifier of the item
-     * @return a administrativeUnitItemRequestBuilder
+     * @return a AdministrativeUnitItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AdministrativeUnitItemRequestBuilder administrativeUnits(@javax.annotation.Nonnull final String id) {
@@ -149,7 +149,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.deletedItems.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder deletedItems(@javax.annotation.Nonnull final String id) {
@@ -161,7 +161,7 @@ public class DirectoryRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.directory.federationConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a identityProviderBaseItemRequestBuilder
+     * @return a IdentityProviderBaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IdentityProviderBaseItemRequestBuilder federationConfigurations(@javax.annotation.Nonnull final String id) {

@@ -15,12 +15,15 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
     private Boolean _enableAccessTokenIssuance;
     /** Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow. */
     private Boolean _enableIdTokenIssuance;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new implicitGrantSettings and sets the default values.
      * @return a void
      */
     public ImplicitGrantSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.implicitGrantSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImplicitGrantSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("enableAccessTokenIssuance", (n) -> { currentObject.setEnableAccessTokenIssuance(n.getBooleanValue()); });
             this.put("enableIdTokenIssuance", (n) -> { currentObject.setEnableIdTokenIssuance(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enableAccessTokenIssuance", this.getEnableAccessTokenIssuance());
         writer.writeBooleanValue("enableIdTokenIssuance", this.getEnableIdTokenIssuance());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ImplicitGrantSettings implements AdditionalDataHolder, Parsable {
      */
     public void setEnableIdTokenIssuance(@javax.annotation.Nullable final Boolean value) {
         this._enableIdTokenIssuance = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

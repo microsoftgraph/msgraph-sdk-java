@@ -15,12 +15,15 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     private Double _averageScore;
     /** Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes. */
     private String _basis;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new averageComparativeScore and sets the default values.
      * @return a void
      */
     public AverageComparativeScore() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.averageComparativeScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AverageComparativeScore currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("averageScore", (n) -> { currentObject.setAverageScore(n.getDoubleValue()); });
             this.put("basis", (n) -> { currentObject.setBasis(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("averageScore", this.getAverageScore());
         writer.writeStringValue("basis", this.getBasis());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
      */
     public void setBasis(@javax.annotation.Nullable final String value) {
         this._basis = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

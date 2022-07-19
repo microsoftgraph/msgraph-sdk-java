@@ -30,6 +30,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     public IosVppEBook() {
         super();
+        this.setOdataType("#microsoft.graph.iosVppEBook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

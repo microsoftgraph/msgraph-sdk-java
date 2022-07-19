@@ -23,6 +23,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     public WorkbookRangeBorder() {
         super();
+        this.setOdataType("#microsoft.graph.workbookRangeBorder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

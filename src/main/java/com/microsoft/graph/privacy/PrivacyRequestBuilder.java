@@ -229,7 +229,7 @@ public class PrivacyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privacy.subjectRightsRequests.item collection
      * @param id Unique identifier of the item
-     * @return a subjectRightsRequestItemRequestBuilder
+     * @return a SubjectRightsRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubjectRightsRequestItemRequestBuilder subjectRightsRequests(@javax.annotation.Nonnull final String id) {

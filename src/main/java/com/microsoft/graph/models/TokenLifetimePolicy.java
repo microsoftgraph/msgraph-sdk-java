@@ -14,6 +14,7 @@ public class TokenLifetimePolicy extends StsPolicy implements Parsable {
      */
     public TokenLifetimePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.tokenLifetimePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

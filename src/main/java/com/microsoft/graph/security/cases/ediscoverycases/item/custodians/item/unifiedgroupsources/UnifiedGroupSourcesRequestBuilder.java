@@ -20,7 +20,7 @@ import microsoft.graph.models.security.UnifiedGroupSourceCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.count.CountRequestBuilder;
 /** Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class UnifiedGroupSourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

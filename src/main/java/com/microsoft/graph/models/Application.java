@@ -96,6 +96,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public Application() {
         super();
+        this.setOdataType("#microsoft.graph.application");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

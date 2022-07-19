@@ -13,6 +13,8 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     private Map<String, Object> _additionalData;
     /** The list of applications targeted with your cross-tenant access policy. */
     private CrossTenantAccessPolicyTargetConfiguration _applications;
+    /** The OdataType property */
+    private String _odataType;
     /** The list of users and groups targeted with your cross-tenant access policy. */
     private CrossTenantAccessPolicyTargetConfiguration _usersAndGroups;
     /**
@@ -21,6 +23,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      */
     public CrossTenantAccessPolicyB2BSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyB2BSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyB2BSetting currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("usersAndGroups", (n) -> { currentObject.setUsersAndGroups(n.getObjectValue(CrossTenantAccessPolicyTargetConfiguration::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the usersAndGroups property value. The list of users and groups targeted with your cross-tenant access policy.
@@ -76,6 +88,7 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("usersAndGroups", this.getUsersAndGroups());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, 
      */
     public void setApplications(@javax.annotation.Nullable final CrossTenantAccessPolicyTargetConfiguration value) {
         this._applications = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the usersAndGroups property value. The list of users and groups targeted with your cross-tenant access policy.

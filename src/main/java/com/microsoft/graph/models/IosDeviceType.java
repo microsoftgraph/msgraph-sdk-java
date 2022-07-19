@@ -16,12 +16,15 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
     private Boolean _iPad;
     /** Whether the app should run on iPhones and iPods. */
     private Boolean _iPhoneAndIPod;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new iosDeviceType and sets the default values.
      * @return a void
      */
     public IosDeviceType() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosDeviceType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,9 +51,10 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDeviceType currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("iPad", (n) -> { currentObject.setIPad(n.getBooleanValue()); });
             this.put("iPhoneAndIPod", (n) -> { currentObject.setIPhoneAndIPod(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
         return this._iPhoneAndIPod;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("iPad", this.getIPad());
         writer.writeBooleanValue("iPhoneAndIPod", this.getIPhoneAndIPod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
      */
     public void setIPhoneAndIPod(@javax.annotation.Nullable final Boolean value) {
         this._iPhoneAndIPod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

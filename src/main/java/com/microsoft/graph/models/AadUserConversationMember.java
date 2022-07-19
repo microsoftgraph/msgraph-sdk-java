@@ -22,6 +22,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
      */
     public AadUserConversationMember() {
         super();
+        this.setOdataType("#microsoft.graph.aadUserConversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

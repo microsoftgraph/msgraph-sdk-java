@@ -19,7 +19,7 @@ import microsoft.graph.models.ServicePrincipalCollectionResponse;
 import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.serviceprincipal.count.CountRequestBuilder;
 /** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipalRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -22,7 +22,7 @@ import microsoft.graph.models.NotebookCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
 public class NotebooksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

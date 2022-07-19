@@ -307,7 +307,7 @@ public class LinkedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new linkedResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LinkedResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LinkedResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class LinkedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public LinkedResourceItemRequestBuilderGetQueryParameters queryParameters = new LinkedResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new linkedResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LinkedResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LinkedResourceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class LinkedResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new linkedResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LinkedResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LinkedResourceItemRequestBuilderPatchRequestConfiguration() {

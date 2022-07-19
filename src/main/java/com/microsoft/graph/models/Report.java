@@ -14,12 +14,15 @@ public class Report implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Report content; details vary by report type. */
     private byte[] _content;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new report and sets the default values.
      * @return a void
      */
     public Report() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.report");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +57,18 @@ public class Report implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Report currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -66,6 +78,7 @@ public class Report implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -83,5 +96,13 @@ public class Report implements AdditionalDataHolder, Parsable {
      */
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

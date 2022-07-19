@@ -16,6 +16,8 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     private Byte _b;
     /** Green value */
     private Byte _g;
+    /** The OdataType property */
+    private String _odataType;
     /** Red value */
     private Byte _r;
     /**
@@ -24,6 +26,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     public RgbColor() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rgbColor");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RgbColor currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("b", (n) -> { currentObject.setB(n.getByteValue()); });
             this.put("g", (n) -> { currentObject.setG(n.getByteValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("r", (n) -> { currentObject.setR(n.getByteValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Byte getG() {
         return this._g;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the r property value. Red value
@@ -89,6 +101,7 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeByteValue("b", this.getB());
         writer.writeByteValue("g", this.getG());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeByteValue("r", this.getR());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class RgbColor implements AdditionalDataHolder, Parsable {
      */
     public void setG(@javax.annotation.Nullable final Byte value) {
         this._g = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the r property value. Red value

@@ -17,6 +17,7 @@ public class SiteSource extends DataSource implements Parsable {
      */
     public SiteSource() {
         super();
+        this.setOdataType("#microsoft.graph.security.siteSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

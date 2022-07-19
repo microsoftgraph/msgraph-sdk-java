@@ -46,6 +46,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      */
     public UnifiedRoleAssignmentScheduleRequest() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleAssignmentScheduleRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

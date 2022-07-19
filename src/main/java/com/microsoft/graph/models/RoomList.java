@@ -18,6 +18,7 @@ public class RoomList extends Place implements Parsable {
      */
     public RoomList() {
         super();
+        this.setOdataType("#microsoft.graph.roomList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

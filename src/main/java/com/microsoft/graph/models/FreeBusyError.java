@@ -13,6 +13,8 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Describes the error. */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /** The response code from querying for the availability of the user, distribution list, or resource. */
     private String _responseCode;
     /**
@@ -21,6 +23,7 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     public FreeBusyError() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.freeBusyError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FreeBusyError currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("responseCode", (n) -> { currentObject.setResponseCode(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the responseCode property value. The response code from querying for the availability of the user, distribution list, or resource.
@@ -76,6 +88,7 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("responseCode", this.getResponseCode());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class FreeBusyError implements AdditionalDataHolder, Parsable {
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the responseCode property value. The response code from querying for the availability of the user, distribution list, or resource.

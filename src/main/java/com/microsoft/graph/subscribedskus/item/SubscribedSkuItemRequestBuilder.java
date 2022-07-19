@@ -307,7 +307,7 @@ public class SubscribedSkuItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subscribedSkuItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SubscribedSkuItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscribedSkuItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class SubscribedSkuItemRequestBuilder {
         @javax.annotation.Nullable
         public SubscribedSkuItemRequestBuilderGetQueryParameters queryParameters = new SubscribedSkuItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new subscribedSkuItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SubscribedSkuItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscribedSkuItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class SubscribedSkuItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subscribedSkuItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SubscribedSkuItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscribedSkuItemRequestBuilderPatchRequestConfiguration() {

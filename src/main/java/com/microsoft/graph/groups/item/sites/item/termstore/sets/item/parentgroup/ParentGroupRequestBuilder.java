@@ -308,7 +308,7 @@ public class ParentGroupRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item collection
      * @param id Unique identifier of the item
-     * @return a setItemRequestBuilder
+     * @return a SetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {

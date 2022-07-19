@@ -16,6 +16,7 @@ public class EducationMediaResource extends EducationResource implements Parsabl
      */
     public EducationMediaResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationMediaResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

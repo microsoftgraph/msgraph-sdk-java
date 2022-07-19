@@ -14,6 +14,7 @@ public class TeamworkBot extends Entity implements Parsable {
      */
     public TeamworkBot() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkBot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

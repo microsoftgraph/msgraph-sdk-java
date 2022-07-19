@@ -14,6 +14,7 @@ public class EdiscoveryIndexOperation extends CaseOperation implements Parsable 
      */
     public EdiscoveryIndexOperation() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryIndexOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

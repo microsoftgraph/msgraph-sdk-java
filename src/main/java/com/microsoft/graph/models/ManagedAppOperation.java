@@ -24,6 +24,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     public ManagedAppOperation() {
         super();
+        this.setOdataType("#microsoft.graph.managedAppOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

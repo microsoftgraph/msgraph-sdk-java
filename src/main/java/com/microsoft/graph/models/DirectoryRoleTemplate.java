@@ -18,6 +18,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      */
     public DirectoryRoleTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.directoryRoleTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

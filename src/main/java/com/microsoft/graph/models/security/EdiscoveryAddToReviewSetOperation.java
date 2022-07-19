@@ -18,6 +18,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     public EdiscoveryAddToReviewSetOperation() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryAddToReviewSetOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

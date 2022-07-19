@@ -23,6 +23,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
      */
     public WorkbookTableColumn() {
         super();
+        this.setOdataType("#microsoft.graph.workbookTableColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

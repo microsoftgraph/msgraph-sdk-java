@@ -20,7 +20,7 @@ import microsoft.graph.models.Permission;
 import microsoft.graph.models.PermissionCollectionResponse;
 /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
 public class PermissionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

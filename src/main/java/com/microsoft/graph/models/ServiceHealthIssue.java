@@ -32,6 +32,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     public ServiceHealthIssue() {
         super();
+        this.setOdataType("#microsoft.graph.serviceHealthIssue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

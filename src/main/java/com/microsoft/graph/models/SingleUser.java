@@ -18,6 +18,7 @@ public class SingleUser extends SubjectSet implements Parsable {
      */
     public SingleUser() {
         super();
+        this.setOdataType("#microsoft.graph.singleUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

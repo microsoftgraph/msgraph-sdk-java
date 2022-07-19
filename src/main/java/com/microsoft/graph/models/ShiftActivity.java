@@ -20,6 +20,8 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _endDateTime;
     /** Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required. */
     private Boolean _isPaid;
+    /** The OdataType property */
+    private String _odataType;
     /** The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
     private OffsetDateTime _startDateTime;
     /** The theme property */
@@ -30,6 +32,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     public ShiftActivity() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.shiftActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,11 +83,12 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ShiftActivity currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("isPaid", (n) -> { currentObject.setIsPaid(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
         }};
@@ -96,6 +100,14 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsPaid() {
         return this._isPaid;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
@@ -124,6 +136,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeBooleanValue("isPaid", this.getIsPaid());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("theme", this.getTheme());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -167,6 +180,14 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      */
     public void setIsPaid(@javax.annotation.Nullable final Boolean value) {
         this._isPaid = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.

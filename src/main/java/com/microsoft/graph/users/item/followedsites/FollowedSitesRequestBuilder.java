@@ -19,7 +19,7 @@ import microsoft.graph.models.SiteCollectionResponse;
 import microsoft.graph.users.item.followedsites.count.CountRequestBuilder;
 /** Provides operations to manage the followedSites property of the microsoft.graph.user entity. */
 public class FollowedSitesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

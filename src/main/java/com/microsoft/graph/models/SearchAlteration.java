@@ -17,12 +17,15 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     private String _alteredQueryString;
     /** Represents changed segments with respect to original query. */
     private java.util.List<AlteredQueryToken> _alteredQueryTokens;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new searchAlteration and sets the default values.
      * @return a void
      */
     public SearchAlteration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchAlteration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAlteration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("alteredHighlightedQueryString", (n) -> { currentObject.setAlteredHighlightedQueryString(n.getStringValue()); });
             this.put("alteredQueryString", (n) -> { currentObject.setAlteredQueryString(n.getStringValue()); });
             this.put("alteredQueryTokens", (n) -> { currentObject.setAlteredQueryTokens(n.getCollectionOfObjectValues(AlteredQueryToken::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("alteredHighlightedQueryString", this.getAlteredHighlightedQueryString());
         writer.writeStringValue("alteredQueryString", this.getAlteredQueryString());
         writer.writeCollectionOfObjectValues("alteredQueryTokens", this.getAlteredQueryTokens());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
      */
     public void setAlteredQueryTokens(@javax.annotation.Nullable final java.util.List<AlteredQueryToken> value) {
         this._alteredQueryTokens = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

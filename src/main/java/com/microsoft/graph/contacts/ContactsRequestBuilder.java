@@ -24,7 +24,7 @@ import microsoft.graph.models.OrgContact;
 import microsoft.graph.models.OrgContactCollectionResponse;
 /** Provides operations to manage the collection of orgContact entities. */
 public class ContactsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

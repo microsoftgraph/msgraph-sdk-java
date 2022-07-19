@@ -38,6 +38,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     public WindowsInformationProtectionPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -29,6 +29,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      */
     public CallRecordingEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.callRecordingEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

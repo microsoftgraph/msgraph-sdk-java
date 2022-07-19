@@ -14,6 +14,8 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
     private Map<String, Object> _additionalData;
     /** Display name */
     private String _displayName;
+    /** The OdataType property */
+    private String _odataType;
     /** Collection of resources */
     private java.util.List<String> _resources;
     /**
@@ -22,6 +24,7 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     public WindowsInformationProtectionResourceCollection() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionResourceCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,10 +59,19 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionResourceCollection currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resources property value. Collection of resources
@@ -77,6 +89,7 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("resources", this.getResources());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class WindowsInformationProtectionResourceCollection implements Additiona
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resources property value. Collection of resources

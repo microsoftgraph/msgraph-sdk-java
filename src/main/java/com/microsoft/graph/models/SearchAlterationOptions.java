@@ -15,12 +15,15 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
     private Boolean _enableModification;
     /** Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional. */
     private Boolean _enableSuggestion;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new searchAlterationOptions and sets the default values.
      * @return a void
      */
     public SearchAlterationOptions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchAlterationOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAlterationOptions currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("enableModification", (n) -> { currentObject.setEnableModification(n.getBooleanValue()); });
             this.put("enableSuggestion", (n) -> { currentObject.setEnableSuggestion(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enableModification", this.getEnableModification());
         writer.writeBooleanValue("enableSuggestion", this.getEnableSuggestion());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
      */
     public void setEnableSuggestion(@javax.annotation.Nullable final Boolean value) {
         this._enableSuggestion = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

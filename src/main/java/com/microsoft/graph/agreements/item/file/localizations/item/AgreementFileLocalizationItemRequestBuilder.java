@@ -308,7 +308,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.agreements.item.file.localizations.item.versions.item collection
      * @param id Unique identifier of the item
-     * @return a agreementFileVersionItemRequestBuilder
+     * @return a AgreementFileVersionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementFileVersionItemRequestBuilder versions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public AgreementFileLocalizationItemRequestBuilderGetQueryParameters queryParameters = new AgreementFileLocalizationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new agreementFileLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementFileLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration() {

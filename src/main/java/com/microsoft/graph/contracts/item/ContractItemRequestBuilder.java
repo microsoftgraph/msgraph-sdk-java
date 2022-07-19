@@ -337,7 +337,7 @@ public class ContractItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contractItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ContractItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContractItemRequestBuilderDeleteRequestConfiguration() {
@@ -366,7 +366,7 @@ public class ContractItemRequestBuilder {
         @javax.annotation.Nullable
         public ContractItemRequestBuilderGetQueryParameters queryParameters = new ContractItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contractItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContractItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContractItemRequestBuilderGetRequestConfiguration() {
@@ -381,7 +381,7 @@ public class ContractItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contractItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ContractItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContractItemRequestBuilderPatchRequestConfiguration() {

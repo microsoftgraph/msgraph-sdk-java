@@ -19,6 +19,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     public WorkbookPivotTable() {
         super();
+        this.setOdataType("#microsoft.graph.workbookPivotTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -24,6 +24,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     public IosDeviceFeaturesConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

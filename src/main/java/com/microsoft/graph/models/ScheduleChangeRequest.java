@@ -31,7 +31,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
      */
     public ScheduleChangeRequest() {
         super();
-        this.setType("#microsoft.graph.scheduleChangeRequest");
+        this.setOdataType("#microsoft.graph.scheduleChangeRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,6 +47,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
             switch (mappingValue) {
                 case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
                 case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
+                case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
                 case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
             }
         }

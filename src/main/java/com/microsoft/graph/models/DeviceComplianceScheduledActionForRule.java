@@ -19,6 +19,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      */
     public DeviceComplianceScheduledActionForRule() {
         super();
+        this.setOdataType("#microsoft.graph.deviceComplianceScheduledActionForRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

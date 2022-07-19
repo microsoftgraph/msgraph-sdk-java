@@ -155,7 +155,7 @@ public class PrintConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintConnectorItemRequestBuilderGetQueryParameters queryParameters = new PrintConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintConnectorItemRequestBuilderGetRequestConfiguration() {

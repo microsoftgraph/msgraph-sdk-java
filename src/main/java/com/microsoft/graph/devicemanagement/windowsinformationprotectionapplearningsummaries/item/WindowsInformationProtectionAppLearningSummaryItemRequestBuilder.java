@@ -307,7 +307,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration() {

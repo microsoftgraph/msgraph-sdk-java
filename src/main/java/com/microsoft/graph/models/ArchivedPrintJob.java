@@ -26,6 +26,8 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _createdDateTime;
     /** The archived print job's GUID. Read-only. */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /** The printer ID that the job was queued for. Read-only. */
     private String _printerId;
     /** The processingState property */
@@ -36,6 +38,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     public ArchivedPrintJob() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.archivedPrintJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -110,7 +113,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivedPrintJob currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
             this.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
             this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
@@ -118,6 +121,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
             this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
         }};
@@ -129,6 +133,14 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the printerId property value. The printer ID that the job was queued for. Read-only.
@@ -160,6 +172,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("printerId", this.getPrinterId());
         writer.writeEnumValue("processingState", this.getProcessingState());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -227,6 +240,14 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the printerId property value. The printer ID that the job was queued for. Read-only.

@@ -80,6 +80,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     public Windows81GeneralConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows81GeneralConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

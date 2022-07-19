@@ -15,12 +15,15 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     private String _appId;
     /** The unique identifier for the oauth2PermissionScopes the application requires. */
     private java.util.List<String> _delegatedPermissionIds;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new preAuthorizedApplication and sets the default values.
      * @return a void
      */
     public PreAuthorizedApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.preAuthorizedApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PreAuthorizedApplication currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("delegatedPermissionIds", (n) -> { currentObject.setDelegatedPermissionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfPrimitiveValues("delegatedPermissionIds", this.getDelegatedPermissionIds());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class PreAuthorizedApplication implements AdditionalDataHolder, Parsable 
      */
     public void setDelegatedPermissionIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._delegatedPermissionIds = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

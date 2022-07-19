@@ -337,7 +337,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -366,7 +366,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public DirectoryRoleTemplateItemRequestBuilderGetQueryParameters queryParameters = new DirectoryRoleTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new directoryRoleTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -381,7 +381,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new directoryRoleTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DirectoryRoleTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DirectoryRoleTemplateItemRequestBuilderPatchRequestConfiguration() {

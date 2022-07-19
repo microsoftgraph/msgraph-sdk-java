@@ -307,7 +307,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceConfigurationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new DeviceConfigurationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceConfigurationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration() {

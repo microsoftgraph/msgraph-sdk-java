@@ -25,7 +25,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     public DomainDnsRecord() {
         super();
-        this.setType("#microsoft.graph.domainDnsRecord");
+        this.setOdataType("#microsoft.graph.domainDnsRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

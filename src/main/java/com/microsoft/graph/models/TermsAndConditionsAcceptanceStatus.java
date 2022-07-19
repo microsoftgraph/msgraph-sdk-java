@@ -26,6 +26,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      */
     public TermsAndConditionsAcceptanceStatus() {
         super();
+        this.setOdataType("#microsoft.graph.termsAndConditionsAcceptanceStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -45,6 +45,8 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     private String _inventoryType;
     /** The license used for the call. */
     private String _licenseCapability;
+    /** The OdataType property */
+    private String _odataType;
     /** The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program. */
     private String _operator;
     /** Call start time. */
@@ -65,6 +67,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     public PstnCallLogRow() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.pstnCallLogRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -195,7 +198,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PstnCallLogRow currentObject = this;
-        return new HashMap<>(23) {{
+        return new HashMap<>(24) {{
             this.put("callDurationSource", (n) -> { currentObject.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
             this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
             this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
@@ -212,6 +215,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("inventoryType", (n) -> { currentObject.setInventoryType(n.getStringValue()); });
             this.put("licenseCapability", (n) -> { currentObject.setLicenseCapability(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("tenantCountryCode", (n) -> { currentObject.setTenantCountryCode(n.getStringValue()); });
@@ -244,6 +248,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLicenseCapability() {
         return this._licenseCapability;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
@@ -324,6 +336,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("inventoryType", this.getInventoryType());
         writer.writeStringValue("licenseCapability", this.getLicenseCapability());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operator", this.getOperator());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("tenantCountryCode", this.getTenantCountryCode());
@@ -468,6 +481,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     public void setLicenseCapability(@javax.annotation.Nullable final String value) {
         this._licenseCapability = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.

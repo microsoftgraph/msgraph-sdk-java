@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceInstallStateCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity. */
 public class DeviceStatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -23,6 +23,8 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     private Integer _interval;
     /** The month in which the event occurs.  This is a number from 1 to 12. */
     private Integer _month;
+    /** The OdataType property */
+    private String _odataType;
     /** The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property. */
     private RecurrencePatternType _type;
     /**
@@ -31,6 +33,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
      */
     public RecurrencePattern() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.recurrencePattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,13 +76,14 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecurrencePattern currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("dayOfMonth", (n) -> { currentObject.setDayOfMonth(n.getIntegerValue()); });
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("index", (n) -> { currentObject.setIndex(n.getEnumValue(WeekIndex.class)); });
             this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
             this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrencePatternType.class)); });
         }};
     }
@@ -116,6 +120,14 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         return this._month;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
      * @return a recurrencePatternType
      */
@@ -136,6 +148,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("index", this.getIndex());
         writer.writeIntegerValue("interval", this.getInterval());
         writer.writeIntegerValue("month", this.getMonth());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -194,6 +207,14 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
      */
     public void setMonth(@javax.annotation.Nullable final Integer value) {
         this._month = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.

@@ -29,6 +29,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     public Printer() {
         super();
+        this.setOdataType("#microsoft.graph.printer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -15,6 +15,8 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     private java.util.List<ContentTypeInfo> _allowedContentTypes;
     /** Default contents of document set. */
     private java.util.List<DocumentSetContent> _defaultContents;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates whether to add the name of the document set to each file name. */
     private Boolean _propagateWelcomePageChanges;
     /** The sharedColumns property */
@@ -31,6 +33,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     public DocumentSet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.documentSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,15 +76,24 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSet currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("allowedContentTypes", (n) -> { currentObject.setAllowedContentTypes(n.getCollectionOfObjectValues(ContentTypeInfo::createFromDiscriminatorValue)); });
             this.put("defaultContents", (n) -> { currentObject.setDefaultContents(n.getCollectionOfObjectValues(DocumentSetContent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("propagateWelcomePageChanges", (n) -> { currentObject.setPropagateWelcomePageChanges(n.getBooleanValue()); });
             this.put("sharedColumns", (n) -> { currentObject.setSharedColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
             this.put("shouldPrefixNameToFile", (n) -> { currentObject.setShouldPrefixNameToFile(n.getBooleanValue()); });
             this.put("welcomePageColumns", (n) -> { currentObject.setWelcomePageColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
             this.put("welcomePageUrl", (n) -> { currentObject.setWelcomePageUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
@@ -132,6 +144,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedContentTypes", this.getAllowedContentTypes());
         writer.writeCollectionOfObjectValues("defaultContents", this.getDefaultContents());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("propagateWelcomePageChanges", this.getPropagateWelcomePageChanges());
         writer.writeCollectionOfObjectValues("sharedColumns", this.getSharedColumns());
         writer.writeBooleanValue("shouldPrefixNameToFile", this.getShouldPrefixNameToFile());
@@ -162,6 +175,14 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
      */
     public void setDefaultContents(@javax.annotation.Nullable final java.util.List<DocumentSetContent> value) {
         this._defaultContents = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.

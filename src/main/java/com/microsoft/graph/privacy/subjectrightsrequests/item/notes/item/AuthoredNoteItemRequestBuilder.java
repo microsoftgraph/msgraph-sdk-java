@@ -307,7 +307,7 @@ public class AuthoredNoteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authoredNoteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AuthoredNoteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthoredNoteItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AuthoredNoteItemRequestBuilder {
         @javax.annotation.Nullable
         public AuthoredNoteItemRequestBuilderGetQueryParameters queryParameters = new AuthoredNoteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new authoredNoteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AuthoredNoteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthoredNoteItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AuthoredNoteItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authoredNoteItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AuthoredNoteItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthoredNoteItemRequestBuilderPatchRequestConfiguration() {

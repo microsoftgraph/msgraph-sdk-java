@@ -308,7 +308,7 @@ public class RoleDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.roleDefinitions.item.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a roleAssignmentItemRequestBuilder
+     * @return a RoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class RoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class RoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public RoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new RoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new roleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class RoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

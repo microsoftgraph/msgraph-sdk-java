@@ -307,7 +307,7 @@ public class SecureScoreControlProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new secureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SecureScoreControlProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public SecureScoreControlProfileItemRequestBuilderGetQueryParameters queryParameters = new SecureScoreControlProfileItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new secureScoreControlProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SecureScoreControlProfileItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new secureScoreControlProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration() {

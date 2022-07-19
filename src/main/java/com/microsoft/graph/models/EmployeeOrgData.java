@@ -15,12 +15,15 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
     private String _costCenter;
     /** The name of the division in which the user works. Returned only on $select. Supports $filter. */
     private String _division;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new employeeOrgData and sets the default values.
      * @return a void
      */
     public EmployeeOrgData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.employeeOrgData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmployeeOrgData currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("costCenter", (n) -> { currentObject.setCostCenter(n.getStringValue()); });
             this.put("division", (n) -> { currentObject.setDivision(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("costCenter", this.getCostCenter());
         writer.writeStringValue("division", this.getDivision());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
      */
     public void setDivision(@javax.annotation.Nullable final String value) {
         this._division = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

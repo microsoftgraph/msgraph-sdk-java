@@ -15,12 +15,15 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     private java.util.List<String> _excludePlatforms;
     /** Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``. */
     private java.util.List<String> _includePlatforms;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessPlatforms and sets the default values.
      * @return a void
      */
     public ConditionalAccessPlatforms() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessPlatforms");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPlatforms currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
         return this._includePlatforms;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludePlatforms", this.getExcludePlatforms());
         writer.writeCollectionOfPrimitiveValues("includePlatforms", this.getIncludePlatforms());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      */
     public void setIncludePlatforms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includePlatforms = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

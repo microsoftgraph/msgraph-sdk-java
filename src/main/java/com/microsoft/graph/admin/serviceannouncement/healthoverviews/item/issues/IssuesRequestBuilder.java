@@ -20,7 +20,7 @@ import microsoft.graph.models.ServiceHealthIssue;
 import microsoft.graph.models.ServiceHealthIssueCollectionResponse;
 /** Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity. */
 public class IssuesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

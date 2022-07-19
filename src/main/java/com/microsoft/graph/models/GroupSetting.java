@@ -21,6 +21,7 @@ public class GroupSetting extends Entity implements Parsable {
      */
     public GroupSetting() {
         super();
+        this.setOdataType("#microsoft.graph.groupSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

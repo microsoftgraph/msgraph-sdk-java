@@ -18,12 +18,15 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     private Boolean _cellularDataBlockWhenRoaming;
     /** Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements. */
     private java.util.List<AppListItem> _managedApps;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new iosNetworkUsageRule and sets the default values.
      * @return a void
      */
     public IosNetworkUsageRule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosNetworkUsageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,10 +69,11 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNetworkUsageRule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("cellularDataBlocked", (n) -> { currentObject.setCellularDataBlocked(n.getBooleanValue()); });
             this.put("cellularDataBlockWhenRoaming", (n) -> { currentObject.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
             this.put("managedApps", (n) -> { currentObject.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +85,14 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
         return this._managedApps;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +102,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("cellularDataBlocked", this.getCellularDataBlocked());
         writer.writeBooleanValue("cellularDataBlockWhenRoaming", this.getCellularDataBlockWhenRoaming());
         writer.writeCollectionOfObjectValues("managedApps", this.getManagedApps());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +136,13 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      */
     public void setManagedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._managedApps = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

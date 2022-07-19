@@ -21,7 +21,7 @@ import microsoft.graph.print.printers.count.CountRequestBuilder;
 import microsoft.graph.print.printers.create.CreateRequestBuilder;
 /** Provides operations to manage the printers property of the microsoft.graph.print entity. */
 public class PrintersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

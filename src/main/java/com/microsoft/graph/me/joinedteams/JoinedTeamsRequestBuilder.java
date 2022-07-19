@@ -21,7 +21,7 @@ import microsoft.graph.models.Team;
 import microsoft.graph.models.TeamCollectionResponse;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class JoinedTeamsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

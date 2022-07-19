@@ -307,7 +307,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         @javax.annotation.Nullable
         public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration() {

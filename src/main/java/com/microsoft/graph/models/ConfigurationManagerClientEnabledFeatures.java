@@ -20,6 +20,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     private Boolean _inventory;
     /** Whether modern application is managed by Intune */
     private Boolean _modernApps;
+    /** The OdataType property */
+    private String _odataType;
     /** Whether resource access is managed by Intune */
     private Boolean _resourceAccess;
     /** Whether Windows Update for Business is managed by Intune */
@@ -30,6 +32,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     public ConfigurationManagerClientEnabledFeatures() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.configurationManagerClientEnabledFeatures");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,11 +75,12 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConfigurationManagerClientEnabledFeatures currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
             this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
             this.put("inventory", (n) -> { currentObject.setInventory(n.getBooleanValue()); });
             this.put("modernApps", (n) -> { currentObject.setModernApps(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getBooleanValue()); });
             this.put("windowsUpdateForBusiness", (n) -> { currentObject.setWindowsUpdateForBusiness(n.getBooleanValue()); });
         }};
@@ -96,6 +100,14 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     @javax.annotation.Nullable
     public Boolean getModernApps() {
         return this._modernApps;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resourceAccess property value. Whether resource access is managed by Intune
@@ -124,6 +136,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
         writer.writeBooleanValue("deviceConfiguration", this.getDeviceConfiguration());
         writer.writeBooleanValue("inventory", this.getInventory());
         writer.writeBooleanValue("modernApps", this.getModernApps());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("resourceAccess", this.getResourceAccess());
         writer.writeBooleanValue("windowsUpdateForBusiness", this.getWindowsUpdateForBusiness());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -167,6 +180,14 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     public void setModernApps(@javax.annotation.Nullable final Boolean value) {
         this._modernApps = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resourceAccess property value. Whether resource access is managed by Intune

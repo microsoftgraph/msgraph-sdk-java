@@ -13,6 +13,8 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Certification control name */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** URL for the Microsoft Service Trust Portal */
     private String _url;
     /**
@@ -21,6 +23,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
      */
     public CertificationControl() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.certificationControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificationControl currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the url property value. URL for the Microsoft Service Trust Portal
@@ -76,6 +88,7 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("url", this.getUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class CertificationControl implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the url property value. URL for the Microsoft Service Trust Portal

@@ -23,6 +23,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     public WindowsInformationProtectionAppLockerFile() {
         super();
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionAppLockerFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

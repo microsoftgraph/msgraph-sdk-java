@@ -12,6 +12,8 @@ import java.util.Objects;
 public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the package type of an MSI Win32LobApp. */
     private Win32LobAppMsiPackageType _packageType;
     /** The MSI product code. */
@@ -32,6 +34,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.win32LobAppMsiInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +61,8 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppMsiInformation currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("packageType", (n) -> { currentObject.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
             this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
@@ -67,6 +71,14 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
             this.put("requiresReboot", (n) -> { currentObject.setRequiresReboot(n.getBooleanValue()); });
             this.put("upgradeCode", (n) -> { currentObject.setUpgradeCode(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
@@ -131,6 +143,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("packageType", this.getPackageType());
         writer.writeStringValue("productCode", this.getProductCode());
         writer.writeStringValue("productName", this.getProductName());
@@ -147,6 +160,14 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.

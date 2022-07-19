@@ -321,7 +321,7 @@ public class NotebookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item.sectionGroups.item collection
      * @param id Unique identifier of the item
-     * @return a sectionGroupItemRequestBuilder
+     * @return a SectionGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
@@ -333,7 +333,7 @@ public class NotebookItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item.sections.item collection
      * @param id Unique identifier of the item
-     * @return a onenoteSectionItemRequestBuilder
+     * @return a OnenoteSectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class NotebookItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notebookItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NotebookItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotebookItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class NotebookItemRequestBuilder {
         @javax.annotation.Nullable
         public NotebookItemRequestBuilderGetQueryParameters queryParameters = new NotebookItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new notebookItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NotebookItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotebookItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class NotebookItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new notebookItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NotebookItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NotebookItemRequestBuilderPatchRequestConfiguration() {

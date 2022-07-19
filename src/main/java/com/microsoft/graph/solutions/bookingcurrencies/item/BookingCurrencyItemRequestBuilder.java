@@ -307,7 +307,7 @@ public class BookingCurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingCurrencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCurrencyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCurrencyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class BookingCurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public BookingCurrencyItemRequestBuilderGetQueryParameters queryParameters = new BookingCurrencyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bookingCurrencyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCurrencyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCurrencyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class BookingCurrencyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingCurrencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCurrencyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCurrencyItemRequestBuilderPatchRequestConfiguration() {

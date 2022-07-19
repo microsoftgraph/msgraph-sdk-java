@@ -307,7 +307,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public IosUpdateDeviceStatusItemRequestBuilderGetQueryParameters queryParameters = new IosUpdateDeviceStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new iosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration() {

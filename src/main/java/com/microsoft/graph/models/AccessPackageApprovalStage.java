@@ -26,6 +26,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     private Boolean _isApproverJustificationRequired;
     /** If true, then one or more escalationApprovers are configured in this approval stage. */
     private Boolean _isEscalationEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors. */
     private java.util.List<SubjectSet> _primaryApprovers;
     /**
@@ -34,6 +36,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     public AccessPackageApprovalStage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageApprovalStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,7 +103,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageApprovalStage currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("durationBeforeAutomaticDenial", (n) -> { currentObject.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
             this.put("durationBeforeEscalation", (n) -> { currentObject.setDurationBeforeEscalation(n.getPeriodValue()); });
             this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -108,6 +111,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
             this.put("fallbackPrimaryApprovers", (n) -> { currentObject.setFallbackPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
             this.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
             this.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         }};
     }
@@ -126,6 +130,14 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
         return this._isEscalationEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
@@ -149,6 +161,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
         writer.writeCollectionOfObjectValues("fallbackPrimaryApprovers", this.getFallbackPrimaryApprovers());
         writer.writeBooleanValue("isApproverJustificationRequired", this.getIsApproverJustificationRequired());
         writer.writeBooleanValue("isEscalationEnabled", this.getIsEscalationEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("primaryApprovers", this.getPrimaryApprovers());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -215,6 +228,14 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      */
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEscalationEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.

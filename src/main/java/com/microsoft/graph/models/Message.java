@@ -75,7 +75,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     public Message() {
         super();
-        this.setType("#microsoft.graph.message");
+        this.setOdataType("#microsoft.graph.message");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,6 +91,8 @@ public class Message extends OutlookItem implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
                 case "#microsoft.graph.eventMessage": return new EventMessage();
+                case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
+                case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
             }
         }
         return new Message();

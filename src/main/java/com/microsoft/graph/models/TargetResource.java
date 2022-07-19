@@ -19,6 +19,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     private String _id;
     /** Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type. */
     private java.util.List<ModifiedProperty> _modifiedProperties;
+    /** The OdataType property */
+    private String _odataType;
     /** Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User. */
     private String _type;
     /** When type is set to User, this includes the user name that initiated the action; null for other types. */
@@ -29,6 +31,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     public TargetResource() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.targetResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,11 +66,12 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetResource currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("groupType", (n) -> { currentObject.setGroupType(n.getEnumValue(GroupType.class)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
@@ -97,6 +101,14 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
         return this._modifiedProperties;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      * @return a string
      */
@@ -123,6 +135,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("groupType", this.getGroupType());
         writer.writeStringValue("id", this.getId());
         writer.writeCollectionOfObjectValues("modifiedProperties", this.getModifiedProperties());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      */
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
         this._modifiedProperties = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.

@@ -16,6 +16,8 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _createdDateTime;
     /** The content of the service issue post. */
     private ItemBody _description;
+    /** The OdataType property */
+    private String _odataType;
     /** The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue. */
     private PostType _postType;
     /**
@@ -24,6 +26,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     public ServiceHealthIssuePost() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.serviceHealthIssuePost");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceHealthIssuePost currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("postType", (n) -> { currentObject.setPostType(n.getEnumValue(PostType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
@@ -89,6 +101,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("description", this.getDescription());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("postType", this.getPostType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
      */
     public void setDescription(@javax.annotation.Nullable final ItemBody value) {
         this._description = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.

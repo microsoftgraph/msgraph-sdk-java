@@ -14,15 +14,15 @@ public class IosHomeScreenItem implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Name of the app */
     private String _displayName;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new iosHomeScreenItem and sets the default values.
      * @return a void
      */
     public IosHomeScreenItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.iosHomeScreenItem");
+        this.setOdataType("#microsoft.graph.iosHomeScreenItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,16 +67,16 @@ public class IosHomeScreenItem implements AdditionalDataHolder, Parsable {
         final IosHomeScreenItem currentObject = this;
         return new HashMap<>(2) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -86,7 +86,7 @@ public class IosHomeScreenItem implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -106,11 +106,11 @@ public class IosHomeScreenItem implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

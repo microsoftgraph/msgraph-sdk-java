@@ -16,6 +16,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
      */
     public ShiftPreferences() {
         super();
+        this.setOdataType("#microsoft.graph.shiftPreferences");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

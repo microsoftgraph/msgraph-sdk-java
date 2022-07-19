@@ -145,6 +145,7 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public Group() {
         super();
+        this.setOdataType("#microsoft.graph.group");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

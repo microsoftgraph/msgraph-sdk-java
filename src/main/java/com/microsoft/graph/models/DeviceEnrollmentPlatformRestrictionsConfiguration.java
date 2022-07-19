@@ -24,6 +24,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     public DeviceEnrollmentPlatformRestrictionsConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

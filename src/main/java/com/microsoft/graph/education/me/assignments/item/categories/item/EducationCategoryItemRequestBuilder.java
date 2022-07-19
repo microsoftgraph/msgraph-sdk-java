@@ -8,7 +8,7 @@ import microsoft.graph.education.me.assignments.item.categories.item.ref.RefRequ
 public class EducationCategoryItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

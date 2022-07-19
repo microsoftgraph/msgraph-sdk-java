@@ -18,7 +18,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     public ManagedApp() {
         super();
-        this.setType("#microsoft.graph.managedApp");
+        this.setOdataType("#microsoft.graph.managedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,7 +32,9 @@ public class ManagedApp extends MobileApp implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
                 case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
+                case "#microsoft.graph.managedIOSLobApp": return new ManagedIOSLobApp();
                 case "#microsoft.graph.managedIOSStoreApp": return new ManagedIOSStoreApp();
                 case "#microsoft.graph.managedMobileLobApp": return new ManagedMobileLobApp();
             }

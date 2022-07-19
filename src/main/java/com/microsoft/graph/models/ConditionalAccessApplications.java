@@ -19,12 +19,15 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     private java.util.List<String> _includeAuthenticationContextClassReferences;
     /** User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice */
     private java.util.List<String> _includeUserActions;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessApplications and sets the default values.
      * @return a void
      */
     public ConditionalAccessApplications() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessApplications");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,11 +62,12 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessApplications currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("excludeApplications", (n) -> { currentObject.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeAuthenticationContextClassReferences", (n) -> { currentObject.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeUserActions", (n) -> { currentObject.setIncludeUserActions(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -91,6 +95,14 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         return this._includeUserActions;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -101,6 +113,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         writer.writeCollectionOfPrimitiveValues("includeApplications", this.getIncludeApplications());
         writer.writeCollectionOfPrimitiveValues("includeAuthenticationContextClassReferences", this.getIncludeAuthenticationContextClassReferences());
         writer.writeCollectionOfPrimitiveValues("includeUserActions", this.getIncludeUserActions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     public void setIncludeUserActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeUserActions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

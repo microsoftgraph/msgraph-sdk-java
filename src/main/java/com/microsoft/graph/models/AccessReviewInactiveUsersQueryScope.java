@@ -17,6 +17,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      */
     public AccessReviewInactiveUsersQueryScope() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInactiveUsersQueryScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

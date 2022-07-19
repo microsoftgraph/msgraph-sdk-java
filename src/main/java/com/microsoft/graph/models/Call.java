@@ -61,6 +61,7 @@ public class Call extends Entity implements Parsable {
      */
     public Call() {
         super();
+        this.setOdataType("#microsoft.graph.call");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     public IosStoreAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.iosStoreAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

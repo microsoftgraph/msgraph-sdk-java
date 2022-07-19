@@ -308,7 +308,7 @@ public class ConversationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.conversations.item.threads.item collection
      * @param id Unique identifier of the item
-     * @return a conversationThreadItemRequestBuilder
+     * @return a ConversationThreadItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationThreadItemRequestBuilder threads(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ConversationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationItemRequestBuilderDeleteRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConversationItemRequestBuilder {
         @javax.annotation.Nullable
         public ConversationItemRequestBuilderGetQueryParameters queryParameters = new ConversationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conversationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationItemRequestBuilderGetRequestConfiguration() {
@@ -366,7 +366,7 @@ public class ConversationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conversationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationItemRequestBuilderPatchRequestConfiguration() {

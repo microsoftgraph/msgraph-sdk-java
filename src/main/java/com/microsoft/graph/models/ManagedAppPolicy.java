@@ -26,7 +26,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
      */
     public ManagedAppPolicy() {
         super();
-        this.setType("#microsoft.graph.managedAppPolicy");
+        this.setOdataType("#microsoft.graph.managedAppPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,9 +40,16 @@ public class ManagedAppPolicy extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.androidManagedAppProtection": return new AndroidManagedAppProtection();
+                case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
+                case "#microsoft.graph.iosManagedAppProtection": return new IosManagedAppProtection();
                 case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
                 case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
+                case "#microsoft.graph.mdmWindowsInformationProtectionPolicy": return new MdmWindowsInformationProtectionPolicy();
+                case "#microsoft.graph.targetedManagedAppConfiguration": return new TargetedManagedAppConfiguration();
+                case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
                 case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
+                case "#microsoft.graph.windowsInformationProtectionPolicy": return new WindowsInformationProtectionPolicy();
             }
         }
         return new ManagedAppPolicy();

@@ -21,7 +21,7 @@ import microsoft.graph.users.item.directreports.orgcontact.OrgContactRequestBuil
 import microsoft.graph.users.item.directreports.user.UserRequestBuilder;
 /** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
 public class DirectReportsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

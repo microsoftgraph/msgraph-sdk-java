@@ -14,6 +14,7 @@ public class IdentityCustomUserFlowAttribute extends IdentityUserFlowAttribute i
      */
     public IdentityCustomUserFlowAttribute() {
         super();
+        this.setOdataType("#microsoft.graph.identityCustomUserFlowAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

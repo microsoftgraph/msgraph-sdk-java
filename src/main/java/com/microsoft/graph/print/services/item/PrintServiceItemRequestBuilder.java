@@ -202,7 +202,7 @@ public class PrintServiceItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.services.item.endpoints.item collection
      * @param id Unique identifier of the item
-     * @return a printServiceEndpointItemRequestBuilder
+     * @return a PrintServiceEndpointItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintServiceEndpointItemRequestBuilder endpoints(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class PrintServiceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printServiceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class PrintServiceItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintServiceItemRequestBuilderGetQueryParameters queryParameters = new PrintServiceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printServiceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class PrintServiceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printServiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintServiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintServiceItemRequestBuilderPatchRequestConfiguration() {

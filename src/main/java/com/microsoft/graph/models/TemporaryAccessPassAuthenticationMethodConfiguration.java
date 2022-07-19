@@ -26,6 +26,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     public TemporaryAccessPassAuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

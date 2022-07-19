@@ -23,6 +23,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      */
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
+        this.setOdataType("#microsoft.graph.windowsHelloForBusinessAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

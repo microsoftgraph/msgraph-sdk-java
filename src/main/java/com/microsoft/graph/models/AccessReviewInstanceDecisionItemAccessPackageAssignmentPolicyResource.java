@@ -18,6 +18,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      */
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

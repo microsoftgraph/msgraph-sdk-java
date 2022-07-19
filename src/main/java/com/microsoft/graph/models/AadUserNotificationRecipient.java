@@ -16,6 +16,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      */
     public AadUserNotificationRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.aadUserNotificationRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

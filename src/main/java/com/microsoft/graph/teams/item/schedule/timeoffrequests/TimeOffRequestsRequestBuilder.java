@@ -20,7 +20,7 @@ import microsoft.graph.models.TimeOffRequestCollectionResponse;
 import microsoft.graph.teams.item.schedule.timeoffrequests.count.CountRequestBuilder;
 /** Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity. */
 public class TimeOffRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

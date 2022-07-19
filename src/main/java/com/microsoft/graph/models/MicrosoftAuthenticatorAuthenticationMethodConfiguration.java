@@ -16,6 +16,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      */
     public MicrosoftAuthenticatorAuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

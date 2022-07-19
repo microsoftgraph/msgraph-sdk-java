@@ -18,6 +18,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      */
     public OmaSettingBase64() {
         super();
+        this.setOdataType("#microsoft.graph.omaSettingBase64");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

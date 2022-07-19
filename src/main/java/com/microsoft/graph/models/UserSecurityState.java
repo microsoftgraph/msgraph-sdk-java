@@ -32,6 +32,8 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     private String _logonLocation;
     /** Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
     private LogonType _logonType;
+    /** The OdataType property */
+    private String _odataType;
     /** Active Directory (on-premises) Security Identifier (SID) of the user. */
     private String _onPremisesSecurityIdentifier;
     /** Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage. */
@@ -46,6 +48,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     public UserSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -104,7 +107,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSecurityState currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("aadUserId", (n) -> { currentObject.setAadUserId(n.getStringValue()); });
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
@@ -115,6 +118,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
             this.put("logonIp", (n) -> { currentObject.setLogonIp(n.getStringValue()); });
             this.put("logonLocation", (n) -> { currentObject.setLogonLocation(n.getStringValue()); });
             this.put("logonType", (n) -> { currentObject.setLogonType(n.getEnumValue(LogonType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
             this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
@@ -170,6 +174,14 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
         return this._logonType;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
      * @return a string
      */
@@ -218,6 +230,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("logonIp", this.getLogonIp());
         writer.writeStringValue("logonLocation", this.getLogonLocation());
         writer.writeEnumValue("logonType", this.getLogonType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeEnumValue("userAccountType", this.getUserAccountType());
@@ -311,6 +324,14 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setLogonType(@javax.annotation.Nullable final LogonType value) {
         this._logonType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.

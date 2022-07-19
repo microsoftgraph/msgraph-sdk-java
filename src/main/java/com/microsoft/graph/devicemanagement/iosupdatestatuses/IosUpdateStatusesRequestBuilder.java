@@ -20,7 +20,7 @@ import microsoft.graph.models.IosUpdateDeviceStatusCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity. */
 public class IosUpdateStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

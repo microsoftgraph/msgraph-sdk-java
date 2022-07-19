@@ -313,7 +313,7 @@ public class TeamsAppDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsAppDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class TeamsAppDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamsAppDefinitionItemRequestBuilderGetQueryParameters queryParameters = new TeamsAppDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamsAppDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class TeamsAppDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsAppDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration() {

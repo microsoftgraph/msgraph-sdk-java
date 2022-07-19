@@ -307,7 +307,7 @@ public class MobileAppCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MobileAppCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileAppCategoryItemRequestBuilderGetQueryParameters queryParameters = new MobileAppCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileAppCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MobileAppCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileAppCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileAppCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileAppCategoryItemRequestBuilderPatchRequestConfiguration() {

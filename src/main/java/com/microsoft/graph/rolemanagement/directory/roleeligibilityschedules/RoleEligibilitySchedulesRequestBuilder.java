@@ -21,7 +21,7 @@ import microsoft.graph.rolemanagement.directory.roleeligibilityschedules.count.C
 import microsoft.graph.rolemanagement.directory.roleeligibilityschedules.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity. */
 public class RoleEligibilitySchedulesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

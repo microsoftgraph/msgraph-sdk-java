@@ -155,7 +155,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public OAuth2PermissionGrantItemRequestBuilderGetQueryParameters queryParameters = new OAuth2PermissionGrantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new oAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration() {

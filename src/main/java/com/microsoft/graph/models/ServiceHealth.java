@@ -21,6 +21,7 @@ public class ServiceHealth extends Entity implements Parsable {
      */
     public ServiceHealth() {
         super();
+        this.setOdataType("#microsoft.graph.serviceHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

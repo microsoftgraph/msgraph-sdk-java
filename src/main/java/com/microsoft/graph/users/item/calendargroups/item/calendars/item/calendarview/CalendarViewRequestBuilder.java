@@ -21,7 +21,7 @@ import microsoft.graph.users.item.calendargroups.item.calendars.item.calendarvie
 import microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.delta.DeltaRequestBuilder;
 /** Provides operations to manage the calendarView property of the microsoft.graph.calendar entity. */
 public class CalendarViewRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

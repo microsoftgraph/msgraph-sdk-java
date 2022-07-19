@@ -20,7 +20,7 @@ import microsoft.graph.models.SharedInsight;
 import microsoft.graph.models.SharedInsightCollectionResponse;
 /** Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity. */
 public class SharedRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

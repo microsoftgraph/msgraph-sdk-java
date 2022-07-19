@@ -313,7 +313,7 @@ public class SubscriptionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subscriptionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SubscriptionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscriptionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class SubscriptionItemRequestBuilder {
         @javax.annotation.Nullable
         public SubscriptionItemRequestBuilderGetQueryParameters queryParameters = new SubscriptionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new subscriptionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SubscriptionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscriptionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class SubscriptionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subscriptionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SubscriptionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubscriptionItemRequestBuilderPatchRequestConfiguration() {

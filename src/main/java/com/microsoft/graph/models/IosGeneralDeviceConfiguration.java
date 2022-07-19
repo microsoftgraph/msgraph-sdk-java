@@ -276,6 +276,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     public IosGeneralDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosGeneralDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

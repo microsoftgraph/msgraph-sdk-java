@@ -277,7 +277,7 @@ public class OnenoteSectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.onenote.sectionGroups.item.sections.item.pages.item collection
      * @param id Unique identifier of the item
-     * @return a onenotePageItemRequestBuilder
+     * @return a OnenotePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenotePageItemRequestBuilder pages(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class OnenoteSectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onenoteSectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnenoteSectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenoteSectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class OnenoteSectionItemRequestBuilder {
         @javax.annotation.Nullable
         public OnenoteSectionItemRequestBuilderGetQueryParameters queryParameters = new OnenoteSectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onenoteSectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnenoteSectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenoteSectionItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class OnenoteSectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onenoteSectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnenoteSectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenoteSectionItemRequestBuilderPatchRequestConfiguration() {

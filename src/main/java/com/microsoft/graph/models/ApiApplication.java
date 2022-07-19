@@ -17,6 +17,8 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _knownClientApplications;
     /** The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes. */
     private java.util.List<PermissionScope> _oauth2PermissionScopes;
+    /** The OdataType property */
+    private String _odataType;
     /** Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent. */
     private java.util.List<PreAuthorizedApplication> _preAuthorizedApplications;
     /** Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2 */
@@ -27,6 +29,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     public ApiApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.apiApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +64,11 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApiApplication currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("acceptMappedClaims", (n) -> { currentObject.setAcceptMappedClaims(n.getBooleanValue()); });
             this.put("knownClientApplications", (n) -> { currentObject.setKnownClientApplications(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("oauth2PermissionScopes", (n) -> { currentObject.setOauth2PermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("preAuthorizedApplications", (n) -> { currentObject.setPreAuthorizedApplications(n.getCollectionOfObjectValues(PreAuthorizedApplication::createFromDiscriminatorValue)); });
             this.put("requestedAccessTokenVersion", (n) -> { currentObject.setRequestedAccessTokenVersion(n.getIntegerValue()); });
         }};
@@ -84,6 +88,14 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
         return this._oauth2PermissionScopes;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
@@ -111,6 +123,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("acceptMappedClaims", this.getAcceptMappedClaims());
         writer.writeCollectionOfPrimitiveValues("knownClientApplications", this.getKnownClientApplications());
         writer.writeCollectionOfObjectValues("oauth2PermissionScopes", this.getOauth2PermissionScopes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("preAuthorizedApplications", this.getPreAuthorizedApplications());
         writer.writeIntegerValue("requestedAccessTokenVersion", this.getRequestedAccessTokenVersion());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      */
     public void setOauth2PermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
         this._oauth2PermissionScopes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.

@@ -307,7 +307,7 @@ public class AlertItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new alertItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AlertItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AlertItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AlertItemRequestBuilder {
         @javax.annotation.Nullable
         public AlertItemRequestBuilderGetQueryParameters queryParameters = new AlertItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new alertItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AlertItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AlertItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AlertItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new alertItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AlertItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AlertItemRequestBuilderPatchRequestConfiguration() {

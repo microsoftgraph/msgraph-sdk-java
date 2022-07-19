@@ -16,6 +16,7 @@ public class RestrictedSignIn extends SignIn implements Parsable {
      */
     public RestrictedSignIn() {
         super();
+        this.setOdataType("#microsoft.graph.restrictedSignIn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

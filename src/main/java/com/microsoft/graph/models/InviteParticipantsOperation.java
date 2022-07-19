@@ -16,6 +16,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      */
     public InviteParticipantsOperation() {
         super();
+        this.setOdataType("#microsoft.graph.inviteParticipantsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

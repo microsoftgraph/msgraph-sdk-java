@@ -36,6 +36,7 @@ public class SecureScore extends Entity implements Parsable {
      */
     public SecureScore() {
         super();
+        this.setOdataType("#microsoft.graph.secureScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

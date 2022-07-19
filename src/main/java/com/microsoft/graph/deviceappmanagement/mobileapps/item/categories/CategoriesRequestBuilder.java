@@ -19,7 +19,7 @@ import microsoft.graph.models.MobileAppCategoryCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.mobileApp entity. */
 public class CategoriesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

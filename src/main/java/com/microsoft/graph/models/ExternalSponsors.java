@@ -14,6 +14,7 @@ public class ExternalSponsors extends SubjectSet implements Parsable {
      */
     public ExternalSponsors() {
         super();
+        this.setOdataType("#microsoft.graph.externalSponsors");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -41,6 +41,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      */
     public WindowsUpdateForBusinessConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUpdateForBusinessConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

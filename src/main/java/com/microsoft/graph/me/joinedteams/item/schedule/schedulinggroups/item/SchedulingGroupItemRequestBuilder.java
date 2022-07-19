@@ -307,7 +307,7 @@ public class SchedulingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new schedulingGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SchedulingGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchedulingGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class SchedulingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public SchedulingGroupItemRequestBuilderGetQueryParameters queryParameters = new SchedulingGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new schedulingGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SchedulingGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchedulingGroupItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class SchedulingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new schedulingGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SchedulingGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchedulingGroupItemRequestBuilderPatchRequestConfiguration() {

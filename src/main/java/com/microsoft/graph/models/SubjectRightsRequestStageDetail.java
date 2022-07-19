@@ -13,6 +13,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     private Map<String, Object> _additionalData;
     /** Describes the error, if any, for the current stage. */
     private PublicError _error;
+    /** The OdataType property */
+    private String _odataType;
     /** The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
     private SubjectRightsRequestStage _stage;
     /** Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
@@ -23,6 +25,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      */
     public SubjectRightsRequestStageDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.subjectRightsRequestStageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestStageDetail currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
@@ -87,6 +99,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("stage", this.getStage());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      */
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.

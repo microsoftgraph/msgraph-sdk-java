@@ -11,6 +11,8 @@ import java.util.Objects;
 public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The postAttributeCollection property */
     private IdentityApiConnector _postAttributeCollection;
     /** The postFederationSignup property */
@@ -21,6 +23,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     public UserFlowApiConnectorConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userFlowApiConnectorConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserFlowApiConnectorConfiguration currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("postAttributeCollection", (n) -> { currentObject.setPostAttributeCollection(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
             this.put("postFederationSignup", (n) -> { currentObject.setPostFederationSignup(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the postAttributeCollection property value. The postAttributeCollection property
@@ -75,6 +87,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("postAttributeCollection", this.getPostAttributeCollection());
         writer.writeObjectValue("postFederationSignup", this.getPostFederationSignup());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the postAttributeCollection property value. The postAttributeCollection property

@@ -307,7 +307,7 @@ public class AudioRoutingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new audioRoutingGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AudioRoutingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public AudioRoutingGroupItemRequestBuilderGetQueryParameters queryParameters = new AudioRoutingGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new audioRoutingGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AudioRoutingGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AudioRoutingGroupItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AudioRoutingGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new audioRoutingGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration() {

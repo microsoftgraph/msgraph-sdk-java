@@ -66,7 +66,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.me.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a educationAssignmentItemRequestBuilder
+     * @return a EducationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -78,7 +78,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.me.classes.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.me.rubrics.item collection
      * @param id Unique identifier of the item
-     * @return a educationRubricItemRequestBuilder
+     * @return a EducationRubricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationRubricItemRequestBuilder rubrics(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.me.schools.item collection
      * @param id Unique identifier of the item
-     * @return a educationSchoolItemRequestBuilder
+     * @return a EducationSchoolItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.me.taughtClasses.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.me.taughtclasses.item.EducationClassItemRequestBuilder taughtClasses(@javax.annotation.Nonnull final String id) {

@@ -307,7 +307,7 @@ public class PermissionGrantConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PermissionGrantConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public PermissionGrantConditionSetItemRequestBuilderGetQueryParameters queryParameters = new PermissionGrantConditionSetItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new permissionGrantConditionSetItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PermissionGrantConditionSetItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration() {

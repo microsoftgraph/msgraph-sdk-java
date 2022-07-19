@@ -307,7 +307,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new activityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public ActivityBasedTimeoutPolicyItemRequestBuilderGetQueryParameters queryParameters = new ActivityBasedTimeoutPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new activityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new activityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration() {

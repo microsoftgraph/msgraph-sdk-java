@@ -15,6 +15,8 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     private String _destinationServiceIp;
     /** Cloud application/service name (for example 'Salesforce', 'DropBox', etc.). */
     private String _destinationServiceName;
+    /** The OdataType property */
+    private String _odataType;
     /** Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage. */
     private String _riskScore;
     /**
@@ -23,6 +25,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     public CloudAppSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.cloudAppSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,20 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudAppSecurityState currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("destinationServiceIp", (n) -> { currentObject.setDestinationServiceIp(n.getStringValue()); });
             this.put("destinationServiceName", (n) -> { currentObject.setDestinationServiceName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the riskScore property value. Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
@@ -88,6 +100,7 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("destinationServiceIp", this.getDestinationServiceIp());
         writer.writeStringValue("destinationServiceName", this.getDestinationServiceName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setDestinationServiceName(@javax.annotation.Nullable final String value) {
         this._destinationServiceName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.

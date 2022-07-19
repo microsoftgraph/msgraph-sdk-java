@@ -16,6 +16,7 @@ public class EducationFileResource extends EducationResource implements Parsable
      */
     public EducationFileResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationFileResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

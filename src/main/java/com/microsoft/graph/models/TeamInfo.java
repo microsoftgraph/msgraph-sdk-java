@@ -21,7 +21,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     public TeamInfo() {
         super();
-        this.setType("#microsoft.graph.teamInfo");
+        this.setOdataType("#microsoft.graph.teamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

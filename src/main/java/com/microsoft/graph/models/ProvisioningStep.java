@@ -17,6 +17,8 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     private DetailsInfo _details;
     /** Name of the step. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue. */
     private ProvisioningStepType _provisioningStepType;
     /** Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue. */
@@ -27,6 +29,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     public ProvisioningStep() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.provisioningStep");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,10 +72,11 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningStep currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStepType", (n) -> { currentObject.setProvisioningStepType(n.getEnumValue(ProvisioningStepType.class)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ProvisioningResult.class)); });
         }};
@@ -84,6 +88,14 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
@@ -111,6 +123,7 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeObjectValue("details", this.getDetails());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("provisioningStepType", this.getProvisioningStepType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ProvisioningStep implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.

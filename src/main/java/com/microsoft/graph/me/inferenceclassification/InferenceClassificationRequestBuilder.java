@@ -253,7 +253,7 @@ public class InferenceClassificationRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.inferenceClassification.overrides.item collection
      * @param id Unique identifier of the item
-     * @return a inferenceClassificationOverrideItemRequestBuilder
+     * @return a InferenceClassificationOverrideItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InferenceClassificationOverrideItemRequestBuilder overrides(@javax.annotation.Nonnull final String id) {

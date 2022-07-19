@@ -19,6 +19,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     public PrintServiceEndpoint() {
         super();
+        this.setOdataType("#microsoft.graph.printServiceEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

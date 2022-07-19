@@ -14,6 +14,7 @@ public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsa
      */
     public ChatMessageReactionIdentitySet() {
         super();
+        this.setOdataType("#microsoft.graph.chatMessageReactionIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

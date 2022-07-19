@@ -48,6 +48,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     public MacOSCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.macOSCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

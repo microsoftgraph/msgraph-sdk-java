@@ -313,7 +313,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new windowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new windowsHelloForBusinessAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

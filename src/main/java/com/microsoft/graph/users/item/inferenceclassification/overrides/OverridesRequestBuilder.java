@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.inferenceclassification.overrides.count.CountRequestBuilder;
 /** Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity. */
 public class OverridesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

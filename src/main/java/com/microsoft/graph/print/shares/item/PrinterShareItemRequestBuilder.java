@@ -47,7 +47,7 @@ public class PrinterShareItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.shares.item.allowedGroups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder allowedGroups(@javax.annotation.Nonnull final String id) {
@@ -59,7 +59,7 @@ public class PrinterShareItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.shares.item.allowedUsers.item collection
      * @param id Unique identifier of the item
-     * @return a userItemRequestBuilder
+     * @return a UserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserItemRequestBuilder allowedUsers(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class PrinterShareItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printerShareItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterShareItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterShareItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class PrinterShareItemRequestBuilder {
         @javax.annotation.Nullable
         public PrinterShareItemRequestBuilderGetQueryParameters queryParameters = new PrinterShareItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printerShareItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterShareItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterShareItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class PrinterShareItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printerShareItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrinterShareItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrinterShareItemRequestBuilderPatchRequestConfiguration() {

@@ -319,7 +319,7 @@ public class SharedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedInsightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SharedInsightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedInsightItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class SharedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public SharedInsightItemRequestBuilderGetQueryParameters queryParameters = new SharedInsightItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sharedInsightItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SharedInsightItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedInsightItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class SharedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedInsightItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SharedInsightItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedInsightItemRequestBuilderPatchRequestConfiguration() {

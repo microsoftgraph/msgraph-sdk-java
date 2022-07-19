@@ -13,6 +13,8 @@ public class Quota implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Total space consumed by files in the recycle bin, in bytes. Read-only. */
     private Long _deleted;
+    /** The OdataType property */
+    private String _odataType;
     /** Total space remaining before reaching the quota limit, in bytes. Read-only. */
     private Long _remaining;
     /** Enumeration value that indicates the state of the storage space. Read-only. */
@@ -29,6 +31,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     public Quota() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.quota");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,14 +66,23 @@ public class Quota implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Quota currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("deleted", (n) -> { currentObject.setDeleted(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remaining", (n) -> { currentObject.setRemaining(n.getLongValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
             this.put("storagePlanInformation", (n) -> { currentObject.setStoragePlanInformation(n.getObjectValue(StoragePlanInformation::createFromDiscriminatorValue)); });
             this.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
             this.put("used", (n) -> { currentObject.setUsed(n.getLongValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -120,6 +132,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("deleted", this.getDeleted());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("remaining", this.getRemaining());
         writer.writeStringValue("state", this.getState());
         writer.writeObjectValue("storagePlanInformation", this.getStoragePlanInformation());
@@ -142,6 +155,14 @@ public class Quota implements AdditionalDataHolder, Parsable {
      */
     public void setDeleted(@javax.annotation.Nullable final Long value) {
         this._deleted = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.

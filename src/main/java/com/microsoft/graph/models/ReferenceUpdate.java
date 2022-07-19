@@ -11,10 +11,10 @@ import java.util.Objects;
 public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The id property */
-    private String _id;
-    /** The type property */
-    private String _type;
+    /** The OdataId property */
+    private String _odataId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new ReferenceUpdate and sets the default values.
      * @return a void
@@ -48,25 +48,25 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceUpdate currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.id property value. The id property
+     * Gets the @odata.id property value. The OdataId property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getId() {
-        return this._id;
+    public String getOdataId() {
+        return this._odataId;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -75,8 +75,8 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.id", this.getId());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.id", this.getOdataId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -88,19 +88,19 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.id property value. The id property
-     * @param value Value to set for the id property.
+     * Sets the @odata.id property value. The OdataId property
+     * @param value Value to set for the OdataId property.
      * @return a void
      */
-    public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+    public void setOdataId(@javax.annotation.Nullable final String value) {
+        this._odataId = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

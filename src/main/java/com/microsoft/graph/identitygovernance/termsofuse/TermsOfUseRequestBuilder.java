@@ -41,7 +41,7 @@ public class TermsOfUseRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreementAcceptances.item collection
      * @param id Unique identifier of the item
-     * @return a agreementAcceptanceItemRequestBuilder
+     * @return a AgreementAcceptanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
@@ -53,7 +53,7 @@ public class TermsOfUseRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreements.item collection
      * @param id Unique identifier of the item
-     * @return a agreementItemRequestBuilder
+     * @return a AgreementItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementItemRequestBuilder agreements(@javax.annotation.Nonnull final String id) {

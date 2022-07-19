@@ -18,6 +18,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     public ClientUserAgent() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.clientUserAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

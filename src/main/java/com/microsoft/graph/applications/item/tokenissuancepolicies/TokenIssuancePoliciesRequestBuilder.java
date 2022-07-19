@@ -20,14 +20,14 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
 /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity. */
 public class TokenIssuancePoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

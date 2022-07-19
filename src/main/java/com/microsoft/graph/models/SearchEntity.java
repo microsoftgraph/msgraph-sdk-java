@@ -14,6 +14,7 @@ public class SearchEntity extends Entity implements Parsable {
      */
     public SearchEntity() {
         super();
+        this.setOdataType("#microsoft.graph.searchEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

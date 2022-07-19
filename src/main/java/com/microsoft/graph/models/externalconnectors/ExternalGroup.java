@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalGroup extends Entity implements Parsable {
     /** The description of the external group. Optional. */
     private String _description;
@@ -22,6 +22,7 @@ public class ExternalGroup extends Entity implements Parsable {
      */
     public ExternalGroup() {
         super();
+        this.setOdataType("#microsoft.graph.externalConnectors.externalGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

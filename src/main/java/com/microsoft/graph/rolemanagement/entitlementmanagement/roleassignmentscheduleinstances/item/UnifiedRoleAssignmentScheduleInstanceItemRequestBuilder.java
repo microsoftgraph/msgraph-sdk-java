@@ -313,7 +313,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration() {

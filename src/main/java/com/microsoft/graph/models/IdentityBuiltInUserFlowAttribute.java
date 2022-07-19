@@ -14,6 +14,7 @@ public class IdentityBuiltInUserFlowAttribute extends IdentityUserFlowAttribute 
      */
     public IdentityBuiltInUserFlowAttribute() {
         super();
+        this.setOdataType("#microsoft.graph.identityBuiltInUserFlowAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

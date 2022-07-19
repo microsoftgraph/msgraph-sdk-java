@@ -22,6 +22,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      */
     public DirectoryObjectPartnerReference() {
         super();
+        this.setOdataType("#microsoft.graph.directoryObjectPartnerReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

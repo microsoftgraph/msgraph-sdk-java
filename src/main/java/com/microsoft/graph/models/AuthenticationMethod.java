@@ -15,7 +15,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
      */
     public AuthenticationMethod() {
         super();
-        this.setType("#microsoft.graph.authenticationMethod");
+        this.setOdataType("#microsoft.graph.authenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,9 +29,12 @@ public class AuthenticationMethod extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.emailAuthenticationMethod": return new EmailAuthenticationMethod();
                 case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
                 case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
+                case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
+                case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
             }

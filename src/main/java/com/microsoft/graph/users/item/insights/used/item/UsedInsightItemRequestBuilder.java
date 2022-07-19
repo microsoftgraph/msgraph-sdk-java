@@ -313,7 +313,7 @@ public class UsedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new usedInsightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UsedInsightItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsedInsightItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UsedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public UsedInsightItemRequestBuilderGetQueryParameters queryParameters = new UsedInsightItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new usedInsightItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UsedInsightItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsedInsightItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UsedInsightItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new usedInsightItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UsedInsightItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UsedInsightItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.ExtensionPropertyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the extensionProperties property of the microsoft.graph.application entity. */
 public class ExtensionPropertiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

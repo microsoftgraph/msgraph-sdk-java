@@ -18,6 +18,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      */
     public AttributeRuleMembers() {
         super();
+        this.setOdataType("#microsoft.graph.attributeRuleMembers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -11,6 +11,8 @@ import java.util.Objects;
 public class UserFeedback implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The rating property */
     private UserFeedbackRating _rating;
     /** The feedback text provided by the user of this endpoint for the session. */
@@ -23,6 +25,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     public UserFeedback() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.userFeedback");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,11 +52,20 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserFeedback currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rating", (n) -> { currentObject.setRating(n.getEnumValue(UserFeedbackRating.class)); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
             this.put("tokens", (n) -> { currentObject.setTokens(n.getObjectValue(FeedbackTokenSet::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the rating property value. The rating property
@@ -86,6 +98,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("rating", this.getRating());
         writer.writeStringValue("text", this.getText());
         writer.writeObjectValue("tokens", this.getTokens());
@@ -98,6 +111,14 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the rating property value. The rating property

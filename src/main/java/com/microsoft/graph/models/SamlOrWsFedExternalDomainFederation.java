@@ -16,6 +16,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     public SamlOrWsFedExternalDomainFederation() {
         super();
+        this.setOdataType("#microsoft.graph.samlOrWsFedExternalDomainFederation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

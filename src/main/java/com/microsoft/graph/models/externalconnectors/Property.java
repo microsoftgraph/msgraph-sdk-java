@@ -25,6 +25,8 @@ public class Property implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _labels;
     /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The type property */
     private PropertyType _type;
     /**
@@ -33,6 +35,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     public Property() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.externalConnectors.property");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +70,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Property currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
             this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
@@ -75,6 +78,7 @@ public class Property implements AdditionalDataHolder, Parsable {
             this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
             this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PropertyType.class)); });
         }};
     }
@@ -127,6 +131,14 @@ public class Property implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the type property value. The type property
      * @return a propertyType
      */
@@ -148,6 +160,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isSearchable", this.getIsSearchable());
         writer.writeCollectionOfPrimitiveValues("labels", this.getLabels());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,6 +227,14 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The type property

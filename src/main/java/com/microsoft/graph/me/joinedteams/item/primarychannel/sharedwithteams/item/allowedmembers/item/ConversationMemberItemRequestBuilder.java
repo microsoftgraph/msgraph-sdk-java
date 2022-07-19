@@ -155,7 +155,7 @@ public class ConversationMemberItemRequestBuilder {
         @javax.annotation.Nullable
         public ConversationMemberItemRequestBuilderGetQueryParameters queryParameters = new ConversationMemberItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conversationMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConversationMemberItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConversationMemberItemRequestBuilderGetRequestConfiguration() {

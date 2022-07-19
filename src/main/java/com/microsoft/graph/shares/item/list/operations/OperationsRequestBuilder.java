@@ -20,7 +20,7 @@ import microsoft.graph.models.RichLongRunningOperationCollectionResponse;
 import microsoft.graph.shares.item.list.operations.count.CountRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.list entity. */
 public class OperationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -40,6 +40,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     private Boolean _mediaBypassEnabled;
     /** The datacenter used for media path in non-bypass call. */
     private String _mediaPathLocation;
+    /** The OdataType property */
+    private String _odataType;
     /** The datacenter used for signaling for both bypass and non-bypass calls. */
     private String _signalingLocation;
     /** Call start time.For failed and unanswered calls, this can be equal to invite or failure time. */
@@ -60,6 +62,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     public DirectRoutingLogRow() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.directRoutingLogRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -150,7 +153,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectRoutingLogRow currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<>(22) {{
             this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
             this.put("callEndSubReason", (n) -> { currentObject.setCallEndSubReason(n.getIntegerValue()); });
             this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });
@@ -165,6 +168,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
             this.put("inviteDateTime", (n) -> { currentObject.setInviteDateTime(n.getOffsetDateTimeValue()); });
             this.put("mediaBypassEnabled", (n) -> { currentObject.setMediaBypassEnabled(n.getBooleanValue()); });
             this.put("mediaPathLocation", (n) -> { currentObject.setMediaPathLocation(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("signalingLocation", (n) -> { currentObject.setSignalingLocation(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("successfulCall", (n) -> { currentObject.setSuccessfulCall(n.getBooleanValue()); });
@@ -221,6 +225,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMediaPathLocation() {
         return this._mediaPathLocation;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
@@ -299,6 +311,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("inviteDateTime", this.getInviteDateTime());
         writer.writeBooleanValue("mediaBypassEnabled", this.getMediaBypassEnabled());
         writer.writeStringValue("mediaPathLocation", this.getMediaPathLocation());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("signalingLocation", this.getSignalingLocation());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeBooleanValue("successfulCall", this.getSuccessfulCall());
@@ -427,6 +440,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     public void setMediaPathLocation(@javax.annotation.Nullable final String value) {
         this._mediaPathLocation = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.

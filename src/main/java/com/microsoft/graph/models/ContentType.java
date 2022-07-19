@@ -53,6 +53,7 @@ public class ContentType extends Entity implements Parsable {
      */
     public ContentType() {
         super();
+        this.setOdataType("#microsoft.graph.contentType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

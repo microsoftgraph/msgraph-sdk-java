@@ -307,7 +307,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public TermsAndConditionsAssignmentItemRequestBuilderGetQueryParameters queryParameters = new TermsAndConditionsAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new termsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new termsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration() {

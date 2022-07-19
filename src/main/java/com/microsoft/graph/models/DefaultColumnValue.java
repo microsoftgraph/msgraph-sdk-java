@@ -13,6 +13,8 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The formula used to compute the default value for this column. */
     private String _formula;
+    /** The OdataType property */
+    private String _odataType;
     /** The direct value to use as the default value for this column. */
     private String _value;
     /**
@@ -21,6 +23,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
      */
     public DefaultColumnValue() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.defaultColumnValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultColumnValue currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getFormula() {
         return this._formula;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the value property value. The direct value to use as the default value for this column.
@@ -76,6 +88,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("formula", this.getFormula());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
      */
     public void setFormula(@javax.annotation.Nullable final String value) {
         this._formula = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the value property value. The direct value to use as the default value for this column.

@@ -19,6 +19,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     public WorkbookCommentReply() {
         super();
+        this.setOdataType("#microsoft.graph.workbookCommentReply");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

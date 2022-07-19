@@ -68,7 +68,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item.columns.item collection
      * @param id Unique identifier of the item
-     * @return a columnDefinitionItemRequestBuilder
+     * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
@@ -107,7 +107,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item.contentTypes.item collection
      * @param id Unique identifier of the item
-     * @return a contentTypeItemRequestBuilder
+     * @return a ContentTypeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContentTypeItemRequestBuilder contentTypes(@javax.annotation.Nonnull final String id) {
@@ -311,7 +311,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a listItemItemRequestBuilder
+     * @return a ListItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ListItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -323,7 +323,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a richLongRunningOperationItemRequestBuilder
+     * @return a RichLongRunningOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RichLongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -390,7 +390,7 @@ public class ListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.lists.item.subscriptions.item collection
      * @param id Unique identifier of the item
-     * @return a subscriptionItemRequestBuilder
+     * @return a SubscriptionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SubscriptionItemRequestBuilder subscriptions(@javax.annotation.Nonnull final String id) {
@@ -408,7 +408,7 @@ public class ListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemRequestBuilderDeleteRequestConfiguration() {
@@ -437,7 +437,7 @@ public class ListItemRequestBuilder {
         @javax.annotation.Nullable
         public ListItemRequestBuilderGetQueryParameters queryParameters = new ListItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new listItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemRequestBuilderGetRequestConfiguration() {
@@ -452,7 +452,7 @@ public class ListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemRequestBuilderPatchRequestConfiguration() {

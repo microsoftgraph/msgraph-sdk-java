@@ -20,6 +20,7 @@ public class MobileAppCategory extends Entity implements Parsable {
      */
     public MobileAppCategory() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -11,6 +11,8 @@ import java.util.Objects;
 public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The recurrence property */
     private PatternedRecurrence _recurrence;
     /** A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required. */
@@ -21,6 +23,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      */
     public AccessReviewHistoryScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessReviewHistoryScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewHistoryScheduleSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("reportRange", (n) -> { currentObject.setReportRange(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrence property value. The recurrence property
@@ -75,6 +87,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeStringValue("reportRange", this.getReportRange());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrence property value. The recurrence property

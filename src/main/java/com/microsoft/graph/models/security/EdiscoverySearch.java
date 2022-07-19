@@ -26,6 +26,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      */
     public EdiscoverySearch() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoverySearch");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

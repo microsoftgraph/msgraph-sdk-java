@@ -34,7 +34,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.primaryChannel.sharedWithTeams.item.allowedMembers.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder allowedMembers(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters queryParameters = new SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration() {

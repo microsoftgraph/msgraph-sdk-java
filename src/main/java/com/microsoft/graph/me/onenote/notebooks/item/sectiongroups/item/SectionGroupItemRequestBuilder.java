@@ -326,7 +326,7 @@ public class SectionGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item.sectionGroups.item.sectionGroups.item collection
      * @param id Unique identifier of the item
-     * @return a sectionGroupItemRequestBuilder
+     * @return a SectionGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SectionGroupItemRequestBuilder sectionGroups(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class SectionGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item.sectionGroups.item.sections.item collection
      * @param id Unique identifier of the item
-     * @return a onenoteSectionItemRequestBuilder
+     * @return a OnenoteSectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnenoteSectionItemRequestBuilder sections(@javax.annotation.Nonnull final String id) {
@@ -356,7 +356,7 @@ public class SectionGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sectionGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SectionGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SectionGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -385,7 +385,7 @@ public class SectionGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public SectionGroupItemRequestBuilderGetQueryParameters queryParameters = new SectionGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sectionGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SectionGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SectionGroupItemRequestBuilderGetRequestConfiguration() {
@@ -400,7 +400,7 @@ public class SectionGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sectionGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SectionGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SectionGroupItemRequestBuilderPatchRequestConfiguration() {

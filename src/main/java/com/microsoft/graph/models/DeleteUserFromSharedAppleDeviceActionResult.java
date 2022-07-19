@@ -16,6 +16,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      */
     public DeleteUserFromSharedAppleDeviceActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.deleteUserFromSharedAppleDeviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

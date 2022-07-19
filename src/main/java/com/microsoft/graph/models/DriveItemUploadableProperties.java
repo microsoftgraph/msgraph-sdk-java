@@ -19,12 +19,15 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     private FileSystemInfo _fileSystemInfo;
     /** The name of the item (filename and extension). Read-write. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new driveItemUploadableProperties and sets the default values.
      * @return a void
      */
     public DriveItemUploadableProperties() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.driveItemUploadableProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,11 +62,12 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveItemUploadableProperties currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
             this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -91,6 +95,14 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -101,6 +113,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
         writer.writeLongValue("fileSize", this.getFileSize());
         writer.writeObjectValue("fileSystemInfo", this.getFileSystemInfo());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -17,12 +17,15 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The id of the user who shared the item. */
     private String _id;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new insightIdentity and sets the default values.
      * @return a void
      */
     public InsightIdentity() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.insightIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InsightIdentity currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("address", this.getAddress());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class InsightIdentity implements AdditionalDataHolder, Parsable {
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

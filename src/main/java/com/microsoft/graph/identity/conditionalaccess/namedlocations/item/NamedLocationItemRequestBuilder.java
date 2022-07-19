@@ -307,7 +307,7 @@ public class NamedLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new namedLocationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new NamedLocationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public NamedLocationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class NamedLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public NamedLocationItemRequestBuilderGetQueryParameters queryParameters = new NamedLocationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new namedLocationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new NamedLocationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public NamedLocationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class NamedLocationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new namedLocationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new NamedLocationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public NamedLocationItemRequestBuilderPatchRequestConfiguration() {

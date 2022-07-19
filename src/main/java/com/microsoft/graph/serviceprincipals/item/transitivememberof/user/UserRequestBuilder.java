@@ -19,7 +19,7 @@ import microsoft.graph.models.UserCollectionResponse;
 import microsoft.graph.serviceprincipals.item.transitivememberof.user.count.CountRequestBuilder;
 /** Casts the previous resource to user. */
 public class UserRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

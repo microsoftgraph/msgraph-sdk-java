@@ -253,7 +253,7 @@ public class DetectedAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.detectedApps.item.managedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceItemRequestBuilder
+     * @return a ManagedDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DetectedAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new detectedAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DetectedAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DetectedAppItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DetectedAppItemRequestBuilder {
         @javax.annotation.Nullable
         public DetectedAppItemRequestBuilderGetQueryParameters queryParameters = new DetectedAppItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new detectedAppItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DetectedAppItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DetectedAppItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DetectedAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new detectedAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DetectedAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DetectedAppItemRequestBuilderPatchRequestConfiguration() {

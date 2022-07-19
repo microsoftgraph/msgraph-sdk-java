@@ -26,6 +26,8 @@ public class Photo implements AdditionalDataHolder, Parsable {
     private Double _focalLength;
     /** The ISO value from the camera. Read-only. */
     private Integer _iso;
+    /** The OdataType property */
+    private String _odataType;
     /** The orientation value from the camera. Writable on OneDrive Personal. */
     private Integer _orientation;
     /** The date and time the photo was taken in UTC time. Read-only. */
@@ -36,6 +38,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     public Photo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.photo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,7 +97,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Photo currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("cameraMake", (n) -> { currentObject.setCameraMake(n.getStringValue()); });
             this.put("cameraModel", (n) -> { currentObject.setCameraModel(n.getStringValue()); });
             this.put("exposureDenominator", (n) -> { currentObject.setExposureDenominator(n.getDoubleValue()); });
@@ -102,6 +105,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
             this.put("fNumber", (n) -> { currentObject.setFNumber(n.getDoubleValue()); });
             this.put("focalLength", (n) -> { currentObject.setFocalLength(n.getDoubleValue()); });
             this.put("iso", (n) -> { currentObject.setIso(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("orientation", (n) -> { currentObject.setOrientation(n.getIntegerValue()); });
             this.put("takenDateTime", (n) -> { currentObject.setTakenDateTime(n.getOffsetDateTimeValue()); });
         }};
@@ -129,6 +133,14 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getIso() {
         return this._iso;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
@@ -160,6 +172,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("fNumber", this.getFNumber());
         writer.writeDoubleValue("focalLength", this.getFocalLength());
         writer.writeIntegerValue("iso", this.getIso());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("orientation", this.getOrientation());
         writer.writeOffsetDateTimeValue("takenDateTime", this.getTakenDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -227,6 +240,14 @@ public class Photo implements AdditionalDataHolder, Parsable {
      */
     public void setIso(@javax.annotation.Nullable final Integer value) {
         this._iso = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.

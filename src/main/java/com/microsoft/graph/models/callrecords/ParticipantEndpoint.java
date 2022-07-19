@@ -19,6 +19,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     public ParticipantEndpoint() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.participantEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

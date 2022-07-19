@@ -307,7 +307,7 @@ public class OutlookCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookCategoryItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class OutlookCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public OutlookCategoryItemRequestBuilderGetQueryParameters queryParameters = new OutlookCategoryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new outlookCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookCategoryItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class OutlookCategoryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new outlookCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OutlookCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OutlookCategoryItemRequestBuilderPatchRequestConfiguration() {

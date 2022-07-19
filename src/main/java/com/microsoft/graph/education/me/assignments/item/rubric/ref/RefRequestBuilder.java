@@ -305,7 +305,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new refRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderDeleteRequestConfiguration() {
@@ -320,7 +320,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new refRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderGetRequestConfiguration() {
@@ -335,7 +335,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new refRequestBuilderPutRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderPutRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderPutRequestConfiguration() {

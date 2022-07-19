@@ -18,6 +18,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     public AccessReviewSet() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

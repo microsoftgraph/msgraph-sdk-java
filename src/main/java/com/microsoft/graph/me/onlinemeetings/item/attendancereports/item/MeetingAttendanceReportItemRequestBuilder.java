@@ -34,7 +34,7 @@ public class MeetingAttendanceReportItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onlineMeetings.item.attendanceReports.item.attendanceRecords.item collection
      * @param id Unique identifier of the item
-     * @return a attendanceRecordItemRequestBuilder
+     * @return a AttendanceRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttendanceRecordItemRequestBuilder attendanceRecords(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class MeetingAttendanceReportItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new meetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class MeetingAttendanceReportItemRequestBuilder {
         @javax.annotation.Nullable
         public MeetingAttendanceReportItemRequestBuilderGetQueryParameters queryParameters = new MeetingAttendanceReportItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new meetingAttendanceReportItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingAttendanceReportItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class MeetingAttendanceReportItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new meetingAttendanceReportItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration() {

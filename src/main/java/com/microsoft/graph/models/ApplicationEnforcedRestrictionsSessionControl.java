@@ -14,6 +14,7 @@ public class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAc
      */
     public ApplicationEnforcedRestrictionsSessionControl() {
         super();
+        this.setOdataType("#microsoft.graph.applicationEnforcedRestrictionsSessionControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

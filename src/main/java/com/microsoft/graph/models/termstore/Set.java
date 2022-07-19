@@ -33,6 +33,7 @@ public class Set extends Entity implements Parsable {
      */
     public Set() {
         super();
+        this.setOdataType("#microsoft.graph.termStore.set");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

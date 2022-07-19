@@ -144,7 +144,7 @@ public class AuditLogsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.auditLogs.directoryAudits.item collection
      * @param id Unique identifier of the item
-     * @return a directoryAuditItemRequestBuilder
+     * @return a DirectoryAuditItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryAuditItemRequestBuilder directoryAudits(@javax.annotation.Nonnull final String id) {
@@ -262,7 +262,7 @@ public class AuditLogsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.auditLogs.provisioning.item collection
      * @param id Unique identifier of the item
-     * @return a provisioningObjectSummaryItemRequestBuilder
+     * @return a ProvisioningObjectSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProvisioningObjectSummaryItemRequestBuilder provisioning(@javax.annotation.Nonnull final String id) {
@@ -274,7 +274,7 @@ public class AuditLogsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.auditLogs.restrictedSignIns.item collection
      * @param id Unique identifier of the item
-     * @return a restrictedSignInItemRequestBuilder
+     * @return a RestrictedSignInItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public RestrictedSignInItemRequestBuilder restrictedSignIns(@javax.annotation.Nonnull final String id) {
@@ -286,7 +286,7 @@ public class AuditLogsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.auditLogs.signIns.item collection
      * @param id Unique identifier of the item
-     * @return a signInItemRequestBuilder
+     * @return a SignInItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SignInItemRequestBuilder signIns(@javax.annotation.Nonnull final String id) {

@@ -307,7 +307,7 @@ public class ApprovalStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalStageItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ApprovalStageItemRequestBuilder {
         @javax.annotation.Nullable
         public ApprovalStageItemRequestBuilderGetQueryParameters queryParameters = new ApprovalStageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new approvalStageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalStageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalStageItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ApprovalStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new approvalStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ApprovalStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ApprovalStageItemRequestBuilderPatchRequestConfiguration() {
