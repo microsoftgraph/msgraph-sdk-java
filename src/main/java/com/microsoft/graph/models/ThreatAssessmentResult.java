@@ -22,6 +22,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
      */
     public ThreatAssessmentResult() {
         super();
+        this.setOdataType("#microsoft.graph.threatAssessmentResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

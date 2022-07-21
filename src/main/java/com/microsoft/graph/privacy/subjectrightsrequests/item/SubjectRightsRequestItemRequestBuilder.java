@@ -277,7 +277,7 @@ public class SubjectRightsRequestItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.privacy.subjectRightsRequests.item.notes.item collection
      * @param id Unique identifier of the item
-     * @return a authoredNoteItemRequestBuilder
+     * @return a AuthoredNoteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuthoredNoteItemRequestBuilder notes(@javax.annotation.Nonnull final String id) {
@@ -350,7 +350,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subjectRightsRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SubjectRightsRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubjectRightsRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -379,7 +379,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public SubjectRightsRequestItemRequestBuilderGetQueryParameters queryParameters = new SubjectRightsRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new subjectRightsRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SubjectRightsRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubjectRightsRequestItemRequestBuilderGetRequestConfiguration() {
@@ -394,7 +394,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new subjectRightsRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration() {

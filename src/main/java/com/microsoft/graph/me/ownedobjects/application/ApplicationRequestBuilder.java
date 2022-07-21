@@ -19,7 +19,7 @@ import microsoft.graph.models.ApplicationCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to application. */
 public class ApplicationRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

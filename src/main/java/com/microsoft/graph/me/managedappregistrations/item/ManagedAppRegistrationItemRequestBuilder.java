@@ -155,7 +155,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedAppRegistrationItemRequestBuilderGetQueryParameters queryParameters = new ManagedAppRegistrationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedAppRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration() {

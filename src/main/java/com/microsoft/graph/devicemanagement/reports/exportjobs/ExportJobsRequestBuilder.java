@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceManagementExportJobCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity. */
 public class ExportJobsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

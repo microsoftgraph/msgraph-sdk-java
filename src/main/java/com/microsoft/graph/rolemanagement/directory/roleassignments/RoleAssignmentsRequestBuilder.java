@@ -20,7 +20,7 @@ import microsoft.graph.models.UnifiedRoleAssignmentCollectionResponse;
 import microsoft.graph.rolemanagement.directory.roleassignments.count.CountRequestBuilder;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
 public class RoleAssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -307,7 +307,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public TokenLifetimePolicyItemRequestBuilderGetQueryParameters queryParameters = new TokenLifetimePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tokenLifetimePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration() {

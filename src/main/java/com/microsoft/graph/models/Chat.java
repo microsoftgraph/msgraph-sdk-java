@@ -38,6 +38,7 @@ public class Chat extends Entity implements Parsable {
      */
     public Chat() {
         super();
+        this.setOdataType("#microsoft.graph.chat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

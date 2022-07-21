@@ -307,7 +307,7 @@ public class RiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskDetectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RiskDetectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskDetectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public RiskDetectionItemRequestBuilderGetQueryParameters queryParameters = new RiskDetectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new riskDetectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RiskDetectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskDetectionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RiskDetectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new riskDetectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RiskDetectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RiskDetectionItemRequestBuilderPatchRequestConfiguration() {

@@ -15,6 +15,8 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     private FileHash _fileHash;
     /** File name (without path). */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** Full file path of the file/imageFile. */
     private String _path;
     /** Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage. */
@@ -25,6 +27,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      */
     public FileSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.fileSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,9 +54,10 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileSecurityState currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("fileHash", (n) -> { currentObject.setFileHash(n.getObjectValue(FileHash::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
             this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
         }};
@@ -73,6 +77,14 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the path property value. Full file path of the file/imageFile.
@@ -99,6 +111,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("fileHash", this.getFileHash());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("path", this.getPath());
         writer.writeStringValue("riskScore", this.getRiskScore());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the path property value. Full file path of the file/imageFile.

@@ -307,7 +307,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new telecomExpenseManagementPartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TelecomExpenseManagementPartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TelecomExpenseManagementPartnerItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public TelecomExpenseManagementPartnerItemRequestBuilderGetQueryParameters queryParameters = new TelecomExpenseManagementPartnerItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new telecomExpenseManagementPartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TelecomExpenseManagementPartnerItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TelecomExpenseManagementPartnerItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new telecomExpenseManagementPartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TelecomExpenseManagementPartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TelecomExpenseManagementPartnerItemRequestBuilderPatchRequestConfiguration() {

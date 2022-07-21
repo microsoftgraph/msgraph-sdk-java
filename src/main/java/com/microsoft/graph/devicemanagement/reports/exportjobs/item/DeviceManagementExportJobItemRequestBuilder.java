@@ -307,7 +307,7 @@ public class DeviceManagementExportJobItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementExportJobItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementExportJobItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementExportJobItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementExportJobItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementExportJobItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExportJobItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration() {

@@ -307,7 +307,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public ConditionalAccessPolicyItemRequestBuilderGetQueryParameters queryParameters = new ConditionalAccessPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new conditionalAccessPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new conditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration() {

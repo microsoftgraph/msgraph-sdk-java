@@ -307,7 +307,7 @@ public class TeamsTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TeamsTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamsTemplateItemRequestBuilderGetQueryParameters queryParameters = new TeamsTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamsTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TeamsTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsTemplateItemRequestBuilderPatchRequestConfiguration() {

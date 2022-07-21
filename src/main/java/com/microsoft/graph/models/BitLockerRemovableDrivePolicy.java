@@ -16,6 +16,8 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     private Boolean _blockCrossOrganizationWriteAccess;
     /** Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256. */
     private BitLockerEncryptionMethod _encryptionMethod;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect. */
     private Boolean _requireEncryptionForWriteAccess;
     /**
@@ -24,6 +26,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bitLockerRemovableDrivePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerRemovableDrivePolicy currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("blockCrossOrganizationWriteAccess", (n) -> { currentObject.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("requireEncryptionForWriteAccess", (n) -> { currentObject.setRequireEncryptionForWriteAccess(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
@@ -89,6 +101,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("blockCrossOrganizationWriteAccess", this.getBlockCrossOrganizationWriteAccess());
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("requireEncryptionForWriteAccess", this.getRequireEncryptionForWriteAccess());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      */
     public void setEncryptionMethod(@javax.annotation.Nullable final BitLockerEncryptionMethod value) {
         this._encryptionMethod = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.

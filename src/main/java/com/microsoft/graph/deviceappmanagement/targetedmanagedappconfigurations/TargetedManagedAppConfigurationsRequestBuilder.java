@@ -20,7 +20,7 @@ import microsoft.graph.models.TargetedManagedAppConfiguration;
 import microsoft.graph.models.TargetedManagedAppConfigurationCollectionResponse;
 /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class TargetedManagedAppConfigurationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

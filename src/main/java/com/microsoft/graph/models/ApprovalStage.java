@@ -30,6 +30,7 @@ public class ApprovalStage extends Entity implements Parsable {
      */
     public ApprovalStage() {
         super();
+        this.setOdataType("#microsoft.graph.approvalStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

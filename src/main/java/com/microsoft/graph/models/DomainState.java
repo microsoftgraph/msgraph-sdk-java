@@ -14,6 +14,8 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes. */
     private OffsetDateTime _lastActionDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Type of asynchronous operation. The values can be ForceDelete or Verification */
     private String _operation;
     /** Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed. */
@@ -24,6 +26,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      */
     public DomainState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.domainState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,8 +53,9 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainState currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operation", (n) -> { currentObject.setOperation(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
         }};
@@ -63,6 +67,14 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this._lastActionDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
@@ -88,6 +100,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastActionDateTime", this.getLastActionDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operation", this.getOperation());
         writer.writeStringValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +120,14 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      */
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification

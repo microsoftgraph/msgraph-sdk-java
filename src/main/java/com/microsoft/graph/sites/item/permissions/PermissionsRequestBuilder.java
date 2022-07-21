@@ -20,7 +20,7 @@ import microsoft.graph.models.PermissionCollectionResponse;
 import microsoft.graph.sites.item.permissions.count.CountRequestBuilder;
 /** Provides operations to manage the permissions property of the microsoft.graph.site entity. */
 public class PermissionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -16,6 +16,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      */
     public EdgeSearchEngineCustom() {
         super();
+        this.setOdataType("#microsoft.graph.edgeSearchEngineCustom");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -19,6 +19,8 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     private java.util.List<Location> _locations;
     /** A time period suggested for the meeting. */
     private TimeSlot _meetingTimeSlot;
+    /** The OdataType property */
+    private String _odataType;
     /** Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence. */
     private Integer _order;
     /** Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
@@ -31,6 +33,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     public MeetingTimeSuggestion() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.meetingTimeSuggestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,12 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestion currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("attendeeAvailability", (n) -> { currentObject.setAttendeeAvailability(n.getCollectionOfObjectValues(AttendeeAvailability::createFromDiscriminatorValue)); });
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getDoubleValue()); });
             this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
             this.put("meetingTimeSlot", (n) -> { currentObject.setMeetingTimeSlot(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("order", (n) -> { currentObject.setOrder(n.getIntegerValue()); });
             this.put("organizerAvailability", (n) -> { currentObject.setOrganizerAvailability(n.getEnumValue(FreeBusyStatus.class)); });
             this.put("suggestionReason", (n) -> { currentObject.setSuggestionReason(n.getStringValue()); });
@@ -98,6 +102,14 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TimeSlot getMeetingTimeSlot() {
         return this._meetingTimeSlot;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
@@ -134,6 +146,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("confidence", this.getConfidence());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
         writer.writeObjectValue("meetingTimeSlot", this.getMeetingTimeSlot());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("order", this.getOrder());
         writer.writeEnumValue("organizerAvailability", this.getOrganizerAvailability());
         writer.writeStringValue("suggestionReason", this.getSuggestionReason());
@@ -178,6 +191,14 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     public void setMeetingTimeSlot(@javax.annotation.Nullable final TimeSlot value) {
         this._meetingTimeSlot = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.

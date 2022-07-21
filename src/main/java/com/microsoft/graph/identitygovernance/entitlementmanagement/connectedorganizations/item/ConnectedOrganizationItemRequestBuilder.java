@@ -207,7 +207,7 @@ public class ConnectedOrganizationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder externalSponsors(@javax.annotation.Nonnull final String id) {
@@ -270,7 +270,7 @@ public class ConnectedOrganizationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder internalSponsors(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectedOrganizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public ConnectedOrganizationItemRequestBuilderGetQueryParameters queryParameters = new ConnectedOrganizationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new connectedOrganizationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectedOrganizationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectedOrganizationItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new connectedOrganizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration() {

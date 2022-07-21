@@ -21,6 +21,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      */
     public PrintTaskDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.printTaskDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

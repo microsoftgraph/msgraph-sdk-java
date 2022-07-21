@@ -16,6 +16,7 @@ public class OutlookUser extends Entity implements Parsable {
      */
     public OutlookUser() {
         super();
+        this.setOdataType("#microsoft.graph.outlookUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

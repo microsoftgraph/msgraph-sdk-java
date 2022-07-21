@@ -16,12 +16,15 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements. */
     private java.util.List<IosHomeScreenItem> _icons;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new iosHomeScreenPage and sets the default values.
      * @return a void
      */
     public IosHomeScreenPage() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.iosHomeScreenPage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,9 +59,10 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosHomeScreenPage currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("icons", (n) -> { currentObject.setIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
         return this._icons;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("icons", this.getIcons());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
      */
     public void setIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
         this._icons = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

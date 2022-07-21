@@ -13,6 +13,8 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** A collection of search results. */
     private java.util.List<SearchHitsContainer> _hitsContainers;
+    /** The OdataType property */
+    private String _odataType;
     /** Provides details of query alteration response for spelling correction. */
     private AlterationResponse _queryAlterationResponse;
     /** A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates. */
@@ -25,6 +27,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     public SearchResponse() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchResponse currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("hitsContainers", (n) -> { currentObject.setHitsContainers(n.getCollectionOfObjectValues(SearchHitsContainer::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("queryAlterationResponse", (n) -> { currentObject.setQueryAlterationResponse(n.getObjectValue(AlterationResponse::createFromDiscriminatorValue)); });
             this.put("resultTemplates", (n) -> { currentObject.setResultTemplates(n.getObjectValue(ResultTemplateDictionary::createFromDiscriminatorValue)); });
             this.put("searchTerms", (n) -> { currentObject.setSearchTerms(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -65,6 +69,14 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<SearchHitsContainer> getHitsContainers() {
         return this._hitsContainers;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
@@ -98,6 +110,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("hitsContainers", this.getHitsContainers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("queryAlterationResponse", this.getQueryAlterationResponse());
         writer.writeObjectValue("resultTemplates", this.getResultTemplates());
         writer.writeCollectionOfPrimitiveValues("searchTerms", this.getSearchTerms());
@@ -118,6 +131,14 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     public void setHitsContainers(@javax.annotation.Nullable final java.util.List<SearchHitsContainer> value) {
         this._hitsContainers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.

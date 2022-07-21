@@ -21,6 +21,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
      */
     public WorkbookChartSeries() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartSeries");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

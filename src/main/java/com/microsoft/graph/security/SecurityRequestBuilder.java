@@ -54,7 +54,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.alerts.item collection
      * @param id Unique identifier of the item
-     * @return a alertItemRequestBuilder
+     * @return a AlertItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AlertItemRequestBuilder alerts(@javax.annotation.Nonnull final String id) {
@@ -261,7 +261,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.secureScoreControlProfiles.item collection
      * @param id Unique identifier of the item
-     * @return a secureScoreControlProfileItemRequestBuilder
+     * @return a SecureScoreControlProfileItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecureScoreControlProfileItemRequestBuilder secureScoreControlProfiles(@javax.annotation.Nonnull final String id) {
@@ -273,7 +273,7 @@ public class SecurityRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.secureScores.item collection
      * @param id Unique identifier of the item
-     * @return a secureScoreItemRequestBuilder
+     * @return a SecureScoreItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SecureScoreItemRequestBuilder secureScores(@javax.annotation.Nonnull final String id) {

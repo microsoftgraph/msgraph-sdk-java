@@ -20,7 +20,7 @@ import microsoft.graph.models.CalendarGroupCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendarGroups property of the microsoft.graph.user entity. */
 public class CalendarGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

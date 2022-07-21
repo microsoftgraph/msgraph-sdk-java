@@ -48,7 +48,7 @@ public class TodoTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item.checklistItems.item collection
      * @param id Unique identifier of the item
-     * @return a checklistItemItemRequestBuilder
+     * @return a ChecklistItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChecklistItemItemRequestBuilder checklistItems(@javax.annotation.Nonnull final String id) {
@@ -228,7 +228,7 @@ public class TodoTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -291,7 +291,7 @@ public class TodoTaskItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item.linkedResources.item collection
      * @param id Unique identifier of the item
-     * @return a linkedResourceItemRequestBuilder
+     * @return a LinkedResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LinkedResourceItemRequestBuilder linkedResources(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class TodoTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new todoTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskItemRequestBuilderDeleteRequestConfiguration() {
@@ -393,7 +393,7 @@ public class TodoTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public TodoTaskItemRequestBuilderGetQueryParameters queryParameters = new TodoTaskItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new todoTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskItemRequestBuilderGetRequestConfiguration() {
@@ -408,7 +408,7 @@ public class TodoTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new todoTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskItemRequestBuilderPatchRequestConfiguration() {

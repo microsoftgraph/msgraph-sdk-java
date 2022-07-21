@@ -110,6 +110,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     public AndroidGeneralDeviceConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidGeneralDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

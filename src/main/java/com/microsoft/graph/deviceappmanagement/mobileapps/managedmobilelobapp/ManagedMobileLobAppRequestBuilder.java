@@ -19,7 +19,7 @@ import microsoft.graph.models.ManagedMobileLobAppCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to managedMobileLobApp. */
 public class ManagedMobileLobAppRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

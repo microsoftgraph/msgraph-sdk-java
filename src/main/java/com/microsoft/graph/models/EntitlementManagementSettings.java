@@ -19,6 +19,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      */
     public EntitlementManagementSettings() {
         super();
+        this.setOdataType("#microsoft.graph.entitlementManagementSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

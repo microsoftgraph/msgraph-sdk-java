@@ -16,6 +16,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
      */
     public AadUserConversationMemberResult() {
         super();
+        this.setOdataType("#microsoft.graph.aadUserConversationMemberResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

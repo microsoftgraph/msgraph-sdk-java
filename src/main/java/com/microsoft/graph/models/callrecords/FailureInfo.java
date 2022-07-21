@@ -11,6 +11,8 @@ import java.util.Objects;
 public class FailureInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Classification of why a call or portion of a call failed. */
     private String _reason;
     /** The stage property */
@@ -21,6 +23,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     public FailureInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.failureInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FailureInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(FailureStage.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reason property value. Classification of why a call or portion of a call failed.
@@ -75,6 +87,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("reason", this.getReason());
         writer.writeEnumValue("stage", this.getStage());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reason property value. Classification of why a call or portion of a call failed.

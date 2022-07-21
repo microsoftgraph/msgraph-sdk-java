@@ -23,6 +23,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     private Boolean _isReviewerJustificationRequired;
     /** Specifies whether the principals can review their own assignments. */
     private Boolean _isSelfReview;
+    /** The OdataType property */
+    private String _odataType;
     /** This collection specifies the users or group of users who will review the access package assignments. */
     private java.util.List<SubjectSet> _primaryReviewers;
     /** When the first review should start and how often it should recur. */
@@ -33,6 +35,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     public AccessPackageAssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,13 +78,14 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentReviewSettings currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("expirationBehavior", (n) -> { currentObject.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
             this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("isRecommendationEnabled", (n) -> { currentObject.setIsRecommendationEnabled(n.getBooleanValue()); });
             this.put("isReviewerJustificationRequired", (n) -> { currentObject.setIsReviewerJustificationRequired(n.getBooleanValue()); });
             this.put("isSelfReview", (n) -> { currentObject.setIsSelfReview(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("primaryReviewers", (n) -> { currentObject.setPrimaryReviewers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
             this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
         }};
@@ -119,6 +123,14 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         return this._isSelfReview;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
      * @return a subjectSet
      */
@@ -147,6 +159,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
         writer.writeBooleanValue("isRecommendationEnabled", this.getIsRecommendationEnabled());
         writer.writeBooleanValue("isReviewerJustificationRequired", this.getIsReviewerJustificationRequired());
         writer.writeBooleanValue("isSelfReview", this.getIsSelfReview());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("primaryReviewers", this.getPrimaryReviewers());
         writer.writeObjectValue("schedule", this.getSchedule());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -206,6 +219,14 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      */
     public void setIsSelfReview(@javax.annotation.Nullable final Boolean value) {
         this._isSelfReview = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.

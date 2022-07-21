@@ -21,7 +21,7 @@ import microsoft.graph.models.Participant;
 import microsoft.graph.models.ParticipantCollectionResponse;
 /** Provides operations to manage the participants property of the microsoft.graph.call entity. */
 public class ParticipantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

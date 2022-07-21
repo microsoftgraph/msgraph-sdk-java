@@ -15,6 +15,8 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private Boolean _hidden;
     /** The identity property */
     private IdentitySet _identity;
+    /** The OdataType property */
+    private String _odataType;
     /** Optional. The ID of the target participant. */
     private String _participantId;
     /** The removeFromDefaultAudioRoutingGroup property */
@@ -27,6 +29,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.invitationParticipantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,10 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitationParticipantInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
             this.put("removeFromDefaultAudioRoutingGroup", (n) -> { currentObject.setRemoveFromDefaultAudioRoutingGroup(n.getBooleanValue()); });
             this.put("replacesCallId", (n) -> { currentObject.setReplacesCallId(n.getStringValue()); });
@@ -76,6 +80,14 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {
         return this._identity;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the participantId property value. Optional. The ID of the target participant.
@@ -110,6 +122,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hidden", this.getHidden());
         writer.writeObjectValue("identity", this.getIdentity());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("participantId", this.getParticipantId());
         writer.writeBooleanValue("removeFromDefaultAudioRoutingGroup", this.getRemoveFromDefaultAudioRoutingGroup());
         writer.writeStringValue("replacesCallId", this.getReplacesCallId());
@@ -138,6 +151,14 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      */
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._identity = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.

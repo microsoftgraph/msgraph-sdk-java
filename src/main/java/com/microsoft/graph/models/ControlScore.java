@@ -17,6 +17,8 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     private String _controlName;
     /** Description of the control. */
     private String _description;
+    /** The OdataType property */
+    private String _odataType;
     /** Tenant achieved score for the control (it varies day by day depending on tenant operations on the control). */
     private Double _score;
     /**
@@ -25,6 +27,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     public ControlScore() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.controlScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,21 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ControlScore currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("controlCategory", (n) -> { currentObject.setControlCategory(n.getStringValue()); });
             this.put("controlName", (n) -> { currentObject.setControlName(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("score", (n) -> { currentObject.setScore(n.getDoubleValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
@@ -100,6 +112,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("controlCategory", this.getControlCategory());
         writer.writeStringValue("controlName", this.getControlName());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeDoubleValue("score", this.getScore());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
      */
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).

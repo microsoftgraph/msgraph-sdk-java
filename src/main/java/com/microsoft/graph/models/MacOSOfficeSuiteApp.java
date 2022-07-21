@@ -14,6 +14,7 @@ public class MacOSOfficeSuiteApp extends MobileApp implements Parsable {
      */
     public MacOSOfficeSuiteApp() {
         super();
+        this.setOdataType("#microsoft.graph.macOSOfficeSuiteApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

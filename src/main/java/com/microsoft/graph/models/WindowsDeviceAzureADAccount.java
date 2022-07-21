@@ -16,6 +16,7 @@ public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements
      */
     public WindowsDeviceAzureADAccount() {
         super();
+        this.setOdataType("#microsoft.graph.windowsDeviceAzureADAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

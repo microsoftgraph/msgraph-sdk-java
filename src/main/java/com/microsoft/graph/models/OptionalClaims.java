@@ -15,6 +15,8 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The optional claims returned in the JWT ID token. */
     private java.util.List<OptionalClaim> _idToken;
+    /** The OdataType property */
+    private String _odataType;
     /** The optional claims returned in the SAML token. */
     private java.util.List<OptionalClaim> _saml2Token;
     /**
@@ -23,6 +25,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     public OptionalClaims() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.optionalClaims");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,9 +60,10 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OptionalClaims currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("accessToken", (n) -> { currentObject.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
             this.put("idToken", (n) -> { currentObject.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("saml2Token", (n) -> { currentObject.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
         }};
     }
@@ -70,6 +74,14 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<OptionalClaim> getIdToken() {
         return this._idToken;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the saml2Token property value. The optional claims returned in the SAML token.
@@ -88,6 +100,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("accessToken", this.getAccessToken());
         writer.writeCollectionOfObjectValues("idToken", this.getIdToken());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("saml2Token", this.getSaml2Token());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     public void setIdToken(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
         this._idToken = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the saml2Token property value. The optional claims returned in the SAML token.

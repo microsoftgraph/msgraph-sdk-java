@@ -20,7 +20,7 @@ import microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
 import microsoft.graph.reports.monthlyprintusagebyprinter.count.CountRequestBuilder;
 /** Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
 public class MonthlyPrintUsageByPrinterRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

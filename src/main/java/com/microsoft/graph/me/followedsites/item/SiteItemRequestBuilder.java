@@ -155,7 +155,7 @@ public class SiteItemRequestBuilder {
         @javax.annotation.Nullable
         public SiteItemRequestBuilderGetQueryParameters queryParameters = new SiteItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new siteItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SiteItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SiteItemRequestBuilderGetRequestConfiguration() {

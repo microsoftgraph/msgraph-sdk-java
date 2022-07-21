@@ -18,6 +18,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     public PermissionGrantPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.permissionGrantPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

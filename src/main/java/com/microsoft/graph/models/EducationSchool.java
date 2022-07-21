@@ -42,6 +42,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     public EducationSchool() {
         super();
+        this.setOdataType("#microsoft.graph.educationSchool");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

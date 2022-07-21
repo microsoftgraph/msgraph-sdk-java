@@ -24,6 +24,7 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public IdentityContainer() {
         super();
+        this.setOdataType("#microsoft.graph.identityContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

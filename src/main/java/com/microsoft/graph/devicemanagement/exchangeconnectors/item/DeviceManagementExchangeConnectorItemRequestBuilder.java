@@ -313,7 +313,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementExchangeConnectorItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementExchangeConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration() {

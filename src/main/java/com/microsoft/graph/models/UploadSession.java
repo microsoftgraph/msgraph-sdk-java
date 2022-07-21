@@ -16,6 +16,8 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _expirationDateTime;
     /** When uploading files to document libraries, this is a collection of byte ranges that the server is missing for the file. These ranges are zero-indexed and of the format, '{start}-{end}' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin. */
     private java.util.List<String> _nextExpectedRanges;
+    /** The OdataType property */
+    private String _odataType;
     /** The URL endpoint that accepts PUT requests for byte ranges of the file. */
     private String _uploadUrl;
     /**
@@ -24,6 +26,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     public UploadSession() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.uploadSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadSession currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("nextExpectedRanges", (n) -> { currentObject.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("uploadUrl", (n) -> { currentObject.setUploadUrl(n.getStringValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public java.util.List<String> getNextExpectedRanges() {
         return this._nextExpectedRanges;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the uploadUrl property value. The URL endpoint that accepts PUT requests for byte ranges of the file.
@@ -89,6 +101,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeCollectionOfPrimitiveValues("nextExpectedRanges", this.getNextExpectedRanges());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("uploadUrl", this.getUploadUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      */
     public void setNextExpectedRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._nextExpectedRanges = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the uploadUrl property value. The URL endpoint that accepts PUT requests for byte ranges of the file.

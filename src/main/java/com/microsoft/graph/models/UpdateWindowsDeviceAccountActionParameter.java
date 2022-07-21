@@ -19,6 +19,8 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     private String _deviceAccountEmail;
     /** Not yet documented */
     private String _exchangeServer;
+    /** The OdataType property */
+    private String _odataType;
     /** Not yet documented */
     private Boolean _passwordRotationEnabled;
     /** Not yet documented */
@@ -29,6 +31,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     public UpdateWindowsDeviceAccountActionParameter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.updateWindowsDeviceAccountActionParameter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,14 +90,23 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateWindowsDeviceAccountActionParameter currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("calendarSyncEnabled", (n) -> { currentObject.setCalendarSyncEnabled(n.getBooleanValue()); });
             this.put("deviceAccount", (n) -> { currentObject.setDeviceAccount(n.getObjectValue(WindowsDeviceAccount::createFromDiscriminatorValue)); });
             this.put("deviceAccountEmail", (n) -> { currentObject.setDeviceAccountEmail(n.getStringValue()); });
             this.put("exchangeServer", (n) -> { currentObject.setExchangeServer(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("passwordRotationEnabled", (n) -> { currentObject.setPasswordRotationEnabled(n.getBooleanValue()); });
             this.put("sessionInitiationProtocalAddress", (n) -> { currentObject.setSessionInitiationProtocalAddress(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the passwordRotationEnabled property value. Not yet documented
@@ -123,6 +135,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
         writer.writeObjectValue("deviceAccount", this.getDeviceAccount());
         writer.writeStringValue("deviceAccountEmail", this.getDeviceAccountEmail());
         writer.writeStringValue("exchangeServer", this.getExchangeServer());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("passwordRotationEnabled", this.getPasswordRotationEnabled());
         writer.writeStringValue("sessionInitiationProtocalAddress", this.getSessionInitiationProtocalAddress());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
      */
     public void setExchangeServer(@javax.annotation.Nullable final String value) {
         this._exchangeServer = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the passwordRotationEnabled property value. Not yet documented

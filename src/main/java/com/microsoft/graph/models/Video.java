@@ -29,6 +29,8 @@ public class Video implements AdditionalDataHolder, Parsable {
     private Double _frameRate;
     /** Height of the video, in pixels. */
     private Integer _height;
+    /** The OdataType property */
+    private String _odataType;
     /** Width of the video, in pixels. */
     private Integer _width;
     /**
@@ -37,6 +39,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     public Video() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.video");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -111,7 +114,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Video currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("audioBitsPerSample", (n) -> { currentObject.setAudioBitsPerSample(n.getIntegerValue()); });
             this.put("audioChannels", (n) -> { currentObject.setAudioChannels(n.getIntegerValue()); });
             this.put("audioFormat", (n) -> { currentObject.setAudioFormat(n.getStringValue()); });
@@ -121,6 +124,7 @@ public class Video implements AdditionalDataHolder, Parsable {
             this.put("fourCC", (n) -> { currentObject.setFourCC(n.getStringValue()); });
             this.put("frameRate", (n) -> { currentObject.setFrameRate(n.getDoubleValue()); });
             this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
         }};
     }
@@ -149,6 +153,14 @@ public class Video implements AdditionalDataHolder, Parsable {
         return this._height;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the width property value. Width of the video, in pixels.
      * @return a integer
      */
@@ -172,6 +184,7 @@ public class Video implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("fourCC", this.getFourCC());
         writer.writeDoubleValue("frameRate", this.getFrameRate());
         writer.writeIntegerValue("height", this.getHeight());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("width", this.getWidth());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -254,6 +267,14 @@ public class Video implements AdditionalDataHolder, Parsable {
      */
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the width property value. Width of the video, in pixels.

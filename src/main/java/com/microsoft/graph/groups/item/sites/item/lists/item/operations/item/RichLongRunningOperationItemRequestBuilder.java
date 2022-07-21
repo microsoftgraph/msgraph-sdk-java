@@ -307,7 +307,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new richLongRunningOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public RichLongRunningOperationItemRequestBuilderGetQueryParameters queryParameters = new RichLongRunningOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new richLongRunningOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RichLongRunningOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RichLongRunningOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new richLongRunningOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration() {

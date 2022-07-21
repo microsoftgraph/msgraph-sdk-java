@@ -20,7 +20,7 @@ import microsoft.graph.models.termstore.RelationCollectionResponse;
 import microsoft.graph.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.relations.count.CountRequestBuilder;
 /** Provides operations to manage the relations property of the microsoft.graph.termStore.term entity. */
 public class RelationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

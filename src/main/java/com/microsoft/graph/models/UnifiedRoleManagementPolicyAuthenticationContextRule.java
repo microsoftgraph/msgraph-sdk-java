@@ -18,6 +18,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      */
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

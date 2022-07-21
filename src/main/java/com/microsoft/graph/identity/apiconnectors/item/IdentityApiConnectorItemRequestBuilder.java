@@ -313,7 +313,7 @@ public class IdentityApiConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityApiConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class IdentityApiConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public IdentityApiConnectorItemRequestBuilderGetQueryParameters queryParameters = new IdentityApiConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new identityApiConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityApiConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityApiConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class IdentityApiConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityApiConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration() {

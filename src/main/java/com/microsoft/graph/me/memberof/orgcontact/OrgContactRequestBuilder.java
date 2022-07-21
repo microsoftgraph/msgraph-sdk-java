@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.OrgContactCollectionResponse;
 /** Casts the previous resource to orgContact. */
 public class OrgContactRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

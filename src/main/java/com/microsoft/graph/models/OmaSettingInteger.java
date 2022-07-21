@@ -16,6 +16,7 @@ public class OmaSettingInteger extends OmaSetting implements Parsable {
      */
     public OmaSettingInteger() {
         super();
+        this.setOdataType("#microsoft.graph.omaSettingInteger");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

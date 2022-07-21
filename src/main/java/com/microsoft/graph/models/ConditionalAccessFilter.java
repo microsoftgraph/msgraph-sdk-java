@@ -13,6 +13,8 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The mode property */
     private FilterMode _mode;
+    /** The OdataType property */
+    private String _odataType;
     /** Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions */
     private String _rule;
     /**
@@ -21,6 +23,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
      */
     public ConditionalAccessFilter() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessFilter currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(FilterMode.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FilterMode getMode() {
         return this._mode;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
@@ -76,6 +88,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("mode", this.getMode());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("rule", this.getRule());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
      */
     public void setMode(@javax.annotation.Nullable final FilterMode value) {
         this._mode = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions

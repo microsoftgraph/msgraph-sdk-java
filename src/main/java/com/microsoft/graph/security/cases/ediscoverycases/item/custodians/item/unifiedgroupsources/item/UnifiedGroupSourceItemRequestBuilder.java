@@ -313,7 +313,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedGroupSourceItemRequestBuilderGetQueryParameters queryParameters = new UnifiedGroupSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedGroupSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedGroupSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedGroupSourceItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UnifiedGroupSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedGroupSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedGroupSourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedGroupSourceItemRequestBuilderPatchRequestConfiguration() {

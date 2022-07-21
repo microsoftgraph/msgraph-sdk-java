@@ -24,6 +24,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      */
     public RemoteAssistancePartner() {
         super();
+        this.setOdataType("#microsoft.graph.remoteAssistancePartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

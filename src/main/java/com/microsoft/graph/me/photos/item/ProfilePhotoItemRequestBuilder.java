@@ -313,7 +313,7 @@ public class ProfilePhotoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new profilePhotoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProfilePhotoItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfilePhotoItemRequestBuilderDeleteRequestConfiguration() {
@@ -338,7 +338,7 @@ public class ProfilePhotoItemRequestBuilder {
         @javax.annotation.Nullable
         public ProfilePhotoItemRequestBuilderGetQueryParameters queryParameters = new ProfilePhotoItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new profilePhotoItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProfilePhotoItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfilePhotoItemRequestBuilderGetRequestConfiguration() {
@@ -353,7 +353,7 @@ public class ProfilePhotoItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new profilePhotoItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProfilePhotoItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProfilePhotoItemRequestBuilderPatchRequestConfiguration() {

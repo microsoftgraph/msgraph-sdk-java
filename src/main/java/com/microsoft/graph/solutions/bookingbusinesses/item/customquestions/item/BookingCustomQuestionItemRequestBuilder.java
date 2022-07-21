@@ -307,7 +307,7 @@ public class BookingCustomQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class BookingCustomQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public BookingCustomQuestionItemRequestBuilderGetQueryParameters queryParameters = new BookingCustomQuestionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bookingCustomQuestionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCustomQuestionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCustomQuestionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class BookingCustomQuestionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingCustomQuestionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration() {

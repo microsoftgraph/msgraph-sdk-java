@@ -20,7 +20,7 @@ import microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
 import microsoft.graph.policies.tokenissuancepolicies.count.CountRequestBuilder;
 /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity. */
 public class TokenIssuancePoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

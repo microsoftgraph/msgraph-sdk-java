@@ -283,7 +283,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.acceptedSenders.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder acceptedSenders(@javax.annotation.Nonnull final String id) {
@@ -295,7 +295,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -307,7 +307,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -346,7 +346,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.conversations.item collection
      * @param id Unique identifier of the item
-     * @return a conversationItemRequestBuilder
+     * @return a ConversationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationItemRequestBuilder conversations(@javax.annotation.Nonnull final String id) {
@@ -499,7 +499,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.drives.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemRequestBuilder
+     * @return a DriveItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
@@ -511,7 +511,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.events.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -523,7 +523,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -586,7 +586,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.groupLifecyclePolicies.item collection
      * @param id Unique identifier of the item
-     * @return a groupLifecyclePolicyItemRequestBuilder
+     * @return a GroupLifecyclePolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupLifecyclePolicyItemRequestBuilder groupLifecyclePolicies(@javax.annotation.Nonnull final String id) {
@@ -598,7 +598,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -610,7 +610,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.members.item.DirectoryObjectItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -622,7 +622,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.membersWithLicenseErrors.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder membersWithLicenseErrors(@javax.annotation.Nonnull final String id) {
@@ -634,7 +634,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.owners.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
@@ -701,7 +701,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.permissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a resourceSpecificPermissionGrantItemRequestBuilder
+     * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ResourceSpecificPermissionGrantItemRequestBuilder permissionGrants(@javax.annotation.Nonnull final String id) {
@@ -713,7 +713,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.photos.item collection
      * @param id Unique identifier of the item
-     * @return a profilePhotoItemRequestBuilder
+     * @return a ProfilePhotoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
@@ -725,7 +725,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.rejectedSenders.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.rejectedsenders.item.DirectoryObjectItemRequestBuilder rejectedSenders(@javax.annotation.Nonnull final String id) {
@@ -737,7 +737,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.settings.item collection
      * @param id Unique identifier of the item
-     * @return a groupSettingItemRequestBuilder
+     * @return a GroupSettingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupSettingItemRequestBuilder settings(@javax.annotation.Nonnull final String id) {
@@ -749,7 +749,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item collection
      * @param id Unique identifier of the item
-     * @return a siteItemRequestBuilder
+     * @return a SiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder sites(@javax.annotation.Nonnull final String id) {
@@ -761,7 +761,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item collection
      * @param id Unique identifier of the item
-     * @return a conversationThreadItemRequestBuilder
+     * @return a ConversationThreadItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationThreadItemRequestBuilder threads(@javax.annotation.Nonnull final String id) {
@@ -773,7 +773,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -785,7 +785,7 @@ public class GroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.transitiveMembers.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.transitivemembers.item.DirectoryObjectItemRequestBuilder transitiveMembers(@javax.annotation.Nonnull final String id) {
@@ -803,7 +803,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -832,7 +832,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupItemRequestBuilderGetQueryParameters queryParameters = new GroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderGetRequestConfiguration() {
@@ -847,7 +847,7 @@ public class GroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupItemRequestBuilderPatchRequestConfiguration() {

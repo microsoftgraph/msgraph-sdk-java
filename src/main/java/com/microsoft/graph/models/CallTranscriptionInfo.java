@@ -14,6 +14,8 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The state modified time in UTC. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The state property */
     private CallTranscriptionState _state;
     /**
@@ -22,6 +24,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
      */
     public CallTranscriptionInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callTranscriptionInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallTranscriptionInfo currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallTranscriptionState.class)); });
         }};
     }
@@ -60,6 +64,14 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this._lastModifiedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. The state property
@@ -77,6 +89,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. The state property

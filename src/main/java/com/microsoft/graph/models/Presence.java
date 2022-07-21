@@ -18,6 +18,7 @@ public class Presence extends Entity implements Parsable {
      */
     public Presence() {
         super();
+        this.setOdataType("#microsoft.graph.presence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -13,6 +13,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded. */
     private GenericError _errorDetails;
+    /** The OdataType property */
+    private String _odataType;
     /** The identifier that was converted. This value is the original, un-converted identifier. */
     private String _sourceId;
     /** The converted identifier. This value is not present if the conversion failed. */
@@ -23,6 +25,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     public ConvertIdResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.convertIdResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConvertIdResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("errorDetails", (n) -> { currentObject.setErrorDetails(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
             this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
@@ -87,6 +99,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("errorDetails", this.getErrorDetails());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeStringValue("targetId", this.getTargetId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      */
     public void setErrorDetails(@javax.annotation.Nullable final GenericError value) {
         this._errorDetails = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.

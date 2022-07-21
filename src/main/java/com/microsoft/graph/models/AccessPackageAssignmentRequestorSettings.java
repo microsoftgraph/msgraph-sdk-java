@@ -25,6 +25,8 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     private Boolean _enableTargetsToSelfRemoveAccess;
     /** If true, allows requestors to create a request to update their access. */
     private Boolean _enableTargetsToSelfUpdateAccess;
+    /** The OdataType property */
+    private String _odataType;
     /** The principals who can request on-behalf-of others. */
     private java.util.List<SubjectSet> _onBehalfRequestors;
     /**
@@ -33,6 +35,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestorSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +118,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestorSettings currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToAddAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });
@@ -123,8 +126,17 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
             this.put("enableTargetsToSelfAddAccess", (n) -> { currentObject.setEnableTargetsToSelfAddAccess(n.getBooleanValue()); });
             this.put("enableTargetsToSelfRemoveAccess", (n) -> { currentObject.setEnableTargetsToSelfRemoveAccess(n.getBooleanValue()); });
             this.put("enableTargetsToSelfUpdateAccess", (n) -> { currentObject.setEnableTargetsToSelfUpdateAccess(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onBehalfRequestors", (n) -> { currentObject.setOnBehalfRequestors(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
@@ -148,6 +160,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
         writer.writeBooleanValue("enableTargetsToSelfAddAccess", this.getEnableTargetsToSelfAddAccess());
         writer.writeBooleanValue("enableTargetsToSelfRemoveAccess", this.getEnableTargetsToSelfRemoveAccess());
         writer.writeBooleanValue("enableTargetsToSelfUpdateAccess", this.getEnableTargetsToSelfUpdateAccess());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("onBehalfRequestors", this.getOnBehalfRequestors());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,6 +227,14 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      */
     public void setEnableTargetsToSelfUpdateAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableTargetsToSelfUpdateAccess = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the onBehalfRequestors property value. The principals who can request on-behalf-of others.

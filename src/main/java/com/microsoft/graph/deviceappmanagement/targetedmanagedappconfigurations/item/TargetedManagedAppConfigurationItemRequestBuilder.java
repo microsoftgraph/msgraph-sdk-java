@@ -59,7 +59,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
      * @param id Unique identifier of the item
-     * @return a managedMobileAppItemRequestBuilder
+     * @return a ManagedMobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
@@ -71,7 +71,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a targetedManagedAppPolicyAssignmentItemRequestBuilder
+     * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TargetedManagedAppPolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -363,7 +363,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new targetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -392,7 +392,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public TargetedManagedAppConfigurationItemRequestBuilderGetQueryParameters queryParameters = new TargetedManagedAppConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new targetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -407,7 +407,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new targetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration() {

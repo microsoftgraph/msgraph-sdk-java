@@ -308,7 +308,7 @@ public class CallRecordItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.callRecords.item.sessions.item collection
      * @param id Unique identifier of the item
-     * @return a sessionItemRequestBuilder
+     * @return a SessionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SessionItemRequestBuilder sessions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class CallRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new callRecordItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CallRecordItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallRecordItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class CallRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public CallRecordItemRequestBuilderGetQueryParameters queryParameters = new CallRecordItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new callRecordItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CallRecordItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallRecordItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class CallRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new callRecordItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CallRecordItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CallRecordItemRequestBuilderPatchRequestConfiguration() {

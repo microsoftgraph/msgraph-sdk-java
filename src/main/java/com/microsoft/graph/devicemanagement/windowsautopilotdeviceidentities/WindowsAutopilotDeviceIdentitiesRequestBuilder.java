@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import microsoft.graph.models.WindowsAutopilotDeviceIdentityCollectionResponse;
 /** Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotDeviceIdentitiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

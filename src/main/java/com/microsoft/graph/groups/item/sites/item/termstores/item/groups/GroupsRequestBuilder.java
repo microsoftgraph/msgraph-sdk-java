@@ -20,7 +20,7 @@ import microsoft.graph.models.termstore.Group;
 import microsoft.graph.models.termstore.GroupCollectionResponse;
 /** Provides operations to manage the groups property of the microsoft.graph.termStore.store entity. */
 public class GroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

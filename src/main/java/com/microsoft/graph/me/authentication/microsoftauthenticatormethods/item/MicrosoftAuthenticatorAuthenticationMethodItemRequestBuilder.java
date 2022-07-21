@@ -313,7 +313,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new microsoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new microsoftAuthenticatorAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

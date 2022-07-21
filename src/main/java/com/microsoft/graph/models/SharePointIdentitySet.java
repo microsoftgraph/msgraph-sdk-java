@@ -20,6 +20,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      */
     public SharePointIdentitySet() {
         super();
+        this.setOdataType("#microsoft.graph.sharePointIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

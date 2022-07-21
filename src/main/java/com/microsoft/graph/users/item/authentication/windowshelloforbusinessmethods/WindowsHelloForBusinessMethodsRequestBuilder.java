@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethodCollect
 import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.count.CountRequestBuilder;
 /** Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity. */
 public class WindowsHelloForBusinessMethodsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

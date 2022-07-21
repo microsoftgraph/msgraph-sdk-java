@@ -37,6 +37,8 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     private String _mediaType;
     /** The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table. */
     private PrintMultipageLayout _multipageLayout;
+    /** The OdataType property */
+    private String _odataType;
     /** The orientation setting the printer should use when printing the job. Valid values are described in the following table. */
     private PrintOrientation _orientation;
     /** The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins. */
@@ -55,6 +57,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      */
     public PrintJobConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printJobConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -129,7 +132,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJobConfiguration currentObject = this;
-        return new HashMap<>(19) {{
+        return new HashMap<>(20) {{
             this.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
             this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
             this.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
@@ -143,6 +146,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
             this.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
             this.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
             this.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
             this.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
@@ -206,6 +210,14 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
         return this._multipageLayout;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
@@ -275,6 +287,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("mediaSize", this.getMediaSize());
         writer.writeStringValue("mediaType", this.getMediaType());
         writer.writeEnumValue("multipageLayout", this.getMultipageLayout());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("orientation", this.getOrientation());
         writer.writeStringValue("outputBin", this.getOutputBin());
         writer.writeCollectionOfObjectValues("pageRanges", this.getPageRanges());
@@ -394,6 +407,14 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      */
     public void setMultipageLayout(@javax.annotation.Nullable final PrintMultipageLayout value) {
         this._multipageLayout = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.

@@ -18,6 +18,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
      */
     public DriveItemVersion() {
         super();
+        this.setOdataType("#microsoft.graph.driveItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

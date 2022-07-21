@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Authentication extends Entity implements Parsable {
+    /** Represents the email addresses registered to a user for authentication. */
+    private java.util.List<EmailAuthenticationMethod> _emailMethods;
     /** Represents the FIDO2 security keys registered to a user for authentication. */
     private java.util.List<Fido2AuthenticationMethod> _fido2Methods;
     /** Represents all authentication methods registered to a user. */
@@ -18,6 +20,10 @@ public class Authentication extends Entity implements Parsable {
     private java.util.List<LongRunningOperation> _operations;
     /** Represents the details of the password authentication method registered to a user for authentication. */
     private java.util.List<PasswordAuthenticationMethod> _passwordMethods;
+    /** Represents the phone registered to a user for authentication. */
+    private java.util.List<PhoneAuthenticationMethod> _phoneMethods;
+    /** The softwareOathMethods property */
+    private java.util.List<SoftwareOathAuthenticationMethod> _softwareOathMethods;
     /** Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes. */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> _temporaryAccessPassMethods;
     /** Represents the Windows Hello for Business authentication method registered to a user for authentication. */
@@ -28,6 +34,7 @@ public class Authentication extends Entity implements Parsable {
      */
     public Authentication() {
         super();
+        this.setOdataType("#microsoft.graph.authentication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,6 +45,14 @@ public class Authentication extends Entity implements Parsable {
     public static Authentication createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Authentication();
+    }
+    /**
+     * Gets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * @return a emailAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public java.util.List<EmailAuthenticationMethod> getEmailMethods() {
+        return this._emailMethods;
     }
     /**
      * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
@@ -55,11 +70,14 @@ public class Authentication extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Authentication currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("emailMethods", (n) -> { currentObject.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("microsoftAuthenticatorMethods", (n) -> { currentObject.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
             this.put("passwordMethods", (n) -> { currentObject.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
+            this.put("phoneMethods", (n) -> { currentObject.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
+            this.put("softwareOathMethods", (n) -> { currentObject.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("temporaryAccessPassMethods", (n) -> { currentObject.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("windowsHelloForBusinessMethods", (n) -> { currentObject.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
         }};
@@ -97,6 +115,22 @@ public class Authentication extends Entity implements Parsable {
         return this._passwordMethods;
     }
     /**
+     * Gets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * @return a phoneAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PhoneAuthenticationMethod> getPhoneMethods() {
+        return this._phoneMethods;
+    }
+    /**
+     * Gets the softwareOathMethods property value. The softwareOathMethods property
+     * @return a softwareOathAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public java.util.List<SoftwareOathAuthenticationMethod> getSoftwareOathMethods() {
+        return this._softwareOathMethods;
+    }
+    /**
      * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @return a temporaryAccessPassAuthenticationMethod
      */
@@ -120,13 +154,24 @@ public class Authentication extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("emailMethods", this.getEmailMethods());
         writer.writeCollectionOfObjectValues("fido2Methods", this.getFido2Methods());
         writer.writeCollectionOfObjectValues("methods", this.getMethods());
         writer.writeCollectionOfObjectValues("microsoftAuthenticatorMethods", this.getMicrosoftAuthenticatorMethods());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
+        writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
+        writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
+    }
+    /**
+     * Sets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * @param value Value to set for the emailMethods property.
+     * @return a void
+     */
+    public void setEmailMethods(@javax.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
+        this._emailMethods = value;
     }
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
@@ -167,6 +212,22 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setPasswordMethods(@javax.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
         this._passwordMethods = value;
+    }
+    /**
+     * Sets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * @param value Value to set for the phoneMethods property.
+     * @return a void
+     */
+    public void setPhoneMethods(@javax.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
+        this._phoneMethods = value;
+    }
+    /**
+     * Sets the softwareOathMethods property value. The softwareOathMethods property
+     * @param value Value to set for the softwareOathMethods property.
+     * @return a void
+     */
+    public void setSoftwareOathMethods(@javax.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
+        this._softwareOathMethods = value;
     }
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.

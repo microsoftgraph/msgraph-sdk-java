@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceConfigurationUserStatusCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity. */
 public class UserStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -13,6 +13,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The final property */
     private IdentitySet _final_escaped;
+    /** The OdataType property */
+    private String _odataType;
     /** The original property */
     private IdentitySet _original;
     /** The routingType property */
@@ -23,6 +25,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     public CallRoute() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRoute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRoute currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("final", (n) -> { currentObject.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("original", (n) -> { currentObject.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("routingType", (n) -> { currentObject.setRoutingType(n.getEnumValue(RoutingType.class)); });
         }};
@@ -62,6 +66,14 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet getFinal() {
         return this._final_escaped;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the original property value. The original property
@@ -87,6 +99,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("final", this.getFinal());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("original", this.getOriginal());
         writer.writeEnumValue("routingType", this.getRoutingType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      */
     public void setFinal(@javax.annotation.Nullable final IdentitySet value) {
         this._final_escaped = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the original property value. The original property

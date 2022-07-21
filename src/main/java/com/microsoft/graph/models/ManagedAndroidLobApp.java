@@ -22,6 +22,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      */
     public ManagedAndroidLobApp() {
         super();
+        this.setOdataType("#microsoft.graph.managedAndroidLobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

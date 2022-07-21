@@ -18,6 +18,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      */
     public EducationFeedbackOutcome() {
         super();
+        this.setOdataType("#microsoft.graph.educationFeedbackOutcome");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceManagement singleton. */
+/** Provides operations to manage the admin singleton. */
 public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;
@@ -30,6 +30,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     public DeviceComplianceDeviceStatus() {
         super();
+        this.setOdataType("#microsoft.graph.deviceComplianceDeviceStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

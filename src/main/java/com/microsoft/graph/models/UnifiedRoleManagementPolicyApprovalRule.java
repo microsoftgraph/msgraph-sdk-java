@@ -16,6 +16,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      */
     public UnifiedRoleManagementPolicyApprovalRule() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyApprovalRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

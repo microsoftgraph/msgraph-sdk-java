@@ -44,6 +44,7 @@ public class Subscription extends Entity implements Parsable {
      */
     public Subscription() {
         super();
+        this.setOdataType("#microsoft.graph.subscription");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

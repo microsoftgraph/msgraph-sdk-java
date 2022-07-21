@@ -32,6 +32,8 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** Optional. Filename of the remote item. Read-only. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
     private Package_escaped _package_escaped;
     /** Properties of the parent of the remote item. Read-only. */
@@ -56,6 +58,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     public RemoteItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.remoteItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,7 +101,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoteItem currentObject = this;
-        return new HashMap<>(19) {{
+        return new HashMap<>(20) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
@@ -109,6 +112,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
             this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
             this.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
@@ -183,6 +187,14 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
@@ -273,6 +285,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("package", this.getPackage());
         writer.writeObjectValue("parentReference", this.getParentReference());
         writer.writeObjectValue("shared", this.getShared());
@@ -371,6 +384,14 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.

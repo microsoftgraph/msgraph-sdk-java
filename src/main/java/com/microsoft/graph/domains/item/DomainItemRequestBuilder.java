@@ -233,7 +233,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.domainNameReferences.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder domainNameReferences(@javax.annotation.Nonnull final String id) {
@@ -245,7 +245,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.federationConfiguration.item collection
      * @param id Unique identifier of the item
-     * @return a internalDomainFederationItemRequestBuilder
+     * @return a InternalDomainFederationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public InternalDomainFederationItemRequestBuilder federationConfiguration(@javax.annotation.Nonnull final String id) {
@@ -363,7 +363,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.serviceConfigurationRecords.item collection
      * @param id Unique identifier of the item
-     * @return a domainDnsRecordItemRequestBuilder
+     * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder serviceConfigurationRecords(@javax.annotation.Nonnull final String id) {
@@ -375,7 +375,7 @@ public class DomainItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.domains.item.verificationDnsRecords.item collection
      * @param id Unique identifier of the item
-     * @return a domainDnsRecordItemRequestBuilder
+     * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder verificationDnsRecords(@javax.annotation.Nonnull final String id) {
@@ -393,7 +393,7 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderDeleteRequestConfiguration() {
@@ -422,7 +422,7 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public DomainItemRequestBuilderGetQueryParameters queryParameters = new DomainItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new domainItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderGetRequestConfiguration() {
@@ -437,7 +437,7 @@ public class DomainItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DomainItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainItemRequestBuilderPatchRequestConfiguration() {

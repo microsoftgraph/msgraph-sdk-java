@@ -14,6 +14,7 @@ public class IncomingCallOptions extends CallOptions implements Parsable {
      */
     public IncomingCallOptions() {
         super();
+        this.setOdataType("#microsoft.graph.incomingCallOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -109,7 +109,7 @@ public class EventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item.events.item.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a attachmentItemRequestBuilder
+     * @return a AttachmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
@@ -289,7 +289,7 @@ public class EventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item.events.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -352,7 +352,7 @@ public class EventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item.events.item.instances.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EventItemRequestBuilder instances(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class EventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item.events.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -431,7 +431,7 @@ public class EventItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item.events.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -449,7 +449,7 @@ public class EventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new eventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EventItemRequestBuilderDeleteRequestConfiguration() {
@@ -474,7 +474,7 @@ public class EventItemRequestBuilder {
         @javax.annotation.Nullable
         public EventItemRequestBuilderGetQueryParameters queryParameters = new EventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new eventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EventItemRequestBuilderGetRequestConfiguration() {
@@ -489,7 +489,7 @@ public class EventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new eventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EventItemRequestBuilderPatchRequestConfiguration() {

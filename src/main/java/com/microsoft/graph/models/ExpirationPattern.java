@@ -17,6 +17,8 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     private Period _duration;
     /** Timestamp of date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _endDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The requestor's desired expiration pattern type. */
     private ExpirationPatternType _type;
     /**
@@ -25,6 +27,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
      */
     public ExpirationPattern() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.expirationPattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,11 +70,20 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExpirationPattern currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("duration", (n) -> { currentObject.setDuration(n.getPeriodValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ExpirationPatternType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. The requestor's desired expiration pattern type.
@@ -90,6 +102,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("duration", this.getDuration());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,6 +129,14 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
      */
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The requestor's desired expiration pattern type.

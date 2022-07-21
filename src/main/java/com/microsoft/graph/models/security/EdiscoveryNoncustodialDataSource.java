@@ -19,6 +19,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      */
     public EdiscoveryNoncustodialDataSource() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryNoncustodialDataSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

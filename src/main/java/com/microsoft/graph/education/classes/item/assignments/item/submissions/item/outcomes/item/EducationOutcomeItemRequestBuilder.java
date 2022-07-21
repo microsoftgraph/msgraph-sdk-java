@@ -307,7 +307,7 @@ public class EducationOutcomeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationOutcomeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationOutcomeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationOutcomeItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EducationOutcomeItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationOutcomeItemRequestBuilderGetQueryParameters queryParameters = new EducationOutcomeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationOutcomeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationOutcomeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationOutcomeItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EducationOutcomeItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationOutcomeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationOutcomeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationOutcomeItemRequestBuilderPatchRequestConfiguration() {

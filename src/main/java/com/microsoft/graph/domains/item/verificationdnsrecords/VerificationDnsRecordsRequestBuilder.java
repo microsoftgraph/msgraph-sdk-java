@@ -20,7 +20,7 @@ import microsoft.graph.models.DomainDnsRecordCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity. */
 public class VerificationDnsRecordsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

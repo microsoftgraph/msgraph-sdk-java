@@ -307,7 +307,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetQueryParameters queryParameters = new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration() {

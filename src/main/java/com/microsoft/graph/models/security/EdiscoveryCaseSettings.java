@@ -21,6 +21,7 @@ public class EdiscoveryCaseSettings extends Entity implements Parsable {
      */
     public EdiscoveryCaseSettings() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryCaseSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

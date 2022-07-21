@@ -29,6 +29,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     private String _mediaLegId;
     /** The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality. */
     private java.util.List<TeleconferenceDeviceMediaQuality> _mediaQualityList;
+    /** The OdataType property */
+    private String _odataType;
     /** A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property. */
     private String _participantId;
     /**
@@ -37,6 +39,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     public TeleconferenceDeviceQuality() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teleconferenceDeviceQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -119,7 +122,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceQuality currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
             this.put("cloudServiceDeploymentEnvironment", (n) -> { currentObject.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
             this.put("cloudServiceDeploymentId", (n) -> { currentObject.setCloudServiceDeploymentId(n.getStringValue()); });
@@ -129,6 +132,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
             this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
             this.put("mediaLegId", (n) -> { currentObject.setMediaLegId(n.getStringValue()); });
             this.put("mediaQualityList", (n) -> { currentObject.setMediaQualityList(n.getCollectionOfObjectValues(TeleconferenceDeviceMediaQuality::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
         }};
     }
@@ -147,6 +151,14 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {
         return this._mediaQualityList;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
@@ -172,6 +184,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeStringValue("mediaLegId", this.getMediaLegId());
         writer.writeCollectionOfObjectValues("mediaQualityList", this.getMediaQualityList());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("participantId", this.getParticipantId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -254,6 +267,14 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     public void setMediaQualityList(@javax.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
         this._mediaQualityList = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.

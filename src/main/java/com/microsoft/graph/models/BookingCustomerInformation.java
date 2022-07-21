@@ -30,6 +30,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      */
     public BookingCustomerInformation() {
         super();
+        this.setOdataType("#microsoft.graph.bookingCustomerInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

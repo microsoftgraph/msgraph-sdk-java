@@ -17,6 +17,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      */
     public ManagedDeviceMobileAppConfigurationAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

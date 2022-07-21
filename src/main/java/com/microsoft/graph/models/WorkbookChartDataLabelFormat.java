@@ -18,6 +18,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
      */
     public WorkbookChartDataLabelFormat() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartDataLabelFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

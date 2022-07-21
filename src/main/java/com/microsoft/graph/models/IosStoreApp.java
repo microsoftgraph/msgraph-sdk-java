@@ -22,6 +22,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      */
     public IosStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.iosStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

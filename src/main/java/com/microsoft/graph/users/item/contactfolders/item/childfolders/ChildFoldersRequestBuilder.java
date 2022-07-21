@@ -21,7 +21,7 @@ import microsoft.graph.users.item.contactfolders.item.childfolders.count.CountRe
 import microsoft.graph.users.item.contactfolders.item.childfolders.delta.DeltaRequestBuilder;
 /** Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity. */
 public class ChildFoldersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

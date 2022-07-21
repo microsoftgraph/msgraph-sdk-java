@@ -28,6 +28,7 @@ public class Conversation extends Entity implements Parsable {
      */
     public Conversation() {
         super();
+        this.setOdataType("#microsoft.graph.conversation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

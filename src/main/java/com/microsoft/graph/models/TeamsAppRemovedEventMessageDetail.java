@@ -20,6 +20,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
      */
     public TeamsAppRemovedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamsAppRemovedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

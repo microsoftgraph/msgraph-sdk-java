@@ -14,6 +14,8 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** In entitlement management, when the access should expire. */
     private ExpirationPattern _expiration;
+    /** The OdataType property */
+    private String _odataType;
     /** For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management. */
     private PatternedRecurrence _recurrence;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. In PIM, when the  eligible or active assignment becomes active. */
@@ -24,6 +26,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     public RequestSchedule() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.requestSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,11 +61,20 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequestSchedule currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("expiration", (n) -> { currentObject.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recurrence property value. For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management.
@@ -88,6 +100,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("expiration", this.getExpiration());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +120,14 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
      */
     public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
         this._expiration = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recurrence property value. For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management.

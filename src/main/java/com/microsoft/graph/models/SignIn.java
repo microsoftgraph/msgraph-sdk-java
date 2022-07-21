@@ -62,7 +62,7 @@ public class SignIn extends Entity implements Parsable {
      */
     public SignIn() {
         super();
-        this.setType("#microsoft.graph.signIn");
+        this.setOdataType("#microsoft.graph.signIn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

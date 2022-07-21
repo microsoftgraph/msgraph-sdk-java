@@ -15,12 +15,15 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowCreateUpdateChannels;
     /** If set to true, guests can delete channels. */
     private Boolean _allowDeleteChannels;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamGuestSettings and sets the default values.
      * @return a void
      */
     public TeamGuestSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamGuestSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamGuestSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("allowCreateUpdateChannels", (n) -> { currentObject.setAllowCreateUpdateChannels(n.getBooleanValue()); });
             this.put("allowDeleteChannels", (n) -> { currentObject.setAllowDeleteChannels(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCreateUpdateChannels", this.getAllowCreateUpdateChannels());
         writer.writeBooleanValue("allowDeleteChannels", this.getAllowDeleteChannels());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
      */
     public void setAllowDeleteChannels(@javax.annotation.Nullable final Boolean value) {
         this._allowDeleteChannels = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

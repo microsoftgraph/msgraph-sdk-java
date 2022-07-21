@@ -20,7 +20,7 @@ import microsoft.graph.models.termstore.Term;
 import microsoft.graph.models.termstore.TermCollectionResponse;
 /** Provides operations to manage the children property of the microsoft.graph.termStore.term entity. */
 public class ChildrenRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

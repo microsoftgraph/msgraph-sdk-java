@@ -20,7 +20,7 @@ import microsoft.graph.models.PermissionGrantConditionSetCollectionResponse;
 import microsoft.graph.policies.permissiongrantpolicies.item.excludes.count.CountRequestBuilder;
 /** Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity. */
 public class ExcludesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

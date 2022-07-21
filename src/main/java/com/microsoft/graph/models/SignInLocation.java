@@ -17,6 +17,8 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     private String _countryOrRegion;
     /** Provides the latitude, longitude and altitude where the sign-in originated. */
     private GeoCoordinates _geoCoordinates;
+    /** The OdataType property */
+    private String _odataType;
     /** Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity. */
     private String _state;
     /**
@@ -25,6 +27,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
      */
     public SignInLocation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.signInLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInLocation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
             this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public GeoCoordinates getGeoCoordinates() {
         return this._geoCoordinates;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
@@ -100,6 +112,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("city", this.getCity());
         writer.writeStringValue("countryOrRegion", this.getCountryOrRegion());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
      */
     public void setGeoCoordinates(@javax.annotation.Nullable final GeoCoordinates value) {
         this._geoCoordinates = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.

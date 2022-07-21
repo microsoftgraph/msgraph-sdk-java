@@ -20,6 +20,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     public EmailFileAssessmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.emailFileAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

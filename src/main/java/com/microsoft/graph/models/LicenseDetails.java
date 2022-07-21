@@ -21,6 +21,7 @@ public class LicenseDetails extends Entity implements Parsable {
      */
     public LicenseDetails() {
         super();
+        this.setOdataType("#microsoft.graph.licenseDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

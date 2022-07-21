@@ -307,7 +307,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyRuleItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleManagementPolicyRuleItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleManagementPolicyRuleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration() {

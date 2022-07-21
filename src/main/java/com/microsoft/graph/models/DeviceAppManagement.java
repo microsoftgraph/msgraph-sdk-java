@@ -52,6 +52,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public DeviceAppManagement() {
         super();
+        this.setOdataType("#microsoft.graph.deviceAppManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

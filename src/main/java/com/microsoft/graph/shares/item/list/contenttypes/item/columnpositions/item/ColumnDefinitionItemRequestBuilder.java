@@ -155,7 +155,7 @@ public class ColumnDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public ColumnDefinitionItemRequestBuilderGetQueryParameters queryParameters = new ColumnDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new columnDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnDefinitionItemRequestBuilderGetRequestConfiguration() {

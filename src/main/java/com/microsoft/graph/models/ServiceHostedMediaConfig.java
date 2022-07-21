@@ -16,6 +16,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      */
     public ServiceHostedMediaConfig() {
         super();
+        this.setOdataType("#microsoft.graph.serviceHostedMediaConfig");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

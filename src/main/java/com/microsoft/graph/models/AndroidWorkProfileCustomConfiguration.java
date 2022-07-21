@@ -16,6 +16,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      */
     public AndroidWorkProfileCustomConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.androidWorkProfileCustomConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

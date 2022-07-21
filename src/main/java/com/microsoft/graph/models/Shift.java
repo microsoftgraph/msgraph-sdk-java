@@ -22,6 +22,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     public Shift() {
         super();
+        this.setOdataType("#microsoft.graph.shift");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

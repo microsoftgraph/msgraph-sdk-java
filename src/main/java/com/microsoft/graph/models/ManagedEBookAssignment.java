@@ -19,7 +19,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      */
     public ManagedEBookAssignment() {
         super();
-        this.setType("#microsoft.graph.managedEBookAssignment");
+        this.setOdataType("#microsoft.graph.managedEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

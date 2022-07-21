@@ -307,7 +307,7 @@ public class ChatMessageHostedContentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ChatMessageHostedContentItemRequestBuilder {
         @javax.annotation.Nullable
         public ChatMessageHostedContentItemRequestBuilderGetQueryParameters queryParameters = new ChatMessageHostedContentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new chatMessageHostedContentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ChatMessageHostedContentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new chatMessageHostedContentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration() {

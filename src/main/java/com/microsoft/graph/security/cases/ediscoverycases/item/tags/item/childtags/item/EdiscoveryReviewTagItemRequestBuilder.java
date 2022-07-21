@@ -155,7 +155,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryReviewTagItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryReviewTagItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryReviewTagItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration() {

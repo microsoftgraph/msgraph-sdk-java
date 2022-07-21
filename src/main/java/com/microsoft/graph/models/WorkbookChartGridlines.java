@@ -18,6 +18,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
      */
     public WorkbookChartGridlines() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartGridlines");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

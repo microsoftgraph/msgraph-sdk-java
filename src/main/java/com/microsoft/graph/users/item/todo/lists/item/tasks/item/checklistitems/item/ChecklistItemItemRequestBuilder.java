@@ -307,7 +307,7 @@ public class ChecklistItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new checklistItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChecklistItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChecklistItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ChecklistItemItemRequestBuilder {
         @javax.annotation.Nullable
         public ChecklistItemItemRequestBuilderGetQueryParameters queryParameters = new ChecklistItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new checklistItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChecklistItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChecklistItemItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ChecklistItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new checklistItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChecklistItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChecklistItemItemRequestBuilderPatchRequestConfiguration() {

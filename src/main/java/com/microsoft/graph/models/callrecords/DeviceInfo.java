@@ -33,6 +33,8 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     private Float _lowSpeechToNoiseEventRatio;
     /** Glitches per 5 minute interval for the media endpoint's microphone. */
     private Float _micGlitchRate;
+    /** The OdataType property */
+    private String _odataType;
     /** Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
     private Integer _receivedNoiseLevel;
     /** Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
@@ -59,6 +61,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     public DeviceInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.deviceInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -133,7 +136,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceInfo currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<>(22) {{
             this.put("captureDeviceDriver", (n) -> { currentObject.setCaptureDeviceDriver(n.getStringValue()); });
             this.put("captureDeviceName", (n) -> { currentObject.setCaptureDeviceName(n.getStringValue()); });
             this.put("captureNotFunctioningEventRatio", (n) -> { currentObject.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
@@ -145,6 +148,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
             this.put("lowSpeechLevelEventRatio", (n) -> { currentObject.setLowSpeechLevelEventRatio(n.getFloatValue()); });
             this.put("lowSpeechToNoiseEventRatio", (n) -> { currentObject.setLowSpeechToNoiseEventRatio(n.getFloatValue()); });
             this.put("micGlitchRate", (n) -> { currentObject.setMicGlitchRate(n.getFloatValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("receivedNoiseLevel", (n) -> { currentObject.setReceivedNoiseLevel(n.getIntegerValue()); });
             this.put("receivedSignalLevel", (n) -> { currentObject.setReceivedSignalLevel(n.getIntegerValue()); });
             this.put("renderDeviceDriver", (n) -> { currentObject.setRenderDeviceDriver(n.getStringValue()); });
@@ -196,6 +200,14 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Float getMicGlitchRate() {
         return this._micGlitchRate;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
@@ -295,6 +307,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
         writer.writeFloatValue("lowSpeechLevelEventRatio", this.getLowSpeechLevelEventRatio());
         writer.writeFloatValue("lowSpeechToNoiseEventRatio", this.getLowSpeechToNoiseEventRatio());
         writer.writeFloatValue("micGlitchRate", this.getMicGlitchRate());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("receivedNoiseLevel", this.getReceivedNoiseLevel());
         writer.writeIntegerValue("receivedSignalLevel", this.getReceivedSignalLevel());
         writer.writeStringValue("renderDeviceDriver", this.getRenderDeviceDriver());
@@ -402,6 +415,14 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     public void setMicGlitchRate(@javax.annotation.Nullable final Float value) {
         this._micGlitchRate = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.

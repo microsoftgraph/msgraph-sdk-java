@@ -30,6 +30,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     public AccessReviewHistoryInstance() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewHistoryInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

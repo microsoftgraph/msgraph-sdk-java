@@ -15,6 +15,8 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     private String _contentUrl;
     /** Identifier for the entity hosted by the tab provider. */
     private String _entityId;
+    /** The OdataType property */
+    private String _odataType;
     /** Url called by Teams client when a Tab is removed using the Teams Client. */
     private String _removeUrl;
     /** Url for showing tab contents outside of Teams. */
@@ -25,6 +27,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     public TeamsTabConfiguration() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamsTabConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,21 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsTabConfiguration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
             this.put("entityId", (n) -> { currentObject.setEntityId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("removeUrl", (n) -> { currentObject.setRemoveUrl(n.getStringValue()); });
             this.put("websiteUrl", (n) -> { currentObject.setWebsiteUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
@@ -99,6 +111,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentUrl", this.getContentUrl());
         writer.writeStringValue("entityId", this.getEntityId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("removeUrl", this.getRemoveUrl());
         writer.writeStringValue("websiteUrl", this.getWebsiteUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      */
     public void setEntityId(@javax.annotation.Nullable final String value) {
         this._entityId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.

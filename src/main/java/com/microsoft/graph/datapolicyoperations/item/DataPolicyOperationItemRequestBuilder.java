@@ -307,7 +307,7 @@ public class DataPolicyOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataPolicyOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DataPolicyOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public DataPolicyOperationItemRequestBuilderGetQueryParameters queryParameters = new DataPolicyOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dataPolicyOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DataPolicyOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataPolicyOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DataPolicyOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new dataPolicyOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DataPolicyOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataPolicyOperationItemRequestBuilderPatchRequestConfiguration() {

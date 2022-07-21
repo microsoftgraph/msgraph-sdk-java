@@ -16,6 +16,7 @@ public class EducationSubmissionIndividualRecipient extends EducationSubmissionR
      */
     public EducationSubmissionIndividualRecipient() {
         super();
+        this.setOdataType("#microsoft.graph.educationSubmissionIndividualRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

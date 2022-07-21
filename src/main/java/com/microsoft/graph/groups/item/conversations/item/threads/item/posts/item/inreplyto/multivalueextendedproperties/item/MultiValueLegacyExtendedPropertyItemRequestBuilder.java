@@ -307,7 +307,7 @@ public class MultiValueLegacyExtendedPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new multiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MultiValueLegacyExtendedPropertyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MultiValueLegacyExtendedPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public MultiValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters queryParameters = new MultiValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new multiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MultiValueLegacyExtendedPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new multiValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MultiValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MultiValueLegacyExtendedPropertyItemRequestBuilderPatchRequestConfiguration() {

@@ -108,6 +108,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public ServicePrincipal() {
         super();
+        this.setOdataType("#microsoft.graph.servicePrincipal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

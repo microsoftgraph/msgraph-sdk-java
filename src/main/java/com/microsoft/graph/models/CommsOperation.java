@@ -21,7 +21,7 @@ public class CommsOperation extends Entity implements Parsable {
      */
     public CommsOperation() {
         super();
-        this.setType("#microsoft.graph.commsOperation");
+        this.setOdataType("#microsoft.graph.commsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

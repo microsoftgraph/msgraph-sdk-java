@@ -16,6 +16,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      */
     public Windows10CustomConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10CustomConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

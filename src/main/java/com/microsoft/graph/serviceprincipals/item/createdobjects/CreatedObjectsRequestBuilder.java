@@ -20,7 +20,7 @@ import microsoft.graph.serviceprincipals.item.createdobjects.count.CountRequestB
 import microsoft.graph.serviceprincipals.item.createdobjects.serviceprincipal.ServicePrincipalRequestBuilder;
 /** Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity. */
 public class CreatedObjectsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

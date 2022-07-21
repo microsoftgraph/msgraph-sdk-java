@@ -17,6 +17,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     private CloudAppSecuritySessionControl _cloudAppSecurity;
     /** Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not. */
     private Boolean _disableResilienceDefaults;
+    /** The OdataType property */
+    private String _odataType;
     /** Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. */
     private PersistentBrowserSessionControl _persistentBrowser;
     /** Session control to enforce signin frequency. */
@@ -27,6 +29,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessSessionControls");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,22 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessSessionControls currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("applicationEnforcedRestrictions", (n) -> { currentObject.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
             this.put("cloudAppSecurity", (n) -> { currentObject.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
             this.put("disableResilienceDefaults", (n) -> { currentObject.setDisableResilienceDefaults(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("persistentBrowser", (n) -> { currentObject.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
             this.put("signInFrequency", (n) -> { currentObject.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
@@ -111,6 +123,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         writer.writeObjectValue("applicationEnforcedRestrictions", this.getApplicationEnforcedRestrictions());
         writer.writeObjectValue("cloudAppSecurity", this.getCloudAppSecurity());
         writer.writeBooleanValue("disableResilienceDefaults", this.getDisableResilienceDefaults());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("persistentBrowser", this.getPersistentBrowser());
         writer.writeObjectValue("signInFrequency", this.getSignInFrequency());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     public void setDisableResilienceDefaults(@javax.annotation.Nullable final Boolean value) {
         this._disableResilienceDefaults = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.

@@ -18,6 +18,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      */
     public PrincipalResourceMembershipsScope() {
         super();
+        this.setOdataType("#microsoft.graph.principalResourceMembershipsScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

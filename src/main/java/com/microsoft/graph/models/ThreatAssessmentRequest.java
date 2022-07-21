@@ -32,7 +32,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     public ThreatAssessmentRequest() {
         super();
-        this.setType("#microsoft.graph.threatAssessmentRequest");
+        this.setOdataType("#microsoft.graph.threatAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

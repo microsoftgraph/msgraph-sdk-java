@@ -18,6 +18,8 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastAccessedTime;
     /** Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
     private RecentNotebookLinks _links;
+    /** The OdataType property */
+    private String _odataType;
     /** The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive. */
     private OnenoteSourceService _sourceService;
     /**
@@ -26,6 +28,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     public RecentNotebook() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.recentNotebook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,10 +63,11 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecentNotebook currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastAccessedTime", (n) -> { currentObject.setLastAccessedTime(n.getOffsetDateTimeValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceService", (n) -> { currentObject.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
         }};
     }
@@ -84,6 +88,14 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
         return this._links;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
      * @return a onenoteSourceService
      */
@@ -101,6 +113,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastAccessedTime", this.getLastAccessedTime());
         writer.writeObjectValue("links", this.getLinks());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("sourceService", this.getSourceService());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     public void setLinks(@javax.annotation.Nullable final RecentNotebookLinks value) {
         this._links = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.

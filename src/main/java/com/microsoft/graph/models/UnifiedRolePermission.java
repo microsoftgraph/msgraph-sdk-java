@@ -17,12 +17,15 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     private String _condition;
     /** Set of tasks that may not be performed on a resource. Not yet supported. */
     private java.util.List<String> _excludedResourceActions;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new unifiedRolePermission and sets the default values.
      * @return a void
      */
     public UnifiedRolePermission() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.unifiedRolePermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,11 +76,20 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRolePermission currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
             this.put("excludedResourceActions", (n) -> { currentObject.setExcludedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -89,6 +101,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("allowedResourceActions", this.getAllowedResourceActions());
         writer.writeStringValue("condition", this.getCondition());
         writer.writeCollectionOfPrimitiveValues("excludedResourceActions", this.getExcludedResourceActions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      */
     public void setExcludedResourceActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludedResourceActions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

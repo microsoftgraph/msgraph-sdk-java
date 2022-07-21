@@ -20,7 +20,7 @@ import microsoft.graph.models.AgreementFileVersionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity. */
 public class VersionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

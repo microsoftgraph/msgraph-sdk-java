@@ -307,7 +307,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Fido2AuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new Fido2AuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new fido2AuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new Fido2AuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public Fido2AuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

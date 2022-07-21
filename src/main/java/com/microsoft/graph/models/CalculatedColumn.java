@@ -15,6 +15,8 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     private String _format;
     /** The formula used to compute the value for this column. */
     private String _formula;
+    /** The OdataType property */
+    private String _odataType;
     /** The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text. */
     private String _outputType;
     /**
@@ -23,6 +25,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     public CalculatedColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.calculatedColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalculatedColumn currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
             this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("outputType", (n) -> { currentObject.setOutputType(n.getStringValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         return this._formula;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
      * @return a string
      */
@@ -88,6 +100,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("format", this.getFormat());
         writer.writeStringValue("formula", this.getFormula());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("outputType", this.getOutputType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     public void setFormula(@javax.annotation.Nullable final String value) {
         this._formula = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.

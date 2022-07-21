@@ -155,7 +155,7 @@ public class TokenLifetimePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public TokenLifetimePolicyItemRequestBuilderGetQueryParameters queryParameters = new TokenLifetimePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tokenLifetimePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration() {

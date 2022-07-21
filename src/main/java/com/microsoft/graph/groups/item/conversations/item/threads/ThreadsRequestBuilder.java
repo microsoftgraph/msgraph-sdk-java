@@ -20,7 +20,7 @@ import microsoft.graph.models.ConversationThreadCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the threads property of the microsoft.graph.conversation entity. */
 public class ThreadsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

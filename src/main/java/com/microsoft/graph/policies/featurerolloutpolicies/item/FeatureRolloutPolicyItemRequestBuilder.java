@@ -34,7 +34,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DirectoryObjectItemRequestBuilder appliesTo(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new featureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new FeatureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public FeatureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public FeatureRolloutPolicyItemRequestBuilderGetQueryParameters queryParameters = new FeatureRolloutPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new featureRolloutPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new featureRolloutPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration() {

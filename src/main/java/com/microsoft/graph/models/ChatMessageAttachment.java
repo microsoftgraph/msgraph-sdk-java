@@ -21,6 +21,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     private String _id;
     /** Name of the attachment. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document. */
     private String _thumbnailUrl;
     /**
@@ -29,6 +31,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     public ChatMessageAttachment() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.chatMessageAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,12 +82,13 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageAttachment currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
         }};
     }
@@ -103,6 +107,14 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
@@ -124,6 +136,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("contentUrl", this.getContentUrl());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("thumbnailUrl", this.getThumbnailUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -174,6 +187,14 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.

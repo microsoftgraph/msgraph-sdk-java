@@ -16,6 +16,8 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     private IdentitySet _changedBy;
     /** Data and time when the entity was changed. */
     private OffsetDateTime _eventDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
     private SubjectRightsRequestStage _stage;
     /** The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
@@ -28,6 +30,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.subjectRightsRequestHistory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,13 +73,22 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestHistory currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("changedBy", (n) -> { currentObject.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
             this.put("stageStatus", (n) -> { currentObject.setStageStatus(n.getEnumValue(SubjectRightsRequestStageStatus.class)); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
@@ -111,6 +123,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
         Objects.requireNonNull(writer);
         writer.writeObjectValue("changedBy", this.getChangedBy());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("stage", this.getStage());
         writer.writeEnumValue("stageStatus", this.getStageStatus());
         writer.writeStringValue("type", this.getType());
@@ -139,6 +152,14 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      */
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.

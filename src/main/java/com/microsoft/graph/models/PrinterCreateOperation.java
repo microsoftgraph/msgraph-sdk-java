@@ -18,6 +18,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      */
     public PrinterCreateOperation() {
         super();
+        this.setOdataType("#microsoft.graph.printerCreateOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

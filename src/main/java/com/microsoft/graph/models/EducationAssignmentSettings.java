@@ -16,6 +16,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      */
     public EducationAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.educationAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

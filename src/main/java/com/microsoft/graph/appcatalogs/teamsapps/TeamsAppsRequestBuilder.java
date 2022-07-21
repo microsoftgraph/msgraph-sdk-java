@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsApp;
 import microsoft.graph.models.TeamsAppCollectionResponse;
 /** Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity. */
 public class TeamsAppsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

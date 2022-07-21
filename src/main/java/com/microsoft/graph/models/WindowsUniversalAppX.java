@@ -30,6 +30,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      */
     public WindowsUniversalAppX() {
         super();
+        this.setOdataType("#microsoft.graph.windowsUniversalAppX");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -22,6 +22,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     public ManagedIOSStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.managedIOSStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -16,6 +16,7 @@ public class LocationConstraintItem extends Location implements Parsable {
      */
     public LocationConstraintItem() {
         super();
+        this.setOdataType("#microsoft.graph.locationConstraintItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

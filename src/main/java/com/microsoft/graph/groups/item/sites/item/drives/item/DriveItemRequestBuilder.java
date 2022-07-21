@@ -155,7 +155,7 @@ public class DriveItemRequestBuilder {
         @javax.annotation.Nullable
         public DriveItemRequestBuilderGetQueryParameters queryParameters = new DriveItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new driveItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemRequestBuilderGetRequestConfiguration() {

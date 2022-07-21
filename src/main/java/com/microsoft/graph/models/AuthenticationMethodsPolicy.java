@@ -30,6 +30,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     public AuthenticationMethodsPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.authenticationMethodsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

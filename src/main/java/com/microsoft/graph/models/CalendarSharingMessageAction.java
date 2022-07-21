@@ -17,12 +17,15 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** The importance property */
     private CalendarSharingActionImportance _importance;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new calendarSharingMessageAction and sets the default values.
      * @return a void
      */
     public CalendarSharingMessageAction() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.calendarSharingMessageAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarSharingMessageAction currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CalendarSharingAction.class)); });
             this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
             this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
         return this._importance;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("action", this.getAction());
         writer.writeEnumValue("actionType", this.getActionType());
         writer.writeEnumValue("importance", this.getImportance());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
      */
     public void setImportance(@javax.annotation.Nullable final CalendarSharingActionImportance value) {
         this._importance = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

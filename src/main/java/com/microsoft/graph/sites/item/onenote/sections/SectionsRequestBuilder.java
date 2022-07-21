@@ -20,7 +20,7 @@ import microsoft.graph.models.OnenoteSectionCollectionResponse;
 import microsoft.graph.sites.item.onenote.sections.count.CountRequestBuilder;
 /** Provides operations to manage the sections property of the microsoft.graph.onenote entity. */
 public class SectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

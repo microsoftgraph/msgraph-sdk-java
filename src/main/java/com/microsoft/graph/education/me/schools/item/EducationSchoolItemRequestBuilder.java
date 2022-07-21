@@ -155,7 +155,7 @@ public class EducationSchoolItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSchoolItemRequestBuilderGetQueryParameters queryParameters = new EducationSchoolItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSchoolItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSchoolItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSchoolItemRequestBuilderGetRequestConfiguration() {

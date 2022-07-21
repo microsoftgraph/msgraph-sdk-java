@@ -16,6 +16,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      */
     public CloudAppSecuritySessionControl() {
         super();
+        this.setOdataType("#microsoft.graph.cloudAppSecuritySessionControl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

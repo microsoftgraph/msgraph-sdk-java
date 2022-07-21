@@ -24,6 +24,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      */
     public UnifiedRoleManagementPolicyNotificationRule() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyNotificationRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

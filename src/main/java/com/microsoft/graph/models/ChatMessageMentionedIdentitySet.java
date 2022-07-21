@@ -16,6 +16,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      */
     public ChatMessageMentionedIdentitySet() {
         super();
+        this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

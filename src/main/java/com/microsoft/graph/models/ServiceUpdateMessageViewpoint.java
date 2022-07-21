@@ -17,12 +17,15 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     private Boolean _isFavorited;
     /** Indicates whether the user read the message. */
     private Boolean _isRead;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
      * @return a void
      */
     public ServiceUpdateMessageViewpoint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.serviceUpdateMessageViewpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessageViewpoint currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
             this.put("isFavorited", (n) -> { currentObject.setIsFavorited(n.getBooleanValue()); });
             this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
         return this._isRead;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavorited", this.getIsFavorited());
         writer.writeBooleanValue("isRead", this.getIsRead());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      */
     public void setIsRead(@javax.annotation.Nullable final Boolean value) {
         this._isRead = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

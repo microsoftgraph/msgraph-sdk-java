@@ -39,7 +39,7 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
      */
     public UnifiedRoleScheduleBase() {
         super();
-        this.setType("#microsoft.graph.unifiedRoleScheduleBase");
+        this.setOdataType("#microsoft.graph.unifiedRoleScheduleBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

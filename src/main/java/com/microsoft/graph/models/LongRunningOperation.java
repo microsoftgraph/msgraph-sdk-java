@@ -26,7 +26,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     public LongRunningOperation() {
         super();
-        this.setType("#microsoft.graph.longRunningOperation");
+        this.setOdataType("#microsoft.graph.longRunningOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

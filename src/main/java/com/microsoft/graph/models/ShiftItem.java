@@ -20,7 +20,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     public ShiftItem() {
         super();
-        this.setType("#microsoft.graph.shiftItem");
+        this.setOdataType("#microsoft.graph.shiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

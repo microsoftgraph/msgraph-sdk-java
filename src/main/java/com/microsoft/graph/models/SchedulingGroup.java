@@ -20,6 +20,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      */
     public SchedulingGroup() {
         super();
+        this.setOdataType("#microsoft.graph.schedulingGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

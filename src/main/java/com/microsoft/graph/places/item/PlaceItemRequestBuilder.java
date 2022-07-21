@@ -313,7 +313,7 @@ public class PlaceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new placeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlaceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlaceItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class PlaceItemRequestBuilder {
         @javax.annotation.Nullable
         public PlaceItemRequestBuilderGetQueryParameters queryParameters = new PlaceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new placeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlaceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlaceItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class PlaceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new placeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlaceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlaceItemRequestBuilderPatchRequestConfiguration() {

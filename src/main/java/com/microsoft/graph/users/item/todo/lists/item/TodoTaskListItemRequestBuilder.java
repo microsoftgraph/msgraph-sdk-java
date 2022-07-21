@@ -209,7 +209,7 @@ public class TodoTaskListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class TodoTaskListItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.todo.lists.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a todoTaskItemRequestBuilder
+     * @return a TodoTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TodoTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class TodoTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new todoTaskListItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskListItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskListItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class TodoTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public TodoTaskListItemRequestBuilderGetQueryParameters queryParameters = new TodoTaskListItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new todoTaskListItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskListItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskListItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class TodoTaskListItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new todoTaskListItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TodoTaskListItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TodoTaskListItemRequestBuilderPatchRequestConfiguration() {

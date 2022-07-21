@@ -357,7 +357,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleAssignmentItemRequestBuilder
+     * @return a UnifiedRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
@@ -369,7 +369,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleAssignmentScheduleInstances.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleAssignmentScheduleInstanceItemRequestBuilder
+     * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder roleAssignmentScheduleInstances(@javax.annotation.Nonnull final String id) {
@@ -381,7 +381,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleAssignmentScheduleRequests.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleAssignmentScheduleRequestItemRequestBuilder
+     * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleRequestItemRequestBuilder roleAssignmentScheduleRequests(@javax.annotation.Nonnull final String id) {
@@ -393,7 +393,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleAssignmentSchedules.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleAssignmentScheduleItemRequestBuilder
+     * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleAssignmentScheduleItemRequestBuilder roleAssignmentSchedules(@javax.annotation.Nonnull final String id) {
@@ -405,7 +405,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleDefinitionItemRequestBuilder
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
@@ -417,7 +417,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleEligibilityScheduleInstances.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleEligibilityScheduleInstanceItemRequestBuilder
+     * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder roleEligibilityScheduleInstances(@javax.annotation.Nonnull final String id) {
@@ -429,7 +429,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleEligibilityScheduleRequests.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleEligibilityScheduleRequestItemRequestBuilder
+     * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleRequestItemRequestBuilder roleEligibilityScheduleRequests(@javax.annotation.Nonnull final String id) {
@@ -441,7 +441,7 @@ public class EntitlementManagementRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.entitlementManagement.roleEligibilitySchedules.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleEligibilityScheduleItemRequestBuilder
+     * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleEligibilityScheduleItemRequestBuilder roleEligibilitySchedules(@javax.annotation.Nonnull final String id) {

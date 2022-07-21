@@ -18,6 +18,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      */
     public TermsOfUseContainer() {
         super();
+        this.setOdataType("#microsoft.graph.termsOfUseContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

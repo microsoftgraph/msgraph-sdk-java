@@ -17,6 +17,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements Parsab
      */
     public TargetedManagedAppPolicyAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.targetedManagedAppPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

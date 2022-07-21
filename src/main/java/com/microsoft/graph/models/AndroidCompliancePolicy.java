@@ -56,6 +56,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      */
     public AndroidCompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.androidCompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,6 +20,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     public TimeOff() {
         super();
+        this.setOdataType("#microsoft.graph.timeOff");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

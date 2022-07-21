@@ -319,7 +319,7 @@ public class PrintTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class PrintTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintTaskItemRequestBuilderGetQueryParameters queryParameters = new PrintTaskItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class PrintTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskItemRequestBuilderPatchRequestConfiguration() {

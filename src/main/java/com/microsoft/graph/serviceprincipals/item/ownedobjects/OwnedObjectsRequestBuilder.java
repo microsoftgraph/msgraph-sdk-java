@@ -34,7 +34,7 @@ public class OwnedObjectsRequestBuilder {
     public AppRoleAssignmentRequestBuilder appRoleAssignment() {
         return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,6 +18,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     public OnenoteResource() {
         super();
+        this.setOdataType("#microsoft.graph.onenoteResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

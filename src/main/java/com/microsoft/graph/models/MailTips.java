@@ -29,6 +29,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     private Boolean _mailboxFull;
     /** The maximum message size that has been configured for the recipient's organization or mailbox. */
     private Integer _maxMessageSize;
+    /** The OdataType property */
+    private String _odataType;
     /** The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content. */
     private RecipientScopeType _recipientScope;
     /** Recipients suggested based on previous contexts where they appear in the same message. */
@@ -41,6 +43,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     public MailTips() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mailTips");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +118,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailTips currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("automaticReplies", (n) -> { currentObject.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
             this.put("customMailTip", (n) -> { currentObject.setCustomMailTip(n.getStringValue()); });
             this.put("deliveryRestricted", (n) -> { currentObject.setDeliveryRestricted(n.getBooleanValue()); });
@@ -125,6 +128,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
             this.put("isModerated", (n) -> { currentObject.setIsModerated(n.getBooleanValue()); });
             this.put("mailboxFull", (n) -> { currentObject.setMailboxFull(n.getBooleanValue()); });
             this.put("maxMessageSize", (n) -> { currentObject.setMaxMessageSize(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recipientScope", (n) -> { currentObject.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
             this.put("recipientSuggestions", (n) -> { currentObject.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
             this.put("totalMemberCount", (n) -> { currentObject.setTotalMemberCount(n.getIntegerValue()); });
@@ -153,6 +157,14 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getMaxMessageSize() {
         return this._maxMessageSize;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
@@ -194,6 +206,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isModerated", this.getIsModerated());
         writer.writeBooleanValue("mailboxFull", this.getMailboxFull());
         writer.writeIntegerValue("maxMessageSize", this.getMaxMessageSize());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("recipientScope", this.getRecipientScope());
         writer.writeCollectionOfObjectValues("recipientSuggestions", this.getRecipientSuggestions());
         writer.writeIntegerValue("totalMemberCount", this.getTotalMemberCount());
@@ -278,6 +291,14 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      */
     public void setMaxMessageSize(@javax.annotation.Nullable final Integer value) {
         this._maxMessageSize = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.

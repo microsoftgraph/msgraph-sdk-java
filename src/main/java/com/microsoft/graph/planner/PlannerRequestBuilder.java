@@ -48,7 +48,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.buckets.item collection
      * @param id Unique identifier of the item
-     * @return a plannerBucketItemRequestBuilder
+     * @return a PlannerBucketItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerBucketItemRequestBuilder buckets(@javax.annotation.Nonnull final String id) {
@@ -255,7 +255,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.plans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {
@@ -267,7 +267,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.planner.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a plannerTaskItemRequestBuilder
+     * @return a PlannerTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {

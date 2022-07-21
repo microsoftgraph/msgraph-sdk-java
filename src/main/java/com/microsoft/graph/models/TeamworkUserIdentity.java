@@ -16,6 +16,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      */
     public TeamworkUserIdentity() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkUserIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -28,6 +28,7 @@ public class DataPolicyOperation extends Entity implements Parsable {
      */
     public DataPolicyOperation() {
         super();
+        this.setOdataType("#microsoft.graph.dataPolicyOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

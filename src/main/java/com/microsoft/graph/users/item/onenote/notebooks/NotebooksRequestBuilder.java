@@ -22,7 +22,7 @@ import microsoft.graph.users.item.onenote.notebooks.getnotebookfromweburl.GetNot
 import microsoft.graph.users.item.onenote.notebooks.getrecentnotebookswithincludepersonalnotebooks.GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
 /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
 public class NotebooksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,6 +18,7 @@ public class SingleServicePrincipal extends SubjectSet implements Parsable {
      */
     public SingleServicePrincipal() {
         super();
+        this.setOdataType("#microsoft.graph.singleServicePrincipal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

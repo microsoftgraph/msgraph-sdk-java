@@ -20,7 +20,7 @@ import microsoft.graph.models.ApprovalStageCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the stages property of the microsoft.graph.approval entity. */
 public class StagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

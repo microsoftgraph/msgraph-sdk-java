@@ -20,7 +20,7 @@ import microsoft.graph.models.LicenseDetailsCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the licenseDetails property of the microsoft.graph.user entity. */
 public class LicenseDetailsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

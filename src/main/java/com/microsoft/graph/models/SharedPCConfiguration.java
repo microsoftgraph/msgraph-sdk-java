@@ -39,6 +39,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     public SharedPCConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.sharedPCConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

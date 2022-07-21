@@ -155,7 +155,7 @@ public class ContentTypeItemRequestBuilder {
         @javax.annotation.Nullable
         public ContentTypeItemRequestBuilderGetQueryParameters queryParameters = new ContentTypeItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contentTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContentTypeItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContentTypeItemRequestBuilderGetRequestConfiguration() {

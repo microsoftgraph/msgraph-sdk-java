@@ -21,7 +21,7 @@ import microsoft.graph.models.UserConsentRequest;
 import microsoft.graph.models.UserConsentRequestCollectionResponse;
 /** Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity. */
 public class UserConsentRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

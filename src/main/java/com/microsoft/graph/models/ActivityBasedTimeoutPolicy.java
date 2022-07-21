@@ -14,6 +14,7 @@ public class ActivityBasedTimeoutPolicy extends StsPolicy implements Parsable {
      */
     public ActivityBasedTimeoutPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.activityBasedTimeoutPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

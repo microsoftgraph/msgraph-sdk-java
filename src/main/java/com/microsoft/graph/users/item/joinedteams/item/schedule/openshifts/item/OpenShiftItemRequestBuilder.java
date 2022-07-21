@@ -307,7 +307,7 @@ public class OpenShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new openShiftItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OpenShiftItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OpenShiftItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class OpenShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public OpenShiftItemRequestBuilderGetQueryParameters queryParameters = new OpenShiftItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new openShiftItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OpenShiftItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OpenShiftItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class OpenShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new openShiftItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OpenShiftItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OpenShiftItemRequestBuilderPatchRequestConfiguration() {

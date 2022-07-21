@@ -17,6 +17,8 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     private Long _notAfter;
     /** The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.) */
     private Long _notBefore;
+    /** The OdataType property */
+    private String _odataType;
     /** The certificate thumbprint. */
     private String _thumbprint;
     /**
@@ -25,6 +27,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.pkcs12CertificateInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +54,11 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Pkcs12CertificateInformation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("notAfter", (n) -> { currentObject.setNotAfter(n.getLongValue()); });
             this.put("notBefore", (n) -> { currentObject.setNotBefore(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
         }};
     }
@@ -83,6 +87,14 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
         return this._notBefore;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the thumbprint property value. The certificate thumbprint.
      * @return a string
      */
@@ -100,6 +112,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
         writer.writeBooleanValue("isActive", this.getIsActive());
         writer.writeLongValue("notAfter", this.getNotAfter());
         writer.writeLongValue("notBefore", this.getNotBefore());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("thumbprint", this.getThumbprint());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      */
     public void setNotBefore(@javax.annotation.Nullable final Long value) {
         this._notBefore = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the thumbprint property value. The certificate thumbprint.

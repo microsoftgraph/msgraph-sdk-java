@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.count.CountRequestBuilder;
 /** Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity. */
 public class ColumnPositionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

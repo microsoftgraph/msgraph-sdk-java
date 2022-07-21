@@ -307,7 +307,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new oAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public OAuth2PermissionGrantItemRequestBuilderGetQueryParameters queryParameters = new OAuth2PermissionGrantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new oAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OAuth2PermissionGrantItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new oAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration() {

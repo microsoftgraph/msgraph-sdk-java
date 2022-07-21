@@ -313,7 +313,7 @@ public class ActivityHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new activityHistoryItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityHistoryItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityHistoryItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ActivityHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public ActivityHistoryItemItemRequestBuilderGetQueryParameters queryParameters = new ActivityHistoryItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new activityHistoryItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityHistoryItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityHistoryItemItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ActivityHistoryItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new activityHistoryItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration() {

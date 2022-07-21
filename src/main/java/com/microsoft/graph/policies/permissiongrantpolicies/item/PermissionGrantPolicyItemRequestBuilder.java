@@ -207,7 +207,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item.excludes.item collection
      * @param id Unique identifier of the item
-     * @return a permissionGrantConditionSetItemRequestBuilder
+     * @return a PermissionGrantConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder excludes(@javax.annotation.Nonnull final String id) {
@@ -270,7 +270,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item.includes.item collection
      * @param id Unique identifier of the item
-     * @return a permissionGrantConditionSetItemRequestBuilder
+     * @return a PermissionGrantConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder includes(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public PermissionGrantPolicyItemRequestBuilderGetQueryParameters queryParameters = new PermissionGrantPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new permissionGrantPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new permissionGrantPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration() {

@@ -15,6 +15,8 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     private Map<String, Object> _additionalData;
     /** The time at which the app should be installed. */
     private OffsetDateTime _deadlineDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The time at which the app should be available for installation. */
     private OffsetDateTime _startDateTime;
     /** Whether the local device time or UTC time should be used when determining the available and deadline times. */
@@ -25,6 +27,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     public MobileAppInstallTimeSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mobileAppInstallTimeSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,11 +62,20 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppInstallTimeSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("deadlineDateTime", (n) -> { currentObject.setDeadlineDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("useLocalTime", (n) -> { currentObject.setUseLocalTime(n.getBooleanValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The time at which the app should be available for installation.
@@ -89,6 +101,7 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("deadlineDateTime", this.getDeadlineDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeBooleanValue("useLocalTime", this.getUseLocalTime());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -108,6 +121,14 @@ public class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsa
      */
     public void setDeadlineDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deadlineDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The time at which the app should be available for installation.

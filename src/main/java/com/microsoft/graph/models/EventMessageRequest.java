@@ -26,6 +26,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     public EventMessageRequest() {
         super();
+        this.setOdataType("#microsoft.graph.eventMessageRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

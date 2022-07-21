@@ -21,7 +21,7 @@ import microsoft.graph.users.item.mailfolders.item.childfolders.item.messages.co
 import microsoft.graph.users.item.mailfolders.item.childfolders.item.messages.delta.DeltaRequestBuilder;
 /** Provides operations to manage the messages property of the microsoft.graph.mailFolder entity. */
 public class MessagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

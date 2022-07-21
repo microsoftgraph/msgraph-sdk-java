@@ -17,6 +17,8 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     private ProvisioningStatusErrorCategory _errorCategory;
     /** Unique error code if any occurred. Learn more */
     private String _errorCode;
+    /** The OdataType property */
+    private String _odataType;
     /** Summarizes the status and describes why the status happened. */
     private String _reason;
     /** Provides the resolution for the corresponding error. */
@@ -27,6 +29,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     public ProvisioningErrorInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.provisioningErrorInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,13 +80,22 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningErrorInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
             this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
@@ -111,6 +123,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
         writer.writeEnumValue("errorCategory", this.getErrorCategory());
         writer.writeStringValue("errorCode", this.getErrorCode());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("reason", this.getReason());
         writer.writeStringValue("recommendedAction", this.getRecommendedAction());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -146,6 +159,14 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      */
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.

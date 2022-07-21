@@ -16,6 +16,7 @@ public class AgreementFile extends AgreementFileProperties implements Parsable {
      */
     public AgreementFile() {
         super();
+        this.setOdataType("#microsoft.graph.agreementFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

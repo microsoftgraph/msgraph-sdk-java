@@ -45,6 +45,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      */
     public AccessReviewScheduleDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewScheduleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

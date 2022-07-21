@@ -313,7 +313,7 @@ public class BookingAppointmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingAppointmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new BookingAppointmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingAppointmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class BookingAppointmentItemRequestBuilder {
         @javax.annotation.Nullable
         public BookingAppointmentItemRequestBuilderGetQueryParameters queryParameters = new BookingAppointmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new bookingAppointmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new BookingAppointmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingAppointmentItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class BookingAppointmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new bookingAppointmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new BookingAppointmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public BookingAppointmentItemRequestBuilderPatchRequestConfiguration() {

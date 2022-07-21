@@ -337,7 +337,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupSettingTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration() {
@@ -366,7 +366,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public GroupSettingTemplateItemRequestBuilderGetQueryParameters queryParameters = new GroupSettingTemplateItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new groupSettingTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GroupSettingTemplateItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupSettingTemplateItemRequestBuilderGetRequestConfiguration() {
@@ -381,7 +381,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new groupSettingTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration() {

@@ -18,6 +18,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     public SharedWithChannelTeamInfo() {
         super();
+        this.setOdataType("#microsoft.graph.sharedWithChannelTeamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

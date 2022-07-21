@@ -20,6 +20,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     public EdiscoveryReviewTag() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryReviewTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

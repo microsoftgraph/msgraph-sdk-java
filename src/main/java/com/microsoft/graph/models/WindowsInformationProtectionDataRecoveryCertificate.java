@@ -19,6 +19,8 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     private String _description;
     /** Data recovery Certificate expiration datetime */
     private OffsetDateTime _expirationDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Data recovery Certificate subject name */
     private String _subjectName;
     /**
@@ -27,6 +29,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     public WindowsInformationProtectionDataRecoveryCertificate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,12 +80,21 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionDataRecoveryCertificate currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the subjectName property value. Data recovery Certificate subject name
@@ -102,6 +114,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
         writer.writeByteArrayValue("certificate", this.getCertificate());
         writer.writeStringValue("description", this.getDescription());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("subjectName", this.getSubjectName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -136,6 +149,14 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
      */
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name

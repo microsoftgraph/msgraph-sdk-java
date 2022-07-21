@@ -21,7 +21,7 @@ import microsoft.graph.users.item.joinedteams.item.channels.count.CountRequestBu
 import microsoft.graph.users.item.joinedteams.item.channels.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
 public class ChannelsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

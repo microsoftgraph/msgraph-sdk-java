@@ -18,6 +18,7 @@ public class Attendee extends AttendeeBase implements Parsable {
      */
     public Attendee() {
         super();
+        this.setOdataType("#microsoft.graph.attendee");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -346,7 +346,7 @@ public class OnenotePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onenotePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OnenotePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenotePageItemRequestBuilderDeleteRequestConfiguration() {
@@ -375,7 +375,7 @@ public class OnenotePageItemRequestBuilder {
         @javax.annotation.Nullable
         public OnenotePageItemRequestBuilderGetQueryParameters queryParameters = new OnenotePageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new onenotePageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OnenotePageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenotePageItemRequestBuilderGetRequestConfiguration() {
@@ -390,7 +390,7 @@ public class OnenotePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new onenotePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OnenotePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OnenotePageItemRequestBuilderPatchRequestConfiguration() {

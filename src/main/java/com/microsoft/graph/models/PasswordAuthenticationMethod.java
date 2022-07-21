@@ -19,6 +19,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      */
     public PasswordAuthenticationMethod() {
         super();
+        this.setOdataType("#microsoft.graph.passwordAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

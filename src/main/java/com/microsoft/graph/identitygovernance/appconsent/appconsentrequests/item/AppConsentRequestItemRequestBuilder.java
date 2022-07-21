@@ -308,7 +308,7 @@ public class AppConsentRequestItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item collection
      * @param id Unique identifier of the item
-     * @return a userConsentRequestItemRequestBuilder
+     * @return a UserConsentRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserConsentRequestItemRequestBuilder userConsentRequests(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class AppConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appConsentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppConsentRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class AppConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public AppConsentRequestItemRequestBuilderGetQueryParameters queryParameters = new AppConsentRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new appConsentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppConsentRequestItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class AppConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new appConsentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AppConsentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AppConsentRequestItemRequestBuilderPatchRequestConfiguration() {

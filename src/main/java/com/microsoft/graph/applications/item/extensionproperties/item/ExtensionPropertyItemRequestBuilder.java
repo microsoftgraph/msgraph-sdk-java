@@ -307,7 +307,7 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public ExtensionPropertyItemRequestBuilderGetQueryParameters queryParameters = new ExtensionPropertyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ExtensionPropertyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new extensionPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ExtensionPropertyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ExtensionPropertyItemRequestBuilderPatchRequestConfiguration() {

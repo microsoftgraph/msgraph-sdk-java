@@ -20,7 +20,7 @@ import microsoft.graph.models.AgreementFileLocalizationCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity. */
 public class LocalizationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

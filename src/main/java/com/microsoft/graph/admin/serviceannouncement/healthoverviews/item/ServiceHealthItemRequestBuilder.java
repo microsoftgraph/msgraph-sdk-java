@@ -253,7 +253,7 @@ public class ServiceHealthItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
      * @param id Unique identifier of the item
-     * @return a serviceHealthIssueItemRequestBuilder
+     * @return a ServiceHealthIssueItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServiceHealthIssueItemRequestBuilder issues(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class ServiceHealthItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceHealthItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class ServiceHealthItemRequestBuilder {
         @javax.annotation.Nullable
         public ServiceHealthItemRequestBuilderGetQueryParameters queryParameters = new ServiceHealthItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new serviceHealthItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class ServiceHealthItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceHealthItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthItemRequestBuilderPatchRequestConfiguration() {

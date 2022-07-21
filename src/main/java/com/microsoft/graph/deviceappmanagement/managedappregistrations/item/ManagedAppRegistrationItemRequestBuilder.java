@@ -46,7 +46,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.appliedPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppPolicyItemRequestBuilder
+     * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder appliedPolicies(@javax.annotation.Nonnull final String id) {
@@ -277,7 +277,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.intendedPolicies.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppPolicyItemRequestBuilder
+     * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder intendedPolicies(@javax.annotation.Nonnull final String id) {
@@ -289,7 +289,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.operations.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppOperationItemRequestBuilder
+     * @return a ManagedAppOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppRegistrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration() {
@@ -391,7 +391,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedAppRegistrationItemRequestBuilderGetQueryParameters queryParameters = new ManagedAppRegistrationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedAppRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration() {
@@ -406,7 +406,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppRegistrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration() {

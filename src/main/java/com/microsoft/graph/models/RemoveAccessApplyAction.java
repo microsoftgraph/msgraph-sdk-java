@@ -14,6 +14,7 @@ public class RemoveAccessApplyAction extends AccessReviewApplyAction implements 
      */
     public RemoveAccessApplyAction() {
         super();
+        this.setOdataType("#microsoft.graph.removeAccessApplyAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

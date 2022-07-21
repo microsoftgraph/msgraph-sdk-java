@@ -11,8 +11,8 @@ import java.util.Objects;
 public class PrintTaskDefinitionCollectionResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The nextLink property */
-    private String _nextLink;
+    /** The OdataNextLink property */
+    private String _odataNextLink;
     /** The value property */
     private java.util.List<PrintTaskDefinition> _value;
     /**
@@ -48,17 +48,17 @@ public class PrintTaskDefinitionCollectionResponse implements AdditionalDataHold
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintTaskDefinitionCollectionResponse currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.nextLink", (n) -> { currentObject.setNextLink(n.getStringValue()); });
+            this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.nextLink property value. The nextLink property
+     * Gets the @odata.nextLink property value. The OdataNextLink property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getNextLink() {
-        return this._nextLink;
+    public String getOdataNextLink() {
+        return this._odataNextLink;
     }
     /**
      * Gets the value property value. The value property
@@ -75,7 +75,7 @@ public class PrintTaskDefinitionCollectionResponse implements AdditionalDataHold
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.nextLink", this.getNextLink());
+        writer.writeStringValue("@odata.nextLink", this.getOdataNextLink());
         writer.writeCollectionOfObjectValues("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -88,12 +88,12 @@ public class PrintTaskDefinitionCollectionResponse implements AdditionalDataHold
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.nextLink property value. The nextLink property
-     * @param value Value to set for the nextLink property.
+     * Sets the @odata.nextLink property value. The OdataNextLink property
+     * @param value Value to set for the OdataNextLink property.
      * @return a void
      */
-    public void setNextLink(@javax.annotation.Nullable final String value) {
-        this._nextLink = value;
+    public void setOdataNextLink(@javax.annotation.Nullable final String value) {
+        this._odataNextLink = value;
     }
     /**
      * Sets the value property value. The value property

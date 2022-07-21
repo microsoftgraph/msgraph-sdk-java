@@ -14,6 +14,7 @@ public class EdiscoveryReviewSetQuery extends Search implements Parsable {
      */
     public EdiscoveryReviewSetQuery() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryReviewSetQuery");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -18,6 +18,7 @@ public class IPv4Range extends IpRange implements Parsable {
      */
     public IPv4Range() {
         super();
+        this.setOdataType("#microsoft.graph.iPv4Range");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

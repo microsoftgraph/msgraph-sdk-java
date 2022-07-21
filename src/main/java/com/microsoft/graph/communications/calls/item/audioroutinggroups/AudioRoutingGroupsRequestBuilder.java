@@ -20,7 +20,7 @@ import microsoft.graph.models.AudioRoutingGroupCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity. */
 public class AudioRoutingGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -260,7 +260,7 @@ public class ConditionalAccessRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.conditionalAccess.namedLocations.item collection
      * @param id Unique identifier of the item
-     * @return a namedLocationItemRequestBuilder
+     * @return a NamedLocationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public NamedLocationItemRequestBuilder namedLocations(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class ConditionalAccessRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.conditionalAccess.policies.item collection
      * @param id Unique identifier of the item
-     * @return a conditionalAccessPolicyItemRequestBuilder
+     * @return a ConditionalAccessPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConditionalAccessPolicyItemRequestBuilder policies(@javax.annotation.Nonnull final String id) {

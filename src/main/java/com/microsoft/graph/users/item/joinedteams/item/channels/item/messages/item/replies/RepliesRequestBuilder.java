@@ -21,7 +21,7 @@ import microsoft.graph.users.item.joinedteams.item.channels.item.messages.item.r
 import microsoft.graph.users.item.joinedteams.item.channels.item.messages.item.replies.delta.DeltaRequestBuilder;
 /** Provides operations to manage the replies property of the microsoft.graph.chatMessage entity. */
 public class RepliesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

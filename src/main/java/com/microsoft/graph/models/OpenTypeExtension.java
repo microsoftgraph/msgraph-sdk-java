@@ -16,6 +16,7 @@ public class OpenTypeExtension extends Extension implements Parsable {
      */
     public OpenTypeExtension() {
         super();
+        this.setOdataType("#microsoft.graph.openTypeExtension");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

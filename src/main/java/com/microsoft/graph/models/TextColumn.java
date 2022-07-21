@@ -19,6 +19,8 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     private Integer _linesForEditing;
     /** The maximum number of characters for the value. */
     private Integer _maxLength;
+    /** The OdataType property */
+    private String _odataType;
     /** The type of text being stored. Must be one of plain or richText */
     private String _textType;
     /**
@@ -27,6 +29,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     public TextColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.textColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,11 +72,12 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TextColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowMultipleLines", (n) -> { currentObject.setAllowMultipleLines(n.getBooleanValue()); });
             this.put("appendChangesToExistingText", (n) -> { currentObject.setAppendChangesToExistingText(n.getBooleanValue()); });
             this.put("linesForEditing", (n) -> { currentObject.setLinesForEditing(n.getIntegerValue()); });
             this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("textType", (n) -> { currentObject.setTextType(n.getStringValue()); });
         }};
     }
@@ -94,6 +98,14 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         return this._maxLength;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
      * @return a string
      */
@@ -112,6 +124,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("appendChangesToExistingText", this.getAppendChangesToExistingText());
         writer.writeIntegerValue("linesForEditing", this.getLinesForEditing());
         writer.writeIntegerValue("maxLength", this.getMaxLength());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("textType", this.getTextType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      */
     public void setMaxLength(@javax.annotation.Nullable final Integer value) {
         this._maxLength = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText

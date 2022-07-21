@@ -21,7 +21,7 @@ import microsoft.graph.places.count.CountRequestBuilder;
 import microsoft.graph.places.room.RoomRequestBuilder;
 /** Provides operations to manage the collection of place entities. */
 public class PlacesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

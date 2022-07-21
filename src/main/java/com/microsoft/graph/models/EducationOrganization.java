@@ -23,7 +23,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     public EducationOrganization() {
         super();
-        this.setType("#microsoft.graph.educationOrganization");
+        this.setOdataType("#microsoft.graph.educationOrganization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

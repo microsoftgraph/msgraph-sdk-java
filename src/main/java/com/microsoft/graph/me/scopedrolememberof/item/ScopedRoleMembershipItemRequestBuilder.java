@@ -307,7 +307,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new scopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         @javax.annotation.Nullable
         public ScopedRoleMembershipItemRequestBuilderGetQueryParameters queryParameters = new ScopedRoleMembershipItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new scopedRoleMembershipItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new scopedRoleMembershipItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration() {

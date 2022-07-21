@@ -18,6 +18,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     public ParticipantLeftNotification() {
         super();
+        this.setOdataType("#microsoft.graph.participantLeftNotification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

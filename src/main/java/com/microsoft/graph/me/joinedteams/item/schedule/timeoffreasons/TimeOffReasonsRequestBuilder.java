@@ -20,7 +20,7 @@ import microsoft.graph.models.TimeOffReason;
 import microsoft.graph.models.TimeOffReasonCollectionResponse;
 /** Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity. */
 public class TimeOffReasonsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

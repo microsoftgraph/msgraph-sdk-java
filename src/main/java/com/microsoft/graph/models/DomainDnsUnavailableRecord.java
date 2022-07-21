@@ -16,6 +16,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      */
     public DomainDnsUnavailableRecord() {
         super();
+        this.setOdataType("#microsoft.graph.domainDnsUnavailableRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

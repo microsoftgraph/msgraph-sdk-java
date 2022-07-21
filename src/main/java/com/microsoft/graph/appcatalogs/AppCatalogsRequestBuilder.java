@@ -229,7 +229,7 @@ public class AppCatalogsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.appCatalogs.teamsApps.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAppItemRequestBuilder
+     * @return a TeamsAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAppItemRequestBuilder teamsApps(@javax.annotation.Nonnull final String id) {

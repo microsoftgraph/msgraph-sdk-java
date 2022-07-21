@@ -155,7 +155,7 @@ public class DataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public DataSourceItemRequestBuilderGetQueryParameters queryParameters = new DataSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new dataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DataSourceItemRequestBuilderGetRequestConfiguration() {

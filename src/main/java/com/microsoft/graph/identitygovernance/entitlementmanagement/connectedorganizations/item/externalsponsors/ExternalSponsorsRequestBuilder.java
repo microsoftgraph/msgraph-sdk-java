@@ -24,7 +24,7 @@ import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the externalSponsors property of the microsoft.graph.connectedOrganization entity. */
 public class ExternalSponsorsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -41,7 +41,7 @@ public class ExternalSponsorsRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

@@ -15,6 +15,8 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     private Integer _bottom;
     /** The margin in microns from the left edge. */
     private Integer _left;
+    /** The OdataType property */
+    private String _odataType;
     /** The margin in microns from the right edge. */
     private Integer _right;
     /** The margin in microns from the top edge. */
@@ -25,6 +27,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     public PrintMargin() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printMargin");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintMargin currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("bottom", (n) -> { currentObject.setBottom(n.getIntegerValue()); });
             this.put("left", (n) -> { currentObject.setLeft(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("right", (n) -> { currentObject.setRight(n.getIntegerValue()); });
             this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
         }};
@@ -73,6 +77,14 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getLeft() {
         return this._left;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the right property value. The margin in microns from the right edge.
@@ -99,6 +111,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("bottom", this.getBottom());
         writer.writeIntegerValue("left", this.getLeft());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("right", this.getRight());
         writer.writeIntegerValue("top", this.getTop());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      */
     public void setLeft(@javax.annotation.Nullable final Integer value) {
         this._left = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the right property value. The margin in microns from the right edge.

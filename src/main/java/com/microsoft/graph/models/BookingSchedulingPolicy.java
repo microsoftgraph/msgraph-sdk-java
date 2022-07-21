@@ -19,6 +19,8 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     private Period _maximumAdvance;
     /** The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format. */
     private Period _minimumLeadTime;
+    /** The OdataType property */
+    private String _odataType;
     /** True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business. */
     private Boolean _sendConfirmationsToOwner;
     /** Duration of each time slot, denoted in ISO 8601 format. */
@@ -29,6 +31,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bookingSchedulingPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,11 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingSchedulingPolicy currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowStaffSelection", (n) -> { currentObject.setAllowStaffSelection(n.getBooleanValue()); });
             this.put("maximumAdvance", (n) -> { currentObject.setMaximumAdvance(n.getPeriodValue()); });
             this.put("minimumLeadTime", (n) -> { currentObject.setMinimumLeadTime(n.getPeriodValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sendConfirmationsToOwner", (n) -> { currentObject.setSendConfirmationsToOwner(n.getBooleanValue()); });
             this.put("timeSlotInterval", (n) -> { currentObject.setTimeSlotInterval(n.getPeriodValue()); });
         }};
@@ -86,6 +90,14 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Period getMinimumLeadTime() {
         return this._minimumLeadTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
@@ -113,6 +125,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
         writer.writePeriodValue("maximumAdvance", this.getMaximumAdvance());
         writer.writePeriodValue("minimumLeadTime", this.getMinimumLeadTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("sendConfirmationsToOwner", this.getSendConfirmationsToOwner());
         writer.writePeriodValue("timeSlotInterval", this.getTimeSlotInterval());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -148,6 +161,14 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     public void setMinimumLeadTime(@javax.annotation.Nullable final Period value) {
         this._minimumLeadTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.

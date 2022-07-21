@@ -32,7 +32,7 @@ public class Search extends Entity implements Parsable {
      */
     public Search() {
         super();
-        this.setType("#microsoft.graph.security.search");
+        this.setOdataType("#microsoft.graph.security.search");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -11,6 +11,8 @@ import java.util.Objects;
 public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values. */
     private String _target;
     /** The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue. */
@@ -21,6 +23,7 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Pars
      */
     public CrossTenantAccessPolicyTarget() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyTarget currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
             this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(CrossTenantAccessPolicyTargetType.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the target property value. The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
@@ -75,6 +87,7 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Pars
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("target", this.getTarget());
         writer.writeEnumValue("targetType", this.getTargetType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Pars
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the target property value. The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.

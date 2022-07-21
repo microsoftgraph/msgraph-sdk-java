@@ -307,7 +307,7 @@ public class LongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new longRunningOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LongRunningOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LongRunningOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class LongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public LongRunningOperationItemRequestBuilderGetQueryParameters queryParameters = new LongRunningOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new longRunningOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LongRunningOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LongRunningOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class LongRunningOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new longRunningOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LongRunningOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LongRunningOperationItemRequestBuilderPatchRequestConfiguration() {

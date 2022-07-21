@@ -34,7 +34,7 @@ public class CalendarGroupItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item.calendars.item collection
      * @param id Unique identifier of the item
-     * @return a calendarItemRequestBuilder
+     * @return a CalendarItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class CalendarGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarGroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarGroupItemRequestBuilderDeleteRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CalendarGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public CalendarGroupItemRequestBuilderGetQueryParameters queryParameters = new CalendarGroupItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new calendarGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarGroupItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarGroupItemRequestBuilderGetRequestConfiguration() {
@@ -366,7 +366,7 @@ public class CalendarGroupItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarGroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarGroupItemRequestBuilderPatchRequestConfiguration() {

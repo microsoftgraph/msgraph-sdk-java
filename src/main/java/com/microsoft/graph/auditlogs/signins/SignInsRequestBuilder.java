@@ -20,7 +20,7 @@ import microsoft.graph.models.SignIn;
 import microsoft.graph.models.SignInCollectionResponse;
 /** Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity. */
 public class SignInsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

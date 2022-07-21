@@ -20,6 +20,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     public GroupSettingTemplate() {
         super();
+        this.setOdataType("#microsoft.graph.groupSettingTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

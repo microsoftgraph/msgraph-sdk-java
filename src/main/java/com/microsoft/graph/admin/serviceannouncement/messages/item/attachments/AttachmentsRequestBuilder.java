@@ -20,7 +20,7 @@ import microsoft.graph.models.ServiceAnnouncementAttachment;
 import microsoft.graph.models.ServiceAnnouncementAttachmentCollectionResponse;
 /** Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity. */
 public class AttachmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

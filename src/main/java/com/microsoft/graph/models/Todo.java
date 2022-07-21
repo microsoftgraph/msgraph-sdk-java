@@ -16,6 +16,7 @@ public class Todo extends Entity implements Parsable {
      */
     public Todo() {
         super();
+        this.setOdataType("#microsoft.graph.todo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

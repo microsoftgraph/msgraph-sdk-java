@@ -16,6 +16,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      */
     public BuiltInIdentityProvider() {
         super();
+        this.setOdataType("#microsoft.graph.builtInIdentityProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

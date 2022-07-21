@@ -307,7 +307,7 @@ public class ShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new shiftItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ShiftItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShiftItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class ShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public ShiftItemRequestBuilderGetQueryParameters queryParameters = new ShiftItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new shiftItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ShiftItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShiftItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class ShiftItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new shiftItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ShiftItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ShiftItemRequestBuilderPatchRequestConfiguration() {

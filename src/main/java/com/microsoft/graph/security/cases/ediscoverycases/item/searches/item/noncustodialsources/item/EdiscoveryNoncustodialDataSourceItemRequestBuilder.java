@@ -155,7 +155,7 @@ public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         @javax.annotation.Nullable
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryNoncustodialDataSourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new ediscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration() {

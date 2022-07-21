@@ -20,7 +20,7 @@ import microsoft.graph.models.CalendarPermissionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity. */
 public class CalendarPermissionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

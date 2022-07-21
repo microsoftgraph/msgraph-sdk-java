@@ -26,6 +26,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     public AdministrativeUnit() {
         super();
+        this.setOdataType("#microsoft.graph.administrativeUnit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

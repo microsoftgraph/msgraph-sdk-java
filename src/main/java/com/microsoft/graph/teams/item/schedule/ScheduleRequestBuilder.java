@@ -315,7 +315,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.offerShiftRequests.item collection
      * @param id Unique identifier of the item
-     * @return a offerShiftRequestItemRequestBuilder
+     * @return a OfferShiftRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OfferShiftRequestItemRequestBuilder offerShiftRequests(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.openShiftChangeRequests.item collection
      * @param id Unique identifier of the item
-     * @return a openShiftChangeRequestItemRequestBuilder
+     * @return a OpenShiftChangeRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OpenShiftChangeRequestItemRequestBuilder openShiftChangeRequests(@javax.annotation.Nonnull final String id) {
@@ -339,7 +339,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.openShifts.item collection
      * @param id Unique identifier of the item
-     * @return a openShiftItemRequestBuilder
+     * @return a OpenShiftItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OpenShiftItemRequestBuilder openShifts(@javax.annotation.Nonnull final String id) {
@@ -406,7 +406,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.schedulingGroups.item collection
      * @param id Unique identifier of the item
-     * @return a schedulingGroupItemRequestBuilder
+     * @return a SchedulingGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SchedulingGroupItemRequestBuilder schedulingGroups(@javax.annotation.Nonnull final String id) {
@@ -418,7 +418,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.shifts.item collection
      * @param id Unique identifier of the item
-     * @return a shiftItemRequestBuilder
+     * @return a ShiftItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ShiftItemRequestBuilder shifts(@javax.annotation.Nonnull final String id) {
@@ -430,7 +430,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.swapShiftsChangeRequests.item collection
      * @param id Unique identifier of the item
-     * @return a swapShiftsChangeRequestItemRequestBuilder
+     * @return a SwapShiftsChangeRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SwapShiftsChangeRequestItemRequestBuilder swapShiftsChangeRequests(@javax.annotation.Nonnull final String id) {
@@ -442,7 +442,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.timeOffReasons.item collection
      * @param id Unique identifier of the item
-     * @return a timeOffReasonItemRequestBuilder
+     * @return a TimeOffReasonItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TimeOffReasonItemRequestBuilder timeOffReasons(@javax.annotation.Nonnull final String id) {
@@ -454,7 +454,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.timeOffRequests.item collection
      * @param id Unique identifier of the item
-     * @return a timeOffRequestItemRequestBuilder
+     * @return a TimeOffRequestItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TimeOffRequestItemRequestBuilder timeOffRequests(@javax.annotation.Nonnull final String id) {
@@ -466,7 +466,7 @@ public class ScheduleRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.schedule.timesOff.item collection
      * @param id Unique identifier of the item
-     * @return a timeOffItemRequestBuilder
+     * @return a TimeOffItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TimeOffItemRequestBuilder timesOff(@javax.annotation.Nonnull final String id) {

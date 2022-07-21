@@ -17,6 +17,8 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     private Boolean _essential;
     /** The name of the optional claim. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object. */
     private String _source;
     /**
@@ -25,6 +27,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     public OptionalClaim() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.optionalClaim");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,10 +70,11 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OptionalClaim currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("additionalProperties", (n) -> { currentObject.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("essential", (n) -> { currentObject.setEssential(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
         }};
     }
@@ -81,6 +85,14 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
@@ -100,6 +112,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("additionalProperties", this.getAdditionalProperties());
         writer.writeBooleanValue("essential", this.getEssential());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("source", this.getSource());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.

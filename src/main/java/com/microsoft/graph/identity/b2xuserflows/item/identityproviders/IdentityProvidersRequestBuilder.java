@@ -19,7 +19,7 @@ import microsoft.graph.models.IdentityProviderCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class IdentityProvidersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

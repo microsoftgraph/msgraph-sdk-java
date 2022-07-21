@@ -307,7 +307,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AuthenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public AuthenticationMethodConfigurationItemRequestBuilderGetQueryParameters queryParameters = new AuthenticationMethodConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new authenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AuthenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AuthenticationMethodConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new authenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration() {

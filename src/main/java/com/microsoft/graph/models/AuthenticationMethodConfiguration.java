@@ -17,7 +17,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      */
     public AuthenticationMethodConfiguration() {
         super();
-        this.setType("#microsoft.graph.authenticationMethodConfiguration");
+        this.setOdataType("#microsoft.graph.authenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

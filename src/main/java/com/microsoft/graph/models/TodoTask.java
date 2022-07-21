@@ -12,7 +12,7 @@ import java.util.Objects;
 public class TodoTask extends Entity implements Parsable {
     /** The task body that typically contains information about the task. */
     private ItemBody _body;
-    /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
+    /** The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
     /** The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined. */
     private java.util.List<String> _categories;
@@ -48,6 +48,7 @@ public class TodoTask extends Entity implements Parsable {
      */
     public TodoTask() {
         super();
+        this.setOdataType("#microsoft.graph.todoTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,7 +69,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._body;
     }
     /**
-     * Gets the bodyLastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * Gets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -247,7 +248,7 @@ public class TodoTask extends Entity implements Parsable {
         this._body = value;
     }
     /**
-     * Sets the bodyLastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
+     * Sets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
      * @param value Value to set for the bodyLastModifiedDateTime property.
      * @return a void
      */

@@ -23,6 +23,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      */
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

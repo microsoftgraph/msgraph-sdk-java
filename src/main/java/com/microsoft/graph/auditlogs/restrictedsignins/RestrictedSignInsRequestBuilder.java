@@ -20,7 +20,7 @@ import microsoft.graph.models.RestrictedSignIn;
 import microsoft.graph.models.RestrictedSignInCollectionResponse;
 /** Provides operations to manage the restrictedSignIns property of the microsoft.graph.auditLogRoot entity. */
 public class RestrictedSignInsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

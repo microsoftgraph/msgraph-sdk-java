@@ -20,6 +20,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     public AndroidStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.androidStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

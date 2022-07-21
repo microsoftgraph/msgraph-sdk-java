@@ -16,6 +16,8 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     private Integer _hopCount;
     /** IP address used for this hop in the network trace. */
     private String _ipAddress;
+    /** The OdataType property */
+    private String _odataType;
     /** The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator. */
     private Period _roundTripTime;
     /**
@@ -24,6 +26,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     public TraceRouteHop() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.callRecords.traceRouteHop");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,9 +53,10 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TraceRouteHop currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("hopCount", (n) -> { currentObject.setHopCount(n.getIntegerValue()); });
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("roundTripTime", (n) -> { currentObject.setRoundTripTime(n.getPeriodValue()); });
         }};
     }
@@ -73,6 +77,14 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
         return this._ipAddress;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @return a Period
      */
@@ -89,6 +101,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("hopCount", this.getHopCount());
         writer.writeStringValue("ipAddress", this.getIpAddress());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodValue("roundTripTime", this.getRoundTripTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.

@@ -20,7 +20,7 @@ import microsoft.graph.models.DeviceComplianceScheduledActionForRuleCollectionRe
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity. */
 public class ScheduledActionsForRuleRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

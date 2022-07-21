@@ -21,7 +21,7 @@ import microsoft.graph.models.UserActivity;
 import microsoft.graph.models.UserActivityCollectionResponse;
 /** Provides operations to manage the activities property of the microsoft.graph.user entity. */
 public class ActivitiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

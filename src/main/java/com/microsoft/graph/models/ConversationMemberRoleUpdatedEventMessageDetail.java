@@ -20,6 +20,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.conversationMemberRoleUpdatedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

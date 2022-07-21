@@ -289,7 +289,7 @@ public class SharedDriveItemItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.shares.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class SharedDriveItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedDriveItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SharedDriveItemItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedDriveItemItemRequestBuilderDeleteRequestConfiguration() {
@@ -391,7 +391,7 @@ public class SharedDriveItemItemRequestBuilder {
         @javax.annotation.Nullable
         public SharedDriveItemItemRequestBuilderGetQueryParameters queryParameters = new SharedDriveItemItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new sharedDriveItemItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SharedDriveItemItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedDriveItemItemRequestBuilderGetRequestConfiguration() {
@@ -406,7 +406,7 @@ public class SharedDriveItemItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new sharedDriveItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SharedDriveItemItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SharedDriveItemItemRequestBuilderPatchRequestConfiguration() {

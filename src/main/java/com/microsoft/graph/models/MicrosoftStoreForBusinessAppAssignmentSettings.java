@@ -16,6 +16,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      */
     public MicrosoftStoreForBusinessAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

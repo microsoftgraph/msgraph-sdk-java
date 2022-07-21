@@ -55,6 +55,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     public Windows10TeamGeneralConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10TeamGeneralConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

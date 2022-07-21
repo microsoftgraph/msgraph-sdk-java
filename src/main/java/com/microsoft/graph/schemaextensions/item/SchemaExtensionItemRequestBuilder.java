@@ -307,7 +307,7 @@ public class SchemaExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new schemaExtensionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SchemaExtensionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchemaExtensionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SchemaExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public SchemaExtensionItemRequestBuilderGetQueryParameters queryParameters = new SchemaExtensionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new schemaExtensionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SchemaExtensionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchemaExtensionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SchemaExtensionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new schemaExtensionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SchemaExtensionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SchemaExtensionItemRequestBuilderPatchRequestConfiguration() {

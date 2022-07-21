@@ -18,6 +18,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      */
     public TabUpdatedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.tabUpdatedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

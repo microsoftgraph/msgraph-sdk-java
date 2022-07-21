@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
     /** ID of the agreement file accepted by the user. */
     private String _agreementFileId;
@@ -42,6 +42,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      */
     public AgreementAcceptance() {
         super();
+        this.setOdataType("#microsoft.graph.agreementAcceptance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -26,6 +26,7 @@ public class ListItem extends BaseItem implements Parsable {
      */
     public ListItem() {
         super();
+        this.setOdataType("#microsoft.graph.listItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

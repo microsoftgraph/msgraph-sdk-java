@@ -307,7 +307,7 @@ public class LicenseDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new licenseDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new LicenseDetailsItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public LicenseDetailsItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class LicenseDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public LicenseDetailsItemRequestBuilderGetQueryParameters queryParameters = new LicenseDetailsItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new licenseDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new LicenseDetailsItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public LicenseDetailsItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class LicenseDetailsItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new licenseDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new LicenseDetailsItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public LicenseDetailsItemRequestBuilderPatchRequestConfiguration() {

@@ -13,6 +13,8 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Information of the meeting attendees. */
     private java.util.List<MeetingParticipantInfo> _attendees;
+    /** The OdataType property */
+    private String _odataType;
     /** Information of the meeting organizer. */
     private MeetingParticipantInfo _organizer;
     /**
@@ -21,6 +23,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      */
     public MeetingParticipants() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.meetingParticipants");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingParticipants currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(MeetingParticipantInfo::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the organizer property value. Information of the meeting organizer.
@@ -76,6 +88,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("organizer", this.getOrganizer());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      */
     public void setAttendees(@javax.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
         this._attendees = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the organizer property value. Information of the meeting organizer.

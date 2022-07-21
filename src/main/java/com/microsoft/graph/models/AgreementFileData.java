@@ -13,12 +13,15 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)). */
     private byte[] _data;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new agreementFileData and sets the default values.
      * @return a void
      */
     public AgreementFileData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.agreementFileData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFileData currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("data", (n) -> { currentObject.setData(n.getByteArrayValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("data", this.getData());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
      */
     public void setData(@javax.annotation.Nullable final byte[] value) {
         this._data = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

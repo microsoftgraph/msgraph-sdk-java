@@ -17,6 +17,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     private Boolean _isApprovalRequiredForAdd;
     /** Indicates whether a request to update must be approved by an approver. */
     private Boolean _isApprovalRequiredForUpdate;
+    /** The OdataType property */
+    private String _odataType;
     /** The description of the policy that the user is trying to request access using. */
     private String _policyDescription;
     /** The display name of the policy that the user is trying to request access using. */
@@ -31,6 +33,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestRequirements");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestRequirements currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
             this.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
             this.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("policyDescription", (n) -> { currentObject.setPolicyDescription(n.getStringValue()); });
             this.put("policyDisplayName", (n) -> { currentObject.setPolicyDisplayName(n.getStringValue()); });
             this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
@@ -90,6 +94,14 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     @javax.annotation.Nullable
     public Boolean getIsApprovalRequiredForUpdate() {
         return this._isApprovalRequiredForUpdate;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the policyDescription property value. The description of the policy that the user is trying to request access using.
@@ -133,6 +145,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
         writer.writeBooleanValue("isApprovalRequiredForUpdate", this.getIsApprovalRequiredForUpdate());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("policyDescription", this.getPolicyDescription());
         writer.writeStringValue("policyDisplayName", this.getPolicyDisplayName());
         writer.writeStringValue("policyId", this.getPolicyId());
@@ -170,6 +183,14 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     public void setIsApprovalRequiredForUpdate(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequiredForUpdate = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the policyDescription property value. The description of the policy that the user is trying to request access using.

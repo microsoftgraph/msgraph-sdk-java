@@ -27,6 +27,8 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     private Double _latitude;
     /** The longitude that the printer is located at. */
     private Double _longitude;
+    /** The OdataType property */
+    private String _odataType;
     /** The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order. */
     private java.util.List<String> _organization;
     /** The postal code that the printer is located in. */
@@ -51,6 +53,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.printerLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -109,7 +112,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterLocation currentObject = this;
-        return new HashMap<>(17) {{
+        return new HashMap<>(18) {{
             this.put("altitudeInMeters", (n) -> { currentObject.setAltitudeInMeters(n.getIntegerValue()); });
             this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
@@ -118,6 +121,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
             this.put("floorDescription", (n) -> { currentObject.setFloorDescription(n.getStringValue()); });
             this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
             this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organization", (n) -> { currentObject.setOrganization(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
             this.put("roomDescription", (n) -> { currentObject.setRoomDescription(n.getStringValue()); });
@@ -160,6 +164,14 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Double getLongitude() {
         return this._longitude;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
@@ -248,6 +260,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("floorDescription", this.getFloorDescription());
         writer.writeDoubleValue("latitude", this.getLatitude());
         writer.writeDoubleValue("longitude", this.getLongitude());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("organization", this.getOrganization());
         writer.writeStringValue("postalCode", this.getPostalCode());
         writer.writeStringValue("roomDescription", this.getRoomDescription());
@@ -330,6 +343,14 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     public void setLongitude(@javax.annotation.Nullable final Double value) {
         this._longitude = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.

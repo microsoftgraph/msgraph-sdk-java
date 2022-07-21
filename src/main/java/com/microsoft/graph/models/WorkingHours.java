@@ -16,6 +16,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _daysOfWeek;
     /** The time of the day that the user stops working. */
     private LocalTime _endTime;
+    /** The OdataType property */
+    private String _odataType;
     /** The time of the day that the user starts working. */
     private LocalTime _startTime;
     /** The time zone to which the working hours apply. */
@@ -26,6 +28,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     public WorkingHours() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.workingHours");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,12 +71,21 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkingHours currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getObjectValue(TimeZoneBase::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the startTime property value. The time of the day that the user starts working.
@@ -100,6 +112,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
         writer.writeObjectValue("timeZone", this.getTimeZone());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -127,6 +140,14 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._endTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the startTime property value. The time of the day that the user starts working.

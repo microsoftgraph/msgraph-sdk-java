@@ -307,7 +307,7 @@ public class IdentityProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityProviderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityProviderItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class IdentityProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public IdentityProviderItemRequestBuilderGetQueryParameters queryParameters = new IdentityProviderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new identityProviderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityProviderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityProviderItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class IdentityProviderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new identityProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IdentityProviderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IdentityProviderItemRequestBuilderPatchRequestConfiguration() {

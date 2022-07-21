@@ -229,7 +229,7 @@ public class BitlockerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.informationProtection.bitlocker.recoveryKeys.item collection
      * @param id Unique identifier of the item
-     * @return a bitlockerRecoveryKeyItemRequestBuilder
+     * @return a BitlockerRecoveryKeyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public BitlockerRecoveryKeyItemRequestBuilder recoveryKeys(@javax.annotation.Nonnull final String id) {

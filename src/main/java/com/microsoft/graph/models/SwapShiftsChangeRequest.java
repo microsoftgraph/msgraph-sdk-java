@@ -16,6 +16,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
      */
     public SwapShiftsChangeRequest() {
         super();
+        this.setOdataType("#microsoft.graph.swapShiftsChangeRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

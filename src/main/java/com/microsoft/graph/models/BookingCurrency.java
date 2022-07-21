@@ -16,6 +16,7 @@ public class BookingCurrency extends Entity implements Parsable {
      */
     public BookingCurrency() {
         super();
+        this.setOdataType("#microsoft.graph.bookingCurrency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

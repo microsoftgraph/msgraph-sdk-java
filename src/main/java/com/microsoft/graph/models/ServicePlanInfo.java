@@ -13,6 +13,8 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant. */
     private String _appliesTo;
+    /** The OdataType property */
+    private String _odataType;
     /** The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet. */
     private String _provisioningStatus;
     /** The unique identifier of the service plan. */
@@ -25,6 +27,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     public ServicePlanInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.servicePlanInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePlanInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });
             this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
             this.put("servicePlanName", (n) -> { currentObject.setServicePlanName(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
@@ -98,6 +110,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appliesTo", this.getAppliesTo());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provisioningStatus", this.getProvisioningStatus());
         writer.writeStringValue("servicePlanId", this.getServicePlanId());
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
@@ -118,6 +131,14 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      */
     public void setAppliesTo(@javax.annotation.Nullable final String value) {
         this._appliesTo = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.

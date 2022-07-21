@@ -202,7 +202,7 @@ public class CasesRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item collection
      * @param id Unique identifier of the item
-     * @return a ediscoveryCaseItemRequestBuilder
+     * @return a EdiscoveryCaseItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EdiscoveryCaseItemRequestBuilder ediscoveryCases(@javax.annotation.Nonnull final String id) {

@@ -260,7 +260,7 @@ public class StoreItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.termStores.item.groups.item collection
      * @param id Unique identifier of the item
-     * @return a groupItemRequestBuilder
+     * @return a GroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public GroupItemRequestBuilder groups(@javax.annotation.Nonnull final String id) {
@@ -327,7 +327,7 @@ public class StoreItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.sites.item.termStores.item.sets.item collection
      * @param id Unique identifier of the item
-     * @return a setItemRequestBuilder
+     * @return a SetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SetItemRequestBuilder sets(@javax.annotation.Nonnull final String id) {
@@ -345,7 +345,7 @@ public class StoreItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new storeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new StoreItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public StoreItemRequestBuilderDeleteRequestConfiguration() {
@@ -374,7 +374,7 @@ public class StoreItemRequestBuilder {
         @javax.annotation.Nullable
         public StoreItemRequestBuilderGetQueryParameters queryParameters = new StoreItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new storeItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new StoreItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public StoreItemRequestBuilderGetRequestConfiguration() {
@@ -389,7 +389,7 @@ public class StoreItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new storeItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new StoreItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public StoreItemRequestBuilderPatchRequestConfiguration() {

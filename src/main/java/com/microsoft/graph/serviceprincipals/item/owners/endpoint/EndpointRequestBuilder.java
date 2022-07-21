@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.owners.endpoint.count.CountRequestBuilder;
 /** Casts the previous resource to endpoint. */
 public class EndpointRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

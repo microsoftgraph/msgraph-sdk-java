@@ -54,7 +54,7 @@ public class ContactFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.childFolders.item collection
      * @param id Unique identifier of the item
-     * @return a contactFolderItemRequestBuilder
+     * @return a ContactFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactFolderItemRequestBuilder childFolders(@javax.annotation.Nonnull final String id) {
@@ -93,7 +93,7 @@ public class ContactFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.contacts.item collection
      * @param id Unique identifier of the item
-     * @return a contactItemRequestBuilder
+     * @return a ContactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
@@ -297,7 +297,7 @@ public class ContactFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class ContactFolderItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class ContactFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contactFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ContactFolderItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactFolderItemRequestBuilderDeleteRequestConfiguration() {
@@ -407,7 +407,7 @@ public class ContactFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public ContactFolderItemRequestBuilderGetQueryParameters queryParameters = new ContactFolderItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contactFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContactFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactFolderItemRequestBuilderGetRequestConfiguration() {
@@ -422,7 +422,7 @@ public class ContactFolderItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contactFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ContactFolderItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactFolderItemRequestBuilderPatchRequestConfiguration() {

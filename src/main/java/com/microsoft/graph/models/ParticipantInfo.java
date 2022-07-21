@@ -19,6 +19,8 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private IdentitySet _identity;
     /** The language culture string. Read-only. */
     private String _languageId;
+    /** The OdataType property */
+    private String _odataType;
     /** The participant ID of the participant. Read-only. */
     private String _participantId;
     /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only. */
@@ -29,6 +31,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.participantInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,11 +74,12 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
             this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("languageId", (n) -> { currentObject.setLanguageId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("participantId", (n) -> { currentObject.setParticipantId(n.getStringValue()); });
             this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
         }};
@@ -95,6 +99,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLanguageId() {
         return this._languageId;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
@@ -123,6 +135,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("endpointType", this.getEndpointType());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("languageId", this.getLanguageId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("participantId", this.getParticipantId());
         writer.writeStringValue("region", this.getRegion());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -166,6 +179,14 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     public void setLanguageId(@javax.annotation.Nullable final String value) {
         this._languageId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.

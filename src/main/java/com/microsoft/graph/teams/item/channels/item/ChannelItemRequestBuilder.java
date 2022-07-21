@@ -307,7 +307,7 @@ public class ChannelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item.members.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -319,7 +319,7 @@ public class ChannelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item.messages.item collection
      * @param id Unique identifier of the item
-     * @return a chatMessageItemRequestBuilder
+     * @return a ChatMessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatMessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -386,7 +386,7 @@ public class ChannelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item.sharedWithTeams.item collection
      * @param id Unique identifier of the item
-     * @return a sharedWithChannelTeamInfoItemRequestBuilder
+     * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
@@ -398,7 +398,7 @@ public class ChannelItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.teams.item.channels.item.tabs.item collection
      * @param id Unique identifier of the item
-     * @return a teamsTabItemRequestBuilder
+     * @return a TeamsTabItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsTabItemRequestBuilder tabs(@javax.annotation.Nonnull final String id) {
@@ -416,7 +416,7 @@ public class ChannelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new channelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ChannelItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChannelItemRequestBuilderDeleteRequestConfiguration() {
@@ -445,7 +445,7 @@ public class ChannelItemRequestBuilder {
         @javax.annotation.Nullable
         public ChannelItemRequestBuilderGetQueryParameters queryParameters = new ChannelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new channelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChannelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChannelItemRequestBuilderGetRequestConfiguration() {
@@ -460,7 +460,7 @@ public class ChannelItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new channelItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ChannelItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChannelItemRequestBuilderPatchRequestConfiguration() {

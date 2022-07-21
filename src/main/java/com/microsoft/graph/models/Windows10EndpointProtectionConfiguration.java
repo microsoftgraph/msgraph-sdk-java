@@ -86,6 +86,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     public Windows10EndpointProtectionConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10EndpointProtectionConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

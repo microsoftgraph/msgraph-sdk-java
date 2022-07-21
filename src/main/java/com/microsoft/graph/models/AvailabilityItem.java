@@ -14,6 +14,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The endTime property */
     private LocalTime _endTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null. */
     private String _serviceId;
     /** The startTime property */
@@ -26,6 +28,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     public AvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.availabilityItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,12 +63,21 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AvailabilityItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
             this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(BookingsAvailabilityStatus.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
@@ -99,6 +111,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalTimeValue("endTime", this.getEndTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("serviceId", this.getServiceId());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
         writer.writeEnumValue("status", this.getStatus());
@@ -119,6 +132,14 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._endTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.

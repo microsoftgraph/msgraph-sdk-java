@@ -13,6 +13,8 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** Specific feedback for one quality of this rubric. */
     private EducationItemBody _feedback;
+    /** The OdataType property */
+    private String _odataType;
     /** The ID of the rubricQuality that this feedback is related to. */
     private String _qualityId;
     /**
@@ -21,6 +23,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     public RubricQualityFeedbackModel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rubricQualityFeedbackModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricQualityFeedbackModel currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the qualityId property value. The ID of the rubricQuality that this feedback is related to.
@@ -76,6 +88,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("feedback", this.getFeedback());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("qualityId", this.getQualityId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      */
     public void setFeedback(@javax.annotation.Nullable final EducationItemBody value) {
         this._feedback = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the qualityId property value. The ID of the rubricQuality that this feedback is related to.

@@ -19,6 +19,8 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     private String _id;
     /** Indicates whether the permission is enabled. */
     private Boolean _isEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The value of the permission. */
     private String _value;
     /**
@@ -27,6 +29,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     public ResourceSpecificPermission() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.resourceSpecificPermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,11 +72,12 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceSpecificPermission currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -94,6 +98,14 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
         return this._isEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the value property value. The value of the permission.
      * @return a string
      */
@@ -112,6 +124,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -154,6 +167,14 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the value property value. The value of the permission.

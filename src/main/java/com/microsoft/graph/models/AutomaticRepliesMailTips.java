@@ -15,6 +15,8 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     private String _message;
     /** The language that the automatic reply message is in. */
     private LocaleInfo _messageLanguage;
+    /** The OdataType property */
+    private String _odataType;
     /** The date and time that automatic replies are set to end. */
     private DateTimeTimeZone _scheduledEndTime;
     /** The date and time that automatic replies are set to begin. */
@@ -25,6 +27,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     public AutomaticRepliesMailTips() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.automaticRepliesMailTips");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,9 +54,10 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesMailTips currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scheduledEndTime", (n) -> { currentObject.setScheduledEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("scheduledStartTime", (n) -> { currentObject.setScheduledStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         }};
@@ -73,6 +77,14 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nullable
     public LocaleInfo getMessageLanguage() {
         return this._messageLanguage;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the scheduledEndTime property value. The date and time that automatic replies are set to end.
@@ -99,6 +111,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
         writer.writeObjectValue("messageLanguage", this.getMessageLanguage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("scheduledEndTime", this.getScheduledEndTime());
         writer.writeObjectValue("scheduledStartTime", this.getScheduledStartTime());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
      */
     public void setMessageLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._messageLanguage = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the scheduledEndTime property value. The date and time that automatic replies are set to end.

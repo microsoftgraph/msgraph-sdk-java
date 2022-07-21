@@ -307,7 +307,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new certificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters queryParameters = new CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new certificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CertificateBasedAuthConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new certificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration() {

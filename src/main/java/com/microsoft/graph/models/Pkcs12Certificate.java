@@ -18,6 +18,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      */
     public Pkcs12Certificate() {
         super();
+        this.setOdataType("#microsoft.graph.pkcs12Certificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

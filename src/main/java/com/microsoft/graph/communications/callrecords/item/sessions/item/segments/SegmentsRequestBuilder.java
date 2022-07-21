@@ -20,7 +20,7 @@ import microsoft.graph.models.callrecords.SegmentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity. */
 public class SegmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

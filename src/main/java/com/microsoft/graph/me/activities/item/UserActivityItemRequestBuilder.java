@@ -253,7 +253,7 @@ public class UserActivityItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.activities.item.historyItems.item collection
      * @param id Unique identifier of the item
-     * @return a activityHistoryItemItemRequestBuilder
+     * @return a ActivityHistoryItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ActivityHistoryItemItemRequestBuilder historyItems(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class UserActivityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userActivityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserActivityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserActivityItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class UserActivityItemRequestBuilder {
         @javax.annotation.Nullable
         public UserActivityItemRequestBuilderGetQueryParameters queryParameters = new UserActivityItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userActivityItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserActivityItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserActivityItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class UserActivityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userActivityItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserActivityItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserActivityItemRequestBuilderPatchRequestConfiguration() {

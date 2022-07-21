@@ -295,7 +295,7 @@ public class EducationSubmissionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.submissions.item.outcomes.item collection
      * @param id Unique identifier of the item
-     * @return a educationOutcomeItemRequestBuilder
+     * @return a EducationOutcomeItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationOutcomeItemRequestBuilder outcomes(@javax.annotation.Nonnull final String id) {
@@ -362,7 +362,7 @@ public class EducationSubmissionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.submissions.item.resources.item collection
      * @param id Unique identifier of the item
-     * @return a educationSubmissionResourceItemRequestBuilder
+     * @return a EducationSubmissionResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.classes.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
@@ -374,7 +374,7 @@ public class EducationSubmissionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.submissions.item.submittedResources.item collection
      * @param id Unique identifier of the item
-     * @return a educationSubmissionResourceItemRequestBuilder
+     * @return a EducationSubmissionResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.classes.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder submittedResources(@javax.annotation.Nonnull final String id) {
@@ -392,7 +392,7 @@ public class EducationSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -421,7 +421,7 @@ public class EducationSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSubmissionItemRequestBuilderGetQueryParameters queryParameters = new EducationSubmissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionItemRequestBuilderGetRequestConfiguration() {
@@ -436,7 +436,7 @@ public class EducationSubmissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionItemRequestBuilderPatchRequestConfiguration() {

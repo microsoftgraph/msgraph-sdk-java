@@ -21,6 +21,8 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     private ConditionalAccessDevices _devices;
     /** Locations included in and excluded from the policy. */
     private ConditionalAccessLocations _locations;
+    /** The OdataType property */
+    private String _odataType;
     /** Platforms included in and excluded from the policy. */
     private ConditionalAccessPlatforms _platforms;
     /** Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
@@ -35,6 +37,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessConditionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,12 +96,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessConditionSet currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
             this.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
             this.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("devices", (n) -> { currentObject.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
             this.put("locations", (n) -> { currentObject.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("platforms", (n) -> { currentObject.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
             this.put("signInRiskLevels", (n) -> { currentObject.setSignInRiskLevels(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("userRiskLevels", (n) -> { currentObject.setUserRiskLevels(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -112,6 +116,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nullable
     public ConditionalAccessLocations getLocations() {
         return this._locations;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the platforms property value. Platforms included in and excluded from the policy.
@@ -157,6 +169,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         writer.writeCollectionOfPrimitiveValues("clientAppTypes", this.getClientAppTypes());
         writer.writeObjectValue("devices", this.getDevices());
         writer.writeObjectValue("locations", this.getLocations());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("platforms", this.getPlatforms());
         writer.writeCollectionOfPrimitiveValues("signInRiskLevels", this.getSignInRiskLevels());
         writer.writeCollectionOfPrimitiveValues("userRiskLevels", this.getUserRiskLevels());
@@ -210,6 +223,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     public void setLocations(@javax.annotation.Nullable final ConditionalAccessLocations value) {
         this._locations = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the platforms property value. Platforms included in and excluded from the policy.

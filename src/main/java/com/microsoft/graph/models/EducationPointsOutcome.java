@@ -18,6 +18,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      */
     public EducationPointsOutcome() {
         super();
+        this.setOdataType("#microsoft.graph.educationPointsOutcome");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

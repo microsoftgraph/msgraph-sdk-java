@@ -13,6 +13,8 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The app the link is associated with. */
     private Identity _application;
+    /** The OdataType property */
+    private String _odataType;
     /** If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint. */
     private Boolean _preventsDownload;
     /** The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant. */
@@ -29,6 +31,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     public SharingLink() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sharingLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,14 +66,23 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingLink currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("preventsDownload", (n) -> { currentObject.setPreventsDownload(n.getBooleanValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("webHtml", (n) -> { currentObject.setWebHtml(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
@@ -120,6 +132,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("preventsDownload", this.getPreventsDownload());
         writer.writeStringValue("scope", this.getScope());
         writer.writeStringValue("type", this.getType());
@@ -142,6 +155,14 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
      */
     public void setApplication(@javax.annotation.Nullable final Identity value) {
         this._application = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the preventsDownload property value. If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.

@@ -307,7 +307,7 @@ public class EndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new endpointItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EndpointItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EndpointItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public EndpointItemRequestBuilderGetQueryParameters queryParameters = new EndpointItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new endpointItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EndpointItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EndpointItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EndpointItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new endpointItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EndpointItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EndpointItemRequestBuilderPatchRequestConfiguration() {

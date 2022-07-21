@@ -307,7 +307,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         @javax.annotation.Nullable
         public DelegatedPermissionClassificationItemRequestBuilderGetQueryParameters queryParameters = new DelegatedPermissionClassificationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new delegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new delegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration() {

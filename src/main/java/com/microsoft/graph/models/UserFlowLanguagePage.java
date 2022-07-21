@@ -15,6 +15,7 @@ public class UserFlowLanguagePage extends Entity implements Parsable {
      */
     public UserFlowLanguagePage() {
         super();
+        this.setOdataType("#microsoft.graph.userFlowLanguagePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

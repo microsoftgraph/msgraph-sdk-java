@@ -22,7 +22,7 @@ public class Operation extends Entity implements Parsable {
      */
     public Operation() {
         super();
-        this.setType("#microsoft.graph.operation");
+        this.setOdataType("#microsoft.graph.operation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

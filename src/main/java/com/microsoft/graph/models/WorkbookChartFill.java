@@ -14,6 +14,7 @@ public class WorkbookChartFill extends Entity implements Parsable {
      */
     public WorkbookChartFill() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartFill");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

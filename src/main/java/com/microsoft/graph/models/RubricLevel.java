@@ -19,12 +19,15 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     private EducationAssignmentGradeType _grading;
     /** The ID of this resource. */
     private String _levelId;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new rubricLevel and sets the default values.
      * @return a void
      */
     public RubricLevel() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.rubricLevel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,11 +70,12 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricLevel currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
             this.put("levelId", (n) -> { currentObject.setLevelId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -91,6 +95,14 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         return this._levelId;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -101,6 +113,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeStringValue("levelId", this.getLevelId());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      */
     public void setLevelId(@javax.annotation.Nullable final String value) {
         this._levelId = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

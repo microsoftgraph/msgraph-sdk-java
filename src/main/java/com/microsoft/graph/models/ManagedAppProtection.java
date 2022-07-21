@@ -69,7 +69,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     public ManagedAppProtection() {
         super();
-        this.setType("#microsoft.graph.managedAppProtection");
+        this.setOdataType("#microsoft.graph.managedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,7 +83,9 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.androidManagedAppProtection": return new AndroidManagedAppProtection();
                 case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
+                case "#microsoft.graph.iosManagedAppProtection": return new IosManagedAppProtection();
                 case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
             }
         }

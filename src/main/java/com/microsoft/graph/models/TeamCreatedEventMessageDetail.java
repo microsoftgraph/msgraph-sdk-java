@@ -22,6 +22,7 @@ public class TeamCreatedEventMessageDetail extends EventMessageDetail implements
      */
     public TeamCreatedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamCreatedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

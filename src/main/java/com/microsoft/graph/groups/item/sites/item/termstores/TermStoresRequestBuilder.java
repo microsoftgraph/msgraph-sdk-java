@@ -20,7 +20,7 @@ import microsoft.graph.models.termstore.Store;
 import microsoft.graph.models.termstore.StoreCollectionResponse;
 /** Provides operations to manage the termStores property of the microsoft.graph.site entity. */
 public class TermStoresRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

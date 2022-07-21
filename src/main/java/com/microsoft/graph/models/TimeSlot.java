@@ -13,6 +13,8 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The end property */
     private DateTimeTimeZone _end;
+    /** The OdataType property */
+    private String _odataType;
     /** The start property */
     private DateTimeTimeZone _start;
     /**
@@ -21,6 +23,7 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
      */
     public TimeSlot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.timeSlot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeSlot currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the start property value. The start property
@@ -76,6 +88,7 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("end", this.getEnd());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("start", this.getStart());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
      */
     public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._end = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the start property value. The start property

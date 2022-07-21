@@ -20,7 +20,7 @@ import microsoft.graph.models.externalconnectors.ExternalConnectionCollectionRes
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity. */
 public class ConnectionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

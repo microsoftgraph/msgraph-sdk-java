@@ -51,6 +51,8 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     private MessageActionFlag _messageActionFlag;
     /** Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply. */
     private Boolean _notSentToMe;
+    /** The OdataType property */
+    private String _odataType;
     /** Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply. */
     private java.util.List<String> _recipientContains;
     /** Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply. */
@@ -77,6 +79,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      */
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.messageRulePredicates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -127,7 +130,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRulePredicates currentObject = this;
-        return new HashMap<>(30) {{
+        return new HashMap<>(31) {{
             this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -148,6 +151,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
             this.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
             this.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
             this.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
@@ -297,6 +301,14 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return this._notSentToMe;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
      * @return a string
      */
@@ -403,6 +415,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isVoicemail", this.getIsVoicemail());
         writer.writeEnumValue("messageActionFlag", this.getMessageActionFlag());
         writer.writeBooleanValue("notSentToMe", this.getNotSentToMe());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("recipientContains", this.getRecipientContains());
         writer.writeCollectionOfPrimitiveValues("senderContains", this.getSenderContains());
         writer.writeEnumValue("sensitivity", this.getSensitivity());
@@ -582,6 +595,14 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      */
     public void setNotSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._notSentToMe = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.

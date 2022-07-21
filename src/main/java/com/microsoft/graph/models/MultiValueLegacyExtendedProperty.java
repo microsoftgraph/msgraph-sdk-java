@@ -17,6 +17,7 @@ public class MultiValueLegacyExtendedProperty extends Entity implements Parsable
      */
     public MultiValueLegacyExtendedProperty() {
         super();
+        this.setOdataType("#microsoft.graph.multiValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

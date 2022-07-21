@@ -20,6 +20,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     public IosCustomConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.iosCustomConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

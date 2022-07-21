@@ -331,7 +331,7 @@ public class PlannerTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerTaskItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerTaskItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class PlannerTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public PlannerTaskItemRequestBuilderGetQueryParameters queryParameters = new PlannerTaskItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new plannerTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerTaskItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerTaskItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class PlannerTaskItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new plannerTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PlannerTaskItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PlannerTaskItemRequestBuilderPatchRequestConfiguration() {

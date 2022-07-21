@@ -307,7 +307,7 @@ public class CalendarPermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarPermissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarPermissionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarPermissionItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class CalendarPermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public CalendarPermissionItemRequestBuilderGetQueryParameters queryParameters = new CalendarPermissionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new calendarPermissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarPermissionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarPermissionItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class CalendarPermissionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarPermissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarPermissionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarPermissionItemRequestBuilderPatchRequestConfiguration() {

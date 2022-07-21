@@ -21,7 +21,7 @@ import microsoft.graph.users.item.chats.count.CountRequestBuilder;
 import microsoft.graph.users.item.chats.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
 public class ChatsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

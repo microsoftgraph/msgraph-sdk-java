@@ -20,6 +20,7 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
      */
     public ExternalDomainFederation() {
         super();
+        this.setOdataType("#microsoft.graph.externalDomainFederation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

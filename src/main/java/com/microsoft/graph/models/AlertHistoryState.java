@@ -20,6 +20,8 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _comments;
     /** Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive. */
     private AlertFeedback _feedback;
+    /** The OdataType property */
+    private String _odataType;
     /** Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed. */
     private AlertStatus _status;
     /** Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
@@ -32,6 +34,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     public AlertHistoryState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.alertHistoryState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,15 +93,24 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertHistoryState currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getEnumValue(AlertFeedback.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AlertStatus.class)); });
             this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
@@ -135,6 +147,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("assignedTo", this.getAssignedTo());
         writer.writeCollectionOfPrimitiveValues("comments", this.getComments());
         writer.writeEnumValue("feedback", this.getFeedback());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeOffsetDateTimeValue("updatedDateTime", this.getUpdatedDateTime());
         writer.writeStringValue("user", this.getUser());
@@ -179,6 +192,14 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     public void setFeedback(@javax.annotation.Nullable final AlertFeedback value) {
         this._feedback = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.

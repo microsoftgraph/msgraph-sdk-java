@@ -16,12 +16,15 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _lastAccessedDateTime;
     /** The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new usageDetails and sets the default values.
      * @return a void
      */
     public UsageDetails() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.usageDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,9 +51,10 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UsageDetails currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("lastAccessedDateTime", (n) -> { currentObject.setLastAccessedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,6 +74,14 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -78,6 +90,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastAccessedDateTime", this.getLastAccessedDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +116,13 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

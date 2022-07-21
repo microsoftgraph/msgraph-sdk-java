@@ -20,7 +20,7 @@ import microsoft.graph.models.callrecords.SessionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity. */
 public class SessionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

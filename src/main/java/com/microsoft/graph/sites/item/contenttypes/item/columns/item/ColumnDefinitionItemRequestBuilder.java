@@ -313,7 +313,7 @@ public class ColumnDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new columnDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class ColumnDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public ColumnDefinitionItemRequestBuilderGetQueryParameters queryParameters = new ColumnDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new columnDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class ColumnDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new columnDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ColumnDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ColumnDefinitionItemRequestBuilderPatchRequestConfiguration() {

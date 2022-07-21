@@ -307,7 +307,7 @@ public class AgreementFileVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementFileVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileVersionItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class AgreementFileVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public AgreementFileVersionItemRequestBuilderGetQueryParameters queryParameters = new AgreementFileVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new agreementFileVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileVersionItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class AgreementFileVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new agreementFileVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AgreementFileVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AgreementFileVersionItemRequestBuilderPatchRequestConfiguration() {

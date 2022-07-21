@@ -313,7 +313,7 @@ public class TrendingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trendingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TrendingItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrendingItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class TrendingItemRequestBuilder {
         @javax.annotation.Nullable
         public TrendingItemRequestBuilderGetQueryParameters queryParameters = new TrendingItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new trendingItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TrendingItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrendingItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class TrendingItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new trendingItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TrendingItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TrendingItemRequestBuilderPatchRequestConfiguration() {

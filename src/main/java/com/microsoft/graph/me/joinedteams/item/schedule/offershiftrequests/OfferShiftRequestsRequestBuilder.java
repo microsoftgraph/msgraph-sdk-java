@@ -20,7 +20,7 @@ import microsoft.graph.models.OfferShiftRequest;
 import microsoft.graph.models.OfferShiftRequestCollectionResponse;
 /** Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity. */
 public class OfferShiftRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

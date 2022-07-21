@@ -47,7 +47,7 @@ public class EducationSchoolItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.schools.item.classes.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
@@ -333,7 +333,7 @@ public class EducationSchoolItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.schools.item.users.item collection
      * @param id Unique identifier of the item
-     * @return a educationUserItemRequestBuilder
+     * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationUserItemRequestBuilder users(@javax.annotation.Nonnull final String id) {
@@ -351,7 +351,7 @@ public class EducationSchoolItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSchoolItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSchoolItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSchoolItemRequestBuilderDeleteRequestConfiguration() {
@@ -380,7 +380,7 @@ public class EducationSchoolItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSchoolItemRequestBuilderGetQueryParameters queryParameters = new EducationSchoolItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSchoolItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSchoolItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSchoolItemRequestBuilderGetRequestConfiguration() {
@@ -395,7 +395,7 @@ public class EducationSchoolItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSchoolItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSchoolItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSchoolItemRequestBuilderPatchRequestConfiguration() {

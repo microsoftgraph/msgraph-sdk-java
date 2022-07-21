@@ -21,6 +21,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     private Boolean _isHybridAzureDomainJoined;
     /** The local host name, without the DNS domain name. */
     private String _netBiosName;
+    /** The OdataType property */
+    private String _odataType;
     /** Host Operating System. (For example, Windows10, MacOS, RHEL, etc.). */
     private String _os;
     /** Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert. */
@@ -35,6 +37,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hostSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,13 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HostSecurityState currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<>(10) {{
             this.put("fqdn", (n) -> { currentObject.setFqdn(n.getStringValue()); });
             this.put("isAzureAdJoined", (n) -> { currentObject.setIsAzureAdJoined(n.getBooleanValue()); });
             this.put("isAzureAdRegistered", (n) -> { currentObject.setIsAzureAdRegistered(n.getBooleanValue()); });
             this.put("isHybridAzureDomainJoined", (n) -> { currentObject.setIsHybridAzureDomainJoined(n.getBooleanValue()); });
             this.put("netBiosName", (n) -> { currentObject.setNetBiosName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
             this.put("privateIpAddress", (n) -> { currentObject.setPrivateIpAddress(n.getStringValue()); });
             this.put("publicIpAddress", (n) -> { currentObject.setPublicIpAddress(n.getStringValue()); });
@@ -114,6 +118,14 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         return this._netBiosName;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      * @return a string
      */
@@ -157,6 +169,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isAzureAdRegistered", this.getIsAzureAdRegistered());
         writer.writeBooleanValue("isHybridAzureDomainJoined", this.getIsHybridAzureDomainJoined());
         writer.writeStringValue("netBiosName", this.getNetBiosName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("os", this.getOs());
         writer.writeStringValue("privateIpAddress", this.getPrivateIpAddress());
         writer.writeStringValue("publicIpAddress", this.getPublicIpAddress());
@@ -210,6 +223,14 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     public void setNetBiosName(@javax.annotation.Nullable final String value) {
         this._netBiosName = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).

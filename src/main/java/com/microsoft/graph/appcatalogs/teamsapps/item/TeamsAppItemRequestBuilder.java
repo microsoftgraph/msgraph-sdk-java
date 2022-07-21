@@ -34,7 +34,7 @@ public class TeamsAppItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.appCatalogs.teamsApps.item.appDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAppDefinitionItemRequestBuilder
+     * @return a TeamsAppDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAppDefinitionItemRequestBuilder appDefinitions(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class TeamsAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class TeamsAppItemRequestBuilder {
         @javax.annotation.Nullable
         public TeamsAppItemRequestBuilderGetQueryParameters queryParameters = new TeamsAppItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new teamsAppItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class TeamsAppItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new teamsAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TeamsAppItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TeamsAppItemRequestBuilderPatchRequestConfiguration() {

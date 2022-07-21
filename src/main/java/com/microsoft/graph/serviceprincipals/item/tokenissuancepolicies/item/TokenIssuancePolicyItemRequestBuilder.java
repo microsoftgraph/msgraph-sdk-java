@@ -155,7 +155,7 @@ public class TokenIssuancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public TokenIssuancePolicyItemRequestBuilderGetQueryParameters queryParameters = new TokenIssuancePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tokenIssuancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TokenIssuancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenIssuancePolicyItemRequestBuilderGetRequestConfiguration() {

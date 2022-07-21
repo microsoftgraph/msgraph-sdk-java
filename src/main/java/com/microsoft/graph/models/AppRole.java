@@ -21,6 +21,8 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     private String _id;
     /** When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed. */
     private Boolean _isEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only. */
     private String _origin;
     /** Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with .. */
@@ -31,6 +33,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
      */
     public AppRole() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.appRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,12 +84,13 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppRole currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("allowedMemberTypes", (n) -> { currentObject.setAllowedMemberTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -106,6 +110,14 @@ public class AppRole implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
         return this._isEnabled;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the origin property value. Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
@@ -135,6 +147,7 @@ public class AppRole implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("origin", this.getOrigin());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -186,6 +199,14 @@ public class AppRole implements AdditionalDataHolder, Parsable {
      */
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the origin property value. Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.

@@ -26,7 +26,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     public ServiceAnnouncementBase() {
         super();
-        this.setType("#microsoft.graph.serviceAnnouncementBase");
+        this.setOdataType("#microsoft.graph.serviceAnnouncementBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

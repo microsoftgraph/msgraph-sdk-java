@@ -20,7 +20,7 @@ import microsoft.graph.models.SharedDriveItemCollectionResponse;
 import microsoft.graph.shares.count.CountRequestBuilder;
 /** Provides operations to manage the collection of sharedDriveItem entities. */
 public class SharesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

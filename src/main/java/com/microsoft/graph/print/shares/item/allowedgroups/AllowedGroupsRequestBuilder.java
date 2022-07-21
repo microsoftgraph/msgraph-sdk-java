@@ -20,14 +20,14 @@ import microsoft.graph.print.shares.item.allowedgroups.count.CountRequestBuilder
 import microsoft.graph.print.shares.item.allowedgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the allowedGroups property of the microsoft.graph.printerShare entity. */
 public class AllowedGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The ref property */
+    /** The Ref property */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

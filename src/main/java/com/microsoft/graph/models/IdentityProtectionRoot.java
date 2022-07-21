@@ -11,6 +11,8 @@ import java.util.Objects;
 public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** Risk detection in Azure AD Identity Protection and the associated information about the detection. */
     private java.util.List<RiskDetection> _riskDetections;
     /** Users that are flagged as at-risk by Azure AD Identity Protection. */
@@ -21,6 +23,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     public IdentityProtectionRoot() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.identityProtectionRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityProtectionRoot currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskDetections", (n) -> { currentObject.setRiskDetections(n.getCollectionOfObjectValues(RiskDetection::createFromDiscriminatorValue)); });
             this.put("riskyUsers", (n) -> { currentObject.setRiskyUsers(n.getCollectionOfObjectValues(RiskyUser::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
@@ -75,6 +87,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("riskDetections", this.getRiskDetections());
         writer.writeCollectionOfObjectValues("riskyUsers", this.getRiskyUsers());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.

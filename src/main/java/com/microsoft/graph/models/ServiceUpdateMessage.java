@@ -37,6 +37,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      */
     public ServiceUpdateMessage() {
         super();
+        this.setOdataType("#microsoft.graph.serviceUpdateMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

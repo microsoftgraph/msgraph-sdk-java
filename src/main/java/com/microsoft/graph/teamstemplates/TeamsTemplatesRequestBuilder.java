@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsTemplateCollectionResponse;
 import microsoft.graph.teamstemplates.count.CountRequestBuilder;
 /** Provides operations to manage the collection of teamsTemplate entities. */
 public class TeamsTemplatesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

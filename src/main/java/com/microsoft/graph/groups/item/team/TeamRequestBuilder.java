@@ -126,7 +126,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.allChannels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
@@ -138,7 +138,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.channels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
@@ -369,7 +369,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.incomingChannels.item collection
      * @param id Unique identifier of the item
-     * @return a channelItemRequestBuilder
+     * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
@@ -381,7 +381,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.installedApps.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAppInstallationItemRequestBuilder
+     * @return a TeamsAppInstallationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAppInstallationItemRequestBuilder installedApps(@javax.annotation.Nonnull final String id) {
@@ -393,7 +393,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.members.item collection
      * @param id Unique identifier of the item
-     * @return a conversationMemberItemRequestBuilder
+     * @return a ConversationMemberItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ConversationMemberItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
@@ -405,7 +405,7 @@ public class TeamRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.operations.item collection
      * @param id Unique identifier of the item
-     * @return a teamsAsyncOperationItemRequestBuilder
+     * @return a TeamsAsyncOperationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamsAsyncOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {

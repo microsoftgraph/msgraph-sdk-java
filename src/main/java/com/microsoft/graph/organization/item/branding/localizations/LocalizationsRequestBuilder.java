@@ -20,7 +20,7 @@ import microsoft.graph.models.OrganizationalBrandingLocalizationCollectionRespon
 import microsoft.graph.organization.item.branding.localizations.count.CountRequestBuilder;
 /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
 public class LocalizationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

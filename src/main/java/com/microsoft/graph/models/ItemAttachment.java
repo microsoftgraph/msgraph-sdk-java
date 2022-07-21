@@ -16,6 +16,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      */
     public ItemAttachment() {
         super();
+        this.setOdataType("#microsoft.graph.itemAttachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

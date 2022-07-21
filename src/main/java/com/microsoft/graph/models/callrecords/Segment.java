@@ -29,6 +29,7 @@ public class Segment extends Entity implements Parsable {
      */
     public Segment() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.segment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

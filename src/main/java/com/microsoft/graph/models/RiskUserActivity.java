@@ -13,6 +13,8 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
     private RiskDetail _detail;
+    /** The OdataType property */
+    private String _odataType;
     /** The type of risk event detected. */
     private java.util.List<String> _riskEventTypes;
     /**
@@ -21,6 +23,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
      */
     public RiskUserActivity() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.riskUserActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,10 +58,19 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskUserActivity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(RiskDetail.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the riskEventTypes property value. The type of risk event detected.
@@ -76,6 +88,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
      */
     public void setDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._detail = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the riskEventTypes property value. The type of risk event detected.

@@ -13,12 +13,15 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     private Map<String, Object> _additionalData;
     /** Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set. */
     private ConditionalAccessFilter _deviceFilter;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessDevices and sets the default values.
      * @return a void
      */
     public ConditionalAccessDevices() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessDevices");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +56,18 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessDevices currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("deviceFilter", (n) -> { currentObject.setDeviceFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -65,6 +77,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("deviceFilter", this.getDeviceFilter());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
      */
     public void setDeviceFilter(@javax.annotation.Nullable final ConditionalAccessFilter value) {
         this._deviceFilter = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

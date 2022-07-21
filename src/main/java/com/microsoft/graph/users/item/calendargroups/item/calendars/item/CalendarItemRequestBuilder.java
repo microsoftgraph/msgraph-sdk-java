@@ -77,7 +77,7 @@ public class CalendarItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item.calendarPermissions.item collection
      * @param id Unique identifier of the item
-     * @return a calendarPermissionItemRequestBuilder
+     * @return a CalendarPermissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarPermissionItemRequestBuilder calendarPermissions(@javax.annotation.Nonnull final String id) {
@@ -89,7 +89,7 @@ public class CalendarItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -269,7 +269,7 @@ public class CalendarItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item.events.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.users.item.calendargroups.item.calendars.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class CalendarItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -399,7 +399,7 @@ public class CalendarItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -417,7 +417,7 @@ public class CalendarItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarItemRequestBuilderDeleteRequestConfiguration() {
@@ -442,7 +442,7 @@ public class CalendarItemRequestBuilder {
         @javax.annotation.Nullable
         public CalendarItemRequestBuilderGetQueryParameters queryParameters = new CalendarItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new calendarItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarItemRequestBuilderGetRequestConfiguration() {
@@ -457,7 +457,7 @@ public class CalendarItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new calendarItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CalendarItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CalendarItemRequestBuilderPatchRequestConfiguration() {

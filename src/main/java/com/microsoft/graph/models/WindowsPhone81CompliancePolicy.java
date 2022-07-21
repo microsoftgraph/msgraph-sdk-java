@@ -36,6 +36,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      */
     public WindowsPhone81CompliancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.windowsPhone81CompliancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

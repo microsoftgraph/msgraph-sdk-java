@@ -11,9 +11,11 @@ import java.util.Objects;
 public class KeyValuePair implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. */
+    /** Name for this key-value pair */
     private String _name;
-    /** Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning). */
+    /** The OdataType property */
+    private String _odataType;
+    /** Value for this key-value pair */
     private String _value;
     /**
      * Instantiates a new keyValuePair and sets the default values.
@@ -21,6 +23,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
      */
     public KeyValuePair() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.keyValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,13 +50,14 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KeyValuePair currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the name property value. Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.
+     * Gets the name property value. Name for this key-value pair
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +65,15 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the value property value. Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the value property value. Value for this key-value pair
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,6 +88,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -88,7 +101,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.
+     * Sets the name property value. Name for this key-value pair
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -96,7 +109,15 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the value property value. Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the value property value. Value for this key-value pair
      * @param value Value to set for the value property.
      * @return a void
      */

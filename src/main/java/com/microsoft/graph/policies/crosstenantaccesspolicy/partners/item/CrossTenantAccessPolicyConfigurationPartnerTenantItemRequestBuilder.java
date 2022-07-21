@@ -307,7 +307,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new crossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         @javax.annotation.Nullable
         public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetQueryParameters queryParameters = new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new crossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new crossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration() {

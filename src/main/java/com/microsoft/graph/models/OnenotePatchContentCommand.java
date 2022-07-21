@@ -15,6 +15,8 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     private Map<String, Object> _additionalData;
     /** A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part. */
     private String _content;
+    /** The OdataType property */
+    private String _odataType;
     /** The location to add the supplied content, relative to the target element. Possible values are: after (default) or before. */
     private OnenotePatchInsertPosition _position;
     /** The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword. */
@@ -25,6 +27,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.onenotePatchContentCommand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,12 +70,21 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenotePatchContentCommand currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(OnenotePatchActionType.class)); });
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getEnumValue(OnenotePatchInsertPosition.class)); });
             this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
@@ -99,6 +111,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeStringValue("content", this.getContent());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("position", this.getPosition());
         writer.writeStringValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      */
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.

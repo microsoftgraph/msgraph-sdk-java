@@ -307,7 +307,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new settingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public SettingStateDeviceSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters queryParameters = new SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new settingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new settingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration() {

@@ -313,7 +313,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder {
         @javax.annotation.Nullable
         public UserScopeTeamsAppInstallationItemRequestBuilderGetQueryParameters queryParameters = new UserScopeTeamsAppInstallationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration() {

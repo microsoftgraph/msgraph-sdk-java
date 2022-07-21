@@ -22,6 +22,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     public UnifiedRoleAssignmentSchedule() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleAssignmentSchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -21,7 +21,7 @@ import microsoft.graph.users.item.joinedteams.count.CountRequestBuilder;
 import microsoft.graph.users.item.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class JoinedTeamsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

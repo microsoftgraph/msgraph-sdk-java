@@ -17,6 +17,8 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     private Integer _maxWords;
     /** Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words. */
     private Integer _minWords;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold. */
     private Integer _similarityThreshold;
     /**
@@ -25,6 +27,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     public RedundancyDetectionSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.redundancyDetectionSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +54,11 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RedundancyDetectionSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("maxWords", (n) -> { currentObject.setMaxWords(n.getIntegerValue()); });
             this.put("minWords", (n) -> { currentObject.setMinWords(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("similarityThreshold", (n) -> { currentObject.setSimilarityThreshold(n.getIntegerValue()); });
         }};
     }
@@ -83,6 +87,14 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         return this._minWords;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
      * @return a integer
      */
@@ -100,6 +112,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeIntegerValue("maxWords", this.getMaxWords());
         writer.writeIntegerValue("minWords", this.getMinWords());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("similarityThreshold", this.getSimilarityThreshold());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
      */
     public void setMinWords(@javax.annotation.Nullable final Integer value) {
         this._minWords = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.

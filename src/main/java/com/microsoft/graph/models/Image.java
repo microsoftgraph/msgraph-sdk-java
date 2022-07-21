@@ -13,6 +13,8 @@ public class Image implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Optional. Height of the image, in pixels. Read-only. */
     private Integer _height;
+    /** The OdataType property */
+    private String _odataType;
     /** Optional. Width of the image, in pixels. Read-only. */
     private Integer _width;
     /**
@@ -21,6 +23,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      */
     public Image() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.image");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class Image implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Image currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class Image implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getHeight() {
         return this._height;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the width property value. Optional. Width of the image, in pixels. Read-only.
@@ -76,6 +88,7 @@ public class Image implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("height", this.getHeight());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("width", this.getWidth());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class Image implements AdditionalDataHolder, Parsable {
      */
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the width property value. Optional. Width of the image, in pixels. Read-only.

@@ -83,7 +83,7 @@ public class OrganizationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.organization.item.certificateBasedAuthConfiguration.item collection
      * @param id Unique identifier of the item
-     * @return a certificateBasedAuthConfigurationItemRequestBuilder
+     * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationItemRequestBuilder certificateBasedAuthConfiguration(@javax.annotation.Nonnull final String id) {
@@ -263,7 +263,7 @@ public class OrganizationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.organization.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -387,7 +387,7 @@ public class OrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationItemRequestBuilderDeleteRequestConfiguration() {
@@ -416,7 +416,7 @@ public class OrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public OrganizationItemRequestBuilderGetQueryParameters queryParameters = new OrganizationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new organizationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationItemRequestBuilderGetRequestConfiguration() {
@@ -431,7 +431,7 @@ public class OrganizationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new organizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OrganizationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OrganizationItemRequestBuilderPatchRequestConfiguration() {

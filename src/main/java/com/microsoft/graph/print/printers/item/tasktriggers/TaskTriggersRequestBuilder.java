@@ -20,7 +20,7 @@ import microsoft.graph.models.PrintTaskTriggerCollectionResponse;
 import microsoft.graph.print.printers.item.tasktriggers.count.CountRequestBuilder;
 /** Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity. */
 public class TaskTriggersRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

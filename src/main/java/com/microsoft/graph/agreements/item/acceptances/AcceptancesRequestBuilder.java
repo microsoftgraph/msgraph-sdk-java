@@ -20,7 +20,7 @@ import microsoft.graph.models.AgreementAcceptanceCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the acceptances property of the microsoft.graph.agreement entity. */
 public class AcceptancesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

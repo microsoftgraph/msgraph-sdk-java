@@ -14,6 +14,7 @@ public class WindowsInformationProtectionStoreApp extends WindowsInformationProt
      */
     public WindowsInformationProtectionStoreApp() {
         super();
+        this.setOdataType("#microsoft.graph.windowsInformationProtectionStoreApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

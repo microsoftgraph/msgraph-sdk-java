@@ -15,6 +15,8 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     private String _email;
     /** Provides information about who sent the invitation that created this permission, if that information is available. Read-only. */
     private IdentitySet _invitedBy;
+    /** The OdataType property */
+    private String _odataType;
     /** The redeemedBy property */
     private String _redeemedBy;
     /** If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only. */
@@ -25,6 +27,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     public SharingInvitation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sharingInvitation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,9 +62,10 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingInvitation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("invitedBy", (n) -> { currentObject.setInvitedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("redeemedBy", (n) -> { currentObject.setRedeemedBy(n.getStringValue()); });
             this.put("signInRequired", (n) -> { currentObject.setSignInRequired(n.getBooleanValue()); });
         }};
@@ -73,6 +77,14 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet getInvitedBy() {
         return this._invitedBy;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the redeemedBy property value. The redeemedBy property
@@ -99,6 +111,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("invitedBy", this.getInvitedBy());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("redeemedBy", this.getRedeemedBy());
         writer.writeBooleanValue("signInRequired", this.getSignInRequired());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -126,6 +139,14 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
      */
     public void setInvitedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._invitedBy = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the redeemedBy property value. The redeemedBy property

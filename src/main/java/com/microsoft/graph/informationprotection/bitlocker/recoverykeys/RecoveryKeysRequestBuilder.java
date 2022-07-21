@@ -20,7 +20,7 @@ import microsoft.graph.models.BitlockerRecoveryKeyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity. */
 public class RecoveryKeysRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

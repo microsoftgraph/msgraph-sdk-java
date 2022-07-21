@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.privacy.subjectrightsrequests.item.notes.count.CountRequestBuilder;
 /** Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity. */
 public class NotesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -66,7 +66,7 @@ public class EducationAssignmentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.categories.item collection
      * @param id Unique identifier of the item
-     * @return a educationCategoryItemRequestBuilder
+     * @return a EducationCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationCategoryItemRequestBuilder categories(@javax.annotation.Nonnull final String id) {
@@ -352,7 +352,7 @@ public class EducationAssignmentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.resources.item collection
      * @param id Unique identifier of the item
-     * @return a educationAssignmentResourceItemRequestBuilder
+     * @return a EducationAssignmentResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationAssignmentResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class EducationAssignmentItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.submissions.item collection
      * @param id Unique identifier of the item
-     * @return a educationSubmissionItemRequestBuilder
+     * @return a EducationSubmissionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSubmissionItemRequestBuilder submissions(@javax.annotation.Nonnull final String id) {
@@ -382,7 +382,7 @@ public class EducationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -411,7 +411,7 @@ public class EducationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationAssignmentItemRequestBuilderGetQueryParameters queryParameters = new EducationAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -426,7 +426,7 @@ public class EducationAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationAssignmentItemRequestBuilderPatchRequestConfiguration() {

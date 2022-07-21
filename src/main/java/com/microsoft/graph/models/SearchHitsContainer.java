@@ -17,6 +17,8 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     private java.util.List<SearchHit> _hits;
     /** Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly. */
     private Boolean _moreResultsAvailable;
+    /** The OdataType property */
+    private String _odataType;
     /** The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query. */
     private Integer _total;
     /**
@@ -25,6 +27,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     public SearchHitsContainer() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchHitsContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,10 +62,11 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchHitsContainer currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
             this.put("hits", (n) -> { currentObject.setHits(n.getCollectionOfObjectValues(SearchHit::createFromDiscriminatorValue)); });
             this.put("moreResultsAvailable", (n) -> { currentObject.setMoreResultsAvailable(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("total", (n) -> { currentObject.setTotal(n.getIntegerValue()); });
         }};
     }
@@ -83,6 +87,14 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         return this._moreResultsAvailable;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
      * @return a integer
      */
@@ -100,6 +112,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
         writer.writeCollectionOfObjectValues("hits", this.getHits());
         writer.writeBooleanValue("moreResultsAvailable", this.getMoreResultsAvailable());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("total", this.getTotal());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
      */
     public void setMoreResultsAvailable(@javax.annotation.Nullable final Boolean value) {
         this._moreResultsAvailable = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.

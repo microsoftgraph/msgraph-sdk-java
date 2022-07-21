@@ -15,6 +15,8 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     private RegistryHive _hive;
     /** Current (i.e. changed) registry key (excludes HIVE). */
     private String _key;
+    /** The OdataType property */
+    private String _odataType;
     /** Previous (i.e. before changed) registry key (excludes HIVE). */
     private String _oldKey;
     /** Previous (i.e. before changed) registry key value data (contents). */
@@ -37,6 +39,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     public RegistryKeyState() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.registryKeyState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,9 +66,10 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistryKeyState currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("hive", (n) -> { currentObject.setHive(n.getEnumValue(RegistryHive.class)); });
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("oldKey", (n) -> { currentObject.setOldKey(n.getStringValue()); });
             this.put("oldValueData", (n) -> { currentObject.setOldValueData(n.getStringValue()); });
             this.put("oldValueName", (n) -> { currentObject.setOldValueName(n.getStringValue()); });
@@ -91,6 +95,14 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getKey() {
         return this._key;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
@@ -165,6 +177,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("hive", this.getHive());
         writer.writeStringValue("key", this.getKey());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("oldKey", this.getOldKey());
         writer.writeStringValue("oldValueData", this.getOldValueData());
         writer.writeStringValue("oldValueName", this.getOldValueName());
@@ -198,6 +211,14 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
      */
     public void setKey(@javax.annotation.Nullable final String value) {
         this._key = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).

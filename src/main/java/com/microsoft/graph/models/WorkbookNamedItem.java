@@ -15,6 +15,8 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     private String _name;
     /** Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only. */
     private String _scope;
+    /** Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only. */
+    private String _type;
     /** Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
     private Json _value;
     /** Specifies whether the object is visible or not. */
@@ -27,6 +29,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     public WorkbookNamedItem() {
         super();
+        this.setOdataType("#microsoft.graph.workbookNamedItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,6 +60,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
+            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
             this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
             this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
@@ -77,6 +81,14 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public String getScope() {
         return this._scope;
+    }
+    /**
+     * Gets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Gets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
@@ -113,6 +125,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         writer.writeStringValue("comment", this.getComment());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("scope", this.getScope());
+        writer.writeStringValue("type", this.getType());
         writer.writeObjectValue("value", this.getValue());
         writer.writeBooleanValue("visible", this.getVisible());
         writer.writeObjectValue("worksheet", this.getWorksheet());
@@ -140,6 +153,14 @@ public class WorkbookNamedItem extends Entity implements Parsable {
      */
     public void setScope(@javax.annotation.Nullable final String value) {
         this._scope = value;
+    }
+    /**
+     * Sets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
     /**
      * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.

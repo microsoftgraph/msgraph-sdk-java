@@ -19,7 +19,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     public TeamsAppInstallation() {
         super();
-        this.setType("#microsoft.graph.teamsAppInstallation");
+        this.setOdataType("#microsoft.graph.teamsAppInstallation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

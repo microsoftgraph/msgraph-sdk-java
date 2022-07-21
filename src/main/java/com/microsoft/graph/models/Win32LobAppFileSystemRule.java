@@ -26,6 +26,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      */
     public Win32LobAppFileSystemRule() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppFileSystemRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

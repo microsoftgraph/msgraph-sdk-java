@@ -13,6 +13,8 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The CRC32 value of the file (if available). Read-only. */
     private String _crc32Hash;
+    /** The OdataType property */
+    private String _odataType;
     /** A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only. */
     private String _quickXorHash;
     /** SHA1 hash for the contents of the file (if available). Read-only. */
@@ -25,6 +27,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     public Hashes() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hashes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,12 +62,21 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Hashes currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("crc32Hash", (n) -> { currentObject.setCrc32Hash(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("quickXorHash", (n) -> { currentObject.setQuickXorHash(n.getStringValue()); });
             this.put("sha1Hash", (n) -> { currentObject.setSha1Hash(n.getStringValue()); });
             this.put("sha256Hash", (n) -> { currentObject.setSha256Hash(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
@@ -98,6 +110,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("crc32Hash", this.getCrc32Hash());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("quickXorHash", this.getQuickXorHash());
         writer.writeStringValue("sha1Hash", this.getSha1Hash());
         writer.writeStringValue("sha256Hash", this.getSha256Hash());
@@ -118,6 +131,14 @@ public class Hashes implements AdditionalDataHolder, Parsable {
      */
     public void setCrc32Hash(@javax.annotation.Nullable final String value) {
         this._crc32Hash = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.

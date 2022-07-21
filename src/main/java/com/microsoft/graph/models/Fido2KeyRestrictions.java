@@ -17,12 +17,15 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     private Fido2RestrictionEnforcementType _enforcementType;
     /** Determines if the configured key enforcement is enabled. */
     private Boolean _isEnforced;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new fido2KeyRestrictions and sets the default values.
      * @return a void
      */
     public Fido2KeyRestrictions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.fido2KeyRestrictions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2KeyRestrictions currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("aaGuids", (n) -> { currentObject.setAaGuids(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("enforcementType", (n) -> { currentObject.setEnforcementType(n.getEnumValue(Fido2RestrictionEnforcementType.class)); });
             this.put("isEnforced", (n) -> { currentObject.setIsEnforced(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
         return this._isEnforced;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("aaGuids", this.getAaGuids());
         writer.writeEnumValue("enforcementType", this.getEnforcementType());
         writer.writeBooleanValue("isEnforced", this.getIsEnforced());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
      */
     public void setIsEnforced(@javax.annotation.Nullable final Boolean value) {
         this._isEnforced = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

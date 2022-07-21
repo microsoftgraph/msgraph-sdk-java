@@ -31,6 +31,7 @@ public class Session extends Entity implements Parsable {
      */
     public Session() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.session");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

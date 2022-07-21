@@ -17,6 +17,8 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     private ImplicitGrantSettings _implicitGrantSettings;
     /** Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols. */
     private String _logoutUrl;
+    /** The OdataType property */
+    private String _odataType;
     /** Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. */
     private java.util.List<String> _redirectUris;
     /**
@@ -25,6 +27,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.webApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +54,11 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
             this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
             this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -83,6 +87,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         return this._logoutUrl;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * @return a string
      */
@@ -100,6 +112,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
         writer.writeObjectValue("implicitGrantSettings", this.getImplicitGrantSettings());
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("redirectUris", this.getRedirectUris());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
         this._logoutUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.

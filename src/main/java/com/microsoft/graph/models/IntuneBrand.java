@@ -26,6 +26,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Logo image displayed in Company Portal apps which have a light background behind the logo. */
     private MimeContent _lightBackgroundLogo;
+    /** The OdataType property */
+    private String _odataType;
     /** Display name of the company/organization’s IT helpdesk site. */
     private String _onlineSupportSiteName;
     /** URL to the company/organization’s IT helpdesk site. */
@@ -46,6 +48,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.intuneBrand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -120,7 +123,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntuneBrand currentObject = this;
-        return new HashMap<>(14) {{
+        return new HashMap<>(15) {{
             this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
             this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
             this.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });
@@ -128,6 +131,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
             this.put("darkBackgroundLogo", (n) -> { currentObject.setDarkBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lightBackgroundLogo", (n) -> { currentObject.setLightBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onlineSupportSiteName", (n) -> { currentObject.setOnlineSupportSiteName(n.getStringValue()); });
             this.put("onlineSupportSiteUrl", (n) -> { currentObject.setOnlineSupportSiteUrl(n.getStringValue()); });
             this.put("privacyUrl", (n) -> { currentObject.setPrivacyUrl(n.getStringValue()); });
@@ -144,6 +148,14 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
         return this._lightBackgroundLogo;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
@@ -215,6 +227,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("darkBackgroundLogo", this.getDarkBackgroundLogo());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("lightBackgroundLogo", this.getLightBackgroundLogo());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onlineSupportSiteName", this.getOnlineSupportSiteName());
         writer.writeStringValue("onlineSupportSiteUrl", this.getOnlineSupportSiteUrl());
         writer.writeStringValue("privacyUrl", this.getPrivacyUrl());
@@ -287,6 +300,14 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
         this._lightBackgroundLogo = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.

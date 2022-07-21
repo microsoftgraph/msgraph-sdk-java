@@ -20,7 +20,7 @@ import microsoft.graph.models.RoleAssignment;
 import microsoft.graph.models.RoleAssignmentCollectionResponse;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity. */
 public class RoleAssignmentsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -337,7 +337,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration() {
@@ -366,7 +366,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters queryParameters = new ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new resourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration() {
@@ -381,7 +381,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new resourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration() {

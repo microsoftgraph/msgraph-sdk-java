@@ -16,6 +16,8 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     private String _assignedTo;
     /** Provides optional comment about the control. */
     private String _comment;
+    /** The OdataType property */
+    private String _odataType;
     /** State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty). */
     private String _state;
     /** ID of the user who updated tenant state. */
@@ -28,6 +30,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.secureScoreControlStateUpdate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,13 +73,22 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecureScoreControlStateUpdate currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
             this.put("updatedBy", (n) -> { currentObject.setUpdatedBy(n.getStringValue()); });
             this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
@@ -111,6 +123,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignedTo", this.getAssignedTo());
         writer.writeStringValue("comment", this.getComment());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("updatedBy", this.getUpdatedBy());
         writer.writeOffsetDateTimeValue("updatedDateTime", this.getUpdatedDateTime());
@@ -139,6 +152,14 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      */
     public void setComment(@javax.annotation.Nullable final String value) {
         this._comment = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the state property value. State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).

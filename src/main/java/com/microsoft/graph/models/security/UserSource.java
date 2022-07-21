@@ -20,6 +20,7 @@ public class UserSource extends DataSource implements Parsable {
      */
     public UserSource() {
         super();
+        this.setOdataType("#microsoft.graph.security.userSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

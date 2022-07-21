@@ -66,7 +66,7 @@ public class EducationUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a educationAssignmentItemRequestBuilder
+     * @return a EducationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -78,7 +78,7 @@ public class EducationUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item.classes.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.users.item.classes.item.EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
@@ -364,7 +364,7 @@ public class EducationUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item.rubrics.item collection
      * @param id Unique identifier of the item
-     * @return a educationRubricItemRequestBuilder
+     * @return a EducationRubricItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationRubricItemRequestBuilder rubrics(@javax.annotation.Nonnull final String id) {
@@ -376,7 +376,7 @@ public class EducationUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item.schools.item collection
      * @param id Unique identifier of the item
-     * @return a educationSchoolItemRequestBuilder
+     * @return a EducationSchoolItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EducationSchoolItemRequestBuilder schools(@javax.annotation.Nonnull final String id) {
@@ -388,7 +388,7 @@ public class EducationUserItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.education.users.item.taughtClasses.item collection
      * @param id Unique identifier of the item
-     * @return a educationClassItemRequestBuilder
+     * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.education.users.item.taughtclasses.item.EducationClassItemRequestBuilder taughtClasses(@javax.annotation.Nonnull final String id) {
@@ -406,7 +406,7 @@ public class EducationUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationUserItemRequestBuilderDeleteRequestConfiguration() {
@@ -435,7 +435,7 @@ public class EducationUserItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationUserItemRequestBuilderGetQueryParameters queryParameters = new EducationUserItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationUserItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationUserItemRequestBuilderGetRequestConfiguration() {
@@ -450,7 +450,7 @@ public class EducationUserItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationUserItemRequestBuilderPatchRequestConfiguration() {

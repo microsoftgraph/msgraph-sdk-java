@@ -17,12 +17,15 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     private ChatMessageMentionedIdentitySet _mentioned;
     /** String used to represent the mention. For example, a user's display name, a team name. */
     private String _mentionText;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new chatMessageMention and sets the default values.
      * @return a void
      */
     public ChatMessageMention() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.chatMessageMention");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMention currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("id", (n) -> { currentObject.setId(n.getIntegerValue()); });
             this.put("mentioned", (n) -> { currentObject.setMentioned(n.getObjectValue(ChatMessageMentionedIdentitySet::createFromDiscriminatorValue)); });
             this.put("mentionText", (n) -> { currentObject.setMentionText(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         return this._mentionText;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("id", this.getId());
         writer.writeObjectValue("mentioned", this.getMentioned());
         writer.writeStringValue("mentionText", this.getMentionText());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      */
     public void setMentionText(@javax.annotation.Nullable final String value) {
         this._mentionText = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

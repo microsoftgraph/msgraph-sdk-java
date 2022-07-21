@@ -20,7 +20,7 @@ import microsoft.graph.models.termstore.Set;
 import microsoft.graph.models.termstore.SetCollectionResponse;
 /** Provides operations to manage the sets property of the microsoft.graph.termStore.store entity. */
 public class SetsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

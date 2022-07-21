@@ -21,6 +21,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      */
     public BookingCustomQuestion() {
         super();
+        this.setOdataType("#microsoft.graph.bookingCustomQuestion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

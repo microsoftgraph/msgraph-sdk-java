@@ -308,7 +308,7 @@ public class ApprovalRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item.approval.stages.item collection
      * @param id Unique identifier of the item
-     * @return a approvalStageItemRequestBuilder
+     * @return a ApprovalStageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ApprovalStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {

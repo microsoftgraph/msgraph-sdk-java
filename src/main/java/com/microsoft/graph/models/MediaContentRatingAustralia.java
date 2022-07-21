@@ -13,6 +13,8 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** Movies rating labels in Australia */
     private RatingAustraliaMoviesType _movieRating;
+    /** The OdataType property */
+    private String _odataType;
     /** TV content rating labels in Australia */
     private RatingAustraliaTelevisionType _tvRating;
     /**
@@ -21,6 +23,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
      */
     public MediaContentRatingAustralia() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.mediaContentRatingAustralia");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaContentRatingAustralia currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingAustraliaMoviesType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingAustraliaTelevisionType.class)); });
         }};
     }
@@ -59,6 +63,14 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     @javax.annotation.Nullable
     public RatingAustraliaMoviesType getMovieRating() {
         return this._movieRating;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Australia
@@ -76,6 +88,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("movieRating", this.getMovieRating());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("tvRating", this.getTvRating());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
      */
     public void setMovieRating(@javax.annotation.Nullable final RatingAustraliaMoviesType value) {
         this._movieRating = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tvRating property value. TV content rating labels in Australia

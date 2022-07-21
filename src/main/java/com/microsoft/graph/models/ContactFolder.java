@@ -27,6 +27,7 @@ public class ContactFolder extends Entity implements Parsable {
      */
     public ContactFolder() {
         super();
+        this.setOdataType("#microsoft.graph.contactFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

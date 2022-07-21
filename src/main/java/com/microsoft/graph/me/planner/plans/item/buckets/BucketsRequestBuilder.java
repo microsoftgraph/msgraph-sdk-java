@@ -20,7 +20,7 @@ import microsoft.graph.models.PlannerBucket;
 import microsoft.graph.models.PlannerBucketCollectionResponse;
 /** Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity. */
 public class BucketsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

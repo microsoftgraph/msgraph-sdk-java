@@ -16,6 +16,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      */
     public TokenMeetingInfo() {
         super();
+        this.setOdataType("#microsoft.graph.tokenMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

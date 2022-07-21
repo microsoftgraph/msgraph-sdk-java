@@ -307,7 +307,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new passwordAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PasswordAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PasswordAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public PasswordAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new PasswordAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new passwordAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new passwordAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PasswordAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PasswordAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

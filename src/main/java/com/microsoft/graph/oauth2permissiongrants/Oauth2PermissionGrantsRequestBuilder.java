@@ -21,7 +21,7 @@ import microsoft.graph.oauth2permissiongrants.count.CountRequestBuilder;
 import microsoft.graph.oauth2permissiongrants.delta.DeltaRequestBuilder;
 /** Provides operations to manage the collection of oAuth2PermissionGrant entities. */
 public class Oauth2PermissionGrantsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

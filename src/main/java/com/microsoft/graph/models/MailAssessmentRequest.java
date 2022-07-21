@@ -20,6 +20,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      */
     public MailAssessmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.mailAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

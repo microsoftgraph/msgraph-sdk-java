@@ -17,6 +17,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements Parsabl
      */
     public SingleValueLegacyExtendedProperty() {
         super();
+        this.setOdataType("#microsoft.graph.singleValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -307,7 +307,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new workforceIntegrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         @javax.annotation.Nullable
         public WorkforceIntegrationItemRequestBuilderGetQueryParameters queryParameters = new WorkforceIntegrationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new workforceIntegrationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new WorkforceIntegrationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkforceIntegrationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new workforceIntegrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration() {

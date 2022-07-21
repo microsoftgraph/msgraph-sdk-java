@@ -16,6 +16,7 @@ public class OmaSettingBoolean extends OmaSetting implements Parsable {
      */
     public OmaSettingBoolean() {
         super();
+        this.setOdataType("#microsoft.graph.omaSettingBoolean");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

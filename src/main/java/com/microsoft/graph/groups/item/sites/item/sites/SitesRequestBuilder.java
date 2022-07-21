@@ -19,7 +19,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.SiteCollectionResponse;
 /** Provides operations to manage the sites property of the microsoft.graph.site entity. */
 public class SitesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

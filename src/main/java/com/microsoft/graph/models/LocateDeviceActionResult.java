@@ -16,6 +16,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      */
     public LocateDeviceActionResult() {
         super();
+        this.setOdataType("#microsoft.graph.locateDeviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

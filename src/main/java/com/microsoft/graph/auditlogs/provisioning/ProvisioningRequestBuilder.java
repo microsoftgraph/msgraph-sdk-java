@@ -20,7 +20,7 @@ import microsoft.graph.models.ProvisioningObjectSummary;
 import microsoft.graph.models.ProvisioningObjectSummaryCollectionResponse;
 /** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
 public class ProvisioningRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

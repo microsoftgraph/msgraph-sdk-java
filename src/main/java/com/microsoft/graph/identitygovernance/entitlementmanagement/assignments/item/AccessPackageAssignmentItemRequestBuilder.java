@@ -331,7 +331,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -360,7 +360,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessPackageAssignmentItemRequestBuilderGetQueryParameters queryParameters = new AccessPackageAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessPackageAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -375,7 +375,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessPackageAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessPackageAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessPackageAssignmentItemRequestBuilderPatchRequestConfiguration() {

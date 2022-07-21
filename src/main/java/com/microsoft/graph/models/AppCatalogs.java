@@ -17,6 +17,7 @@ public class AppCatalogs extends Entity implements Parsable {
      */
     public AppCatalogs() {
         super();
+        this.setOdataType("#microsoft.graph.appCatalogs");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

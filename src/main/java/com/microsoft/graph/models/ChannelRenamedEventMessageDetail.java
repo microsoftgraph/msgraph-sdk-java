@@ -20,6 +20,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     public ChannelRenamedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.channelRenamedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

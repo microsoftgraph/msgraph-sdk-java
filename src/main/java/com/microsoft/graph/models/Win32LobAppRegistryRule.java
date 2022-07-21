@@ -26,6 +26,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      */
     public Win32LobAppRegistryRule() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppRegistryRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

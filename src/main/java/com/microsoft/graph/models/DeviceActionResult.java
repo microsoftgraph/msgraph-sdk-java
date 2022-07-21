@@ -19,17 +19,17 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Time the action state was last updated */
     private OffsetDateTime _lastUpdatedDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Time the action was initiated */
     private OffsetDateTime _startDateTime;
-    /** The type property */
-    private String _type;
     /**
      * Instantiates a new deviceActionResult and sets the default values.
      * @return a void
      */
     public DeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.deviceActionResult");
+        this.setOdataType("#microsoft.graph.deviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,8 +87,8 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -100,20 +100,20 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         return this._lastUpdatedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the startDateTime property value. Time the action was initiated
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this._startDateTime;
-    }
-    /**
-     * Gets the @odata.type property value. The type property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
     }
     /**
      * Serializes information the current object
@@ -125,8 +125,8 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("actionName", this.getActionName());
         writer.writeEnumValue("actionState", this.getActionState());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
-        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,19 +162,19 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         this._lastUpdatedDateTime = value;
     }
     /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
      * Sets the startDateTime property value. Time the action was initiated
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

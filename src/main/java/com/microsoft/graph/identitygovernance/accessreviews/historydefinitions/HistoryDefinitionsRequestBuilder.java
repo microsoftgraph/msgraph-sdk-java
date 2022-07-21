@@ -20,7 +20,7 @@ import microsoft.graph.models.AccessReviewHistoryDefinitionCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity. */
 public class HistoryDefinitionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

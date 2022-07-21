@@ -308,7 +308,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceActionItemItemRequestBuilder
+     * @return a DeviceComplianceActionItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceActionItemItemRequestBuilder scheduledActionConfigurations(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceComplianceScheduledActionForRuleItemRequestBuilderGetQueryParameters queryParameters = new DeviceComplianceScheduledActionForRuleItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration() {

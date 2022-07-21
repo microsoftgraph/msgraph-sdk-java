@@ -22,6 +22,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      */
     public MailSearchFolder() {
         super();
+        this.setOdataType("#microsoft.graph.mailSearchFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

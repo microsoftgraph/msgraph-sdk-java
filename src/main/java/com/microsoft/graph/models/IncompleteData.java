@@ -14,6 +14,8 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The service does not have source data before the specified time. */
     private OffsetDateTime _missingDataBeforeDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Some data was not recorded due to excessive activity. */
     private Boolean _wasThrottled;
     /**
@@ -22,6 +24,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     public IncompleteData() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.incompleteData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,8 +51,9 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncompleteData currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });
         }};
     }
@@ -60,6 +64,14 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getMissingDataBeforeDateTime() {
         return this._missingDataBeforeDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the wasThrottled property value. Some data was not recorded due to excessive activity.
@@ -77,6 +89,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("missingDataBeforeDateTime", this.getMissingDataBeforeDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("wasThrottled", this.getWasThrottled());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -95,6 +108,14 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     public void setMissingDataBeforeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._missingDataBeforeDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the wasThrottled property value. Some data was not recorded due to excessive activity.

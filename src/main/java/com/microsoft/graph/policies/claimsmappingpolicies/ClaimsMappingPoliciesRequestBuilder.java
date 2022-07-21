@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.claimsmappingpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity. */
 public class ClaimsMappingPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

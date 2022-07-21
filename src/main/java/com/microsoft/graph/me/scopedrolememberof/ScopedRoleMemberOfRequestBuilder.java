@@ -20,7 +20,7 @@ import microsoft.graph.models.ScopedRoleMembership;
 import microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
 /** Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity. */
 public class ScopedRoleMemberOfRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

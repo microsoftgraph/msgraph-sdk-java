@@ -13,6 +13,8 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name of the strongly typed property defined as part of a schema extension. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details. */
     private String _type;
     /**
@@ -21,6 +23,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
      */
     public ExtensionSchemaProperty() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.extensionSchemaProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExtensionSchemaProperty currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
@@ -76,6 +88,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.

@@ -155,7 +155,7 @@ public class ChannelItemRequestBuilder {
         @javax.annotation.Nullable
         public ChannelItemRequestBuilderGetQueryParameters queryParameters = new ChannelItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new channelItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ChannelItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ChannelItemRequestBuilderGetRequestConfiguration() {

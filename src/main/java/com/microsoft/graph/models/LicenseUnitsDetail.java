@@ -13,6 +13,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The number of units that are enabled for the active subscription of the service SKU. */
     private Integer _enabled;
+    /** The OdataType property */
+    private String _odataType;
     /** The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted. */
     private Integer _suspended;
     /** The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state). */
@@ -23,6 +25,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.licenseUnitsDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,11 +60,20 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseUnitsDetail currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("suspended", (n) -> { currentObject.setSuspended(n.getIntegerValue()); });
             this.put("warning", (n) -> { currentObject.setWarning(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
@@ -87,6 +99,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("suspended", this.getSuspended());
         writer.writeIntegerValue("warning", this.getWarning());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     public void setEnabled(@javax.annotation.Nullable final Integer value) {
         this._enabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.

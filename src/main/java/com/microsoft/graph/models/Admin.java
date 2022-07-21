@@ -11,6 +11,8 @@ import java.util.Objects;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** A container for service communications resources. Read-only. */
     private ServiceAnnouncement _serviceAnnouncement;
     /**
@@ -19,6 +21,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public Admin() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.admin");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,9 +48,18 @@ public class Admin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Admin currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serviceAnnouncement", (n) -> { currentObject.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
@@ -64,6 +76,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -74,6 +87,14 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.

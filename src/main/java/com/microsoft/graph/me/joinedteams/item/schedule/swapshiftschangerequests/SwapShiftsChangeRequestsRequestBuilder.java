@@ -20,7 +20,7 @@ import microsoft.graph.models.SwapShiftsChangeRequest;
 import microsoft.graph.models.SwapShiftsChangeRequestCollectionResponse;
 /** Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity. */
 public class SwapShiftsChangeRequestsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

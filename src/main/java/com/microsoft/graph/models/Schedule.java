@@ -52,6 +52,7 @@ public class Schedule extends Entity implements Parsable {
      */
     public Schedule() {
         super();
+        this.setOdataType("#microsoft.graph.schedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

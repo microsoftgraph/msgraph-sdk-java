@@ -308,7 +308,7 @@ public class PlannerRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.planner.plans.item collection
      * @param id Unique identifier of the item
-     * @return a plannerPlanItemRequestBuilder
+     * @return a PlannerPlanItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PlannerPlanItemRequestBuilder plans(@javax.annotation.Nonnull final String id) {

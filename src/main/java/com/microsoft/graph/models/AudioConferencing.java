@@ -15,6 +15,8 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     private String _conferenceId;
     /** A URL to the externally-accessible web page that contains dial-in information. */
     private String _dialinUrl;
+    /** The OdataType property */
+    private String _odataType;
     /** The tollFreeNumber property */
     private String _tollFreeNumber;
     /** List of toll-free numbers that are displayed in the meeting invite. */
@@ -29,6 +31,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.audioConferencing");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,14 +74,23 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AudioConferencing currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
             this.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
             this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
             this.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the tollFreeNumber property value. The tollFreeNumber property
@@ -121,6 +133,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
         writer.writeStringValue("dialinUrl", this.getDialinUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tollFreeNumber", this.getTollFreeNumber());
         writer.writeCollectionOfPrimitiveValues("tollFreeNumbers", this.getTollFreeNumbers());
         writer.writeStringValue("tollNumber", this.getTollNumber());
@@ -150,6 +163,14 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      */
     public void setDialinUrl(@javax.annotation.Nullable final String value) {
         this._dialinUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the tollFreeNumber property value. The tollFreeNumber property

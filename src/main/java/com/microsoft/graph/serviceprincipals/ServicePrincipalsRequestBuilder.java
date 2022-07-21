@@ -24,7 +24,7 @@ import microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
 import microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of servicePrincipal entities. */
 public class ServicePrincipalsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

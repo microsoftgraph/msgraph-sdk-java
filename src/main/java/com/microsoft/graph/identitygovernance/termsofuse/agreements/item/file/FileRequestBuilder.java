@@ -253,7 +253,7 @@ public class FileRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
      * @param id Unique identifier of the item
-     * @return a agreementFileLocalizationItemRequestBuilder
+     * @return a AgreementFileLocalizationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementFileLocalizationItemRequestBuilder localizations(@javax.annotation.Nonnull final String id) {

@@ -17,6 +17,7 @@ public class MobileAppContent extends Entity implements Parsable {
      */
     public MobileAppContent() {
         super();
+        this.setOdataType("#microsoft.graph.mobileAppContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

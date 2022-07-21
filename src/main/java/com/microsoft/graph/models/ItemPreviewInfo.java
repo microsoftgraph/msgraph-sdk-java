@@ -13,6 +13,8 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The getUrl property */
     private String _getUrl;
+    /** The OdataType property */
+    private String _odataType;
     /** The postParameters property */
     private String _postParameters;
     /** The postUrl property */
@@ -23,6 +25,7 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
      */
     public ItemPreviewInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.itemPreviewInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,8 +52,9 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemPreviewInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("getUrl", (n) -> { currentObject.setGetUrl(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("postParameters", (n) -> { currentObject.setPostParameters(n.getStringValue()); });
             this.put("postUrl", (n) -> { currentObject.setPostUrl(n.getStringValue()); });
         }};
@@ -62,6 +66,14 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getGetUrl() {
         return this._getUrl;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the postParameters property value. The postParameters property
@@ -87,6 +99,7 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("getUrl", this.getGetUrl());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("postParameters", this.getPostParameters());
         writer.writeStringValue("postUrl", this.getPostUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,6 +119,14 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
      */
     public void setGetUrl(@javax.annotation.Nullable final String value) {
         this._getUrl = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the postParameters property value. The postParameters property

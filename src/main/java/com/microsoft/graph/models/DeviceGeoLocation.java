@@ -25,6 +25,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     private Double _latitude;
     /** Longitude coordinate of the device's location */
     private Double _longitude;
+    /** The OdataType property */
+    private String _odataType;
     /** Speed the device is traveling in meters per second */
     private Double _speed;
     /** Accuracy of altitude in meters */
@@ -35,6 +37,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     public DeviceGeoLocation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.deviceGeoLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,13 +72,14 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceGeoLocation currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
             this.put("heading", (n) -> { currentObject.setHeading(n.getDoubleValue()); });
             this.put("horizontalAccuracy", (n) -> { currentObject.setHorizontalAccuracy(n.getDoubleValue()); });
             this.put("lastCollectedDateTime", (n) -> { currentObject.setLastCollectedDateTime(n.getOffsetDateTimeValue()); });
             this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
             this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("speed", (n) -> { currentObject.setSpeed(n.getDoubleValue()); });
             this.put("verticalAccuracy", (n) -> { currentObject.setVerticalAccuracy(n.getDoubleValue()); });
         }};
@@ -121,6 +125,14 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         return this._longitude;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the speed property value. Speed the device is traveling in meters per second
      * @return a double
      */
@@ -149,6 +161,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("lastCollectedDateTime", this.getLastCollectedDateTime());
         writer.writeDoubleValue("latitude", this.getLatitude());
         writer.writeDoubleValue("longitude", this.getLongitude());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeDoubleValue("speed", this.getSpeed());
         writer.writeDoubleValue("verticalAccuracy", this.getVerticalAccuracy());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -208,6 +221,14 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     public void setLongitude(@javax.annotation.Nullable final Double value) {
         this._longitude = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the speed property value. Speed the device is traveling in meters per second

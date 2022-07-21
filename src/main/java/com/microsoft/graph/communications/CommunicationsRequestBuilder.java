@@ -61,7 +61,7 @@ public class CommunicationsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.callRecords.item collection
      * @param id Unique identifier of the item
-     * @return a callRecordItemRequestBuilder
+     * @return a CallRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CallRecordItemRequestBuilder callRecords(@javax.annotation.Nonnull final String id) {
@@ -73,7 +73,7 @@ public class CommunicationsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.calls.item collection
      * @param id Unique identifier of the item
-     * @return a callItemRequestBuilder
+     * @return a CallItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CallItemRequestBuilder calls(@javax.annotation.Nonnull final String id) {
@@ -225,7 +225,7 @@ public class CommunicationsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.onlineMeetings.item collection
      * @param id Unique identifier of the item
-     * @return a onlineMeetingItemRequestBuilder
+     * @return a OnlineMeetingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
@@ -292,7 +292,7 @@ public class CommunicationsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.communications.presences.item collection
      * @param id Unique identifier of the item
-     * @return a presenceItemRequestBuilder
+     * @return a PresenceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PresenceItemRequestBuilder presences(@javax.annotation.Nonnull final String id) {

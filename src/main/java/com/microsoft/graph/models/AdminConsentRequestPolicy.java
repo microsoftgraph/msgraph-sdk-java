@@ -26,6 +26,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     public AdminConsentRequestPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.adminConsentRequestPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

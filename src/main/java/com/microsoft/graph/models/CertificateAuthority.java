@@ -23,12 +23,15 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     private String _issuer;
     /** The subject key identifier of the certificate, calculated from the certificate value. Read-only. */
     private String _issuerSki;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new certificateAuthority and sets the default values.
      * @return a void
      */
     public CertificateAuthority() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.certificateAuthority");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,13 +82,14 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateAuthority currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
             this.put("certificateRevocationListUrl", (n) -> { currentObject.setCertificateRevocationListUrl(n.getStringValue()); });
             this.put("deltaCertificateRevocationListUrl", (n) -> { currentObject.setDeltaCertificateRevocationListUrl(n.getStringValue()); });
             this.put("isRootAuthority", (n) -> { currentObject.setIsRootAuthority(n.getBooleanValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
             this.put("issuerSki", (n) -> { currentObject.setIssuerSki(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -113,6 +117,14 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
         return this._issuerSki;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -125,6 +137,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isRootAuthority", this.getIsRootAuthority());
         writer.writeStringValue("issuer", this.getIssuer());
         writer.writeStringValue("issuerSki", this.getIssuerSki());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,5 +195,13 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      */
     public void setIssuerSki(@javax.annotation.Nullable final String value) {
         this._issuerSki = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

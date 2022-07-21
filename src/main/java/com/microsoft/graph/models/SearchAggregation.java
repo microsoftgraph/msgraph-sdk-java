@@ -15,12 +15,15 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
     private java.util.List<SearchBucket> _buckets;
     /** Defines on which field the aggregation was computed on. */
     private String _field;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new searchAggregation and sets the default values.
      * @return a void
      */
     public SearchAggregation() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.searchAggregation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAggregation currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("buckets", (n) -> { currentObject.setBuckets(n.getCollectionOfObjectValues(SearchBucket::createFromDiscriminatorValue)); });
             this.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
         writer.writeStringValue("field", this.getField());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
      */
     public void setField(@javax.annotation.Nullable final String value) {
         this._field = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

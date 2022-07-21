@@ -20,7 +20,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      */
     public StsPolicy() {
         super();
-        this.setType("#microsoft.graph.stsPolicy");
+        this.setOdataType("#microsoft.graph.stsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

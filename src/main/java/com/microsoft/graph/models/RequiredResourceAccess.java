@@ -11,6 +11,8 @@ import java.util.Objects;
 public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The OdataType property */
+    private String _odataType;
     /** The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource. */
     private java.util.List<ResourceAccess> _resourceAccess;
     /** The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application. */
@@ -21,6 +23,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
      */
     public RequiredResourceAccess() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.requiredResourceAccess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,10 +50,19 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequiredResourceAccess currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getCollectionOfObjectValues(ResourceAccess::createFromDiscriminatorValue)); });
             this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
@@ -75,6 +87,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("resourceAccess", this.getResourceAccess());
         writer.writeStringValue("resourceAppId", this.getResourceAppId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -86,6 +99,14 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.

@@ -36,6 +36,7 @@ public class Drive extends BaseItem implements Parsable {
      */
     public Drive() {
         super();
+        this.setOdataType("#microsoft.graph.drive");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

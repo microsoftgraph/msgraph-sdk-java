@@ -158,7 +158,7 @@ public class AccessReviewsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewScheduleDefinitionItemRequestBuilder
+     * @return a AccessReviewScheduleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewScheduleDefinitionItemRequestBuilder definitions(@javax.annotation.Nonnull final String id) {
@@ -272,7 +272,7 @@ public class AccessReviewsRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewHistoryDefinitionItemRequestBuilder
+     * @return a AccessReviewHistoryDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewHistoryDefinitionItemRequestBuilder historyDefinitions(@javax.annotation.Nonnull final String id) {

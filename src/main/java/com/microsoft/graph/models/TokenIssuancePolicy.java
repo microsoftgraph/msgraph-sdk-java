@@ -14,6 +14,7 @@ public class TokenIssuancePolicy extends StsPolicy implements Parsable {
      */
     public TokenIssuancePolicy() {
         super();
+        this.setOdataType("#microsoft.graph.tokenIssuancePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

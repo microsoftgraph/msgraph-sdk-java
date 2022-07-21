@@ -18,6 +18,7 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
      */
     public TeamArchivedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamArchivedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

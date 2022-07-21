@@ -22,6 +22,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     public Win32LobAppAssignmentSettings() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppAssignmentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

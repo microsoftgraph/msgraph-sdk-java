@@ -37,7 +37,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     public MailFolder() {
         super();
-        this.setType("#microsoft.graph.mailFolder");
+        this.setOdataType("#microsoft.graph.mailFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

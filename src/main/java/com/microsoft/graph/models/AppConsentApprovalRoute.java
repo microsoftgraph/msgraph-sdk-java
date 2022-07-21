@@ -16,6 +16,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      */
     public AppConsentApprovalRoute() {
         super();
+        this.setOdataType("#microsoft.graph.appConsentApprovalRoute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -20,7 +20,7 @@ import microsoft.graph.models.DirectoryAuditCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity. */
 public class DirectoryAuditsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

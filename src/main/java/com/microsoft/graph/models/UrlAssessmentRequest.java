@@ -16,6 +16,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      */
     public UrlAssessmentRequest() {
         super();
+        this.setOdataType("#microsoft.graph.urlAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

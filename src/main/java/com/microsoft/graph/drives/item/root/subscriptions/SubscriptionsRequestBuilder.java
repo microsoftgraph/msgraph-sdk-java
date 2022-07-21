@@ -20,7 +20,7 @@ import microsoft.graph.models.Subscription;
 import microsoft.graph.models.SubscriptionCollectionResponse;
 /** Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity. */
 public class SubscriptionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

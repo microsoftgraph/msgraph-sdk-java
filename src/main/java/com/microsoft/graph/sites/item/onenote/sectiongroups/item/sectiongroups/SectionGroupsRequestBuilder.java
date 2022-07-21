@@ -19,7 +19,7 @@ import microsoft.graph.models.SectionGroupCollectionResponse;
 import microsoft.graph.sites.item.onenote.sectiongroups.item.sectiongroups.count.CountRequestBuilder;
 /** Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity. */
 public class SectionGroupsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

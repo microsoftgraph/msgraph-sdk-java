@@ -19,12 +19,15 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowStickersAndMemes;
     /** Giphy content rating. Possible values are: moderate, strict. */
     private GiphyRatingType _giphyContentRating;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamFunSettings and sets the default values.
      * @return a void
      */
     public TeamFunSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamFunSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,11 +78,12 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamFunSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowCustomMemes", (n) -> { currentObject.setAllowCustomMemes(n.getBooleanValue()); });
             this.put("allowGiphy", (n) -> { currentObject.setAllowGiphy(n.getBooleanValue()); });
             this.put("allowStickersAndMemes", (n) -> { currentObject.setAllowStickersAndMemes(n.getBooleanValue()); });
             this.put("giphyContentRating", (n) -> { currentObject.setGiphyContentRating(n.getEnumValue(GiphyRatingType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -89,6 +93,14 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public GiphyRatingType getGiphyContentRating() {
         return this._giphyContentRating;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -101,6 +113,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowGiphy", this.getAllowGiphy());
         writer.writeBooleanValue("allowStickersAndMemes", this.getAllowStickersAndMemes());
         writer.writeEnumValue("giphyContentRating", this.getGiphyContentRating());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,5 +155,13 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      */
     public void setGiphyContentRating(@javax.annotation.Nullable final GiphyRatingType value) {
         this._giphyContentRating = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

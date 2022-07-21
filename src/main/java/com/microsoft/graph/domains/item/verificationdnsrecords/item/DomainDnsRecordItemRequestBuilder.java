@@ -307,7 +307,7 @@ public class DomainDnsRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainDnsRecordItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DomainDnsRecordItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainDnsRecordItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DomainDnsRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public DomainDnsRecordItemRequestBuilderGetQueryParameters queryParameters = new DomainDnsRecordItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new domainDnsRecordItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DomainDnsRecordItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainDnsRecordItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DomainDnsRecordItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new domainDnsRecordItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DomainDnsRecordItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DomainDnsRecordItemRequestBuilderPatchRequestConfiguration() {

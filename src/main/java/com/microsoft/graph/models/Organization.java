@@ -65,6 +65,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     public Organization() {
         super();
+        this.setOdataType("#microsoft.graph.organization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

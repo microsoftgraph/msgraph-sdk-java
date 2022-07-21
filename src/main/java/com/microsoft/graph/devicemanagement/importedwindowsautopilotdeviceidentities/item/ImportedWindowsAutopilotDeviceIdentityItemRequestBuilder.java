@@ -307,7 +307,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetQueryParameters queryParameters = new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new importedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new importedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration() {

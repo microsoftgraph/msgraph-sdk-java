@@ -17,12 +17,15 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
     private Boolean _isHybridAzureADJoinedDeviceAccepted;
     /** Specifies whether MFA from external Azure AD organizations is trusted. */
     private Boolean _isMfaAccepted;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.
      * @return a void
      */
     public CrossTenantAccessPolicyInboundTrust() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyInboundTrust");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,10 +52,11 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyInboundTrust currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isCompliantDeviceAccepted", (n) -> { currentObject.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
             this.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { currentObject.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
             this.put("isMfaAccepted", (n) -> { currentObject.setIsMfaAccepted(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
         return this._isMfaAccepted;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
         writer.writeBooleanValue("isCompliantDeviceAccepted", this.getIsCompliantDeviceAccepted());
         writer.writeBooleanValue("isHybridAzureADJoinedDeviceAccepted", this.getIsHybridAzureADJoinedDeviceAccepted());
         writer.writeBooleanValue("isMfaAccepted", this.getIsMfaAccepted());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      */
     public void setIsMfaAccepted(@javax.annotation.Nullable final Boolean value) {
         this._isMfaAccepted = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

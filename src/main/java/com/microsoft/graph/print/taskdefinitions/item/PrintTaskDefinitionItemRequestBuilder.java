@@ -308,7 +308,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.print.taskDefinitions.item.tasks.item collection
      * @param id Unique identifier of the item
-     * @return a printTaskItemRequestBuilder
+     * @return a PrintTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PrintTaskItemRequestBuilder tasks(@javax.annotation.Nonnull final String id) {
@@ -326,7 +326,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printTaskDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -355,7 +355,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public PrintTaskDefinitionItemRequestBuilderGetQueryParameters queryParameters = new PrintTaskDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new printTaskDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -370,7 +370,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new printTaskDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration() {

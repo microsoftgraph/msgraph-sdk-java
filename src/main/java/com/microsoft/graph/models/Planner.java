@@ -20,6 +20,7 @@ public class Planner extends Entity implements Parsable {
      */
     public Planner() {
         super();
+        this.setOdataType("#microsoft.graph.planner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

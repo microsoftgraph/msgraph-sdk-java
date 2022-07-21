@@ -20,7 +20,7 @@ import microsoft.graph.models.LocalizedNotificationMessageCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity. */
 public class LocalizedNotificationMessagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

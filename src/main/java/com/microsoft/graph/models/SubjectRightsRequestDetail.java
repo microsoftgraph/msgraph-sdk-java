@@ -19,6 +19,8 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     private Long _itemCount;
     /** Count of item that need review. */
     private Long _itemNeedReview;
+    /** The OdataType property */
+    private String _odataType;
     /** Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams. */
     private java.util.List<KeyValuePair> _productItemCounts;
     /** Count of items signed off by the administrator. */
@@ -31,6 +33,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.subjectRightsRequestDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +68,12 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestDetail currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<>(8) {{
             this.put("excludedItemCount", (n) -> { currentObject.setExcludedItemCount(n.getLongValue()); });
             this.put("insightCounts", (n) -> { currentObject.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("itemCount", (n) -> { currentObject.setItemCount(n.getLongValue()); });
             this.put("itemNeedReview", (n) -> { currentObject.setItemNeedReview(n.getLongValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("productItemCounts", (n) -> { currentObject.setProductItemCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("signedOffItemCount", (n) -> { currentObject.setSignedOffItemCount(n.getLongValue()); });
             this.put("totalItemSize", (n) -> { currentObject.setTotalItemSize(n.getLongValue()); });
@@ -98,6 +102,14 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Long getItemNeedReview() {
         return this._itemNeedReview;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
@@ -134,6 +146,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
         writer.writeCollectionOfObjectValues("insightCounts", this.getInsightCounts());
         writer.writeLongValue("itemCount", this.getItemCount());
         writer.writeLongValue("itemNeedReview", this.getItemNeedReview());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("productItemCounts", this.getProductItemCounts());
         writer.writeLongValue("signedOffItemCount", this.getSignedOffItemCount());
         writer.writeLongValue("totalItemSize", this.getTotalItemSize());
@@ -178,6 +191,14 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     public void setItemNeedReview(@javax.annotation.Nullable final Long value) {
         this._itemNeedReview = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.

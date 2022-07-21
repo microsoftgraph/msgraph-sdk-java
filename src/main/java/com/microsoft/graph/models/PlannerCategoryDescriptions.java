@@ -61,12 +61,15 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     private String _category8;
     /** The label associated with Category 9 */
     private String _category9;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
      * @return a void
      */
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.plannerCategoryDescriptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -293,7 +296,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerCategoryDescriptions currentObject = this;
-        return new HashMap<>(25) {{
+        return new HashMap<>(26) {{
             this.put("category1", (n) -> { currentObject.setCategory1(n.getStringValue()); });
             this.put("category10", (n) -> { currentObject.setCategory10(n.getStringValue()); });
             this.put("category11", (n) -> { currentObject.setCategory11(n.getStringValue()); });
@@ -319,7 +322,16 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
             this.put("category7", (n) -> { currentObject.setCategory7(n.getStringValue()); });
             this.put("category8", (n) -> { currentObject.setCategory8(n.getStringValue()); });
             this.put("category9", (n) -> { currentObject.setCategory9(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -353,6 +365,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
         writer.writeStringValue("category7", this.getCategory7());
         writer.writeStringValue("category8", this.getCategory8());
         writer.writeStringValue("category9", this.getCategory9());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -562,5 +575,13 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      */
     public void setCategory9(@javax.annotation.Nullable final String value) {
         this._category9 = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

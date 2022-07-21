@@ -15,12 +15,15 @@ public class EducationItemBody implements AdditionalDataHolder, Parsable {
     private String _content;
     /** The contentType property */
     private BodyType _contentType;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new educationItemBody and sets the default values.
      * @return a void
      */
     public EducationItemBody() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationItemBody");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +66,19 @@ public class EducationItemBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationItemBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(BodyType.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -77,6 +89,7 @@ public class EducationItemBody implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("content", this.getContent());
         writer.writeEnumValue("contentType", this.getContentType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class EducationItemBody implements AdditionalDataHolder, Parsable {
      */
     public void setContentType(@javax.annotation.Nullable final BodyType value) {
         this._contentType = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

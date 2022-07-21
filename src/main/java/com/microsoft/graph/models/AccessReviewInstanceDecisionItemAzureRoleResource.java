@@ -16,6 +16,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     public AccessReviewInstanceDecisionItemAzureRoleResource() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

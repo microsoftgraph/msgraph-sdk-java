@@ -41,6 +41,7 @@ public class Post extends OutlookItem implements Parsable {
      */
     public Post() {
         super();
+        this.setOdataType("#microsoft.graph.post");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,6 +14,7 @@ public class AssociatedTeamInfo extends TeamInfo implements Parsable {
      */
     public AssociatedTeamInfo() {
         super();
+        this.setOdataType("#microsoft.graph.associatedTeamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

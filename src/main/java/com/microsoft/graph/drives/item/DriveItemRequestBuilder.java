@@ -66,7 +66,7 @@ public class DriveItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drives.item.bundles.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drives.item.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
@@ -246,7 +246,7 @@ public class DriveItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drives.item.following.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drives.item.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
@@ -309,7 +309,7 @@ public class DriveItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drives.item.items.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drives.item.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
@@ -402,7 +402,7 @@ public class DriveItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.drives.item.special.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemItemRequestBuilder
+     * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.drives.item.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
@@ -420,7 +420,7 @@ public class DriveItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new driveItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemRequestBuilderDeleteRequestConfiguration() {
@@ -449,7 +449,7 @@ public class DriveItemRequestBuilder {
         @javax.annotation.Nullable
         public DriveItemRequestBuilderGetQueryParameters queryParameters = new DriveItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new driveItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemRequestBuilderGetRequestConfiguration() {
@@ -464,7 +464,7 @@ public class DriveItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new driveItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DriveItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DriveItemRequestBuilderPatchRequestConfiguration() {

@@ -13,6 +13,8 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The state of publication for this document. Either published or checkout. Read-only. */
     private String _level;
+    /** The OdataType property */
+    private String _odataType;
     /** The unique identifier for the version that is visible to the current caller. Read-only. */
     private String _versionId;
     /**
@@ -21,6 +23,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     public PublicationFacet() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.publicationFacet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,8 +50,9 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicationFacet currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("versionId", (n) -> { currentObject.setVersionId(n.getStringValue()); });
         }};
     }
@@ -59,6 +63,14 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getLevel() {
         return this._level;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.
@@ -76,6 +88,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("level", this.getLevel());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("versionId", this.getVersionId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -94,6 +107,14 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
      */
     public void setLevel(@javax.annotation.Nullable final String value) {
         this._level = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the versionId property value. The unique identifier for the version that is visible to the current caller. Read-only.

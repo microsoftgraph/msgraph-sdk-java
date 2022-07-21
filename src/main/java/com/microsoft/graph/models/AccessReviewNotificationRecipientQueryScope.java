@@ -20,6 +20,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      */
     public AccessReviewNotificationRecipientQueryScope() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientQueryScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

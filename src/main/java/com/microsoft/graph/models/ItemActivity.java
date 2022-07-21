@@ -24,6 +24,7 @@ public class ItemActivity extends Entity implements Parsable {
      */
     public ItemActivity() {
         super();
+        this.setOdataType("#microsoft.graph.itemActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

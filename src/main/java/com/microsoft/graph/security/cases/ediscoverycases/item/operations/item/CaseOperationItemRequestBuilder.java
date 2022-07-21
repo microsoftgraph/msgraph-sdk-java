@@ -307,7 +307,7 @@ public class CaseOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new caseOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new CaseOperationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseOperationItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class CaseOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public CaseOperationItemRequestBuilderGetQueryParameters queryParameters = new CaseOperationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new caseOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CaseOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseOperationItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class CaseOperationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new caseOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new CaseOperationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public CaseOperationItemRequestBuilderPatchRequestConfiguration() {

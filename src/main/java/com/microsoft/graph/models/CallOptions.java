@@ -13,15 +13,15 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The hideBotAfterEscalation property */
     private Boolean _hideBotAfterEscalation;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new callOptions and sets the default values.
      * @return a void
      */
     public CallOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.callOptions");
+        this.setOdataType("#microsoft.graph.callOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +58,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
         final CallOptions currentObject = this;
         return new HashMap<>(2) {{
             this.put("hideBotAfterEscalation", (n) -> { currentObject.setHideBotAfterEscalation(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -70,12 +70,12 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
         return this._hideBotAfterEscalation;
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -85,7 +85,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -105,11 +105,11 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
         this._hideBotAfterEscalation = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -23,12 +23,15 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowCreateUpdateRemoveTabs;
     /** If set to true, members can delete channels. */
     private Boolean _allowDeleteChannels;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new teamMemberSettings and sets the default values.
      * @return a void
      */
     public TeamMemberSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.teamMemberSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -103,14 +106,23 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamMemberSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("allowAddRemoveApps", (n) -> { currentObject.setAllowAddRemoveApps(n.getBooleanValue()); });
             this.put("allowCreatePrivateChannels", (n) -> { currentObject.setAllowCreatePrivateChannels(n.getBooleanValue()); });
             this.put("allowCreateUpdateChannels", (n) -> { currentObject.setAllowCreateUpdateChannels(n.getBooleanValue()); });
             this.put("allowCreateUpdateRemoveConnectors", (n) -> { currentObject.setAllowCreateUpdateRemoveConnectors(n.getBooleanValue()); });
             this.put("allowCreateUpdateRemoveTabs", (n) -> { currentObject.setAllowCreateUpdateRemoveTabs(n.getBooleanValue()); });
             this.put("allowDeleteChannels", (n) -> { currentObject.setAllowDeleteChannels(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -125,6 +137,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowCreateUpdateRemoveConnectors", this.getAllowCreateUpdateRemoveConnectors());
         writer.writeBooleanValue("allowCreateUpdateRemoveTabs", this.getAllowCreateUpdateRemoveTabs());
         writer.writeBooleanValue("allowDeleteChannels", this.getAllowDeleteChannels());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,5 +195,13 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      */
     public void setAllowDeleteChannels(@javax.annotation.Nullable final Boolean value) {
         this._allowDeleteChannels = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

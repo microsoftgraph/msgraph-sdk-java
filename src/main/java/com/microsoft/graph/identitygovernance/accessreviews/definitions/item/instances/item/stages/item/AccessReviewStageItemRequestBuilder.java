@@ -157,7 +157,7 @@ public class AccessReviewStageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item collection
      * @param id Unique identifier of the item
-     * @return a accessReviewInstanceDecisionItemItemRequestBuilder
+     * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AccessReviewInstanceDecisionItemItemRequestBuilder decisions(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class AccessReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewStageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewStageItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class AccessReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewStageItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewStageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewStageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewStageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewStageItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class AccessReviewStageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewStageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewStageItemRequestBuilderPatchRequestConfiguration() {

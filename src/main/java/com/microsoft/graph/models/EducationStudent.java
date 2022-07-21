@@ -22,6 +22,8 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     private String _grade;
     /** Year the student is graduating from the school. */
     private String _graduationYear;
+    /** The OdataType property */
+    private String _odataType;
     /** Student Number. */
     private String _studentNumber;
     /**
@@ -30,6 +32,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     public EducationStudent() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationStudent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,12 +75,13 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationStudent currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
             this.put("gender", (n) -> { currentObject.setGender(n.getEnumValue(EducationGender.class)); });
             this.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
             this.put("graduationYear", (n) -> { currentObject.setGraduationYear(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("studentNumber", (n) -> { currentObject.setStudentNumber(n.getStringValue()); });
         }};
     }
@@ -106,6 +110,14 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         return this._graduationYear;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the studentNumber property value. Student Number.
      * @return a string
      */
@@ -125,6 +137,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("gender", this.getGender());
         writer.writeStringValue("grade", this.getGrade());
         writer.writeStringValue("graduationYear", this.getGraduationYear());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("studentNumber", this.getStudentNumber());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -175,6 +188,14 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      */
     public void setGraduationYear(@javax.annotation.Nullable final String value) {
         this._graduationYear = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the studentNumber property value. Student Number.

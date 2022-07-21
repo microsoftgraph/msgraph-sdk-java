@@ -149,7 +149,7 @@ public class RefRequestBuilder {
         @javax.annotation.Nullable
         public RefRequestBuilderDeleteQueryParameters queryParameters = new RefRequestBuilderDeleteQueryParameters();
         /**
-         * Instantiates a new refRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RefRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RefRequestBuilderDeleteRequestConfiguration() {

@@ -13,12 +13,15 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
     private Map<String, Object> _additionalData;
     /** Specifies whether the display format used for URL columns is an image or a hyperlink. */
     private Boolean _isPicture;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new hyperlinkOrPictureColumn and sets the default values.
      * @return a void
      */
     public HyperlinkOrPictureColumn() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.hyperlinkOrPictureColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,8 +48,9 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HyperlinkOrPictureColumn currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("isPicture", (n) -> { currentObject.setIsPicture(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -58,6 +62,14 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
         return this._isPicture;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -65,6 +77,7 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isPicture", this.getIsPicture());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +95,13 @@ public class HyperlinkOrPictureColumn implements AdditionalDataHolder, Parsable 
      */
     public void setIsPicture(@javax.annotation.Nullable final Boolean value) {
         this._isPicture = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

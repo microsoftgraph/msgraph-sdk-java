@@ -313,7 +313,7 @@ public class RoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new RoleAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class RoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public RoleAssignmentItemRequestBuilderGetQueryParameters queryParameters = new RoleAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new roleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new RoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class RoleAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new roleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new RoleAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public RoleAssignmentItemRequestBuilderPatchRequestConfiguration() {

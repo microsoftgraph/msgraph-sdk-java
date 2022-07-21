@@ -18,6 +18,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      */
     public EmailAuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.emailAuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

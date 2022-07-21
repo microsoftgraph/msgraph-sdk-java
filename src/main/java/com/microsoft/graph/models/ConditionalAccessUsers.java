@@ -23,12 +23,15 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _includeRoles;
     /** User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers. */
     private java.util.List<String> _includeUsers;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new conditionalAccessUsers and sets the default values.
      * @return a void
      */
     public ConditionalAccessUsers() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.conditionalAccessUsers");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,13 +82,14 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessUsers currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<>(7) {{
             this.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("excludeRoles", (n) -> { currentObject.setExcludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("excludeUsers", (n) -> { currentObject.setExcludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeRoles", (n) -> { currentObject.setIncludeRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeUsers", (n) -> { currentObject.setIncludeUsers(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -113,6 +117,14 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         return this._includeUsers;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -125,6 +137,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("includeGroups", this.getIncludeGroups());
         writer.writeCollectionOfPrimitiveValues("includeRoles", this.getIncludeRoles());
         writer.writeCollectionOfPrimitiveValues("includeUsers", this.getIncludeUsers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,5 +195,13 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
      */
     public void setIncludeUsers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeUsers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

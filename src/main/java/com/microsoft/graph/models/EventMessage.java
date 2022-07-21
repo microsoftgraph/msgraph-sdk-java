@@ -26,12 +26,15 @@ public class EventMessage extends Message implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The startDateTime property */
     private DateTimeTimeZone _startDateTime;
+    /** The type property */
+    private EventType _type;
     /**
      * Instantiates a new EventMessage and sets the default values.
      * @return a void
      */
     public EventMessage() {
         super();
+        this.setOdataType("#microsoft.graph.eventMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,6 +87,7 @@ public class EventMessage extends Message implements Parsable {
             this.put("meetingMessageType", (n) -> { currentObject.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EventType.class)); });
         }};
     }
     /**
@@ -143,6 +147,14 @@ public class EventMessage extends Message implements Parsable {
         return this._startDateTime;
     }
     /**
+     * Gets the type property value. The type property
+     * @return a eventType
+     */
+    @javax.annotation.Nullable
+    public EventType getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -159,6 +171,7 @@ public class EventMessage extends Message implements Parsable {
         writer.writeEnumValue("meetingMessageType", this.getMeetingMessageType());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
+        writer.writeEnumValue("type", this.getType());
     }
     /**
      * Sets the endDateTime property value. The end time of the requested meeting.
@@ -231,5 +244,13 @@ public class EventMessage extends Message implements Parsable {
      */
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final EventType value) {
+        this._type = value;
     }
 }

@@ -19,7 +19,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     private java.util.List<SiteSource> _siteSources;
     /** Data source entity for groups associated with the custodian. */
     private java.util.List<UnifiedGroupSource> _unifiedGroupSources;
-    /** Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
+    /** Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
     private java.util.List<UserSource> _userSources;
     /**
      * Instantiates a new EdiscoveryCustodian and sets the default values.
@@ -27,6 +27,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      */
     public EdiscoveryCustodian() {
         super();
+        this.setOdataType("#microsoft.graph.security.ediscoveryCustodian");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,7 +96,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         return this._unifiedGroupSources;
     }
     /**
-     * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Gets the userSources property value. Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a userSource
      */
     @javax.annotation.Nullable
@@ -158,7 +159,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
         this._unifiedGroupSources = value;
     }
     /**
-     * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Sets the userSources property value. Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param value Value to set for the userSources property.
      * @return a void
      */

@@ -307,7 +307,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters queryParameters = new MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new mobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new mobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration() {

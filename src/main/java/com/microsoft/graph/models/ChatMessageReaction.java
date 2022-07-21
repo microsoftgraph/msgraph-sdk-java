@@ -14,6 +14,8 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Supported values are like, angry, sad, laugh, heart, surprised. */
     private String _reactionType;
     /** The user property */
@@ -24,6 +26,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      */
     public ChatMessageReaction() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.chatMessageReaction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,11 +61,20 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageReaction currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reactionType", (n) -> { currentObject.setReactionType(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(ChatMessageReactionIdentitySet::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reactionType property value. Supported values are like, angry, sad, laugh, heart, surprised.
@@ -88,6 +100,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("reactionType", this.getReactionType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +120,14 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      */
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reactionType property value. Supported values are like, angry, sad, laugh, heart, surprised.

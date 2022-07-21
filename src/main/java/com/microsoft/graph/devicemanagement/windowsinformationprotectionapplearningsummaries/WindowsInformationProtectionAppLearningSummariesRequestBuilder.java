@@ -20,7 +20,7 @@ import microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
 import microsoft.graph.models.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 /** Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity. */
 public class WindowsInformationProtectionAppLearningSummariesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

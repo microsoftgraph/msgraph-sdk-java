@@ -17,6 +17,8 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private Boolean _allowedToCreateSecurityGroups;
     /** Indicates whether the default user role can read other users. */
     private Boolean _allowedToReadOtherUsers;
+    /** The OdataType property */
+    private String _odataType;
     /** Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled. */
     private java.util.List<String> _permissionGrantPoliciesAssigned;
     /**
@@ -25,6 +27,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.defaultUserRolePermissions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,12 +78,21 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultUserRolePermissions currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("allowedToCreateApps", (n) -> { currentObject.setAllowedToCreateApps(n.getBooleanValue()); });
             this.put("allowedToCreateSecurityGroups", (n) -> { currentObject.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
             this.put("allowedToReadOtherUsers", (n) -> { currentObject.setAllowedToReadOtherUsers(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permissionGrantPoliciesAssigned", (n) -> { currentObject.setPermissionGrantPoliciesAssigned(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
@@ -100,6 +112,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         writer.writeBooleanValue("allowedToCreateApps", this.getAllowedToCreateApps());
         writer.writeBooleanValue("allowedToCreateSecurityGroups", this.getAllowedToCreateSecurityGroups());
         writer.writeBooleanValue("allowedToReadOtherUsers", this.getAllowedToReadOtherUsers());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("permissionGrantPoliciesAssigned", this.getPermissionGrantPoliciesAssigned());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,6 +147,14 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     public void setAllowedToReadOtherUsers(@javax.annotation.Nullable final Boolean value) {
         this._allowedToReadOtherUsers = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.

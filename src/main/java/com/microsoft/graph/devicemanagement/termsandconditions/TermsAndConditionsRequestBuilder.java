@@ -20,7 +20,7 @@ import microsoft.graph.models.TermsAndConditions;
 import microsoft.graph.models.TermsAndConditionsCollectionResponse;
 /** Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity. */
 public class TermsAndConditionsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

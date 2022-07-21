@@ -20,7 +20,7 @@ import microsoft.graph.models.UserFlowLanguagePage;
 import microsoft.graph.models.UserFlowLanguagePageCollectionResponse;
 /** Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
 public class DefaultPagesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -18,6 +18,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     public WorkbookChartAreaFormat() {
         super();
+        this.setOdataType("#microsoft.graph.workbookChartAreaFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

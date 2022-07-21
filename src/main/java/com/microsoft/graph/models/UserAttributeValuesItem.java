@@ -15,6 +15,8 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     private Boolean _isDefault;
     /** The display name of the property displayed to the end user in the user flow. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** The value that is set when this item is selected. */
     private String _value;
     /**
@@ -23,6 +25,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      */
     public UserAttributeValuesItem() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.userAttributeValuesItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAttributeValuesItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the value property value. The value that is set when this item is selected.
      * @return a string
      */
@@ -88,6 +100,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDefault", this.getIsDefault());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the value property value. The value that is set when this item is selected.

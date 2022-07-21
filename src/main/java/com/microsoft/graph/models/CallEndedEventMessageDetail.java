@@ -25,6 +25,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     public CallEndedEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.callEndedEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

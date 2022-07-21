@@ -256,7 +256,7 @@ public class OutlookRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.outlook.masterCategories.item collection
      * @param id Unique identifier of the item
-     * @return a outlookCategoryItemRequestBuilder
+     * @return a OutlookCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OutlookCategoryItemRequestBuilder masterCategories(@javax.annotation.Nonnull final String id) {

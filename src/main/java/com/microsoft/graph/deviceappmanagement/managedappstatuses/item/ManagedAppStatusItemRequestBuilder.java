@@ -307,7 +307,7 @@ public class ManagedAppStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppStatusItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppStatusItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ManagedAppStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public ManagedAppStatusItemRequestBuilderGetQueryParameters queryParameters = new ManagedAppStatusItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new managedAppStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppStatusItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppStatusItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ManagedAppStatusItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new managedAppStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ManagedAppStatusItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ManagedAppStatusItemRequestBuilderPatchRequestConfiguration() {

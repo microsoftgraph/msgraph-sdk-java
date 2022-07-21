@@ -24,6 +24,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     public Windows10SecureAssessmentConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.windows10SecureAssessmentConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -14,6 +14,7 @@ public class DeviceAndAppManagementRoleDefinition extends RoleDefinition impleme
      */
     public DeviceAndAppManagementRoleDefinition() {
         super();
+        this.setOdataType("#microsoft.graph.deviceAndAppManagementRoleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

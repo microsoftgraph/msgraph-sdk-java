@@ -16,6 +16,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      */
     public UserScopeTeamsAppInstallation() {
         super();
+        this.setOdataType("#microsoft.graph.userScopeTeamsAppInstallation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -46,7 +46,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceEnrollmentConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a enrollmentConfigurationAssignmentItemRequestBuilder
+     * @return a EnrollmentConfigurationAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EnrollmentConfigurationAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -338,7 +338,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -367,7 +367,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceEnrollmentConfigurationItemRequestBuilderGetQueryParameters queryParameters = new DeviceEnrollmentConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -382,7 +382,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration() {

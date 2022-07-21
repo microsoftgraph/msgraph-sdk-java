@@ -319,7 +319,7 @@ public class ListItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemVersionItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class ListItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public ListItemVersionItemRequestBuilderGetQueryParameters queryParameters = new ListItemVersionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new listItemVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemVersionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemVersionItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class ListItemVersionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new listItemVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ListItemVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ListItemVersionItemRequestBuilderPatchRequestConfiguration() {

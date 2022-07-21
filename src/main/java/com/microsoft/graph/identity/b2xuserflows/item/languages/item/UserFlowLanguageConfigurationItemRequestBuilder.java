@@ -156,7 +156,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
      * @param id Unique identifier of the item
-     * @return a userFlowLanguagePageItemRequestBuilder
+     * @return a UserFlowLanguagePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder defaultPages(@javax.annotation.Nonnull final String id) {
@@ -270,7 +270,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
      * @param id Unique identifier of the item
-     * @return a userFlowLanguagePageItemRequestBuilder
+     * @return a UserFlowLanguagePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder overridesPages(@javax.annotation.Nonnull final String id) {
@@ -343,7 +343,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userFlowLanguageConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguageConfigurationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguageConfigurationItemRequestBuilderDeleteRequestConfiguration() {
@@ -372,7 +372,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public UserFlowLanguageConfigurationItemRequestBuilderGetQueryParameters queryParameters = new UserFlowLanguageConfigurationItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userFlowLanguageConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguageConfigurationItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguageConfigurationItemRequestBuilderGetRequestConfiguration() {
@@ -387,7 +387,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration() {

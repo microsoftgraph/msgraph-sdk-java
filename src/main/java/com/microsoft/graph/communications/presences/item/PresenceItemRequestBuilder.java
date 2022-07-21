@@ -319,7 +319,7 @@ public class PresenceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new presenceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new PresenceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public PresenceItemRequestBuilderDeleteRequestConfiguration() {
@@ -348,7 +348,7 @@ public class PresenceItemRequestBuilder {
         @javax.annotation.Nullable
         public PresenceItemRequestBuilderGetQueryParameters queryParameters = new PresenceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new presenceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new PresenceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public PresenceItemRequestBuilderGetRequestConfiguration() {
@@ -363,7 +363,7 @@ public class PresenceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new presenceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PresenceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public PresenceItemRequestBuilderPatchRequestConfiguration() {

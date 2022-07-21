@@ -25,6 +25,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      */
     public ExtensionProperty() {
         super();
+        this.setOdataType("#microsoft.graph.extensionProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

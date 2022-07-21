@@ -307,7 +307,7 @@ public class TokenIssuancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TokenIssuancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public TokenIssuancePolicyItemRequestBuilderGetQueryParameters queryParameters = new TokenIssuancePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new tokenIssuancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TokenIssuancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenIssuancePolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TokenIssuancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new tokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration() {

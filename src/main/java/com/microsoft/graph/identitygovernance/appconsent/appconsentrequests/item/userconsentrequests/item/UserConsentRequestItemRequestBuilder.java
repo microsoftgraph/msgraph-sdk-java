@@ -313,7 +313,7 @@ public class UserConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userConsentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserConsentRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserConsentRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UserConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public UserConsentRequestItemRequestBuilderGetQueryParameters queryParameters = new UserConsentRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userConsentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserConsentRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserConsentRequestItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UserConsentRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userConsentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserConsentRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserConsentRequestItemRequestBuilderPatchRequestConfiguration() {

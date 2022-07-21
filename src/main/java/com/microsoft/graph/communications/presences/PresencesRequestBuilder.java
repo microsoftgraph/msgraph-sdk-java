@@ -20,7 +20,7 @@ import microsoft.graph.models.Presence;
 import microsoft.graph.models.PresenceCollectionResponse;
 /** Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity. */
 public class PresencesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

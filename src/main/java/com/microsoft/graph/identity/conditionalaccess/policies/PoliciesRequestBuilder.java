@@ -20,7 +20,7 @@ import microsoft.graph.models.ConditionalAccessPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity. */
 public class PoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

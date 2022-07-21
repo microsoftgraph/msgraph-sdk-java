@@ -307,7 +307,7 @@ public class OfferShiftRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new offerShiftRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new OfferShiftRequestItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfferShiftRequestItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class OfferShiftRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public OfferShiftRequestItemRequestBuilderGetQueryParameters queryParameters = new OfferShiftRequestItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new offerShiftRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new OfferShiftRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfferShiftRequestItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class OfferShiftRequestItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new offerShiftRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new OfferShiftRequestItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public OfferShiftRequestItemRequestBuilderPatchRequestConfiguration() {

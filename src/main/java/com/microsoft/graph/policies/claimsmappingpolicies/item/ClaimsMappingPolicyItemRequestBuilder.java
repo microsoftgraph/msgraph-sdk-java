@@ -307,7 +307,7 @@ public class ClaimsMappingPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new claimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ClaimsMappingPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public ClaimsMappingPolicyItemRequestBuilderGetQueryParameters queryParameters = new ClaimsMappingPolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new claimsMappingPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ClaimsMappingPolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new claimsMappingPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration() {

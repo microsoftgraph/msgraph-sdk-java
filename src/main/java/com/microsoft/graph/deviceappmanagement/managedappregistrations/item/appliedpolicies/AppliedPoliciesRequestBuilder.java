@@ -20,7 +20,7 @@ import microsoft.graph.models.ManagedAppPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity. */
 public class AppliedPoliciesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

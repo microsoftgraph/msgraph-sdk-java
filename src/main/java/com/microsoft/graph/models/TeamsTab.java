@@ -23,6 +23,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     public TeamsTab() {
         super();
+        this.setOdataType("#microsoft.graph.teamsTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

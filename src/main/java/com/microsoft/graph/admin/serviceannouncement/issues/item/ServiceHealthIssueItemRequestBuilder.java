@@ -316,7 +316,7 @@ public class ServiceHealthIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceHealthIssueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthIssueItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthIssueItemRequestBuilderDeleteRequestConfiguration() {
@@ -345,7 +345,7 @@ public class ServiceHealthIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public ServiceHealthIssueItemRequestBuilderGetQueryParameters queryParameters = new ServiceHealthIssueItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new serviceHealthIssueItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthIssueItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthIssueItemRequestBuilderGetRequestConfiguration() {
@@ -360,7 +360,7 @@ public class ServiceHealthIssueItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceHealthIssueItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration() {

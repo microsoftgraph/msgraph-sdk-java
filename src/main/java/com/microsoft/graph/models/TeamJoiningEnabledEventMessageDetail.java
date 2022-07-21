@@ -18,6 +18,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      */
     public TeamJoiningEnabledEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.teamJoiningEnabledEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

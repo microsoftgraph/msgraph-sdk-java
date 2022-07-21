@@ -44,6 +44,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      */
     public UnifiedRoleEligibilityScheduleRequest() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

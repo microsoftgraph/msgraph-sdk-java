@@ -16,6 +16,8 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     private Integer _countdownDisplayBeforeRestartInMinutes;
     /** The number of minutes to wait before restarting the device after an app installation. */
     private Integer _gracePeriodInMinutes;
+    /** The OdataType property */
+    private String _odataType;
     /** The number of minutes to snooze the restart notification dialog when the snooze button is selected. */
     private Integer _restartNotificationSnoozeDurationInMinutes;
     /**
@@ -24,6 +26,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     public Win32LobAppRestartSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.win32LobAppRestartSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,9 +61,10 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRestartSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("countdownDisplayBeforeRestartInMinutes", (n) -> { currentObject.setCountdownDisplayBeforeRestartInMinutes(n.getIntegerValue()); });
             this.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("restartNotificationSnoozeDurationInMinutes", (n) -> { currentObject.setRestartNotificationSnoozeDurationInMinutes(n.getIntegerValue()); });
         }};
     }
@@ -71,6 +75,14 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nullable
     public Integer getGracePeriodInMinutes() {
         return this._gracePeriodInMinutes;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the restartNotificationSnoozeDurationInMinutes property value. The number of minutes to snooze the restart notification dialog when the snooze button is selected.
@@ -89,6 +101,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("countdownDisplayBeforeRestartInMinutes", this.getCountdownDisplayBeforeRestartInMinutes());
         writer.writeIntegerValue("gracePeriodInMinutes", this.getGracePeriodInMinutes());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("restartNotificationSnoozeDurationInMinutes", this.getRestartNotificationSnoozeDurationInMinutes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
      */
     public void setGracePeriodInMinutes(@javax.annotation.Nullable final Integer value) {
         this._gracePeriodInMinutes = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the restartNotificationSnoozeDurationInMinutes property value. The number of minutes to snooze the restart notification dialog when the snooze button is selected.

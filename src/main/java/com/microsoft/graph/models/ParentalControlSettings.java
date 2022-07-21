@@ -15,12 +15,15 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _countriesBlockedForMinors;
     /** Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app. */
     private String _legalAgeGroupRule;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new parentalControlSettings and sets the default values.
      * @return a void
      */
     public ParentalControlSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.parentalControlSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParentalControlSettings currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("countriesBlockedForMinors", (n) -> { currentObject.setCountriesBlockedForMinors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("legalAgeGroupRule", (n) -> { currentObject.setLegalAgeGroupRule(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
         return this._legalAgeGroupRule;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("countriesBlockedForMinors", this.getCountriesBlockedForMinors());
         writer.writeStringValue("legalAgeGroupRule", this.getLegalAgeGroupRule());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
      */
     public void setLegalAgeGroupRule(@javax.annotation.Nullable final String value) {
         this._legalAgeGroupRule = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

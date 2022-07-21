@@ -16,6 +16,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
      */
     public EducationLinkResource() {
         super();
+        this.setOdataType("#microsoft.graph.educationLinkResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

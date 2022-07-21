@@ -16,6 +16,7 @@ public class Initiator extends Identity implements Parsable {
      */
     public Initiator() {
         super();
+        this.setOdataType("#microsoft.graph.initiator");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

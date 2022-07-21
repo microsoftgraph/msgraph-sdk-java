@@ -313,7 +313,7 @@ public class UserFlowLanguagePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userFlowLanguagePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguagePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguagePageItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class UserFlowLanguagePageItemRequestBuilder {
         @javax.annotation.Nullable
         public UserFlowLanguagePageItemRequestBuilderGetQueryParameters queryParameters = new UserFlowLanguagePageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new userFlowLanguagePageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguagePageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguagePageItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class UserFlowLanguagePageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new userFlowLanguagePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration() {

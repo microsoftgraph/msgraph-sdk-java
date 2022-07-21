@@ -20,7 +20,7 @@ import microsoft.graph.models.TrendingCollectionResponse;
 import microsoft.graph.users.item.insights.trending.count.CountRequestBuilder;
 /** Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity. */
 public class TrendingRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

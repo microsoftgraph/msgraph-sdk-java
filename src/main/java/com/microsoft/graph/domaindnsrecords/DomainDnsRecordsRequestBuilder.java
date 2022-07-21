@@ -20,7 +20,7 @@ import microsoft.graph.models.DomainDnsRecordCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of domainDnsRecord entities. */
 public class DomainDnsRecordsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

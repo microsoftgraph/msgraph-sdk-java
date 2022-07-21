@@ -307,7 +307,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new targetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters queryParameters = new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new targetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new targetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration() {

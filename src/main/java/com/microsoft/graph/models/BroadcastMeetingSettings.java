@@ -21,12 +21,15 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     private Boolean _isRecordingEnabled;
     /** Indicates whether video on demand is enabled for this Teams live event. Default value is false. */
     private Boolean _isVideoOnDemandEnabled;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new broadcastMeetingSettings and sets the default values.
      * @return a void
      */
     public BroadcastMeetingSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.broadcastMeetingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,12 +64,13 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingSettings currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("allowedAudience", (n) -> { currentObject.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
             this.put("isAttendeeReportEnabled", (n) -> { currentObject.setIsAttendeeReportEnabled(n.getBooleanValue()); });
             this.put("isQuestionAndAnswerEnabled", (n) -> { currentObject.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });
             this.put("isRecordingEnabled", (n) -> { currentObject.setIsRecordingEnabled(n.getBooleanValue()); });
             this.put("isVideoOnDemandEnabled", (n) -> { currentObject.setIsVideoOnDemandEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -102,6 +106,14 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         return this._isVideoOnDemandEnabled;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -113,6 +125,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         writer.writeBooleanValue("isQuestionAndAnswerEnabled", this.getIsQuestionAndAnswerEnabled());
         writer.writeBooleanValue("isRecordingEnabled", this.getIsRecordingEnabled());
         writer.writeBooleanValue("isVideoOnDemandEnabled", this.getIsVideoOnDemandEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,5 +175,13 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     public void setIsVideoOnDemandEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isVideoOnDemandEnabled = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

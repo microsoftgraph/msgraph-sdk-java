@@ -15,12 +15,15 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
     private String _emptySuggestionsReason;
     /** An array of meeting suggestions. */
     private java.util.List<MeetingTimeSuggestion> _meetingTimeSuggestions;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
      * @return a void
      */
     public MeetingTimeSuggestionsResult() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.meetingTimeSuggestionsResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +58,10 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestionsResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("emptySuggestionsReason", (n) -> { currentObject.setEmptySuggestionsReason(n.getStringValue()); });
             this.put("meetingTimeSuggestions", (n) -> { currentObject.setMeetingTimeSuggestions(n.getCollectionOfObjectValues(MeetingTimeSuggestion::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
         return this._meetingTimeSuggestions;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeStringValue("emptySuggestionsReason", this.getEmptySuggestionsReason());
         writer.writeCollectionOfObjectValues("meetingTimeSuggestions", this.getMeetingTimeSuggestions());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      */
     public void setMeetingTimeSuggestions(@javax.annotation.Nullable final java.util.List<MeetingTimeSuggestion> value) {
         this._meetingTimeSuggestions = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

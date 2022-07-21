@@ -15,6 +15,8 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     private Boolean _isRequired;
     /** Constraint information for one or more locations that the client requests for the meeting. */
     private java.util.List<LocationConstraintItem> _locations;
+    /** The OdataType property */
+    private String _odataType;
     /** The client requests the service to suggest one or more meeting locations. */
     private Boolean _suggestLocation;
     /**
@@ -23,6 +25,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     public LocationConstraint() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.locationConstraint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +52,10 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocationConstraint currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
             this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(LocationConstraintItem::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("suggestLocation", (n) -> { currentObject.setSuggestLocation(n.getBooleanValue()); });
         }};
     }
@@ -72,6 +76,14 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
         return this._locations;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Gets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
      * @return a boolean
      */
@@ -88,6 +100,7 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("suggestLocation", this.getSuggestLocation());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +127,14 @@ public class LocationConstraint implements AdditionalDataHolder, Parsable {
      */
     public void setLocations(@javax.annotation.Nullable final java.util.List<LocationConstraintItem> value) {
         this._locations = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.

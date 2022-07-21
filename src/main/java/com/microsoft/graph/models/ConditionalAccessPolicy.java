@@ -32,6 +32,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     public ConditionalAccessPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.conditionalAccessPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

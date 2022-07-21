@@ -20,7 +20,7 @@ import microsoft.graph.models.ManagedAppStatusCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedAppStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

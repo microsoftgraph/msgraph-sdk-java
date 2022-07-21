@@ -20,7 +20,7 @@ import microsoft.graph.models.SingleValueLegacyExtendedPropertyCollectionRespons
 import microsoft.graph.users.item.mailfolders.item.singlevalueextendedproperties.count.CountRequestBuilder;
 /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity. */
 public class SingleValueExtendedPropertiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -20,7 +20,7 @@ import microsoft.graph.models.security.UserSourceCollectionResponse;
 import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.count.CountRequestBuilder;
 /** Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class UserSourcesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +59,7 @@ public class UserSourcesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UserSourcesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class UserSourcesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @return a CompletableFuture of UserSourceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class UserSourcesRequestBuilder {
         }
     }
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserSourceCollectionResponse
      */
@@ -155,7 +155,7 @@ public class UserSourcesRequestBuilder {
         }
     }
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserSourceCollectionResponse
@@ -227,7 +227,7 @@ public class UserSourcesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
+    /** Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
     public class UserSourcesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -19,7 +19,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     public TeamworkHostedContent() {
         super();
-        this.setType("#microsoft.graph.teamworkHostedContent");
+        this.setOdataType("#microsoft.graph.teamworkHostedContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

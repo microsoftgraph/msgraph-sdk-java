@@ -138,7 +138,7 @@ public class CountRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new countRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new CountRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public CountRequestBuilderGetRequestConfiguration() {

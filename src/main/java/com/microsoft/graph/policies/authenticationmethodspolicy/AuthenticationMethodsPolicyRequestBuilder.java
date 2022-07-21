@@ -34,7 +34,7 @@ public class AuthenticationMethodsPolicyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
      * @param id Unique identifier of the item
-     * @return a authenticationMethodConfigurationItemRequestBuilder
+     * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationItemRequestBuilder authenticationMethodConfigurations(@javax.annotation.Nonnull final String id) {

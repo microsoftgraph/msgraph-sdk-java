@@ -40,7 +40,7 @@ public class IosManagedAppProtectionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item.apps.item collection
      * @param id Unique identifier of the item
-     * @return a managedMobileAppItemRequestBuilder
+     * @return a ManagedMobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedMobileAppItemRequestBuilder apps(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class IosManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class IosManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public IosManagedAppProtectionItemRequestBuilderGetQueryParameters queryParameters = new IosManagedAppProtectionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new iosManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new IosManagedAppProtectionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosManagedAppProtectionItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class IosManagedAppProtectionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new iosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration() {

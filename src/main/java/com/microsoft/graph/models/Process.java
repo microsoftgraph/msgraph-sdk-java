@@ -26,6 +26,8 @@ public class Process implements AdditionalDataHolder, Parsable {
     private Boolean _isElevated;
     /** The name of the process' Image file. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /** DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _parentProcessCreatedDateTime;
     /** The Process ID (PID) of the parent process. */
@@ -42,6 +44,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     public Process() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.process");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +95,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Process currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<>(13) {{
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -100,6 +103,7 @@ public class Process implements AdditionalDataHolder, Parsable {
             this.put("integrityLevel", (n) -> { currentObject.setIntegrityLevel(n.getEnumValue(ProcessIntegrityLevel.class)); });
             this.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentProcessCreatedDateTime", (n) -> { currentObject.setParentProcessCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("parentProcessId", (n) -> { currentObject.setParentProcessId(n.getIntegerValue()); });
             this.put("parentProcessName", (n) -> { currentObject.setParentProcessName(n.getStringValue()); });
@@ -138,6 +142,14 @@ public class Process implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getName() {
         return this._name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -193,6 +205,7 @@ public class Process implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("integrityLevel", this.getIntegrityLevel());
         writer.writeBooleanValue("isElevated", this.getIsElevated());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("parentProcessCreatedDateTime", this.getParentProcessCreatedDateTime());
         writer.writeIntegerValue("parentProcessId", this.getParentProcessId());
         writer.writeStringValue("parentProcessName", this.getParentProcessName());
@@ -263,6 +276,14 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

@@ -20,7 +20,7 @@ import microsoft.graph.models.PlannerTask;
 import microsoft.graph.models.PlannerTaskCollectionResponse;
 /** Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity. */
 public class TasksRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

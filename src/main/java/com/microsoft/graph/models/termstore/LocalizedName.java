@@ -15,12 +15,15 @@ public class LocalizedName implements AdditionalDataHolder, Parsable {
     private String _languageTag;
     /** The name in the localized language. */
     private String _name;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new localizedName and sets the default values.
      * @return a void
      */
     public LocalizedName() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.termStore.localizedName");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,9 +50,10 @@ public class LocalizedName implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocalizedName currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +73,14 @@ public class LocalizedName implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +89,7 @@ public class LocalizedName implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +115,13 @@ public class LocalizedName implements AdditionalDataHolder, Parsable {
      */
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

@@ -18,6 +18,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      */
     public ChannelUnsetAsFavoriteByDefaultEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.channelUnsetAsFavoriteByDefaultEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

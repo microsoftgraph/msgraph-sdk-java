@@ -15,6 +15,8 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The message in the reminder. */
     private String _message;
+    /** The OdataType property */
+    private String _odataType;
     /** The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format. */
     private Period _offset;
     /** The recipients property */
@@ -25,6 +27,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     public BookingReminder() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.bookingReminder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,8 +54,9 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingReminder currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("offset", (n) -> { currentObject.setOffset(n.getPeriodValue()); });
             this.put("recipients", (n) -> { currentObject.setRecipients(n.getEnumValue(BookingReminderRecipients.class)); });
         }};
@@ -64,6 +68,14 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
@@ -89,6 +101,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writePeriodValue("offset", this.getOffset());
         writer.writeEnumValue("recipients", this.getRecipients());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -108,6 +121,14 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.

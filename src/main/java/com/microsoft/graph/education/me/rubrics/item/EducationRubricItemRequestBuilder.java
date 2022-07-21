@@ -307,7 +307,7 @@ public class EducationRubricItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationRubricItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationRubricItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationRubricItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EducationRubricItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationRubricItemRequestBuilderGetQueryParameters queryParameters = new EducationRubricItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationRubricItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationRubricItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationRubricItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EducationRubricItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationRubricItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationRubricItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationRubricItemRequestBuilderPatchRequestConfiguration() {

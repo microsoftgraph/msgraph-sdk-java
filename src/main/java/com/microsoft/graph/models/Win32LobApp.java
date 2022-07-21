@@ -40,6 +40,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      */
     public Win32LobApp() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

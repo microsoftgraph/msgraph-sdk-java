@@ -16,6 +16,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      */
     public PrintUsageByUser() {
         super();
+        this.setOdataType("#microsoft.graph.printUsageByUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

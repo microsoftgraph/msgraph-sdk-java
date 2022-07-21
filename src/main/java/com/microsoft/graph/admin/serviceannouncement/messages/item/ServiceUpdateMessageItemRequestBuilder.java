@@ -40,7 +40,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.messages.item.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a serviceAnnouncementAttachmentItemRequestBuilder
+     * @return a ServiceAnnouncementAttachmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ServiceAnnouncementAttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
@@ -332,7 +332,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceUpdateMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceUpdateMessageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceUpdateMessageItemRequestBuilderDeleteRequestConfiguration() {
@@ -361,7 +361,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public ServiceUpdateMessageItemRequestBuilderGetQueryParameters queryParameters = new ServiceUpdateMessageItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new serviceUpdateMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceUpdateMessageItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceUpdateMessageItemRequestBuilderGetRequestConfiguration() {
@@ -376,7 +376,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new serviceUpdateMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration() {

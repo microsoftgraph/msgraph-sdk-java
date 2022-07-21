@@ -307,7 +307,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public EducationSubmissionResourceItemRequestBuilderGetQueryParameters queryParameters = new EducationSubmissionResourceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new educationSubmissionResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new educationSubmissionResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration() {

@@ -20,7 +20,7 @@ import microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 import microsoft.graph.models.TermsAndConditionsAcceptanceStatusCollectionResponse;
 /** Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity. */
 public class AcceptanceStatusesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

@@ -19,6 +19,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     public UnifiedRoleManagementPolicyExpirationRule() {
         super();
+        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyExpirationRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

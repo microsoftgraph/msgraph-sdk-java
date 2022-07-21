@@ -21,7 +21,7 @@ import microsoft.graph.users.item.calendar.calendarview.item.instances.count.Cou
 import microsoft.graph.users.item.calendar.calendarview.item.instances.delta.DeltaRequestBuilder;
 /** Provides operations to manage the instances property of the microsoft.graph.event entity. */
 public class InstancesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

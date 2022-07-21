@@ -14,6 +14,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      */
     public MacOSDeviceFeaturesConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.macOSDeviceFeaturesConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

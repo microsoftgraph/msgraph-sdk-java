@@ -259,7 +259,7 @@ public class CrossTenantAccessPolicyRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.policies.crossTenantAccessPolicy.partners.item collection
      * @param id Unique identifier of the item
-     * @return a crossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
+     * @return a CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder partners(@javax.annotation.Nonnull final String id) {

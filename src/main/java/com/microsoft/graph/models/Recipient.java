@@ -13,15 +13,15 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The recipient's email address. */
     private EmailAddress _emailAddress;
-    /** The type property */
-    private String _type;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new recipient and sets the default values.
      * @return a void
      */
     public Recipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setType("#microsoft.graph.recipient");
+        this.setOdataType("#microsoft.graph.recipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,6 +35,7 @@ public class Recipient implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.attendee": return new Attendee();
                 case "#microsoft.graph.attendeeBase": return new AttendeeBase();
             }
         }
@@ -65,16 +66,16 @@ public class Recipient implements AdditionalDataHolder, Parsable {
         final Recipient currentObject = this;
         return new HashMap<>(2) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The type property
+     * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -84,7 +85,7 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("emailAddress", this.getEmailAddress());
-        writer.writeStringValue("@odata.type", this.getType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -104,11 +105,11 @@ public class Recipient implements AdditionalDataHolder, Parsable {
         this._emailAddress = value;
     }
     /**
-     * Sets the @odata.type property value. The type property
-     * @param value Value to set for the type property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
      * @return a void
      */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

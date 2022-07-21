@@ -22,7 +22,7 @@ public class ConversationMember extends Entity implements Parsable {
      */
     public ConversationMember() {
         super();
-        this.setType("#microsoft.graph.conversationMember");
+        this.setOdataType("#microsoft.graph.conversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

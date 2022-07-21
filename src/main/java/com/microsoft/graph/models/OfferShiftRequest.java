@@ -23,7 +23,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      */
     public OfferShiftRequest() {
         super();
-        this.setType("#microsoft.graph.offerShiftRequest");
+        this.setOdataType("#microsoft.graph.offerShiftRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

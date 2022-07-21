@@ -29,7 +29,7 @@ public class DataSourceContainer extends Entity implements Parsable {
      */
     public DataSourceContainer() {
         super();
-        this.setType("#microsoft.graph.security.dataSourceContainer");
+        this.setOdataType("#microsoft.graph.security.dataSourceContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

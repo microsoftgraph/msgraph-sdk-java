@@ -86,7 +86,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
      * @param id Unique identifier of the item
-     * @return a deviceCompliancePolicyAssignmentItemRequestBuilder
+     * @return a DeviceCompliancePolicyAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyAssignmentItemRequestBuilder assignments(@javax.annotation.Nonnull final String id) {
@@ -266,7 +266,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
-     * @return a settingStateDeviceSummaryItemRequestBuilder
+     * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SettingStateDeviceSummaryItemRequestBuilder deviceSettingStateSummaries(@javax.annotation.Nonnull final String id) {
@@ -278,7 +278,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceDeviceStatusItemRequestBuilder
+     * @return a DeviceComplianceDeviceStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceDeviceStatusItemRequestBuilder deviceStatuses(@javax.annotation.Nonnull final String id) {
@@ -396,7 +396,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceScheduledActionForRuleItemRequestBuilder
+     * @return a DeviceComplianceScheduledActionForRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceScheduledActionForRuleItemRequestBuilder scheduledActionsForRule(@javax.annotation.Nonnull final String id) {
@@ -408,7 +408,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
      * @param id Unique identifier of the item
-     * @return a deviceComplianceUserStatusItemRequestBuilder
+     * @return a DeviceComplianceUserStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceComplianceUserStatusItemRequestBuilder userStatuses(@javax.annotation.Nonnull final String id) {
@@ -426,7 +426,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration() {
@@ -455,7 +455,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceCompliancePolicyItemRequestBuilderGetQueryParameters queryParameters = new DeviceCompliancePolicyItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceCompliancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration() {
@@ -470,7 +470,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration() {

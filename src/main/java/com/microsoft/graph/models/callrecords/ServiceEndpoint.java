@@ -14,6 +14,7 @@ public class ServiceEndpoint extends Endpoint implements Parsable {
      */
     public ServiceEndpoint() {
         super();
+        this.setOdataType("#microsoft.graph.callRecords.serviceEndpoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

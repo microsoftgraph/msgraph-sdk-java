@@ -313,7 +313,7 @@ public class AccessReviewHistoryInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewHistoryInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryInstanceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryInstanceItemRequestBuilderDeleteRequestConfiguration() {
@@ -342,7 +342,7 @@ public class AccessReviewHistoryInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public AccessReviewHistoryInstanceItemRequestBuilderGetQueryParameters queryParameters = new AccessReviewHistoryInstanceItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new accessReviewHistoryInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryInstanceItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryInstanceItemRequestBuilderGetRequestConfiguration() {
@@ -357,7 +357,7 @@ public class AccessReviewHistoryInstanceItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new accessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration() {

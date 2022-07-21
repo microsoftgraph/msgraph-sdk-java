@@ -16,6 +16,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      */
     public IosMobileAppIdentifier() {
         super();
+        this.setOdataType("#microsoft.graph.iosMobileAppIdentifier");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

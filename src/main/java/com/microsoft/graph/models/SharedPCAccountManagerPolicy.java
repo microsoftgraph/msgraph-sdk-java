@@ -18,6 +18,8 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     private Integer _cacheAccountsAboveDiskFreePercentage;
     /** Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. */
     private Integer _inactiveThresholdDays;
+    /** The OdataType property */
+    private String _odataType;
     /** Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100 */
     private Integer _removeAccountsBelowDiskFreePercentage;
     /**
@@ -26,6 +28,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     public SharedPCAccountManagerPolicy() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.sharedPCAccountManagerPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,10 +71,11 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedPCAccountManagerPolicy currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("accountDeletionPolicy", (n) -> { currentObject.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
             this.put("cacheAccountsAboveDiskFreePercentage", (n) -> { currentObject.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
             this.put("inactiveThresholdDays", (n) -> { currentObject.setInactiveThresholdDays(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("removeAccountsBelowDiskFreePercentage", (n) -> { currentObject.setRemoveAccountsBelowDiskFreePercentage(n.getIntegerValue()); });
         }};
     }
@@ -82,6 +86,14 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public Integer getInactiveThresholdDays() {
         return this._inactiveThresholdDays;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
@@ -101,6 +113,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("accountDeletionPolicy", this.getAccountDeletionPolicy());
         writer.writeIntegerValue("cacheAccountsAboveDiskFreePercentage", this.getCacheAccountsAboveDiskFreePercentage());
         writer.writeIntegerValue("inactiveThresholdDays", this.getInactiveThresholdDays());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("removeAccountsBelowDiskFreePercentage", this.getRemoveAccountsBelowDiskFreePercentage());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,6 +148,14 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      */
     public void setInactiveThresholdDays(@javax.annotation.Nullable final Integer value) {
         this._inactiveThresholdDays = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the removeAccountsBelowDiskFreePercentage property value. Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100

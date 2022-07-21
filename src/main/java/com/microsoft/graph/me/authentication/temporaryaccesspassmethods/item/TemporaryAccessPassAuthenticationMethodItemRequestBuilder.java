@@ -307,7 +307,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new temporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters queryParameters = new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new temporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new temporaryAccessPassAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TemporaryAccessPassAuthenticationMethodItemRequestBuilderPatchRequestConfiguration() {

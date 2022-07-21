@@ -67,7 +67,7 @@ public class InReplyToRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.attachments.item collection
      * @param id Unique identifier of the item
-     * @return a attachmentItemRequestBuilder
+     * @return a AttachmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AttachmentItemRequestBuilder attachments(@javax.annotation.Nonnull final String id) {
@@ -247,7 +247,7 @@ public class InReplyToRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -310,7 +310,7 @@ public class InReplyToRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -377,7 +377,7 @@ public class InReplyToRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {

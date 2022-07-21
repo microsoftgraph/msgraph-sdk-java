@@ -17,12 +17,15 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     private String _customizedMessageBody;
     /** The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US. */
     private String _messageLanguage;
+    /** The OdataType property */
+    private String _odataType;
     /**
      * Instantiates a new invitedUserMessageInfo and sets the default values.
      * @return a void
      */
     public InvitedUserMessageInfo() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.invitedUserMessageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +68,11 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitedUserMessageInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
             this.put("customizedMessageBody", (n) -> { currentObject.setCustomizedMessageBody(n.getStringValue()); });
             this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -80,6 +84,14 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         return this._messageLanguage;
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -89,6 +101,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("ccRecipients", this.getCcRecipients());
         writer.writeStringValue("customizedMessageBody", this.getCustomizedMessageBody());
         writer.writeStringValue("messageLanguage", this.getMessageLanguage());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,5 +135,13 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     public void setMessageLanguage(@javax.annotation.Nullable final String value) {
         this._messageLanguage = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
 }

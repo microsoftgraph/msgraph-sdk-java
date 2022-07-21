@@ -16,6 +16,7 @@ public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
      */
     public OmaSettingFloatingPoint() {
         super();
+        this.setOdataType("#microsoft.graph.omaSettingFloatingPoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

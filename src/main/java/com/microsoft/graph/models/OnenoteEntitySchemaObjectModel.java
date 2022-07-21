@@ -17,7 +17,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      */
     public OnenoteEntitySchemaObjectModel() {
         super();
-        this.setType("#microsoft.graph.onenoteEntitySchemaObjectModel");
+        this.setOdataType("#microsoft.graph.onenoteEntitySchemaObjectModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,8 +31,11 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.notebook": return new Notebook();
                 case "#microsoft.graph.onenoteEntityHierarchyModel": return new OnenoteEntityHierarchyModel();
                 case "#microsoft.graph.onenotePage": return new OnenotePage();
+                case "#microsoft.graph.onenoteSection": return new OnenoteSection();
+                case "#microsoft.graph.sectionGroup": return new SectionGroup();
             }
         }
         return new OnenoteEntitySchemaObjectModel();

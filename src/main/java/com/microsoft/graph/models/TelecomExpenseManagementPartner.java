@@ -26,6 +26,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      */
     public TelecomExpenseManagementPartner() {
         super();
+        this.setOdataType("#microsoft.graph.telecomExpenseManagementPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

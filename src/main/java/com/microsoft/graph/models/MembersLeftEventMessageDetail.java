@@ -18,6 +18,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
      */
     public MembersLeftEventMessageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.membersLeftEventMessageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

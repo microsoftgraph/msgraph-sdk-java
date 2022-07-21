@@ -19,7 +19,7 @@ import microsoft.graph.models.AppRoleAssignmentCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to appRoleAssignment. */
 public class AppRoleAssignmentRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

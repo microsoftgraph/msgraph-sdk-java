@@ -307,7 +307,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters queryParameters = new DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new deviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new deviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration() {

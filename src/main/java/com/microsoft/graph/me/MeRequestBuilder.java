@@ -425,7 +425,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.activities.item collection
      * @param id Unique identifier of the item
-     * @return a userActivityItemRequestBuilder
+     * @return a UserActivityItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UserActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
@@ -437,7 +437,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.agreementAcceptances.item collection
      * @param id Unique identifier of the item
-     * @return a agreementAcceptanceItemRequestBuilder
+     * @return a AgreementAcceptanceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AgreementAcceptanceItemRequestBuilder agreementAcceptances(@javax.annotation.Nonnull final String id) {
@@ -449,7 +449,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.appRoleAssignments.item collection
      * @param id Unique identifier of the item
-     * @return a appRoleAssignmentItemRequestBuilder
+     * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
@@ -461,7 +461,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarGroups.item collection
      * @param id Unique identifier of the item
-     * @return a calendarGroupItemRequestBuilder
+     * @return a CalendarGroupItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarGroupItemRequestBuilder calendarGroups(@javax.annotation.Nonnull final String id) {
@@ -473,7 +473,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendars.item collection
      * @param id Unique identifier of the item
-     * @return a calendarItemRequestBuilder
+     * @return a CalendarItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public CalendarItemRequestBuilder calendars(@javax.annotation.Nonnull final String id) {
@@ -485,7 +485,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.calendarView.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
@@ -497,7 +497,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.chats.item collection
      * @param id Unique identifier of the item
-     * @return a chatItemRequestBuilder
+     * @return a ChatItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ChatItemRequestBuilder chats(@javax.annotation.Nonnull final String id) {
@@ -536,7 +536,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.contactFolders.item collection
      * @param id Unique identifier of the item
-     * @return a contactFolderItemRequestBuilder
+     * @return a ContactFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactFolderItemRequestBuilder contactFolders(@javax.annotation.Nonnull final String id) {
@@ -548,7 +548,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.contacts.item collection
      * @param id Unique identifier of the item
-     * @return a contactItemRequestBuilder
+     * @return a ContactItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ContactItemRequestBuilder contacts(@javax.annotation.Nonnull final String id) {
@@ -560,7 +560,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.createdObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
@@ -570,7 +570,7 @@ public class MeRequestBuilder {
         return new microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -578,7 +578,7 @@ public class MeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -634,7 +634,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.deviceManagementTroubleshootingEvents.item collection
      * @param id Unique identifier of the item
-     * @return a deviceManagementTroubleshootingEventItemRequestBuilder
+     * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventItemRequestBuilder deviceManagementTroubleshootingEvents(@javax.annotation.Nonnull final String id) {
@@ -646,7 +646,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.directReports.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
@@ -658,7 +658,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.drives.item collection
      * @param id Unique identifier of the item
-     * @return a driveItemRequestBuilder
+     * @return a DriveItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder drives(@javax.annotation.Nonnull final String id) {
@@ -670,7 +670,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.events.item collection
      * @param id Unique identifier of the item
-     * @return a eventItemRequestBuilder
+     * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
@@ -682,7 +682,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -694,7 +694,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.followedSites.item collection
      * @param id Unique identifier of the item
-     * @return a siteItemRequestBuilder
+     * @return a SiteItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SiteItemRequestBuilder followedSites(@javax.annotation.Nonnull final String id) {
@@ -704,7 +704,7 @@ public class MeRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -720,7 +720,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -737,7 +737,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -773,7 +773,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.joinedTeams.item collection
      * @param id Unique identifier of the item
-     * @return a teamItemRequestBuilder
+     * @return a TeamItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TeamItemRequestBuilder joinedTeams(@javax.annotation.Nonnull final String id) {
@@ -785,7 +785,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.licenseDetails.item collection
      * @param id Unique identifier of the item
-     * @return a licenseDetailsItemRequestBuilder
+     * @return a LicenseDetailsItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public LicenseDetailsItemRequestBuilder licenseDetails(@javax.annotation.Nonnull final String id) {
@@ -797,7 +797,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.mailFolders.item collection
      * @param id Unique identifier of the item
-     * @return a mailFolderItemRequestBuilder
+     * @return a MailFolderItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MailFolderItemRequestBuilder mailFolders(@javax.annotation.Nonnull final String id) {
@@ -809,7 +809,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.managedAppRegistrations.item collection
      * @param id Unique identifier of the item
-     * @return a managedAppRegistrationItemRequestBuilder
+     * @return a ManagedAppRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
@@ -821,7 +821,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.managedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a managedDeviceItemRequestBuilder
+     * @return a ManagedDeviceItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
@@ -833,7 +833,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.memberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
@@ -845,7 +845,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.messages.item collection
      * @param id Unique identifier of the item
-     * @return a messageItemRequestBuilder
+     * @return a MessageItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MessageItemRequestBuilder messages(@javax.annotation.Nonnull final String id) {
@@ -857,7 +857,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
-     * @return a oAuth2PermissionGrantItemRequestBuilder
+     * @return a OAuth2PermissionGrantItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OAuth2PermissionGrantItemRequestBuilder oauth2PermissionGrants(@javax.annotation.Nonnull final String id) {
@@ -869,7 +869,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.onlineMeetings.item collection
      * @param id Unique identifier of the item
-     * @return a onlineMeetingItemRequestBuilder
+     * @return a OnlineMeetingItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public OnlineMeetingItemRequestBuilder onlineMeetings(@javax.annotation.Nonnull final String id) {
@@ -881,7 +881,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.ownedDevices.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
@@ -893,7 +893,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.ownedObjects.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
@@ -960,7 +960,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.people.item collection
      * @param id Unique identifier of the item
-     * @return a personItemRequestBuilder
+     * @return a PersonItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PersonItemRequestBuilder people(@javax.annotation.Nonnull final String id) {
@@ -972,7 +972,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.photos.item collection
      * @param id Unique identifier of the item
-     * @return a profilePhotoItemRequestBuilder
+     * @return a ProfilePhotoItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ProfilePhotoItemRequestBuilder photos(@javax.annotation.Nonnull final String id) {
@@ -984,7 +984,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.registeredDevices.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
@@ -1008,7 +1008,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.scopedRoleMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a scopedRoleMembershipItemRequestBuilder
+     * @return a ScopedRoleMembershipItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipItemRequestBuilder scopedRoleMemberOf(@javax.annotation.Nonnull final String id) {
@@ -1020,7 +1020,7 @@ public class MeRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
-     * @return a directoryObjectItemRequestBuilder
+     * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
@@ -1029,7 +1029,7 @@ public class MeRequestBuilder {
         urlTplParams.put("directoryObject%2Did", id);
         return new microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node. */
+    /** Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance. */
     public class MeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

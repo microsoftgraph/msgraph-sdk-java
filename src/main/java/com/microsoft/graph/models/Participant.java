@@ -27,6 +27,7 @@ public class Participant extends Entity implements Parsable {
      */
     public Participant() {
         super();
+        this.setOdataType("#microsoft.graph.participant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

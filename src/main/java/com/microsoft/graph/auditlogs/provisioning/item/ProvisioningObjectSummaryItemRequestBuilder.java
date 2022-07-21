@@ -307,7 +307,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new provisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration() {
@@ -336,7 +336,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public ProvisioningObjectSummaryItemRequestBuilderGetQueryParameters queryParameters = new ProvisioningObjectSummaryItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new provisioningObjectSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration() {
@@ -351,7 +351,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new provisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration() {

@@ -22,6 +22,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      */
     public Fido2AuthenticationMethodConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.fido2AuthenticationMethodConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

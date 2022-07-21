@@ -20,7 +20,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.contactfolders.item.multivalueextendedproperties.count.CountRequestBuilder;
 /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity. */
 public class MultiValueExtendedPropertiesRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

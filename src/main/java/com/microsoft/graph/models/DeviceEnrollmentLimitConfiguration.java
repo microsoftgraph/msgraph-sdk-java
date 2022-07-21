@@ -16,6 +16,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      */
     public DeviceEnrollmentLimitConfiguration() {
         super();
+        this.setOdataType("#microsoft.graph.deviceEnrollmentLimitConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

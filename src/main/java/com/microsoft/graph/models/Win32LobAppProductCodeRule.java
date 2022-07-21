@@ -20,6 +20,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     public Win32LobAppProductCodeRule() {
         super();
+        this.setOdataType("#microsoft.graph.win32LobAppProductCodeRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

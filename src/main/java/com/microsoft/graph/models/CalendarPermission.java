@@ -25,6 +25,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     public CalendarPermission() {
         super();
+        this.setOdataType("#microsoft.graph.calendarPermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

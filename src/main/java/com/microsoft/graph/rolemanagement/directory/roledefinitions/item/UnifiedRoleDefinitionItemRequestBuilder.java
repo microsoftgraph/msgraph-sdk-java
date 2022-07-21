@@ -252,7 +252,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.roleManagement.directory.roleDefinitions.item.inheritsPermissionsFrom.item collection
      * @param id Unique identifier of the item
-     * @return a unifiedRoleDefinitionItemRequestBuilder
+     * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public UnifiedRoleDefinitionItemRequestBuilder inheritsPermissionsFrom(@javax.annotation.Nonnull final String id) {
@@ -325,7 +325,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderDeleteRequestConfiguration() {
@@ -354,7 +354,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters queryParameters = new UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration() {
@@ -369,7 +369,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new unifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration() {

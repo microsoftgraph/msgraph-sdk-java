@@ -16,6 +16,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
     private IdentitySet _feedbackBy;
     /** Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _feedbackDateTime;
+    /** The OdataType property */
+    private String _odataType;
     /** Feedback. */
     private EducationItemBody _text;
     /**
@@ -24,6 +26,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     public EducationFeedback() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.educationFeedback");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,11 +69,20 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedback currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("feedbackBy", (n) -> { currentObject.setFeedbackBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("feedbackDateTime", (n) -> { currentObject.setFeedbackDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the text property value. Feedback.
@@ -89,6 +101,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("feedbackBy", this.getFeedbackBy());
         writer.writeOffsetDateTimeValue("feedbackDateTime", this.getFeedbackDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("text", this.getText());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -115,6 +128,14 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      */
     public void setFeedbackDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._feedbackDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the text property value. Feedback.

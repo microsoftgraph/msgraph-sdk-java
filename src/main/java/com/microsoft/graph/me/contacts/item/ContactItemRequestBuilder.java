@@ -222,7 +222,7 @@ public class ContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.contacts.item.extensions.item collection
      * @param id Unique identifier of the item
-     * @return a extensionItemRequestBuilder
+     * @return a ExtensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ExtensionItemRequestBuilder extensions(@javax.annotation.Nonnull final String id) {
@@ -285,7 +285,7 @@ public class ContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.contacts.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a multiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MultiValueLegacyExtendedPropertyItemRequestBuilder multiValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -352,7 +352,7 @@ public class ContactItemRequestBuilder {
     /**
      * Gets an item from the Microsoft.Graph.me.contacts.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
-     * @return a singleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public SingleValueLegacyExtendedPropertyItemRequestBuilder singleValueExtendedProperties(@javax.annotation.Nonnull final String id) {
@@ -370,7 +370,7 @@ public class ContactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new ContactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactItemRequestBuilderDeleteRequestConfiguration() {
@@ -395,7 +395,7 @@ public class ContactItemRequestBuilder {
         @javax.annotation.Nullable
         public ContactItemRequestBuilderGetQueryParameters queryParameters = new ContactItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new contactItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new ContactItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactItemRequestBuilderGetRequestConfiguration() {
@@ -410,7 +410,7 @@ public class ContactItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new contactItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new ContactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public ContactItemRequestBuilderPatchRequestConfiguration() {

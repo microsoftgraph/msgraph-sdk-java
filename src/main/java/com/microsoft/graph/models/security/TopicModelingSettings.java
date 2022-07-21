@@ -11,13 +11,15 @@ import java.util.Objects;
 public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** To learn more, see Adjust maximum number of themes dynamically. */
+    /** Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically. */
     private Boolean _dynamicallyAdjustTopicCount;
-    /** To learn more, see Include numbers in themes. */
+    /** Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes. */
     private Boolean _ignoreNumbers;
-    /** Indicates whether themes is enabled for the case. */
+    /** Indicates whether themes model is enabled for the case. */
     private Boolean _isEnabled;
-    /** To learn more, see Maximum number of themes. */
+    /** The OdataType property */
+    private String _odataType;
+    /** The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes. */
     private Integer _topicCount;
     /**
      * Instantiates a new topicModelingSettings and sets the default values.
@@ -25,6 +27,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     public TopicModelingSettings() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.security.topicModelingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +48,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the dynamicallyAdjustTopicCount property value. To learn more, see Adjust maximum number of themes dynamically.
+     * Gets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -59,15 +62,16 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TopicModelingSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<>(5) {{
             this.put("dynamicallyAdjustTopicCount", (n) -> { currentObject.setDynamicallyAdjustTopicCount(n.getBooleanValue()); });
             this.put("ignoreNumbers", (n) -> { currentObject.setIgnoreNumbers(n.getBooleanValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("topicCount", (n) -> { currentObject.setTopicCount(n.getIntegerValue()); });
         }};
     }
     /**
-     * Gets the ignoreNumbers property value. To learn more, see Include numbers in themes.
+     * Gets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -75,7 +79,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._ignoreNumbers;
     }
     /**
-     * Gets the isEnabled property value. Indicates whether themes is enabled for the case.
+     * Gets the isEnabled property value. Indicates whether themes model is enabled for the case.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -83,7 +87,15 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this._isEnabled;
     }
     /**
-     * Gets the topicCount property value. To learn more, see Maximum number of themes.
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
+    }
+    /**
+     * Gets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -100,6 +112,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("dynamicallyAdjustTopicCount", this.getDynamicallyAdjustTopicCount());
         writer.writeBooleanValue("ignoreNumbers", this.getIgnoreNumbers());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("topicCount", this.getTopicCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -112,7 +125,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the dynamicallyAdjustTopicCount property value. To learn more, see Adjust maximum number of themes dynamically.
+     * Sets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      * @param value Value to set for the dynamicallyAdjustTopicCount property.
      * @return a void
      */
@@ -120,7 +133,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._dynamicallyAdjustTopicCount = value;
     }
     /**
-     * Sets the ignoreNumbers property value. To learn more, see Include numbers in themes.
+     * Sets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      * @param value Value to set for the ignoreNumbers property.
      * @return a void
      */
@@ -128,7 +141,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._ignoreNumbers = value;
     }
     /**
-     * Sets the isEnabled property value. Indicates whether themes is enabled for the case.
+     * Sets the isEnabled property value. Indicates whether themes model is enabled for the case.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
@@ -136,7 +149,15 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this._isEnabled = value;
     }
     /**
-     * Sets the topicCount property value. To learn more, see Maximum number of themes.
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
+    }
+    /**
+     * Sets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      * @param value Value to set for the topicCount property.
      * @return a void
      */

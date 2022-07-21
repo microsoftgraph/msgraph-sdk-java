@@ -20,7 +20,7 @@ import microsoft.graph.models.TeamsAsyncOperation;
 import microsoft.graph.models.TeamsAsyncOperationCollectionResponse;
 /** Provides operations to manage the operations property of the microsoft.graph.team entity. */
 public class OperationsRequestBuilder {
-    /** The count property */
+    /** The Count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

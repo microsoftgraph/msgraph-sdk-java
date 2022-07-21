@@ -25,6 +25,8 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     private String _eventSubject;
     /** The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame. */
     private String _eventWebLink;
+    /** The OdataType property */
+    private String _odataType;
     /** The date, time, and time zone that the reminder is set to occur. */
     private DateTimeTimeZone _reminderFireTime;
     /**
@@ -33,6 +35,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     public Reminder() {
         this.setAdditionalData(new HashMap<>());
+        this.setOdataType("#microsoft.graph.reminder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +118,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Reminder currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<>(9) {{
             this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
             this.put("eventEndTime", (n) -> { currentObject.setEventEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("eventId", (n) -> { currentObject.setEventId(n.getStringValue()); });
@@ -123,8 +126,17 @@ public class Reminder implements AdditionalDataHolder, Parsable {
             this.put("eventStartTime", (n) -> { currentObject.setEventStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("eventSubject", (n) -> { currentObject.setEventSubject(n.getStringValue()); });
             this.put("eventWebLink", (n) -> { currentObject.setEventWebLink(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reminderFireTime", (n) -> { currentObject.setReminderFireTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this._odataType;
     }
     /**
      * Gets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
@@ -148,6 +160,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("eventStartTime", this.getEventStartTime());
         writer.writeStringValue("eventSubject", this.getEventSubject());
         writer.writeStringValue("eventWebLink", this.getEventWebLink());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("reminderFireTime", this.getReminderFireTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,6 +227,14 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     public void setEventWebLink(@javax.annotation.Nullable final String value) {
         this._eventWebLink = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this._odataType = value;
     }
     /**
      * Sets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.

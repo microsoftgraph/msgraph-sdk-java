@@ -33,6 +33,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
      */
     public AccessReviewInstance() {
         super();
+        this.setOdataType("#microsoft.graph.accessReviewInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

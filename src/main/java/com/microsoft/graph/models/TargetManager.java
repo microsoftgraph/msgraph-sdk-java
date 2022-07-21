@@ -16,6 +16,7 @@ public class TargetManager extends SubjectSet implements Parsable {
      */
     public TargetManager() {
         super();
+        this.setOdataType("#microsoft.graph.targetManager");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

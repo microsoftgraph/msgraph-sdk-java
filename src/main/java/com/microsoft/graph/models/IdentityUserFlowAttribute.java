@@ -22,7 +22,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      */
     public IdentityUserFlowAttribute() {
         super();
-        this.setType("#microsoft.graph.identityUserFlowAttribute");
+        this.setOdataType("#microsoft.graph.identityUserFlowAttribute");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

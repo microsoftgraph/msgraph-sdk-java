@@ -14,6 +14,7 @@ public class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignment
      */
     public AllDevicesAssignmentTarget() {
         super();
+        this.setOdataType("#microsoft.graph.allDevicesAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

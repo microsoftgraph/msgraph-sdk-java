@@ -307,7 +307,7 @@ public class TimeOffReasonItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new timeOffReasonItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new TimeOffReasonItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeOffReasonItemRequestBuilderDeleteRequestConfiguration() {
@@ -332,7 +332,7 @@ public class TimeOffReasonItemRequestBuilder {
         @javax.annotation.Nullable
         public TimeOffReasonItemRequestBuilderGetQueryParameters queryParameters = new TimeOffReasonItemRequestBuilderGetQueryParameters();
         /**
-         * Instantiates a new timeOffReasonItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new TimeOffReasonItemRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeOffReasonItemRequestBuilderGetRequestConfiguration() {
@@ -347,7 +347,7 @@ public class TimeOffReasonItemRequestBuilder {
         @javax.annotation.Nullable
         public Collection<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new timeOffReasonItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new TimeOffReasonItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
         public TimeOffReasonItemRequestBuilderPatchRequestConfiguration() {
