@@ -11,6 +11,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.31.0] - 2022-07-21
+
+### Added
+
+- AccessPackageAutomaticRequestSettings model. 
+- AttributeRuleMembers model. 
+- AuthenticationMethodSignInState model. 
+- AuthenticationPhoneType model. 
+- AvailabilityItem model. 
+- BookingsAvailabilityStatus model. 
+- StaffAvailabilityItem model. 
+- BookingBusinessGetStaffAvailability models and related requests.
+- EmailAuthenticationMethod model and related requests.  
+- PhoneAuthenticationMethod models and related requests. 
+- SoftwareOathAuthenticationMethod model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- References to newly added models/requests added to current models/requests.
+- Example: Authentication model now has refrences to EmailAuthenticationMethod, PhoneAuthenticationMethod, SoftwareOathAuthenticationMethod models. 
+- Example: AuthenticationRequestBuilder now references EmailAuthenticationMethodRequestBuilder, PhoneAuthenticationMethodRequestBuilder, and SoftwareOathAuthenticationMethodRequestBuilder. 
+
 ## [5.30.0] - 2022-07-05
 
 ### Added
