@@ -80,7 +80,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
     /**
      * The User Sources.
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

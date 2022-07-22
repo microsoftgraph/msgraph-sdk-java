@@ -57,7 +57,7 @@ public class OcrSettings implements IJsonBackedObject {
 
     /**
      * The Timeout.
-     * The timeout duration for the OCR engine. A longer timeout may increase success of OCR, but may add to the total processing time.
+     * The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
      */
     @SerializedName(value = "timeout", alternate = {"Timeout"})
     @Expose

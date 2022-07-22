@@ -457,7 +457,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -691,7 +691,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Name.
-     * The preferred name for the user. Returned only on $select.
+     * The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
      */
     @SerializedName(value = "preferredName", alternate = {"PreferredName"})
     @Expose
@@ -812,7 +812,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;

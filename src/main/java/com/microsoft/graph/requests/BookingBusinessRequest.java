@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.BookingBusiness;
+import com.microsoft.graph.models.DateTimeTimeZone;
+import com.microsoft.graph.models.StaffAvailabilityItem;
 import com.microsoft.graph.requests.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.BookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.BookingCustomerBaseCollectionRequestBuilder;

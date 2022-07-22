@@ -49,7 +49,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Hit Id.
-     * The internal identifier for the item.
+     * The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      */
     @SerializedName(value = "hitId", alternate = {"HitId"})
     @Expose
