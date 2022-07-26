@@ -50,7 +50,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Endpoint Type.
-     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose

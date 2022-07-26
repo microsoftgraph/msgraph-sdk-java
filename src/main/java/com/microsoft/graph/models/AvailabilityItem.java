@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.BookingsAvailabilityStatus;
 
 
@@ -39,13 +40,13 @@ public class AvailabilityItem implements IJsonBackedObject {
     }
 
     /**
-     * The End Time.
-     * 
+     * The End Date Time.
+     * The end time of the time slot.
      */
-    @SerializedName(value = "endTime", alternate = {"EndTime"})
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.core.TimeOfDay endTime;
+    public DateTimeTimeZone endDateTime;
 
     /**
      * The Service Id.
@@ -57,13 +58,13 @@ public class AvailabilityItem implements IJsonBackedObject {
     public String serviceId;
 
     /**
-     * The Start Time.
-     * 
+     * The Start Date Time.
+     * The start time of the time slot.
      */
-    @SerializedName(value = "startTime", alternate = {"StartTime"})
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.core.TimeOfDay startTime;
+    public DateTimeTimeZone startDateTime;
 
     /**
      * The Status.
