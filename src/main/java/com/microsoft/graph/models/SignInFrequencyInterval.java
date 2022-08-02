@@ -7,32 +7,24 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Notification Template Branding Options.
+ * The Enum Sign In Frequency Interval.
 */
-public enum NotificationTemplateBrandingOptions
+public enum SignInFrequencyInterval
 {
     /**
-    * none
+    * time Based
     */
-    NONE,
+    TIME_BASED,
     /**
-    * include Company Logo
+    * every Time
     */
-    INCLUDE_COMPANY_LOGO,
+    EVERY_TIME,
     /**
-    * include Company Name
+    * unknown Future Value
     */
-    INCLUDE_COMPANY_NAME,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * include Contact Information
-    */
-    INCLUDE_CONTACT_INFORMATION,
-    /**
-    * include Device Details
-    */
-    INCLUDE_DEVICE_DETAILS,
-    /**
-    * For NotificationTemplateBrandingOptions values that were not expected from the service
+    * For SignInFrequencyInterval values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

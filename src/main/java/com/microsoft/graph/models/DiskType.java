@@ -7,32 +7,28 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Notification Template Branding Options.
+ * The Enum Disk Type.
 */
-public enum NotificationTemplateBrandingOptions
+public enum DiskType
 {
     /**
-    * none
+    * unknown
     */
-    NONE,
+    UNKNOWN,
     /**
-    * include Company Logo
+    * hdd
     */
-    INCLUDE_COMPANY_LOGO,
+    HDD,
     /**
-    * include Company Name
+    * ssd
     */
-    INCLUDE_COMPANY_NAME,
+    SSD,
     /**
-    * include Contact Information
+    * unknown Future Value
     */
-    INCLUDE_CONTACT_INFORMATION,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * include Device Details
-    */
-    INCLUDE_DEVICE_DETAILS,
-    /**
-    * For NotificationTemplateBrandingOptions values that were not expected from the service
+    * For DiskType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

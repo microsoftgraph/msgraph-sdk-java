@@ -64,7 +64,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Target Objects.
-     * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      */
     @SerializedName(value = "targetObjects", alternate = {"TargetObjects"})
     @Expose

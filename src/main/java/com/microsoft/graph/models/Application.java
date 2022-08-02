@@ -71,7 +71,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -350,7 +350,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose

@@ -7,32 +7,32 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Notification Template Branding Options.
+ * The Enum User Experience Analytics Health State.
 */
-public enum NotificationTemplateBrandingOptions
+public enum UserExperienceAnalyticsHealthState
 {
     /**
-    * none
+    * unknown
     */
-    NONE,
+    UNKNOWN,
     /**
-    * include Company Logo
+    * insufficient Data
     */
-    INCLUDE_COMPANY_LOGO,
+    INSUFFICIENT_DATA,
     /**
-    * include Company Name
+    * needs Attention
     */
-    INCLUDE_COMPANY_NAME,
+    NEEDS_ATTENTION,
     /**
-    * include Contact Information
+    * meeting Goals
     */
-    INCLUDE_CONTACT_INFORMATION,
+    MEETING_GOALS,
     /**
-    * include Device Details
+    * unknown Future Value
     */
-    INCLUDE_DEVICE_DETAILS,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * For NotificationTemplateBrandingOptions values that were not expected from the service
+    * For UserExperienceAnalyticsHealthState values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
