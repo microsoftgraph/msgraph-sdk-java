@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum CrossTenantAccessPolicyTargetType implements ValuedEnum {
     User("user"),
     Group("group"),

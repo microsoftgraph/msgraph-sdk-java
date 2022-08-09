@@ -85,6 +85,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.appScope": return new AppScope();
                 case "#microsoft.graph.associatedTeamInfo": return new AssociatedTeamInfo();
                 case "#microsoft.graph.attachment": return new Attachment();
+                case "#microsoft.graph.attachmentBase": return new AttachmentBase();
+                case "#microsoft.graph.attachmentSession": return new AttachmentSession();
                 case "#microsoft.graph.attendanceRecord": return new AttendanceRecord();
                 case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
                 case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
@@ -192,6 +194,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.directoryObjectPartnerReference": return new DirectoryObjectPartnerReference();
                 case "#microsoft.graph.directoryRole": return new DirectoryRole();
                 case "#microsoft.graph.directoryRoleTemplate": return new DirectoryRoleTemplate();
+                case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
                 case "#microsoft.graph.domain": return new Domain();
                 case "#microsoft.graph.domainDnsCnameRecord": return new DomainDnsCnameRecord();
                 case "#microsoft.graph.domainDnsMxRecord": return new DomainDnsMxRecord();
@@ -504,6 +507,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.targetedManagedAppConfiguration": return new TargetedManagedAppConfiguration();
                 case "#microsoft.graph.targetedManagedAppPolicyAssignment": return new TargetedManagedAppPolicyAssignment();
                 case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
+                case "#microsoft.graph.taskFileAttachment": return new TaskFileAttachment();
                 case "#microsoft.graph.team": return new Team();
                 case "#microsoft.graph.teamInfo": return new TeamInfo();
                 case "#microsoft.graph.teamsApp": return new TeamsApp();
@@ -564,6 +568,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.user": return new User();
                 case "#microsoft.graph.userActivity": return new UserActivity();
                 case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
+                case "#microsoft.graph.userExperienceAnalyticsDevicePerformance": return new UserExperienceAnalyticsDevicePerformance();
                 case "#microsoft.graph.userFlowLanguageConfiguration": return new UserFlowLanguageConfiguration();
                 case "#microsoft.graph.userFlowLanguagePage": return new UserFlowLanguagePage();
                 case "#microsoft.graph.userInstallStateSummary": return new UserInstallStateSummary();

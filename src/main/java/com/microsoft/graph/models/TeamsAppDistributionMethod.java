@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the appCatalogs singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum TeamsAppDistributionMethod implements ValuedEnum {
     Store("store"),
     Organization("organization"),

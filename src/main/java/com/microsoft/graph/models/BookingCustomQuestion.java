@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a custom question of the business. */
 public class BookingCustomQuestion extends Entity implements Parsable {
     /** The expected answer type. The possible values are: text, radioButton, unknownFutureValue. */
     private AnswerInputType _answerInputType;
@@ -16,7 +15,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /** Display name of this entity. */
     private String _displayName;
     /**
-     * Instantiates a new bookingCustomQuestion and sets the default values.
+     * Instantiates a new BookingCustomQuestion and sets the default values.
      * @return a void
      */
     public BookingCustomQuestion() {
@@ -26,7 +25,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomQuestion
+     * @return a BookingCustomQuestion
      */
     @javax.annotation.Nonnull
     public static BookingCustomQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

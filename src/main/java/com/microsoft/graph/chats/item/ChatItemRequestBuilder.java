@@ -114,7 +114,7 @@ public class ChatItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entity from chats by key
+     * Retrieve a single chat (without its messages).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -122,7 +122,7 @@ public class ChatItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get entity from chats by key
+     * Retrieve a single chat (without its messages).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +227,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Get entity from chats by key
+     * Retrieve a single chat (without its messages).
      * @return a CompletableFuture of chat
      */
     public java.util.concurrent.CompletableFuture<Chat> get() {
@@ -243,7 +243,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Get entity from chats by key
+     * Retrieve a single chat (without its messages).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
      */
@@ -260,7 +260,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Get entity from chats by key
+     * Retrieve a single chat (without its messages).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of chat
@@ -395,7 +395,7 @@ public class ChatItemRequestBuilder {
         public ChatItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get entity from chats by key */
+    /** Retrieve a single chat (without its messages). */
     public class ChatItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

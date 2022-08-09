@@ -116,7 +116,7 @@ public class PlaceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in places
+     * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
      * @param body 
      * @return a RequestInformation
      */
@@ -125,7 +125,7 @@ public class PlaceItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in places
+     * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -250,7 +250,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Update entity in places
+     * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -267,7 +267,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Update entity in places
+     * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -285,7 +285,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Update entity in places
+     * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

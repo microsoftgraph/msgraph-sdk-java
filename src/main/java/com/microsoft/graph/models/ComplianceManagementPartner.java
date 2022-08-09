@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Compliance management partner for all platforms */
 public class ComplianceManagementPartner extends Entity implements Parsable {
     /** User groups which enroll Android devices through partner. */
     private java.util.List<ComplianceManagementPartnerAssignment> _androidEnrollmentAssignments;
@@ -29,7 +28,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /** Partner state of this tenant. */
     private DeviceManagementPartnerTenantState _partnerState;
     /**
-     * Instantiates a new complianceManagementPartner and sets the default values.
+     * Instantiates a new ComplianceManagementPartner and sets the default values.
      * @return a void
      */
     public ComplianceManagementPartner() {
@@ -39,7 +38,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceManagementPartner
+     * @return a ComplianceManagementPartner
      */
     @javax.annotation.Nonnull
     public static ComplianceManagementPartner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

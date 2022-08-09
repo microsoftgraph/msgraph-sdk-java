@@ -17,6 +17,8 @@ import java.util.Objects;
 import microsoft.graph.models.ListItem;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.shares.item.listitem.analytics.AnalyticsRequestBuilder;
+import microsoft.graph.shares.item.listitem.documentsetversions.DocumentSetVersionsRequestBuilder;
+import microsoft.graph.shares.item.listitem.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
 import microsoft.graph.shares.item.listitem.driveitem.DriveItemRequestBuilder;
 import microsoft.graph.shares.item.listitem.fields.FieldsRequestBuilder;
 import microsoft.graph.shares.item.listitem.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
@@ -29,6 +31,11 @@ public class ListItemRequestBuilder {
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The documentSetVersions property */
+    @javax.annotation.Nonnull
+    public DocumentSetVersionsRequestBuilder documentSetVersions() {
+        return new DocumentSetVersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The driveItem property */
     @javax.annotation.Nonnull
@@ -218,6 +225,18 @@ public class ListItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.shares.item.listItem.documentSetVersions.item collection
+     * @param id Unique identifier of the item
+     * @return a DocumentSetVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DocumentSetVersionItemRequestBuilder documentSetVersions(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("documentSetVersion%2Did", id);
+        return new DocumentSetVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Used to access the underlying listItem

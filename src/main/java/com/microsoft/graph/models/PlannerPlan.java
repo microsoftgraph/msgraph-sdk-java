@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class PlannerPlan extends Entity implements Parsable {
     /** Collection of buckets in the plan. Read-only. Nullable. */
     private java.util.List<PlannerBucket> _buckets;

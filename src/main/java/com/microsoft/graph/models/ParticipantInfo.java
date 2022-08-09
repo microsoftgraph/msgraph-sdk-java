@@ -13,7 +13,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
     private String _countryCode;
-    /** The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
+    /** The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only. */
     private EndpointType _endpointType;
     /** The identity property */
     private IdentitySet _identity;
@@ -60,7 +60,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         return this._countryCode;
     }
     /**
-     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @return a endpointType
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         this._countryCode = value;
     }
     /**
-     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @param value Value to set for the endpointType property.
      * @return a void
      */

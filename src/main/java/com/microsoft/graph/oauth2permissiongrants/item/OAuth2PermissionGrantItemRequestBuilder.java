@@ -52,7 +52,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete entity from oauth2PermissionGrants
+     * Delete an oAuth2PermissionGrant, representing a delegated permission grant. When a delegated permission grant is deleted, the access it granted is revoked. Existing access tokens will continue to be valid for their lifetime, but new access tokens will not be granted for the delegated permissions identified in the deleted **oAuth2PermissionGrant**.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from oauth2PermissionGrants
+     * Delete an oAuth2PermissionGrant, representing a delegated permission grant. When a delegated permission grant is deleted, the access it granted is revoked. Existing access tokens will continue to be valid for their lifetime, but new access tokens will not be granted for the delegated permissions identified in the deleted **oAuth2PermissionGrant**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -80,7 +80,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entity from oauth2PermissionGrants by key
+     * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get entity from oauth2PermissionGrants by key
+     * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in oauth2PermissionGrants
+     * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
      * @param body 
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in oauth2PermissionGrants
+     * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -142,7 +142,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete entity from oauth2PermissionGrants
+     * Delete an oAuth2PermissionGrant, representing a delegated permission grant. When a delegated permission grant is deleted, the access it granted is revoked. Existing access tokens will continue to be valid for their lifetime, but new access tokens will not be granted for the delegated permissions identified in the deleted **oAuth2PermissionGrant**.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -158,7 +158,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Delete entity from oauth2PermissionGrants
+     * Delete an oAuth2PermissionGrant, representing a delegated permission grant. When a delegated permission grant is deleted, the access it granted is revoked. Existing access tokens will continue to be valid for their lifetime, but new access tokens will not be granted for the delegated permissions identified in the deleted **oAuth2PermissionGrant**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -175,7 +175,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Delete entity from oauth2PermissionGrants
+     * Delete an oAuth2PermissionGrant, representing a delegated permission grant. When a delegated permission grant is deleted, the access it granted is revoked. Existing access tokens will continue to be valid for their lifetime, but new access tokens will not be granted for the delegated permissions identified in the deleted **oAuth2PermissionGrant**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -193,7 +193,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Get entity from oauth2PermissionGrants by key
+     * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @return a CompletableFuture of oAuth2PermissionGrant
      */
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> get() {
@@ -209,7 +209,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Get entity from oauth2PermissionGrants by key
+     * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of oAuth2PermissionGrant
      */
@@ -226,7 +226,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Get entity from oauth2PermissionGrants by key
+     * Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of oAuth2PermissionGrant
@@ -244,7 +244,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Update entity in oauth2PermissionGrants
+     * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -261,7 +261,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Update entity in oauth2PermissionGrants
+     * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -279,7 +279,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * Update entity in oauth2PermissionGrants
+     * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -313,7 +313,7 @@ public class OAuth2PermissionGrantItemRequestBuilder {
         public OAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get entity from oauth2PermissionGrants by key */
+    /** Retrieve the properties of a single delegated permission grant represented by an oAuth2PermissionGrant object. An **oAuth2PermissionGrant** represents delegated permissions which have been granted for a client application to access an API on behalf of a signed-in user. */
     public class OAuth2PermissionGrantItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

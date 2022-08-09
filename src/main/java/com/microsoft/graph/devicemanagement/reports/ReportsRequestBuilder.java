@@ -27,6 +27,7 @@ import microsoft.graph.devicemanagement.reports.getdevicemanagementintentpersett
 import microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport.GetDeviceManagementIntentSettingsReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getdevicenoncompliancereport.GetDeviceNonComplianceReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.gethistoricalreport.GetHistoricalReportRequestBuilder;
+import microsoft.graph.devicemanagement.reports.getnoncompliantdevicesandsettingsreport.GetNoncompliantDevicesAndSettingsReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancemetadata.GetPolicyNonComplianceMetadataRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancereport.GetPolicyNonComplianceReportRequestBuilder;
 import microsoft.graph.devicemanagement.reports.getpolicynoncompliancesummaryreport.GetPolicyNonComplianceSummaryReportRequestBuilder;
@@ -95,6 +96,11 @@ public class ReportsRequestBuilder {
     @javax.annotation.Nonnull
     public GetHistoricalReportRequestBuilder getHistoricalReport() {
         return new GetHistoricalReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getNoncompliantDevicesAndSettingsReport property */
+    @javax.annotation.Nonnull
+    public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
+        return new GetNoncompliantDevicesAndSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
     /** The getPolicyNonComplianceMetadata property */
     @javax.annotation.Nonnull

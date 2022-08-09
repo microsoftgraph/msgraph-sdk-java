@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the deviceAppManagement singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum Win32LobAppRestartBehavior implements ValuedEnum {
     /** Intune will restart the device after running the app installation if the operation returns a reboot code. */
     BasedOnReturnCode("basedOnReturnCode"),

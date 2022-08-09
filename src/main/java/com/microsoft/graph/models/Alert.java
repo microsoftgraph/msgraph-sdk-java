@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Alert extends Entity implements Parsable {
     /** Name or alias of the activity group (attacker) this alert is attributed to. */
     private String _activityGroupName;
@@ -89,7 +88,7 @@ public class Alert extends Entity implements Parsable {
     /** Threat intelligence pertaining to one or more vulnerabilities related to this alert. */
     private java.util.List<VulnerabilityState> _vulnerabilityStates;
     /**
-     * Instantiates a new alert and sets the default values.
+     * Instantiates a new Alert and sets the default values.
      * @return a void
      */
     public Alert() {
@@ -99,7 +98,7 @@ public class Alert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alert
+     * @return a Alert
      */
     @javax.annotation.Nonnull
     public static Alert createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -8,8 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class TodoTask extends Entity implements Parsable {
+    /** A collection of file attachments for the task. */
+    private java.util.List<AttachmentBase> _attachments;
+    /** The attachmentSessions property */
+    private java.util.List<AttachmentSession> _attachmentSessions;
     /** The task body that typically contains information about the task. */
     private ItemBody _body;
     /** The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
@@ -18,14 +22,16 @@ public class TodoTask extends Entity implements Parsable {
     private java.util.List<String> _categories;
     /** A collection of smaller subtasks linked to the more complex parent task. */
     private java.util.List<ChecklistItem> _checklistItems;
-    /** The date in the specified time zone that the task was finished. */
+    /** The date and time in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
     /** The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _createdDateTime;
-    /** The date in the specified time zone that the task is to be finished. */
+    /** The date and time in the specified time zone that the task is to be finished. */
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
+    /** Indicates whether the task has attachments. */
+    private Boolean _hasAttachments;
     /** The importance property */
     private Importance _importance;
     /** Set to true if an alert is set to remind the user of the task. */
@@ -36,8 +42,10 @@ public class TodoTask extends Entity implements Parsable {
     private java.util.List<LinkedResource> _linkedResources;
     /** The recurrence pattern for the task. */
     private PatternedRecurrence _recurrence;
-    /** The date and time for a reminder alert of the task to occur. */
+    /** The date and time in the specified time zone for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
+    /** The date and time in the specified time zone at which the task is scheduled to start. */
+    private DateTimeTimeZone _startDateTime;
     /** The status property */
     private TaskStatus _status;
     /** A brief description of the task. */
@@ -59,6 +67,22 @@ public class TodoTask extends Entity implements Parsable {
     public static TodoTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TodoTask();
+    }
+    /**
+     * Gets the attachments property value. A collection of file attachments for the task.
+     * @return a attachmentBase
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttachmentBase> getAttachments() {
+        return this._attachments;
+    }
+    /**
+     * Gets the attachmentSessions property value. The attachmentSessions property
+     * @return a attachmentSession
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttachmentSession> getAttachmentSessions() {
+        return this._attachmentSessions;
     }
     /**
      * Gets the body property value. The task body that typically contains information about the task.
@@ -93,7 +117,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._checklistItems;
     }
     /**
-     * Gets the completedDateTime property value. The date in the specified time zone that the task was finished.
+     * Gets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -109,7 +133,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The date in the specified time zone that the task is to be finished.
+     * Gets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -132,6 +156,8 @@ public class TodoTask extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTask currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(AttachmentBase::createFromDiscriminatorValue)); });
+            this.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -140,15 +166,25 @@ public class TodoTask extends Entity implements Parsable {
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
             this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
             this.put("isReminderOn", (n) -> { currentObject.setIsReminderOn(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource::createFromDiscriminatorValue)); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus.class)); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the hasAttachments property value. Indicates whether the task has attachments.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getHasAttachments() {
+        return this._hasAttachments;
     }
     /**
      * Gets the importance property value. The importance property
@@ -191,12 +227,20 @@ public class TodoTask extends Entity implements Parsable {
         return this._recurrence;
     }
     /**
-     * Gets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
+     * Gets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getReminderDateTime() {
         return this._reminderDateTime;
+    }
+    /**
+     * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
+     * @return a dateTimeTimeZone
+     */
+    @javax.annotation.Nullable
+    public DateTimeTimeZone getStartDateTime() {
+        return this._startDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -222,6 +266,8 @@ public class TodoTask extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
+        writer.writeCollectionOfObjectValues("attachmentSessions", this.getAttachmentSessions());
         writer.writeObjectValue("body", this.getBody());
         writer.writeOffsetDateTimeValue("bodyLastModifiedDateTime", this.getBodyLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -230,14 +276,32 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("dueDateTime", this.getDueDateTime());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
+        writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
         writer.writeEnumValue("importance", this.getImportance());
         writer.writeBooleanValue("isReminderOn", this.getIsReminderOn());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("linkedResources", this.getLinkedResources());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeObjectValue("reminderDateTime", this.getReminderDateTime());
+        writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("title", this.getTitle());
+    }
+    /**
+     * Sets the attachments property value. A collection of file attachments for the task.
+     * @param value Value to set for the attachments property.
+     * @return a void
+     */
+    public void setAttachments(@javax.annotation.Nullable final java.util.List<AttachmentBase> value) {
+        this._attachments = value;
+    }
+    /**
+     * Sets the attachmentSessions property value. The attachmentSessions property
+     * @param value Value to set for the attachmentSessions property.
+     * @return a void
+     */
+    public void setAttachmentSessions(@javax.annotation.Nullable final java.util.List<AttachmentSession> value) {
+        this._attachmentSessions = value;
     }
     /**
      * Sets the body property value. The task body that typically contains information about the task.
@@ -272,7 +336,7 @@ public class TodoTask extends Entity implements Parsable {
         this._checklistItems = value;
     }
     /**
-     * Sets the completedDateTime property value. The date in the specified time zone that the task was finished.
+     * Sets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
@@ -288,7 +352,7 @@ public class TodoTask extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The date in the specified time zone that the task is to be finished.
+     * Sets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
@@ -302,6 +366,14 @@ public class TodoTask extends Entity implements Parsable {
      */
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
+    }
+    /**
+     * Sets the hasAttachments property value. Indicates whether the task has attachments.
+     * @param value Value to set for the hasAttachments property.
+     * @return a void
+     */
+    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+        this._hasAttachments = value;
     }
     /**
      * Sets the importance property value. The importance property
@@ -344,12 +416,20 @@ public class TodoTask extends Entity implements Parsable {
         this._recurrence = value;
     }
     /**
-     * Sets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
+     * Sets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
      * @param value Value to set for the reminderDateTime property.
      * @return a void
      */
     public void setReminderDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._reminderDateTime = value;
+    }
+    /**
+     * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
+     * @param value Value to set for the startDateTime property.
+     * @return a void
+     */
+    public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+        this._startDateTime = value;
     }
     /**
      * Sets the status property value. The status property

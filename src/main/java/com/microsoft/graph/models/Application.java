@@ -8,13 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
     /** Specifies settings for an application that implements a web API. */
     private ApiApplication _api;
-    /** The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. */
+    /** The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq). */
     private String _appId;
     /** Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne). */
     private String _applicationTemplateId;
@@ -24,7 +23,7 @@ public class Application extends DirectoryObject implements Parsable {
     private Certification _certification;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
     private OffsetDateTime _createdDateTime;
-    /** The createdOnBehalfOf property */
+    /** Supports $filter (eq when counting empty collections). Read-only. */
     private DirectoryObject _createdOnBehalfOf;
     /** Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
@@ -32,7 +31,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _disabledByMicrosoftStatus;
     /** The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<ExtensionProperty> _extensionProperties;
     /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
@@ -58,7 +57,7 @@ public class Application extends DirectoryObject implements Parsable {
     private Boolean _oauth2RequirePostResponse;
     /** Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app. */
     private OptionalClaims _optionalClaims;
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand. */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<DirectoryObject> _owners;
     /** Specifies parental control settings for an application. */
     private ParentalControlSettings _parentalControlSettings;
@@ -91,7 +90,7 @@ public class Application extends DirectoryObject implements Parsable {
     /** Specifies settings for a web application. */
     private WebApplication _web;
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
      * @return a void
      */
     public Application() {
@@ -101,7 +100,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a application
+     * @return a Application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -125,7 +124,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._api;
     }
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -165,7 +164,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Gets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -197,7 +196,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a extensionProperty
      */
     @javax.annotation.Nullable
@@ -351,7 +350,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._optionalClaims;
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -544,7 +543,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._api = value;
     }
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -584,7 +583,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
+     * Sets the createdOnBehalfOf property value. Supports $filter (eq when counting empty collections). Read-only.
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
@@ -616,7 +615,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param value Value to set for the extensionProperties property.
      * @return a void
      */
@@ -720,7 +719,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._optionalClaims = value;
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param value Value to set for the owners property.
      * @return a void
      */
