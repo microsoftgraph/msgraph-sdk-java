@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.SignInFrequencyAuthenticationType;
+import com.microsoft.graph.models.SignInFrequencyInterval;
 import com.microsoft.graph.models.SigninFrequencyType;
 import com.microsoft.graph.models.ConditionalAccessSessionControl;
 
@@ -25,6 +27,24 @@ import javax.annotation.Nonnull;
  */
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements IJsonBackedObject {
 
+
+    /**
+     * The Authentication Type.
+     * The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     */
+    @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
+    @Expose
+	@Nullable
+    public SignInFrequencyAuthenticationType authenticationType;
+
+    /**
+     * The Frequency Interval.
+     * The possible values are timeBased, everyTime, unknownFutureValue.
+     */
+    @SerializedName(value = "frequencyInterval", alternate = {"FrequencyInterval"})
+    @Expose
+	@Nullable
+    public SignInFrequencyInterval frequencyInterval;
 
     /**
      * The Type.

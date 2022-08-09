@@ -55,7 +55,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Name.
-     * Name of the extension property. Not nullable.
+     * Name of the extension property. Not nullable. Supports $filter (eq).
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -64,7 +64,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Target Objects.
-     * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      */
     @SerializedName(value = "targetObjects", alternate = {"TargetObjects"})
     @Expose

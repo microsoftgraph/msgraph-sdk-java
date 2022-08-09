@@ -393,7 +393,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Federated Identity Credentials.
-     * 
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
