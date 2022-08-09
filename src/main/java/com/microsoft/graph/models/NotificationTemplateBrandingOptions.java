@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** No Branding. */
     None("none"),
@@ -12,7 +12,9 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** Include Company Name. */
     IncludeCompanyName("includeCompanyName"),
     /** Include Contact Info. */
-    IncludeContactInformation("includeContactInformation");
+    IncludeContactInformation("includeContactInformation"),
+    /** Include Device Details. */
+    IncludeDeviceDetails("includeDeviceDetails");
     public final String value;
     NotificationTemplateBrandingOptions(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
             case "includeCompanyLogo": return IncludeCompanyLogo;
             case "includeCompanyName": return IncludeCompanyName;
             case "includeContactInformation": return IncludeContactInformation;
+            case "includeDeviceDetails": return IncludeDeviceDetails;
             default: return null;
         }
     }

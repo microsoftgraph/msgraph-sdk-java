@@ -80,7 +80,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get federatedIdentityCredentials from servicePrincipals
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get federatedIdentityCredentials from servicePrincipals
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Get federatedIdentityCredentials from servicePrincipals
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @return a CompletableFuture of federatedIdentityCredential
      */
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get() {
@@ -209,7 +209,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Get federatedIdentityCredentials from servicePrincipals
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
      */
@@ -226,7 +226,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Get federatedIdentityCredentials from servicePrincipals
+     * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of federatedIdentityCredential
@@ -313,7 +313,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get federatedIdentityCredentials from servicePrincipals */
+    /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections). */
     public class FederatedIdentityCredentialItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

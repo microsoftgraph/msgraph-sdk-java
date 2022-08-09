@@ -59,7 +59,7 @@ public class ExtensionPropertiesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ExtensionPropertiesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ExtensionPropertiesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
+     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
@@ -227,7 +227,7 @@ public class ExtensionPropertiesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
+    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     public class ExtensionPropertiesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

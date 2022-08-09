@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Tag extends Entity implements Parsable {
     /** The createdBy property */
     private IdentitySet _createdBy;

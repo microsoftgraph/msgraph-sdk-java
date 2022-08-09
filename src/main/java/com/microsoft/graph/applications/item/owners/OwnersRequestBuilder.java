@@ -88,7 +88,7 @@ public class OwnersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class OwnersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -118,7 +118,7 @@ public class OwnersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -134,7 +134,7 @@ public class OwnersRequestBuilder {
         }
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
@@ -151,7 +151,7 @@ public class OwnersRequestBuilder {
         }
     }
     /**
-     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
@@ -168,7 +168,7 @@ public class OwnersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand. */
+    /** Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     public class OwnersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

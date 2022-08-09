@@ -7,17 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the collection of agreement entities. */
 public class FederatedIdentityCredential extends Entity implements Parsable {
-    /** Lists the audiences that can appear in the external token. This field is mandatory, and defaults to 'api://AzureADTokenExchange'. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. Required. */
+    /** The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required. */
     private java.util.List<String> _audiences;
-    /** The un-validated, user-provided description of the federated identity credential. Optional. */
+    /** The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional. */
     private String _description;
-    /** The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required. */
+    /** The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required. */
     private String _issuer;
-    /** is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq). */
+    /** is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq). */
     private String _name;
-    /** Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq). */
+    /** Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq). */
     private String _subject;
     /**
      * Instantiates a new federatedIdentityCredential and sets the default values.
@@ -38,7 +38,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return new FederatedIdentityCredential();
     }
     /**
-     * Gets the audiences property value. Lists the audiences that can appear in the external token. This field is mandatory, and defaults to 'api://AzureADTokenExchange'. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. Required.
+     * Gets the audiences property value. The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -46,7 +46,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this._audiences;
     }
     /**
-     * Gets the description property value. The un-validated, user-provided description of the federated identity credential. Optional.
+     * Gets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required.
+     * Gets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this._issuer;
     }
     /**
-     * Gets the name property value. is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
+     * Gets the name property value. is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq).
+     * Gets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         writer.writeStringValue("subject", this.getSubject());
     }
     /**
-     * Sets the audiences property value. Lists the audiences that can appear in the external token. This field is mandatory, and defaults to 'api://AzureADTokenExchange'. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. Required.
+     * Sets the audiences property value. The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required.
      * @param value Value to set for the audiences property.
      * @return a void
      */
@@ -115,7 +115,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this._audiences = value;
     }
     /**
-     * Sets the description property value. The un-validated, user-provided description of the federated identity credential. Optional.
+     * Sets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -123,7 +123,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required.
+     * Sets the issuer property value. The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. It has a limit of 600 characters. Required.
      * @param value Value to set for the issuer property.
      * @return a void
      */
@@ -131,7 +131,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this._issuer = value;
     }
     /**
-     * Sets the name property value. is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
+     * Sets the name property value. is the unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq).
+     * Sets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
      * @param value Value to set for the subject property.
      * @return a void
      */

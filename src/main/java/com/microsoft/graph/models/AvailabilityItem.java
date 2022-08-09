@@ -4,7 +4,6 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.LocalTime;
 import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,14 +11,14 @@ import java.util.Objects;
 public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The endTime property */
-    private LocalTime _endTime;
+    /** The endDateTime property */
+    private DateTimeTimeZone _endDateTime;
     /** The OdataType property */
     private String _odataType;
     /** Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null. */
     private String _serviceId;
-    /** The startTime property */
-    private LocalTime _startTime;
+    /** The startDateTime property */
+    private DateTimeTimeZone _startDateTime;
     /** The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue. */
     private BookingsAvailabilityStatus _status;
     /**
@@ -49,12 +48,12 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the endTime property value. The endTime property
-     * @return a LocalTime
+     * Gets the endDateTime property value. The endDateTime property
+     * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
-    public LocalTime getEndTime() {
-        return this._endTime;
+    public DateTimeTimeZone getEndDateTime() {
+        return this._endDateTime;
     }
     /**
      * The deserialization information for the current model
@@ -64,10 +63,10 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AvailabilityItem currentObject = this;
         return new HashMap<>(5) {{
-            this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
+            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
-            this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
+            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(BookingsAvailabilityStatus.class)); });
         }};
     }
@@ -88,12 +87,12 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         return this._serviceId;
     }
     /**
-     * Gets the startTime property value. The startTime property
-     * @return a LocalTime
+     * Gets the startDateTime property value. The startDateTime property
+     * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
-    public LocalTime getStartTime() {
-        return this._startTime;
+    public DateTimeTimeZone getStartDateTime() {
+        return this._startDateTime;
     }
     /**
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
@@ -110,10 +109,10 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeLocalTimeValue("endTime", this.getEndTime());
+        writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("serviceId", this.getServiceId());
-        writer.writeLocalTimeValue("startTime", this.getStartTime());
+        writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -126,12 +125,12 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the endTime property value. The endTime property
-     * @param value Value to set for the endTime property.
+     * Sets the endDateTime property value. The endDateTime property
+     * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
-        this._endTime = value;
+    public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+        this._endDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -150,12 +149,12 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
         this._serviceId = value;
     }
     /**
-     * Sets the startTime property value. The startTime property
-     * @param value Value to set for the startTime property.
+     * Sets the startDateTime property value. The startDateTime property
+     * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
-        this._startTime = value;
+    public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+        this._startDateTime = value;
     }
     /**
      * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.

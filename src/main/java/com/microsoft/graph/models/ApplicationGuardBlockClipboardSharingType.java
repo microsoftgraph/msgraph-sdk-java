@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum ApplicationGuardBlockClipboardSharingType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),

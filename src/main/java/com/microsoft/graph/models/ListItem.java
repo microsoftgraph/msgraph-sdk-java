@@ -12,6 +12,8 @@ public class ListItem extends BaseItem implements Parsable {
     private ItemAnalytics _analytics;
     /** The content type of this list item */
     private ContentTypeInfo _contentType;
+    /** Version information for a document set version created by a user. */
+    private java.util.List<DocumentSetVersion> _documentSetVersions;
     /** For document libraries, the driveItem relationship exposes the listItem as a [driveItem][] */
     private DriveItem _driveItem;
     /** The values of the columns set on this list item. */
@@ -55,6 +57,14 @@ public class ListItem extends BaseItem implements Parsable {
         return this._contentType;
     }
     /**
+     * Gets the documentSetVersions property value. Version information for a document set version created by a user.
+     * @return a documentSetVersion
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
+        return this._documentSetVersions;
+    }
+    /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      * @return a driveItem
      */
@@ -72,6 +82,7 @@ public class ListItem extends BaseItem implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
+            this.put("documentSetVersions", (n) -> { currentObject.setDocumentSetVersions(n.getCollectionOfObjectValues(DocumentSetVersion::createFromDiscriminatorValue)); });
             this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
             this.put("fields", (n) -> { currentObject.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
             this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -112,6 +123,7 @@ public class ListItem extends BaseItem implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("analytics", this.getAnalytics());
         writer.writeObjectValue("contentType", this.getContentType());
+        writer.writeCollectionOfObjectValues("documentSetVersions", this.getDocumentSetVersions());
         writer.writeObjectValue("driveItem", this.getDriveItem());
         writer.writeObjectValue("fields", this.getFields());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
@@ -132,6 +144,14 @@ public class ListItem extends BaseItem implements Parsable {
      */
     public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
         this._contentType = value;
+    }
+    /**
+     * Sets the documentSetVersions property value. Version information for a document set version created by a user.
+     * @param value Value to set for the documentSetVersions property.
+     * @return a void
+     */
+    public void setDocumentSetVersions(@javax.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
+        this._documentSetVersions = value;
     }
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]

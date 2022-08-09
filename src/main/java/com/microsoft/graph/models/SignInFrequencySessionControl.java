@@ -8,6 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
+    /** The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. */
+    private SignInFrequencyAuthenticationType _authenticationType;
+    /** The possible values are timeBased, everyTime, unknownFutureValue. */
+    private SignInFrequencyInterval _frequencyInterval;
     /** Possible values are: days, hours, or null if frequencyInterval is everyTime . */
     private SigninFrequencyType _type;
     /** The number of days or hours. */
@@ -31,6 +35,14 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return new SignInFrequencySessionControl();
     }
     /**
+     * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * @return a signInFrequencyAuthenticationType
+     */
+    @javax.annotation.Nullable
+    public SignInFrequencyAuthenticationType getAuthenticationType() {
+        return this._authenticationType;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -38,9 +50,19 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInFrequencySessionControl currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
+            this.put("frequencyInterval", (n) -> { currentObject.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SigninFrequencyType.class)); });
             this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
         }};
+    }
+    /**
+     * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
+     * @return a signInFrequencyInterval
+     */
+    @javax.annotation.Nullable
+    public SignInFrequencyInterval getFrequencyInterval() {
+        return this._frequencyInterval;
     }
     /**
      * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
@@ -66,8 +88,26 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("authenticationType", this.getAuthenticationType());
+        writer.writeEnumValue("frequencyInterval", this.getFrequencyInterval());
         writer.writeEnumValue("type", this.getType());
         writer.writeIntegerValue("value", this.getValue());
+    }
+    /**
+     * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     * @param value Value to set for the authenticationType property.
+     * @return a void
+     */
+    public void setAuthenticationType(@javax.annotation.Nullable final SignInFrequencyAuthenticationType value) {
+        this._authenticationType = value;
+    }
+    /**
+     * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
+     * @param value Value to set for the frequencyInterval property.
+     * @return a void
+     */
+    public void setFrequencyInterval(@javax.annotation.Nullable final SignInFrequencyInterval value) {
+        this._frequencyInterval = value;
     }
     /**
      * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .

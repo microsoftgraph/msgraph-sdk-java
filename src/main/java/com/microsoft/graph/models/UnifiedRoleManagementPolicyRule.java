@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /** Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
     private UnifiedRoleManagementPolicyRuleTarget _target;

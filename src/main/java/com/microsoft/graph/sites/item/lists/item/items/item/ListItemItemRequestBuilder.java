@@ -17,6 +17,8 @@ import java.util.Objects;
 import microsoft.graph.models.ListItem;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.sites.item.lists.item.items.item.analytics.AnalyticsRequestBuilder;
+import microsoft.graph.sites.item.lists.item.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
+import microsoft.graph.sites.item.lists.item.items.item.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
 import microsoft.graph.sites.item.lists.item.items.item.driveitem.DriveItemRequestBuilder;
 import microsoft.graph.sites.item.lists.item.items.item.fields.FieldsRequestBuilder;
 import microsoft.graph.sites.item.lists.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
@@ -29,6 +31,11 @@ public class ListItemItemRequestBuilder {
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The documentSetVersions property */
+    @javax.annotation.Nonnull
+    public DocumentSetVersionsRequestBuilder documentSetVersions() {
+        return new DocumentSetVersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The driveItem property */
     @javax.annotation.Nonnull
@@ -218,6 +225,18 @@ public class ListItemItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.sites.item.lists.item.items.item.documentSetVersions.item collection
+     * @param id Unique identifier of the item
+     * @return a DocumentSetVersionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DocumentSetVersionItemRequestBuilder documentSetVersions(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("documentSetVersion%2Did", id);
+        return new DocumentSetVersionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * All items contained in the list.

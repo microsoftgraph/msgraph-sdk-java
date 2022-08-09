@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class EducationSubmission extends Entity implements Parsable {
     /** The outcomes property */
     private java.util.List<EducationOutcome> _outcomes;
@@ -39,7 +38,7 @@ public class EducationSubmission extends Entity implements Parsable {
     /** Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _unsubmittedDateTime;
     /**
-     * Instantiates a new educationSubmission and sets the default values.
+     * Instantiates a new EducationSubmission and sets the default values.
      * @return a void
      */
     public EducationSubmission() {
@@ -49,7 +48,7 @@ public class EducationSubmission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSubmission
+     * @return a EducationSubmission
      */
     @javax.annotation.Nonnull
     public static EducationSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

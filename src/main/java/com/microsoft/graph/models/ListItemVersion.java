@@ -26,6 +26,13 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     @javax.annotation.Nonnull
     public static ListItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
+            }
+        }
         return new ListItemVersion();
     }
     /**

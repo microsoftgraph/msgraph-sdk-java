@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;

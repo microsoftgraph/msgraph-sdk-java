@@ -52,7 +52,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get createdOnBehalfOf from applications
+     * Supports $filter (eq when counting empty collections). Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get createdOnBehalfOf from applications
+     * Supports $filter (eq when counting empty collections). Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get createdOnBehalfOf from applications
+     * Supports $filter (eq when counting empty collections). Read-only.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -98,7 +98,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         }
     }
     /**
-     * Get createdOnBehalfOf from applications
+     * Supports $filter (eq when counting empty collections). Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -115,7 +115,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         }
     }
     /**
-     * Get createdOnBehalfOf from applications
+     * Supports $filter (eq when counting empty collections). Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -132,7 +132,7 @@ public class CreatedOnBehalfOfRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get createdOnBehalfOf from applications */
+    /** Supports $filter (eq when counting empty collections). Read-only. */
     public class CreatedOnBehalfOfRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

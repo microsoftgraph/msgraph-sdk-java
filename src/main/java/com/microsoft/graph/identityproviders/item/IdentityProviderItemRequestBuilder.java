@@ -110,7 +110,7 @@ public class IdentityProviderItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in identityProviders
+     * Update the properties of an identityProvider object.
      * @param body 
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class IdentityProviderItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in identityProviders
+     * Update the properties of an identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -244,7 +244,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update entity in identityProviders
+     * Update the properties of an identityProvider object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -261,7 +261,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update entity in identityProviders
+     * Update the properties of an identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -279,7 +279,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update entity in identityProviders
+     * Update the properties of an identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

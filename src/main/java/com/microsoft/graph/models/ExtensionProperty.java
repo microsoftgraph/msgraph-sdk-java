@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ExtensionProperty extends DirectoryObject implements Parsable {
     /** Display name of the application object on which this extension property is defined. Read-only. */
     private String _appDisplayName;
@@ -15,9 +15,9 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     private String _dataType;
     /** Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only. */
     private Boolean _isSyncedFromOnPremises;
-    /** Name of the extension property. Not nullable. */
+    /** Name of the extension property. Not nullable. Supports $filter (eq). */
     private String _name;
-    /** Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication */
+    /** Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization */
     private java.util.List<String> _targetObjects;
     /**
      * Instantiates a new extensionProperty and sets the default values.
@@ -77,7 +77,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         return this._isSyncedFromOnPremises;
     }
     /**
-     * Gets the name property value. Name of the extension property. Not nullable.
+     * Gets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         return this._name;
     }
     /**
-     * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Gets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      * @return a string
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this._isSyncedFromOnPremises = value;
     }
     /**
-     * Sets the name property value. Name of the extension property. Not nullable.
+     * Sets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
+     * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
      * @param value Value to set for the targetObjects property.
      * @return a void
      */

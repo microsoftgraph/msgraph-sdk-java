@@ -46,7 +46,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _displayName;
     /** Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
     private java.util.List<Endpoint> _endpoints;
-    /** The federatedIdentityCredentials property */
+    /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Home page or landing page of the application. */
     private String _homepage;
@@ -103,7 +103,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** The transitiveMemberOf property */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
     /**
-     * Instantiates a new servicePrincipal and sets the default values.
+     * Instantiates a new ServicePrincipal and sets the default values.
      * @return a void
      */
     public ServicePrincipal() {
@@ -113,7 +113,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipal
+     * @return a ServicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -273,7 +273,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._endpoints;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * Gets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -762,7 +762,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._endpoints = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * Sets the federatedIdentityCredentials property value. Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
