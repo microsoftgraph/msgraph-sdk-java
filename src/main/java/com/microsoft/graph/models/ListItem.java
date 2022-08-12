@@ -12,10 +12,12 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.ItemAnalytics;
+import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.FieldValueSet;
 import com.microsoft.graph.models.ListItemVersion;
 import com.microsoft.graph.models.BaseItem;
+import com.microsoft.graph.requests.DocumentSetVersionCollectionPage;
 import com.microsoft.graph.requests.ListItemVersionCollectionPage;
 
 
@@ -61,6 +63,15 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     public ItemAnalytics analytics;
 
     /**
+     * The Document Set Versions.
+     * Version information for a document set version created by a user.
+     */
+    @SerializedName(value = "documentSetVersions", alternate = {"DocumentSetVersions"})
+    @Expose
+	@Nullable
+    public DocumentSetVersionCollectionPage documentSetVersions;
+
+    /**
      * The Drive Item.
      * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      */
@@ -96,6 +107,10 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("documentSetVersions")) {
+            documentSetVersions = serializer.deserializeObject(json.get("documentSetVersions"), DocumentSetVersionCollectionPage.class);
+        }
 
         if (json.has("versions")) {
             versions = serializer.deserializeObject(json.get("versions"), ListItemVersionCollectionPage.class);

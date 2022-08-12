@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.DeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceRequestBuilder;
 import com.microsoft.graph.requests.DeviceCollectionRequest;
+import com.microsoft.graph.requests.DeviceDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuilder;
@@ -50,6 +51,15 @@ public class DeviceCollectionRequestBuilder extends BaseCollectionRequestBuilder
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DeviceDeltaCollectionRequestBuilder delta() {
+        return new DeviceDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

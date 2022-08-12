@@ -14,10 +14,14 @@ import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus;
+import com.microsoft.graph.models.AttachmentBase;
+import com.microsoft.graph.models.AttachmentSession;
 import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AttachmentBaseCollectionPage;
+import com.microsoft.graph.requests.AttachmentSessionCollectionPage;
 import com.microsoft.graph.requests.ChecklistItemCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.LinkedResourceCollectionPage;
@@ -66,7 +70,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * The date in the specified time zone that the task was finished.
+     * The date and time in the specified time zone that the task was finished.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -84,12 +88,21 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * The date in the specified time zone that the task is to be finished.
+     * The date and time in the specified time zone that the task is to be finished.
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
 	@Nullable
     public DateTimeTimeZone dueDateTime;
+
+    /**
+     * The Has Attachments.
+     * Indicates whether the task has attachments.
+     */
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
+    @Expose
+	@Nullable
+    public Boolean hasAttachments;
 
     /**
      * The Importance.
@@ -129,12 +142,21 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Reminder Date Time.
-     * The date and time for a reminder alert of the task to occur.
+     * The date and time in the specified time zone for a reminder alert of the task to occur.
      */
     @SerializedName(value = "reminderDateTime", alternate = {"ReminderDateTime"})
     @Expose
 	@Nullable
     public DateTimeTimeZone reminderDateTime;
+
+    /**
+     * The Start Date Time.
+     * The date and time in the specified time zone at which the task is scheduled to start.
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
 
     /**
      * The Status.
@@ -153,6 +175,24 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String title;
+
+    /**
+     * The Attachments.
+     * A collection of file attachments for the task.
+     */
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
+    @Expose
+	@Nullable
+    public AttachmentBaseCollectionPage attachments;
+
+    /**
+     * The Attachment Sessions.
+     * 
+     */
+    @SerializedName(value = "attachmentSessions", alternate = {"AttachmentSessions"})
+    @Expose
+	@Nullable
+    public AttachmentSessionCollectionPage attachmentSessions;
 
     /**
      * The Checklist Items.
@@ -190,6 +230,14 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attachments")) {
+            attachments = serializer.deserializeObject(json.get("attachments"), AttachmentBaseCollectionPage.class);
+        }
+
+        if (json.has("attachmentSessions")) {
+            attachmentSessions = serializer.deserializeObject(json.get("attachmentSessions"), AttachmentSessionCollectionPage.class);
+        }
 
         if (json.has("checklistItems")) {
             checklistItems = serializer.deserializeObject(json.get("checklistItems"), ChecklistItemCollectionPage.class);

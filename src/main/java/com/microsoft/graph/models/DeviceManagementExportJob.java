@@ -49,7 +49,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Format.
-     * Format of the exported report. Possible values are: csv, pdf.
+     * Format of the exported report. Possible values are: csv, json.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose

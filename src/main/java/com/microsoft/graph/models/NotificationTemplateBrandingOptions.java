@@ -28,6 +28,10 @@ public enum NotificationTemplateBrandingOptions
     */
     INCLUDE_CONTACT_INFORMATION,
     /**
+    * include Device Details
+    */
+    INCLUDE_DEVICE_DETAILS,
+    /**
     * For NotificationTemplateBrandingOptions values that were not expected from the service
     */
     UNEXPECTED_VALUE
