@@ -11,6 +11,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.32.0] - 2022-08-11
+
+### Added
+
+- AttachmentInfo model. 
+- DeviceDeltaParameterSet models.
+- DeviceManagementReportsGetNoncompliantDevicesAndSettingsReportParameterSet models.  
+- DiskType model. 
+- SignInFrequencyAuthenticationType model.
+- SignInFrequencyInterval model. 
+- DocumentSetVersionRestoreParameterSet models. 
+- UserExperienceAnalyticsHealthState model. 
+- AttachmentBase models and related requests.
+- AttachmentSession model and related requests.
+- DocumentSetVersion models and related requests. 
+- TaskFileAttachment model and related requests. 
+- UserExperienceAnalyticsDevicePerformance model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- References to newly added models/requests added to current models/requests.
+
 ## [5.31.0] - 2022-07-21
 
 ### Added
