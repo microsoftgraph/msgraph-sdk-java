@@ -9,9 +9,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.9.0'
     
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    compileOnly 'com.github.spotbugs:spotbugs-annotations:4.7.0'
     
     // Core Http library 
-    implementation 'com.microsoft.graph:microsoft-graph-core:2.0.12'
+   // implementation 'com.microsoft.graph:microsoft-graph-core:2.0.12'//This will need to change to implement core preview 10.0.0
     implementation 'com.microsoft.kiota:microsoft-kiota-abstractions:0.0.1-SNAPSHOT'
     implementation 'com.microsoft.kiota:microsoft-kiota-abstractions:0.0.1-SNAPSHOT'
     implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.0.1-SNAPSHOT'
