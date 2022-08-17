@@ -59,7 +59,7 @@ public class OperationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OperationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class OperationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<RichLongRunningOperationCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
      */
@@ -155,7 +155,7 @@ public class OperationsRequestBuilder {
         }
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
@@ -227,7 +227,7 @@ public class OperationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of long running operations for the site. */
+    /** The collection of long-running operations on the site. */
     public class OperationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

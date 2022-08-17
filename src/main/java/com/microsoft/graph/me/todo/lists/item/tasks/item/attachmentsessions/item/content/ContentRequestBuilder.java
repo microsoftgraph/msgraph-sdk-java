@@ -51,7 +51,7 @@ public class ContentRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The content streams that are uploaded.
+     * Get content for the navigation property attachmentSessions from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ContentRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The content streams that are uploaded.
+     * Get content for the navigation property attachmentSessions from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -79,7 +79,7 @@ public class ContentRequestBuilder {
         return requestInfo;
     }
     /**
-     * The content streams that are uploaded.
+     * Update content for the navigation property attachmentSessions in me
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ContentRequestBuilder {
         return createPutRequestInformation(body, null);
     }
     /**
-     * The content streams that are uploaded.
+     * Update content for the navigation property attachmentSessions in me
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -111,7 +111,7 @@ public class ContentRequestBuilder {
         return requestInfo;
     }
     /**
-     * The content streams that are uploaded.
+     * Get content for the navigation property attachmentSessions from me
      * @return a CompletableFuture of InputStream
      */
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -127,7 +127,7 @@ public class ContentRequestBuilder {
         }
     }
     /**
-     * The content streams that are uploaded.
+     * Get content for the navigation property attachmentSessions from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
@@ -144,7 +144,7 @@ public class ContentRequestBuilder {
         }
     }
     /**
-     * The content streams that are uploaded.
+     * Get content for the navigation property attachmentSessions from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of InputStream
@@ -162,7 +162,7 @@ public class ContentRequestBuilder {
         }
     }
     /**
-     * The content streams that are uploaded.
+     * Update content for the navigation property attachmentSessions in me
      * @param body Binary request body
      * @return a CompletableFuture of void
      */
@@ -179,7 +179,7 @@ public class ContentRequestBuilder {
         }
     }
     /**
-     * The content streams that are uploaded.
+     * Update content for the navigation property attachmentSessions in me
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -197,7 +197,7 @@ public class ContentRequestBuilder {
         }
     }
     /**
-     * The content streams that are uploaded.
+     * Update content for the navigation property attachmentSessions in me
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

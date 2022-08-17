@@ -13,7 +13,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     private Map<String, Object> _additionalData;
     /** List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
     private java.util.List<String> _builtInControls;
-    /** List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview). */
+    /** List of custom controls IDs required by the policy. For more information, see Custom controls. */
     private java.util.List<String> _customAuthenticationFactors;
     /** The OdataType property */
     private String _odataType;
@@ -56,7 +56,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         return this._builtInControls;
     }
     /**
-     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
         this._builtInControls = value;
     }
     /**
-     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @param value Value to set for the customAuthenticationFactors property.
      * @return a void
      */

@@ -18,9 +18,9 @@ public class EducationClass extends Entity implements Parsable {
     private EducationAssignmentSettings _assignmentSettings;
     /** Class code used by the school to identify the class. */
     private String _classCode;
-    /** Course information for the class. */
+    /** The course property */
     private EducationCourse _course;
-    /** Entity who created the class. */
+    /** Entity who created the class */
     private IdentitySet _createdBy;
     /** Description of the class. */
     private String _description;
@@ -30,7 +30,7 @@ public class EducationClass extends Entity implements Parsable {
     private String _externalId;
     /** Name of the class in the syncing system. */
     private String _externalName;
-    /** The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual. */
+    /** How this class was created. Possible values are: sis, manual. */
     private EducationExternalSource _externalSource;
     /** The name of the external source this resources was generated from. */
     private String _externalSourceDetail;
@@ -46,7 +46,7 @@ public class EducationClass extends Entity implements Parsable {
     private java.util.List<EducationSchool> _schools;
     /** All teachers in the class. Nullable. */
     private java.util.List<EducationUser> _teachers;
-    /** Term for the class. */
+    /** Term for this class. */
     private EducationTerm _term;
     /**
      * Instantiates a new EducationClass and sets the default values.
@@ -107,7 +107,7 @@ public class EducationClass extends Entity implements Parsable {
         return this._classCode;
     }
     /**
-     * Gets the course property value. Course information for the class.
+     * Gets the course property value. The course property
      * @return a educationCourse
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class EducationClass extends Entity implements Parsable {
         return this._course;
     }
     /**
-     * Gets the createdBy property value. Entity who created the class.
+     * Gets the createdBy property value. Entity who created the class
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class EducationClass extends Entity implements Parsable {
         return this._externalName;
     }
     /**
-     * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Gets the externalSource property value. How this class was created. Possible values are: sis, manual.
      * @return a educationExternalSource
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class EducationClass extends Entity implements Parsable {
         return this._teachers;
     }
     /**
-     * Gets the term property value. Term for the class.
+     * Gets the term property value. Term for this class.
      * @return a educationTerm
      */
     @javax.annotation.Nullable
@@ -326,7 +326,7 @@ public class EducationClass extends Entity implements Parsable {
         this._classCode = value;
     }
     /**
-     * Sets the course property value. Course information for the class.
+     * Sets the course property value. The course property
      * @param value Value to set for the course property.
      * @return a void
      */
@@ -334,7 +334,7 @@ public class EducationClass extends Entity implements Parsable {
         this._course = value;
     }
     /**
-     * Sets the createdBy property value. Entity who created the class.
+     * Sets the createdBy property value. Entity who created the class
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -374,7 +374,7 @@ public class EducationClass extends Entity implements Parsable {
         this._externalName = value;
     }
     /**
-     * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
      * @param value Value to set for the externalSource property.
      * @return a void
      */
@@ -438,7 +438,7 @@ public class EducationClass extends Entity implements Parsable {
         this._teachers = value;
     }
     /**
-     * Sets the term property value. Term for the class.
+     * Sets the term property value. Term for this class.
      * @param value Value to set for the term property.
      * @return a void
      */

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here.  */
 public class DeviceCompliancePolicy extends Entity implements Parsable {
     /** The collection of assignments for this compliance policy. */
     private java.util.List<DeviceCompliancePolicyAssignment> _assignments;
@@ -25,7 +26,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     private String _displayName;
     /** DateTime the object was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The list of scheduled action for this rule */
+    /** The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies. */
     private java.util.List<DeviceComplianceScheduledActionForRule> _scheduledActionsForRule;
     /** List of DeviceComplianceUserStatus. */
     private java.util.List<DeviceComplianceUserStatus> _userStatuses;
@@ -34,7 +35,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /** Version of the device configuration. */
     private Integer _version;
     /**
-     * Instantiates a new DeviceCompliancePolicy and sets the default values.
+     * Instantiates a new deviceCompliancePolicy and sets the default values.
      * @return a void
      */
     public DeviceCompliancePolicy() {
@@ -44,7 +45,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceCompliancePolicy
+     * @return a deviceCompliancePolicy
      */
     @javax.annotation.Nonnull
     public static DeviceCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -152,7 +153,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
+     * Gets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a deviceComplianceScheduledActionForRule
      */
     @javax.annotation.Nullable
@@ -269,7 +270,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
+     * Sets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param value Value to set for the scheduledActionsForRule property.
      * @return a void
      */

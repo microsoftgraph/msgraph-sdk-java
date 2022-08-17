@@ -80,7 +80,7 @@ public class AppScopeRequestBuilder {
         return requestInfo;
     }
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class AppScopeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class AppScopeRequestBuilder {
         }
     }
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @return a CompletableFuture of appScope
      */
     public java.util.concurrent.CompletableFuture<AppScope> get() {
@@ -209,7 +209,7 @@ public class AppScopeRequestBuilder {
         }
     }
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appScope
      */
@@ -226,7 +226,7 @@ public class AppScopeRequestBuilder {
         }
     }
     /**
-     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of appScope
@@ -313,7 +313,7 @@ public class AppScopeRequestBuilder {
         public AppScopeRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Details of the app specific scope when the assignment scope is app specific. Containment entity. */
+    /** Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand. */
     public class AppScopeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

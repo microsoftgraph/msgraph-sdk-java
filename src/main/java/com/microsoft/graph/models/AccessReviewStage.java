@@ -8,17 +8,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewStage extends Entity implements Parsable {
     /** Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed. */
     private java.util.List<AccessReviewInstanceDecisionItem> _decisions;
-    /** DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only. */
+    /** The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only. */
     private OffsetDateTime _endDateTime;
     /** This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. */
     private java.util.List<AccessReviewReviewerScope> _fallbackReviewers;
     /** This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. */
     private java.util.List<AccessReviewReviewerScope> _reviewers;
-    /** DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /** The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only. */
     private OffsetDateTime _startDateTime;
     /** Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only. */
     private String _status;
@@ -49,7 +49,7 @@ public class AccessReviewStage extends Entity implements Parsable {
         return this._decisions;
     }
     /**
-     * Gets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * Gets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AccessReviewStage extends Entity implements Parsable {
         return this._reviewers;
     }
     /**
-     * Gets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class AccessReviewStage extends Entity implements Parsable {
         this._decisions = value;
     }
     /**
-     * Sets the endDateTime property value. DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * Sets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
@@ -152,7 +152,7 @@ public class AccessReviewStage extends Entity implements Parsable {
         this._reviewers = value;
     }
     /**
-     * Sets the startDateTime property value. DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

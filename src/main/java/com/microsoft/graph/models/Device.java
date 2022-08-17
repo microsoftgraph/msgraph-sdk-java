@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Device extends DirectoryObject implements Parsable {
-    /** true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
+    /** true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
     private Boolean _accountEnabled;
     /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<AlternativeSecurityId> _alternativeSecurityIds;
@@ -17,7 +17,7 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime _approximateLastSignInDateTime;
     /** The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _complianceExpirationDateTime;
-    /** Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith). */
+    /** Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith). */
     private String _deviceId;
     /** For internal use only. Set to null. */
     private String _deviceMetadata;
@@ -41,7 +41,7 @@ public class Device extends DirectoryObject implements Parsable {
     private Boolean _onPremisesSyncEnabled;
     /** The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystem;
-    /** Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
+    /** The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystemVersion;
     /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
     private java.util.List<String> _physicalIds;
@@ -53,12 +53,12 @@ public class Device extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _registeredUsers;
     /** List of labels applied to the device by the system. Supports $filter (eq when counting empty collections). */
     private java.util.List<String> _systemLabels;
-    /** Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand. */
+    /** Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
-    /** Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
+    /** Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
     private String _trustType;
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
      * @return a void
      */
     public Device() {
@@ -68,7 +68,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Device
+     * @return a device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +76,7 @@ public class Device extends DirectoryObject implements Parsable {
         return new Device();
     }
     /**
-     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._complianceExpirationDateTime;
     }
     /**
-     * Gets the deviceId property value. Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -238,7 +238,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._operatingSystem;
     }
     /**
-     * Gets the operatingSystemVersion property value. Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+     * Gets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -286,7 +286,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._systemLabels;
     }
     /**
-     * Gets the transitiveMemberOf property value. Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
+     * Gets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -294,7 +294,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._transitiveMemberOf;
     }
     /**
-     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      * @return a string
      */
     @javax.annotation.Nullable
@@ -335,7 +335,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeStringValue("trustType", this.getTrustType());
     }
     /**
-     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
@@ -367,7 +367,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._complianceExpirationDateTime = value;
     }
     /**
-     * Sets the deviceId property value. Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      * @return a void
      */
@@ -463,7 +463,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._operatingSystem = value;
     }
     /**
-     * Sets the operatingSystemVersion property value. Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+     * Sets the operatingSystemVersion property value. The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
@@ -511,7 +511,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._systemLabels = value;
     }
     /**
-     * Sets the transitiveMemberOf property value. Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
+     * Sets the transitiveMemberOf property value. Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
@@ -519,7 +519,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._transitiveMemberOf = value;
     }
     /**
-     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      * @param value Value to set for the trustType property.
      * @return a void
      */

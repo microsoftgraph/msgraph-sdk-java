@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable {
-    /** A collection of ids of the recipients. */
+    /** A collection of IDs of the recipients. */
     private java.util.List<String> _recipients;
     /**
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
@@ -40,7 +40,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
         }};
     }
     /**
-     * Gets the recipients property value. A collection of ids of the recipients.
+     * Gets the recipients property value. A collection of IDs of the recipients.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
         writer.writeCollectionOfPrimitiveValues("recipients", this.getRecipients());
     }
     /**
-     * Sets the recipients property value. A collection of ids of the recipients.
+     * Sets the recipients property value. A collection of IDs of the recipients.
      * @param value Value to set for the recipients property.
      * @return a void
      */

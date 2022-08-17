@@ -80,7 +80,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         }
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @return a CompletableFuture of workforceIntegration
      */
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> get() {
@@ -209,7 +209,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         }
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workforceIntegration
      */
@@ -226,7 +226,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         }
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of workforceIntegration
@@ -313,7 +313,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         public WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A workforce integration with shifts. */
+    /** Get workforceIntegrations from teamwork */
     public class WorkforceIntegrationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

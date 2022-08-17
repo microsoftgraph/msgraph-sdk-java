@@ -7,17 +7,18 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class IdentityProvider extends Entity implements Parsable {
-    /** The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable. */
+    /** The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable. */
     private String _clientId;
-    /** The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable. */
+    /** The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable. */
     private String _clientSecret;
     /** The display name of the identity provider. Not nullable. */
     private String _name;
-    /** The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable. */
+    /** The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable. */
     private String _type;
     /**
-     * Instantiates a new IdentityProvider and sets the default values.
+     * Instantiates a new identityProvider and sets the default values.
      * @return a void
      */
     public IdentityProvider() {
@@ -27,7 +28,7 @@ public class IdentityProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityProvider
+     * @return a identityProvider
      */
     @javax.annotation.Nonnull
     public static IdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +36,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return new IdentityProvider();
     }
     /**
-     * Gets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+     * Gets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +44,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return this._clientId;
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+     * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +74,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+     * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +95,7 @@ public class IdentityProvider extends Entity implements Parsable {
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+     * Sets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
      * @param value Value to set for the clientId property.
      * @return a void
      */
@@ -102,7 +103,7 @@ public class IdentityProvider extends Entity implements Parsable {
         this._clientId = value;
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+     * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
@@ -118,7 +119,7 @@ public class IdentityProvider extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+     * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
      * @param value Value to set for the type property.
      * @return a void
      */

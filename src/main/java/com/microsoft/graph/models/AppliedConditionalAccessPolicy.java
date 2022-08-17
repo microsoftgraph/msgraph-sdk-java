@@ -11,17 +11,17 @@ import java.util.Objects;
 public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name of the conditional access policy. */
+    /** Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce'). */
     private String _displayName;
     /** Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication'). */
     private java.util.List<String> _enforcedGrantControls;
     /** Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls'). */
     private java.util.List<String> _enforcedSessionControls;
-    /** Identifier of the conditional access policy. */
+    /** An identifier of the conditional access policy. */
     private String _id;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. */
+    /** Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue. */
     private AppliedConditionalAccessPolicyResult _result;
     /**
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
@@ -50,7 +50,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. Name of the conditional access policy.
+     * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         }};
     }
     /**
-     * Gets the id property value. Identifier of the conditional access policy.
+     * Gets the id property value. An identifier of the conditional access policy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return this._odataType;
     }
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      * @return a appliedConditionalAccessPolicyResult
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. Name of the conditional access policy.
+     * Sets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -161,7 +161,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this._enforcedSessionControls = value;
     }
     /**
-     * Sets the id property value. Identifier of the conditional access policy.
+     * Sets the id property value. An identifier of the conditional access policy.
      * @param value Value to set for the id property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         this._odataType = value;
     }
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      * @param value Value to set for the result property.
      * @return a void
      */

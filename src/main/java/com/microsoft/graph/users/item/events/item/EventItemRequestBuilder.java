@@ -174,7 +174,7 @@ public class EventItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -182,7 +182,7 @@ public class EventItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -299,7 +299,7 @@ public class EventItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a CompletableFuture of event
      */
     public java.util.concurrent.CompletableFuture<Event> get() {
@@ -315,7 +315,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
      */
@@ -332,7 +332,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of event
@@ -455,7 +455,7 @@ public class EventItemRequestBuilder {
         public EventItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The user's events. Default is to show events under the Default Calendar. Read-only. Nullable. */
+    /** The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable. */
     public class EventItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

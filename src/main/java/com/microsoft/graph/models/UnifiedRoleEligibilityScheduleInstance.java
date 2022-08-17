@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
-    /** Time that the roleEligibilityScheduleInstance will expire. */
+    /** The end date of the schedule instance. */
     private OffsetDateTime _endDateTime;
-    /** Membership type of the assignment. It can either be Inherited, Direct, or Group. */
+    /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
     private String _memberType;
-    /** Identifier of the parent roleEligibilitySchedule for this instance. */
+    /** The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne). */
     private String _roleEligibilityScheduleId;
-    /** Time that the roleEligibilityScheduleInstance will start. */
+    /** When this instance starts. */
     private OffsetDateTime _startDateTime;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
@@ -36,7 +36,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         return new UnifiedRoleEligibilityScheduleInstance();
     }
     /**
-     * Gets the endDateTime property value. Time that the roleEligibilityScheduleInstance will expire.
+     * Gets the endDateTime property value. The end date of the schedule instance.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         }};
     }
     /**
-     * Gets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         return this._memberType;
     }
     /**
-     * Gets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
+     * Gets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         return this._roleEligibilityScheduleId;
     }
     /**
-     * Gets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
+     * Gets the startDateTime property value. When this instance starts.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
     }
     /**
-     * Sets the endDateTime property value. Time that the roleEligibilityScheduleInstance will expire.
+     * Sets the endDateTime property value. The end date of the schedule instance.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
@@ -103,7 +103,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         this._endDateTime = value;
     }
     /**
-     * Sets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      * @return a void
      */
@@ -111,7 +111,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         this._memberType = value;
     }
     /**
-     * Sets the roleEligibilityScheduleId property value. Identifier of the parent roleEligibilitySchedule for this instance.
+     * Sets the roleEligibilityScheduleId property value. The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
      * @param value Value to set for the roleEligibilityScheduleId property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
         this._roleEligibilityScheduleId = value;
     }
     /**
-     * Sets the startDateTime property value. Time that the roleEligibilityScheduleInstance will start.
+     * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

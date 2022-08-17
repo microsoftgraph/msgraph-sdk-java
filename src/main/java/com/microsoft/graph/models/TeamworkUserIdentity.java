@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkUserIdentity extends Identity implements Parsable {
-    /** Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser. */
+    /** Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser. */
     private TeamworkUserIdentityType _userIdentityType;
     /**
      * Instantiates a new TeamworkUserIdentity and sets the default values.
@@ -40,7 +40,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
         }};
     }
     /**
-     * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser.
+     * Gets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
      * @return a teamworkUserIdentityType
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
         writer.writeEnumValue("userIdentityType", this.getUserIdentityType());
     }
     /**
-     * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and emailUser.
+     * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
      * @param value Value to set for the userIdentityType property.
      * @return a void
      */

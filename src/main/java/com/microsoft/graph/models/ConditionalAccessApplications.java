@@ -15,7 +15,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     private java.util.List<String> _excludeApplications;
     /** Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365 */
     private java.util.List<String> _includeApplications;
-    /** Authentication context class references include. Supported values are c1 through c25. */
+    /** The includeAuthenticationContextClassReferences property */
     private java.util.List<String> _includeAuthenticationContextClassReferences;
     /** User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice */
     private java.util.List<String> _includeUserActions;
@@ -79,7 +79,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         return this._includeApplications;
     }
     /**
-     * Gets the includeAuthenticationContextClassReferences property value. Authentication context class references include. Supported values are c1 through c25.
+     * Gets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         this._includeApplications = value;
     }
     /**
-     * Sets the includeAuthenticationContextClassReferences property value. Authentication context class references include. Supported values are c1 through c25.
+     * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @param value Value to set for the includeAuthenticationContextClassReferences property.
      * @return a void
      */

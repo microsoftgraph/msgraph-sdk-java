@@ -52,7 +52,7 @@ public class AccessPackageRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Access package containing this policy. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AccessPackageRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Access package containing this policy. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class AccessPackageRequestBuilder {
         return requestInfo;
     }
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Access package containing this policy. Read-only.
      * @return a CompletableFuture of accessPackage
      */
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -98,7 +98,7 @@ public class AccessPackageRequestBuilder {
         }
     }
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Access package containing this policy. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
      */
@@ -115,7 +115,7 @@ public class AccessPackageRequestBuilder {
         }
     }
     /**
-     * The access package with this policy. Read-only. Nullable. Supports $expand.
+     * Access package containing this policy. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackage
@@ -132,7 +132,7 @@ public class AccessPackageRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The access package with this policy. Read-only. Nullable. Supports $expand. */
+    /** Access package containing this policy. Read-only. */
     public class AccessPackageRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

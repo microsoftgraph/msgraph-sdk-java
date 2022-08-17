@@ -32,7 +32,7 @@ public class BookingService extends Entity implements Parsable {
     private Boolean _isHiddenFromCustomers;
     /** True indicates that the appointments for the service will be held online. Default value is false. */
     private Boolean _isLocationOnline;
-    /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation. */
+    /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
     private Integer _maximumAttendeesCount;
     /** Additional information about this service. */
     private String _notes;
@@ -184,7 +184,7 @@ public class BookingService extends Entity implements Parsable {
         return this._isLocationOnline;
     }
     /**
-     * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
+     * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -364,7 +364,7 @@ public class BookingService extends Entity implements Parsable {
         this._isLocationOnline = value;
     }
     /**
-     * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
+     * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @param value Value to set for the maximumAttendeesCount property.
      * @return a void
      */

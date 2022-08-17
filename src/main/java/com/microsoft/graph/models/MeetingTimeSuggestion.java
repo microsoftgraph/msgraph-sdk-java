@@ -23,7 +23,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence. */
     private Integer _order;
-    /** Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /** Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
     private FreeBusyStatus _organizerAvailability;
     /** Reason for suggesting the meeting time. */
     private String _suggestionReason;
@@ -120,7 +120,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         return this._order;
     }
     /**
-     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a freeBusyStatus
      */
     @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
         this._order = value;
     }
     /**
-     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the organizerAvailability property.
      * @return a void
      */

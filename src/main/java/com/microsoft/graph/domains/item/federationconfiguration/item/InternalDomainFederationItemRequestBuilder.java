@@ -80,7 +80,7 @@ public class InternalDomainFederationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class InternalDomainFederationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class InternalDomainFederationItemRequestBuilder {
         }
     }
     /**
-     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @return a CompletableFuture of internalDomainFederation
      */
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> get() {
@@ -209,7 +209,7 @@ public class InternalDomainFederationItemRequestBuilder {
         }
     }
     /**
-     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internalDomainFederation
      */
@@ -226,7 +226,7 @@ public class InternalDomainFederationItemRequestBuilder {
         }
     }
     /**
-     * Domain settings configured by customer when federated with Azure AD. Supports $expand.
+     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of internalDomainFederation
@@ -313,7 +313,7 @@ public class InternalDomainFederationItemRequestBuilder {
         public InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Domain settings configured by customer when federated with Azure AD. Supports $expand. */
+    /** Domain settings configured by a customer when federated with Azure AD. Supports $expand. */
     public class InternalDomainFederationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

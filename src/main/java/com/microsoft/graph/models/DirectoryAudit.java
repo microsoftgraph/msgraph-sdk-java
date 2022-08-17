@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class DirectoryAudit extends Entity implements Parsable {
     /** Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _activityDateTime;
-    /** Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list. */
+    /** Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list. */
     private String _activityDisplayName;
     /** Indicates additional details on the activity. */
     private java.util.List<KeyValue> _additionalDetails;
@@ -30,7 +30,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     private OperationResult _result;
     /** Indicates the reason for failure if the result is failure or timeout. */
     private String _resultReason;
-    /** Information about the resource that changed due to the activity. */
+    /** Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other. */
     private java.util.List<TargetResource> _targetResources;
     /**
      * Instantiates a new directoryAudit and sets the default values.
@@ -59,7 +59,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this._activityDateTime;
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this._resultReason;
     }
     /**
-     * Gets the targetResources property value. Information about the resource that changed due to the activity.
+     * Gets the targetResources property value. Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      * @return a targetResource
      */
     @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this._activityDateTime = value;
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
@@ -260,7 +260,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this._resultReason = value;
     }
     /**
-     * Sets the targetResources property value. Information about the resource that changed due to the activity.
+     * Sets the targetResources property value. Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      * @param value Value to set for the targetResources property.
      * @return a void
      */

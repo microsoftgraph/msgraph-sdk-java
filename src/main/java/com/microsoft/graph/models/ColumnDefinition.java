@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class ColumnDefinition extends Entity implements Parsable {
     /** This column stores boolean values. */
     private BooleanColumn _boolean_escaped;
@@ -37,7 +37,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     private Boolean _hidden;
     /** This column stores hyperlink or picture values. */
     private HyperlinkOrPictureColumn _hyperlinkOrPicture;
-    /** Specifies whether the column values can used for sorting and searching. */
+    /** Specifies whether the column values can be used for sorting and searching. */
     private Boolean _indexed;
     /** Indicates whether this column can be deleted. */
     private Boolean _isDeletable;
@@ -53,15 +53,15 @@ public class ColumnDefinition extends Entity implements Parsable {
     private NumberColumn _number;
     /** This column stores Person or Group values. */
     private PersonOrGroupColumn _personOrGroup;
-    /** If true, changes to this column will be propagated to lists that implement the column. */
+    /** If 'true', changes to this column will be propagated to lists that implement the column. */
     private Boolean _propagateChanges;
     /** Specifies whether the column values can be modified. */
     private Boolean _readOnly;
     /** Specifies whether the column value isn't optional. */
     private Boolean _required;
-    /** The source column for content type column. */
+    /** The source column for the content type column. */
     private ColumnDefinition _sourceColumn;
-    /** ContentType from which this column is inherited from. Used only to fetch contentTypes columns. */
+    /** ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only. */
     private ContentTypeInfo _sourceContentType;
     /** This column stores taxonomy terms. */
     private TermColumn _term;
@@ -246,7 +246,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._hyperlinkOrPicture;
     }
     /**
-     * Gets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._personOrGroup;
     }
     /**
-     * Gets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
+     * Gets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -334,7 +334,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._required;
     }
     /**
-     * Gets the sourceColumn property value. The source column for content type column.
+     * Gets the sourceColumn property value. The source column for the content type column.
      * @return a columnDefinition
      */
     @javax.annotation.Nullable
@@ -342,7 +342,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._sourceColumn;
     }
     /**
-     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      * @return a contentTypeInfo
      */
     @javax.annotation.Nullable
@@ -543,7 +543,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._hyperlinkOrPicture = value;
     }
     /**
-     * Sets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @param value Value to set for the indexed property.
      * @return a void
      */
@@ -607,7 +607,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._personOrGroup = value;
     }
     /**
-     * Sets the propagateChanges property value. If true, changes to this column will be propagated to lists that implement the column.
+     * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      * @param value Value to set for the propagateChanges property.
      * @return a void
      */
@@ -631,7 +631,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._required = value;
     }
     /**
-     * Sets the sourceColumn property value. The source column for content type column.
+     * Sets the sourceColumn property value. The source column for the content type column.
      * @param value Value to set for the sourceColumn property.
      * @return a void
      */
@@ -639,7 +639,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._sourceColumn = value;
     }
     /**
-     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
+     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      * @param value Value to set for the sourceContentType property.
      * @return a void
      */

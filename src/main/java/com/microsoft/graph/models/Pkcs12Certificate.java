@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
-    /** This is the password for the pfx file. Required. If no password is used, must still provide a value of ''. */
+    /** The password for the pfx file. Required. If no password is used, you must still provide a value of ''. */
     private String _password;
-    /** This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required. */
+    /** Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required. */
     private String _pkcs12Value;
     /**
      * Instantiates a new Pkcs12Certificate and sets the default values.
@@ -43,7 +43,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
         }};
     }
     /**
-     * Gets the password property value. This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * Gets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
         return this._password;
     }
     /**
-     * Gets the pkcs12Value property value. This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * Gets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
         writer.writeStringValue("pkcs12Value", this.getPkcs12Value());
     }
     /**
-     * Sets the password property value. This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * Sets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      * @param value Value to set for the password property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
         this._password = value;
     }
     /**
-     * Sets the pkcs12Value property value. This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      * @param value Value to set for the pkcs12Value property.
      * @return a void
      */

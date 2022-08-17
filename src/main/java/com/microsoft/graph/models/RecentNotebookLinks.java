@@ -13,7 +13,7 @@ public class RecentNotebookLinks implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** Opens the notebook in the OneNote client, if it's installed. */
+    /** Opens the notebook in the OneNote native client if it's installed. */
     private ExternalLink _oneNoteClientUrl;
     /** Opens the notebook in OneNote on the web. */
     private ExternalLink _oneNoteWebUrl;
@@ -65,7 +65,7 @@ public class RecentNotebookLinks implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the oneNoteClientUrl property value. Opens the notebook in the OneNote client, if it's installed.
+     * Gets the oneNoteClientUrl property value. Opens the notebook in the OneNote native client if it's installed.
      * @return a externalLink
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class RecentNotebookLinks implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the oneNoteClientUrl property value. Opens the notebook in the OneNote client, if it's installed.
+     * Sets the oneNoteClientUrl property value. Opens the notebook in the OneNote native client if it's installed.
      * @param value Value to set for the oneNoteClientUrl property.
      * @return a void
      */

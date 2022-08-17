@@ -11,7 +11,7 @@ import java.util.Objects;
 public class EducationTeacher implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Id of the Teacher in external source system. */
+    /** ID of the teacher in the source system. */
     private String _externalId;
     /** The OdataType property */
     private String _odataType;
@@ -44,7 +44,7 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the externalId property value. Id of the Teacher in external source system.
+     * Gets the externalId property value. ID of the teacher in the source system.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class EducationTeacher implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the externalId property value. Id of the Teacher in external source system.
+     * Sets the externalId property value. ID of the teacher in the source system.
      * @param value Value to set for the externalId property.
      * @return a void
      */

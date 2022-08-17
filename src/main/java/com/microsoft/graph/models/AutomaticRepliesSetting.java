@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all. */
+    /** The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all. */
     private ExternalAudienceScope _externalAudience;
     /** The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled. */
     private String _externalReplyMessage;
@@ -23,7 +23,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     private DateTimeTimeZone _scheduledEndDateTime;
     /** The date and time that automatic replies are set to begin, if Status is set to Scheduled. */
     private DateTimeTimeZone _scheduledStartDateTime;
-    /** Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled. */
+    /** Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled. */
     private AutomaticRepliesStatus _status;
     /**
      * Instantiates a new automaticRepliesSetting and sets the default values.
@@ -52,7 +52,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * Gets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @return a externalAudienceScope
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         return this._scheduledStartDateTime;
     }
     /**
-     * Gets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @return a automaticRepliesStatus
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @param value Value to set for the externalAudience property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
         this._scheduledStartDateTime = value;
     }
     /**
-     * Sets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @param value Value to set for the status property.
      * @return a void
      */

@@ -13,7 +13,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Content type information of the file. */
     private ContentTypeInfo _contentType;
-    /** Name of the file in resource folder that should be added as a default content or a template in the document set */
+    /** Name of the file in resource folder that should be added as a default content or a template in the document set. */
     private String _fileName;
     /** Folder name in which the file will be placed when a new document set is created in the library. */
     private String _folderName;
@@ -68,7 +68,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
+     * Gets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         this._contentType = value;
     }
     /**
-     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set
+     * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
      * @param value Value to set for the fileName property.
      * @return a void
      */

@@ -15,7 +15,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     private IdentitySet _identity;
     /** The OdataType property */
     private String _odataType;
-    /** Specifies the participant's role in the meeting. */
+    /** Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue. */
     private OnlineMeetingRole _role;
     /** User principal name of the participant. */
     private String _upn;
@@ -76,7 +76,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the role property value. Specifies the participant's role in the meeting.
+     * Gets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
      * @return a onlineMeetingRole
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the role property value. Specifies the participant's role in the meeting.
+     * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
      * @param value Value to set for the role property.
      * @return a void
      */

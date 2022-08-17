@@ -15,7 +15,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     private java.util.List<SearchHitsContainer> _hitsContainers;
     /** The OdataType property */
     private String _odataType;
-    /** Provides details of query alteration response for spelling correction. */
+    /** Provides information related to spelling corrections in the alteration response. */
     private AlterationResponse _queryAlterationResponse;
     /** A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates. */
     private ResultTemplateDictionary _resultTemplates;
@@ -79,7 +79,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
+     * Gets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
      * @return a alterationResponse
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the queryAlterationResponse property value. Provides details of query alteration response for spelling correction.
+     * Sets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
      * @param value Value to set for the queryAlterationResponse property.
      * @return a void
      */

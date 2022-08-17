@@ -80,7 +80,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         }
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @return a CompletableFuture of scopedRoleMembership
      */
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> get() {
@@ -209,7 +209,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         }
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of scopedRoleMembership
      */
@@ -226,7 +226,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         }
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of scopedRoleMembership
@@ -313,7 +313,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         public ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The scoped-role administrative unit memberships for this user. Read-only. Nullable. */
+    /** Get scopedRoleMemberOf from users */
     public class ScopedRoleMembershipItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

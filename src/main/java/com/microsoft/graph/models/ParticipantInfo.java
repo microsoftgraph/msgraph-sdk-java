@@ -13,7 +13,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
     private String _countryCode;
-    /** The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only. */
+    /** The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
     private EndpointType _endpointType;
     /** The identity property */
     private IdentitySet _identity;
@@ -23,7 +23,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** The participant ID of the participant. Read-only. */
     private String _participantId;
-    /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only. */
+    /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only. */
     private String _region;
     /**
      * Instantiates a new participantInfo and sets the default values.
@@ -60,7 +60,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         return this._countryCode;
     }
     /**
-     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @return a endpointType
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         return this._participantId;
     }
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         this._countryCode = value;
     }
     /**
-     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
+     * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      * @param value Value to set for the endpointType property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         this._participantId = value;
     }
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      * @param value Value to set for the region property.
      * @return a void
      */

@@ -19,7 +19,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** The region property */
     private String _region;
-    /** The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio. */
+    /** The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio. */
     private PhoneType _type;
     /**
      * Instantiates a new phone and sets the default values.
@@ -95,7 +95,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
         return this._region;
     }
     /**
-     * Gets the type property value. The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * Gets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      * @return a phoneType
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class Phone implements AdditionalDataHolder, Parsable {
         this._region = value;
     }
     /**
-     * Sets the type property value. The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * Sets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      * @param value Value to set for the type property.
      * @return a void
      */

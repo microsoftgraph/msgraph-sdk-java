@@ -11,13 +11,13 @@ import java.util.Objects;
 public class AppIdentity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Refers to the unique identifier representing Application Id in the Azure Active Directory. */
+    /** Refers to the Unique GUID representing Application Id in the Azure Active Directory. */
     private String _appId;
     /** Refers to the Application Name displayed in the Azure Portal. */
     private String _displayName;
     /** The OdataType property */
     private String _odataType;
-    /** Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App. */
+    /** Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App. */
     private String _servicePrincipalId;
     /** Refers to the Service Principal Name is the Application name in the tenant. */
     private String _servicePrincipalName;
@@ -48,7 +48,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * Gets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the appId property value. Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */

@@ -13,9 +13,9 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key. */
+    /** Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key. */
     private String _resourceId;
-    /** Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported. */
+    /** Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate. */
     private String _uri;
     /**
      * Instantiates a new mediaInfo and sets the default values.
@@ -65,7 +65,7 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the resourceId property value. Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
+     * Gets the resourceId property value. Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
         return this._resourceId;
     }
     /**
-     * Gets the uri property value. Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
+     * Gets the uri property value. Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the resourceId property value. Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
+     * Sets the resourceId property value. Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
      * @param value Value to set for the resourceId property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class MediaInfo implements AdditionalDataHolder, Parsable {
         this._resourceId = value;
     }
     /**
-     * Sets the uri property value. Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
+     * Sets the uri property value. Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
      * @param value Value to set for the uri property.
      * @return a void
      */

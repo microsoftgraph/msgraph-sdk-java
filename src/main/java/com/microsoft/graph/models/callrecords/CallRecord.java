@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.IdentitySet;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class CallRecord extends Entity implements Parsable {
     /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _endDateTime;
@@ -26,11 +26,11 @@ public class CallRecord extends Entity implements Parsable {
     private java.util.List<IdentitySet> _participants;
     /** List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable. */
     private java.util.List<Session> _sessions;
-    /** UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _startDateTime;
     /** The type property */
     private CallType _type;
-    /** Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version. */
+    /** Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version. */
     private Long _version;
     /**
      * Instantiates a new callRecord and sets the default values.
@@ -127,7 +127,7 @@ public class CallRecord extends Entity implements Parsable {
         return this._sessions;
     }
     /**
-     * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class CallRecord extends Entity implements Parsable {
         return this._type;
     }
     /**
-     * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -226,7 +226,7 @@ public class CallRecord extends Entity implements Parsable {
         this._sessions = value;
     }
     /**
-     * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class CallRecord extends Entity implements Parsable {
         this._type = value;
     }
     /**
-     * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      * @param value Value to set for the version property.
      * @return a void
      */

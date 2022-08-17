@@ -17,7 +17,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** The type property */
     private AclType _type;
-    /** The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup. */
+    /** The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup */
     private String _value;
     /**
      * Instantiates a new acl and sets the default values.
@@ -84,7 +84,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         return this._type;
     }
     /**
-     * Gets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+     * Gets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         this._type = value;
     }
     /**
-     * Sets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+     * Sets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup
      * @param value Value to set for the value property.
      * @return a void
      */

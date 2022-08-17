@@ -10,7 +10,7 @@ import java.util.Objects;
 public class EntitlementManagement extends Entity implements Parsable {
     /** Approval stages for decisions associated with access package assignment requests. */
     private java.util.List<Approval> _accessPackageAssignmentApprovals;
-    /** Represents access package objects. */
+    /** Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources. */
     private java.util.List<AccessPackage> _accessPackages;
     /** Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment. */
     private java.util.List<AccessPackageAssignmentPolicy> _assignmentPolicies;
@@ -20,9 +20,9 @@ public class EntitlementManagement extends Entity implements Parsable {
     private java.util.List<AccessPackageAssignment> _assignments;
     /** A container for access packages. */
     private java.util.List<AccessPackageCatalog> _catalogs;
-    /** Represents references to a directory or domain of another organization whose users can request access. */
+    /** References to a directory or domain of another organization whose users can request access. */
     private java.util.List<ConnectedOrganization> _connectedOrganizations;
-    /** Represents the settings that control the behavior of Azure AD entitlement management. */
+    /** The settings that control the behavior of Azure AD entitlement management. */
     private EntitlementManagementSettings _settings;
     /**
      * Instantiates a new EntitlementManagement and sets the default values.
@@ -51,7 +51,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this._accessPackageAssignmentApprovals;
     }
     /**
-     * Gets the accessPackages property value. Represents access package objects.
+     * Gets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return a accessPackage
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this._catalogs;
     }
     /**
-     * Gets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
+     * Gets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      * @return a connectedOrganization
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
+     * Gets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      * @return a entitlementManagementSettings
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this._accessPackageAssignmentApprovals = value;
     }
     /**
-     * Sets the accessPackages property value. Represents access package objects.
+     * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
@@ -190,7 +190,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this._catalogs = value;
     }
     /**
-     * Sets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
+     * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      * @param value Value to set for the connectedOrganizations property.
      * @return a void
      */
@@ -198,7 +198,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this._connectedOrganizations = value;
     }
     /**
-     * Sets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
+     * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      * @param value Value to set for the settings property.
      * @return a void
      */

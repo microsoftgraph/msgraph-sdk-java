@@ -11,31 +11,31 @@ import java.util.Objects;
 public class SearchRequest implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses. */
+    /** The aggregationFilters property */
     private java.util.List<String> _aggregationFilters;
-    /** Specifies aggregations (also known as refiners) to be returned alongside search results. Optional. */
+    /** The aggregations property */
     private java.util.List<AggregationOption> _aggregations;
-    /** Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional. */
+    /** The contentSources property */
     private java.util.List<String> _contentSources;
-    /** This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional. */
+    /** The enableTopResults property */
     private Boolean _enableTopResults;
-    /** One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required. */
+    /** The entityTypes property */
     private java.util.List<String> _entityTypes;
-    /** Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional. */
+    /** The fields property */
     private java.util.List<String> _fields;
-    /** Specifies the offset for the search results. Offset 0 returns the very first result. Optional. */
+    /** The from property */
     private Integer _from;
     /** The OdataType property */
     private String _odataType;
     /** The query property */
     private SearchQuery _query;
-    /** Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional. */
+    /** The queryAlterationOptions property */
     private SearchAlterationOptions _queryAlterationOptions;
-    /** Provides the search result templates options for rendering connectors search results. */
+    /** The resultTemplateOptions property */
     private ResultTemplateOption _resultTemplateOptions;
-    /** The size of the page to be retrieved. Optional. */
+    /** The size property */
     private Integer _size;
-    /** Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional. */
+    /** The sortProperties property */
     private java.util.List<SortProperty> _sortProperties;
     /**
      * Instantiates a new searchRequest and sets the default values.
@@ -64,7 +64,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     * Gets the aggregationFilters property value. The aggregationFilters property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._aggregationFilters;
     }
     /**
-     * Gets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     * Gets the aggregations property value. The aggregations property
      * @return a aggregationOption
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._aggregations;
     }
     /**
-     * Gets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Gets the contentSources property value. The contentSources property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._contentSources;
     }
     /**
-     * Gets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+     * Gets the enableTopResults property value. The enableTopResults property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._enableTopResults;
     }
     /**
-     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Gets the entityTypes property value. The entityTypes property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Gets the fields property value. The fields property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._fields;
     }
     /**
-     * Gets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+     * Gets the from property value. The from property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._query;
     }
     /**
-     * Gets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * Gets the queryAlterationOptions property value. The queryAlterationOptions property
      * @return a searchAlterationOptions
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._queryAlterationOptions;
     }
     /**
-     * Gets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
+     * Gets the resultTemplateOptions property value. The resultTemplateOptions property
      * @return a resultTemplateOption
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._resultTemplateOptions;
     }
     /**
-     * Gets the size property value. The size of the page to be retrieved. Optional.
+     * Gets the size property value. The size property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this._size;
     }
     /**
-     * Gets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     * Gets the sortProperties property value. The sortProperties property
      * @return a sortProperty
      */
     @javax.annotation.Nullable
@@ -221,7 +221,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     * Sets the aggregationFilters property value. The aggregationFilters property
      * @param value Value to set for the aggregationFilters property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._aggregationFilters = value;
     }
     /**
-     * Sets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     * Sets the aggregations property value. The aggregations property
      * @param value Value to set for the aggregations property.
      * @return a void
      */
@@ -237,7 +237,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._aggregations = value;
     }
     /**
-     * Sets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Sets the contentSources property value. The contentSources property
      * @param value Value to set for the contentSources property.
      * @return a void
      */
@@ -245,7 +245,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._contentSources = value;
     }
     /**
-     * Sets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
+     * Sets the enableTopResults property value. The enableTopResults property
      * @param value Value to set for the enableTopResults property.
      * @return a void
      */
@@ -253,7 +253,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._enableTopResults = value;
     }
     /**
-     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+     * Sets the entityTypes property value. The entityTypes property
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
@@ -261,7 +261,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._entityTypes = value;
     }
     /**
-     * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
      * @return a void
      */
@@ -269,7 +269,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._fields = value;
     }
     /**
-     * Sets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
+     * Sets the from property value. The from property
      * @param value Value to set for the from property.
      * @return a void
      */
@@ -293,7 +293,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._query = value;
     }
     /**
-     * Sets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * Sets the queryAlterationOptions property value. The queryAlterationOptions property
      * @param value Value to set for the queryAlterationOptions property.
      * @return a void
      */
@@ -301,7 +301,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._queryAlterationOptions = value;
     }
     /**
-     * Sets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
+     * Sets the resultTemplateOptions property value. The resultTemplateOptions property
      * @param value Value to set for the resultTemplateOptions property.
      * @return a void
      */
@@ -309,7 +309,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._resultTemplateOptions = value;
     }
     /**
-     * Sets the size property value. The size of the page to be retrieved. Optional.
+     * Sets the size property value. The size property
      * @param value Value to set for the size property.
      * @return a void
      */
@@ -317,7 +317,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         this._size = value;
     }
     /**
-     * Sets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     * Sets the sortProperties property value. The sortProperties property
      * @param value Value to set for the sortProperties property.
      * @return a void
      */

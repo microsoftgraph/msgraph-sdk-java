@@ -92,7 +92,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         return new microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @return a CompletableFuture of connectedOrganization
      */
     public java.util.concurrent.CompletableFuture<ConnectedOrganization> get() {
@@ -233,7 +233,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         }
     }
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectedOrganization
      */
@@ -250,7 +250,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         }
     }
     /**
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of connectedOrganization
@@ -349,7 +349,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         public ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents references to a directory or domain of another organization whose users can request access. */
+    /** References to a directory or domain of another organization whose users can request access. */
     public class ConnectedOrganizationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

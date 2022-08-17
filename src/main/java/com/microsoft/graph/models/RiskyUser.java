@@ -15,11 +15,11 @@ public class RiskyUser extends Entity implements Parsable {
     private Boolean _isDeleted;
     /** Indicates whether a user's risky state is being processed by the backend. */
     private Boolean _isProcessing;
-    /** The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
+    /** Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
     private RiskDetail _riskDetail;
     /** The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _riskLastUpdatedDateTime;
-    /** Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue. */
+    /** Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. */
     private RiskLevel _riskLevel;
     /** State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. */
     private RiskState _riskState;
@@ -96,7 +96,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this._isProcessing;
     }
     /**
-     * Gets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Gets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @return a riskDetail
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class RiskyUser extends Entity implements Parsable {
         return this._riskLastUpdatedDateTime;
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return a riskLevel
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class RiskyUser extends Entity implements Parsable {
         this._isProcessing = value;
     }
     /**
-     * Sets the riskDetail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class RiskyUser extends Entity implements Parsable {
         this._riskLastUpdatedDateTime = value;
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param value Value to set for the riskLevel property.
      * @return a void
      */

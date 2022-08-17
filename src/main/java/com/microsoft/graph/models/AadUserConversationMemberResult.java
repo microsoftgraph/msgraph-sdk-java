@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
-    /** The user object ID of the Azure AD user that was being added as part of the bulk operation. */
+    /** The userId property */
     private String _userId;
     /**
      * Instantiates a new AadUserConversationMemberResult and sets the default values.
@@ -40,7 +40,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
         }};
     }
     /**
-     * Gets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * Gets the userId property value. The userId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      * @return a void
      */

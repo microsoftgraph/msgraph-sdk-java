@@ -59,7 +59,7 @@ public class ChecklistItemsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ChecklistItemsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ChecklistItemsRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChecklistItemCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ChecklistItemsRequestBuilder {
         }
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ChecklistItemsRequestBuilder {
         }
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChecklistItemCollectionResponse
@@ -227,7 +227,7 @@ public class ChecklistItemsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** A collection of smaller subtasks linked to the more complex parent task. */
+    /** A collection of checklistItems linked to a task. */
     public class ChecklistItemsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

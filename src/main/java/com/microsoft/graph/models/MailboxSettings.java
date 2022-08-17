@@ -11,13 +11,13 @@ import java.util.Objects;
 public class MailboxSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Folder ID of an archive folder for the user. Read only. */
+    /** Folder ID of an archive folder for the user. */
     private String _archiveFolder;
     /** Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user. */
     private AutomaticRepliesSetting _automaticRepliesSetting;
     /** The date format for the user's mailbox. */
     private String _dateFormat;
-    /** If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly. */
+    /** If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. */
     private DelegateMeetingMessageDeliveryOptions _delegateMeetingMessageDeliveryOptions;
     /** The locale information for the user, including the preferred language and country/region. */
     private LocaleInfo _language;
@@ -27,7 +27,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     private String _timeFormat;
     /** The default time zone for the user's mailbox. */
     private String _timeZone;
-    /** The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only. */
+    /** The userPurpose property */
     private UserPurpose _userPurpose;
     /** The days of the week and hours in a specific time zone that the user works. */
     private WorkingHours _workingHours;
@@ -58,7 +58,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the archiveFolder property value. Folder ID of an archive folder for the user. Read only.
+     * Gets the archiveFolder property value. Folder ID of an archive folder for the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._dateFormat;
     }
     /**
-     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @return a delegateMeetingMessageDeliveryOptions
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._timeZone;
     }
     /**
-     * Gets the userPurpose property value. The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * Gets the userPurpose property value. The userPurpose property
      * @return a userPurpose
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the archiveFolder property value. Folder ID of an archive folder for the user. Read only.
+     * Sets the archiveFolder property value. Folder ID of an archive folder for the user.
      * @param value Value to set for the archiveFolder property.
      * @return a void
      */
@@ -209,7 +209,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._dateFormat = value;
     }
     /**
-     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
      * @return a void
      */
@@ -249,7 +249,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._timeZone = value;
     }
     /**
-     * Sets the userPurpose property value. The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * Sets the userPurpose property value. The userPurpose property
      * @param value Value to set for the userPurpose property.
      * @return a void
      */

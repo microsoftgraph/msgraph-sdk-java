@@ -15,7 +15,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     private Boolean _ascending;
     /** Represents the color that is the target of the condition if the sorting is on font or cell color. */
     private String _color;
-    /** Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber. */
+    /** Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber. */
     private String _dataOption;
     /** Represents the icon that is the target of the condition if the sorting is on the cell's icon. */
     private WorkbookIcon _icon;
@@ -23,7 +23,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     private Integer _key;
     /** The OdataType property */
     private String _odataType;
-    /** Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon. */
+    /** Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon. */
     private String _sortOn;
     /**
      * Instantiates a new workbookSortField and sets the default values.
@@ -68,7 +68,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         return this._color;
     }
     /**
-     * Gets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+     * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+     * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         this._color = value;
     }
     /**
-     * Sets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+     * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      * @param value Value to set for the dataOption property.
      * @return a void
      */
@@ -197,7 +197,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+     * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      * @param value Value to set for the sortOn property.
      * @return a void
      */

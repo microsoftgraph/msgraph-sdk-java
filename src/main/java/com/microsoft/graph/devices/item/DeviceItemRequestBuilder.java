@@ -141,7 +141,7 @@ public class DeviceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -149,7 +149,7 @@ public class DeviceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class DeviceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body 
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class DeviceItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +266,7 @@ public class DeviceItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @return a CompletableFuture of device
      */
     public java.util.concurrent.CompletableFuture<Device> get() {
@@ -282,7 +282,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of device
      */
@@ -299,7 +299,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance.
+     * Get the properties and relationships of a device object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of device
@@ -329,7 +329,7 @@ public class DeviceItemRequestBuilder {
         return new microsoft.graph.devices.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -346,7 +346,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -364,7 +364,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a registered device. Only certain properties of a device can be updated through approved Mobile Device Managment (MDM) apps.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -434,7 +434,7 @@ public class DeviceItemRequestBuilder {
         public DeviceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get the properties and relationships of a device object. Since the **device** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **device** instance. */
+    /** Get the properties and relationships of a device object. */
     public class DeviceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps. */
+    /** Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps. */
     private CloudAppSecuritySessionControlType _cloudAppSecurityType;
     /**
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
@@ -29,7 +29,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
         return new CloudAppSecuritySessionControl();
     }
     /**
-     * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps.
+     * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @return a cloudAppSecuritySessionControlType
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
         writer.writeEnumValue("cloudAppSecurityType", this.getCloudAppSecurityType());
     }
     /**
-     * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps.
+     * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @param value Value to set for the cloudAppSecurityType property.
      * @return a void
      */

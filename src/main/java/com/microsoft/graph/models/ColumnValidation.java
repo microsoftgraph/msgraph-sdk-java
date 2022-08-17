@@ -15,7 +15,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
     private String _defaultLanguage;
     /** Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails. */
     private java.util.List<DisplayNameLocalization> _descriptions;
-    /** The formula to validate column value. For examples, see Examples of common formulas in lists */
+    /** The formula to validate column value. For examples, see Examples of common formulas in lists. */
     private String _formula;
     /** The OdataType property */
     private String _odataType;
@@ -76,7 +76,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
+     * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
         this._descriptions = value;
     }
     /**
-     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists
+     * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      * @param value Value to set for the formula property.
      * @return a void
      */

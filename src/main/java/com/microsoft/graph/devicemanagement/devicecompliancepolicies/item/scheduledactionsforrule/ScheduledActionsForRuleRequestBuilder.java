@@ -59,7 +59,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         }
     }
     /**
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         }
     }
     /**
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
@@ -227,7 +227,7 @@ public class ScheduledActionsForRuleRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The list of scheduled action for this rule */
+    /** The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies. */
     public class ScheduledActionsForRuleRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

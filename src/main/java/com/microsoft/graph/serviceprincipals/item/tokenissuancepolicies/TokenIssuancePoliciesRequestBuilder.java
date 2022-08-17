@@ -58,7 +58,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
      */
@@ -121,7 +121,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
@@ -138,7 +138,7 @@ public class TokenIssuancePoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The tokenIssuancePolicies assigned to this service principal. Supports $expand. */
+    /** The tokenIssuancePolicies assigned to this service principal. */
     public class TokenIssuancePoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

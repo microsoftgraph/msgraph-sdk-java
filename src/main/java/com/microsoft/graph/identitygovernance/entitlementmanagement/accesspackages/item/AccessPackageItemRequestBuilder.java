@@ -111,7 +111,7 @@ public class AccessPackageItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -119,7 +119,7 @@ public class AccessPackageItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -224,7 +224,7 @@ public class AccessPackageItemRequestBuilder {
         }
     }
     /**
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @return a CompletableFuture of accessPackage
      */
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -240,7 +240,7 @@ public class AccessPackageItemRequestBuilder {
         }
     }
     /**
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
      */
@@ -257,7 +257,7 @@ public class AccessPackageItemRequestBuilder {
         }
     }
     /**
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackage
@@ -344,7 +344,7 @@ public class AccessPackageItemRequestBuilder {
         public AccessPackageItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents access package objects. */
+    /** Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources. */
     public class AccessPackageItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

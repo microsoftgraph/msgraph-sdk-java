@@ -78,7 +78,7 @@ public class DevicesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of device objects registered in the organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class DevicesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of device objects registered in the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -108,7 +108,7 @@ public class DevicesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new device.
+     * Create and register a new device in the organization.
      * @param body 
      * @return a RequestInformation
      */
@@ -117,7 +117,7 @@ public class DevicesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create a new device.
+     * Create and register a new device in the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -149,7 +149,7 @@ public class DevicesRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of device objects registered in the organization.
      * @return a CompletableFuture of DeviceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get() {
@@ -165,7 +165,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of device objects registered in the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DeviceCollectionResponse
      */
@@ -182,7 +182,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of device objects registered in the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DeviceCollectionResponse
@@ -200,7 +200,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create a new device.
+     * Create and register a new device in the organization.
      * @param body 
      * @return a CompletableFuture of device
      */
@@ -217,7 +217,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create a new device.
+     * Create and register a new device in the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of device
@@ -235,7 +235,7 @@ public class DevicesRequestBuilder {
         }
     }
     /**
-     * Create a new device.
+     * Create and register a new device in the organization.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -254,7 +254,7 @@ public class DevicesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieve a list of devices registered in the directory.  */
+    /** Retrieve a list of device objects registered in the organization. */
     public class DevicesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

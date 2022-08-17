@@ -86,7 +86,7 @@ public class PhotoRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's profile photo.
+     * The group's profile photo
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class PhotoRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The group's profile photo.
+     * The group's profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class PhotoRequestBuilder {
         }
     }
     /**
-     * The group's profile photo.
+     * The group's profile photo
      * @return a CompletableFuture of profilePhoto
      */
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
@@ -215,7 +215,7 @@ public class PhotoRequestBuilder {
         }
     }
     /**
-     * The group's profile photo.
+     * The group's profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of profilePhoto
      */
@@ -232,7 +232,7 @@ public class PhotoRequestBuilder {
         }
     }
     /**
-     * The group's profile photo.
+     * The group's profile photo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of profilePhoto
@@ -319,7 +319,7 @@ public class PhotoRequestBuilder {
         public PhotoRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The group's profile photo. */
+    /** The group's profile photo */
     public class PhotoRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

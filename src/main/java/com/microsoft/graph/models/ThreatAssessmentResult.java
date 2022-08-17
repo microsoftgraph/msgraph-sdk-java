@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ThreatAssessmentResult extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
     /** The result message for each threat assessment. */
     private String _message;
-    /** The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan. */
+    /** The threat assessment result type. Possible values are: checkPolicy, rescan. */
     private ThreatAssessmentResultType _resultType;
     /**
      * Instantiates a new threatAssessmentResult and sets the default values.
@@ -64,7 +64,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         return this._message;
     }
     /**
-     * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * Gets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @return a threatAssessmentResultType
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
         this._message = value;
     }
     /**
-     * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      * @param value Value to set for the resultType property.
      * @return a void
      */

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Contains the collection of aggregations computed based on the provided aggregationOption specified in the request. */
+    /** The aggregations property */
     private java.util.List<SearchAggregation> _aggregations;
     /** A collection of the search results. */
     private java.util.List<SearchHit> _hits;
@@ -48,7 +48,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the aggregations property value. Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * Gets the aggregations property value. The aggregations property
      * @return a searchAggregation
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the aggregations property value. Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * Sets the aggregations property value. The aggregations property
      * @param value Value to set for the aggregations property.
      * @return a void
      */

@@ -80,7 +80,7 @@ public class LongRunningOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from users
+     * Represents the status of a long-running operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class LongRunningOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get operations from users
+     * Represents the status of a long-running operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class LongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from users
+     * Represents the status of a long-running operation.
      * @return a CompletableFuture of longRunningOperation
      */
     public java.util.concurrent.CompletableFuture<LongRunningOperation> get() {
@@ -209,7 +209,7 @@ public class LongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from users
+     * Represents the status of a long-running operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of longRunningOperation
      */
@@ -226,7 +226,7 @@ public class LongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * Get operations from users
+     * Represents the status of a long-running operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of longRunningOperation
@@ -313,7 +313,7 @@ public class LongRunningOperationItemRequestBuilder {
         public LongRunningOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get operations from users */
+    /** Represents the status of a long-running operation. */
     public class LongRunningOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class RecordingInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The identities of recording initiator. */
+    /** The identities of the recording initiator. */
     private IdentitySet _initiator;
     /** The OdataType property */
     private String _odataType;
@@ -57,7 +57,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the initiator property value. The identities of recording initiator.
+     * Gets the initiator property value. The identities of the recording initiator.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the initiator property value. The identities of recording initiator.
+     * Sets the initiator property value. The identities of the recording initiator.
      * @param value Value to set for the initiator property.
      * @return a void
      */

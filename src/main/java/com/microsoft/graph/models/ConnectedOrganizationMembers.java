@@ -10,7 +10,7 @@ import java.util.Objects;
 public class ConnectedOrganizationMembers extends SubjectSet implements Parsable {
     /** The ID of the connected organization in entitlement management. */
     private String _connectedOrganizationId;
-    /** The name of the connected organization. Read only. */
+    /** The name of the connected organization. */
     private String _description;
     /**
      * Instantiates a new ConnectedOrganizationMembers and sets the default values.
@@ -39,7 +39,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
         return this._connectedOrganizationId;
     }
     /**
-     * Gets the description property value. The name of the connected organization. Read only.
+     * Gets the description property value. The name of the connected organization.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
         this._connectedOrganizationId = value;
     }
     /**
-     * Sets the description property value. The name of the connected organization. Read only.
+     * Sets the description property value. The name of the connected organization.
      * @param value Value to set for the description property.
      * @return a void
      */

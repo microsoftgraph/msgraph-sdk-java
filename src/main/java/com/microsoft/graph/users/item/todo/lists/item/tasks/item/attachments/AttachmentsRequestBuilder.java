@@ -65,7 +65,7 @@ public class AttachmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -73,7 +73,7 @@ public class AttachmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class AttachmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @return a CompletableFuture of AttachmentBaseCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse> get() {
@@ -144,7 +144,7 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentBaseCollectionResponse
      */
@@ -161,7 +161,7 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AttachmentBaseCollectionResponse
@@ -233,7 +233,7 @@ public class AttachmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** A collection of file attachments for the task. */
+    /** Get attachments from users */
     public class AttachmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

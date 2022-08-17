@@ -59,7 +59,7 @@ public class B2xUserFlowsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class B2xUserFlowsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class B2xUserFlowsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
      */
@@ -155,7 +155,7 @@ public class B2xUserFlowsRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
@@ -227,7 +227,7 @@ public class B2xUserFlowsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents entry point for B2X and self-service sign-up identity userflows. */
+    /** Represents entry point for B2X/self-service sign-up identity userflows. */
     public class B2xUserFlowsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

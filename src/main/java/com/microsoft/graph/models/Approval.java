@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Approval extends Entity implements Parsable {
-    /** Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage. */
+    /** A collection of stages in the approval decision. */
     private java.util.List<ApprovalStage> _stages;
     /**
      * Instantiates a new approval and sets the default values.
@@ -40,7 +40,7 @@ public class Approval extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * Gets the stages property value. A collection of stages in the approval decision.
      * @return a approvalStage
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class Approval extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("stages", this.getStages());
     }
     /**
-     * Sets the stages property value. Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * Sets the stages property value. A collection of stages in the approval decision.
      * @param value Value to set for the stages property.
      * @return a void
      */

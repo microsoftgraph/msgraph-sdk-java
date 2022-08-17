@@ -13,7 +13,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person. */
     private AttendeeBase _attendee;
-    /** The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /** The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
     private FreeBusyStatus _availability;
     /** The OdataType property */
     private String _odataType;
@@ -52,7 +52,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
         return this._attendee;
     }
     /**
-     * Gets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a freeBusyStatus
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
         this._attendee = value;
     }
     /**
-     * Sets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the availability property.
      * @return a void
      */

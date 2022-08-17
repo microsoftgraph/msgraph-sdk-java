@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The createdDateTime property */
+    /** The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
     /** For security, the password is always returned as null from a LIST or GET operation. */
     private String _password;
@@ -32,7 +32,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
         return new PasswordAuthenticationMethod();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
         writer.writeStringValue("password", this.getPassword());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */

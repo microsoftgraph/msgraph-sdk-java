@@ -13,7 +13,7 @@ public class AssignmentOrder implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow. */
+    /** A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow. */
     private java.util.List<String> _order;
     /**
      * Instantiates a new assignmentOrder and sets the default values.
@@ -62,7 +62,7 @@ public class AssignmentOrder implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * Gets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class AssignmentOrder implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the order property value. A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * Sets the order property value. A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
      * @param value Value to set for the order property.
      * @return a void
      */

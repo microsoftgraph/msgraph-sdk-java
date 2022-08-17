@@ -80,7 +80,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return a CompletableFuture of appRoleAssignment
      */
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> get() {
@@ -209,7 +209,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appRoleAssignment
      */
@@ -226,7 +226,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         }
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of appRoleAssignment
@@ -313,7 +313,7 @@ public class AppRoleAssignmentItemRequestBuilder {
         public AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand. */
+    /** App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
     public class AppRoleAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

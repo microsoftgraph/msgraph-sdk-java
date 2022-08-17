@@ -94,7 +94,7 @@ public class PlannerRequestBuilder {
         return requestInfo;
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class PlannerRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @return a CompletableFuture of plannerUser
      */
     public java.util.concurrent.CompletableFuture<PlannerUser> get() {
@@ -223,7 +223,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerUser
      */
@@ -240,7 +240,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Selective Planner services available to the user. Read-only. Nullable.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerUser
@@ -351,7 +351,7 @@ public class PlannerRequestBuilder {
         public PlannerRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Selective Planner services available to the user. Read-only. Nullable. */
+    /** Entry-point to the Planner resource that might exist for a user. Read-only. */
     public class PlannerRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

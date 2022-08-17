@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkApplicationIdentity extends Identity implements Parsable {
-    /** Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, and outgoingWebhook. */
+    /** Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue. */
     private TeamworkApplicationIdentityType _applicationIdentityType;
     /**
      * Instantiates a new TeamworkApplicationIdentity and sets the default values.
@@ -29,7 +29,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
         return new TeamworkApplicationIdentity();
     }
     /**
-     * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, and outgoingWebhook.
+     * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @return a teamworkApplicationIdentityType
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
         writer.writeEnumValue("applicationIdentityType", this.getApplicationIdentityType());
     }
     /**
-     * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, and outgoingWebhook.
+     * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @param value Value to set for the applicationIdentityType property.
      * @return a void
      */

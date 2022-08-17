@@ -19,15 +19,15 @@ public class BookingAppointment extends Entity implements Parsable {
     private Period _duration;
     /** The endDateTime property */
     private DateTimeTimeZone _endDateTime;
-    /** The current number of customers in the appointment. */
+    /** The current number of customers in the appointment */
     private Integer _filledAttendeesCount;
-    /** True indicates that the appointment will be held online. Default value is false. */
+    /** If true, indicates that the appointment will be held online. Default value is false. */
     private Boolean _isLocationOnline;
     /** The URL of the online meeting for the appointment. */
     private String _joinWebUrl;
     /** The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
     private Integer _maximumAttendeesCount;
-    /** True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment. */
+    /** If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment. */
     private Boolean _optOutOfCustomerEmail;
     /** The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format. */
     private Period _postBuffer;
@@ -39,7 +39,7 @@ public class BookingAppointment extends Entity implements Parsable {
     private BookingPriceType _priceType;
     /** The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID. */
     private java.util.List<BookingReminder> _reminders;
-    /** An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. */
+    /** An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1. */
     private String _selfServiceAppointmentId;
     /** The ID of the bookingService associated with this appointment. */
     private String _serviceId;
@@ -49,7 +49,7 @@ public class BookingAppointment extends Entity implements Parsable {
     private String _serviceName;
     /** Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID. */
     private String _serviceNotes;
-    /** True indicates SMS notifications will be sent to the customers for the appointment. Default value is false. */
+    /** If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false. */
     private Boolean _smsNotificationsEnabled;
     /** The ID of each bookingStaffMember who is scheduled in this appointment. */
     private java.util.List<String> _staffMemberIds;
@@ -147,7 +147,7 @@ public class BookingAppointment extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the filledAttendeesCount property value. The current number of customers in the appointment.
+     * Gets the filledAttendeesCount property value. The current number of customers in the appointment
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._filledAttendeesCount;
     }
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._maximumAttendeesCount;
     }
     /**
-     * Gets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Gets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._reminders;
     }
     /**
-     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._serviceNotes;
     }
     /**
-     * Gets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Gets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the filledAttendeesCount property value. The current number of customers in the appointment.
+     * Sets the filledAttendeesCount property value. The current number of customers in the appointment
      * @param value Value to set for the filledAttendeesCount property.
      * @return a void
      */
@@ -371,7 +371,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._filledAttendeesCount = value;
     }
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
      * @param value Value to set for the isLocationOnline property.
      * @return a void
      */
@@ -395,7 +395,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._maximumAttendeesCount = value;
     }
     /**
-     * Sets the optOutOfCustomerEmail property value. True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
+     * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
      * @param value Value to set for the optOutOfCustomerEmail property.
      * @return a void
      */
@@ -443,7 +443,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._reminders = value;
     }
     /**
-     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
      * @param value Value to set for the selfServiceAppointmentId property.
      * @return a void
      */
@@ -483,7 +483,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._serviceNotes = value;
     }
     /**
-     * Sets the smsNotificationsEnabled property value. True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
+     * Sets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      * @param value Value to set for the smsNotificationsEnabled property.
      * @return a void
      */

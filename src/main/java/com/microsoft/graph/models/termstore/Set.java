@@ -15,7 +15,7 @@ public class Set extends Entity implements Parsable {
     private java.util.List<Term> _children;
     /** Date and time of set creation. Read-only. */
     private OffsetDateTime _createdDateTime;
-    /** Description giving details on the term usage. */
+    /** Description that gives details on the term usage. */
     private String _description;
     /** Name of the set for each languageTag. */
     private java.util.List<LocalizedName> _localizedNames;
@@ -62,7 +62,7 @@ public class Set extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. Description giving details on the term usage.
+     * Gets the description property value. Description that gives details on the term usage.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class Set extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. Description giving details on the term usage.
+     * Sets the description property value. Description that gives details on the term usage.
      * @param value Value to set for the description property.
      * @return a void
      */

@@ -174,7 +174,7 @@ public class EventItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -182,7 +182,7 @@ public class EventItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -299,7 +299,7 @@ public class EventItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @return a CompletableFuture of event
      */
     public java.util.concurrent.CompletableFuture<Event> get() {
@@ -315,7 +315,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
      */
@@ -332,7 +332,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of event
@@ -455,7 +455,7 @@ public class EventItemRequestBuilder {
         public EventItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The group's events. */
+    /** The group's calendar events. */
     public class EventItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

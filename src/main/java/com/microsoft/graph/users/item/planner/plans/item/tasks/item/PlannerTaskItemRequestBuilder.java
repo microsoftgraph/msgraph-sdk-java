@@ -104,7 +104,7 @@ public class PlannerTaskItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class PlannerTaskItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @return a CompletableFuture of plannerTask
      */
     public java.util.concurrent.CompletableFuture<PlannerTask> get() {
@@ -233,7 +233,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTask
      */
@@ -250,7 +250,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerTask
@@ -337,7 +337,7 @@ public class PlannerTaskItemRequestBuilder {
         public PlannerTaskItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Collection of tasks in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of tasks in the plan. */
     public class PlannerTaskItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

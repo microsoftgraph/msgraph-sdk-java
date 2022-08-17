@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification. */
     private java.util.List<UserFlowLanguagePage> _defaultPages;
@@ -17,7 +18,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages). */
     private java.util.List<UserFlowLanguagePage> _overridesPages;
     /**
-     * Instantiates a new UserFlowLanguageConfiguration and sets the default values.
+     * Instantiates a new userFlowLanguageConfiguration and sets the default values.
      * @return a void
      */
     public UserFlowLanguageConfiguration() {
@@ -27,7 +28,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserFlowLanguageConfiguration
+     * @return a userFlowLanguageConfiguration
      */
     @javax.annotation.Nonnull
     public static UserFlowLanguageConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

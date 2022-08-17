@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
 public enum MicrosoftAuthenticatorAuthenticationMode implements ValuedEnum {
     DeviceBasedPush("deviceBasedPush"),
     Push("push"),

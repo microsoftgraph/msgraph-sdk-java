@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SettingValue implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name of the setting (as defined by the directorySettingTemplate). */
+    /** Name of the setting (as defined by the groupSettingTemplate). */
     private String _name;
     /** The OdataType property */
     private String _odataType;
@@ -57,7 +57,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. Name of the setting (as defined by the directorySettingTemplate).
+     * Gets the name property value. Name of the setting (as defined by the groupSettingTemplate).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SettingValue implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. Name of the setting (as defined by the directorySettingTemplate).
+     * Sets the name property value. Name of the setting (as defined by the groupSettingTemplate).
      * @param value Value to set for the name property.
      * @return a void
      */

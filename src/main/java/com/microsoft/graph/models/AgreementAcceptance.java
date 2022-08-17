@@ -10,29 +10,29 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
-    /** ID of the agreement file accepted by the user. */
+    /** The identifier of the agreement file accepted by the user. */
     private String _agreementFileId;
-    /** ID of the agreement. */
+    /** The identifier of the agreement. */
     private String _agreementId;
     /** The display name of the device used for accepting the agreement. */
     private String _deviceDisplayName;
     /** The unique identifier of the device used for accepting the agreement. */
     private String _deviceId;
-    /** The operating system used for accepting the agreement. */
+    /** The operating system used to accept the agreement. */
     private String _deviceOSType;
-    /** The operating system version of the device used for accepting the agreement. */
+    /** The operating system version of the device used to accept the agreement. */
     private String _deviceOSVersion;
-    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _expirationDateTime;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _recordedDateTime;
-    /** Possible values are: accepted, declined. Supports $filter (eq). */
+    /** The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq). */
     private AgreementAcceptanceState _state;
     /** Display name of the user when the acceptance was recorded. */
     private String _userDisplayName;
     /** Email of the user when the acceptance was recorded. */
     private String _userEmail;
-    /** ID of the user who accepted the agreement. */
+    /** The identifier of the user who accepted the agreement. */
     private String _userId;
     /** UPN of the user when the acceptance was recorded. */
     private String _userPrincipalName;
@@ -55,7 +55,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return new AgreementAcceptance();
     }
     /**
-     * Gets the agreementFileId property value. ID of the agreement file accepted by the user.
+     * Gets the agreementFileId property value. The identifier of the agreement file accepted by the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._agreementFileId;
     }
     /**
-     * Gets the agreementId property value. ID of the agreement.
+     * Gets the agreementId property value. The identifier of the agreement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceId;
     }
     /**
-     * Gets the deviceOSType property value. The operating system used for accepting the agreement.
+     * Gets the deviceOSType property value. The operating system used to accept the agreement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceOSType;
     }
     /**
-     * Gets the deviceOSVersion property value. The operating system version of the device used for accepting the agreement.
+     * Gets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceOSVersion;
     }
     /**
-     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._recordedDateTime;
     }
     /**
-     * Gets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
+     * Gets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
      * @return a agreementAcceptanceState
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._userEmail;
     }
     /**
-     * Gets the userId property value. ID of the user who accepted the agreement.
+     * Gets the userId property value. The identifier of the user who accepted the agreement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -204,7 +204,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the agreementFileId property value. ID of the agreement file accepted by the user.
+     * Sets the agreementFileId property value. The identifier of the agreement file accepted by the user.
      * @param value Value to set for the agreementFileId property.
      * @return a void
      */
@@ -212,7 +212,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._agreementFileId = value;
     }
     /**
-     * Sets the agreementId property value. ID of the agreement.
+     * Sets the agreementId property value. The identifier of the agreement.
      * @param value Value to set for the agreementId property.
      * @return a void
      */
@@ -236,7 +236,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._deviceId = value;
     }
     /**
-     * Sets the deviceOSType property value. The operating system used for accepting the agreement.
+     * Sets the deviceOSType property value. The operating system used to accept the agreement.
      * @param value Value to set for the deviceOSType property.
      * @return a void
      */
@@ -244,7 +244,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._deviceOSType = value;
     }
     /**
-     * Sets the deviceOSVersion property value. The operating system version of the device used for accepting the agreement.
+     * Sets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
      * @param value Value to set for the deviceOSVersion property.
      * @return a void
      */
@@ -252,7 +252,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._deviceOSVersion = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
@@ -260,7 +260,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the recordedDateTime property.
      * @return a void
      */
@@ -268,7 +268,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._recordedDateTime = value;
     }
     /**
-     * Sets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
+     * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
      * @param value Value to set for the state property.
      * @return a void
      */
@@ -292,7 +292,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._userEmail = value;
     }
     /**
-     * Sets the userId property value. ID of the user who accepted the agreement.
+     * Sets the userId property value. The identifier of the user who accepted the agreement.
      * @param value Value to set for the userId property.
      * @return a void
      */

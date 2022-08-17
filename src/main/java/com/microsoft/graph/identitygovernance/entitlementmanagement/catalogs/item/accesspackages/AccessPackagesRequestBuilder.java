@@ -60,7 +60,7 @@ public class AccessPackagesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AccessPackagesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class AccessPackagesRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      * @return a CompletableFuture of AccessPackageCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get() {
@@ -149,7 +149,7 @@ public class AccessPackagesRequestBuilder {
         }
     }
     /**
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCollectionResponse
      */
@@ -166,7 +166,7 @@ public class AccessPackagesRequestBuilder {
         }
     }
     /**
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageCollectionResponse
@@ -238,7 +238,7 @@ public class AccessPackagesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The access packages in this catalog. Read-only. Nullable. Supports $expand. */
+    /** The access packages in this catalog. Read-only. Nullable. */
     public class AccessPackagesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

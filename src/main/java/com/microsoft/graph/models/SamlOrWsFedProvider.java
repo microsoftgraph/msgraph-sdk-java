@@ -14,7 +14,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     private String _metadataExchangeUri;
     /** URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services. */
     private String _passiveSignInUri;
-    /** Preferred authentication protocol. Supported values include saml or wsfed. */
+    /** Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue. */
     private AuthenticationProtocol _preferredAuthenticationProtocol;
     /** Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available. */
     private String _signingCertificate;
@@ -84,7 +84,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         return this._passiveSignInUri;
     }
     /**
-     * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
+     * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      * @return a authenticationProtocol
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         this._passiveSignInUri = value;
     }
     /**
-     * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. Supported values include saml or wsfed.
+     * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      * @param value Value to set for the preferredAuthenticationProtocol property.
      * @return a void
      */

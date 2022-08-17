@@ -60,7 +60,7 @@ public class UserConsentRequestsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class UserConsentRequestsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class UserConsentRequestsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @return a CompletableFuture of UserConsentRequestCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UserConsentRequestCollectionResponse> get() {
@@ -149,7 +149,7 @@ public class UserConsentRequestsRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserConsentRequestCollectionResponse
      */
@@ -166,7 +166,7 @@ public class UserConsentRequestsRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UserConsentRequestCollectionResponse
@@ -238,7 +238,7 @@ public class UserConsentRequestsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** A list of pending user consent requests. */
+    /** A list of pending user consent requests. Supports $filter (eq). */
     public class UserConsentRequestsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

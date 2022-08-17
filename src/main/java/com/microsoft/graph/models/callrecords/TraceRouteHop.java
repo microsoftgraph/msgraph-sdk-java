@@ -12,7 +12,7 @@ import java.util.Objects;
 public class TraceRouteHop implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The network path count of this hop that was used to compute the round-trip time. */
+    /** The network path count of this hop that was used to compute the RTT. */
     private Integer _hopCount;
     /** IP address used for this hop in the network trace. */
     private String _ipAddress;
@@ -61,7 +61,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
+     * Gets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
+     * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      * @param value Value to set for the hopCount property.
      * @return a void
      */

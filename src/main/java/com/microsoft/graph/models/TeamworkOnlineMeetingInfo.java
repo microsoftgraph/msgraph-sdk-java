@@ -13,7 +13,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     private Map<String, Object> _additionalData;
     /** The identifier of the calendar event associated with the meeting. */
     private String _calendarEventId;
-    /** The URL which can be clicked on to join or uniquely identify the meeting. */
+    /** The URL that users click to join or uniquely identify the meeting. */
     private String _joinWebUrl;
     /** The OdataType property */
     private String _odataType;
@@ -68,7 +68,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the joinWebUrl property value. The URL which can be clicked on to join or uniquely identify the meeting.
+     * Gets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         this._calendarEventId = value;
     }
     /**
-     * Sets the joinWebUrl property value. The URL which can be clicked on to join or uniquely identify the meeting.
+     * Sets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */

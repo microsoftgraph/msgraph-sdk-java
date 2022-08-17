@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationFlowsPolicy extends Entity implements Parsable {
-    /** Inherited property. A description of the policy. This property is not a key. Optional. Read-only. */
+    /** Inherited property. A description of the policy. Optional. Read-only. */
     private String _description;
-    /** Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only. */
+    /** Inherited property. The human-readable name of the policy. Optional. Read-only. */
     private String _displayName;
-    /** Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only. */
+    /** Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only. */
     private SelfServiceSignUpAuthenticationFlowConfiguration _selfServiceSignUp;
     /**
      * Instantiates a new authenticationFlowsPolicy and sets the default values.
@@ -33,7 +33,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         return new AuthenticationFlowsPolicy();
     }
     /**
-     * Gets the description property value. Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
+     * Gets the description property value. Inherited property. A description of the policy. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
+     * Gets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
+     * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
      * @return a selfServiceSignUpAuthenticationFlowConfiguration
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         writer.writeObjectValue("selfServiceSignUp", this.getSelfServiceSignUp());
     }
     /**
-     * Sets the description property value. Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
+     * Sets the description property value. Inherited property. A description of the policy. Optional. Read-only.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
+     * Sets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -98,7 +98,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
+     * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
      * @param value Value to set for the selfServiceSignUp property.
      * @return a void
      */

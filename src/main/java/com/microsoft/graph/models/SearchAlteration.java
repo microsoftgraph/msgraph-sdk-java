@@ -11,11 +11,11 @@ import java.util.Objects;
 public class SearchAlteration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001) */
+    /** Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001. */
     private String _alteredHighlightedQueryString;
     /** Defines the altered query string with spelling correction. */
     private String _alteredQueryString;
-    /** Represents changed segments with respect to original query. */
+    /** Represents changed segments related to an original user query. */
     private java.util.List<AlteredQueryToken> _alteredQueryTokens;
     /** The OdataType property */
     private String _odataType;
@@ -46,7 +46,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * Gets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
         return this._alteredQueryString;
     }
     /**
-     * Gets the alteredQueryTokens property value. Represents changed segments with respect to original query.
+     * Gets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      * @return a alteredQueryToken
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      * @param value Value to set for the alteredHighlightedQueryString property.
      * @return a void
      */
@@ -129,7 +129,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
         this._alteredQueryString = value;
     }
     /**
-     * Sets the alteredQueryTokens property value. Represents changed segments with respect to original query.
+     * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      * @param value Value to set for the alteredQueryTokens property.
      * @return a void
      */

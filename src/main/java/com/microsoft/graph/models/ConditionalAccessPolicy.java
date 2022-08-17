@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /** The conditions property */
     private ConditionalAccessConditionSet _conditions;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
     private OffsetDateTime _createdDateTime;
-    /** Not used. */
+    /** The description property */
     private String _description;
     /** Specifies a display name for the conditionalAccessPolicy object. */
     private String _displayName;
@@ -61,7 +61,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. Not used.
+     * Gets the description property value. The description property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -160,7 +160,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. Not used.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */

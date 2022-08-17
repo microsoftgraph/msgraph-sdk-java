@@ -13,7 +13,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     private OffsetDateTime _actionRequiredByDateTime;
     /** A collection of serviceAnnouncementAttachments. */
     private java.util.List<ServiceAnnouncementAttachment> _attachments;
-    /** The zip file of all attachments for a message. */
+    /** The zip file that contains all attachments for a message. */
     private byte[] _attachmentsArchive;
     /** The body property */
     private ItemBody _body;
@@ -66,7 +66,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         return this._attachments;
     }
     /**
-     * Gets the attachmentsArchive property value. The zip file of all attachments for a message.
+     * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         this._attachments = value;
     }
     /**
-     * Sets the attachmentsArchive property value. The zip file of all attachments for a message.
+     * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      * @param value Value to set for the attachmentsArchive property.
      * @return a void
      */

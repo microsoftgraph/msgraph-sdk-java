@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SocialIdentityProvider extends IdentityProviderBase implements Parsable {
-    /** The client identifier for the application obtained when registering the application with the identity provider. Required. */
+    /** The identifier for the client application obtained when registering the application with the identity provider. Required. */
     private String _clientId;
     /** The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required. */
     private String _clientSecret;
@@ -33,7 +33,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
         return new SocialIdentityProvider();
     }
     /**
-     * Gets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * Gets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
         writer.writeStringValue("identityProviderType", this.getIdentityProviderType());
     }
     /**
-     * Sets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * Sets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      * @param value Value to set for the clientId property.
      * @return a void
      */

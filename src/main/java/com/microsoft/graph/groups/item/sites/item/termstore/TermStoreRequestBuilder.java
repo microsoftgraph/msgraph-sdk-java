@@ -94,7 +94,7 @@ public class TermStoreRequestBuilder {
         return requestInfo;
     }
     /**
-     * The termStore under this site.
+     * The default termStore under this site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class TermStoreRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The termStore under this site.
+     * The default termStore under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * The termStore under this site.
+     * The default termStore under this site.
      * @return a CompletableFuture of store
      */
     public java.util.concurrent.CompletableFuture<Store> get() {
@@ -223,7 +223,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * The termStore under this site.
+     * The default termStore under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of store
      */
@@ -240,7 +240,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * The termStore under this site.
+     * The default termStore under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of store
@@ -351,7 +351,7 @@ public class TermStoreRequestBuilder {
         public TermStoreRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The termStore under this site. */
+    /** The default termStore under this site. */
     public class TermStoreRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

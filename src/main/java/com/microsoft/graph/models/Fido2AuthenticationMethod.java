@@ -13,7 +13,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     private String _aaGuid;
     /** The attestation certificate(s) attached to this security key. */
     private java.util.List<String> _attestationCertificates;
-    /** The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue. */
+    /** The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested. */
     private AttestationLevel _attestationLevel;
     /** The timestamp when this key was registered to the user. */
     private OffsetDateTime _createdDateTime;
@@ -56,7 +56,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this._attestationCertificates;
     }
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      * @return a attestationLevel
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         this._attestationCertificates = value;
     }
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      * @param value Value to set for the attestationLevel property.
      * @return a void
      */

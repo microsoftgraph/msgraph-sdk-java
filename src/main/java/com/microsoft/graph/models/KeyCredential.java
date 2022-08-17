@@ -18,9 +18,9 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _endDateTime;
-    /** Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null. */
+    /** The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null. */
     private byte[] _key;
-    /** The unique identifier for the key. */
+    /** The unique identifier (GUID) for the key. */
     private String _keyId;
     /** The OdataType property */
     private String _odataType;
@@ -100,7 +100,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         return this._key;
     }
     /**
-     * Gets the keyId property value. The unique identifier for the key.
+     * Gets the keyId property value. The unique identifier (GUID) for the key.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the key property value. Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -206,7 +206,7 @@ public class KeyCredential implements AdditionalDataHolder, Parsable {
         this._key = value;
     }
     /**
-     * Sets the keyId property value. The unique identifier for the key.
+     * Sets the keyId property value. The unique identifier (GUID) for the key.
      * @param value Value to set for the keyId property.
      * @return a void
      */

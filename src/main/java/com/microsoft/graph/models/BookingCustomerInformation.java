@@ -10,11 +10,11 @@ import java.util.Objects;
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
     /** The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable. */
     private String _customerId;
-    /** It consists of the list of custom questions and answers given by the customer as part of the appointment. */
+    /** It consists of the list of custom questions and answers given by the customer as part of the appointment */
     private java.util.List<BookingQuestionAnswer> _customQuestionAnswers;
-    /** The SMTP address of the bookingCustomer who is booking the appointment. */
+    /** The SMTP address of the bookingCustomer who is booking the appointment */
     private String _emailAddress;
-    /** Represents location information for the bookingCustomer who is booking the appointment. */
+    /** Represents location information for the bookingCustomer who is booking the appointment. */
     private Location _location;
     /** The customer's name. */
     private String _name;
@@ -51,7 +51,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         return this._customerId;
     }
     /**
-     * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      * @return a bookingQuestionAnswer
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         return this._customQuestionAnswers;
     }
     /**
-     * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
+     * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         }};
     }
     /**
-     * Gets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Gets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
      * @return a location
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this._customerId = value;
     }
     /**
-     * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      * @param value Value to set for the customQuestionAnswers property.
      * @return a void
      */
@@ -158,7 +158,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this._customQuestionAnswers = value;
     }
     /**
-     * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
+     * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
@@ -166,7 +166,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this._emailAddress = value;
     }
     /**
-     * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
      * @param value Value to set for the location property.
      * @return a void
      */

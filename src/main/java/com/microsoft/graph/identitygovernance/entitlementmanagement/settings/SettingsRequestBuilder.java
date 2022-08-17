@@ -80,7 +80,7 @@ public class SettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @return a CompletableFuture of entitlementManagementSettings
      */
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> get() {
@@ -209,7 +209,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of entitlementManagementSettings
      */
@@ -226,7 +226,7 @@ public class SettingsRequestBuilder {
         }
     }
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of entitlementManagementSettings
@@ -313,7 +313,7 @@ public class SettingsRequestBuilder {
         public SettingsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the settings that control the behavior of Azure AD entitlement management. */
+    /** The settings that control the behavior of Azure AD entitlement management. */
     public class SettingsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

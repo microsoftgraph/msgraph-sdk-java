@@ -90,7 +90,7 @@ public class OutlookRequestBuilder {
         return requestInfo;
     }
     /**
-     * Selective Outlook services available to the user. Read-only. Nullable.
+     * Get outlook from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -98,7 +98,7 @@ public class OutlookRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Selective Outlook services available to the user. Read-only. Nullable.
+     * Get outlook from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Selective Outlook services available to the user. Read-only. Nullable.
+     * Get outlook from me
      * @return a CompletableFuture of outlookUser
      */
     public java.util.concurrent.CompletableFuture<OutlookUser> get() {
@@ -219,7 +219,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Selective Outlook services available to the user. Read-only. Nullable.
+     * Get outlook from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookUser
      */
@@ -236,7 +236,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Selective Outlook services available to the user. Read-only. Nullable.
+     * Get outlook from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of outlookUser
@@ -361,7 +361,7 @@ public class OutlookRequestBuilder {
         public OutlookRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Selective Outlook services available to the user. Read-only. Nullable. */
+    /** Get outlook from me */
     public class OutlookRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

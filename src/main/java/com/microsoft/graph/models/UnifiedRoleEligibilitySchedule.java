@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
-    /** Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq). */
+    /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
     private String _memberType;
-    /** The schedule object of the eligible role assignment request. */
+    /** The period of the role eligibility. */
     private RequestSchedule _scheduleInfo;
     /**
-     * Instantiates a new UnifiedRoleEligibilitySchedule and sets the default values.
+     * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
      * @return a void
      */
     public UnifiedRoleEligibilitySchedule() {
@@ -23,7 +23,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleEligibilitySchedule
+     * @return a unifiedRoleEligibilitySchedule
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleEligibilitySchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         }};
     }
     /**
-     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * Gets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         return this._memberType;
     }
     /**
-     * Gets the scheduleInfo property value. The schedule object of the eligible role assignment request.
+     * Gets the scheduleInfo property value. The period of the role eligibility.
      * @return a requestSchedule
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
     }
     /**
-     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         this._memberType = value;
     }
     /**
-     * Sets the scheduleInfo property value. The schedule object of the eligible role assignment request.
+     * Sets the scheduleInfo property value. The period of the role eligibility.
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */

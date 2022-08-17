@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendeeBase extends Recipient implements Parsable {
-    /** The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type. */
+    /** The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type. */
     private AttendeeType _type;
     /**
      * Instantiates a new AttendeeBase and sets the default values.
@@ -47,7 +47,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @return a attendeeType
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @param value Value to set for the type property.
      * @return a void
      */

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The newPassword property */
+    /** The Azure AD-generated password. */
     private String _newPassword;
     /** The OdataType property */
     private String _odataType;
@@ -54,7 +54,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the newPassword property value. The newPassword property
+     * Gets the newPassword property value. The Azure AD-generated password.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the newPassword property value. The newPassword property
+     * Sets the newPassword property value. The Azure AD-generated password.
      * @param value Value to set for the newPassword property.
      * @return a void
      */

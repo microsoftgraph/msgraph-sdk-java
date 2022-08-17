@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of chat entities. */
 public class TeamworkHostedContent extends Entity implements Parsable {
     /** Write only. Bytes for the hosted content (such as images). */
     private byte[] _contentBytes;
-    /** Write only. Content type, such as image/png, image/jpg. */
+    /** Write only. Content type. sicj as image/png, image/jpg. */
     private String _contentType;
     /**
      * Instantiates a new teamworkHostedContent and sets the default values.
@@ -47,7 +47,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
         return this._contentBytes;
     }
     /**
-     * Gets the contentType property value. Write only. Content type, such as image/png, image/jpg.
+     * Gets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
         this._contentBytes = value;
     }
     /**
-     * Sets the contentType property value. Write only. Content type, such as image/png, image/jpg.
+     * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
      * @param value Value to set for the contentType property.
      * @return a void
      */

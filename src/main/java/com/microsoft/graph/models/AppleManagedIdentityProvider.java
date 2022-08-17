@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
-    /** The certificate data which is a long string of text from the certificate, can be null. */
+    /** The certificate data, which is a long string of text from the certificate. Can be null. */
     private String _certificateData;
     /** The Apple developer identifier. Required. */
     private String _developerId;
@@ -35,7 +35,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
         return new AppleManagedIdentityProvider();
     }
     /**
-     * Gets the certificateData property value. The certificate data which is a long string of text from the certificate, can be null.
+     * Gets the certificateData property value. The certificate data, which is a long string of text from the certificate. Can be null.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
         writer.writeStringValue("serviceId", this.getServiceId());
     }
     /**
-     * Sets the certificateData property value. The certificate data which is a long string of text from the certificate, can be null.
+     * Sets the certificateData property value. The certificate data, which is a long string of text from the certificate. Can be null.
      * @param value Value to set for the certificateData property.
      * @return a void
      */

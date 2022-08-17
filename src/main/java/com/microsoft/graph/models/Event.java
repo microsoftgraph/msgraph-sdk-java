@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Event extends OutlookItem implements Parsable {
-    /** true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true. */
+    /** true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true. */
     private Boolean _allowNewTimeProposals;
     /** The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable. */
     private java.util.List<Attachment> _attachments;
@@ -112,7 +112,7 @@ public class Event extends OutlookItem implements Parsable {
         return new Event();
     }
     /**
-     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -551,7 +551,7 @@ public class Event extends OutlookItem implements Parsable {
         writer.writeStringValue("webLink", this.getWebLink());
     }
     /**
-     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      * @param value Value to set for the allowNewTimeProposals property.
      * @return a void
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookNamedItem extends Entity implements Parsable {
     /** Represents the comment associated with this name. */
     private String _comment;
@@ -15,7 +15,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     private String _name;
     /** Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only. */
     private String _scope;
-    /** Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only. */
+    /** Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only. */
     private String _type;
     /** Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
     private Json _value;
@@ -83,7 +83,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         return this._scope;
     }
     /**
-     * Gets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         this._scope = value;
     }
     /**
-     * Sets the type property value. Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @param value Value to set for the type property.
      * @return a void
      */

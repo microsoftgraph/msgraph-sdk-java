@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
-    /** Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
+    /** Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
     private UserFlowApiConnectorConfiguration _apiConnectorConfiguration;
     /** The identity providers included in the user flow. */
     private java.util.List<IdentityProvider> _identityProviders;
-    /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows. */
+    /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows. */
     private java.util.List<UserFlowLanguageConfiguration> _languages;
     /** The user attribute assignments included in the user flow. */
     private java.util.List<IdentityUserFlowAttributeAssignment> _userAttributeAssignments;
@@ -37,7 +37,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return new B2xIdentityUserFlow();
     }
     /**
-     * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a userFlowApiConnectorConfiguration
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return this._identityProviders;
     }
     /**
-     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @return a userFlowLanguageConfiguration
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         writer.writeCollectionOfObjectValues("userFlowIdentityProviders", this.getUserFlowIdentityProviders());
     }
     /**
-     * Sets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Sets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param value Value to set for the apiConnectorConfiguration property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this._identityProviders = value;
     }
     /**
-     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @param value Value to set for the languages property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ThreatAssessmentRequest extends Entity implements Parsable {
     /** The category property */
     private ThreatCategory _category;
@@ -20,7 +20,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** The expectedAssessment property */
     private ThreatExpectedAssessment _expectedAssessment;
-    /** The source of the threat assessment request. Possible values are: user, administrator. */
+    /** The source of the threat assessment request. Possible values are: administrator. */
     private ThreatAssessmentRequestSource _requestSource;
     /** A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it. */
     private java.util.List<ThreatAssessmentResult> _results;
@@ -113,7 +113,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
+     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      * @return a threatAssessmentRequestSource
      */
     @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         this._expectedAssessment = value;
     }
     /**
-     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: user, administrator.
+     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      * @param value Value to set for the requestSource property.
      * @return a void
      */

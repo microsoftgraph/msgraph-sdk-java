@@ -9,39 +9,39 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrgContact extends DirectoryObject implements Parsable {
-    /** Postal addresses for this organizational contact. For now a contact can only have one physical address. */
+    /** The addresses property */
     private java.util.List<PhysicalOfficeAddress> _addresses;
-    /** Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The companyName property */
     private String _companyName;
-    /** The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The department property */
     private String _department;
-    /** The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand. */
+    /** The directReports property */
     private java.util.List<DirectoryObject> _directReports;
-    /** Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /** The displayName property */
     private String _displayName;
-    /** First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The givenName property */
     private String _givenName;
-    /** Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The jobTitle property */
     private String _jobTitle;
-    /** The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The mail property */
     private String _mail;
-    /** Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The mailNickname property */
     private String _mailNickname;
-    /** The user or contact that is this contact's manager. Read-only. Supports $expand. */
+    /** The manager property */
     private DirectoryObject _manager;
-    /** Groups that this contact is a member of. Read-only. Nullable. Supports $expand. */
+    /** The memberOf property */
     private java.util.List<DirectoryObject> _memberOf;
-    /** Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in). */
+    /** The onPremisesLastSyncDateTime property */
     private OffsetDateTime _onPremisesLastSyncDateTime;
-    /** List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not). */
+    /** The onPremisesProvisioningErrors property */
     private java.util.List<OnPremisesProvisioningError> _onPremisesProvisioningErrors;
-    /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values). */
+    /** The onPremisesSyncEnabled property */
     private Boolean _onPremisesSyncEnabled;
-    /** List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in). */
+    /** The phones property */
     private java.util.List<Phone> _phones;
-    /** For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
+    /** The proxyAddresses property */
     private java.util.List<String> _proxyAddresses;
-    /** Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) */
+    /** The surname property */
     private String _surname;
     /** The transitiveMemberOf property */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
@@ -64,7 +64,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return new OrgContact();
     }
     /**
-     * Gets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
+     * Gets the addresses property value. The addresses property
      * @return a physicalOfficeAddress
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._addresses;
     }
     /**
-     * Gets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the companyName property value. The companyName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._companyName;
     }
     /**
-     * Gets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the department property value. The department property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._department;
     }
     /**
-     * Gets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
+     * Gets the directReports property value. The directReports property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._directReports;
     }
     /**
-     * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. The displayName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         }};
     }
     /**
-     * Gets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the givenName property value. The givenName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._givenName;
     }
     /**
-     * Gets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the jobTitle property value. The jobTitle property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._jobTitle;
     }
     /**
-     * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mail property value. The mail property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._mail;
     }
     /**
-     * Gets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mailNickname property value. The mailNickname property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._mailNickname;
     }
     /**
-     * Gets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Gets the manager property value. The manager property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._manager;
     }
     /**
-     * Gets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+     * Gets the memberOf property value. The memberOf property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -180,7 +180,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._memberOf;
     }
     /**
-     * Gets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
+     * Gets the onPremisesLastSyncDateTime property value. The onPremisesLastSyncDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._onPremisesLastSyncDateTime;
     }
     /**
-     * Gets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not).
+     * Gets the onPremisesProvisioningErrors property value. The onPremisesProvisioningErrors property
      * @return a onPremisesProvisioningError
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._onPremisesProvisioningErrors;
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the onPremisesSyncEnabled property value. The onPremisesSyncEnabled property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -204,7 +204,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._onPremisesSyncEnabled;
     }
     /**
-     * Gets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
+     * Gets the phones property value. The phones property
      * @return a phone
      */
     @javax.annotation.Nullable
@@ -212,7 +212,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._phones;
     }
     /**
-     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Gets the proxyAddresses property value. The proxyAddresses property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._proxyAddresses;
     }
     /**
-     * Gets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * Gets the surname property value. The surname property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -263,7 +263,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
     }
     /**
-     * Sets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
+     * Sets the addresses property value. The addresses property
      * @param value Value to set for the addresses property.
      * @return a void
      */
@@ -271,7 +271,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._addresses = value;
     }
     /**
-     * Sets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the companyName property value. The companyName property
      * @param value Value to set for the companyName property.
      * @return a void
      */
@@ -279,7 +279,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._companyName = value;
     }
     /**
-     * Sets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the department property value. The department property
      * @param value Value to set for the department property.
      * @return a void
      */
@@ -287,7 +287,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._department = value;
     }
     /**
-     * Sets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
+     * Sets the directReports property value. The directReports property
      * @param value Value to set for the directReports property.
      * @return a void
      */
@@ -295,7 +295,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._directReports = value;
     }
     /**
-     * Sets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -303,7 +303,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the givenName property value. The givenName property
      * @param value Value to set for the givenName property.
      * @return a void
      */
@@ -311,7 +311,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._givenName = value;
     }
     /**
-     * Sets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the jobTitle property value. The jobTitle property
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
@@ -319,7 +319,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._jobTitle = value;
     }
     /**
-     * Sets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mail property value. The mail property
      * @param value Value to set for the mail property.
      * @return a void
      */
@@ -327,7 +327,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._mail = value;
     }
     /**
-     * Sets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
@@ -335,7 +335,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._mailNickname = value;
     }
     /**
-     * Sets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Sets the manager property value. The manager property
      * @param value Value to set for the manager property.
      * @return a void
      */
@@ -343,7 +343,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._manager = value;
     }
     /**
-     * Sets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+     * Sets the memberOf property value. The memberOf property
      * @param value Value to set for the memberOf property.
      * @return a void
      */
@@ -351,7 +351,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._memberOf = value;
     }
     /**
-     * Sets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
+     * Sets the onPremisesLastSyncDateTime property value. The onPremisesLastSyncDateTime property
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
@@ -359,7 +359,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._onPremisesLastSyncDateTime = value;
     }
     /**
-     * Sets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not).
+     * Sets the onPremisesProvisioningErrors property value. The onPremisesProvisioningErrors property
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
@@ -367,7 +367,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._onPremisesProvisioningErrors = value;
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the onPremisesSyncEnabled property value. The onPremisesSyncEnabled property
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
@@ -375,7 +375,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._onPremisesSyncEnabled = value;
     }
     /**
-     * Sets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
+     * Sets the phones property value. The phones property
      * @param value Value to set for the phones property.
      * @return a void
      */
@@ -383,7 +383,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._phones = value;
     }
     /**
-     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Sets the proxyAddresses property value. The proxyAddresses property
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
@@ -391,7 +391,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._proxyAddresses = value;
     }
     /**
-     * Sets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)
+     * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
      * @return a void
      */

@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of chat entities. */
 public class TeamsTab extends Entity implements Parsable {
     /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
     private TeamsTabConfiguration _configuration;
     /** Name of the tab. */
     private String _displayName;
-    /** The application that is linked to the tab. */
+    /** The application that is linked to the tab. This cannot be changed after tab creation. */
     private TeamsApp _teamsApp;
     /** Deep link URL of the tab instance. Read only. */
     private String _webUrl;
@@ -66,7 +66,7 @@ public class TeamsTab extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the teamsApp property value. The application that is linked to the tab.
+     * Gets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      * @return a teamsApp
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class TeamsTab extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the teamsApp property value. The application that is linked to the tab.
+     * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      * @param value Value to set for the teamsApp property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class BucketsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class BucketsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class BucketsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @return a CompletableFuture of PlannerBucketCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerBucketCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class BucketsRequestBuilder {
         }
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerBucketCollectionResponse
      */
@@ -155,7 +155,7 @@ public class BucketsRequestBuilder {
         }
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerBucketCollectionResponse
@@ -227,7 +227,7 @@ public class BucketsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Collection of buckets in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of buckets in the plan. */
     public class BucketsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

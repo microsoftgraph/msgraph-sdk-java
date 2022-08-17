@@ -11,13 +11,13 @@ import java.util.Objects;
 public class TeamSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Count of guests in a team. */
+    /** The guestsCount property */
     private Integer _guestsCount;
-    /** Count of members in a team. */
+    /** The membersCount property */
     private Integer _membersCount;
     /** The OdataType property */
     private String _odataType;
-    /** Count of owners in a team. */
+    /** The ownersCount property */
     private Integer _ownersCount;
     /**
      * Instantiates a new teamSummary and sets the default values.
@@ -60,7 +60,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the guestsCount property value. Count of guests in a team.
+     * Gets the guestsCount property value. The guestsCount property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         return this._guestsCount;
     }
     /**
-     * Gets the membersCount property value. Count of members in a team.
+     * Gets the membersCount property value. The membersCount property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the ownersCount property value. Count of owners in a team.
+     * Gets the ownersCount property value. The ownersCount property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the guestsCount property value. Count of guests in a team.
+     * Sets the guestsCount property value. The guestsCount property
      * @param value Value to set for the guestsCount property.
      * @return a void
      */
@@ -121,7 +121,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         this._guestsCount = value;
     }
     /**
-     * Sets the membersCount property value. Count of members in a team.
+     * Sets the membersCount property value. The membersCount property
      * @param value Value to set for the membersCount property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the ownersCount property value. Count of owners in a team.
+     * Sets the ownersCount property value. The ownersCount property
      * @param value Value to set for the ownersCount property.
      * @return a void
      */

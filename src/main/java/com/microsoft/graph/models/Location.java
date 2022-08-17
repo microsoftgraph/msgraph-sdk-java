@@ -19,7 +19,7 @@ public class Location implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Optional email address of the location. */
     private String _locationEmailAddress;
-    /** The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
+    /** The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
     private LocationType _locationType;
     /** Optional URI representing the location. */
     private String _locationUri;
@@ -114,7 +114,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._locationEmailAddress;
     }
     /**
-     * Gets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @return a locationType
      */
     @javax.annotation.Nullable
@@ -212,7 +212,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._locationEmailAddress = value;
     }
     /**
-     * Sets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
      * @return a void
      */

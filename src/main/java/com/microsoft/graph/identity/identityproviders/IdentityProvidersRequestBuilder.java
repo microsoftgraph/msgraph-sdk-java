@@ -68,7 +68,7 @@ public class IdentityProvidersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class IdentityProvidersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class IdentityProvidersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IdentityProviderBaseCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
      */
@@ -164,7 +164,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
@@ -236,7 +236,7 @@ public class IdentityProvidersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents entry point for identity provider base. */
+    /** Get identityProviders from identity */
     public class IdentityProvidersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

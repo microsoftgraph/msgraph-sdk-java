@@ -86,7 +86,7 @@ public class PlaceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
+     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class PlaceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
+     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
+     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
      * @return a CompletableFuture of place
      */
     public java.util.concurrent.CompletableFuture<Place> get() {
@@ -215,7 +215,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
+     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of place
      */
@@ -232,7 +232,7 @@ public class PlaceItemRequestBuilder {
         }
     }
     /**
-     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
+     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of place
@@ -319,7 +319,7 @@ public class PlaceItemRequestBuilder {
         public PlaceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.  */
+    /** Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. */
     public class PlaceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

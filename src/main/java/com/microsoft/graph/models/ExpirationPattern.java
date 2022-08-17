@@ -19,7 +19,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _endDateTime;
     /** The OdataType property */
     private String _odataType;
-    /** The requestor's desired expiration pattern type. */
+    /** The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration. */
     private ExpirationPatternType _type;
     /**
      * Instantiates a new expirationPattern and sets the default values.
@@ -86,7 +86,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the type property value. The requestor's desired expiration pattern type.
+     * Gets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @return a expirationPatternType
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class ExpirationPattern implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the type property value. The requestor's desired expiration pattern type.
+     * Sets the type property value. The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
      * @param value Value to set for the type property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemAttachment extends Attachment implements Parsable {
-    /** The attached contact, message or event. Navigation property. */
+    /** The attached message or event. Navigation property. */
     private OutlookItem _item;
     /**
      * Instantiates a new ItemAttachment and sets the default values.
@@ -40,7 +40,7 @@ public class ItemAttachment extends Attachment implements Parsable {
         }};
     }
     /**
-     * Gets the item property value. The attached contact, message or event. Navigation property.
+     * Gets the item property value. The attached message or event. Navigation property.
      * @return a outlookItem
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class ItemAttachment extends Attachment implements Parsable {
         writer.writeObjectValue("item", this.getItem());
     }
     /**
-     * Sets the item property value. The attached contact, message or event. Navigation property.
+     * Sets the item property value. The attached message or event. Navigation property.
      * @param value Value to set for the item property.
      * @return a void
      */

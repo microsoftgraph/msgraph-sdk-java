@@ -11,7 +11,7 @@ import java.util.Objects;
 public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Set of tasks that can be performed on a resource. */
+    /** Set of tasks that can be performed on a resource. Required. */
     private java.util.List<String> _allowedResourceActions;
     /** Optional constraints that must be met for the permission to be effective. */
     private String _condition;
@@ -46,7 +46,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource.
+     * Gets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource.
+     * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      * @param value Value to set for the allowedResourceActions property.
      * @return a void
      */

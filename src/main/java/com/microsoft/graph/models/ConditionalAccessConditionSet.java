@@ -25,13 +25,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     private String _odataType;
     /** Platforms included in and excluded from the policy. */
     private ConditionalAccessPlatforms _platforms;
-    /** Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue. */
+    /** The servicePrincipalRiskLevels property */
     private java.util.List<String> _servicePrincipalRiskLevels;
     /** Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
     private java.util.List<String> _signInRiskLevels;
     /** User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
     private java.util.List<String> _userRiskLevels;
-    /** Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required. */
+    /** Users, groups, and roles included in and excluded from the policy. Required. */
     private ConditionalAccessUsers _users;
     /**
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
@@ -137,7 +137,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return this._platforms;
     }
     /**
-     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Gets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         return this._userRiskLevels;
     }
     /**
-     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      * @return a conditionalAccessUsers
      */
     @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         this._platforms = value;
     }
     /**
-     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Sets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
      * @param value Value to set for the servicePrincipalRiskLevels property.
      * @return a void
      */
@@ -277,7 +277,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
         this._userRiskLevels = value;
     }
     /**
-     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      * @param value Value to set for the users property.
      * @return a void
      */

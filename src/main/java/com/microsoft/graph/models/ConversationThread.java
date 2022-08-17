@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
     private java.util.List<Recipient> _ccRecipients;
@@ -16,7 +16,7 @@ public class ConversationThread extends Entity implements Parsable {
     private Boolean _hasAttachments;
     /** Indicates if the thread is locked. Returned by default. */
     private Boolean _isLocked;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default. */
     private OffsetDateTime _lastDeliveredDateTime;
     /** The posts property */
     private java.util.List<Post> _posts;
@@ -90,7 +90,7 @@ public class ConversationThread extends Entity implements Parsable {
         return this._isLocked;
     }
     /**
-     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -180,7 +180,7 @@ public class ConversationThread extends Entity implements Parsable {
         this._isLocked = value;
     }
     /**
-     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      * @param value Value to set for the lastDeliveredDateTime property.
      * @return a void
      */

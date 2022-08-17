@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Person extends Entity implements Parsable {
     /** The person's birthday. */
     private String _birthday;
@@ -29,7 +29,7 @@ public class Person extends Entity implements Parsable {
     private String _officeLocation;
     /** Free-form notes that the user has taken about this person. */
     private String _personNotes;
-    /** The type of person, for example distribution list. */
+    /** The type of person. */
     private PersonType _personType;
     /** The person's phone numbers. */
     private java.util.List<Phone> _phones;
@@ -175,7 +175,7 @@ public class Person extends Entity implements Parsable {
         return this._personNotes;
     }
     /**
-     * Gets the personType property value. The type of person, for example distribution list.
+     * Gets the personType property value. The type of person.
      * @return a personType
      */
     @javax.annotation.Nullable
@@ -355,7 +355,7 @@ public class Person extends Entity implements Parsable {
         this._personNotes = value;
     }
     /**
-     * Sets the personType property value. The type of person, for example distribution list.
+     * Sets the personType property value. The type of person.
      * @param value Value to set for the personType property.
      * @return a void
      */

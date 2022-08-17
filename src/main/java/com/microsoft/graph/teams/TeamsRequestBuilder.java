@@ -60,7 +60,7 @@ public class TeamsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List all teams in an organization.
+     * Retrieve the properties and relationships of the specified team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TeamsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List all teams in an organization.
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class TeamsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List all teams in an organization.
+     * Retrieve the properties and relationships of the specified team.
      * @return a CompletableFuture of TeamCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get() {
@@ -139,7 +139,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * List all teams in an organization.
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamCollectionResponse
      */
@@ -156,7 +156,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * List all teams in an organization.
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TeamCollectionResponse
@@ -236,7 +236,7 @@ public class TeamsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List all teams in an organization. */
+    /** Retrieve the properties and relationships of the specified team. */
     public class TeamsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -12,7 +12,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     private java.util.List<WorkbookSortField> _fields;
     /** Represents whether the casing impacted the last sort of the table. Read-only. */
     private Boolean _matchCase;
-    /** Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only. */
+    /** Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only. */
     private String _method;
     /**
      * Instantiates a new workbookTableSort and sets the default values.
@@ -62,7 +62,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         return this._matchCase;
     }
     /**
-     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * Gets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
         this._matchCase = value;
     }
     /**
-     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      * @param value Value to set for the method property.
      * @return a void
      */

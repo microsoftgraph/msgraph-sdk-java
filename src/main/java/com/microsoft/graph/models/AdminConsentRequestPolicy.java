@@ -16,7 +16,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     private Boolean _remindersEnabled;
     /** Specifies the duration the request is active before it automatically expires if no decision is applied. */
     private Integer _requestDurationInDays;
-    /** Required. */
+    /** The list of reviewers for the admin consent. Required. */
     private java.util.List<AccessReviewReviewerScope> _reviewers;
     /** Specifies the version of this policy. When the policy is updated, this version is updated. Read-only. */
     private Integer _version;
@@ -87,7 +87,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
         return this._requestDurationInDays;
     }
     /**
-     * Gets the reviewers property value. Required.
+     * Gets the reviewers property value. The list of reviewers for the admin consent. Required.
      * @return a accessReviewReviewerScope
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
         this._requestDurationInDays = value;
     }
     /**
-     * Sets the reviewers property value. Required.
+     * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
      * @param value Value to set for the reviewers property.
      * @return a void
      */

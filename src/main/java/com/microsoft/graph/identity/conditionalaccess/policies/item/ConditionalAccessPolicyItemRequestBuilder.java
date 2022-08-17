@@ -80,7 +80,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @return a CompletableFuture of conditionalAccessPolicy
      */
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get() {
@@ -209,7 +209,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
      */
@@ -226,7 +226,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of conditionalAccessPolicy
@@ -313,7 +313,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         public ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. Returns a collection of the specified Conditional Access policies. */
+    /** Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
     public class ConditionalAccessPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

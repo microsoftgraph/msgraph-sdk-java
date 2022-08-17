@@ -92,7 +92,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @return a CompletableFuture of phoneAuthenticationMethod
      */
     public java.util.concurrent.CompletableFuture<PhoneAuthenticationMethod> get() {
@@ -221,7 +221,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of phoneAuthenticationMethod
      */
@@ -238,7 +238,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the phone registered to a user for authentication.
+     * The phone numbers registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of phoneAuthenticationMethod
@@ -325,7 +325,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder {
         public PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the phone registered to a user for authentication. */
+    /** The phone numbers registered to a user for authentication. */
     public class PhoneAuthenticationMethodItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -17,7 +17,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> _includeTargets;
     /** The OdataType property */
     private String _odataType;
-    /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt. */
+    /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt. */
     private Integer _snoozeDurationInDays;
     /** The state property */
     private AdvancedConfigState _state;
@@ -87,7 +87,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return this._odataType;
     }
     /**
-     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         this._odataType = value;
     }
     /**
-     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
      * @param value Value to set for the snoozeDurationInDays property.
      * @return a void
      */

@@ -32,9 +32,9 @@ public class PolicyRoot extends Entity implements Parsable {
     private IdentitySecurityDefaultsEnforcementPolicy _identitySecurityDefaultsEnforcementPolicy;
     /** The policy that specifies the conditions under which consent can be granted. */
     private java.util.List<PermissionGrantPolicy> _permissionGrantPolicies;
-    /** Represents the role management policies. */
+    /** Specifies the various policies associated with scopes and roles. */
     private java.util.List<UnifiedRoleManagementPolicy> _roleManagementPolicies;
-    /** Represents the role management policy assignments. */
+    /** The assignment of a role management policy to a role definition object. */
     private java.util.List<UnifiedRoleManagementPolicyAssignment> _roleManagementPolicyAssignments;
     /** The policy that specifies the characteristics of SAML tokens issued by Azure AD. */
     private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
@@ -181,7 +181,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this._permissionGrantPolicies;
     }
     /**
-     * Gets the roleManagementPolicies property value. Represents the role management policies.
+     * Gets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      * @return a unifiedRoleManagementPolicy
      */
     @javax.annotation.Nullable
@@ -189,7 +189,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this._roleManagementPolicies;
     }
     /**
-     * Gets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     * Gets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      * @return a unifiedRoleManagementPolicyAssignment
      */
     @javax.annotation.Nullable
@@ -334,7 +334,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this._permissionGrantPolicies = value;
     }
     /**
-     * Sets the roleManagementPolicies property value. Represents the role management policies.
+     * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
      * @param value Value to set for the roleManagementPolicies property.
      * @return a void
      */
@@ -342,7 +342,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this._roleManagementPolicies = value;
     }
     /**
-     * Sets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
+     * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
      * @param value Value to set for the roleManagementPolicyAssignments property.
      * @return a void
      */

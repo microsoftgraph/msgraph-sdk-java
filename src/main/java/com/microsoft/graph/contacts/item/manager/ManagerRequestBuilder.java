@@ -52,7 +52,7 @@ public class ManagerRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Get manager from contacts
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ManagerRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Get manager from contacts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class ManagerRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Get manager from contacts
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -98,7 +98,7 @@ public class ManagerRequestBuilder {
         }
     }
     /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Get manager from contacts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -115,7 +115,7 @@ public class ManagerRequestBuilder {
         }
     }
     /**
-     * The user or contact that is this contact's manager. Read-only. Supports $expand.
+     * Get manager from contacts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -132,7 +132,7 @@ public class ManagerRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The user or contact that is this contact's manager. Read-only. Supports $expand. */
+    /** Get manager from contacts */
     public class ManagerRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

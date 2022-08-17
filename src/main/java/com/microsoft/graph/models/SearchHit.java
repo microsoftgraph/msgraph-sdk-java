@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SearchHit implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The name of the content source which the externalItem is part of . */
+    /** The name of the content source that the externalItem is part of. */
     private String _contentSource;
     /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
     private String _hitId;
@@ -21,7 +21,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     private Integer _rank;
     /** The resource property */
     private Entity _resource;
-    /** ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well. */
+    /** ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse. */
     private String _resultTemplateId;
     /** A summary of the result, if a summary is available. */
     private String _summary;
@@ -52,7 +52,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the contentSource property value. The name of the content source which the externalItem is part of .
+     * Gets the contentSource property value. The name of the content source that the externalItem is part of.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return this._resource;
     }
     /**
-     * Gets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Gets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the contentSource property value. The name of the content source which the externalItem is part of .
+     * Sets the contentSource property value. The name of the content source that the externalItem is part of.
      * @param value Value to set for the contentSource property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this._resource = value;
     }
     /**
-     * Sets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      * @param value Value to set for the resultTemplateId property.
      * @return a void
      */

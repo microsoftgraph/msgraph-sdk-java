@@ -77,7 +77,7 @@ public class PermissionGrantsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class PermissionGrantsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class PermissionGrantsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
@@ -156,7 +156,7 @@ public class PermissionGrantsRequestBuilder {
         }
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
      */
@@ -173,7 +173,7 @@ public class PermissionGrantsRequestBuilder {
         }
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
@@ -245,7 +245,7 @@ public class PermissionGrantsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The permissions that have been granted for a group to a specific application. Supports $expand. */
+    /** The permission that has been granted for a group to a specific application. Supports $expand. */
     public class PermissionGrantsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

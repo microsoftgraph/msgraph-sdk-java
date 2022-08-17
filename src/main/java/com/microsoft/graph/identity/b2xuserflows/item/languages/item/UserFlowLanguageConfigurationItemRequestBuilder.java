@@ -92,7 +92,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         }
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @return a CompletableFuture of userFlowLanguageConfiguration
      */
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> get() {
@@ -233,7 +233,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         }
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userFlowLanguageConfiguration
      */
@@ -250,7 +250,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         }
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userFlowLanguageConfiguration
@@ -349,7 +349,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         public UserFlowLanguageConfigurationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows. */
+    /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows. */
     public class UserFlowLanguageConfigurationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

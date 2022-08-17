@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSettings extends Entity implements Parsable {
-    /** Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center. */
+    /** The contributionToContentDiscoveryAsOrganizationDisabled property */
     private Boolean _contributionToContentDiscoveryAsOrganizationDisabled;
-    /** When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve. */
+    /** The contributionToContentDiscoveryDisabled property */
     private Boolean _contributionToContentDiscoveryDisabled;
-    /** The shift preferences for the user. */
+    /** The shiftPreferences property */
     private ShiftPreferences _shiftPreferences;
     /**
      * Instantiates a new userSettings and sets the default values.
@@ -33,7 +33,7 @@ public class UserSettings extends Entity implements Parsable {
         return new UserSettings();
     }
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class UserSettings extends Entity implements Parsable {
         return this._contributionToContentDiscoveryAsOrganizationDisabled;
     }
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Gets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class UserSettings extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the shiftPreferences property value. The shift preferences for the user.
+     * Gets the shiftPreferences property value. The shiftPreferences property
      * @return a shiftPreferences
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
     }
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class UserSettings extends Entity implements Parsable {
         this._contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      * @return a void
      */
@@ -98,7 +98,7 @@ public class UserSettings extends Entity implements Parsable {
         this._contributionToContentDiscoveryDisabled = value;
     }
     /**
-     * Sets the shiftPreferences property value. The shift preferences for the user.
+     * Sets the shiftPreferences property value. The shiftPreferences property
      * @param value Value to set for the shiftPreferences property.
      * @return a void
      */

@@ -3,7 +3,7 @@ package microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public enum DataSourceScopes implements ValuedEnum {
     None("none"),
     AllTenantMailboxes("allTenantMailboxes"),

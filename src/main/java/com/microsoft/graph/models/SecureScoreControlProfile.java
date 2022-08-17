@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class SecureScoreControlProfile extends Entity implements Parsable {
     /** Control action type (Config, Review, Behavior). */
     private String _actionType;
@@ -15,11 +16,11 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private String _actionUrl;
     /** GUID string for tenant ID. */
     private String _azureTenantId;
-    /** The collection of compliance information associated with secure score control */
+    /** The complianceInformation property */
     private java.util.List<ComplianceInformation> _complianceInformation;
-    /** Control action category (Account, Data, Device, Apps, Infrastructure). */
+    /** Control action category (Identity, Data, Device, Apps, Infrastructure). */
     private String _controlCategory;
-    /** Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update). */
+    /** The controlStateUpdates property */
     private java.util.List<SecureScoreControlStateUpdate> _controlStateUpdates;
     /** Flag to indicate if a control is depreciated. */
     private Boolean _deprecated;
@@ -27,7 +28,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private String _implementationCost;
     /** Time at which the control profile entity was last modified. The Timestamp type represents date and time */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Current obtained max score on specified date. */
+    /** max attainable score for the control. */
     private Double _maxScore;
     /** Microsoft's stack ranking of control. */
     private Integer _rank;
@@ -37,18 +38,18 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private String _remediationImpact;
     /** Service that owns the control (Exchange, Sharepoint, Azure AD). */
     private String _service;
-    /** List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing). */
+    /** List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage, */
     private java.util.List<String> _threats;
-    /** Control tier (Core, Defense in Depth, Advanced.) */
+    /** The tier property */
     private String _tier;
     /** Title of the control. */
     private String _title;
-    /** User impact of implementing control (low, moderate, high). */
+    /** The userImpact property */
     private String _userImpact;
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new SecureScoreControlProfile and sets the default values.
+     * Instantiates a new secureScoreControlProfile and sets the default values.
      * @return a void
      */
     public SecureScoreControlProfile() {
@@ -58,7 +59,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScoreControlProfile
+     * @return a secureScoreControlProfile
      */
     @javax.annotation.Nonnull
     public static SecureScoreControlProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +91,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._azureTenantId;
     }
     /**
-     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Gets the complianceInformation property value. The complianceInformation property
      * @return a complianceInformation
      */
     @javax.annotation.Nullable
@@ -98,7 +99,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._complianceInformation;
     }
     /**
-     * Gets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
+     * Gets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +107,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._controlCategory;
     }
     /**
-     * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Gets the controlStateUpdates property value. The controlStateUpdates property
      * @return a secureScoreControlStateUpdate
      */
     @javax.annotation.Nullable
@@ -167,7 +168,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the maxScore property value. Current obtained max score on specified date.
+     * Gets the maxScore property value. max attainable score for the control.
      * @return a double
      */
     @javax.annotation.Nullable
@@ -207,7 +208,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._service;
     }
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      * @return a string
      */
     @javax.annotation.Nullable
@@ -215,7 +216,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._threats;
     }
     /**
-     * Gets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
+     * Gets the tier property value. The tier property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -231,7 +232,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this._title;
     }
     /**
-     * Gets the userImpact property value. User impact of implementing control (low, moderate, high).
+     * Gets the userImpact property value. The userImpact property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -299,7 +300,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._azureTenantId = value;
     }
     /**
-     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Sets the complianceInformation property value. The complianceInformation property
      * @param value Value to set for the complianceInformation property.
      * @return a void
      */
@@ -307,7 +308,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._complianceInformation = value;
     }
     /**
-     * Sets the controlCategory property value. Control action category (Account, Data, Device, Apps, Infrastructure).
+     * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
      * @param value Value to set for the controlCategory property.
      * @return a void
      */
@@ -315,7 +316,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._controlCategory = value;
     }
     /**
-     * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Sets the controlStateUpdates property value. The controlStateUpdates property
      * @param value Value to set for the controlStateUpdates property.
      * @return a void
      */
@@ -347,7 +348,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the maxScore property value. Current obtained max score on specified date.
+     * Sets the maxScore property value. max attainable score for the control.
      * @param value Value to set for the maxScore property.
      * @return a void
      */
@@ -387,7 +388,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._service = value;
     }
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      * @param value Value to set for the threats property.
      * @return a void
      */
@@ -395,7 +396,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._threats = value;
     }
     /**
-     * Sets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
+     * Sets the tier property value. The tier property
      * @param value Value to set for the tier property.
      * @return a void
      */
@@ -411,7 +412,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this._title = value;
     }
     /**
-     * Sets the userImpact property value. User impact of implementing control (low, moderate, high).
+     * Sets the userImpact property value. The userImpact property
      * @param value Value to set for the userImpact property.
      * @return a void
      */

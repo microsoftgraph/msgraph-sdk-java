@@ -11,11 +11,11 @@ import java.util.Objects;
 public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Information of the meeting attendees. */
+    /** The attendees property */
     private java.util.List<MeetingParticipantInfo> _attendees;
     /** The OdataType property */
     private String _odataType;
-    /** Information of the meeting organizer. */
+    /** The organizer property */
     private MeetingParticipantInfo _organizer;
     /**
      * Instantiates a new meetingParticipants and sets the default values.
@@ -44,7 +44,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the attendees property value. Information of the meeting attendees.
+     * Gets the attendees property value. The attendees property
      * @return a meetingParticipantInfo
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the organizer property value. Information of the meeting organizer.
+     * Gets the organizer property value. The organizer property
      * @return a meetingParticipantInfo
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the attendees property value. Information of the meeting attendees.
+     * Sets the attendees property value. The attendees property
      * @param value Value to set for the attendees property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the organizer property value. Information of the meeting organizer.
+     * Sets the organizer property value. The organizer property
      * @param value Value to set for the organizer property.
      * @return a void
      */

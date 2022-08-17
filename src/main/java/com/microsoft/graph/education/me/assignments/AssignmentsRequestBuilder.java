@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class AssignmentsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
      */
@@ -164,7 +164,7 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
@@ -236,7 +236,7 @@ public class AssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List of assignments for the user. Nullable. */
+    /** Assignments belonging to the user. */
     public class AssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

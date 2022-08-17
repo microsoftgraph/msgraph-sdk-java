@@ -14,11 +14,11 @@ public class Calendar extends Entity implements Parsable {
     private java.util.List<CalendarPermission> _calendarPermissions;
     /** The calendar view for the calendar. Navigation property. Read-only. */
     private java.util.List<Event> _calendarView;
-    /** true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only. */
+    /** true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access. */
     private Boolean _canEdit;
-    /** true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only. */
+    /** true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. */
     private Boolean _canShare;
-    /** true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only. */
+    /** true if the user can read calendar items that have been marked private, false otherwise. */
     private Boolean _canViewPrivateItems;
     /** Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
     private String _changeKey;
@@ -28,7 +28,7 @@ public class Calendar extends Entity implements Parsable {
     private OnlineMeetingProviderType _defaultOnlineMeetingProvider;
     /** The events in the calendar. Navigation property. Read-only. */
     private java.util.List<Event> _events;
-    /** The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty. */
+    /** The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only. */
     private String _hexColor;
     /** true if this is the default calendar where new events are created by default, false otherwise. */
     private Boolean _isDefaultCalendar;
@@ -40,7 +40,7 @@ public class Calendar extends Entity implements Parsable {
     private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
     /** The calendar name. */
     private String _name;
-    /** If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only. */
+    /** If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. */
     private EmailAddress _owner;
     /** The collection of single-value extended properties defined for the calendar. Read-only. Nullable. */
     private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
@@ -87,7 +87,7 @@ public class Calendar extends Entity implements Parsable {
         return this._calendarView;
     }
     /**
-     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class Calendar extends Entity implements Parsable {
         return this._canEdit;
     }
     /**
-     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class Calendar extends Entity implements Parsable {
         return this._canShare;
     }
     /**
-     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class Calendar extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * Gets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class Calendar extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      * @return a emailAddress
      */
     @javax.annotation.Nullable
@@ -286,7 +286,7 @@ public class Calendar extends Entity implements Parsable {
         this._calendarView = value;
     }
     /**
-     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      * @param value Value to set for the canEdit property.
      * @return a void
      */
@@ -294,7 +294,7 @@ public class Calendar extends Entity implements Parsable {
         this._canEdit = value;
     }
     /**
-     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @param value Value to set for the canShare property.
      * @return a void
      */
@@ -302,7 +302,7 @@ public class Calendar extends Entity implements Parsable {
         this._canShare = value;
     }
     /**
-     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
      * @param value Value to set for the canViewPrivateItems property.
      * @return a void
      */
@@ -342,7 +342,7 @@ public class Calendar extends Entity implements Parsable {
         this._events = value;
     }
     /**
-     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
      * @param value Value to set for the hexColor property.
      * @return a void
      */
@@ -390,7 +390,7 @@ public class Calendar extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      * @param value Value to set for the owner property.
      * @return a void
      */

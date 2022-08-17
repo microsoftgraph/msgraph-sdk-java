@@ -59,7 +59,7 @@ public class AppRoleAssignedToRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AppRoleAssignedToRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AppRoleAssignedToRequestBuilder {
         return requestInfo;
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AppRoleAssignedToRequestBuilder {
         }
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AppRoleAssignedToRequestBuilder {
         }
     }
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
@@ -227,7 +227,7 @@ public class AppRoleAssignedToRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand. */
+    /** App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
     public class AppRoleAssignedToRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -13,7 +13,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     private Map<String, Object> _additionalData;
     /** Determines the recipient of the notification email. */
     private AccessReviewNotificationRecipientScope _notificationRecipientScope;
-    /** Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients. */
+    /** Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients. */
     private String _notificationTemplateType;
     /** The OdataType property */
     private String _odataType;
@@ -65,7 +65,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
         return this._notificationRecipientScope;
     }
     /**
-     * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * Gets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
         this._notificationRecipientScope = value;
     }
     /**
-     * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      * @param value Value to set for the notificationTemplateType property.
      * @return a void
      */

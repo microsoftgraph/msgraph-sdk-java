@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set. */
+    /** Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. */
     private ConditionalAccessFilter _deviceFilter;
     /** The OdataType property */
     private String _odataType;
@@ -42,7 +42,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
         return this._additionalData;
     }
     /**
-     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
      * @return a conditionalAccessFilter
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, Parsable 
         this._additionalData = value;
     }
     /**
-     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
+     * Sets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them.
      * @param value Value to set for the deviceFilter property.
      * @return a void
      */

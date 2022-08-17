@@ -59,7 +59,7 @@ public class SoftwareOathMethodsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get softwareOathMethods from me
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SoftwareOathMethodsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get softwareOathMethods from me
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SoftwareOathMethodsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get softwareOathMethods from me
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a CompletableFuture of SoftwareOathAuthenticationMethodCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethodCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SoftwareOathMethodsRequestBuilder {
         }
     }
     /**
-     * Get softwareOathMethods from me
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SoftwareOathAuthenticationMethodCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SoftwareOathMethodsRequestBuilder {
         }
     }
     /**
-     * Get softwareOathMethods from me
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SoftwareOathAuthenticationMethodCollectionResponse
@@ -227,7 +227,7 @@ public class SoftwareOathMethodsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get softwareOathMethods from me */
+    /** The software OATH TOTP applications registered to a user for authentication. */
     public class SoftwareOathMethodsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

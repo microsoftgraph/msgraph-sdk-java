@@ -87,7 +87,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +200,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         }
     }
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @return a CompletableFuture of agreementFileLocalization
      */
     public java.util.concurrent.CompletableFuture<AgreementFileLocalization> get() {
@@ -216,7 +216,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         }
     }
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementFileLocalization
      */
@@ -233,7 +233,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         }
     }
     /**
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of agreementFileLocalization
@@ -332,7 +332,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         public AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead. */
+    /** PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand. */
     public class AgreementFileLocalizationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AgreementFileData implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)). */
+    /** Data that represents the terms of use PDF document. Read-only. */
     private byte[] _data;
     /** The OdataType property */
     private String _odataType;
@@ -42,7 +42,7 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
+     * Gets the data property value. Data that represents the terms of use PDF document. Read-only.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AgreementFileData implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
+     * Sets the data property value. Data that represents the terms of use PDF document. Read-only.
      * @param value Value to set for the data property.
      * @return a void
      */

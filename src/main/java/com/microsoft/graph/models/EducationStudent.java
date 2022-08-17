@@ -16,7 +16,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     private LocalDate _birthDate;
     /** ID of the student in the source system. */
     private String _externalId;
-    /** Possible values are: female, male, other. */
+    /** The possible values are: female, male, other, unknownFutureValue. */
     private EducationGender _gender;
     /** Current grade level of the student. */
     private String _grade;
@@ -86,7 +86,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the gender property value. Possible values are: female, male, other.
+     * Gets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      * @return a educationGender
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
         this._externalId = value;
     }
     /**
-     * Sets the gender property value. Possible values are: female, male, other.
+     * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
      * @param value Value to set for the gender property.
      * @return a void
      */

@@ -8,15 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AttachmentBase extends Entity implements Parsable {
-    /** The MIME type. */
+    /** The contentType property */
     private String _contentType;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The display name of the attachment. This does not need to be the actual file name. */
+    /** The name property */
     private String _name;
-    /** The length of the attachment in bytes. */
+    /** The size property */
     private Integer _size;
     /**
      * Instantiates a new attachmentBase and sets the default values.
@@ -44,7 +44,7 @@ public class AttachmentBase extends Entity implements Parsable {
         return new AttachmentBase();
     }
     /**
-     * Gets the contentType property value. The MIME type.
+     * Gets the contentType property value. The contentType property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class AttachmentBase extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class AttachmentBase extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the name property value. The display name of the attachment. This does not need to be the actual file name.
+     * Gets the name property value. The name property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AttachmentBase extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the size property value. The length of the attachment in bytes.
+     * Gets the size property value. The size property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class AttachmentBase extends Entity implements Parsable {
         writer.writeIntegerValue("size", this.getSize());
     }
     /**
-     * Sets the contentType property value. The MIME type.
+     * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      * @return a void
      */
@@ -111,7 +111,7 @@ public class AttachmentBase extends Entity implements Parsable {
         this._contentType = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class AttachmentBase extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the name property value. The display name of the attachment. This does not need to be the actual file name.
+     * Sets the name property value. The name property
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class AttachmentBase extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the size property value. The length of the attachment in bytes.
+     * Sets the size property value. The size property
      * @param value Value to set for the size property.
      * @return a void
      */

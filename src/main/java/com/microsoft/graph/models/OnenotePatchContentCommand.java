@@ -17,9 +17,9 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     private String _content;
     /** The OdataType property */
     private String _odataType;
-    /** The location to add the supplied content, relative to the target element. Possible values are: after (default) or before. */
+    /** The location to add the supplied content, relative to the target element. The possible values are: after (default) or before. */
     private OnenotePatchInsertPosition _position;
-    /** The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword. */
+    /** The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword. */
     private String _target;
     /**
      * Instantiates a new onenotePatchContentCommand and sets the default values.
@@ -87,7 +87,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         return this._odataType;
     }
     /**
-     * Gets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @return a onenotePatchInsertPosition
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         return this._position;
     }
     /**
-     * Gets the target property value. The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword.
+     * Gets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         this._odataType = value;
     }
     /**
-     * Sets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @param value Value to set for the position property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         this._position = value;
     }
     /**
-     * Sets the target property value. The element to update. Must be the #<data-id> or the generated {id} of the element, or the body or title keyword.
+     * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      * @param value Value to set for the target property.
      * @return a void
      */

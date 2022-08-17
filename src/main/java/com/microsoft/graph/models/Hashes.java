@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Hashes implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The CRC32 value of the file (if available). Read-only. */
+    /** The CRC32 value of the file in little endian (if available). Read-only. */
     private String _crc32Hash;
     /** The OdataType property */
     private String _odataType;
@@ -48,7 +48,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
+     * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class Hashes implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
+     * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
      * @param value Value to set for the crc32Hash property.
      * @return a void
      */

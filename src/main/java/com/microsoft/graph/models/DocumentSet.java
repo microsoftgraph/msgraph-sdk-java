@@ -17,11 +17,11 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
     private java.util.List<DocumentSetContent> _defaultContents;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates whether to add the name of the document set to each file name. */
+    /** Specifies whether to push welcome page changes to inherited content types. */
     private Boolean _propagateWelcomePageChanges;
     /** The sharedColumns property */
     private java.util.List<ColumnDefinition> _sharedColumns;
-    /** Add the name of the Document Set to each file name. */
+    /** Indicates whether to add the name of the document set to each file name. */
     private Boolean _shouldPrefixNameToFile;
     /** The welcomePageColumns property */
     private java.util.List<ColumnDefinition> _welcomePageColumns;
@@ -96,7 +96,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
+     * Gets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         return this._sharedColumns;
     }
     /**
-     * Gets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
+     * Gets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the propagateWelcomePageChanges property value. Indicates whether to add the name of the document set to each file name.
+     * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
      * @param value Value to set for the propagateWelcomePageChanges property.
      * @return a void
      */
@@ -201,7 +201,7 @@ public class DocumentSet implements AdditionalDataHolder, Parsable {
         this._sharedColumns = value;
     }
     /**
-     * Sets the shouldPrefixNameToFile property value. Add the name of the Document Set to each file name.
+     * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
      * @param value Value to set for the shouldPrefixNameToFile property.
      * @return a void
      */

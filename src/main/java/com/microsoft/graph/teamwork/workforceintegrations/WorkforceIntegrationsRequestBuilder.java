@@ -59,7 +59,7 @@ public class WorkforceIntegrationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class WorkforceIntegrationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class WorkforceIntegrationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<WorkforceIntegrationCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class WorkforceIntegrationsRequestBuilder {
         }
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
      */
@@ -155,7 +155,7 @@ public class WorkforceIntegrationsRequestBuilder {
         }
     }
     /**
-     * A workforce integration with shifts.
+     * Get workforceIntegrations from teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
@@ -227,7 +227,7 @@ public class WorkforceIntegrationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** A workforce integration with shifts. */
+    /** Get workforceIntegrations from teamwork */
     public class WorkforceIntegrationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

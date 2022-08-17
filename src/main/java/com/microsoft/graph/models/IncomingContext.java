@@ -11,13 +11,13 @@ import java.util.Objects;
 public class IncomingContext implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The id of the participant that is under observation. Read-only. */
+    /** The ID of the participant that is under observation. Read-only. */
     private String _observedParticipantId;
     /** The OdataType property */
     private String _odataType;
     /** The identity that the call is happening on behalf of. */
     private IdentitySet _onBehalfOf;
-    /** The id of the participant that triggered the incoming call. Read-only. */
+    /** The ID of the participant that triggered the incoming call. Read-only. */
     private String _sourceParticipantId;
     /** The identity that transferred the call. */
     private IdentitySet _transferor;
@@ -63,7 +63,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
+     * Gets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         return this._onBehalfOf;
     }
     /**
-     * Gets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
+     * Gets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the observedParticipantId property value. The id of the participant that is under observation. Read-only.
+     * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      * @param value Value to set for the observedParticipantId property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
         this._onBehalfOf = value;
     }
     /**
-     * Sets the sourceParticipantId property value. The id of the participant that triggered the incoming call. Read-only.
+     * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      * @param value Value to set for the sourceParticipantId property.
      * @return a void
      */

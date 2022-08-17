@@ -80,7 +80,7 @@ public class AttachmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class AttachmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class AttachmentItemRequestBuilder {
         }
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of attachment
      */
     public java.util.concurrent.CompletableFuture<Attachment> get() {
@@ -209,7 +209,7 @@ public class AttachmentItemRequestBuilder {
         }
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachment
      */
@@ -226,7 +226,7 @@ public class AttachmentItemRequestBuilder {
         }
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of attachment
@@ -313,7 +313,7 @@ public class AttachmentItemRequestBuilder {
         public AttachmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand. */
+    /** Read-only. Nullable. Supports $expand. */
     public class AttachmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -13,9 +13,9 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     private OffsetDateTime _recipientActionDateTime;
     /** Custom message sent by recipient of the offer shift request. */
     private String _recipientActionMessage;
-    /** User id of the recipient of the offer shift request. */
+    /** User ID of the recipient of the offer shift request. */
     private String _recipientUserId;
-    /** User id of the sender of the offer shift request. */
+    /** User ID of the sender of the offer shift request. */
     private String _senderShiftId;
     /**
      * Instantiates a new OfferShiftRequest and sets the default values.
@@ -73,7 +73,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return this._recipientActionMessage;
     }
     /**
-     * Gets the recipientUserId property value. User id of the recipient of the offer shift request.
+     * Gets the recipientUserId property value. User ID of the recipient of the offer shift request.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         return this._recipientUserId;
     }
     /**
-     * Gets the senderShiftId property value. User id of the sender of the offer shift request.
+     * Gets the senderShiftId property value. User ID of the sender of the offer shift request.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         this._recipientActionMessage = value;
     }
     /**
-     * Sets the recipientUserId property value. User id of the recipient of the offer shift request.
+     * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
      * @param value Value to set for the recipientUserId property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         this._recipientUserId = value;
     }
     /**
-     * Sets the senderShiftId property value. User id of the sender of the offer shift request.
+     * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
      * @param value Value to set for the senderShiftId property.
      * @return a void
      */

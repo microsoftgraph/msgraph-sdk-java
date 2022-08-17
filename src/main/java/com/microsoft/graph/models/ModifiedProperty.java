@@ -11,13 +11,13 @@ import java.util.Objects;
 public class ModifiedProperty implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name of property that was modified. */
+    /** Indicates the property name of the target attribute that was changed. */
     private String _displayName;
-    /** New property value. */
+    /** Indicates the updated value for the propery. */
     private String _newValue;
     /** The OdataType property */
     private String _odataType;
-    /** Old property value. */
+    /** Indicates the previous value (before the update) for the property. */
     private String _oldValue;
     /**
      * Instantiates a new modifiedProperty and sets the default values.
@@ -46,7 +46,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. Name of property that was modified.
+     * Gets the displayName property value. Indicates the property name of the target attribute that was changed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the newValue property value. New property value.
+     * Gets the newValue property value. Indicates the updated value for the propery.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the oldValue property value. Old property value.
+     * Gets the oldValue property value. Indicates the previous value (before the update) for the property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. Name of property that was modified.
+     * Sets the displayName property value. Indicates the property name of the target attribute that was changed.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -121,7 +121,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the newValue property value. New property value.
+     * Sets the newValue property value. Indicates the updated value for the propery.
      * @param value Value to set for the newValue property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class ModifiedProperty implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the oldValue property value. Old property value.
+     * Sets the oldValue property value. Indicates the previous value (before the update) for the property.
      * @param value Value to set for the oldValue property.
      * @return a void
      */

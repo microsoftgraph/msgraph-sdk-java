@@ -13,7 +13,7 @@ public class StoragePlanInformation implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates if there are higher storage quota plans available. Read-only. */
+    /** Indicates whether there are higher storage quota plans available. Read-only. */
     private Boolean _upgradeAvailable;
     /**
      * Instantiates a new storagePlanInformation and sets the default values.
@@ -62,7 +62,7 @@ public class StoragePlanInformation implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
+     * Gets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class StoragePlanInformation implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the upgradeAvailable property value. Indicates if there are higher storage quota plans available. Read-only.
+     * Sets the upgradeAvailable property value. Indicates whether there are higher storage quota plans available. Read-only.
      * @param value Value to set for the upgradeAvailable property.
      * @return a void
      */

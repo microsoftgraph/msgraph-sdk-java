@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
-    /** Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
+    /** Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
     private UnifiedRoleManagementPolicyRuleTarget _target;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
@@ -52,7 +52,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
         }};
     }
     /**
-     * Gets the target property value. Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Gets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @return a unifiedRoleManagementPolicyRuleTarget
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the target property value. Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      * @param value Value to set for the target property.
      * @return a void
      */

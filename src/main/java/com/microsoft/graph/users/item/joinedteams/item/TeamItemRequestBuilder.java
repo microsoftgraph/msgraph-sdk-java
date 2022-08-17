@@ -203,7 +203,7 @@ public class TeamItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * Get joinedTeams from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -211,7 +211,7 @@ public class TeamItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -316,7 +316,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * Get joinedTeams from users
      * @return a CompletableFuture of team
      */
     public java.util.concurrent.CompletableFuture<Team> get() {
@@ -332,7 +332,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
      */
@@ -349,7 +349,7 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * Get joinedTeams from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of team
@@ -484,7 +484,7 @@ public class TeamItemRequestBuilder {
         public TeamItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The Microsoft Teams teams that the user is a member of. Read-only. Nullable. */
+    /** Get joinedTeams from users */
     public class TeamItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

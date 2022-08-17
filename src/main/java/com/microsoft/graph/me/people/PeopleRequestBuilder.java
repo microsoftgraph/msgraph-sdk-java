@@ -59,7 +59,7 @@ public class PeopleRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * People that are relevant to the user. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PeopleRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * People that are relevant to the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class PeopleRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * People that are relevant to the user. Read-only. Nullable.
      * @return a CompletableFuture of PersonCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PersonCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class PeopleRequestBuilder {
         }
     }
     /**
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * People that are relevant to the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PersonCollectionResponse
      */
@@ -155,7 +155,7 @@ public class PeopleRequestBuilder {
         }
     }
     /**
-     * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+     * People that are relevant to the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PersonCollectionResponse
@@ -227,7 +227,7 @@ public class PeopleRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks. */
+    /** People that are relevant to the user. Read-only. Nullable. */
     public class PeopleRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

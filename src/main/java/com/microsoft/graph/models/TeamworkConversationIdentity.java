@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkConversationIdentity extends Identity implements Parsable {
-    /** Type of conversation. Possible values are: team, channel, and chat. */
+    /** Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
     private TeamworkConversationIdentityType _conversationIdentityType;
     /**
      * Instantiates a new TeamworkConversationIdentity and sets the default values.
@@ -29,7 +29,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         return new TeamworkConversationIdentity();
     }
     /**
-     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
+     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      * @return a teamworkConversationIdentityType
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         writer.writeEnumValue("conversationIdentityType", this.getConversationIdentityType());
     }
     /**
-     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
+     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      * @param value Value to set for the conversationIdentityType property.
      * @return a void
      */

@@ -80,7 +80,7 @@ public class EndpointItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class EndpointItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class EndpointItemRequestBuilder {
         }
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @return a CompletableFuture of endpoint
      */
     public java.util.concurrent.CompletableFuture<Endpoint> get() {
@@ -209,7 +209,7 @@ public class EndpointItemRequestBuilder {
         }
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of endpoint
      */
@@ -226,7 +226,7 @@ public class EndpointItemRequestBuilder {
         }
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of endpoint
@@ -313,7 +313,7 @@ public class EndpointItemRequestBuilder {
         public EndpointItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
+    /** Get endpoints from servicePrincipals */
     public class EndpointItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

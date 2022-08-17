@@ -8,17 +8,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class LongRunningOperation extends Entity implements Parsable {
-    /** The createdDateTime property */
+    /** The start time of the operation. */
     private OffsetDateTime _createdDateTime;
-    /** The lastActionDateTime property */
+    /** The time of the last action in the operation. */
     private OffsetDateTime _lastActionDateTime;
-    /** The resourceLocation property */
+    /** URI of the resource that the operation is performed on. */
     private String _resourceLocation;
-    /** The status property */
+    /** The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. */
     private LongRunningOperationStatus _status;
-    /** The statusDetail property */
+    /** Details about the status of the operation. */
     private String _statusDetail;
     /**
      * Instantiates a new longRunningOperation and sets the default values.
@@ -46,7 +46,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         return new LongRunningOperation();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The start time of the operation.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastActionDateTime property value. The lastActionDateTime property
+     * Gets the lastActionDateTime property value. The time of the last action in the operation.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         return this._lastActionDateTime;
     }
     /**
-     * Gets the resourceLocation property value. The resourceLocation property
+     * Gets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         return this._resourceLocation;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the statusDetail property value. The statusDetail property
+     * Gets the statusDetail property value. Details about the status of the operation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         writer.writeStringValue("statusDetail", this.getStatusDetail());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The start time of the operation.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -123,7 +123,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the lastActionDateTime property value. The lastActionDateTime property
+     * Sets the lastActionDateTime property value. The time of the last action in the operation.
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
@@ -131,7 +131,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         this._lastActionDateTime = value;
     }
     /**
-     * Sets the resourceLocation property value. The resourceLocation property
+     * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         this._resourceLocation = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -147,7 +147,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the statusDetail property value. The statusDetail property
+     * Sets the statusDetail property value. Details about the status of the operation.
      * @param value Value to set for the statusDetail property.
      * @return a void
      */

@@ -52,7 +52,7 @@ public class TeamsAppRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class TeamsAppRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class TeamsAppRequestBuilder {
         return requestInfo;
     }
     /**
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      * @return a CompletableFuture of teamsApp
      */
     public java.util.concurrent.CompletableFuture<TeamsApp> get() {
@@ -98,7 +98,7 @@ public class TeamsAppRequestBuilder {
         }
     }
     /**
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsApp
      */
@@ -115,7 +115,7 @@ public class TeamsAppRequestBuilder {
         }
     }
     /**
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of teamsApp
@@ -132,7 +132,7 @@ public class TeamsAppRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The application that is linked to the tab. */
+    /** The application that is linked to the tab. This cannot be changed after tab creation. */
     public class TeamsAppRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

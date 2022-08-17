@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;
@@ -33,7 +33,7 @@ public class WorkbookTable extends Entity implements Parsable {
     private Boolean _showTotals;
     /** Represents the sorting for the table. Read-only. */
     private WorkbookTableSort _sort;
-    /** Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified. */
+    /** Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified. */
     private String _style;
     /** The worksheet containing the current table. Read-only. */
     private WorkbookWorksheet _worksheet;
@@ -176,7 +176,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this._sort;
     }
     /**
-     * Gets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -311,7 +311,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this._sort = value;
     }
     /**
-     * Sets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param value Value to set for the style property.
      * @return a void
      */

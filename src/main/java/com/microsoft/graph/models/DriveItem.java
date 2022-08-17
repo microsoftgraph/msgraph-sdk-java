@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class DriveItem extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place on this item. */
     private ItemAnalytics _analytics;
-    /** Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal. */
+    /** Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal. */
     private Audio _audio;
     /** Bundle metadata, if the item is a bundle. Read-only. */
     private Bundle _bundle;
@@ -39,7 +39,7 @@ public class DriveItem extends BaseItem implements Parsable {
     private Malware _malware;
     /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
     private Package_escaped _package_escaped;
-    /** If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only. */
+    /** If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. */
     private PendingOperations _pendingOperations;
     /** The set of permissions for the item. Read-only. Nullable. */
     private java.util.List<Permission> _permissions;
@@ -100,7 +100,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._analytics;
     }
     /**
-     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @return a audio
      */
     @javax.annotation.Nullable
@@ -254,7 +254,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._package_escaped;
     }
     /**
-     * Gets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      * @return a pendingOperations
      */
     @javax.annotation.Nullable
@@ -439,7 +439,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._analytics = value;
     }
     /**
-     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
+     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
      * @param value Value to set for the audio property.
      * @return a void
      */
@@ -551,7 +551,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._package_escaped = value;
     }
     /**
-     * Sets the pendingOperations property value. If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * Sets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      * @param value Value to set for the pendingOperations property.
      * @return a void
      */

@@ -25,7 +25,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _finishings;
     /** The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions. */
     private Boolean _fitPdfToPage;
-    /** The default input bin that serves as the paper source. */
+    /** The inputBin property */
     private String _inputBin;
     /** The default media (such as paper) color to print the document on. */
     private String _mediaColor;
@@ -158,7 +158,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
         return this._fitPdfToPage;
     }
     /**
-     * Gets the inputBin property value. The default input bin that serves as the paper source.
+     * Gets the inputBin property value. The inputBin property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -337,7 +337,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
         this._fitPdfToPage = value;
     }
     /**
-     * Sets the inputBin property value. The default input bin that serves as the paper source.
+     * Sets the inputBin property value. The inputBin property
      * @param value Value to set for the inputBin property.
      * @return a void
      */

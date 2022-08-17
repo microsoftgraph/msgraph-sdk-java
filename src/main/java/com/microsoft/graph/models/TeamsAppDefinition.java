@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsAppDefinition extends Entity implements Parsable {
     /** The details of the bot specified in the Teams app manifest. */
     private TeamworkBot _bot;

@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.security.CasesRoot;
 public class Security extends Entity implements Parsable {
-    /** Notifications for suspicious or potential security issues in a customer’s tenant. */
+    /** The alerts property */
     private java.util.List<Alert> _alerts;
     /** The cases property */
     private CasesRoot _cases;
@@ -36,7 +36,7 @@ public class Security extends Entity implements Parsable {
         return new Security();
     }
     /**
-     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Gets the alerts property value. The alerts property
      * @return a alert
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
     }
     /**
-     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Sets the alerts property value. The alerts property
      * @param value Value to set for the alerts property.
      * @return a void
      */

@@ -10,11 +10,11 @@ import java.util.Objects;
 public class IdentityContainer extends Entity implements Parsable {
     /** Represents entry point for API connectors. */
     private java.util.List<IdentityApiConnector> _apiConnectors;
-    /** Represents entry point for B2X and self-service sign-up identity userflows. */
+    /** Represents entry point for B2X/self-service sign-up identity userflows. */
     private java.util.List<B2xIdentityUserFlow> _b2xUserFlows;
     /** the entry point for the Conditional Access (CA) object model. */
     private ConditionalAccessRoot _conditionalAccess;
-    /** Represents entry point for identity provider base. */
+    /** The identityProviders property */
     private java.util.List<IdentityProviderBase> _identityProviders;
     /** Represents entry point for identity userflow attributes. */
     private java.util.List<IdentityUserFlowAttribute> _userFlowAttributes;
@@ -45,7 +45,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this._apiConnectors;
     }
     /**
-     * Gets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
+     * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @return a b2xIdentityUserFlow
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class IdentityContainer extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the identityProviders property value. Represents entry point for identity provider base.
+     * Gets the identityProviders property value. The identityProviders property
      * @return a identityProviderBase
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this._apiConnectors = value;
     }
     /**
-     * Sets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
+     * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @param value Value to set for the b2xUserFlows property.
      * @return a void
      */
@@ -130,7 +130,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this._conditionalAccess = value;
     }
     /**
-     * Sets the identityProviders property value. Represents entry point for identity provider base.
+     * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
      * @return a void
      */

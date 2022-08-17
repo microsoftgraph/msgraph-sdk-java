@@ -9,15 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageCatalog extends Entity implements Parsable {
-    /** The access packages in this catalog. Read-only. Nullable. Supports $expand. */
+    /** The access packages in this catalog. Read-only. Nullable. */
     private java.util.List<AccessPackage> _accessPackages;
-    /** One of UserManaged or ServiceDefault. */
+    /** Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue. */
     private AccessPackageCatalogType _catalogType;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _createdDateTime;
     /** The description of the access package catalog. */
     private String _description;
-    /** The display name of the access package catalog. Supports $filter (eq, contains). */
+    /** The display name of the access package catalog. */
     private String _displayName;
     /** Whether the access packages in this catalog can be requested by users outside of the tenant. */
     private Boolean _isExternallyVisible;
@@ -44,7 +44,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return new AccessPackageCatalog();
     }
     /**
-     * Gets the accessPackages property value. The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * Gets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
      * @return a accessPackage
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this._accessPackages;
     }
     /**
-     * Gets the catalogType property value. One of UserManaged or ServiceDefault.
+     * Gets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      * @return a accessPackageCatalogType
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The display name of the access package catalog. Supports $filter (eq, contains).
+     * Gets the displayName property value. The display name of the access package catalog.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         this._accessPackages = value;
     }
     /**
-     * Sets the catalogType property value. One of UserManaged or ServiceDefault.
+     * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      * @param value Value to set for the catalogType property.
      * @return a void
      */
@@ -175,7 +175,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The display name of the access package catalog. Supports $filter (eq, contains).
+     * Sets the displayName property value. The display name of the access package catalog.
      * @param value Value to set for the displayName property.
      * @return a void
      */

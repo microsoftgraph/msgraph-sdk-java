@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
-    /** The content property */
+    /** The content stream for this version of the item. */
     private byte[] _content;
     /** Indicates the size of the content stream for this version of the item. */
     private Long _size;
@@ -31,7 +31,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
         return new DriveItemVersion();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content stream for this version of the item.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
         writer.writeLongValue("size", this.getSize());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content stream for this version of the item.
      * @param value Value to set for the content property.
      * @return a void
      */

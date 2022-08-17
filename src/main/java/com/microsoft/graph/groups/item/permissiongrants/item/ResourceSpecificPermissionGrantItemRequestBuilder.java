@@ -110,7 +110,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> get() {
@@ -239,7 +239,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceSpecificPermissionGrant
      */
@@ -256,7 +256,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         }
     }
     /**
-     * The permissions that have been granted for a group to a specific application. Supports $expand.
+     * The permission that has been granted for a group to a specific application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of resourceSpecificPermissionGrant
@@ -343,7 +343,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         public ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The permissions that have been granted for a group to a specific application. Supports $expand. */
+    /** The permission that has been granted for a group to a specific application. Supports $expand. */
     public class ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

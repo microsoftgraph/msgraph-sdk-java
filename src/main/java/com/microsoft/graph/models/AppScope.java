@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppScope extends Entity implements Parsable {
-    /** Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. This property is read only. */
+    /** Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. Read-only. */
     private String _displayName;
-    /** Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only. */
+    /** Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only. */
     private String _type;
     /**
      * Instantiates a new AppScope and sets the default values.
@@ -31,7 +31,7 @@ public class AppScope extends Entity implements Parsable {
         return new AppScope();
     }
     /**
-     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. This property is read only.
+     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class AppScope extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
+     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class AppScope extends Entity implements Parsable {
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. This property is read only.
+     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class AppScope extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
+     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
      * @param value Value to set for the type property.
      * @return a void
      */

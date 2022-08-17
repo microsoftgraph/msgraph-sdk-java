@@ -80,7 +80,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @return a CompletableFuture of identityProviderBase
      */
     public java.util.concurrent.CompletableFuture<IdentityProviderBase> get() {
@@ -209,7 +209,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProviderBase
      */
@@ -226,7 +226,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity provider base.
+     * Get identityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of identityProviderBase
@@ -313,7 +313,7 @@ public class IdentityProviderBaseItemRequestBuilder {
         public IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents entry point for identity provider base. */
+    /** Get identityProviders from identity */
     public class IdentityProviderBaseItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

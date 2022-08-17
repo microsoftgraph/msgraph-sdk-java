@@ -80,7 +80,7 @@ public class DetailsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class DetailsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class DetailsRequestBuilder {
         }
     }
     /**
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      * @return a CompletableFuture of plannerPlanDetails
      */
     public java.util.concurrent.CompletableFuture<PlannerPlanDetails> get() {
@@ -209,7 +209,7 @@ public class DetailsRequestBuilder {
         }
     }
     /**
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanDetails
      */
@@ -226,7 +226,7 @@ public class DetailsRequestBuilder {
         }
     }
     /**
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerPlanDetails
@@ -313,7 +313,7 @@ public class DetailsRequestBuilder {
         public DetailsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Additional details about the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Additional details about the plan. */
     public class DetailsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

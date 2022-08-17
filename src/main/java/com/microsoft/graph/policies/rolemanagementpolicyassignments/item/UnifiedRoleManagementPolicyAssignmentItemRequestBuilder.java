@@ -86,7 +86,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get() {
@@ -215,7 +215,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
      */
@@ -232,7 +232,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
@@ -319,7 +319,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         public UnifiedRoleManagementPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the role management policy assignments. */
+    /** The assignment of a role management policy to a role definition object. */
     public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

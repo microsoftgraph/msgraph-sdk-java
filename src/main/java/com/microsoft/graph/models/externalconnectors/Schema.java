@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 public class Schema extends Entity implements Parsable {
-    /** Must be set to microsoft.graph.externalItem. Required. */
+    /** Must be set to microsoft.graph.externalConnector.externalItem. Required. */
     private String _baseType;
     /** The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128. */
     private java.util.List<Property> _properties;
@@ -32,7 +32,7 @@ public class Schema extends Entity implements Parsable {
         return new Schema();
     }
     /**
-     * Gets the baseType property value. Must be set to microsoft.graph.externalItem. Required.
+     * Gets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class Schema extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("properties", this.getProperties());
     }
     /**
-     * Sets the baseType property value. Must be set to microsoft.graph.externalItem. Required.
+     * Sets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      * @param value Value to set for the baseType property.
      * @return a void
      */

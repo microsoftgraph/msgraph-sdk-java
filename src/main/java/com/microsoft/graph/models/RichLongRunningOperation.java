@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RichLongRunningOperation extends LongRunningOperation implements Parsable {
-    /** Error due to which the operation failed. */
+    /** Error that caused the operation to fail. */
     private PublicError _error;
     /** A value between 0 and 100 that indicates the progress of the operation. */
     private Integer _percentageComplete;
-    /** A unique identifier for the result. */
+    /** The unique identifier for the result. */
     private String _resourceId;
-    /** Type of the operation. */
+    /** The type of the operation. */
     private String _type;
     /**
      * Instantiates a new RichLongRunningOperation and sets the default values.
@@ -35,7 +35,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         return new RichLongRunningOperation();
     }
     /**
-     * Gets the error property value. Error due to which the operation failed.
+     * Gets the error property value. Error that caused the operation to fail.
      * @return a publicError
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         return this._percentageComplete;
     }
     /**
-     * Gets the resourceId property value. A unique identifier for the result.
+     * Gets the resourceId property value. The unique identifier for the result.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         return this._resourceId;
     }
     /**
-     * Gets the type property value. Type of the operation.
+     * Gets the type property value. The type of the operation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the error property value. Error due to which the operation failed.
+     * Sets the error property value. Error that caused the operation to fail.
      * @param value Value to set for the error property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         this._percentageComplete = value;
     }
     /**
-     * Sets the resourceId property value. A unique identifier for the result.
+     * Sets the resourceId property value. The unique identifier for the result.
      * @param value Value to set for the resourceId property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         this._resourceId = value;
     }
     /**
-     * Sets the type property value. Type of the operation.
+     * Sets the type property value. The type of the operation.
      * @param value Value to set for the type property.
      * @return a void
      */

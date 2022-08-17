@@ -59,7 +59,7 @@ public class ColumnLinksRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ColumnLinksRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ColumnLinksRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @return a CompletableFuture of ColumnLinkCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ColumnLinksRequestBuilder {
         }
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ColumnLinkCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ColumnLinksRequestBuilder {
         }
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ColumnLinkCollectionResponse
@@ -227,7 +227,7 @@ public class ColumnLinksRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of columns that are required by this content type */
+    /** The collection of columns that are required by this content type. */
     public class ColumnLinksRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

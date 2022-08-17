@@ -11,7 +11,7 @@ import java.util.Objects;
 public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Run campaigns to remind users to setup targeted authentication methods. */
+    /** Run campaigns to remind users to set up targeted authentication methods. */
     private AuthenticationMethodsRegistrationCampaign _authenticationMethodsRegistrationCampaign;
     /** The OdataType property */
     private String _odataType;
@@ -42,7 +42,7 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the authenticationMethodsRegistrationCampaign property value. Run campaigns to remind users to setup targeted authentication methods.
+     * Gets the authenticationMethodsRegistrationCampaign property value. Run campaigns to remind users to set up targeted authentication methods.
      * @return a authenticationMethodsRegistrationCampaign
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the authenticationMethodsRegistrationCampaign property value. Run campaigns to remind users to setup targeted authentication methods.
+     * Sets the authenticationMethodsRegistrationCampaign property value. Run campaigns to remind users to set up targeted authentication methods.
      * @param value Value to set for the authenticationMethodsRegistrationCampaign property.
      * @return a void
      */

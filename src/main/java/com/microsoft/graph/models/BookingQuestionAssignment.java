@@ -11,11 +11,11 @@ import java.util.Objects;
 public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether it is mandatory to answer the custom question. */
+    /** The ID of the custom question. */
     private Boolean _isRequired;
     /** The OdataType property */
     private String _odataType;
-    /** If it is mandatory to answer the custom question. */
+    /** Indicates whether it is mandatory to answer the custom question. */
     private String _questionId;
     /**
      * Instantiates a new bookingQuestionAssignment and sets the default values.
@@ -57,7 +57,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
+     * Gets the isRequired property value. The ID of the custom question.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         return this._odataType;
     }
     /**
-     * Gets the questionId property value. If it is mandatory to answer the custom question.
+     * Gets the questionId property value. Indicates whether it is mandatory to answer the custom question.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
+     * Sets the isRequired property value. The ID of the custom question.
      * @param value Value to set for the isRequired property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
         this._odataType = value;
     }
     /**
-     * Sets the questionId property value. If it is mandatory to answer the custom question.
+     * Sets the questionId property value. Indicates whether it is mandatory to answer the custom question.
      * @param value Value to set for the questionId property.
      * @return a void
      */

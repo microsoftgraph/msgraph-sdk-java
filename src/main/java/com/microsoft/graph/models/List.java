@@ -20,7 +20,7 @@ public class List extends BaseItem implements Parsable {
     private java.util.List<ListItem> _items;
     /** Provides additional details about the list. */
     private ListInfo _list;
-    /** The collection of long running operations for the list. */
+    /** The collection of long-running operations on the list. */
     private java.util.List<RichLongRunningOperation> _operations;
     /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
     private SharepointIds _sharepointIds;
@@ -115,7 +115,7 @@ public class List extends BaseItem implements Parsable {
         return this._list;
     }
     /**
-     * Gets the operations property value. The collection of long running operations for the list.
+     * Gets the operations property value. The collection of long-running operations on the list.
      * @return a richLongRunningOperation
      */
     @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class List extends BaseItem implements Parsable {
         this._list = value;
     }
     /**
-     * Sets the operations property value. The collection of long running operations for the list.
+     * Sets the operations property value. The collection of long-running operations on the list.
      * @param value Value to set for the operations property.
      * @return a void
      */

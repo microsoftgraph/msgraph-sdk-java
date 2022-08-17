@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CountryNamedLocation extends NamedLocation implements Parsable {
-    /** List of countries and/or regions in two-letter format specified by ISO 3166-2. */
+    /** List of countries and/or regions in two-letter format specified by ISO 3166-2. Required. */
     private java.util.List<String> _countriesAndRegions;
-    /** Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps. */
+    /** Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government. */
     private CountryLookupMethodType _countryLookupMethod;
     /** true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false. */
     private Boolean _includeUnknownCountriesAndRegions;
@@ -33,7 +33,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         return new CountryNamedLocation();
     }
     /**
-     * Gets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * Gets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         return this._countriesAndRegions;
     }
     /**
-     * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps.
+     * Gets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @return a countryLookupMethodType
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         writer.writeBooleanValue("includeUnknownCountriesAndRegions", this.getIncludeUnknownCountriesAndRegions());
     }
     /**
-     * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      * @param value Value to set for the countriesAndRegions property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
         this._countriesAndRegions = value;
     }
     /**
-     * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps.
+     * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      * @param value Value to set for the countryLookupMethod property.
      * @return a void
      */
