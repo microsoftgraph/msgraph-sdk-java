@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ItemActivityStat;
-import com.microsoft.graph.requests.ItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder<ItemActiv
      * @return the collection request builder
      */
     @Nonnull
-    public ItemActivityCollectionRequestBuilder activities() {
-        return new ItemActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityCollectionRequestBuilder activities() {
+        return new com.microsoft.graph.requests.ItemActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder<ItemActiv
      * @param id the item identifier
      */
     @Nonnull
-    public ItemActivityRequestBuilder activities(@Nonnull final String id) {
-        return new ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityRequestBuilder activities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
 }

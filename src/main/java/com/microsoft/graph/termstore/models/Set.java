@@ -11,11 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.termstore.models.LocalizedName;
 import com.microsoft.graph.models.KeyValue;
-import com.microsoft.graph.termstore.models.Term;
 import com.microsoft.graph.termstore.models.Group;
-import com.microsoft.graph.termstore.models.Relation;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.termstore.requests.TermCollectionPage;
 import com.microsoft.graph.termstore.requests.RelationCollectionPage;
 
 
@@ -44,7 +41,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description giving details on the term usage.
+     * Description that gives details on the term usage.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -76,7 +73,7 @@ public class Set extends Entity implements IJsonBackedObject {
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
 	@Nullable
-    public TermCollectionPage children;
+    public com.microsoft.graph.termstore.requests.TermCollectionPage children;
 
     /**
      * The Parent Group.
@@ -94,7 +91,7 @@ public class Set extends Entity implements IJsonBackedObject {
     @SerializedName(value = "relations", alternate = {"Relations"})
     @Expose
 	@Nullable
-    public RelationCollectionPage relations;
+    public com.microsoft.graph.termstore.requests.RelationCollectionPage relations;
 
     /**
      * The Terms.
@@ -103,7 +100,7 @@ public class Set extends Entity implements IJsonBackedObject {
     @SerializedName(value = "terms", alternate = {"Terms"})
     @Expose
 	@Nullable
-    public TermCollectionPage terms;
+    public com.microsoft.graph.termstore.requests.TermCollectionPage terms;
 
 
     /**
@@ -116,15 +113,15 @@ public class Set extends Entity implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children"), TermCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.termstore.requests.TermCollectionPage.class);
         }
 
         if (json.has("relations")) {
-            relations = serializer.deserializeObject(json.get("relations"), RelationCollectionPage.class);
+            relations = serializer.deserializeObject(json.get("relations"), com.microsoft.graph.termstore.requests.RelationCollectionPage.class);
         }
 
         if (json.has("terms")) {
-            terms = serializer.deserializeObject(json.get("terms"), TermCollectionPage.class);
+            terms = serializer.deserializeObject(json.get("terms"), com.microsoft.graph.termstore.requests.TermCollectionPage.class);
         }
     }
 }

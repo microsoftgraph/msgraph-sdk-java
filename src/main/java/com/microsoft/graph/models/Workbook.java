@@ -10,12 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WorkbookApplication;
-import com.microsoft.graph.models.WorkbookComment;
 import com.microsoft.graph.models.WorkbookFunctions;
-import com.microsoft.graph.models.WorkbookNamedItem;
-import com.microsoft.graph.models.WorkbookOperation;
-import com.microsoft.graph.models.WorkbookTable;
-import com.microsoft.graph.models.WorkbookWorksheet;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkbookCommentCollectionPage;
 import com.microsoft.graph.requests.WorkbookNamedItemCollectionPage;
@@ -54,7 +49,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
 	@Nullable
-    public WorkbookCommentCollectionPage comments;
+    public com.microsoft.graph.requests.WorkbookCommentCollectionPage comments;
 
     /**
      * The Functions.
@@ -72,16 +67,16 @@ public class Workbook extends Entity implements IJsonBackedObject {
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
 	@Nullable
-    public WorkbookNamedItemCollectionPage names;
+    public com.microsoft.graph.requests.WorkbookNamedItemCollectionPage names;
 
     /**
      * The Operations.
-     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public WorkbookOperationCollectionPage operations;
+    public com.microsoft.graph.requests.WorkbookOperationCollectionPage operations;
 
     /**
      * The Tables.
@@ -90,7 +85,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
 	@Nullable
-    public WorkbookTableCollectionPage tables;
+    public com.microsoft.graph.requests.WorkbookTableCollectionPage tables;
 
     /**
      * The Worksheets.
@@ -99,7 +94,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
     @SerializedName(value = "worksheets", alternate = {"Worksheets"})
     @Expose
 	@Nullable
-    public WorkbookWorksheetCollectionPage worksheets;
+    public com.microsoft.graph.requests.WorkbookWorksheetCollectionPage worksheets;
 
 
     /**
@@ -112,23 +107,23 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("comments")) {
-            comments = serializer.deserializeObject(json.get("comments"), WorkbookCommentCollectionPage.class);
+            comments = serializer.deserializeObject(json.get("comments"), com.microsoft.graph.requests.WorkbookCommentCollectionPage.class);
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names"), WorkbookNamedItemCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names"), com.microsoft.graph.requests.WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), WorkbookOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.WorkbookOperationCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables"), WorkbookTableCollectionPage.class);
+            tables = serializer.deserializeObject(json.get("tables"), com.microsoft.graph.requests.WorkbookTableCollectionPage.class);
         }
 
         if (json.has("worksheets")) {
-            worksheets = serializer.deserializeObject(json.get("worksheets"), WorkbookWorksheetCollectionPage.class);
+            worksheets = serializer.deserializeObject(json.get("worksheets"), com.microsoft.graph.requests.WorkbookWorksheetCollectionPage.class);
         }
     }
 }

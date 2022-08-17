@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Teamwork;
-import com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @return the collection request builder
      */
     @Nonnull
-    public WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
-        return new WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
+    public com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder workforceIntegrations() {
+        return new com.microsoft.graph.requests.WorkforceIntegrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
      * @param id the item identifier
      */
     @Nonnull
-    public WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
-        return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder workforceIntegrations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("workforceIntegrations") + "/" + id, getClient(), null);
     }
 }

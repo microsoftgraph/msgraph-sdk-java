@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.MobileAppPublishingState;
-import com.microsoft.graph.models.MobileAppAssignment;
-import com.microsoft.graph.models.MobileAppCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionPage;
 import com.microsoft.graph.requests.MobileAppCategoryCollectionPage;
@@ -156,14 +154,14 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public MobileAppAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.MobileAppAssignmentCollectionPage assignments;
 
     /**
      * The Categories.
      * The list of categories for this app.
      */
 	@Nullable
-    public MobileAppCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionPage categories;
 
 
     /**
@@ -176,11 +174,11 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), MobileAppAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.MobileAppAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
         }
     }
 }

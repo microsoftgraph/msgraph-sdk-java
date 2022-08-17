@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobileAppContent;
-import com.microsoft.graph.requests.MobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppContentFileCollectionRequestBuilder files() {
-        return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppContentFileCollectionRequestBuilder files() {
+        return new com.microsoft.graph.requests.MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileApp
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppContentFileRequestBuilder files(@Nonnull final String id) {
-        return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppContentFileRequestBuilder files(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

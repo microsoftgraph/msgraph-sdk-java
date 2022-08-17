@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartAxis;
-import com.microsoft.graph.requests.WorkbookChartAxisFormatRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartGridlinesRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartAxisTitleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartAxisFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisFormatRequestBuilder format() {
-        return new WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
@@ -76,8 +73,8 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartGridlinesRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartGridlinesRequestBuilder majorGridlines() {
-        return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("majorGridlines"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartGridlinesRequestBuilder majorGridlines() {
+        return new com.microsoft.graph.requests.WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("majorGridlines"), getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartGridlinesRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartGridlinesRequestBuilder minorGridlines() {
-        return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("minorGridlines"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartGridlinesRequestBuilder minorGridlines() {
+        return new com.microsoft.graph.requests.WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("minorGridlines"), getClient(), null);
     }
 
     /**
@@ -96,7 +93,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartAxisTitleRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisTitleRequestBuilder title() {
-        return new WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisTitleRequestBuilder title() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }
 }

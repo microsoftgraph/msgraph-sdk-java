@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementExportJob;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage;
 
@@ -35,7 +34,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
     @SerializedName(value = "exportJobs", alternate = {"ExportJobs"})
     @Expose
 	@Nullable
-    public DeviceManagementExportJobCollectionPage exportJobs;
+    public com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage exportJobs;
 
 
     /**
@@ -48,7 +47,7 @@ public class DeviceManagementReports extends Entity implements IJsonBackedObject
 
 
         if (json.has("exportJobs")) {
-            exportJobs = serializer.deserializeObject(json.get("exportJobs"), DeviceManagementExportJobCollectionPage.class);
+            exportJobs = serializer.deserializeObject(json.get("exportJobs"), com.microsoft.graph.requests.DeviceManagementExportJobCollectionPage.class);
         }
     }
 }

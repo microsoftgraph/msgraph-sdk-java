@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryNoncustodialDataSource;
-import com.microsoft.graph.security.requests.DataSourceRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class EdiscoveryNoncustodialDataSourceRequestBuilder extends BaseRequestB
      * @return the DataSourceRequestBuilder instance
      */
     @Nonnull
-    public DataSourceRequestBuilder dataSource() {
-        return new DataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("dataSource"), getClient(), null);
+    public com.microsoft.graph.security.requests.DataSourceRequestBuilder dataSource() {
+        return new com.microsoft.graph.security.requests.DataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("dataSource"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class EdiscoveryNoncustodialDataSourceRequestBuilder extends BaseRequestB
      * @return the EdiscoveryIndexOperationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
-        return new EdiscoveryIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
+        return new com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
     }
 
     /**

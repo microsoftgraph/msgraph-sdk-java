@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.AccessReviewScheduleDefinitionFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

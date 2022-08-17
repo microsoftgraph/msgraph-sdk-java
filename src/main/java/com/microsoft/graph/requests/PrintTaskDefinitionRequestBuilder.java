@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintTaskDefinition;
-import com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder<PrintT
      * @return the collection request builder
      */
     @Nonnull
-    public PrintTaskCollectionRequestBuilder tasks() {
-        return new PrintTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder<PrintT
      * @param id the item identifier
      */
     @Nonnull
-    public PrintTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

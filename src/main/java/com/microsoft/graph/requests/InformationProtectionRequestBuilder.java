@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InformationProtection;
-import com.microsoft.graph.requests.BitlockerRequestBuilder;
-import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the BitlockerRequestBuilder instance
      */
     @Nonnull
-    public BitlockerRequestBuilder bitlocker() {
-        return new BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
+    public com.microsoft.graph.requests.BitlockerRequestBuilder bitlocker() {
+        return new com.microsoft.graph.requests.BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ThreatAssessmentRequest collection
@@ -75,8 +72,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @return the collection request builder
      */
     @Nonnull
-    public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
-        return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
+        return new com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
      * @param id the item identifier
      */
     @Nonnull
-    public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
-        return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
     }
 }

@@ -9,14 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.Recipient;
-import com.microsoft.graph.requests.AttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -79,8 +71,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @return the collection request builder
      */
     @Nonnull
-    public AttachmentCollectionRequestBuilder attachments() {
-        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    public com.microsoft.graph.requests.AttachmentCollectionRequestBuilder attachments() {
+        return new com.microsoft.graph.requests.AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
     /**
@@ -90,8 +82,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @param id the item identifier
      */
     @Nonnull
-    public AttachmentRequestBuilder attachments(@Nonnull final String id) {
-        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AttachmentRequestBuilder attachments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Extension collection
@@ -99,8 +91,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @return the collection request builder
      */
     @Nonnull
-    public ExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public com.microsoft.graph.requests.ExtensionCollectionRequestBuilder extensions() {
+        return new com.microsoft.graph.requests.ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
     /**
@@ -110,8 +102,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @param id the item identifier
      */
     @Nonnull
-    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExtensionRequestBuilder extensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
@@ -119,8 +111,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @return the collection request builder
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -130,8 +122,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @param id the item identifier
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
-        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
@@ -139,8 +131,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @return the collection request builder
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -150,8 +142,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
      * @param id the item identifier
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
-        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
     /**

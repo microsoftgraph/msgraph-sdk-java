@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsTab;
-import com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder<TeamsTab> {
      * @return the TeamsAppWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppWithReferenceRequestBuilder teamsApp() {
-        return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder teamsApp() {
+        return new com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
     }
 }

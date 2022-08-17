@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodTarget;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage;
 
@@ -35,7 +34,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose
 	@Nullable
-    public MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage includeTargets;
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage includeTargets;
 
 
     /**
@@ -48,7 +47,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
 
 
         if (json.has("includeTargets")) {
-            includeTargets = serializer.deserializeObject(json.get("includeTargets"), MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage.class);
+            includeTargets = serializer.deserializeObject(json.get("includeTargets"), com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage.class);
         }
     }
 }

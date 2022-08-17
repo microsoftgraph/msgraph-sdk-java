@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookRange;
 import com.microsoft.graph.models.WorkbookRangeView;
-import com.microsoft.graph.requests.WorkbookRangeFormatRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeSortRequestBuilder;
-import com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -83,8 +80,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the WorkbookRangeFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookRangeFormatRequestBuilder format() {
-        return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
@@ -93,8 +90,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the WorkbookRangeSortRequestBuilder instance
      */
     @Nonnull
-    public WorkbookRangeSortRequestBuilder sort() {
-        return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeSortRequestBuilder sort() {
+        return new com.microsoft.graph.requests.WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
@@ -103,8 +100,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder<WorkbookRang
      * @return the WorkbookWorksheetRequestBuilder instance
      */
     @Nonnull
-    public WorkbookWorksheetRequestBuilder worksheet() {
-        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder worksheet() {
+        return new com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
     /**

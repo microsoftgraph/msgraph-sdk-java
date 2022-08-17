@@ -10,10 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.models.Report;
 import com.microsoft.graph.models.ArchivedPrintJob;
-import com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintUsageByUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -138,8 +134,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter"), getClient(), null);
     }
 
     /**
@@ -149,8 +145,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -158,8 +154,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser"), getClient(), null);
     }
 
     /**
@@ -169,8 +165,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder dailyPrintUsageByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder dailyPrintUsageByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
@@ -178,8 +174,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter() {
-        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter() {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter"), getClient(), null);
     }
 
     /**
@@ -189,8 +185,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(@Nonnull final String id) {
-        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintUsageByUser collection
@@ -198,8 +194,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser() {
-        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser"), getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser() {
+        return new com.microsoft.graph.requests.PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser"), getClient(), null);
     }
 
     /**
@@ -209,8 +205,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintUsageByUserRequestBuilder monthlyPrintUsageByUser(@Nonnull final String id) {
-        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintUsageByUserRequestBuilder monthlyPrintUsageByUser(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser") + "/" + id, getClient(), null);
     }
 
     /**

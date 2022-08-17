@@ -8,10 +8,6 @@ package com.microsoft.graph.termstore.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.termstore.models.Store;
-import com.microsoft.graph.termstore.requests.GroupCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.GroupRequestBuilder;
-import com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class StoreRequestBuilder extends BaseRequestBuilder<Store> {
      * @return the collection request builder
      */
     @Nonnull
-    public GroupCollectionRequestBuilder groups() {
-        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.GroupCollectionRequestBuilder groups() {
+        return new com.microsoft.graph.termstore.requests.GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class StoreRequestBuilder extends BaseRequestBuilder<Store> {
      * @param id the item identifier
      */
     @Nonnull
-    public GroupRequestBuilder groups(@Nonnull final String id) {
-        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.termstore.requests.GroupRequestBuilder groups(@Nonnull final String id) {
+        return new com.microsoft.graph.termstore.requests.GroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Set collection
@@ -86,8 +82,8 @@ public class StoreRequestBuilder extends BaseRequestBuilder<Store> {
      * @return the collection request builder
      */
     @Nonnull
-    public SetCollectionRequestBuilder sets() {
-        return new SetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sets"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder sets() {
+        return new com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sets"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class StoreRequestBuilder extends BaseRequestBuilder<Store> {
      * @param id the item identifier
      */
     @Nonnull
-    public SetRequestBuilder sets(@Nonnull final String id) {
-        return new SetRequestBuilder(getRequestUrlWithAdditionalSegment("sets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.termstore.requests.SetRequestBuilder sets(@Nonnull final String id) {
+        return new com.microsoft.graph.termstore.requests.SetRequestBuilder(getRequestUrlWithAdditionalSegment("sets") + "/" + id, getClient(), null);
     }
 }

@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageCatalogType;
 import com.microsoft.graph.models.AccessPackageCatalogState;
-import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
 
@@ -32,7 +31,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Type.
-     * One of UserManaged or ServiceDefault.
+     * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      */
     @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
@@ -59,7 +58,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package catalog. Supports $filter (eq, contains).
+     * The display name of the access package catalog.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -95,12 +94,12 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
+     * The access packages in this catalog. Read-only. Nullable.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
 	@Nullable
-    public AccessPackageCollectionPage accessPackages;
+    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackages;
 
 
     /**
@@ -113,7 +112,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackages")) {
-            accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+            accessPackages = serializer.deserializeObject(json.get("accessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
         }
     }
 }

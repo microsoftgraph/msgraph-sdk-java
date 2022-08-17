@@ -28,7 +28,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The start time of the operation.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * 
+     * The time of the last action in the operation.
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Location.
-     * 
+     * URI of the resource that the operation is performed on.
      */
     @SerializedName(value = "resourceLocation", alternate = {"ResourceLocation"})
     @Expose
@@ -55,7 +55,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -64,7 +64,7 @@ public class LongRunningOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status Detail.
-     * 
+     * Details about the status of the operation.
      */
     @SerializedName(value = "statusDetail", alternate = {"StatusDetail"})
     @Expose

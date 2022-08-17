@@ -9,13 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ManagedEBook;
 import com.microsoft.graph.models.ManagedEBookAssignment;
-import com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceInstallStateRequestBuilder;
-import com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder;
-import com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +64,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
-        return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -82,8 +75,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceInstallState collection
@@ -91,8 +84,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
     /**
@@ -102,8 +95,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -112,8 +105,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the EBookInstallSummaryRequestBuilder instance
      */
     @Nonnull
-    public EBookInstallSummaryRequestBuilder installSummary() {
-        return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
+    public com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder installSummary() {
+        return new com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UserInstallStateSummary collection
@@ -121,8 +114,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @return the collection request builder
      */
     @Nonnull
-    public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
-        return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
+    public com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
+        return new com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
     /**
@@ -132,8 +125,8 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder<ManagedEBook>
      * @param id the item identifier
      */
     @Nonnull
-    public UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
-        return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder userStateSummary(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
     }
 
     /**

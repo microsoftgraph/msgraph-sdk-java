@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AlternativeSecurityId;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 
 
@@ -32,7 +30,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -68,7 +66,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -158,7 +156,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+     * The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -194,7 +192,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
@@ -206,28 +204,28 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Registered Owners.
      * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage registeredOwners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage registeredUsers;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredUsers;
 
     /**
      * The Transitive Member Of.
-     * Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
+     * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
      * The Extensions.
@@ -236,7 +234,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
 
     /**
@@ -249,23 +247,23 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredOwners")) {
-            registeredOwners = serializer.deserializeObject(json.get("registeredOwners"), DirectoryObjectCollectionPage.class);
+            registeredOwners = serializer.deserializeObject(json.get("registeredOwners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredUsers")) {
-            registeredUsers = serializer.deserializeObject(json.get("registeredUsers"), DirectoryObjectCollectionPage.class);
+            registeredUsers = serializer.deserializeObject(json.get("registeredUsers"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
     }
 }

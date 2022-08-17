@@ -9,16 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceConfiguration;
 import com.microsoft.graph.models.DeviceConfigurationAssignment;
-import com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +65,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -86,8 +76,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SettingStateDeviceSummary collection
@@ -95,8 +85,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
     /**
@@ -106,8 +96,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationDeviceStatus collection
@@ -115,8 +105,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
-        return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -126,8 +116,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -136,8 +126,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
-        return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationUserStatus collection
@@ -145,8 +135,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -156,8 +146,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -166,8 +156,8 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
-        return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
     /**

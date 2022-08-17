@@ -9,14 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudCommunications;
 import com.microsoft.graph.models.Presence;
-import com.microsoft.graph.requests.CallCollectionRequestBuilder;
-import com.microsoft.graph.requests.CallRequestBuilder;
-import com.microsoft.graph.callrecords.requests.CallRecordCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.CallRecordRequestBuilder;
-import com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnlineMeetingRequestBuilder;
-import com.microsoft.graph.requests.PresenceCollectionRequestBuilder;
-import com.microsoft.graph.requests.PresenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +64,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @return the collection request builder
      */
     @Nonnull
-    public CallCollectionRequestBuilder calls() {
-        return new CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
+    public com.microsoft.graph.requests.CallCollectionRequestBuilder calls() {
+        return new com.microsoft.graph.requests.CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
     }
 
     /**
@@ -83,8 +75,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @param id the item identifier
      */
     @Nonnull
-    public CallRequestBuilder calls(@Nonnull final String id) {
-        return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CallRequestBuilder calls(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CallRecord collection
@@ -92,8 +84,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @return the collection request builder
      */
     @Nonnull
-    public CallRecordCollectionRequestBuilder callRecords() {
-        return new CallRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords"), getClient(), null);
+    public com.microsoft.graph.callrecords.requests.CallRecordCollectionRequestBuilder callRecords() {
+        return new com.microsoft.graph.callrecords.requests.CallRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords"), getClient(), null);
     }
 
     /**
@@ -103,8 +95,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @param id the item identifier
      */
     @Nonnull
-    public CallRecordRequestBuilder callRecords(@Nonnull final String id) {
-        return new CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords") + "/" + id, getClient(), null);
+    public com.microsoft.graph.callrecords.requests.CallRecordRequestBuilder callRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.callrecords.requests.CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OnlineMeeting collection
@@ -112,8 +104,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @return the collection request builder
      */
     @Nonnull
-    public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
-        return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
+    public com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder onlineMeetings() {
+        return new com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
 
     /**
@@ -123,8 +115,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @param id the item identifier
      */
     @Nonnull
-    public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
-        return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Presence collection
@@ -132,8 +124,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @return the collection request builder
      */
     @Nonnull
-    public PresenceCollectionRequestBuilder presences() {
-        return new PresenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presences"), getClient(), null);
+    public com.microsoft.graph.requests.PresenceCollectionRequestBuilder presences() {
+        return new com.microsoft.graph.requests.PresenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presences"), getClient(), null);
     }
 
     /**
@@ -143,8 +135,8 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder<CloudC
      * @param id the item identifier
      */
     @Nonnull
-    public PresenceRequestBuilder presences(@Nonnull final String id) {
-        return new PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presences") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PresenceRequestBuilder presences(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presences") + "/" + id, getClient(), null);
     }
 
     /**

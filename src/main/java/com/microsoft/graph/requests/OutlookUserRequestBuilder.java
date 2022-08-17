@@ -11,8 +11,6 @@ import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.graph.models.LocaleInfo;
 import com.microsoft.graph.models.TimeZoneInformation;
 import com.microsoft.graph.models.TimeZoneStandard;
-import com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +66,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public OutlookCategoryCollectionRequestBuilder masterCategories() {
-        return new OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder masterCategories() {
+        return new com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
     }
 
     /**
@@ -79,8 +77,8 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public OutlookCategoryRequestBuilder masterCategories(@Nonnull final String id) {
-        return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OutlookCategoryRequestBuilder masterCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
 
     /**

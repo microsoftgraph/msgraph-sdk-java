@@ -8,36 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceAppManagement;
-import com.microsoft.graph.requests.ManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppRequestBuilder;
-import com.microsoft.graph.requests.MobileLobAppRequestBuilder;
-import com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder;
-import com.microsoft.graph.requests.VppTokenCollectionRequestBuilder;
-import com.microsoft.graph.requests.VppTokenRequestBuilder;
-import com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AndroidManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DefaultManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.IosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.IosManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppRegistrationRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppStatusRequestBuilder;
-import com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsInformationProtectionPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -92,8 +62,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedEBookCollectionRequestBuilder managedEBooks() {
-        return new ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookCollectionRequestBuilder managedEBooks() {
+        return new com.microsoft.graph.requests.ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
     }
 
     /**
@@ -103,8 +73,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedEBookRequestBuilder managedEBooks(@Nonnull final String id) {
-        return new ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedEBookRequestBuilder managedEBooks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppCategory collection
@@ -112,8 +82,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppCategoryCollectionRequestBuilder mobileAppCategories() {
-        return new MobileAppCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionRequestBuilder mobileAppCategories() {
+        return new com.microsoft.graph.requests.MobileAppCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories"), getClient(), null);
     }
 
     /**
@@ -123,8 +93,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppCategoryRequestBuilder mobileAppCategories(@Nonnull final String id) {
-        return new MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryRequestBuilder mobileAppCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppCategories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfiguration collection
@@ -132,8 +102,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationCollectionRequestBuilder mobileAppConfigurations() {
-        return new ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder mobileAppConfigurations() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations"), getClient(), null);
     }
 
     /**
@@ -143,8 +113,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileApp collection
@@ -152,8 +122,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppCollectionRequestBuilder mobileApps() {
-        return new MobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCollectionRequestBuilder mobileApps() {
+        return new com.microsoft.graph.requests.MobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps"), getClient(), null);
     }
 
     /**
@@ -163,8 +133,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppRequestBuilder mobileApps(@Nonnull final String id) {
-        return new MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppRequestBuilder mobileApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileLobApp collection
@@ -172,8 +142,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public MobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp() {
-        return new MobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.mobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp() {
+        return new com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.mobileLobApp", getClient(), null);
     }
 
     /**
@@ -183,8 +153,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public MobileLobAppRequestBuilder mobileAppsAsMobileLobApp(@Nonnull final String id) {
-        return new MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.mobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.MobileLobAppRequestBuilder mobileAppsAsMobileLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.mobileLobApp", getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedMobileLobApp collection
@@ -192,8 +162,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedMobileLobAppCollectionRequestBuilder mobileAppsAsManagedMobileLobApp() {
-        return new ManagedMobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedMobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileLobAppCollectionRequestBuilder mobileAppsAsManagedMobileLobApp() {
+        return new com.microsoft.graph.requests.ManagedMobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedMobileLobApp", getClient(), null);
     }
 
     /**
@@ -203,8 +173,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(@Nonnull final String id) {
-        return new ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedMobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedMobileLobApp", getClient(), null);
     }
     /**
      *  Gets a request builder for the VppToken collection
@@ -212,8 +182,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public VppTokenCollectionRequestBuilder vppTokens() {
-        return new VppTokenCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens"), getClient(), null);
+    public com.microsoft.graph.requests.VppTokenCollectionRequestBuilder vppTokens() {
+        return new com.microsoft.graph.requests.VppTokenCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens"), getClient(), null);
     }
 
     /**
@@ -223,8 +193,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public VppTokenRequestBuilder vppTokens(@Nonnull final String id) {
-        return new VppTokenRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VppTokenRequestBuilder vppTokens(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VppTokenRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AndroidManagedAppProtection collection
@@ -232,8 +202,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public AndroidManagedAppProtectionCollectionRequestBuilder androidManagedAppProtections() {
-        return new AndroidManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedAppProtections"), getClient(), null);
+    public com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionRequestBuilder androidManagedAppProtections() {
+        return new com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedAppProtections"), getClient(), null);
     }
 
     /**
@@ -243,8 +213,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public AndroidManagedAppProtectionRequestBuilder androidManagedAppProtections(@Nonnull final String id) {
-        return new AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedAppProtections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AndroidManagedAppProtectionRequestBuilder androidManagedAppProtections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("androidManagedAppProtections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DefaultManagedAppProtection collection
@@ -252,8 +222,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public DefaultManagedAppProtectionCollectionRequestBuilder defaultManagedAppProtections() {
-        return new DefaultManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultManagedAppProtections"), getClient(), null);
+    public com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionRequestBuilder defaultManagedAppProtections() {
+        return new com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultManagedAppProtections"), getClient(), null);
     }
 
     /**
@@ -263,8 +233,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public DefaultManagedAppProtectionRequestBuilder defaultManagedAppProtections(@Nonnull final String id) {
-        return new DefaultManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultManagedAppProtections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DefaultManagedAppProtectionRequestBuilder defaultManagedAppProtections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DefaultManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultManagedAppProtections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IosManagedAppProtection collection
@@ -272,8 +242,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public IosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections() {
-        return new IosManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections"), getClient(), null);
+    public com.microsoft.graph.requests.IosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections() {
+        return new com.microsoft.graph.requests.IosManagedAppProtectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections"), getClient(), null);
     }
 
     /**
@@ -283,8 +253,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public IosManagedAppProtectionRequestBuilder iosManagedAppProtections(@Nonnull final String id) {
-        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IosManagedAppProtectionRequestBuilder iosManagedAppProtections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("iosManagedAppProtections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedAppPolicy collection
@@ -292,8 +262,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppPolicyCollectionRequestBuilder managedAppPolicies() {
-        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder managedAppPolicies() {
+        return new com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies"), getClient(), null);
     }
 
     /**
@@ -303,8 +273,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppPolicyRequestBuilder managedAppPolicies(@Nonnull final String id) {
-        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder managedAppPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedAppRegistration collection
@@ -312,8 +282,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppRegistrationCollectionRequestBuilder managedAppRegistrations() {
-        return new ManagedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppRegistrationCollectionRequestBuilder managedAppRegistrations() {
+        return new com.microsoft.graph.requests.ManagedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations"), getClient(), null);
     }
 
     /**
@@ -323,8 +293,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppRegistrationRequestBuilder managedAppRegistrations(@Nonnull final String id) {
-        return new ManagedAppRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppRegistrationRequestBuilder managedAppRegistrations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedAppStatus collection
@@ -332,8 +302,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppStatusCollectionRequestBuilder managedAppStatuses() {
-        return new ManagedAppStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppStatusCollectionRequestBuilder managedAppStatuses() {
+        return new com.microsoft.graph.requests.ManagedAppStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses"), getClient(), null);
     }
 
     /**
@@ -343,8 +313,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppStatusRequestBuilder managedAppStatuses(@Nonnull final String id) {
-        return new ManagedAppStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppStatusRequestBuilder managedAppStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MdmWindowsInformationProtectionPolicy collection
@@ -352,8 +322,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public MdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies() {
-        return new MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies() {
+        return new com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies"), getClient(), null);
     }
 
     /**
@@ -363,8 +333,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public MdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(@Nonnull final String id) {
-        return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mdmWindowsInformationProtectionPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TargetedManagedAppConfiguration collection
@@ -372,8 +342,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public TargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations() {
-        return new TargetedManagedAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations() {
+        return new com.microsoft.graph.requests.TargetedManagedAppConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations"), getClient(), null);
     }
 
     /**
@@ -383,8 +353,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public TargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(@Nonnull final String id) {
-        return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("targetedManagedAppConfigurations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsInformationProtectionPolicy collection
@@ -392,8 +362,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies() {
-        return new WindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies() {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies"), getClient(), null);
     }
 
     /**
@@ -403,8 +373,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(@Nonnull final String id) {
-        return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionPolicies") + "/" + id, getClient(), null);
     }
 
     /**

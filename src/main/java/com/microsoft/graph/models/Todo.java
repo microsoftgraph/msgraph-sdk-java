@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TodoTaskList;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TodoTaskListCollectionPage;
 
@@ -35,7 +34,7 @@ public class Todo extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose
 	@Nullable
-    public TodoTaskListCollectionPage lists;
+    public com.microsoft.graph.requests.TodoTaskListCollectionPage lists;
 
 
     /**
@@ -48,7 +47,7 @@ public class Todo extends Entity implements IJsonBackedObject {
 
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists"), TodoTaskListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists"), com.microsoft.graph.requests.TodoTaskListCollectionPage.class);
         }
     }
 }

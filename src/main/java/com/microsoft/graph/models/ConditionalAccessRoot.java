@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.NamedLocation;
-import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
@@ -37,16 +35,16 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "namedLocations", alternate = {"NamedLocations"})
     @Expose
 	@Nullable
-    public NamedLocationCollectionPage namedLocations;
+    public com.microsoft.graph.requests.NamedLocationCollectionPage namedLocations;
 
     /**
      * The Policies.
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
 	@Nullable
-    public ConditionalAccessPolicyCollectionPage policies;
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage policies;
 
 
     /**
@@ -59,11 +57,11 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("namedLocations")) {
-            namedLocations = serializer.deserializeObject(json.get("namedLocations"), NamedLocationCollectionPage.class);
+            namedLocations = serializer.deserializeObject(json.get("namedLocations"), com.microsoft.graph.requests.NamedLocationCollectionPage.class);
         }
 
         if (json.has("policies")) {
-            policies = serializer.deserializeObject(json.get("policies"), ConditionalAccessPolicyCollectionPage.class);
+            policies = serializer.deserializeObject(json.get("policies"), com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessReviewScheduleDefinition;
-import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage;
@@ -37,7 +35,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose
 	@Nullable
-    public AccessReviewScheduleDefinitionCollectionPage definitions;
+    public com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage definitions;
 
     /**
      * The History Definitions.
@@ -46,7 +44,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "historyDefinitions", alternate = {"HistoryDefinitions"})
     @Expose
 	@Nullable
-    public AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
+    public com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
 
 
     /**
@@ -59,11 +57,11 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("definitions")) {
-            definitions = serializer.deserializeObject(json.get("definitions"), AccessReviewScheduleDefinitionCollectionPage.class);
+            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage.class);
         }
 
         if (json.has("historyDefinitions")) {
-            historyDefinitions = serializer.deserializeObject(json.get("historyDefinitions"), AccessReviewHistoryDefinitionCollectionPage.class);
+            historyDefinitions = serializer.deserializeObject(json.get("historyDefinitions"), com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage.class);
         }
     }
 }

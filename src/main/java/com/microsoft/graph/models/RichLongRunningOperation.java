@@ -28,7 +28,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Error.
-     * Error due to which the operation failed.
+     * Error that caused the operation to fail.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -46,7 +46,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Resource Id.
-     * A unique identifier for the result.
+     * The unique identifier for the result.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -55,7 +55,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements IJ
 
     /**
      * The Type.
-     * Type of the operation.
+     * The type of the operation.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

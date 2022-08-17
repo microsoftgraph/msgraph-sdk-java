@@ -8,8 +8,6 @@ package com.microsoft.graph.termstore.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.termstore.models.Group;
-import com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

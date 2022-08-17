@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartAxes;
-import com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartAxisRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisRequestBuilder categoryAxis() {
-        return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder categoryAxis() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
     }
 
     /**
@@ -74,8 +73,8 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartAxisRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisRequestBuilder seriesAxis() {
-        return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder seriesAxis() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
     }
 
     /**
@@ -84,7 +83,7 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookChartAxisRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisRequestBuilder valueAxis() {
-        return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder valueAxis() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
     }
 }

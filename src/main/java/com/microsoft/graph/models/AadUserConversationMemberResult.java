@@ -27,7 +27,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
 
     /**
      * The User Id.
-     * The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

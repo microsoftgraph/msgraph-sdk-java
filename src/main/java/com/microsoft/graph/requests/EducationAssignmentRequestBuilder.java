@@ -8,13 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationAssignment;
-import com.microsoft.graph.requests.EducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationCategoryRequestBuilder;
-import com.microsoft.graph.requests.EducationAssignmentResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationAssignmentResourceRequestBuilder;
-import com.microsoft.graph.requests.EducationRubricRequestBuilder;
-import com.microsoft.graph.requests.EducationSubmissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationSubmissionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +62,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationCategoryCollectionRequestBuilder categories() {
-        return new EducationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.EducationCategoryCollectionRequestBuilder categories() {
+        return new com.microsoft.graph.requests.EducationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -80,8 +73,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationCategoryRequestBuilder categories(@Nonnull final String id) {
-        return new EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationCategoryRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationAssignmentResource collection
@@ -89,8 +82,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationAssignmentResourceCollectionRequestBuilder resources() {
-        return new EducationAssignmentResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    public com.microsoft.graph.requests.EducationAssignmentResourceCollectionRequestBuilder resources() {
+        return new com.microsoft.graph.requests.EducationAssignmentResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
 
     /**
@@ -100,8 +93,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationAssignmentResourceRequestBuilder resources(@Nonnull final String id) {
-        return new EducationAssignmentResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationAssignmentResourceRequestBuilder resources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationAssignmentResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
 
     /**
@@ -110,8 +103,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @return the EducationRubricRequestBuilder instance
      */
     @Nonnull
-    public EducationRubricRequestBuilder rubric() {
-        return new EducationRubricRequestBuilder(getRequestUrlWithAdditionalSegment("rubric"), getClient(), null);
+    public com.microsoft.graph.requests.EducationRubricRequestBuilder rubric() {
+        return new com.microsoft.graph.requests.EducationRubricRequestBuilder(getRequestUrlWithAdditionalSegment("rubric"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationSubmission collection
@@ -119,8 +112,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationSubmissionCollectionRequestBuilder submissions() {
-        return new EducationSubmissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionCollectionRequestBuilder submissions() {
+        return new com.microsoft.graph.requests.EducationSubmissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions"), getClient(), null);
     }
 
     /**
@@ -130,8 +123,8 @@ public class EducationAssignmentRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationSubmissionRequestBuilder submissions(@Nonnull final String id) {
-        return new EducationSubmissionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionRequestBuilder submissions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationSubmissionRequestBuilder(getRequestUrlWithAdditionalSegment("submissions") + "/" + id, getClient(), null);
     }
 
     /**

@@ -13,7 +13,6 @@ import com.microsoft.graph.models.WorkbookChartAxes;
 import com.microsoft.graph.models.WorkbookChartDataLabels;
 import com.microsoft.graph.models.WorkbookChartAreaFormat;
 import com.microsoft.graph.models.WorkbookChartLegend;
-import com.microsoft.graph.models.WorkbookChartSeries;
 import com.microsoft.graph.models.WorkbookChartTitle;
 import com.microsoft.graph.models.WorkbookWorksheet;
 import com.microsoft.graph.models.Entity;
@@ -122,7 +121,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
     @SerializedName(value = "series", alternate = {"Series"})
     @Expose
 	@Nullable
-    public WorkbookChartSeriesCollectionPage series;
+    public com.microsoft.graph.requests.WorkbookChartSeriesCollectionPage series;
 
     /**
      * The Title.
@@ -153,7 +152,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
 
 
         if (json.has("series")) {
-            series = serializer.deserializeObject(json.get("series"), WorkbookChartSeriesCollectionPage.class);
+            series = serializer.deserializeObject(json.get("series"), com.microsoft.graph.requests.WorkbookChartSeriesCollectionPage.class);
         }
     }
 }

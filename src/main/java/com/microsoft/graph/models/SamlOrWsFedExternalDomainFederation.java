@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExternalDomainName;
 import com.microsoft.graph.models.SamlOrWsFedProvider;
 import com.microsoft.graph.requests.ExternalDomainNameCollectionPage;
 
@@ -35,7 +34,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     @SerializedName(value = "domains", alternate = {"Domains"})
     @Expose
 	@Nullable
-    public ExternalDomainNameCollectionPage domains;
+    public com.microsoft.graph.requests.ExternalDomainNameCollectionPage domains;
 
 
     /**
@@ -48,7 +47,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
 
 
         if (json.has("domains")) {
-            domains = serializer.deserializeObject(json.get("domains"), ExternalDomainNameCollectionPage.class);
+            domains = serializer.deserializeObject(json.get("domains"), com.microsoft.graph.requests.ExternalDomainNameCollectionPage.class);
         }
     }
 }

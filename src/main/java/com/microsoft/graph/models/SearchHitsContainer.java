@@ -42,7 +42,7 @@ public class SearchHitsContainer implements IJsonBackedObject {
 
     /**
      * The Aggregations.
-     * Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     * 
      */
     @SerializedName(value = "aggregations", alternate = {"Aggregations"})
     @Expose

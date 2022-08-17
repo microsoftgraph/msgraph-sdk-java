@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookComment;
-import com.microsoft.graph.requests.WorkbookCommentReplyCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookCommentReplyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder<WorkbookCo
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookCommentReplyCollectionRequestBuilder replies() {
-        return new WorkbookCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookCommentReplyCollectionRequestBuilder replies() {
+        return new com.microsoft.graph.requests.WorkbookCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder<WorkbookCo
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookCommentReplyRequestBuilder replies(@Nonnull final String id) {
-        return new WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookCommentReplyRequestBuilder replies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

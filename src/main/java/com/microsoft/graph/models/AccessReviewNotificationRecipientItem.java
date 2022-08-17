@@ -49,7 +49,7 @@ public class AccessReviewNotificationRecipientItem implements IJsonBackedObject 
 
     /**
      * The Notification Template Type.
-     * Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients which sends review completion notifications to the recipients.
+     * Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
      */
     @SerializedName(value = "notificationTemplateType", alternate = {"NotificationTemplateType"})
     @Expose

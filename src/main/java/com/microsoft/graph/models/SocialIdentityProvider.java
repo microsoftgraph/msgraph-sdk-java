@@ -27,7 +27,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements IJso
 
     /**
      * The Client Id.
-     * The client identifier for the application obtained when registering the application with the identity provider. Required.
+     * The identifier for the client application obtained when registering the application with the identity provider. Required.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose

@@ -62,8 +62,8 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder<Mail
      * @return the collection request builder
      */
     @Nonnull
-    public ThreatAssessmentResultCollectionRequestBuilder results() {
-        return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentResultCollectionRequestBuilder results() {
+        return new com.microsoft.graph.requests.ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder<Mail
      * @param id the item identifier
      */
     @Nonnull
-    public ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
-        return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }

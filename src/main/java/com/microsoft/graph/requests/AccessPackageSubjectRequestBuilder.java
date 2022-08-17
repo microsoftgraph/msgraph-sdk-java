@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageSubject;
-import com.microsoft.graph.requests.ConnectedOrganizationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class AccessPackageSubjectRequestBuilder extends BaseRequestBuilder<Acces
      * @return the ConnectedOrganizationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ConnectedOrganizationWithReferenceRequestBuilder connectedOrganization() {
-        return new ConnectedOrganizationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganization"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectedOrganizationWithReferenceRequestBuilder connectedOrganization() {
+        return new com.microsoft.graph.requests.ConnectedOrganizationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganization"), getClient(), null);
     }
 }

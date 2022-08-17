@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.InferenceClassificationOverride;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.InferenceClassificationOverrideCollectionPage;
 
@@ -35,7 +34,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
     @SerializedName(value = "overrides", alternate = {"Overrides"})
     @Expose
 	@Nullable
-    public InferenceClassificationOverrideCollectionPage overrides;
+    public com.microsoft.graph.requests.InferenceClassificationOverrideCollectionPage overrides;
 
 
     /**
@@ -48,7 +47,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
 
 
         if (json.has("overrides")) {
-            overrides = serializer.deserializeObject(json.get("overrides"), InferenceClassificationOverrideCollectionPage.class);
+            overrides = serializer.deserializeObject(json.get("overrides"), com.microsoft.graph.requests.InferenceClassificationOverrideCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConnectedOrganization;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder<Conn
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder externalSponsors() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder externalSponsors() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder<Conn
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder externalSponsors(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder externalSponsors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection
@@ -84,8 +82,8 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder<Conn
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder internalSponsors() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder internalSponsors() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder<Conn
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder internalSponsors(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder internalSponsors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors") + "/" + id, getClient(), null);
     }
 }

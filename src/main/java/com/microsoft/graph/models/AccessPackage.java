@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
@@ -81,7 +80,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
 
     /**
      * The Catalog.
@@ -103,7 +102,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignmentPolicies")) {
-            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), AccessPackageAssignmentPolicyCollectionPage.class);
+            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage.class);
         }
     }
 }

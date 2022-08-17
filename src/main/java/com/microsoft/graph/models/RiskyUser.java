@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskLevel;
 import com.microsoft.graph.models.RiskState;
-import com.microsoft.graph.models.RiskyUserHistoryItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RiskyUserHistoryItemCollectionPage;
 
@@ -51,7 +50,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -69,7 +68,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -110,7 +109,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "history", alternate = {"History"})
     @Expose
 	@Nullable
-    public RiskyUserHistoryItemCollectionPage history;
+    public com.microsoft.graph.requests.RiskyUserHistoryItemCollectionPage history;
 
 
     /**
@@ -123,7 +122,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("history")) {
-            history = serializer.deserializeObject(json.get("history"), RiskyUserHistoryItemCollectionPage.class);
+            history = serializer.deserializeObject(json.get("history"), com.microsoft.graph.requests.RiskyUserHistoryItemCollectionPage.class);
         }
     }
 }

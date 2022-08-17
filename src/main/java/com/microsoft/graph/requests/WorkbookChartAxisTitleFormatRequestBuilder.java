@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartAxisTitleFormat;
-import com.microsoft.graph.requests.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestBuild
      * @return the WorkbookChartFontRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartFontRequestBuilder font() {
-        return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartFontRequestBuilder font() {
+        return new com.microsoft.graph.requests.WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }

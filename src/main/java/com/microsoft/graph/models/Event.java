@@ -22,12 +22,7 @@ import com.microsoft.graph.models.ResponseStatus;
 import com.microsoft.graph.models.Sensitivity;
 import com.microsoft.graph.models.FreeBusyStatus;
 import com.microsoft.graph.models.EventType;
-import com.microsoft.graph.models.Attachment;
 import com.microsoft.graph.models.Calendar;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.OutlookItem;
 import com.microsoft.graph.requests.AttachmentCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -52,7 +47,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Allow New Time Proposals.
-     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true.
+     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      */
     @SerializedName(value = "allowNewTimeProposals", alternate = {"AllowNewTimeProposals"})
     @Expose
@@ -381,7 +376,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
 	@Nullable
-    public AttachmentCollectionPage attachments;
+    public com.microsoft.graph.requests.AttachmentCollectionPage attachments;
 
     /**
      * The Calendar.
@@ -399,7 +394,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Instances.
@@ -408,7 +403,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
 	@Nullable
-    public EventCollectionPage instances;
+    public com.microsoft.graph.requests.EventCollectionPage instances;
 
     /**
      * The Multi Value Extended Properties.
@@ -417,7 +412,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -426,7 +421,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -439,23 +434,23 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments"), AttachmentCollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments"), com.microsoft.graph.requests.AttachmentCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances"), EventCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.AccessReviewStageFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AccessReviewStageRequestBuilder extends BaseRequestBuilder<AccessRe
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewInstanceDecisionItemCollectionRequestBuilder decisions() {
-        return new AccessReviewInstanceDecisionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder decisions() {
+        return new com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class AccessReviewStageRequestBuilder extends BaseRequestBuilder<AccessRe
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewInstanceDecisionItemRequestBuilder decisions(@Nonnull final String id) {
-        return new AccessReviewInstanceDecisionItemRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder decisions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
     }
 
     /**

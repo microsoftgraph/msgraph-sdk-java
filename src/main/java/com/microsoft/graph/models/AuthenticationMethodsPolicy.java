@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RegistrationEnforcement;
-import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
 
@@ -31,7 +30,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Description.
-     * A description of the policy.
+     * A description of the policy. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -40,7 +39,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * The name of the policy.
+     * The name of the policy. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +48,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified Date Time.
-     * The date and time of the last update to the policy.
+     * The date and time of the last update to the policy. Read-only.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -58,7 +57,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Policy Version.
-     * The version of the policy in use.
+     * The version of the policy in use. Read-only.
      */
     @SerializedName(value = "policyVersion", alternate = {"PolicyVersion"})
     @Expose
@@ -90,7 +89,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     @SerializedName(value = "authenticationMethodConfigurations", alternate = {"AuthenticationMethodConfigurations"})
     @Expose
 	@Nullable
-    public AuthenticationMethodConfigurationCollectionPage authenticationMethodConfigurations;
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage authenticationMethodConfigurations;
 
 
     /**
@@ -103,7 +102,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("authenticationMethodConfigurations")) {
-            authenticationMethodConfigurations = serializer.deserializeObject(json.get("authenticationMethodConfigurations"), AuthenticationMethodConfigurationCollectionPage.class);
+            authenticationMethodConfigurations = serializer.deserializeObject(json.get("authenticationMethodConfigurations"), com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage.class);
         }
     }
 }

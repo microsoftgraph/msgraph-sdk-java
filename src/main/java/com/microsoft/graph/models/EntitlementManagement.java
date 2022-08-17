@@ -9,13 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Approval;
-import com.microsoft.graph.models.AccessPackage;
-import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.models.AccessPackageAssignmentRequest;
-import com.microsoft.graph.models.AccessPackageAssignment;
-import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.models.ConnectedOrganization;
 import com.microsoft.graph.models.EntitlementManagementSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalCollectionPage;
@@ -48,16 +41,16 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageAssignmentApprovals", alternate = {"AccessPackageAssignmentApprovals"})
     @Expose
 	@Nullable
-    public ApprovalCollectionPage accessPackageAssignmentApprovals;
+    public com.microsoft.graph.requests.ApprovalCollectionPage accessPackageAssignmentApprovals;
 
     /**
      * The Access Packages.
-     * Represents access package objects.
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
 	@Nullable
-    public AccessPackageCollectionPage accessPackages;
+    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackages;
 
     /**
      * The Assignment Policies.
@@ -66,7 +59,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
 
     /**
      * The Assignment Requests.
@@ -75,7 +68,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignmentRequests", alternate = {"AssignmentRequests"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentRequestCollectionPage assignmentRequests;
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage assignmentRequests;
 
     /**
      * The Assignments.
@@ -84,7 +77,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public AccessPackageAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage assignments;
 
     /**
      * The Catalogs.
@@ -93,20 +86,20 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "catalogs", alternate = {"Catalogs"})
     @Expose
 	@Nullable
-    public AccessPackageCatalogCollectionPage catalogs;
+    public com.microsoft.graph.requests.AccessPackageCatalogCollectionPage catalogs;
 
     /**
      * The Connected Organizations.
-     * Represents references to a directory or domain of another organization whose users can request access.
+     * References to a directory or domain of another organization whose users can request access.
      */
     @SerializedName(value = "connectedOrganizations", alternate = {"ConnectedOrganizations"})
     @Expose
 	@Nullable
-    public ConnectedOrganizationCollectionPage connectedOrganizations;
+    public com.microsoft.graph.requests.ConnectedOrganizationCollectionPage connectedOrganizations;
 
     /**
      * The Settings.
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * The settings that control the behavior of Azure AD entitlement management.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -124,31 +117,31 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("accessPackageAssignmentApprovals")) {
-            accessPackageAssignmentApprovals = serializer.deserializeObject(json.get("accessPackageAssignmentApprovals"), ApprovalCollectionPage.class);
+            accessPackageAssignmentApprovals = serializer.deserializeObject(json.get("accessPackageAssignmentApprovals"), com.microsoft.graph.requests.ApprovalCollectionPage.class);
         }
 
         if (json.has("accessPackages")) {
-            accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+            accessPackages = serializer.deserializeObject(json.get("accessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
         }
 
         if (json.has("assignmentPolicies")) {
-            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), AccessPackageAssignmentPolicyCollectionPage.class);
+            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage.class);
         }
 
         if (json.has("assignmentRequests")) {
-            assignmentRequests = serializer.deserializeObject(json.get("assignmentRequests"), AccessPackageAssignmentRequestCollectionPage.class);
+            assignmentRequests = serializer.deserializeObject(json.get("assignmentRequests"), com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), AccessPackageAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage.class);
         }
 
         if (json.has("catalogs")) {
-            catalogs = serializer.deserializeObject(json.get("catalogs"), AccessPackageCatalogCollectionPage.class);
+            catalogs = serializer.deserializeObject(json.get("catalogs"), com.microsoft.graph.requests.AccessPackageCatalogCollectionPage.class);
         }
 
         if (json.has("connectedOrganizations")) {
-            connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), ConnectedOrganizationCollectionPage.class);
+            connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), com.microsoft.graph.requests.ConnectedOrganizationCollectionPage.class);
         }
     }
 }

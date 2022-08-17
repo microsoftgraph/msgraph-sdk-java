@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.ChatMessageHostedContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageHostedContentRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
-        return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
+        return new com.microsoft.graph.requests.ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChatMessageHostedContentRequestBuilder hostedContents(@Nonnull final String id) {
-        return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageHostedContentRequestBuilder hostedContents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ChatMessage collection
@@ -86,8 +82,8 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChatMessageCollectionRequestBuilder replies() {
-        return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder replies() {
+        return new com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder<ChatMessage> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChatMessageRequestBuilder replies(@Nonnull final String id) {
-        return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChatMessageRequestBuilder replies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

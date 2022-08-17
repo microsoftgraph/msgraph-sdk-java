@@ -39,7 +39,7 @@ public class Diagnostic implements IJsonBackedObject {
 
     /**
      * The Message.
-     * The message describing the condition that triggered the error or warning.
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -48,7 +48,7 @@ public class Diagnostic implements IJsonBackedObject {
 
     /**
      * The Url.
-     * The link to the documentation for this issue.
+     * 
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

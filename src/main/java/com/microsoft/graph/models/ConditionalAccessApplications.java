@@ -58,7 +58,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include Authentication Context Class References.
-     * Authentication context class references include. Supported values are c1 through c25.
+     * 
      */
     @SerializedName(value = "includeAuthenticationContextClassReferences", alternate = {"IncludeAuthenticationContextClassReferences"})
     @Expose

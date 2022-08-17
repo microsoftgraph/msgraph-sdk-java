@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartLegend;
-import com.microsoft.graph.requests.WorkbookChartLegendFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookChartLegendFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartLegendFormatRequestBuilder format() {
-        return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartLegendFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

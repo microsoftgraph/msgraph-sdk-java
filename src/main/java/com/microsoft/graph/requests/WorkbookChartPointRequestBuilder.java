@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartPoint;
-import com.microsoft.graph.requests.WorkbookChartPointFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder<Workboo
      * @return the WorkbookChartPointFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartPointFormatRequestBuilder format() {
-        return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartPointFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

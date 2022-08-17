@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
-import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public AuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
-        return new AuthenticationMethodConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
+        return new com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodConfigurations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public AuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(@Nonnull final String id) {
-        return new AuthenticationMethodConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodConfigurations") + "/" + id, getClient(), null);
     }
 }

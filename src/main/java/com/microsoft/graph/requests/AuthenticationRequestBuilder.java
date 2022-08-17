@@ -8,26 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Authentication;
-import com.microsoft.graph.requests.EmailAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.EmailAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.Fido2AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.LongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.LongRunningOperationRequestBuilder;
-import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -82,8 +62,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public EmailAuthenticationMethodCollectionRequestBuilder emailMethods() {
-        return new EmailAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods"), getClient(), null);
+    public com.microsoft.graph.requests.EmailAuthenticationMethodCollectionRequestBuilder emailMethods() {
+        return new com.microsoft.graph.requests.EmailAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods"), getClient(), null);
     }
 
     /**
@@ -93,8 +73,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public EmailAuthenticationMethodRequestBuilder emailMethods(@Nonnull final String id) {
-        return new EmailAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EmailAuthenticationMethodRequestBuilder emailMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EmailAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Fido2AuthenticationMethod collection
@@ -102,8 +82,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public Fido2AuthenticationMethodCollectionRequestBuilder fido2Methods() {
-        return new Fido2AuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("fido2Methods"), getClient(), null);
+    public com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionRequestBuilder fido2Methods() {
+        return new com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("fido2Methods"), getClient(), null);
     }
 
     /**
@@ -113,8 +93,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public Fido2AuthenticationMethodRequestBuilder fido2Methods(@Nonnull final String id) {
-        return new Fido2AuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("fido2Methods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.Fido2AuthenticationMethodRequestBuilder fido2Methods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.Fido2AuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("fido2Methods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AuthenticationMethod collection
@@ -122,8 +102,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public AuthenticationMethodCollectionRequestBuilder methods() {
-        return new AuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("methods"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder methods() {
+        return new com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("methods"), getClient(), null);
     }
 
     /**
@@ -133,8 +113,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public AuthenticationMethodRequestBuilder methods(@Nonnull final String id) {
-        return new AuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("methods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodRequestBuilder methods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("methods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MicrosoftAuthenticatorAuthenticationMethod collection
@@ -142,8 +122,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder microsoftAuthenticatorMethods() {
-        return new MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods"), getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder microsoftAuthenticatorMethods() {
+        return new com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods"), getClient(), null);
     }
 
     /**
@@ -153,8 +133,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public MicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(@Nonnull final String id) {
-        return new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the LongRunningOperation collection
@@ -162,8 +142,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public LongRunningOperationCollectionRequestBuilder operations() {
-        return new LongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.LongRunningOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.LongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -173,8 +153,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public LongRunningOperationRequestBuilder operations(@Nonnull final String id) {
-        return new LongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PasswordAuthenticationMethod collection
@@ -182,8 +162,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public PasswordAuthenticationMethodCollectionRequestBuilder passwordMethods() {
-        return new PasswordAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods"), getClient(), null);
+    public com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionRequestBuilder passwordMethods() {
+        return new com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods"), getClient(), null);
     }
 
     /**
@@ -193,8 +173,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public PasswordAuthenticationMethodRequestBuilder passwordMethods(@Nonnull final String id) {
-        return new PasswordAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder passwordMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PhoneAuthenticationMethod collection
@@ -202,8 +182,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public PhoneAuthenticationMethodCollectionRequestBuilder phoneMethods() {
-        return new PhoneAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods"), getClient(), null);
+    public com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionRequestBuilder phoneMethods() {
+        return new com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods"), getClient(), null);
     }
 
     /**
@@ -213,8 +193,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public PhoneAuthenticationMethodRequestBuilder phoneMethods(@Nonnull final String id) {
-        return new PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder phoneMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SoftwareOathAuthenticationMethod collection
@@ -222,8 +202,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public SoftwareOathAuthenticationMethodCollectionRequestBuilder softwareOathMethods() {
-        return new SoftwareOathAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods"), getClient(), null);
+    public com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionRequestBuilder softwareOathMethods() {
+        return new com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods"), getClient(), null);
     }
 
     /**
@@ -233,8 +213,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public SoftwareOathAuthenticationMethodRequestBuilder softwareOathMethods(@Nonnull final String id) {
-        return new SoftwareOathAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SoftwareOathAuthenticationMethodRequestBuilder softwareOathMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SoftwareOathAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TemporaryAccessPassAuthenticationMethod collection
@@ -242,8 +222,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods() {
-        return new TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods"), getClient(), null);
+    public com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods() {
+        return new com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods"), getClient(), null);
     }
 
     /**
@@ -253,8 +233,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public TemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(@Nonnull final String id) {
-        return new TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsHelloForBusinessAuthenticationMethod collection
@@ -262,8 +242,8 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @return the collection request builder
      */
     @Nonnull
-    public WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder windowsHelloForBusinessMethods() {
-        return new WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsHelloForBusinessMethods"), getClient(), null);
+    public com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder windowsHelloForBusinessMethods() {
+        return new com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsHelloForBusinessMethods"), getClient(), null);
     }
 
     /**
@@ -273,7 +253,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
      * @param id the item identifier
      */
     @Nonnull
-    public WindowsHelloForBusinessAuthenticationMethodRequestBuilder windowsHelloForBusinessMethods(@Nonnull final String id) {
-        return new WindowsHelloForBusinessAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("windowsHelloForBusinessMethods") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodRequestBuilder windowsHelloForBusinessMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("windowsHelloForBusinessMethods") + "/" + id, getClient(), null);
     }
 }

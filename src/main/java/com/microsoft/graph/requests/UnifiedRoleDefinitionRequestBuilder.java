@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder<Unif
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleDefinitionCollectionRequestBuilder inheritsPermissionsFrom() {
-        return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder inheritsPermissionsFrom() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder<Unif
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleDefinitionRequestBuilder inheritsPermissionsFrom(@Nonnull final String id) {
-        return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder inheritsPermissionsFrom(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom") + "/" + id, getClient(), null);
     }
 }

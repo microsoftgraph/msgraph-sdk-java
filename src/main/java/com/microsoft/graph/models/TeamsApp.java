@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TeamsAppDistributionMethod;
-import com.microsoft.graph.models.TeamsAppDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppDefinitionCollectionPage;
 
@@ -63,7 +62,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
     @SerializedName(value = "appDefinitions", alternate = {"AppDefinitions"})
     @Expose
 	@Nullable
-    public TeamsAppDefinitionCollectionPage appDefinitions;
+    public com.microsoft.graph.requests.TeamsAppDefinitionCollectionPage appDefinitions;
 
 
     /**
@@ -76,7 +75,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appDefinitions")) {
-            appDefinitions = serializer.deserializeObject(json.get("appDefinitions"), TeamsAppDefinitionCollectionPage.class);
+            appDefinitions = serializer.deserializeObject(json.get("appDefinitions"), com.microsoft.graph.requests.TeamsAppDefinitionCollectionPage.class);
         }
     }
 }

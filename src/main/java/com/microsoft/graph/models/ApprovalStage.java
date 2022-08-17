@@ -55,7 +55,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewed By.
-     * The identifier of the reviewer. Read-only.
+     * The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      */
     @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose

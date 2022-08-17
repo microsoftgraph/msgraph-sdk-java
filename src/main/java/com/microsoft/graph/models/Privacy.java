@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
 
 
@@ -47,7 +46,7 @@ public class Privacy implements IJsonBackedObject {
     @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestCollectionPage subjectRightsRequests;
+    public com.microsoft.graph.requests.SubjectRightsRequestCollectionPage subjectRightsRequests;
 
 
     /**
@@ -60,7 +59,7 @@ public class Privacy implements IJsonBackedObject {
 
 
         if (json.has("subjectRightsRequests")) {
-            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), SubjectRightsRequestCollectionPage.class);
+            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), com.microsoft.graph.requests.SubjectRightsRequestCollectionPage.class);
         }
     }
 }

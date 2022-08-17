@@ -49,7 +49,7 @@ public class TeamworkOnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * The URL which can be clicked on to join or uniquely identify the meeting.
+     * The URL that users click to join or uniquely identify the meeting.
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose

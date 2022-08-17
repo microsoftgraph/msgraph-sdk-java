@@ -11,9 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PlannerPlanContainer;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerPlanDetails;
-import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerBucketCollectionPage;
 import com.microsoft.graph.requests.PlannerTaskCollectionPage;
@@ -82,16 +80,16 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Buckets.
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
 	@Nullable
-    public PlannerBucketCollectionPage buckets;
+    public com.microsoft.graph.requests.PlannerBucketCollectionPage buckets;
 
     /**
      * The Details.
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -100,12 +98,12 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PlannerTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -118,11 +116,11 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
 
         if (json.has("buckets")) {
-            buckets = serializer.deserializeObject(json.get("buckets"), PlannerBucketCollectionPage.class);
+            buckets = serializer.deserializeObject(json.get("buckets"), com.microsoft.graph.requests.PlannerBucketCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PlannerTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PlannerTaskCollectionPage.class);
         }
     }
 }

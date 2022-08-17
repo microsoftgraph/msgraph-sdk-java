@@ -64,8 +64,8 @@ public class UnifiedRoleEligibilityScheduleRequestBuilder extends BaseRequestBui
      * @return the AppScopeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AppScopeWithReferenceRequestBuilder appScope() {
-        return new AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
+    public com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder appScope() {
+        return new com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
     }
 
     /**
@@ -74,8 +74,8 @@ public class UnifiedRoleEligibilityScheduleRequestBuilder extends BaseRequestBui
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder directoryScope() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder directoryScope() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class UnifiedRoleEligibilityScheduleRequestBuilder extends BaseRequestBui
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder principal() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder principal() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
     }
 
     /**
@@ -94,7 +94,7 @@ public class UnifiedRoleEligibilityScheduleRequestBuilder extends BaseRequestBui
      * @return the UnifiedRoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

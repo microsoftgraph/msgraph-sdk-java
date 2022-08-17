@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ManagedAppDataEncryptionType;
 import com.microsoft.graph.models.KeyValuePair;
-import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.ManagedAppProtection;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -128,7 +127,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Deployment Summary.
@@ -150,7 +149,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
     }
 }

@@ -40,7 +40,7 @@ public class RegistrationEnforcement implements IJsonBackedObject {
 
     /**
      * The Authentication Methods Registration Campaign.
-     * Run campaigns to remind users to setup targeted authentication methods.
+     * Run campaigns to remind users to set up targeted authentication methods.
      */
     @SerializedName(value = "authenticationMethodsRegistrationCampaign", alternate = {"AuthenticationMethodsRegistrationCampaign"})
     @Expose

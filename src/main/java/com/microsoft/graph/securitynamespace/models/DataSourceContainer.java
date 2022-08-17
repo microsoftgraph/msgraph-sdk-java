@@ -47,7 +47,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Hold Status.
-     * The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
+     * The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
      */
     @SerializedName(value = "holdStatus", alternate = {"HoldStatus"})
     @Expose

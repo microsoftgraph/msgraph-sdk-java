@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UnifiedRolePermission;
-import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage;
 
@@ -40,7 +39,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +48,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
+     * Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -58,7 +57,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
+     * Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -67,7 +66,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Scopes.
-     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
+     * List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      */
     @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
@@ -85,7 +84,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
+     * Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
@@ -94,7 +93,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     * Indicates version of the role definition. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -103,12 +102,12 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherits Permissions From.
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      */
     @SerializedName(value = "inheritsPermissionsFrom", alternate = {"InheritsPermissionsFrom"})
     @Expose
 	@Nullable
-    public UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage inheritsPermissionsFrom;
 
 
     /**
@@ -121,7 +120,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("inheritsPermissionsFrom")) {
-            inheritsPermissionsFrom = serializer.deserializeObject(json.get("inheritsPermissionsFrom"), UnifiedRoleDefinitionCollectionPage.class);
+            inheritsPermissionsFrom = serializer.deserializeObject(json.get("inheritsPermissionsFrom"), com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage.class);
         }
     }
 }

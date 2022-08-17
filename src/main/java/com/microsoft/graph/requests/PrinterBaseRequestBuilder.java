@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrinterBase;
-import com.microsoft.graph.requests.PrintJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintJobRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class PrinterBaseRequestBuilder extends BaseRequestBuilder<PrinterBase> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintJobCollectionRequestBuilder jobs() {
-        return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    public com.microsoft.graph.requests.PrintJobCollectionRequestBuilder jobs() {
+        return new com.microsoft.graph.requests.PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PrinterBaseRequestBuilder extends BaseRequestBuilder<PrinterBase> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintJobRequestBuilder jobs(@Nonnull final String id) {
-        return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintJobRequestBuilder jobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
 }

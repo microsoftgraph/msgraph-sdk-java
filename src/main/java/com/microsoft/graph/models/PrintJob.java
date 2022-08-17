@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrintJobConfiguration;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.PrintJobStatus;
-import com.microsoft.graph.models.PrintDocument;
-import com.microsoft.graph.models.PrintTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PrintDocumentCollectionPage;
 import com.microsoft.graph.requests.PrintTaskCollectionPage;
@@ -103,7 +101,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     @SerializedName(value = "documents", alternate = {"Documents"})
     @Expose
 	@Nullable
-    public PrintDocumentCollectionPage documents;
+    public com.microsoft.graph.requests.PrintDocumentCollectionPage documents;
 
     /**
      * The Tasks.
@@ -112,7 +110,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PrintTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PrintTaskCollectionPage tasks;
 
 
     /**
@@ -125,11 +123,11 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
 
         if (json.has("documents")) {
-            documents = serializer.deserializeObject(json.get("documents"), PrintDocumentCollectionPage.class);
+            documents = serializer.deserializeObject(json.get("documents"), com.microsoft.graph.requests.PrintDocumentCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PrintTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PrintTaskCollectionPage.class);
         }
     }
 }

@@ -11,8 +11,6 @@ import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.graph.models.LocaleInfo;
 import com.microsoft.graph.models.TimeZoneInformation;
 import com.microsoft.graph.models.TimeZoneStandard;
-import com.microsoft.graph.requests.OutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.OutlookCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

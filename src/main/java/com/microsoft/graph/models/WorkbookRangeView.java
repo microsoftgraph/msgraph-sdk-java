@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkbookRangeView;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkbookRangeViewCollectionPage;
 
@@ -120,7 +119,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-     * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      */
     @SerializedName(value = "valueTypes", alternate = {"ValueTypes"})
     @Expose
@@ -134,7 +133,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
     @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
 	@Nullable
-    public WorkbookRangeViewCollectionPage rows;
+    public com.microsoft.graph.requests.WorkbookRangeViewCollectionPage rows;
 
 
     /**
@@ -147,7 +146,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows"), WorkbookRangeViewCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows"), com.microsoft.graph.requests.WorkbookRangeViewCollectionPage.class);
         }
     }
 }

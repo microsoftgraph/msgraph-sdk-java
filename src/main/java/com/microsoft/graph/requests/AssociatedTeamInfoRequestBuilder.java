@@ -63,7 +63,7 @@ public class AssociatedTeamInfoRequestBuilder extends BaseRequestBuilder<Associa
      * @return the TeamWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamWithReferenceRequestBuilder team() {
-        return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    public com.microsoft.graph.requests.TeamWithReferenceRequestBuilder team() {
+        return new com.microsoft.graph.requests.TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
 }

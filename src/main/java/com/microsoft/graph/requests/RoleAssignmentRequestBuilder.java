@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleAssignment;
-import com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class RoleAssignmentRequestBuilder extends BaseRequestBuilder<RoleAssignm
      * @return the RoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

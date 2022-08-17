@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Conversation;
-import com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConversationThreadRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

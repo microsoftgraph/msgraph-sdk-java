@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SectionLinks;
-import com.microsoft.graph.models.OnenotePage;
 import com.microsoft.graph.models.Notebook;
 import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
@@ -65,7 +64,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
     @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
 	@Nullable
-    public OnenotePageCollectionPage pages;
+    public com.microsoft.graph.requests.OnenotePageCollectionPage pages;
 
     /**
      * The Parent Notebook.
@@ -96,7 +95,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
 
 
         if (json.has("pages")) {
-            pages = serializer.deserializeObject(json.get("pages"), OnenotePageCollectionPage.class);
+            pages = serializer.deserializeObject(json.get("pages"), com.microsoft.graph.requests.OnenotePageCollectionPage.class);
         }
     }
 }

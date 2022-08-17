@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TeamsApp;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppCollectionPage;
 
@@ -35,7 +34,7 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
     @SerializedName(value = "teamsApps", alternate = {"TeamsApps"})
     @Expose
 	@Nullable
-    public TeamsAppCollectionPage teamsApps;
+    public com.microsoft.graph.requests.TeamsAppCollectionPage teamsApps;
 
 
     /**
@@ -48,7 +47,7 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
 
 
         if (json.has("teamsApps")) {
-            teamsApps = serializer.deserializeObject(json.get("teamsApps"), TeamsAppCollectionPage.class);
+            teamsApps = serializer.deserializeObject(json.get("teamsApps"), com.microsoft.graph.requests.TeamsAppCollectionPage.class);
         }
     }
 }

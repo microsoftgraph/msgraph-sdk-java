@@ -10,9 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.EdiscoveryIndexOperation;
-import com.microsoft.graph.security.models.SiteSource;
-import com.microsoft.graph.security.models.UnifiedGroupSource;
-import com.microsoft.graph.security.models.UserSource;
 import com.microsoft.graph.security.models.DataSourceContainer;
 import com.microsoft.graph.security.requests.SiteSourceCollectionPage;
 import com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage;
@@ -67,7 +64,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
 	@Nullable
-    public SiteSourceCollectionPage siteSources;
+    public com.microsoft.graph.security.requests.SiteSourceCollectionPage siteSources;
 
     /**
      * The Unified Group Sources.
@@ -76,16 +73,16 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
 	@Nullable
-    public UnifiedGroupSourceCollectionPage unifiedGroupSources;
+    public com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage unifiedGroupSources;
 
     /**
      * The User Sources.
-     * Data source entity for a custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose
 	@Nullable
-    public UserSourceCollectionPage userSources;
+    public com.microsoft.graph.security.requests.UserSourceCollectionPage userSources;
 
 
     /**
@@ -98,15 +95,15 @@ public class EdiscoveryCustodian extends DataSourceContainer implements IJsonBac
 
 
         if (json.has("siteSources")) {
-            siteSources = serializer.deserializeObject(json.get("siteSources"), SiteSourceCollectionPage.class);
+            siteSources = serializer.deserializeObject(json.get("siteSources"), com.microsoft.graph.security.requests.SiteSourceCollectionPage.class);
         }
 
         if (json.has("unifiedGroupSources")) {
-            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), UnifiedGroupSourceCollectionPage.class);
+            unifiedGroupSources = serializer.deserializeObject(json.get("unifiedGroupSources"), com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionPage.class);
         }
 
         if (json.has("userSources")) {
-            userSources = serializer.deserializeObject(json.get("userSources"), UserSourceCollectionPage.class);
+            userSources = serializer.deserializeObject(json.get("userSources"), com.microsoft.graph.security.requests.UserSourceCollectionPage.class);
         }
     }
 }

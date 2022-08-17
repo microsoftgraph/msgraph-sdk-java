@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.PasswordResetResponse;
-import com.microsoft.graph.requests.DeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +65,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends Ba
      * @return the DeviceRequestBuilder instance
      */
     @Nonnull
-    public DeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceRequestBuilder device() {
+        return new com.microsoft.graph.requests.DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
     }
 
     /**

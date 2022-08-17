@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartGridlines;
-import com.microsoft.graph.requests.WorkbookChartGridlinesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder<Wor
      * @return the WorkbookChartGridlinesFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartGridlinesFormatRequestBuilder format() {
-        return new WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartGridlinesFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

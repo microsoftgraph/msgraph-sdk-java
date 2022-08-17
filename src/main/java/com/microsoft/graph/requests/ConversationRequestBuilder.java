@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Conversation;
-import com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConversationThreadRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ConversationRequestBuilder extends BaseRequestBuilder<Conversation>
      * @return the collection request builder
      */
     @Nonnull
-    public ConversationThreadCollectionRequestBuilder threads() {
-        return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
+    public com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder threads() {
+        return new com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ConversationRequestBuilder extends BaseRequestBuilder<Conversation>
      * @param id the item identifier
      */
     @Nonnull
-    public ConversationThreadRequestBuilder threads(@Nonnull final String id) {
-        return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConversationThreadRequestBuilder threads(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 }

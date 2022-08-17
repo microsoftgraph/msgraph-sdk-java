@@ -14,25 +14,16 @@ import com.microsoft.graph.models.Root;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.SiteCollection;
 import com.microsoft.graph.models.ItemAnalytics;
-import com.microsoft.graph.models.ColumnDefinition;
-import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.BaseItem;
-import com.microsoft.graph.models.List;
-import com.microsoft.graph.models.RichLongRunningOperation;
-import com.microsoft.graph.models.Permission;
-import com.microsoft.graph.models.Site;
 import com.microsoft.graph.termstore.models.Store;
 import com.microsoft.graph.models.Onenote;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
+import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ContentTypeCollectionPage;
-import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.BaseItemCollectionPage;
 import com.microsoft.graph.requests.ListCollectionPage;
 import com.microsoft.graph.requests.RichLongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.PermissionCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
-import com.microsoft.graph.termstore.requests.StoreCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -110,7 +101,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
 	@Nullable
-    public ColumnDefinitionCollectionPage columns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
@@ -119,7 +110,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
 	@Nullable
-    public ContentTypeCollectionPage contentTypes;
+    public com.microsoft.graph.requests.ContentTypeCollectionPage contentTypes;
 
     /**
      * The Drive.
@@ -137,23 +128,23 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
 	@Nullable
-    public DriveCollectionPage drives;
+    public com.microsoft.graph.requests.DriveCollectionPage drives;
 
     /**
      * The External Columns.
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * 
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage externalColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage externalColumns;
 
     /**
      * The Items.
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public BaseItemCollectionPage items;
+    public com.microsoft.graph.requests.BaseItemCollectionPage items;
 
     /**
      * The Lists.
@@ -162,16 +153,16 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose
 	@Nullable
-    public ListCollectionPage lists;
+    public com.microsoft.graph.requests.ListCollectionPage lists;
 
     /**
      * The Operations.
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public RichLongRunningOperationCollectionPage operations;
+    public com.microsoft.graph.requests.RichLongRunningOperationCollectionPage operations;
 
     /**
      * The Permissions.
@@ -180,7 +171,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
 	@Nullable
-    public PermissionCollectionPage permissions;
+    public com.microsoft.graph.requests.PermissionCollectionPage permissions;
 
     /**
      * The Sites.
@@ -189,11 +180,11 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "sites", alternate = {"Sites"})
     @Expose
 	@Nullable
-    public SiteCollectionPage sites;
+    public com.microsoft.graph.requests.SiteCollectionPage sites;
 
     /**
      * The Term Store.
-     * The termStore under this site.
+     * The default termStore under this site.
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose
@@ -207,7 +198,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "termStores", alternate = {"TermStores"})
     @Expose
 	@Nullable
-    public StoreCollectionPage termStores;
+    public com.microsoft.graph.termstore.requests.StoreCollectionPage termStores;
 
     /**
      * The Onenote.
@@ -229,43 +220,43 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes"), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes"), com.microsoft.graph.requests.ContentTypeCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), com.microsoft.graph.requests.DriveCollectionPage.class);
         }
 
         if (json.has("externalColumns")) {
-            externalColumns = serializer.deserializeObject(json.get("externalColumns"), ColumnDefinitionCollectionPage.class);
+            externalColumns = serializer.deserializeObject(json.get("externalColumns"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), BaseItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.requests.BaseItemCollectionPage.class);
         }
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists"), ListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists"), com.microsoft.graph.requests.ListCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), RichLongRunningOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.RichLongRunningOperationCollectionPage.class);
         }
 
         if (json.has("permissions")) {
-            permissions = serializer.deserializeObject(json.get("permissions"), PermissionCollectionPage.class);
+            permissions = serializer.deserializeObject(json.get("permissions"), com.microsoft.graph.requests.PermissionCollectionPage.class);
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites"), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites"), com.microsoft.graph.requests.SiteCollectionPage.class);
         }
 
         if (json.has("termStores")) {
-            termStores = serializer.deserializeObject(json.get("termStores"), StoreCollectionPage.class);
+            termStores = serializer.deserializeObject(json.get("termStores"), com.microsoft.graph.termstore.requests.StoreCollectionPage.class);
         }
     }
 }

@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TermsOfUseContainer;
-import com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.AgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder<TermsO
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
-        return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
+        return new com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder<TermsO
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
-        return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Agreement collection
@@ -86,8 +82,8 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder<TermsO
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementCollectionRequestBuilder agreements() {
-        return new AgreementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreements"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementCollectionRequestBuilder agreements() {
+        return new com.microsoft.graph.requests.AgreementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreements"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder<TermsO
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementRequestBuilder agreements(@Nonnull final String id) {
-        return new AgreementRequestBuilder(getRequestUrlWithAdditionalSegment("agreements") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementRequestBuilder agreements(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementRequestBuilder(getRequestUrlWithAdditionalSegment("agreements") + "/" + id, getClient(), null);
     }
 }

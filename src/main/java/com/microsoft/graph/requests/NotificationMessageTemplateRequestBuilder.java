@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.NotificationMessageTemplate;
-import com.microsoft.graph.requests.LocalizedNotificationMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.LocalizedNotificationMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public LocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages() {
-        return new LocalizedNotificationMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages"), getClient(), null);
+    public com.microsoft.graph.requests.LocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages() {
+        return new com.microsoft.graph.requests.LocalizedNotificationMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public LocalizedNotificationMessageRequestBuilder localizedNotificationMessages(@Nonnull final String id) {
-        return new LocalizedNotificationMessageRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LocalizedNotificationMessageRequestBuilder localizedNotificationMessages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LocalizedNotificationMessageRequestBuilder(getRequestUrlWithAdditionalSegment("localizedNotificationMessages") + "/" + id, getClient(), null);
     }
 
     /**

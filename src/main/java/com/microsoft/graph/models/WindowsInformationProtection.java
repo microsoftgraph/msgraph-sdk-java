@@ -15,11 +15,8 @@ import com.microsoft.graph.models.WindowsInformationProtectionResourceCollection
 import com.microsoft.graph.models.WindowsInformationProtectionIPRangeCollection;
 import com.microsoft.graph.models.WindowsInformationProtectionProxiedDomainCollection;
 import com.microsoft.graph.models.WindowsInformationProtectionApp;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.models.ManagedAppPolicy;
 import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -241,7 +238,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Exempt App Locker Files.
@@ -250,7 +247,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "exemptAppLockerFiles", alternate = {"ExemptAppLockerFiles"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
 
     /**
      * The Protected App Locker Files.
@@ -259,7 +256,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "protectedAppLockerFiles", alternate = {"ProtectedAppLockerFiles"})
     @Expose
 	@Nullable
-    public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
+    public com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
 
 
     /**
@@ -272,15 +269,15 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("exemptAppLockerFiles")) {
-            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles"), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles"), com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
 
         if (json.has("protectedAppLockerFiles")) {
-            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles"), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles"), com.microsoft.graph.requests.WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
     }
 }

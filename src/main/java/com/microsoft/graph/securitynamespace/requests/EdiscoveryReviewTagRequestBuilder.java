@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryReviewTag;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class EdiscoveryReviewTagRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewTagCollectionWithReferencesRequestBuilder childTags() {
-        return new EdiscoveryReviewTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("childTags"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder childTags() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("childTags"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class EdiscoveryReviewTagRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewTagWithReferenceRequestBuilder childTags(@Nonnull final String id) {
-        return new EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("childTags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder childTags(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("childTags") + "/" + id, getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class EdiscoveryReviewTagRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the EdiscoveryReviewTagWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryReviewTagWithReferenceRequestBuilder parent() {
-        return new EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder parent() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("parent"), getClient(), null);
     }
 }

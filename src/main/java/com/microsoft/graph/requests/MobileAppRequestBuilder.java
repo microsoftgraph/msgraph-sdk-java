@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.models.MobileAppAssignment;
-import com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder<MobileApp> {
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppAssignmentCollectionRequestBuilder assignments() {
-        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -79,8 +75,8 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder<MobileApp> {
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppCategory collection
@@ -88,8 +84,8 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder<MobileApp> {
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
-        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -99,8 +95,8 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder<MobileApp> {
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
-        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 
     /**

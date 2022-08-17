@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookRangeFormat;
-import com.microsoft.graph.requests.WorkbookRangeBorderCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeBorderRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeFillRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeFontRequestBuilder;
-import com.microsoft.graph.requests.WorkbookFormatProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +62,8 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookRangeBorderCollectionRequestBuilder borders() {
-        return new WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeBorderCollectionRequestBuilder borders() {
+        return new com.microsoft.graph.requests.WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookRangeBorderRequestBuilder borders(@Nonnull final String id) {
-        return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeBorderRequestBuilder borders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookRangeFillRequestBuilder instance
      */
     @Nonnull
-    public WorkbookRangeFillRequestBuilder fill() {
-        return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeFillRequestBuilder fill() {
+        return new com.microsoft.graph.requests.WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
@@ -98,8 +93,8 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookRangeFontRequestBuilder instance
      */
     @Nonnull
-    public WorkbookRangeFontRequestBuilder font() {
-        return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeFontRequestBuilder font() {
+        return new com.microsoft.graph.requests.WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
@@ -108,8 +103,8 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookFormatProtectionRequestBuilder instance
      */
     @Nonnull
-    public WorkbookFormatProtectionRequestBuilder protection() {
-        return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookFormatProtectionRequestBuilder protection() {
+        return new com.microsoft.graph.requests.WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
 
     /**

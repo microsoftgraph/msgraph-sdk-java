@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewSet;
-import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewScheduleDefinitionCollectionRequestBuilder definitions() {
-        return new AccessReviewScheduleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder definitions() {
+        return new com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewScheduleDefinitionRequestBuilder definitions(@Nonnull final String id) {
-        return new AccessReviewScheduleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder definitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessReviewHistoryDefinition collection
@@ -86,8 +82,8 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewHistoryDefinitionCollectionRequestBuilder historyDefinitions() {
-        return new AccessReviewHistoryDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder historyDefinitions() {
+        return new com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewHistoryDefinitionRequestBuilder historyDefinitions(@Nonnull final String id) {
-        return new AccessReviewHistoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder historyDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions") + "/" + id, getClient(), null);
     }
 }
