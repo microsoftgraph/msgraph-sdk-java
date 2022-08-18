@@ -3,7 +3,7 @@ package com.microsoft.serviceClient;
 import com.azure.core.credential.TokenCredential;
 import com.microsoft.graph.Requests.BaseGraphRequestAdapter;
 import com.microsoft.graph.Requests.IBaseClient;
-import com.microsoft.graph.httpcore.middlewareoption.GraphClientOptions;
+import com.microsoft.graph.httpcore.middlewareoption.GraphClientOption;
 import com.microsoft.info.Constants;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
@@ -23,8 +23,8 @@ public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient i
      * Sets a few basic values for the GraphClientOptions to pass to the client.
      * @return the GraphClientOptions instance for the GraphServiceClient.
      */
-    public static GraphClientOptions getGraphClientOptions() {
-        GraphClientOptions graphClientOptions = new GraphClientOptions();
+    public static GraphClientOption getGraphClientOptions() {
+        GraphClientOption graphClientOptions = new GraphClientOption();
         graphClientOptions.setGraphServiceTargetVersion("v1.0");
         graphClientOptions.setClientLibraryVersion(Constants.VERSION_NAME);
         return graphClientOptions;
