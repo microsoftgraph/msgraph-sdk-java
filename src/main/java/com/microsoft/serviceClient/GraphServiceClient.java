@@ -15,9 +15,7 @@ import okhttp3.OkHttpClient;
 
 import javax.annotation.Nonnull;
 
-public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient implements IBaseClient {
-
-    private RequestAdapter requestAdapter;
+public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient {
 
     /**
      * Sets a few basic values for the GraphClientOptions to pass to the client.
@@ -57,23 +55,5 @@ public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient i
      */
     public GraphServiceClient(OkHttpClient client) {
         super(new BaseGraphRequestAdapter(new AnonymousAuthenticationProvider(), null, "v1.0", client));
-    }
-    /**
-     * Set the RequestAdapter for the GraphServiceClient.
-     * @param requestAdapter the request adapter for the GraphServiceClient.
-     */
-    @Override
-    @SuppressFBWarnings
-    public void setRequestAdapter(@Nonnull final RequestAdapter requestAdapter) {
-        this.requestAdapter = requestAdapter;
-    }
-    /**
-     * Get the RequestAdapter for the GraphServiceClient.
-     * @return the RequestAdapter for the GraphServiceClient.
-     */
-    @Override
-    @SuppressFBWarnings
-    public RequestAdapter getRequestAdapter() {
-        return this.requestAdapter;
     }
 }
