@@ -12,7 +12,7 @@ import java.util.Objects;
 public class NetworkConnection implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name of the application managing the network connection (for example, Facebook, SMTP, etc.). */
+    /** Name of the application managing the network connection (for example, Facebook or SMTP). */
     private String _applicationName;
     /** Destination IP address (of the network connection). */
     private String _destinationAddress;
@@ -81,7 +81,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Gets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -318,7 +318,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Sets the applicationName property value. Name of the application managing the network connection (for example, Facebook or SMTP).
      * @param value Value to set for the applicationName property.
      * @return a void
      */

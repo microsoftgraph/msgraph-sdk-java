@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingBusiness extends Entity implements Parsable {
-    /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. */
+    /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
     private PhysicalAddress _address;
     /** All the appointments of this business. Read-only. Nullable. */
     private java.util.List<BookingAppointment> _appointments;
@@ -61,7 +61,7 @@ public class BookingBusiness extends Entity implements Parsable {
         return new BookingBusiness();
     }
     /**
-     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * Gets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @return a physicalAddress
      */
     @javax.annotation.Nullable
@@ -250,7 +250,7 @@ public class BookingBusiness extends Entity implements Parsable {
         writer.writeStringValue("webSiteUrl", this.getWebSiteUrl());
     }
     /**
-     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * Sets the address property value. The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @param value Value to set for the address property.
      * @return a void
      */

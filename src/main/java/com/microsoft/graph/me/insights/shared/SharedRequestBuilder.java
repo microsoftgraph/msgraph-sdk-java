@@ -59,7 +59,7 @@ public class SharedRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SharedRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SharedRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a CompletableFuture of SharedInsightCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SharedInsightCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SharedRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SharedInsightCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SharedRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SharedInsightCollectionResponse
@@ -227,7 +227,7 @@ public class SharedRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Access this property from the derived type itemInsights. */
+    /** Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share. */
     public class SharedRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

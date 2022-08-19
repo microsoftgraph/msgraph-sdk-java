@@ -80,7 +80,7 @@ public class IdentityItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class IdentityItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class IdentityItemRequestBuilder {
         }
     }
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @return a CompletableFuture of identity
      */
     public java.util.concurrent.CompletableFuture<Identity> get() {
@@ -209,7 +209,7 @@ public class IdentityItemRequestBuilder {
         }
     }
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identity
      */
@@ -226,7 +226,7 @@ public class IdentityItemRequestBuilder {
         }
     }
     /**
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of identity
@@ -313,7 +313,7 @@ public class IdentityItemRequestBuilder {
         public IdentityItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members. */
+    /** A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members. */
     public class IdentityItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

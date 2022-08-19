@@ -52,7 +52,7 @@ public class ColumnDefinitionItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Get externalColumns from groups
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ColumnDefinitionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Get externalColumns from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class ColumnDefinitionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Get externalColumns from groups
      * @return a CompletableFuture of columnDefinition
      */
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -98,7 +98,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Get externalColumns from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
      */
@@ -115,7 +115,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Get externalColumns from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of columnDefinition
@@ -132,7 +132,7 @@ public class ColumnDefinitionItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site. */
+    /** Get externalColumns from groups */
     public class ColumnDefinitionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

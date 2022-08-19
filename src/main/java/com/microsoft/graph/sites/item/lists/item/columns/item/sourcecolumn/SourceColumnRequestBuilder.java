@@ -52,7 +52,7 @@ public class SourceColumnRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The source column for content type column.
+     * The source column for the content type column.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class SourceColumnRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The source column for content type column.
+     * The source column for the content type column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class SourceColumnRequestBuilder {
         return requestInfo;
     }
     /**
-     * The source column for content type column.
+     * The source column for the content type column.
      * @return a CompletableFuture of columnDefinition
      */
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -98,7 +98,7 @@ public class SourceColumnRequestBuilder {
         }
     }
     /**
-     * The source column for content type column.
+     * The source column for the content type column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
      */
@@ -115,7 +115,7 @@ public class SourceColumnRequestBuilder {
         }
     }
     /**
-     * The source column for content type column.
+     * The source column for the content type column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of columnDefinition
@@ -132,7 +132,7 @@ public class SourceColumnRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The source column for content type column. */
+    /** The source column for the content type column. */
     public class SourceColumnRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -316,7 +316,7 @@ public class ServicePrincipalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Update entity in servicePrincipals
      * @param body 
      * @return a RequestInformation
      */
@@ -325,7 +325,7 @@ public class ServicePrincipalItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Update entity in servicePrincipals
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -546,7 +546,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Update entity in servicePrincipals
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -563,7 +563,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Update entity in servicePrincipals
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -581,7 +581,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Update entity in servicePrincipals
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

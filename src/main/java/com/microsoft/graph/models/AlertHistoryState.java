@@ -12,21 +12,21 @@ import java.util.Objects;
 public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application. */
+    /** The appId property */
     private String _appId;
-    /** UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN). */
+    /** The assignedTo property */
     private String _assignedTo;
-    /** Comment entered by signed-in user. */
+    /** The comments property */
     private java.util.List<String> _comments;
-    /** Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive. */
+    /** The feedback property */
     private AlertFeedback _feedback;
     /** The OdataType property */
     private String _odataType;
-    /** Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed. */
+    /** The status property */
     private AlertStatus _status;
-    /** Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The updatedDateTime property */
     private OffsetDateTime _updatedDateTime;
-    /** UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode). */
+    /** The user property */
     private String _user;
     /**
      * Instantiates a new alertHistoryState and sets the default values.
@@ -55,7 +55,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * Gets the appId property value. The appId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._appId;
     }
     /**
-     * Gets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * Gets the assignedTo property value. The assignedTo property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._assignedTo;
     }
     /**
-     * Gets the comments property value. Comment entered by signed-in user.
+     * Gets the comments property value. The comments property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._comments;
     }
     /**
-     * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Gets the feedback property value. The feedback property
      * @return a alertFeedback
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Gets the status property value. The status property
      * @return a alertStatus
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._status;
     }
     /**
-     * Gets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the updatedDateTime property value. The updatedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return this._updatedDateTime;
     }
     /**
-     * Gets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * Gets the user property value. The user property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * Sets the appId property value. The appId property
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -170,7 +170,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._appId = value;
     }
     /**
-     * Sets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._assignedTo = value;
     }
     /**
-     * Sets the comments property value. Comment entered by signed-in user.
+     * Sets the comments property value. The comments property
      * @param value Value to set for the comments property.
      * @return a void
      */
@@ -186,7 +186,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._comments = value;
     }
     /**
-     * Sets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Sets the feedback property value. The feedback property
      * @param value Value to set for the feedback property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._status = value;
     }
     /**
-     * Sets the updatedDateTime property value. Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         this._updatedDateTime = value;
     }
     /**
-     * Sets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * Sets the user property value. The user property
      * @param value Value to set for the user property.
      * @return a void
      */

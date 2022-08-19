@@ -598,7 +598,7 @@ public class UserItemRequestBuilder {
         return new microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Retrieve the properties and relationships of user object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -606,7 +606,7 @@ public class UserItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -783,7 +783,7 @@ public class UserItemRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Retrieve the properties and relationships of user object.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -799,7 +799,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -816,7 +816,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -1123,7 +1123,7 @@ public class UserItemRequestBuilder {
         public UserItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance. */
+    /** Retrieve the properties and relationships of user object. */
     public class UserItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -80,7 +80,7 @@ public class SchemaExtensionItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties of the specified schemaExtension definition.
+     * Get entity from schemaExtensions by key
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SchemaExtensionItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get the properties of the specified schemaExtension definition.
+     * Get entity from schemaExtensions by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SchemaExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get the properties of the specified schemaExtension definition.
+     * Get entity from schemaExtensions by key
      * @return a CompletableFuture of schemaExtension
      */
     public java.util.concurrent.CompletableFuture<SchemaExtension> get() {
@@ -209,7 +209,7 @@ public class SchemaExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get the properties of the specified schemaExtension definition.
+     * Get entity from schemaExtensions by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schemaExtension
      */
@@ -226,7 +226,7 @@ public class SchemaExtensionItemRequestBuilder {
         }
     }
     /**
-     * Get the properties of the specified schemaExtension definition.
+     * Get entity from schemaExtensions by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of schemaExtension
@@ -313,7 +313,7 @@ public class SchemaExtensionItemRequestBuilder {
         public SchemaExtensionItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get the properties of the specified schemaExtension definition. */
+    /** Get entity from schemaExtensions by key */
     public class SchemaExtensionItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ChatInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The unique identifier for a message in a Microsoft Teams channel. */
+    /** The unique identifier of a message in a Microsoft Teams channel. */
     private String _messageId;
     /** The OdataType property */
     private String _odataType;
@@ -60,7 +60,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
+     * Gets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the messageId property value. The unique identifier for a message in a Microsoft Teams channel.
+     * Sets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
      * @param value Value to set for the messageId property.
      * @return a void
      */

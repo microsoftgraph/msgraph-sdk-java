@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Permission extends Entity implements Parsable {
     /** A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional. */
     private OffsetDateTime _expirationDateTime;
@@ -20,7 +20,7 @@ public class Permission extends Entity implements Parsable {
     private java.util.List<SharePointIdentitySet> _grantedToIdentitiesV2;
     /** For user type permissions, the details of the users and applications for this permission. Read-only. */
     private SharePointIdentitySet _grantedToV2;
-    /** Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only. */
+    /** Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.. */
     private Boolean _hasPassword;
     /** Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only. */
     private ItemReference _inheritedFrom;
@@ -30,7 +30,7 @@ public class Permission extends Entity implements Parsable {
     private SharingLink _link;
     /** The type of permission, for example, read. See below for the full list of roles. Read-only. */
     private java.util.List<String> _roles;
-    /** A unique token that can be used to access this shared item via the [shares API][]. Read-only. */
+    /** A unique token that can be used to access this shared item via the **shares** API. Read-only. */
     private String _shareId;
     /**
      * Instantiates a new permission and sets the default values.
@@ -112,7 +112,7 @@ public class Permission extends Entity implements Parsable {
         return this._grantedToV2;
     }
     /**
-     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class Permission extends Entity implements Parsable {
         return this._roles;
     }
     /**
-     * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Gets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class Permission extends Entity implements Parsable {
         this._grantedToV2 = value;
     }
     /**
-     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      * @param value Value to set for the hasPassword property.
      * @return a void
      */
@@ -260,7 +260,7 @@ public class Permission extends Entity implements Parsable {
         this._roles = value;
     }
     /**
-     * Sets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Sets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
      * @param value Value to set for the shareId property.
      * @return a void
      */

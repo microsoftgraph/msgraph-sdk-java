@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable {
-    /** This represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user. */
+    /** Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user. */
     private String _query;
-    /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query that is, ./manager) is specified. */
+    /** In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified. */
     private String _queryRoot;
     /** Indicates the type of query. Allowed value is MicrosoftGraph. */
     private String _queryType;
@@ -46,7 +46,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
         }};
     }
     /**
-     * Gets the query property value. This represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
+     * Gets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
         return this._query;
     }
     /**
-     * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query that is, ./manager) is specified.
+     * Gets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
         writer.writeStringValue("queryType", this.getQueryType());
     }
     /**
-     * Sets the query property value. This represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
+     * Sets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
      * @param value Value to set for the query property.
      * @return a void
      */
@@ -90,7 +90,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
         this._query = value;
     }
     /**
-     * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query that is, ./manager) is specified.
+     * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
      * @param value Value to set for the queryRoot property.
      * @return a void
      */

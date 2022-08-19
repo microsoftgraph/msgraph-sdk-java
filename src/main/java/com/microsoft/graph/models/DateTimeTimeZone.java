@@ -11,11 +11,11 @@ import java.util.Objects;
 public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'. */
+    /** A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000). */
     private String _dateTime;
     /** The OdataType property */
     private String _odataType;
-    /** Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values. */
+    /** Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values. */
     private String _timeZone;
     /**
      * Instantiates a new dateTimeTimeZone and sets the default values.
@@ -44,7 +44,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'.
+     * Gets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values.
+     * Gets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'.
+     * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      * @param value Value to set for the dateTime property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values.
+     * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
      * @param value Value to set for the timeZone property.
      * @return a void
      */

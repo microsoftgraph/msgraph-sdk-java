@@ -59,7 +59,7 @@ public class StagesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class StagesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class StagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      * @return a CompletableFuture of ApprovalStageCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ApprovalStageCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class StagesRequestBuilder {
         }
     }
     /**
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApprovalStageCollectionResponse
      */
@@ -155,7 +155,7 @@ public class StagesRequestBuilder {
         }
     }
     /**
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ApprovalStageCollectionResponse
@@ -227,7 +227,7 @@ public class StagesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage. */
+    /** A collection of stages in the approval decision. */
     public class StagesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

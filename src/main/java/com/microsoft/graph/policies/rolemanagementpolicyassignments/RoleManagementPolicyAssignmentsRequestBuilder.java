@@ -59,7 +59,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignmentCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
         }
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
      */
@@ -155,7 +155,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
         }
     }
     /**
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignmentCollectionResponse
@@ -227,7 +227,7 @@ public class RoleManagementPolicyAssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the role management policy assignments. */
+    /** The assignment of a role management policy to a role definition object. */
     public class RoleManagementPolicyAssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

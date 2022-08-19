@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessage extends Message implements Parsable {
-    /** The end time of the requested meeting. */
+    /** The endDateTime property */
     private DateTimeTimeZone _endDateTime;
     /** The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only. */
     private Event _event;
@@ -55,7 +55,7 @@ public class EventMessage extends Message implements Parsable {
         return new EventMessage();
     }
     /**
-     * Gets the endDateTime property value. The end time of the requested meeting.
+     * Gets the endDateTime property value. The endDateTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class EventMessage extends Message implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the endDateTime property value. The end time of the requested meeting.
+     * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      * @return a void
      */

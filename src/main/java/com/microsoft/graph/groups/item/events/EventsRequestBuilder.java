@@ -60,7 +60,7 @@ public class EventsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class EventsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class EventsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @return a CompletableFuture of EventCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class EventsRequestBuilder {
         }
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EventCollectionResponse
      */
@@ -164,7 +164,7 @@ public class EventsRequestBuilder {
         }
     }
     /**
-     * The group's events.
+     * The group's calendar events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EventCollectionResponse
@@ -236,7 +236,7 @@ public class EventsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The group's events. */
+    /** The group's calendar events. */
     public class EventsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

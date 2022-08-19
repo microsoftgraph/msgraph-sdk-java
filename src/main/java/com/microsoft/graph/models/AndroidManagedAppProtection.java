@@ -10,9 +10,9 @@ import java.util.Objects;
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;
-    /** Friendly name of the preferred custom browser to open weblink on Android. */
+    /** Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
     private String _customBrowserDisplayName;
-    /** Unique identifier of a custom browser to open weblink on Android. */
+    /** Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
     private String _customBrowserPackageId;
     /** Count of apps to which the current policy is deployed. */
     private Integer _deployedAppCount;
@@ -55,7 +55,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._apps;
     }
     /**
-     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
+     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this._customBrowserDisplayName;
     }
     /**
-     * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
+     * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._apps = value;
     }
     /**
-     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
+     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserDisplayName property.
      * @return a void
      */
@@ -182,7 +182,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this._customBrowserDisplayName = value;
     }
     /**
-     * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
+     * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserPackageId property.
      * @return a void
      */

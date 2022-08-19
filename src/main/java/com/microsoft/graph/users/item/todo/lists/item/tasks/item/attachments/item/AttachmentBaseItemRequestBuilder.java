@@ -86,7 +86,7 @@ public class AttachmentBaseItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class AttachmentBaseItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class AttachmentBaseItemRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @return a CompletableFuture of attachmentBase
      */
     public java.util.concurrent.CompletableFuture<AttachmentBase> get() {
@@ -215,7 +215,7 @@ public class AttachmentBaseItemRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachmentBase
      */
@@ -232,7 +232,7 @@ public class AttachmentBaseItemRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Get attachments from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of attachmentBase
@@ -319,7 +319,7 @@ public class AttachmentBaseItemRequestBuilder {
         public AttachmentBaseItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A collection of file attachments for the task. */
+    /** Get attachments from users */
     public class AttachmentBaseItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

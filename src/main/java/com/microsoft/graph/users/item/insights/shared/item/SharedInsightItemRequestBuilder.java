@@ -92,7 +92,7 @@ public class SharedInsightItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class SharedInsightItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class SharedInsightItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @return a CompletableFuture of sharedInsight
      */
     public java.util.concurrent.CompletableFuture<SharedInsight> get() {
@@ -221,7 +221,7 @@ public class SharedInsightItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharedInsight
      */
@@ -238,7 +238,7 @@ public class SharedInsightItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of sharedInsight
@@ -325,7 +325,7 @@ public class SharedInsightItemRequestBuilder {
         public SharedInsightItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Access this property from the derived type itemInsights. */
+    /** Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share. */
     public class SharedInsightItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

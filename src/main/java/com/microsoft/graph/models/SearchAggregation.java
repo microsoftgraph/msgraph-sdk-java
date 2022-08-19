@@ -11,9 +11,9 @@ import java.util.Objects;
 public class SearchAggregation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Defines the actual buckets of the computed aggregation. */
+    /** The buckets property */
     private java.util.List<SearchBucket> _buckets;
-    /** Defines on which field the aggregation was computed on. */
+    /** The field property */
     private String _field;
     /** The OdataType property */
     private String _odataType;
@@ -44,7 +44,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the buckets property value. Defines the actual buckets of the computed aggregation.
+     * Gets the buckets property value. The buckets property
      * @return a searchBucket
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
         return this._buckets;
     }
     /**
-     * Gets the field property value. Defines on which field the aggregation was computed on.
+     * Gets the field property value. The field property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the buckets property value. Defines the actual buckets of the computed aggregation.
+     * Sets the buckets property value. The buckets property
      * @param value Value to set for the buckets property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
         this._buckets = value;
     }
     /**
-     * Sets the field property value. Defines on which field the aggregation was computed on.
+     * Sets the field property value. The field property
      * @param value Value to set for the field property.
      * @return a void
      */

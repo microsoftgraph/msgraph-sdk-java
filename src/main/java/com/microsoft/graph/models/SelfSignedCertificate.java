@@ -12,25 +12,25 @@ import java.util.Objects;
 public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Custom key identifier. */
+    /** The customKeyIdentifier property */
     private byte[] _customKeyIdentifier;
-    /** The friendly name for the key. */
+    /** The displayName property */
     private String _displayName;
-    /** The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /** The endDateTime property */
     private OffsetDateTime _endDateTime;
-    /** The value for the key credential. Should be a base-64 encoded value. */
+    /** The key property */
     private byte[] _key;
-    /** The unique identifier (GUID) for the key. */
+    /** The keyId property */
     private String _keyId;
     /** The OdataType property */
     private String _odataType;
-    /** The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /** The startDateTime property */
     private OffsetDateTime _startDateTime;
-    /** The thumbprint value for the key. */
+    /** The thumbprint property */
     private String _thumbprint;
-    /** The type of key credential. 'AsymmetricX509Cert'. */
+    /** The type property */
     private String _type;
-    /** A string that describes the purpose for which the key can be used. For example, 'Verify'. */
+    /** The usage property */
     private String _usage;
     /**
      * Instantiates a new SelfSignedCertificate and sets the default values.
@@ -59,7 +59,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the customKeyIdentifier property value. Custom key identifier.
+     * Gets the customKeyIdentifier property value. The customKeyIdentifier property
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._customKeyIdentifier;
     }
     /**
-     * Gets the displayName property value. The friendly name for the key.
+     * Gets the displayName property value. The displayName property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the endDateTime property value. The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the endDateTime property value. The endDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the key property value. The value for the key credential. Should be a base-64 encoded value.
+     * Gets the key property value. The key property
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._key;
     }
     /**
-     * Gets the keyId property value. The unique identifier (GUID) for the key.
+     * Gets the keyId property value. The keyId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the startDateTime property value. The startDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the thumbprint property value. The thumbprint value for the key.
+     * Gets the thumbprint property value. The thumbprint property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._thumbprint;
     }
     /**
-     * Gets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Gets the type property value. The type property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         return this._type;
     }
     /**
-     * Gets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Gets the usage property value. The usage property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the customKeyIdentifier property value. Custom key identifier.
+     * Sets the customKeyIdentifier property value. The customKeyIdentifier property
      * @param value Value to set for the customKeyIdentifier property.
      * @return a void
      */
@@ -194,7 +194,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._customKeyIdentifier = value;
     }
     /**
-     * Sets the displayName property value. The friendly name for the key.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the endDateTime property value. The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the endDateTime property value. The endDateTime property
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the key property value. The value for the key credential. Should be a base-64 encoded value.
+     * Sets the key property value. The key property
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._key = value;
     }
     /**
-     * Sets the keyId property value. The unique identifier (GUID) for the key.
+     * Sets the keyId property value. The keyId property
      * @param value Value to set for the keyId property.
      * @return a void
      */
@@ -234,7 +234,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the startDateTime property value. The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._startDateTime = value;
     }
     /**
-     * Sets the thumbprint property value. The thumbprint value for the key.
+     * Sets the thumbprint property value. The thumbprint property
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
@@ -250,7 +250,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._thumbprint = value;
     }
     /**
-     * Sets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
@@ -258,7 +258,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
         this._type = value;
     }
     /**
-     * Sets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Sets the usage property value. The usage property
      * @param value Value to set for the usage property.
      * @return a void
      */

@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookComment extends Entity implements Parsable {
-    /** The content of the comment. */
+    /** The content of comment. */
     private String _content;
     /** Indicates the type for the comment. */
     private String _contentType;
@@ -34,7 +34,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return new WorkbookComment();
     }
     /**
-     * Gets the content property value. The content of the comment.
+     * Gets the content property value. The content of comment.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class WorkbookComment extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("replies", this.getReplies());
     }
     /**
-     * Sets the content property value. The content of the comment.
+     * Sets the content property value. The content of comment.
      * @param value Value to set for the content property.
      * @return a void
      */

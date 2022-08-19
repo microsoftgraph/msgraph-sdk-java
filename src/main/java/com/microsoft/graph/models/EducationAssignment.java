@@ -13,11 +13,11 @@ public class EducationAssignment extends Entity implements Parsable {
     private EducationAddedStudentAction _addedStudentAction;
     /** Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none. */
     private EducationAddToCalendarOptions _addToCalendarAction;
-    /** Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true. */
+    /** Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true. */
     private Boolean _allowLateSubmissions;
     /** Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher. */
     private Boolean _allowStudentsToAddResourcesToSubmission;
-    /** The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _assignDateTime;
     /** The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _assignedDateTime;
@@ -45,7 +45,7 @@ public class EducationAssignment extends Entity implements Parsable {
     private IdentitySet _lastModifiedBy;
     /** Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published. */
+    /** Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published. */
     private String _notificationChannelUrl;
     /** Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable. */
     private java.util.List<EducationAssignmentResource> _resources;
@@ -53,7 +53,7 @@ public class EducationAssignment extends Entity implements Parsable {
     private String _resourcesFolderUrl;
     /** When set, the grading rubric attached to this assignment. */
     private EducationRubric _rubric;
-    /** Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned. */
+    /** Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned. */
     private EducationAssignmentStatus _status;
     /** Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable. */
     private java.util.List<EducationSubmission> _submissions;
@@ -94,7 +94,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this._addToCalendarAction;
     }
     /**
-     * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
+     * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this._allowStudentsToAddResourcesToSubmission;
     }
     /**
-     * Gets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
+     * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -289,7 +289,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this._rubric;
     }
     /**
-     * Gets the status property value. Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Gets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
      * @return a educationAssignmentStatus
      */
     @javax.annotation.Nullable
@@ -363,7 +363,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this._addToCalendarAction = value;
     }
     /**
-     * Sets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
+     * Sets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
      * @param value Value to set for the allowLateSubmissions property.
      * @return a void
      */
@@ -379,7 +379,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this._allowStudentsToAddResourcesToSubmission = value;
     }
     /**
-     * Sets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the assignDateTime property.
      * @return a void
      */
@@ -491,7 +491,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
+     * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
@@ -523,7 +523,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this._rubric = value;
     }
     /**
-     * Sets the status property value. Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Sets the status property value. Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
      * @param value Value to set for the status property.
      * @return a void
      */

@@ -15,7 +15,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     private FilterMode _mode;
     /** The OdataType property */
     private String _odataType;
-    /** Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions */
+    /** Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions */
     private String _rule;
     /**
      * Instantiates a new conditionalAccessFilter and sets the default values.
@@ -73,7 +73,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * Gets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      * @return a string
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      * @param value Value to set for the rule property.
      * @return a void
      */

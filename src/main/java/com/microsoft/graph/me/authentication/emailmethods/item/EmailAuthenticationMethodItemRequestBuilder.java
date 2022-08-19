@@ -80,7 +80,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the email addresses registered to a user for authentication.
+     * The email address registered to a user for authentication.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the email addresses registered to a user for authentication.
+     * The email address registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the email addresses registered to a user for authentication.
+     * The email address registered to a user for authentication.
      * @return a CompletableFuture of emailAuthenticationMethod
      */
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> get() {
@@ -209,7 +209,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the email addresses registered to a user for authentication.
+     * The email address registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
      */
@@ -226,7 +226,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Represents the email addresses registered to a user for authentication.
+     * The email address registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of emailAuthenticationMethod
@@ -313,7 +313,7 @@ public class EmailAuthenticationMethodItemRequestBuilder {
         public EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the email addresses registered to a user for authentication. */
+    /** The email address registered to a user for authentication. */
     public class EmailAuthenticationMethodItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

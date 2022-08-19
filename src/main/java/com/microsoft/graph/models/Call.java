@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Call extends Entity implements Parsable {
     /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
@@ -15,21 +15,21 @@ public class Call extends Entity implements Parsable {
     private String _callbackUri;
     /** A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
     private String _callChainId;
-    /** Contains the optional features for the call. */
+    /** The callOptions property */
     private CallOptions _callOptions;
     /** The routing information on how the call was retargeted. Read-only. */
     private java.util.List<CallRoute> _callRoutes;
-    /** The chat information. Required information for meeting scenarios. */
+    /** The chat information. Required information for joining a meeting. */
     private ChatInfo _chatInfo;
     /** The direction of the call. The possible value are incoming or outgoing. Read-only. */
     private CallDirection _direction;
-    /** The context associated with an incoming call. Read-only. Server generated. */
+    /** The incomingContext property */
     private IncomingContext _incomingContext;
-    /** The media configuration. Required information for creating peer to peer calls or joining meetings. */
+    /** The media configuration. Required. */
     private MediaConfig _mediaConfig;
     /** Read-only. The call media state. */
     private CallMediaState _mediaState;
-    /** The meeting information. Required information for meeting scenarios. */
+    /** The meeting information that's required for joining a meeting. */
     private MeetingInfo _meetingInfo;
     /** The myParticipantId property */
     private String _myParticipantId;
@@ -53,7 +53,7 @@ public class Call extends Entity implements Parsable {
     private String _tenantId;
     /** The toneInfo property */
     private ToneInfo _toneInfo;
-    /** The transcription information for the call. Read-only. */
+    /** The transcription property */
     private CallTranscriptionInfo _transcription;
     /**
      * Instantiates a new call and sets the default values.
@@ -98,7 +98,7 @@ public class Call extends Entity implements Parsable {
         return this._callChainId;
     }
     /**
-     * Gets the callOptions property value. Contains the optional features for the call.
+     * Gets the callOptions property value. The callOptions property
      * @return a callOptions
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class Call extends Entity implements Parsable {
         return this._callRoutes;
     }
     /**
-     * Gets the chatInfo property value. The chat information. Required information for meeting scenarios.
+     * Gets the chatInfo property value. The chat information. Required information for joining a meeting.
      * @return a chatInfo
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class Call extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
+     * Gets the incomingContext property value. The incomingContext property
      * @return a incomingContext
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class Call extends Entity implements Parsable {
         return this._incomingContext;
     }
     /**
-     * Gets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * Gets the mediaConfig property value. The media configuration. Required.
      * @return a mediaConfig
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class Call extends Entity implements Parsable {
         return this._mediaState;
     }
     /**
-     * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
+     * Gets the meetingInfo property value. The meeting information that's required for joining a meeting.
      * @return a meetingInfo
      */
     @javax.annotation.Nullable
@@ -283,7 +283,7 @@ public class Call extends Entity implements Parsable {
         return this._toneInfo;
     }
     /**
-     * Gets the transcription property value. The transcription information for the call. Read-only.
+     * Gets the transcription property value. The transcription property
      * @return a callTranscriptionInfo
      */
     @javax.annotation.Nullable
@@ -347,7 +347,7 @@ public class Call extends Entity implements Parsable {
         this._callChainId = value;
     }
     /**
-     * Sets the callOptions property value. Contains the optional features for the call.
+     * Sets the callOptions property value. The callOptions property
      * @param value Value to set for the callOptions property.
      * @return a void
      */
@@ -363,7 +363,7 @@ public class Call extends Entity implements Parsable {
         this._callRoutes = value;
     }
     /**
-     * Sets the chatInfo property value. The chat information. Required information for meeting scenarios.
+     * Sets the chatInfo property value. The chat information. Required information for joining a meeting.
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
@@ -379,7 +379,7 @@ public class Call extends Entity implements Parsable {
         this._direction = value;
     }
     /**
-     * Sets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
+     * Sets the incomingContext property value. The incomingContext property
      * @param value Value to set for the incomingContext property.
      * @return a void
      */
@@ -387,7 +387,7 @@ public class Call extends Entity implements Parsable {
         this._incomingContext = value;
     }
     /**
-     * Sets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * Sets the mediaConfig property value. The media configuration. Required.
      * @param value Value to set for the mediaConfig property.
      * @return a void
      */
@@ -403,7 +403,7 @@ public class Call extends Entity implements Parsable {
         this._mediaState = value;
     }
     /**
-     * Sets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
+     * Sets the meetingInfo property value. The meeting information that's required for joining a meeting.
      * @param value Value to set for the meetingInfo property.
      * @return a void
      */
@@ -499,7 +499,7 @@ public class Call extends Entity implements Parsable {
         this._toneInfo = value;
     }
     /**
-     * Sets the transcription property value. The transcription information for the call. Read-only.
+     * Sets the transcription property value. The transcription property
      * @param value Value to set for the transcription property.
      * @return a void
      */

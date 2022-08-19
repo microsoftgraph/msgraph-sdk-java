@@ -13,7 +13,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     private IdentitySet _initiator;
     /** List of members added. */
     private java.util.List<TeamworkUserIdentity> _members;
-    /** The timestamp denoting how far back a conversation's history is shared with the conversation members. */
+    /** The timestamp that denotes how far back a conversation's history is shared with the conversation members. */
     private OffsetDateTime _visibleHistoryStartDateTime;
     /**
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
@@ -63,7 +63,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
         return this._members;
     }
     /**
-     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * Gets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
         this._members = value;
     }
     /**
-     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      * @param value Value to set for the visibleHistoryStartDateTime property.
      * @return a void
      */

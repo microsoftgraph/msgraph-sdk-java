@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationTeamsAppResource extends EducationResource implements Parsable {
-    /** URL that points to the app's icon. */
+    /** The appIconWebUrl property */
     private String _appIconWebUrl;
-    /** Teams App ID of the application. */
+    /** The appId property */
     private String _appId;
-    /** URL for the app resource that will be opened by Teams. */
+    /** The teamsEmbeddedContentUrl property */
     private String _teamsEmbeddedContentUrl;
-    /** URL for the app resource that can be opened in the browser. */
+    /** The webUrl property */
     private String _webUrl;
     /**
      * Instantiates a new EducationTeamsAppResource and sets the default values.
@@ -35,7 +35,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         return new EducationTeamsAppResource();
     }
     /**
-     * Gets the appIconWebUrl property value. URL that points to the app's icon.
+     * Gets the appIconWebUrl property value. The appIconWebUrl property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         return this._appIconWebUrl;
     }
     /**
-     * Gets the appId property value. Teams App ID of the application.
+     * Gets the appId property value. The appId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         }};
     }
     /**
-     * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
+     * Gets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         return this._teamsEmbeddedContentUrl;
     }
     /**
-     * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
+     * Gets the webUrl property value. The webUrl property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the appIconWebUrl property value. URL that points to the app's icon.
+     * Sets the appIconWebUrl property value. The appIconWebUrl property
      * @param value Value to set for the appIconWebUrl property.
      * @return a void
      */
@@ -102,7 +102,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         this._appIconWebUrl = value;
     }
     /**
-     * Sets the appId property value. Teams App ID of the application.
+     * Sets the appId property value. The appId property
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         this._appId = value;
     }
     /**
-     * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
+     * Sets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
      * @param value Value to set for the teamsEmbeddedContentUrl property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
         this._teamsEmbeddedContentUrl = value;
     }
     /**
-     * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
+     * Sets the webUrl property value. The webUrl property
      * @param value Value to set for the webUrl property.
      * @return a void
      */

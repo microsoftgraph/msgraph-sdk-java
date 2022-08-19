@@ -80,7 +80,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @return a CompletableFuture of softwareOathAuthenticationMethod
      */
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethod> get() {
@@ -209,7 +209,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of softwareOathAuthenticationMethod
      */
@@ -226,7 +226,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         }
     }
     /**
-     * Get softwareOathMethods from users
+     * The software OATH TOTP applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of softwareOathAuthenticationMethod
@@ -313,7 +313,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder {
         public SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get softwareOathMethods from users */
+    /** The software OATH TOTP applications registered to a user for authentication. */
     public class SoftwareOathAuthenticationMethodItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

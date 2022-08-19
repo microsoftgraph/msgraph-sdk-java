@@ -17,9 +17,9 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     private OffsetDateTime _endDateTime;
     /** How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne). */
     private String _memberType;
-    /** The identifier of the role assignment in Azure AD. */
+    /** The identifier of the role assignment in Azure AD. Supports $filter (eq, ne). */
     private String _roleAssignmentOriginId;
-    /** The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. */
+    /** The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne). */
     private String _roleAssignmentScheduleId;
     /** When this instance starts. */
     private OffsetDateTime _startDateTime;
@@ -91,7 +91,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._memberType;
     }
     /**
-     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
+     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._roleAssignmentOriginId;
     }
     /**
-     * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._memberType = value;
     }
     /**
-     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
+     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
      * @param value Value to set for the roleAssignmentOriginId property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._roleAssignmentOriginId = value;
     }
     /**
-     * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
+     * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
      * @param value Value to set for the roleAssignmentScheduleId property.
      * @return a void
      */

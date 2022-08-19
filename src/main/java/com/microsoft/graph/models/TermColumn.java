@@ -13,7 +13,7 @@ import microsoft.graph.models.termstore.Term;
 public class TermColumn implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Specifies whether the column will allow more than one value */
+    /** Specifies whether the column will allow more than one value. */
     private Boolean _allowMultipleValues;
     /** The OdataType property */
     private String _odataType;
@@ -50,7 +50,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value
+     * Gets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value
+     * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      * @param value Value to set for the allowMultipleValues property.
      * @return a void
      */

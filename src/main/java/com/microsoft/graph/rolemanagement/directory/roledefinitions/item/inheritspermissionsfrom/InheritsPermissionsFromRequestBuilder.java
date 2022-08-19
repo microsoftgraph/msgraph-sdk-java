@@ -59,7 +59,7 @@ public class InheritsPermissionsFromRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class InheritsPermissionsFromRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class InheritsPermissionsFromRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class InheritsPermissionsFromRequestBuilder {
         }
     }
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class InheritsPermissionsFromRequestBuilder {
         }
     }
     /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
@@ -227,7 +227,7 @@ public class InheritsPermissionsFromRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute. */
+    /** Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand. */
     public class InheritsPermissionsFromRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

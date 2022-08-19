@@ -88,7 +88,7 @@ public class DirectoryObjectItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class DirectoryObjectItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -118,7 +118,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -134,7 +134,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -151,7 +151,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
+     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -168,7 +168,7 @@ public class DirectoryObjectItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand. */
+    /** The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand. */
     public class DirectoryObjectItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

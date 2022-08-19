@@ -59,7 +59,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @return a CompletableFuture of DelegatedPermissionClassificationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassificationCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
         }
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedPermissionClassificationCollectionResponse
      */
@@ -155,7 +155,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
         }
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DelegatedPermissionClassificationCollectionResponse
@@ -227,7 +227,7 @@ public class DelegatedPermissionClassificationsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand. */
+    /** Get delegatedPermissionClassifications from servicePrincipals */
     public class DelegatedPermissionClassificationsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -7,15 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
     private String _appDisplayName;
     /** The identifier of the application. Required. Supports $filter (eq only) and $orderby. */
     private String _appId;
-    /** A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required. */
+    /** A list of pending scopes waiting for approval. Required. */
     private java.util.List<AppConsentRequestScope> _pendingScopes;
-    /** A list of pending user consent requests. */
+    /** A list of pending user consent requests. Supports $filter (eq). */
     private java.util.List<UserConsentRequest> _userConsentRequests;
     /**
      * Instantiates a new appConsentRequest and sets the default values.
@@ -66,7 +66,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     * Gets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      * @return a appConsentRequestScope
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         return this._pendingScopes;
     }
     /**
-     * Gets the userConsentRequests property value. A list of pending user consent requests.
+     * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @return a userConsentRequest
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         this._appId = value;
     }
     /**
-     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
+     * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      * @param value Value to set for the pendingScopes property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         this._pendingScopes = value;
     }
     /**
-     * Sets the userConsentRequests property value. A list of pending user consent requests.
+     * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @param value Value to set for the userConsentRequests property.
      * @return a void
      */

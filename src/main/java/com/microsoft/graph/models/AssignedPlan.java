@@ -12,9 +12,9 @@ import java.util.Objects;
 public class AssignedPlan implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _assignedDateTime;
-    /** Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. */
+    /** Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value. */
     private String _capabilityStatus;
     /** The OdataType property */
     private String _odataType;
@@ -49,7 +49,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the assignedDateTime property value. The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         return this._assignedDateTime;
     }
     /**
-     * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Gets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the assignedDateTime property value. The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the assignedDateTime property value. The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the assignedDateTime property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         this._assignedDateTime = value;
     }
     /**
-     * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Sets the capabilityStatus property value. Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      * @param value Value to set for the capabilityStatus property.
      * @return a void
      */

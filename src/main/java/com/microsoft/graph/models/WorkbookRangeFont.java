@@ -18,7 +18,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
     private String _name;
     /** Font size. */
     private Double _size;
-    /** Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant. */
+    /** Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant. */
     private String _underline;
     /**
      * Instantiates a new workbookRangeFont and sets the default values.
@@ -95,7 +95,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
         return this._size;
     }
     /**
-     * Gets the underline property value. Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
         this._size = value;
     }
     /**
-     * Sets the underline property value. Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @param value Value to set for the underline property.
      * @return a void
      */

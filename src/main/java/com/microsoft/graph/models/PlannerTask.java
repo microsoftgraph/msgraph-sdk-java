@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class PlannerTask extends Entity implements Parsable {
     /** Number of checklist items with value set to false, representing incomplete items. */
     private Integer _activeChecklistItemCount;
@@ -48,9 +48,9 @@ public class PlannerTask extends Entity implements Parsable {
     private Integer _percentComplete;
     /** Plan ID to which the task belongs. */
     private String _planId;
-    /** This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. */
+    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. */
     private PlannerPreviewType _previewType;
-    /** Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'. */
+    /** Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'. */
     private Integer _priority;
     /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress. */
     private PlannerProgressTaskBoardTaskFormat _progressTaskBoardFormat;
@@ -266,7 +266,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._planId;
     }
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * @return a plannerPreviewType
      */
     @javax.annotation.Nullable
@@ -274,7 +274,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._previewType;
     }
     /**
-     * Gets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Gets the priority property value. Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -500,7 +500,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._planId = value;
     }
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * @param value Value to set for the previewType property.
      * @return a void
      */
@@ -508,7 +508,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._previewType = value;
     }
     /**
-     * Sets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Sets the priority property value. Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @param value Value to set for the priority property.
      * @return a void
      */

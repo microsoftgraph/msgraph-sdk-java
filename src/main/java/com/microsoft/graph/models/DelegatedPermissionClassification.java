@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to call the instantiate method. */
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /** The classification value being given. Possible value: low. Does not support $filter. */
     private PermissionClassificationType _classification;
-    /** The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter. */
+    /** The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter. */
     private String _permissionId;
-    /** The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter. */
+    /** The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter. */
     private String _permissionName;
     /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.
@@ -55,7 +55,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         }};
     }
     /**
-     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * Gets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         return this._permissionId;
     }
     /**
-     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * Gets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         this._classification = value;
     }
     /**
-     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      * @param value Value to set for the permissionId property.
      * @return a void
      */
@@ -99,7 +99,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
         this._permissionId = value;
     }
     /**
-     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      * @param value Value to set for the permissionName property.
      * @return a void
      */

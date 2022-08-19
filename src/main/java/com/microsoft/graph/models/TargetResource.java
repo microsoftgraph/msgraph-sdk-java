@@ -13,7 +13,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Indicates the visible name defined for the resource. Typically specified when the resource is created. */
     private String _displayName;
-    /** When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue */
+    /** When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue */
     private GroupType _groupType;
     /** Indicates the unique ID of the resource. */
     private String _id;
@@ -77,7 +77,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @return a groupType
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the groupType property value. When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @param value Value to set for the groupType property.
      * @return a void
      */

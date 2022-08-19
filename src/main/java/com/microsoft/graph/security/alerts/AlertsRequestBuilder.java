@@ -59,7 +59,7 @@ public class AlertsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Get alerts from security
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AlertsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Get alerts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AlertsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Get alerts from security
      * @return a CompletableFuture of AlertCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Get alerts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AlertCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AlertsRequestBuilder {
         }
     }
     /**
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * Get alerts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AlertCollectionResponse
@@ -227,7 +227,7 @@ public class AlertsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Notifications for suspicious or potential security issues in a customer’s tenant. */
+    /** Get alerts from security */
     public class AlertsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

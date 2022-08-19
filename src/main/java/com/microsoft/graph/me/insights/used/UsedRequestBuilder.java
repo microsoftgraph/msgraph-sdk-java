@@ -59,7 +59,7 @@ public class UsedRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UsedRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class UsedRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @return a CompletableFuture of UsedInsightCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UsedInsightCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class UsedRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UsedInsightCollectionResponse
      */
@@ -155,7 +155,7 @@ public class UsedRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UsedInsightCollectionResponse
@@ -227,7 +227,7 @@ public class UsedRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Access this property from the derived type itemInsights. */
+    /** Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use. */
     public class UsedRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

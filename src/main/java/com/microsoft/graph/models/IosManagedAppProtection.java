@@ -12,7 +12,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     private ManagedAppDataEncryptionType _appDataEncryptionType;
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;
-    /** A custom browser protocol to open weblink on iOS. */
+    /** A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
     private String _customBrowserProtocol;
     /** Count of apps to which the current policy is deployed. */
     private Integer _deployedAppCount;
@@ -57,7 +57,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this._apps;
     }
     /**
-     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this._apps = value;
     }
     /**
-     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserProtocol property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class ScopedRoleMemberOfRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ScopedRoleMemberOfRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ScopedRoleMemberOfRequestBuilder {
         return requestInfo;
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ScopedRoleMemberOfRequestBuilder {
         }
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ScopedRoleMemberOfRequestBuilder {
         }
     }
     /**
-     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
+     * Get scopedRoleMemberOf from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
@@ -227,7 +227,7 @@ public class ScopedRoleMemberOfRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The scoped-role administrative unit memberships for this user. Read-only. Nullable. */
+    /** Get scopedRoleMemberOf from users */
     public class ScopedRoleMemberOfRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -52,7 +52,7 @@ public class IdentityProviderItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class IdentityProviderItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -80,7 +80,7 @@ public class IdentityProviderItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class IdentityProviderItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class IdentityProviderItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an identityProvider object.
+     * Update properties in an existing identityProvider.
      * @param body 
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class IdentityProviderItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an identityProvider object.
+     * Update properties in an existing identityProvider.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -142,7 +142,7 @@ public class IdentityProviderItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -158,7 +158,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -175,7 +175,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Delete an identityProvider.
+     * Delete an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -193,7 +193,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @return a CompletableFuture of identityProvider
      */
     public java.util.concurrent.CompletableFuture<IdentityProvider> get() {
@@ -209,7 +209,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
      */
@@ -226,7 +226,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an identityProvider.
+     * Retrieve the properties of an existing identityProvider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of identityProvider
@@ -244,7 +244,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of an identityProvider object.
+     * Update properties in an existing identityProvider.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -261,7 +261,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of an identityProvider object.
+     * Update properties in an existing identityProvider.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -279,7 +279,7 @@ public class IdentityProviderItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of an identityProvider object.
+     * Update properties in an existing identityProvider.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -313,7 +313,7 @@ public class IdentityProviderItemRequestBuilder {
         public IdentityProviderItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Retrieve the properties and relationships of an identityProvider. */
+    /** Retrieve the properties of an existing identityProvider. */
     public class IdentityProviderItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

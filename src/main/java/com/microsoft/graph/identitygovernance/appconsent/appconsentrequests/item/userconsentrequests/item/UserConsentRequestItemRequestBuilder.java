@@ -86,7 +86,7 @@ public class UserConsentRequestItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class UserConsentRequestItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class UserConsentRequestItemRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @return a CompletableFuture of userConsentRequest
      */
     public java.util.concurrent.CompletableFuture<UserConsentRequest> get() {
@@ -215,7 +215,7 @@ public class UserConsentRequestItemRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userConsentRequest
      */
@@ -232,7 +232,7 @@ public class UserConsentRequestItemRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests.
+     * A list of pending user consent requests. Supports $filter (eq).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of userConsentRequest
@@ -319,7 +319,7 @@ public class UserConsentRequestItemRequestBuilder {
         public UserConsentRequestItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A list of pending user consent requests. */
+    /** A list of pending user consent requests. Supports $filter (eq). */
     public class UserConsentRequestItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

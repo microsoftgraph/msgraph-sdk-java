@@ -8,23 +8,23 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
-    /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand. */
+    /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand. */
     private AccessPackage _accessPackage;
     /** For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand. */
     private AccessPackageAssignment _assignment;
     /** The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _completedDateTime;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter. */
     private OffsetDateTime _createdDateTime;
     /** The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand. */
     private AccessPackageSubject _requestor;
-    /** One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only. */
+    /** The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set. */
     private AccessPackageRequestType _requestType;
-    /** The range of dates that access is to be assigned to the requestor. Read-only. */
+    /** The range of dates that access is to be assigned to the requestor. This property cannot be changed once set. */
     private EntitlementManagementSchedule _schedule;
-    /** The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. */
+    /** The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq). */
     private AccessPackageRequestState _state;
     /** More information on the request processing status. Read-only. */
     private String _status;
@@ -47,7 +47,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return new AccessPackageAssignmentRequest();
     }
     /**
-     * Gets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * Gets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      * @return a accessPackage
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._requestor;
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      * @return a accessPackageRequestType
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._requestType;
     }
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      * @return a entitlementManagementSchedule
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._schedule;
     }
     /**
-     * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
+     * Gets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      * @return a accessPackageRequestState
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         writer.writeStringValue("status", this.getStatus());
     }
     /**
-     * Sets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
+     * Sets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
@@ -180,7 +180,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this._completedDateTime = value;
     }
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -196,7 +196,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this._requestor = value;
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
      * @param value Value to set for the requestType property.
      * @return a void
      */
@@ -204,7 +204,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this._requestType = value;
     }
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      * @param value Value to set for the schedule property.
      * @return a void
      */
@@ -212,7 +212,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this._schedule = value;
     }
     /**
-     * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only.
+     * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      * @param value Value to set for the state property.
      * @return a void
      */

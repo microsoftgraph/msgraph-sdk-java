@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Authentication extends Entity implements Parsable {
-    /** Represents the email addresses registered to a user for authentication. */
+    /** The email address registered to a user for authentication. */
     private java.util.List<EmailAuthenticationMethod> _emailMethods;
     /** Represents the FIDO2 security keys registered to a user for authentication. */
     private java.util.List<Fido2AuthenticationMethod> _fido2Methods;
@@ -16,13 +16,13 @@ public class Authentication extends Entity implements Parsable {
     private java.util.List<AuthenticationMethod> _methods;
     /** The details of the Microsoft Authenticator app registered to a user for authentication. */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> _microsoftAuthenticatorMethods;
-    /** The operations property */
+    /** Represents the status of a long-running operation. */
     private java.util.List<LongRunningOperation> _operations;
-    /** Represents the details of the password authentication method registered to a user for authentication. */
+    /** Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password. */
     private java.util.List<PasswordAuthenticationMethod> _passwordMethods;
-    /** Represents the phone registered to a user for authentication. */
+    /** The phone numbers registered to a user for authentication. */
     private java.util.List<PhoneAuthenticationMethod> _phoneMethods;
-    /** The softwareOathMethods property */
+    /** The software OATH TOTP applications registered to a user for authentication. */
     private java.util.List<SoftwareOathAuthenticationMethod> _softwareOathMethods;
     /** Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes. */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> _temporaryAccessPassMethods;
@@ -47,7 +47,7 @@ public class Authentication extends Entity implements Parsable {
         return new Authentication();
     }
     /**
-     * Gets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * Gets the emailMethods property value. The email address registered to a user for authentication.
      * @return a emailAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class Authentication extends Entity implements Parsable {
         return this._microsoftAuthenticatorMethods;
     }
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. Represents the status of a long-running operation.
      * @return a longRunningOperation
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class Authentication extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * Gets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @return a passwordAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class Authentication extends Entity implements Parsable {
         return this._passwordMethods;
     }
     /**
-     * Gets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * Gets the phoneMethods property value. The phone numbers registered to a user for authentication.
      * @return a phoneAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class Authentication extends Entity implements Parsable {
         return this._phoneMethods;
     }
     /**
-     * Gets the softwareOathMethods property value. The softwareOathMethods property
+     * Gets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      * @return a softwareOathAuthenticationMethod
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
     }
     /**
-     * Sets the emailMethods property value. Represents the email addresses registered to a user for authentication.
+     * Sets the emailMethods property value. The email address registered to a user for authentication.
      * @param value Value to set for the emailMethods property.
      * @return a void
      */
@@ -198,7 +198,7 @@ public class Authentication extends Entity implements Parsable {
         this._microsoftAuthenticatorMethods = value;
     }
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. Represents the status of a long-running operation.
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -206,7 +206,7 @@ public class Authentication extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param value Value to set for the passwordMethods property.
      * @return a void
      */
@@ -214,7 +214,7 @@ public class Authentication extends Entity implements Parsable {
         this._passwordMethods = value;
     }
     /**
-     * Sets the phoneMethods property value. Represents the phone registered to a user for authentication.
+     * Sets the phoneMethods property value. The phone numbers registered to a user for authentication.
      * @param value Value to set for the phoneMethods property.
      * @return a void
      */
@@ -222,7 +222,7 @@ public class Authentication extends Entity implements Parsable {
         this._phoneMethods = value;
     }
     /**
-     * Sets the softwareOathMethods property value. The softwareOathMethods property
+     * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      * @param value Value to set for the softwareOathMethods property.
      * @return a void
      */

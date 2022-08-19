@@ -19,7 +19,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Modality _mediaType;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates whether the media is muted by the server. */
+    /** If the media is muted by the server. */
     private Boolean _serverMuted;
     /** The source ID. */
     private String _sourceId;
@@ -98,7 +98,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the serverMuted property value. Indicates whether the media is muted by the server.
+     * Gets the serverMuted property value. If the media is muted by the server.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -169,7 +169,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the serverMuted property value. Indicates whether the media is muted by the server.
+     * Sets the serverMuted property value. If the media is muted by the server.
      * @param value Value to set for the serverMuted property.
      * @return a void
      */

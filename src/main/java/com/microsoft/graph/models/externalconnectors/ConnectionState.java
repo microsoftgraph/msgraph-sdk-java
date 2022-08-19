@@ -3,7 +3,7 @@ package microsoft.graph.models.externalconnectors;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public enum ConnectionState implements ValuedEnum {
     Draft("draft"),
     Ready("ready"),

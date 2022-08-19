@@ -60,7 +60,7 @@ public class EventsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class EventsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class EventsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @return a CompletableFuture of EventCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class EventsRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EventCollectionResponse
      */
@@ -164,7 +164,7 @@ public class EventsRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EventCollectionResponse
@@ -236,7 +236,7 @@ public class EventsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The user's events. Default is to show events under the Default Calendar. Read-only. Nullable. */
+    /** The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable. */
     public class EventsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

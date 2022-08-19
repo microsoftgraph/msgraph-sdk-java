@@ -59,7 +59,7 @@ public class TasksRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TasksRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class TasksRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
@@ -155,7 +155,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerTaskCollectionResponse
@@ -227,7 +227,7 @@ public class TasksRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** Read-only. Nullable. Returns the plannerPlans shared with the user. */
     public class TasksRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -15,7 +15,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Name of the contact. Required. */
     private String _displayName;
-    /** Email address of the contact. */
+    /** Primary email address of the contact. Required. */
     private String _emailAddress;
     /** Mobile phone number of the contact. */
     private String _mobilePhone;
@@ -66,7 +66,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         return this._displayName;
     }
     /**
-     * Gets the emailAddress property value. Email address of the contact.
+     * Gets the emailAddress property value. Primary email address of the contact. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the emailAddress property value. Email address of the contact.
+     * Sets the emailAddress property value. Primary email address of the contact. Required.
      * @param value Value to set for the emailAddress property.
      * @return a void
      */

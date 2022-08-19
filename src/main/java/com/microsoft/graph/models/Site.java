@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.termstore.Store;
-/** Provides operations to manage the collection of agreement entities. */
 public class Site extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place in this site. */
     private ItemAnalytics _analytics;
@@ -24,15 +23,15 @@ public class Site extends BaseItem implements Parsable {
     private java.util.List<Drive> _drives;
     /** The error property */
     private PublicError _error;
-    /** The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site. */
+    /** The externalColumns property */
     private java.util.List<ColumnDefinition> _externalColumns;
-    /** Used to address any item contained in this site. This collection cannot be enumerated. */
+    /** Used to address any item contained in this site. This collection can't be enumerated. */
     private java.util.List<BaseItem> _items;
     /** The collection of lists under this site. */
     private java.util.List<List> _lists;
     /** Calls the OneNote service for notebook related operations. */
     private Onenote _onenote;
-    /** The collection of long running operations for the site. */
+    /** The collection of long-running operations on the site. */
     private java.util.List<RichLongRunningOperation> _operations;
     /** The permissions associated with the site. Nullable. */
     private java.util.List<Permission> _permissions;
@@ -44,12 +43,12 @@ public class Site extends BaseItem implements Parsable {
     private SiteCollection _siteCollection;
     /** The collection of the sub-sites under this site. */
     private java.util.List<Site> _sites;
-    /** The termStore under this site. */
+    /** The default termStore under this site. */
     private Store _termStore;
     /** The collection of termStores under this site. */
     private java.util.List<Store> _termStores;
     /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
      * @return a void
      */
     public Site() {
@@ -59,7 +58,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a site
+     * @return a Site
      */
     @javax.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,7 +122,7 @@ public class Site extends BaseItem implements Parsable {
         return this._error;
     }
     /**
-     * Gets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Gets the externalColumns property value. The externalColumns property
      * @return a columnDefinition
      */
     @javax.annotation.Nullable
@@ -160,7 +159,7 @@ public class Site extends BaseItem implements Parsable {
         }};
     }
     /**
-     * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @return a baseItem
      */
     @javax.annotation.Nullable
@@ -184,7 +183,7 @@ public class Site extends BaseItem implements Parsable {
         return this._onenote;
     }
     /**
-     * Gets the operations property value. The collection of long running operations for the site.
+     * Gets the operations property value. The collection of long-running operations on the site.
      * @return a richLongRunningOperation
      */
     @javax.annotation.Nullable
@@ -232,7 +231,7 @@ public class Site extends BaseItem implements Parsable {
         return this._sites;
     }
     /**
-     * Gets the termStore property value. The termStore under this site.
+     * Gets the termStore property value. The default termStore under this site.
      * @return a store
      */
     @javax.annotation.Nullable
@@ -332,7 +331,7 @@ public class Site extends BaseItem implements Parsable {
         this._error = value;
     }
     /**
-     * Sets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Sets the externalColumns property value. The externalColumns property
      * @param value Value to set for the externalColumns property.
      * @return a void
      */
@@ -340,7 +339,7 @@ public class Site extends BaseItem implements Parsable {
         this._externalColumns = value;
     }
     /**
-     * Sets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @param value Value to set for the items property.
      * @return a void
      */
@@ -364,7 +363,7 @@ public class Site extends BaseItem implements Parsable {
         this._onenote = value;
     }
     /**
-     * Sets the operations property value. The collection of long running operations for the site.
+     * Sets the operations property value. The collection of long-running operations on the site.
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -412,7 +411,7 @@ public class Site extends BaseItem implements Parsable {
         this._sites = value;
     }
     /**
-     * Sets the termStore property value. The termStore under this site.
+     * Sets the termStore property value. The default termStore under this site.
      * @param value Value to set for the termStore property.
      * @return a void
      */

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeConstraint implements AdditionalDataHolder, Parsable {
-    /** The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown. */
+    /** The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown. */
     private ActivityDomain _activityDomain;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -36,7 +36,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
         return new TimeConstraint();
     }
     /**
-     * Gets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Gets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @return a activityDomain
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @param value Value to set for the activityDomain property.
      * @return a void
      */

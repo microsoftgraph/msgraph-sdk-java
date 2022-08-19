@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTask extends Entity implements Parsable {
-    /** A collection of file attachments for the task. */
+    /** The attachments property */
     private java.util.List<AttachmentBase> _attachments;
     /** The attachmentSessions property */
     private java.util.List<AttachmentSession> _attachmentSessions;
@@ -20,7 +20,7 @@ public class TodoTask extends Entity implements Parsable {
     private OffsetDateTime _bodyLastModifiedDateTime;
     /** The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined. */
     private java.util.List<String> _categories;
-    /** A collection of smaller subtasks linked to the more complex parent task. */
+    /** A collection of checklistItems linked to a task. */
     private java.util.List<ChecklistItem> _checklistItems;
     /** The date and time in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
@@ -30,7 +30,7 @@ public class TodoTask extends Entity implements Parsable {
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
-    /** Indicates whether the task has attachments. */
+    /** The hasAttachments property */
     private Boolean _hasAttachments;
     /** The importance property */
     private Importance _importance;
@@ -44,7 +44,7 @@ public class TodoTask extends Entity implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The date and time in the specified time zone for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
-    /** The date and time in the specified time zone at which the task is scheduled to start. */
+    /** The startDateTime property */
     private DateTimeTimeZone _startDateTime;
     /** The status property */
     private TaskStatus _status;
@@ -69,7 +69,7 @@ public class TodoTask extends Entity implements Parsable {
         return new TodoTask();
     }
     /**
-     * Gets the attachments property value. A collection of file attachments for the task.
+     * Gets the attachments property value. The attachments property
      * @return a attachmentBase
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._categories;
     }
     /**
-     * Gets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
+     * Gets the checklistItems property value. A collection of checklistItems linked to a task.
      * @return a checklistItem
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class TodoTask extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the hasAttachments property value. Indicates whether the task has attachments.
+     * Gets the hasAttachments property value. The hasAttachments property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._reminderDateTime;
     }
     /**
-     * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
+     * Gets the startDateTime property value. The startDateTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -288,7 +288,7 @@ public class TodoTask extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the attachments property value. A collection of file attachments for the task.
+     * Sets the attachments property value. The attachments property
      * @param value Value to set for the attachments property.
      * @return a void
      */
@@ -328,7 +328,7 @@ public class TodoTask extends Entity implements Parsable {
         this._categories = value;
     }
     /**
-     * Sets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
+     * Sets the checklistItems property value. A collection of checklistItems linked to a task.
      * @param value Value to set for the checklistItems property.
      * @return a void
      */
@@ -368,7 +368,7 @@ public class TodoTask extends Entity implements Parsable {
         this._extensions = value;
     }
     /**
-     * Sets the hasAttachments property value. Indicates whether the task has attachments.
+     * Sets the hasAttachments property value. The hasAttachments property
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
@@ -424,7 +424,7 @@ public class TodoTask extends Entity implements Parsable {
         this._reminderDateTime = value;
     }
     /**
-     * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
+     * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

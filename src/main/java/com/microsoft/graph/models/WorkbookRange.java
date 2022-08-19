@@ -44,7 +44,7 @@ public class WorkbookRange extends Entity implements Parsable {
     private Json _text;
     /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
     private Json _values;
-    /** Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only. */
+    /** Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only. */
     private Json _valueTypes;
     /** The worksheet containing the current range. Read-only. */
     private WorkbookWorksheet _worksheet;
@@ -241,7 +241,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this._values;
     }
     /**
-     * Gets the valueTypes property value. Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -430,7 +430,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this._values = value;
     }
     /**
-     * Sets the valueTypes property value. Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      * @param value Value to set for the valueTypes property.
      * @return a void
      */

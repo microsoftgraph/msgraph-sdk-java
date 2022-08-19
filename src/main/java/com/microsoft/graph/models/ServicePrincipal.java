@@ -22,9 +22,9 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _appId;
     /** Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith). */
     private String _applicationTemplateId;
-    /** Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le). */
+    /** Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le). */
     private String _appOwnerOrganizationId;
-    /** App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand. */
+    /** App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignedTo;
     /** Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT). */
     private Boolean _appRoleAssignmentRequired;
@@ -36,7 +36,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<ClaimsMappingPolicy> _claimsMappingPolicies;
     /** Directory objects created by this service principal. Read-only. Nullable. */
     private java.util.List<DirectoryObject> _createdObjects;
-    /** The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand. */
+    /** The delegatedPermissionClassifications property */
     private java.util.List<DelegatedPermissionClassification> _delegatedPermissionClassifications;
     /** Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
@@ -44,7 +44,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _disabledByMicrosoftStatus;
     /** The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
+    /** The endpoints property */
     private java.util.List<Endpoint> _endpoints;
     /** Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
@@ -74,11 +74,11 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _ownedObjects;
     /** Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _owners;
-    /** The collection of password credentials associated with the service principal. Not nullable. */
+    /** The collection of password credentials associated with the application. Not nullable. */
     private java.util.List<PasswordCredential> _passwordCredentials;
     /** Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc. */
     private String _preferredSingleSignOnMode;
-    /** Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions. */
+    /** The preferredTokenSigningKeyThumbprint property */
     private String _preferredTokenSigningKeyThumbprint;
     /** The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
     private java.util.List<String> _replyUrls;
@@ -88,7 +88,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private SamlSingleSignOnSettings _samlSingleSignOnSettings;
     /** Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith). */
     private java.util.List<String> _servicePrincipalNames;
-    /** Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use. */
+    /** Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use. */
     private String _servicePrincipalType;
     /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
     private String _signInAudience;
@@ -96,14 +96,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<String> _tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
     private String _tokenEncryptionKeyId;
-    /** The tokenIssuancePolicies assigned to this service principal. Supports $expand. */
+    /** The tokenIssuancePolicies assigned to this service principal. */
     private java.util.List<TokenIssuancePolicy> _tokenIssuancePolicies;
-    /** The tokenLifetimePolicies assigned to this service principal. Supports $expand. */
+    /** The tokenLifetimePolicies assigned to this service principal. */
     private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
     /** The transitiveMemberOf property */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
     public ServicePrincipal() {
@@ -113,7 +113,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a servicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -177,7 +177,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._applicationTemplateId;
     }
     /**
-     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._appOwnerOrganizationId;
     }
     /**
-     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * Gets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @return a appRoleAssignment
      */
     @javax.annotation.Nullable
@@ -233,7 +233,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._createdObjects;
     }
     /**
-     * Gets the delegatedPermissionClassifications property value. The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
      * @return a delegatedPermissionClassification
      */
     @javax.annotation.Nullable
@@ -265,7 +265,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the endpoints property value. Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Gets the endpoints property value. The endpoints property
      * @return a endpoint
      */
     @javax.annotation.Nullable
@@ -442,7 +442,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._owners;
     }
     /**
-     * Gets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
+     * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
      * @return a passwordCredential
      */
     @javax.annotation.Nullable
@@ -458,7 +458,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._preferredSingleSignOnMode;
     }
     /**
-     * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Gets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -498,7 +498,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._servicePrincipalNames;
     }
     /**
-     * Gets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -530,7 +530,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._tokenEncryptionKeyId;
     }
     /**
-     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
      * @return a tokenIssuancePolicy
      */
     @javax.annotation.Nullable
@@ -538,7 +538,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._tokenIssuancePolicies;
     }
     /**
-     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
      * @return a tokenLifetimePolicy
      */
     @javax.annotation.Nullable
@@ -666,7 +666,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._applicationTemplateId = value;
     }
     /**
-     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      * @param value Value to set for the appOwnerOrganizationId property.
      * @return a void
      */
@@ -674,7 +674,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._appOwnerOrganizationId = value;
     }
     /**
-     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * Sets the appRoleAssignedTo property value. App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      * @param value Value to set for the appRoleAssignedTo property.
      * @return a void
      */
@@ -722,7 +722,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._createdObjects = value;
     }
     /**
-     * Sets the delegatedPermissionClassifications property value. The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Sets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
      * @param value Value to set for the delegatedPermissionClassifications property.
      * @return a void
      */
@@ -754,7 +754,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the endpoints property value. Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Sets the endpoints property value. The endpoints property
      * @param value Value to set for the endpoints property.
      * @return a void
      */
@@ -874,7 +874,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._owners = value;
     }
     /**
-     * Sets the passwordCredentials property value. The collection of password credentials associated with the service principal. Not nullable.
+     * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
      * @param value Value to set for the passwordCredentials property.
      * @return a void
      */
@@ -890,7 +890,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._preferredSingleSignOnMode = value;
     }
     /**
-     * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * Sets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
      * @param value Value to set for the preferredTokenSigningKeyThumbprint property.
      * @return a void
      */
@@ -930,7 +930,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._servicePrincipalNames = value;
     }
     /**
-     * Sets the servicePrincipalType property value. Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
      * @param value Value to set for the servicePrincipalType property.
      * @return a void
      */
@@ -962,7 +962,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._tokenEncryptionKeyId = value;
     }
     /**
-     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies assigned to this service principal.
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
@@ -970,7 +970,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._tokenIssuancePolicies = value;
     }
     /**
-     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this service principal.
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */

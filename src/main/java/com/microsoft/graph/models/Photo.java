@@ -30,7 +30,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** The orientation value from the camera. Writable on OneDrive Personal. */
     private Integer _orientation;
-    /** The date and time the photo was taken in UTC time. Read-only. */
+    /** Represents the date and time the photo was taken. Read-only. */
     private OffsetDateTime _takenDateTime;
     /**
      * Instantiates a new photo and sets the default values.
@@ -151,7 +151,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
         return this._orientation;
     }
     /**
-     * Gets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
+     * Gets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -258,7 +258,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
         this._orientation = value;
     }
     /**
-     * Sets the takenDateTime property value. The date and time the photo was taken in UTC time. Read-only.
+     * Sets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
      * @param value Value to set for the takenDateTime property.
      * @return a void
      */

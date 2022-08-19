@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class AttachmentSession extends Entity implements Parsable {
-    /** The content streams that are uploaded. */
+    /** The content property */
     private byte[] _content;
-    /** The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached. */
+    /** The expirationDateTime property */
     private OffsetDateTime _expirationDateTime;
-    /** Indicates a single value {start} that represents the location in the file where the next upload should begin. */
+    /** The nextExpectedRanges property */
     private java.util.List<String> _nextExpectedRanges;
     /**
      * Instantiates a new attachmentSession and sets the default values.
@@ -35,7 +35,7 @@ public class AttachmentSession extends Entity implements Parsable {
         return new AttachmentSession();
     }
     /**
-     * Gets the content property value. The content streams that are uploaded.
+     * Gets the content property value. The content property
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class AttachmentSession extends Entity implements Parsable {
         return this._content;
     }
     /**
-     * Gets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     * Gets the expirationDateTime property value. The expirationDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class AttachmentSession extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
+     * Gets the nextExpectedRanges property value. The nextExpectedRanges property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class AttachmentSession extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("nextExpectedRanges", this.getNextExpectedRanges());
     }
     /**
-     * Sets the content property value. The content streams that are uploaded.
+     * Sets the content property value. The content property
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -92,7 +92,7 @@ public class AttachmentSession extends Entity implements Parsable {
         this._content = value;
     }
     /**
-     * Sets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
@@ -100,7 +100,7 @@ public class AttachmentSession extends Entity implements Parsable {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
+     * Sets the nextExpectedRanges property value. The nextExpectedRanges property
      * @param value Value to set for the nextExpectedRanges property.
      * @return a void
      */

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC). */
 public class ResourceOperation extends Entity implements Parsable {
     /** Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible. */
     private String _actionName;
@@ -15,7 +16,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /** Name of the Resource this operation is performed on. */
     private String _resourceName;
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Instantiates a new resourceOperation and sets the default values.
      * @return a void
      */
     public ResourceOperation() {
@@ -25,7 +26,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResourceOperation
+     * @return a resourceOperation
      */
     @javax.annotation.Nonnull
     public static ResourceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

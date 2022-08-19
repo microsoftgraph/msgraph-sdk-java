@@ -94,7 +94,7 @@ public class MemberOfRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class MemberOfRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -124,7 +124,7 @@ public class MemberOfRequestBuilder {
         return requestInfo;
     }
     /**
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -140,7 +140,7 @@ public class MemberOfRequestBuilder {
         }
     }
     /**
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
@@ -157,7 +157,7 @@ public class MemberOfRequestBuilder {
         }
     }
     /**
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
@@ -174,7 +174,7 @@ public class MemberOfRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. */
+    /** Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. */
     public class MemberOfRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity which represents the Exchange OnPremises Conditional Access Settings for a tenant. */
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
     /** Indicates if on premises conditional access is enabled for this organization */
     private Boolean _enabled;

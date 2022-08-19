@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable {
-    /** Shift ID for the recipient user with whom the request is to swap. */
+    /** ShiftId for the recipient user with whom the request is to swap. */
     private String _recipientShiftId;
     /**
      * Instantiates a new SwapShiftsChangeRequest and sets the default values.
@@ -40,7 +40,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
         }};
     }
     /**
-     * Gets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
+     * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsab
         writer.writeStringValue("recipientShiftId", this.getRecipientShiftId());
     }
     /**
-     * Sets the recipientShiftId property value. Shift ID for the recipient user with whom the request is to swap.
+     * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
      * @param value Value to set for the recipientShiftId property.
      * @return a void
      */

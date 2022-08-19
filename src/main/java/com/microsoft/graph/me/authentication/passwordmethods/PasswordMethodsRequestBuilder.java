@@ -59,7 +59,7 @@ public class PasswordMethodsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the details of the password authentication method registered to a user for authentication.
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PasswordMethodsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the details of the password authentication method registered to a user for authentication.
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class PasswordMethodsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the details of the password authentication method registered to a user for authentication.
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @return a CompletableFuture of PasswordAuthenticationMethodCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PasswordAuthenticationMethodCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class PasswordMethodsRequestBuilder {
         }
     }
     /**
-     * Represents the details of the password authentication method registered to a user for authentication.
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PasswordAuthenticationMethodCollectionResponse
      */
@@ -155,7 +155,7 @@ public class PasswordMethodsRequestBuilder {
         }
     }
     /**
-     * Represents the details of the password authentication method registered to a user for authentication.
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PasswordAuthenticationMethodCollectionResponse
@@ -227,7 +227,7 @@ public class PasswordMethodsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the details of the password authentication method registered to a user for authentication. */
+    /** Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password. */
     public class PasswordMethodsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

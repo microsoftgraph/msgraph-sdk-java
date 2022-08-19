@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class Operation extends Entity implements Parsable {
     /** The start time of the operation. */
     private OffsetDateTime _createdDateTime;
     /** The time of the last action of the operation. */
     private OffsetDateTime _lastActionDateTime;
-    /** Possible values are: notStarted, running, completed, failed. Read-only. */
+    /** The current status of the operation: notStarted, running, completed, failed */
     private OperationStatus _status;
     /**
      * Instantiates a new operation and sets the default values.
@@ -71,7 +71,7 @@ public class Operation extends Entity implements Parsable {
         return this._lastActionDateTime;
     }
     /**
-     * Gets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
      * @return a operationStatus
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class Operation extends Entity implements Parsable {
         this._lastActionDateTime = value;
     }
     /**
-     * Sets the status property value. Possible values are: notStarted, running, completed, failed. Read-only.
+     * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
      * @param value Value to set for the status property.
      * @return a void
      */

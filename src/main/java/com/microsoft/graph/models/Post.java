@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Post extends OutlookItem implements Parsable {
-    /** The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand. */
+    /** Read-only. Nullable. Supports $expand. */
     private java.util.List<Attachment> _attachments;
     /** The contents of the post. This is a default property. This property can be null. */
     private ItemBody _body;
@@ -23,7 +23,7 @@ public class Post extends OutlookItem implements Parsable {
     private Recipient _from;
     /** Indicates whether the post has at least one attachment. This is a default property. */
     private Boolean _hasAttachments;
-    /** The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand. */
+    /** Read-only. Supports $expand. */
     private Post _inReplyTo;
     /** The collection of multi-value extended properties defined for the post. Read-only. Nullable. */
     private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
@@ -54,7 +54,7 @@ public class Post extends OutlookItem implements Parsable {
         return new Post();
     }
     /**
-     * Gets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Gets the attachments property value. Read-only. Nullable. Supports $expand.
      * @return a attachment
      */
     @javax.annotation.Nullable
@@ -133,7 +133,7 @@ public class Post extends OutlookItem implements Parsable {
         return this._hasAttachments;
     }
     /**
-     * Gets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Gets the inReplyTo property value. Read-only. Supports $expand.
      * @return a post
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class Post extends OutlookItem implements Parsable {
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
     }
     /**
-     * Sets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Sets the attachments property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the attachments property.
      * @return a void
      */
@@ -259,7 +259,7 @@ public class Post extends OutlookItem implements Parsable {
         this._hasAttachments = value;
     }
     /**
-     * Sets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Sets the inReplyTo property value. Read-only. Supports $expand.
      * @param value Value to set for the inReplyTo property.
      * @return a void
      */

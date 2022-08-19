@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional. */
+    /** Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional. */
     private Boolean _enableResultTemplate;
     /** The OdataType property */
     private String _odataType;
@@ -42,7 +42,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+     * Gets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. This property is optional.
+     * Sets the enableResultTemplate property value. Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.
      * @param value Value to set for the enableResultTemplate property.
      * @return a void
      */

@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookCommentReply extends Entity implements Parsable {
-    /** The content of replied comment. */
+    /** The content of a comment reply. */
     private String _content;
-    /** Indicates the type for the replied comment. */
+    /** Indicates the type for the comment reply. */
     private String _contentType;
     /**
      * Instantiates a new workbookCommentReply and sets the default values.
@@ -32,7 +32,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         return new WorkbookCommentReply();
     }
     /**
-     * Gets the content property value. The content of replied comment.
+     * Gets the content property value. The content of a comment reply.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -40,7 +40,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         return this._content;
     }
     /**
-     * Gets the contentType property value. Indicates the type for the replied comment.
+     * Gets the contentType property value. Indicates the type for the comment reply.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         writer.writeStringValue("contentType", this.getContentType());
     }
     /**
-     * Sets the content property value. The content of replied comment.
+     * Sets the content property value. The content of a comment reply.
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -79,7 +79,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         this._content = value;
     }
     /**
-     * Sets the contentType property value. Indicates the type for the replied comment.
+     * Sets the contentType property value. Indicates the type for the comment reply.
      * @param value Value to set for the contentType property.
      * @return a void
      */

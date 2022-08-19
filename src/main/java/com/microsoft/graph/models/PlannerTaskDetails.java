@@ -12,7 +12,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     private PlannerChecklistItems _checklist;
     /** Description of the task. */
     private String _description;
-    /** This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
+    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
     private PlannerPreviewType _previewType;
     /** The collection of references on the task. */
     private PlannerExternalReferences _references;
@@ -65,7 +65,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @return a plannerPreviewType
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      * @return a void
      */

@@ -68,7 +68,7 @@ public class IdentityProvidersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class IdentityProvidersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class IdentityProvidersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param body 
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class IdentityProvidersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -131,7 +131,7 @@ public class IdentityProvidersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IdentityProviderCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
      */
@@ -164,7 +164,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of identityProviders objects.
+     * Retrieve all identityProviders in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of IdentityProviderCollectionResponse
@@ -182,7 +182,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param body 
      * @return a CompletableFuture of identityProvider
      */
@@ -199,7 +199,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
@@ -217,7 +217,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create a new identityProvider object.
+     * Add new entity to identityProviders
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -236,7 +236,7 @@ public class IdentityProvidersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieve a list of identityProviders objects. */
+    /** Retrieve all identityProviders in the directory. */
     public class IdentityProvidersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

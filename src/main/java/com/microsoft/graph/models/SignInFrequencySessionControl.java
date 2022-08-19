@@ -12,7 +12,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     private SignInFrequencyAuthenticationType _authenticationType;
     /** The possible values are timeBased, everyTime, unknownFutureValue. */
     private SignInFrequencyInterval _frequencyInterval;
-    /** Possible values are: days, hours, or null if frequencyInterval is everyTime . */
+    /** Possible values are: days, hours. */
     private SigninFrequencyType _type;
     /** The number of days or hours. */
     private Integer _value;
@@ -65,7 +65,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return this._frequencyInterval;
     }
     /**
-     * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * Gets the type property value. Possible values are: days, hours.
      * @return a signinFrequencyType
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         this._frequencyInterval = value;
     }
     /**
-     * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * Sets the type property value. Possible values are: days, hours.
      * @param value Value to set for the type property.
      * @return a void
      */

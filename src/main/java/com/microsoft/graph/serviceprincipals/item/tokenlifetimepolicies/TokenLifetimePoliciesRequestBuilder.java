@@ -58,7 +58,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
      */
@@ -121,7 +121,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         }
     }
     /**
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
@@ -138,7 +138,7 @@ public class TokenLifetimePoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The tokenLifetimePolicies assigned to this service principal. Supports $expand. */
+    /** The tokenLifetimePolicies assigned to this service principal. */
     public class TokenLifetimePoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

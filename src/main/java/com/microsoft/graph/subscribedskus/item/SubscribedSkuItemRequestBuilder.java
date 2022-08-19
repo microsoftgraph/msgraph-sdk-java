@@ -80,7 +80,7 @@ public class SubscribedSkuItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get entity from subscribedSkus by key
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SubscribedSkuItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get entity from subscribedSkus by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get entity from subscribedSkus by key
      * @return a CompletableFuture of subscribedSku
      */
     public java.util.concurrent.CompletableFuture<SubscribedSku> get() {
@@ -209,7 +209,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get entity from subscribedSkus by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscribedSku
      */
@@ -226,7 +226,7 @@ public class SubscribedSkuItemRequestBuilder {
         }
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get entity from subscribedSkus by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of subscribedSku
@@ -313,7 +313,7 @@ public class SubscribedSkuItemRequestBuilder {
         public SubscribedSkuItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get a specific commercial subscription that an organization has acquired. */
+    /** Get entity from subscribedSkus by key */
     public class SubscribedSkuItemRequestBuilderGetQueryParameters {
         /** Select properties to be returned */
         @QueryParameter(name = "%24select")

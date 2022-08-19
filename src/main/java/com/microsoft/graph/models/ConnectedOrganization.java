@@ -17,13 +17,13 @@ public class ConnectedOrganization extends Entity implements Parsable {
     private String _displayName;
     /** The externalSponsors property */
     private java.util.List<DirectoryObject> _externalSponsors;
-    /** The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f'). */
+    /** The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable. */
     private java.util.List<IdentitySource> _identitySources;
     /** The internalSponsors property */
     private java.util.List<DirectoryObject> _internalSponsors;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _modifiedDateTime;
-    /** The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed. */
+    /** The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue. */
     private ConnectedOrganizationState _state;
     /**
      * Instantiates a new connectedOrganization and sets the default values.
@@ -94,7 +94,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      * @return a identitySource
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         return this._modifiedDateTime;
     }
     /**
-     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      * @return a connectedOrganizationState
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this._externalSponsors = value;
     }
     /**
-     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      * @param value Value to set for the identitySources property.
      * @return a void
      */
@@ -199,7 +199,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this._modifiedDateTime = value;
     }
     /**
-     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class DataSourceContainer extends Entity implements Parsable {
     /** Created date and time of the dataSourceContainer entity. */
     private OffsetDateTime _createdDateTime;
     /** Display name of the dataSourceContainer entity. */
     private String _displayName;
-    /** The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial */
+    /** The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial */
     private DataSourceHoldStatus _holdStatus;
     /** Last modified date and time of the dataSourceContainer. */
     private OffsetDateTime _lastModifiedDateTime;
@@ -82,7 +82,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the holdStatus property value. The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
+     * Gets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
      * @return a dataSourceHoldStatus
      */
     @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class DataSourceContainer extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the holdStatus property value. The hold status of the dataSourceContainer.The possible values are: notApplied, applied, applying, removing, partial
+     * Sets the holdStatus property value. The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
      * @param value Value to set for the holdStatus property.
      * @return a void
      */

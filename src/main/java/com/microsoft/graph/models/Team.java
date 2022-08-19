@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;
@@ -43,7 +44,7 @@ public class Team extends Entity implements Parsable {
     private TeamMessagingSettings _messagingSettings;
     /** The async operations that ran or are running on this team. */
     private java.util.List<TeamsAsyncOperation> _operations;
-    /** The team photo. */
+    /** The profile photo for the team. */
     private ProfilePhoto _photo;
     /** The general channel for the team. */
     private Channel _primaryChannel;
@@ -51,7 +52,7 @@ public class Team extends Entity implements Parsable {
     private Schedule _schedule;
     /** Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case. */
     private TeamSpecialization _specialization;
-    /** Contains summary information about the team, including number of owners, members, and guests. */
+    /** The summary property */
     private TeamSummary _summary;
     /** The template this team was created from. See available templates. */
     private TeamsTemplate _template;
@@ -252,7 +253,7 @@ public class Team extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the photo property value. The team photo.
+     * Gets the photo property value. The profile photo for the team.
      * @return a profilePhoto
      */
     @javax.annotation.Nullable
@@ -284,7 +285,7 @@ public class Team extends Entity implements Parsable {
         return this._specialization;
     }
     /**
-     * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * Gets the summary property value. The summary property
      * @return a teamSummary
      */
     @javax.annotation.Nullable
@@ -495,7 +496,7 @@ public class Team extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the photo property value. The team photo.
+     * Sets the photo property value. The profile photo for the team.
      * @param value Value to set for the photo property.
      * @return a void
      */
@@ -527,7 +528,7 @@ public class Team extends Entity implements Parsable {
         this._specialization = value;
     }
     /**
-     * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * Sets the summary property value. The summary property
      * @param value Value to set for the summary property.
      * @return a void
      */

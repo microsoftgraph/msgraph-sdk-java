@@ -13,7 +13,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     private Map<String, Object> _additionalData;
     /** Display name of the resource */
     private String _displayName;
-    /** Resource ID */
+    /** Identifier of the resource */
     private String _id;
     /** The OdataType property */
     private String _odataType;
@@ -77,7 +77,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         }};
     }
     /**
-     * Gets the id property value. Resource ID
+     * Gets the id property value. Identifier of the resource
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         this._displayName = value;
     }
     /**
-     * Sets the id property value. Resource ID
+     * Sets the id property value. Identifier of the resource
      * @param value Value to set for the id property.
      * @return a void
      */

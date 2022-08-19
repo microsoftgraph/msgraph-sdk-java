@@ -87,7 +87,7 @@ public class PlannerBucketItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PlannerBucketItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +200,7 @@ public class PlannerBucketItemRequestBuilder {
         }
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @return a CompletableFuture of plannerBucket
      */
     public java.util.concurrent.CompletableFuture<PlannerBucket> get() {
@@ -216,7 +216,7 @@ public class PlannerBucketItemRequestBuilder {
         }
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucket
      */
@@ -233,7 +233,7 @@ public class PlannerBucketItemRequestBuilder {
         }
     }
     /**
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerBucket
@@ -332,7 +332,7 @@ public class PlannerBucketItemRequestBuilder {
         public PlannerBucketItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Collection of buckets in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of buckets in the plan. */
     public class PlannerBucketItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

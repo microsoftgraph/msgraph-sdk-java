@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The name of the strongly typed property defined as part of a schema extension. */
+    /** The name of the strongly-typed property defined as part of a schema extension. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
@@ -57,7 +57,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. The name of the strongly typed property defined as part of a schema extension.
+     * Gets the name property value. The name of the strongly-typed property defined as part of a schema extension.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. The name of the strongly typed property defined as part of a schema extension.
+     * Sets the name property value. The name of the strongly-typed property defined as part of a schema extension.
      * @param value Value to set for the name property.
      * @return a void
      */

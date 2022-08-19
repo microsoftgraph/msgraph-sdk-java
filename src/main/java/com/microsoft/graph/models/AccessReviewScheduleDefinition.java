@@ -25,7 +25,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     private java.util.List<AccessReviewReviewerScope> _fallbackReviewers;
     /** This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API. */
     private AccessReviewScope _instanceEnumerationScope;
-    /** Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence. */
+    /** If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence. */
     private java.util.List<AccessReviewInstance> _instances;
     /** Timestamp when the access review series was last modified. Supports $select. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
@@ -147,7 +147,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this._instanceEnumerationScope;
     }
     /**
-     * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * Gets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      * @return a accessReviewInstance
      */
     @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         this._instanceEnumerationScope = value;
     }
     /**
-     * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * Sets the instances property value. If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      * @param value Value to set for the instances property.
      * @return a void
      */

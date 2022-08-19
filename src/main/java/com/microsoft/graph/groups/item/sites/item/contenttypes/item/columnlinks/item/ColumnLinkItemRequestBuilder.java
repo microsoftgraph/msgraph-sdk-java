@@ -80,7 +80,7 @@ public class ColumnLinkItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ColumnLinkItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ColumnLinkItemRequestBuilder {
         }
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @return a CompletableFuture of columnLink
      */
     public java.util.concurrent.CompletableFuture<ColumnLink> get() {
@@ -209,7 +209,7 @@ public class ColumnLinkItemRequestBuilder {
         }
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnLink
      */
@@ -226,7 +226,7 @@ public class ColumnLinkItemRequestBuilder {
         }
     }
     /**
-     * The collection of columns that are required by this content type
+     * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of columnLink
@@ -313,7 +313,7 @@ public class ColumnLinkItemRequestBuilder {
         public ColumnLinkItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of columns that are required by this content type */
+    /** The collection of columns that are required by this content type. */
     public class ColumnLinkItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

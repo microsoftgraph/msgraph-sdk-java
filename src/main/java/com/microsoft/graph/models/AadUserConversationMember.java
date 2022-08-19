@@ -14,7 +14,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
     private String _tenantId;
     /** The user property */
     private User _user;
-    /** The GUID of the user. */
+    /** The guid of the user. */
     private String _userId;
     /**
      * Instantiates a new AadUserConversationMember and sets the default values.
@@ -73,7 +73,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         return this._user;
     }
     /**
-     * Gets the userId property value. The GUID of the user.
+     * Gets the userId property value. The guid of the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class AadUserConversationMember extends ConversationMember implements Par
         this._user = value;
     }
     /**
-     * Sets the userId property value. The GUID of the user.
+     * Sets the userId property value. The guid of the user.
      * @param value Value to set for the userId property.
      * @return a void
      */

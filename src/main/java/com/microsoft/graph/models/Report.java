@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Report implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Report content; details vary by report type. */
+    /** Not yet documented */
     private byte[] _content;
     /** The OdataType property */
     private String _odataType;
@@ -43,7 +43,7 @@ public class Report implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the content property value. Report content; details vary by report type.
+     * Gets the content property value. Not yet documented
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class Report implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the content property value. Report content; details vary by report type.
+     * Sets the content property value. Not yet documented
      * @param value Value to set for the content property.
      * @return a void
      */

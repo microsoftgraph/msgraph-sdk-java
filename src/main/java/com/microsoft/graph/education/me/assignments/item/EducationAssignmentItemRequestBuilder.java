@@ -131,7 +131,7 @@ public class EducationAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -139,7 +139,7 @@ public class EducationAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -244,7 +244,7 @@ public class EducationAssignmentItemRequestBuilder {
         }
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @return a CompletableFuture of educationAssignment
      */
     public java.util.concurrent.CompletableFuture<EducationAssignment> get() {
@@ -260,7 +260,7 @@ public class EducationAssignmentItemRequestBuilder {
         }
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
      */
@@ -277,7 +277,7 @@ public class EducationAssignmentItemRequestBuilder {
         }
     }
     /**
-     * List of assignments for the user. Nullable.
+     * Assignments belonging to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of educationAssignment
@@ -388,7 +388,7 @@ public class EducationAssignmentItemRequestBuilder {
         public EducationAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** List of assignments for the user. Nullable. */
+    /** Assignments belonging to the user. */
     public class EducationAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public enum DefenderThreatAction implements ValuedEnum {
     /** Apply action based on the update definition. */
     DeviceDefault("deviceDefault"),

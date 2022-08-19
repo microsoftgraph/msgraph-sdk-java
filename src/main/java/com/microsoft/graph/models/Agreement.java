@@ -16,15 +16,15 @@ public class Agreement extends Entity implements Parsable {
     private String _displayName;
     /** Default PDF linked to this agreement. */
     private AgreementFile _file;
-    /** PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead. */
+    /** PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand. */
     private java.util.List<AgreementFileLocalization> _files;
-    /** This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq). */
+    /** Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq). */
     private Boolean _isPerDeviceAcceptanceRequired;
     /** Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq). */
     private Boolean _isViewingBeforeAcceptanceRequired;
-    /** Expiration schedule and frequency of agreement for all users.  Supports $filter (eq). */
+    /** Expiration schedule and frequency of agreement for all users. Supports $filter (eq). */
     private TermsExpiration _termsExpiration;
-    /** The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. */
+    /** The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq). */
     private Period _userReacceptRequiredFrequency;
     /**
      * Instantiates a new agreement and sets the default values.
@@ -87,7 +87,7 @@ public class Agreement extends Entity implements Parsable {
         return this._file;
     }
     /**
-     * Gets the files property value. PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * Gets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @return a agreementFileLocalization
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class Agreement extends Entity implements Parsable {
         return this._files;
     }
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class Agreement extends Entity implements Parsable {
         return this._isViewingBeforeAcceptanceRequired;
     }
     /**
-     * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      * @return a termsExpiration
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class Agreement extends Entity implements Parsable {
         return this._termsExpiration;
     }
     /**
-     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -168,7 +168,7 @@ public class Agreement extends Entity implements Parsable {
         this._file = value;
     }
     /**
-     * Sets the files property value. PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * Sets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param value Value to set for the files property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class Agreement extends Entity implements Parsable {
         this._files = value;
     }
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      * @return a void
      */
@@ -192,7 +192,7 @@ public class Agreement extends Entity implements Parsable {
         this._isViewingBeforeAcceptanceRequired = value;
     }
     /**
-     * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      * @param value Value to set for the termsExpiration property.
      * @return a void
      */
@@ -200,7 +200,7 @@ public class Agreement extends Entity implements Parsable {
         this._termsExpiration = value;
     }
     /**
-     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @param value Value to set for the userReacceptRequiredFrequency property.
      * @return a void
      */

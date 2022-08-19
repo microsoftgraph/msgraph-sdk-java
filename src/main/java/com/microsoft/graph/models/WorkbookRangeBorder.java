@@ -7,15 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /** HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange'). */
     private String _color;
-    /** Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only. */
+    /** Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only. */
     private String _sideIndex;
-    /** One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot. */
+    /** One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot. */
     private String _style;
-    /** Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick. */
+    /** Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick. */
     private String _weight;
     /**
      * Instantiates a new workbookRangeBorder and sets the default values.
@@ -58,7 +58,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the sideIndex property value. Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Gets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return this._sideIndex;
     }
     /**
-     * Gets the style property value. One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Gets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         return this._style;
     }
     /**
-     * Gets the weight property value. Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick.
+     * Gets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         this._color = value;
     }
     /**
-     * Sets the sideIndex property value. Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @param value Value to set for the sideIndex property.
      * @return a void
      */
@@ -111,7 +111,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         this._sideIndex = value;
     }
     /**
-     * Sets the style property value. One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @param value Value to set for the style property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
         this._style = value;
     }
     /**
-     * Sets the weight property value. Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick.
+     * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @param value Value to set for the weight property.
      * @return a void
      */

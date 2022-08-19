@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class ApprovalStage extends Entity implements Parsable {
     /** Indicates whether the stage is assigned to the calling user to review. Read-only. */
     private Boolean _assignedToMe;
@@ -16,7 +16,7 @@ public class ApprovalStage extends Entity implements Parsable {
     private String _displayName;
     /** The justification associated with the approval stage decision. */
     private String _justification;
-    /** The identifier of the reviewer. Read-only. */
+    /** The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only. */
     private Identity _reviewedBy;
     /** The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _reviewedDateTime;
@@ -84,7 +84,7 @@ public class ApprovalStage extends Entity implements Parsable {
         return this._justification;
     }
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class ApprovalStage extends Entity implements Parsable {
         this._justification = value;
     }
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */

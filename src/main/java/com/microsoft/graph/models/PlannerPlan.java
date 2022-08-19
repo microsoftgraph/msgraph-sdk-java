@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class PlannerPlan extends Entity implements Parsable {
-    /** Collection of buckets in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of buckets in the plan. */
     private java.util.List<PlannerBucket> _buckets;
     /** Identifies the container of the plan. After it is set, this property can’t be updated. Required. */
     private PlannerPlanContainer _container;
@@ -18,11 +18,11 @@ public class PlannerPlan extends Entity implements Parsable {
     private IdentitySet _createdBy;
     /** Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
-    /** Additional details about the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Additional details about the plan. */
     private PlannerPlanDetails _details;
     /** The owner property */
     private String _owner;
-    /** Collection of tasks in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of tasks in the plan. */
     private java.util.List<PlannerTask> _tasks;
     /** Required. Title of the plan. */
     private String _title;
@@ -45,7 +45,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return new PlannerPlan();
     }
     /**
-     * Gets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
+     * Gets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      * @return a plannerBucket
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the details property value. Additional details about the plan. Read-only. Nullable.
+     * Gets the details property value. Read-only. Nullable. Additional details about the plan.
      * @return a plannerPlanDetails
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._owner;
     }
     /**
-     * Gets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
+     * Gets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      * @return a plannerTask
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class PlannerPlan extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
+     * Sets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      * @param value Value to set for the buckets property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the details property value. Additional details about the plan. Read-only. Nullable.
+     * Sets the details property value. Read-only. Nullable. Additional details about the plan.
      * @param value Value to set for the details property.
      * @return a void
      */
@@ -192,7 +192,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._owner = value;
     }
     /**
-     * Sets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
+     * Sets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      * @param value Value to set for the tasks property.
      * @return a void
      */

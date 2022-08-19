@@ -14,7 +14,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _addedDateTime;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account. */
+    /** The verified publisher name from the app publisher's Partner Center account. */
     private String _displayName;
     /** The OdataType property */
     private String _odataType;
@@ -55,7 +55,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+     * Gets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
+     * Sets the displayName property value. The verified publisher name from the app publisher's Partner Center account.
      * @param value Value to set for the displayName property.
      * @return a void
      */

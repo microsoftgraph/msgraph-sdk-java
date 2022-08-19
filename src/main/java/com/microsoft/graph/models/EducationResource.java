@@ -12,15 +12,15 @@ import java.util.Objects;
 public class EducationResource implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Who created the resource. */
+    /** The individual who created the resource. */
     private IdentitySet _createdBy;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
     /** Display name of resource. */
     private String _displayName;
-    /** Who was the last user to modify the resource. */
+    /** The last user to modify the resource. */
     private IdentitySet _lastModifiedBy;
-    /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _lastModifiedDateTime;
     /** The OdataType property */
     private String _odataType;
@@ -65,7 +65,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the createdBy property value. Who created the resource.
+     * Gets the createdBy property value. The individual who created the resource.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. Who was the last user to modify the resource.
+     * Gets the lastModifiedBy property value. The last user to modify the resource.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the createdBy property value. Who created the resource.
+     * Sets the createdBy property value. The individual who created the resource.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -160,7 +160,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Who was the last user to modify the resource.
+     * Sets the lastModifiedBy property value. The last user to modify the resource.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -184,7 +184,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

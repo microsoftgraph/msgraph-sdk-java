@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
@@ -19,7 +19,7 @@ public class Participant extends Entity implements Parsable {
     private java.util.List<MediaStream> _mediaStreams;
     /** A blob of data provided by the participant in the roster. */
     private String _metadata;
-    /** Information on whether the participant has recording capability. */
+    /** Information about whether the participant has recording capability. */
     private RecordingInfo _recordingInfo;
     /**
      * Instantiates a new participant and sets the default values.
@@ -96,7 +96,7 @@ public class Participant extends Entity implements Parsable {
         return this._metadata;
     }
     /**
-     * Gets the recordingInfo property value. Information on whether the participant has recording capability.
+     * Gets the recordingInfo property value. Information about whether the participant has recording capability.
      * @return a recordingInfo
      */
     @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class Participant extends Entity implements Parsable {
         this._metadata = value;
     }
     /**
-     * Sets the recordingInfo property value. Information on whether the participant has recording capability.
+     * Sets the recordingInfo property value. Information about whether the participant has recording capability.
      * @param value Value to set for the recordingInfo property.
      * @return a void
      */

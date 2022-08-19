@@ -86,7 +86,7 @@ public class TrendingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -94,7 +94,7 @@ public class TrendingItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class TrendingItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @return a CompletableFuture of trending
      */
     public java.util.concurrent.CompletableFuture<Trending> get() {
@@ -215,7 +215,7 @@ public class TrendingItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trending
      */
@@ -232,7 +232,7 @@ public class TrendingItemRequestBuilder {
         }
     }
     /**
-     * Access this property from the derived type itemInsights.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of trending
@@ -319,7 +319,7 @@ public class TrendingItemRequestBuilder {
         public TrendingItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Access this property from the derived type itemInsights. */
+    /** Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before. */
     public class TrendingItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

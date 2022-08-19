@@ -8,53 +8,53 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class SignIn extends Entity implements Parsable {
-    /** The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
+    /** App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
     private String _appDisplayName;
-    /** The application identifier in Azure Active Directory. Supports $filter (eq operator only). */
+    /** Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only). */
     private String _appId;
-    /** A list of conditional access policies that are triggered by the corresponding sign-in activity. */
+    /** The appliedConditionalAccessPolicies property */
     private java.util.List<AppliedConditionalAccessPolicy> _appliedConditionalAccessPolicies;
-    /** The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only). */
+    /** Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only). */
     private String _clientAppUsed;
-    /** The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only). */
+    /** Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only). */
     private ConditionalAccessStatus _conditionalAccessStatus;
-    /** The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only). */
+    /** The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only). */
     private String _correlationId;
-    /** The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only). */
+    /** Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only). */
     private OffsetDateTime _createdDateTime;
-    /** The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties. */
+    /** Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties. */
     private DeviceDetail _deviceDetail;
-    /** The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only). */
+    /** IP address of the client used to sign in. Supports $filter (eq and startsWith operators only). */
     private String _ipAddress;
-    /** Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user. */
+    /** Indicates if a sign-in is interactive or not. */
     private Boolean _isInteractive;
-    /** The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties. */
+    /** Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties. */
     private SignInLocation _location;
-    /** The name of the resource that the user signed in to. Supports $filter (eq operator only). */
+    /** Name of the resource the user signed into. Supports $filter (eq operator only). */
     private String _resourceDisplayName;
-    /** The identifier of the resource that the user signed in to. Supports $filter (eq operator only). */
+    /** ID of the resource that the user signed into. Supports $filter (eq operator only). */
     private String _resourceId;
-    /** The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
+    /** Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden. */
     private RiskDetail _riskDetail;
     /** Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only). */
     private java.util.List<String> _riskEventTypes;
     /** The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only). */
     private java.util.List<String> _riskEventTypes_v2;
-    /** The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
+    /** Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden. */
     private RiskLevel _riskLevelAggregated;
-    /** The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden. */
+    /** Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden. */
     private RiskLevel _riskLevelDuringSignIn;
-    /** The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only). */
+    /** Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only). */
     private RiskState _riskState;
-    /** The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property. */
+    /** Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property. */
     private SignInStatus _status;
-    /** The display name of the user. Supports $filter (eq and startsWith operators only). */
+    /** Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only). */
     private String _userDisplayName;
-    /** The identifier of the user. Supports $filter (eq operator only). */
+    /** ID of the user that initiated the sign-in. Supports $filter (eq operator only). */
     private String _userId;
-    /** The UPN of the user. Supports $filter (eq and startsWith operators only). */
+    /** User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only). */
     private String _userPrincipalName;
     /**
      * Instantiates a new signIn and sets the default values.
@@ -82,7 +82,7 @@ public class SignIn extends Entity implements Parsable {
         return new SignIn();
     }
     /**
-     * Gets the appDisplayName property value. The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
+     * Gets the appDisplayName property value. App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class SignIn extends Entity implements Parsable {
         return this._appDisplayName;
     }
     /**
-     * Gets the appId property value. The application identifier in Azure Active Directory. Supports $filter (eq operator only).
+     * Gets the appId property value. Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class SignIn extends Entity implements Parsable {
         return this._appId;
     }
     /**
-     * Gets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Gets the appliedConditionalAccessPolicies property value. The appliedConditionalAccessPolicies property
      * @return a appliedConditionalAccessPolicy
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class SignIn extends Entity implements Parsable {
         return this._appliedConditionalAccessPolicies;
     }
     /**
-     * Gets the clientAppUsed property value. The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
+     * Gets the clientAppUsed property value. Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -114,7 +114,7 @@ public class SignIn extends Entity implements Parsable {
         return this._clientAppUsed;
     }
     /**
-     * Gets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
+     * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
      * @return a conditionalAccessStatus
      */
     @javax.annotation.Nullable
@@ -122,7 +122,7 @@ public class SignIn extends Entity implements Parsable {
         return this._conditionalAccessStatus;
     }
     /**
-     * Gets the correlationId property value. The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
+     * Gets the correlationId property value. The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +130,7 @@ public class SignIn extends Entity implements Parsable {
         return this._correlationId;
     }
     /**
-     * Gets the createdDateTime property value. The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
+     * Gets the createdDateTime property value. Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SignIn extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the deviceDetail property value. The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
+     * Gets the deviceDetail property value. Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.
      * @return a deviceDetail
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class SignIn extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the ipAddress property value. The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
+     * Gets the ipAddress property value. IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class SignIn extends Entity implements Parsable {
         return this._ipAddress;
     }
     /**
-     * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Gets the isInteractive property value. Indicates if a sign-in is interactive or not.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class SignIn extends Entity implements Parsable {
         return this._isInteractive;
     }
     /**
-     * Gets the location property value. The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
+     * Gets the location property value. Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
      * @return a signInLocation
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class SignIn extends Entity implements Parsable {
         return this._location;
     }
     /**
-     * Gets the resourceDisplayName property value. The name of the resource that the user signed in to. Supports $filter (eq operator only).
+     * Gets the resourceDisplayName property value. Name of the resource the user signed into. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class SignIn extends Entity implements Parsable {
         return this._resourceDisplayName;
     }
     /**
-     * Gets the resourceId property value. The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
+     * Gets the resourceId property value. ID of the resource that the user signed into. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class SignIn extends Entity implements Parsable {
         return this._resourceId;
     }
     /**
-     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
      * @return a riskDetail
      */
     @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class SignIn extends Entity implements Parsable {
         return this._riskEventTypes_v2;
     }
     /**
-     * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      * @return a riskLevel
      */
     @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class SignIn extends Entity implements Parsable {
         return this._riskLevelAggregated;
     }
     /**
-     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      * @return a riskLevel
      */
     @javax.annotation.Nullable
@@ -259,7 +259,7 @@ public class SignIn extends Entity implements Parsable {
         return this._riskLevelDuringSignIn;
     }
     /**
-     * Gets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
+     * Gets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).
      * @return a riskState
      */
     @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class SignIn extends Entity implements Parsable {
         return this._riskState;
     }
     /**
-     * Gets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
+     * Gets the status property value. Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
      * @return a signInStatus
      */
     @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class SignIn extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the userDisplayName property value. The display name of the user. Supports $filter (eq and startsWith operators only).
+     * Gets the userDisplayName property value. Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -283,7 +283,7 @@ public class SignIn extends Entity implements Parsable {
         return this._userDisplayName;
     }
     /**
-     * Gets the userId property value. The identifier of the user. Supports $filter (eq operator only).
+     * Gets the userId property value. ID of the user that initiated the sign-in. Supports $filter (eq operator only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class SignIn extends Entity implements Parsable {
         return this._userId;
     }
     /**
-     * Gets the userPrincipalName property value. The UPN of the user. Supports $filter (eq and startsWith operators only).
+     * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -331,7 +331,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the appDisplayName property value. The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
+     * Sets the appDisplayName property value. App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
@@ -339,7 +339,7 @@ public class SignIn extends Entity implements Parsable {
         this._appDisplayName = value;
     }
     /**
-     * Sets the appId property value. The application identifier in Azure Active Directory. Supports $filter (eq operator only).
+     * Sets the appId property value. Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).
      * @param value Value to set for the appId property.
      * @return a void
      */
@@ -347,7 +347,7 @@ public class SignIn extends Entity implements Parsable {
         this._appId = value;
     }
     /**
-     * Sets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Sets the appliedConditionalAccessPolicies property value. The appliedConditionalAccessPolicies property
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      * @return a void
      */
@@ -355,7 +355,7 @@ public class SignIn extends Entity implements Parsable {
         this._appliedConditionalAccessPolicies = value;
     }
     /**
-     * Sets the clientAppUsed property value. The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
+     * Sets the clientAppUsed property value. Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
      * @param value Value to set for the clientAppUsed property.
      * @return a void
      */
@@ -363,7 +363,7 @@ public class SignIn extends Entity implements Parsable {
         this._clientAppUsed = value;
     }
     /**
-     * Sets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).
+     * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
      * @param value Value to set for the conditionalAccessStatus property.
      * @return a void
      */
@@ -371,7 +371,7 @@ public class SignIn extends Entity implements Parsable {
         this._conditionalAccessStatus = value;
     }
     /**
-     * Sets the correlationId property value. The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
+     * Sets the correlationId property value. The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).
      * @param value Value to set for the correlationId property.
      * @return a void
      */
@@ -379,7 +379,7 @@ public class SignIn extends Entity implements Parsable {
         this._correlationId = value;
     }
     /**
-     * Sets the createdDateTime property value. The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
+     * Sets the createdDateTime property value. Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -387,7 +387,7 @@ public class SignIn extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the deviceDetail property value. The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSystem properties.
+     * Sets the deviceDetail property value. Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.
      * @param value Value to set for the deviceDetail property.
      * @return a void
      */
@@ -395,7 +395,7 @@ public class SignIn extends Entity implements Parsable {
         this._deviceDetail = value;
     }
     /**
-     * Sets the ipAddress property value. The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
+     * Sets the ipAddress property value. IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
@@ -403,7 +403,7 @@ public class SignIn extends Entity implements Parsable {
         this._ipAddress = value;
     }
     /**
-     * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Sets the isInteractive property value. Indicates if a sign-in is interactive or not.
      * @param value Value to set for the isInteractive property.
      * @return a void
      */
@@ -411,7 +411,7 @@ public class SignIn extends Entity implements Parsable {
         this._isInteractive = value;
     }
     /**
-     * Sets the location property value. The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
+     * Sets the location property value. Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
      * @param value Value to set for the location property.
      * @return a void
      */
@@ -419,7 +419,7 @@ public class SignIn extends Entity implements Parsable {
         this._location = value;
     }
     /**
-     * Sets the resourceDisplayName property value. The name of the resource that the user signed in to. Supports $filter (eq operator only).
+     * Sets the resourceDisplayName property value. Name of the resource the user signed into. Supports $filter (eq operator only).
      * @param value Value to set for the resourceDisplayName property.
      * @return a void
      */
@@ -427,7 +427,7 @@ public class SignIn extends Entity implements Parsable {
         this._resourceDisplayName = value;
     }
     /**
-     * Sets the resourceId property value. The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
+     * Sets the resourceId property value. ID of the resource that the user signed into. Supports $filter (eq operator only).
      * @param value Value to set for the resourceId property.
      * @return a void
      */
@@ -435,7 +435,7 @@ public class SignIn extends Entity implements Parsable {
         this._resourceId = value;
     }
     /**
-     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskDetail property value. Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
@@ -459,7 +459,7 @@ public class SignIn extends Entity implements Parsable {
         this._riskEventTypes_v2 = value;
     }
     /**
-     * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelAggregated property value. Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      * @return a void
      */
@@ -467,7 +467,7 @@ public class SignIn extends Entity implements Parsable {
         this._riskLevelAggregated = value;
     }
     /**
-     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      * @return a void
      */
@@ -475,7 +475,7 @@ public class SignIn extends Entity implements Parsable {
         this._riskLevelDuringSignIn = value;
     }
     /**
-     * Sets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).
+     * Sets the riskState property value. Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).
      * @param value Value to set for the riskState property.
      * @return a void
      */
@@ -483,7 +483,7 @@ public class SignIn extends Entity implements Parsable {
         this._riskState = value;
     }
     /**
-     * Sets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
+     * Sets the status property value. Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -491,7 +491,7 @@ public class SignIn extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the userDisplayName property value. The display name of the user. Supports $filter (eq and startsWith operators only).
+     * Sets the userDisplayName property value. Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
@@ -499,7 +499,7 @@ public class SignIn extends Entity implements Parsable {
         this._userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The identifier of the user. Supports $filter (eq operator only).
+     * Sets the userId property value. ID of the user that initiated the sign-in. Supports $filter (eq operator only).
      * @param value Value to set for the userId property.
      * @return a void
      */
@@ -507,7 +507,7 @@ public class SignIn extends Entity implements Parsable {
         this._userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The UPN of the user. Supports $filter (eq and startsWith operators only).
+     * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */

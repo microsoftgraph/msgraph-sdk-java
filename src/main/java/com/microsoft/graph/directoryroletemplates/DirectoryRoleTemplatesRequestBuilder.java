@@ -77,7 +77,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a list of directoryroletemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of directoryroletemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of directoryroletemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @return a CompletableFuture of DirectoryRoleTemplateCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplateCollectionResponse> get() {
@@ -156,7 +156,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of directoryroletemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryRoleTemplateCollectionResponse
      */
@@ -173,7 +173,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of directoryroletemplate objects.
+     * Retrieve a list of directoryRoleTemplate objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryRoleTemplateCollectionResponse
@@ -245,7 +245,7 @@ public class DirectoryRoleTemplatesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieve a list of directoryroletemplate objects. */
+    /** Retrieve a list of directoryRoleTemplate objects. */
     public class DirectoryRoleTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

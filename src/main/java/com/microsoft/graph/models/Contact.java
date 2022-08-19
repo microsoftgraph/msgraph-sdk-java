@@ -29,7 +29,7 @@ public class Contact extends OutlookItem implements Parsable {
     private String _displayName;
     /** The contact's email addresses. */
     private java.util.List<EmailAddress> _emailAddresses;
-    /** The collection of open extensions defined for the contact. Nullable. */
+    /** The collection of open extensions defined for the contact. Read-only. Nullable. */
     private java.util.List<Extension> _extensions;
     /** The name the contact is filed under. */
     private String _fileAs;
@@ -182,7 +182,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this._emailAddresses;
     }
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the contact. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
      * @return a extension
      */
     @javax.annotation.Nullable
@@ -571,7 +571,7 @@ public class Contact extends OutlookItem implements Parsable {
         this._emailAddresses = value;
     }
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the contact. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
      * @param value Value to set for the extensions property.
      * @return a void
      */

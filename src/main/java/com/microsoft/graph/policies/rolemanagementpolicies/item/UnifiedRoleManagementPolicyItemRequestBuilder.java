@@ -92,7 +92,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         return new microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @return a CompletableFuture of unifiedRoleManagementPolicy
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get() {
@@ -233,7 +233,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicy
      */
@@ -250,7 +250,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleManagementPolicy
@@ -349,7 +349,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         public UnifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the role management policies. */
+    /** Specifies the various policies associated with scopes and roles. */
     public class UnifiedRoleManagementPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

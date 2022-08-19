@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class AudioRoutingGroup extends Entity implements Parsable {
-    /** List of receiving participant ids. */
+    /** The receivers property */
     private java.util.List<String> _receivers;
     /** The routingMode property */
     private RoutingMode _routingMode;
-    /** List of source participant ids. */
+    /** The sources property */
     private java.util.List<String> _sources;
     /**
      * Instantiates a new audioRoutingGroup and sets the default values.
@@ -47,7 +47,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the receivers property value. List of receiving participant ids.
+     * Gets the receivers property value. The receivers property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         return this._routingMode;
     }
     /**
-     * Gets the sources property value. List of source participant ids.
+     * Gets the sources property value. The sources property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
     }
     /**
-     * Sets the receivers property value. List of receiving participant ids.
+     * Sets the receivers property value. The receivers property
      * @param value Value to set for the receivers property.
      * @return a void
      */
@@ -99,7 +99,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         this._routingMode = value;
     }
     /**
-     * Sets the sources property value. List of source participant ids.
+     * Sets the sources property value. The sources property
      * @param value Value to set for the sources property.
      * @return a void
      */

@@ -15,7 +15,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowAddRemoveApps;
     /** If set to true, members can add and update private channels. */
     private Boolean _allowCreatePrivateChannels;
-    /** If set to true, members can add and update any channels. */
+    /** If set to true, members can add and update channels. */
     private Boolean _allowCreateUpdateChannels;
     /** If set to true, members can add, update, and remove connectors. */
     private Boolean _allowCreateUpdateRemoveConnectors;
@@ -68,7 +68,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
         return this._allowCreatePrivateChannels;
     }
     /**
-     * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update any channels.
+     * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
         this._allowCreatePrivateChannels = value;
     }
     /**
-     * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update any channels.
+     * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @param value Value to set for the allowCreateUpdateChannels property.
      * @return a void
      */

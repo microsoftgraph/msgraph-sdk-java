@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
-    /** Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other. */
+    /** Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other. */
     private InferenceClassificationType _classifyAs;
     /** The email address information of the sender for whom the override is created. */
     private EmailAddress _senderEmailAddress;
@@ -32,7 +32,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         return new InferenceClassificationOverride();
     }
     /**
-     * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.
+     * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @return a inferenceClassificationType
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         writer.writeObjectValue("senderEmailAddress", this.getSenderEmailAddress());
     }
     /**
-     * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.
+     * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @param value Value to set for the classifyAs property.
      * @return a void
      */

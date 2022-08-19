@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Session extends Entity implements Parsable {
     /** Endpoint that answered the session. */
     private Endpoint _callee;
@@ -23,7 +23,7 @@ public class Session extends Entity implements Parsable {
     private java.util.List<String> _modalities;
     /** The list of segments involved in the session. Read-only. Nullable. */
     private java.util.List<Segment> _segments;
-    /** UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _startDateTime;
     /**
      * Instantiates a new session and sets the default values.
@@ -109,7 +109,7 @@ public class Session extends Entity implements Parsable {
         return this._segments;
     }
     /**
-     * Gets the startDateTime property value. UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class Session extends Entity implements Parsable {
         this._segments = value;
     }
     /**
-     * Sets the startDateTime property value. UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

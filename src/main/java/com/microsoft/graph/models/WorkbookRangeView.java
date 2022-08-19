@@ -30,7 +30,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     private Json _text;
     /** Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
     private Json _values;
-    /** Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. */
+    /** Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. */
     private Json _valueTypes;
     /**
      * Instantiates a new WorkbookRangeView and sets the default values.
@@ -161,7 +161,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this._values;
     }
     /**
-     * Gets the valueTypes property value. Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Gets the valueTypes property value. Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -278,7 +278,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this._values = value;
     }
     /**
-     * Sets the valueTypes property value. Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Sets the valueTypes property value. Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      * @param value Value to set for the valueTypes property.
      * @return a void
      */

@@ -16,18 +16,18 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     private WorkbookRangeFill _fill;
     /** Returns the font object defined on the overall range selected Read-only. */
     private WorkbookRangeFont _font;
-    /** Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed. */
+    /** Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed. */
     private String _horizontalAlignment;
     /** Returns the format protection object for a range. Read-only. */
     private WorkbookFormatProtection _protection;
     /** Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned. */
     private Double _rowHeight;
-    /** Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed. */
+    /** Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed. */
     private String _verticalAlignment;
     /** Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting */
     private Boolean _wrapText;
     /**
-     * Instantiates a new WorkbookRangeFormat and sets the default values.
+     * Instantiates a new workbookRangeFormat and sets the default values.
      * @return a void
      */
     public WorkbookRangeFormat() {
@@ -37,7 +37,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookRangeFormat
+     * @return a workbookRangeFormat
      */
     @javax.annotation.Nonnull
     public static WorkbookRangeFormat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -96,7 +96,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         return this._font;
     }
     /**
-     * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         return this._rowHeight;
     }
     /**
-     * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         this._font = value;
     }
     /**
-     * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @param value Value to set for the horizontalAlignment property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class WorkbookRangeFormat extends Entity implements Parsable {
         this._rowHeight = value;
     }
     /**
-     * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      * @param value Value to set for the verticalAlignment property.
      * @return a void
      */

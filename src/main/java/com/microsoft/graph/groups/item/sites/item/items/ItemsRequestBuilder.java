@@ -58,7 +58,7 @@ public class ItemsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -66,7 +66,7 @@ public class ItemsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class ItemsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      * @return a CompletableFuture of BaseItemCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get() {
@@ -104,7 +104,7 @@ public class ItemsRequestBuilder {
         }
     }
     /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BaseItemCollectionResponse
      */
@@ -121,7 +121,7 @@ public class ItemsRequestBuilder {
         }
     }
     /**
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BaseItemCollectionResponse
@@ -138,7 +138,7 @@ public class ItemsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Used to address any item contained in this site. This collection cannot be enumerated. */
+    /** Used to address any item contained in this site. This collection can't be enumerated. */
     public class ItemsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

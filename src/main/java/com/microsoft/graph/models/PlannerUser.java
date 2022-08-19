@@ -10,7 +10,7 @@ import java.util.Objects;
 public class PlannerUser extends Entity implements Parsable {
     /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
     private java.util.List<PlannerPlan> _plans;
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** Read-only. Nullable. Returns the plannerPlans shared with the user. */
     private java.util.List<PlannerTask> _tasks;
     /**
      * Instantiates a new plannerUser and sets the default values.
@@ -51,7 +51,7 @@ public class PlannerUser extends Entity implements Parsable {
         return this._plans;
     }
     /**
-     * Gets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Gets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return a plannerTask
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class PlannerUser extends Entity implements Parsable {
         this._plans = value;
     }
     /**
-     * Sets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param value Value to set for the tasks property.
      * @return a void
      */

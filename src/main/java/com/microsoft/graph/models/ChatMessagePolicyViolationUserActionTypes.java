@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of chat entities. */
 public enum ChatMessagePolicyViolationUserActionTypes implements ValuedEnum {
     None("none"),
     Override("override"),

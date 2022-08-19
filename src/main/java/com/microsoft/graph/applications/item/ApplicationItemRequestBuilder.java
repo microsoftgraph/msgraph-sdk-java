@@ -172,7 +172,7 @@ public class ApplicationItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -180,7 +180,7 @@ public class ApplicationItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -262,7 +262,7 @@ public class ApplicationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -278,7 +278,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -295,7 +295,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void

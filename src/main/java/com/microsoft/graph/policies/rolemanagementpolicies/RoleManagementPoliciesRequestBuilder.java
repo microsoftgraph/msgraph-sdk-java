@@ -59,7 +59,7 @@ public class RoleManagementPoliciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RoleManagementPoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class RoleManagementPoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class RoleManagementPoliciesRequestBuilder {
         }
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
      */
@@ -155,7 +155,7 @@ public class RoleManagementPoliciesRequestBuilder {
         }
     }
     /**
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
@@ -227,7 +227,7 @@ public class RoleManagementPoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the role management policies. */
+    /** Specifies the various policies associated with scopes and roles. */
     public class RoleManagementPoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

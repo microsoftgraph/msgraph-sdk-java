@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Teamwork extends Entity implements Parsable {
-    /** A workforce integration with shifts. */
+    /** The workforceIntegrations property */
     private java.util.List<WorkforceIntegration> _workforceIntegrations;
     /**
      * Instantiates a new Teamwork and sets the default values.
@@ -40,7 +40,7 @@ public class Teamwork extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the workforceIntegrations property value. A workforce integration with shifts.
+     * Gets the workforceIntegrations property value. The workforceIntegrations property
      * @return a workforceIntegration
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class Teamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
-     * Sets the workforceIntegrations property value. A workforce integration with shifts.
+     * Sets the workforceIntegrations property value. The workforceIntegrations property
      * @param value Value to set for the workforceIntegrations property.
      * @return a void
      */

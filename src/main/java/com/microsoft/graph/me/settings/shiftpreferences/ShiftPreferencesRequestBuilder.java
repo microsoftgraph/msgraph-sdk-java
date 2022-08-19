@@ -80,7 +80,7 @@ public class ShiftPreferencesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The shift preferences for the user.
+     * Get shiftPreferences from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ShiftPreferencesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The shift preferences for the user.
+     * Get shiftPreferences from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ShiftPreferencesRequestBuilder {
         }
     }
     /**
-     * The shift preferences for the user.
+     * Get shiftPreferences from me
      * @return a CompletableFuture of shiftPreferences
      */
     public java.util.concurrent.CompletableFuture<ShiftPreferences> get() {
@@ -209,7 +209,7 @@ public class ShiftPreferencesRequestBuilder {
         }
     }
     /**
-     * The shift preferences for the user.
+     * Get shiftPreferences from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shiftPreferences
      */
@@ -226,7 +226,7 @@ public class ShiftPreferencesRequestBuilder {
         }
     }
     /**
-     * The shift preferences for the user.
+     * Get shiftPreferences from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of shiftPreferences
@@ -313,7 +313,7 @@ public class ShiftPreferencesRequestBuilder {
         public ShiftPreferencesRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The shift preferences for the user. */
+    /** Get shiftPreferences from me */
     public class ShiftPreferencesRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

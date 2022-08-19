@@ -16,7 +16,7 @@ public class Workbook extends Entity implements Parsable {
     private WorkbookFunctions _functions;
     /** Represents a collection of workbooks scoped named items (named ranges and constants). Read-only. */
     private java.util.List<WorkbookNamedItem> _names;
-    /** The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable. */
+    /** The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. */
     private java.util.List<WorkbookOperation> _operations;
     /** Represents a collection of tables associated with the workbook. Read-only. */
     private java.util.List<WorkbookTable> _tables;
@@ -90,7 +90,7 @@ public class Workbook extends Entity implements Parsable {
         return this._names;
     }
     /**
-     * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * Gets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      * @return a workbookOperation
      */
     @javax.annotation.Nullable
@@ -162,7 +162,7 @@ public class Workbook extends Entity implements Parsable {
         this._names = value;
     }
     /**
-     * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+     * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      * @param value Value to set for the operations property.
      * @return a void
      */

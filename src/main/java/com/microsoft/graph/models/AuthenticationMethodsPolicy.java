@@ -8,23 +8,24 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the authenticationMethodsPolicy singleton. */
 public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /** Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy. */
     private java.util.List<AuthenticationMethodConfiguration> _authenticationMethodConfigurations;
-    /** A description of the policy. */
+    /** A description of the policy. Read-only. */
     private String _description;
-    /** The name of the policy. */
+    /** The name of the policy. Read-only. */
     private String _displayName;
-    /** The date and time of the last update to the policy. */
+    /** The date and time of the last update to the policy. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The version of the policy in use. */
+    /** The version of the policy in use. Read-only. */
     private String _policyVersion;
     /** The reconfirmationInDays property */
     private Integer _reconfirmationInDays;
     /** Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods. */
     private RegistrationEnforcement _registrationEnforcement;
     /**
-     * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
+     * Instantiates a new authenticationMethodsPolicy and sets the default values.
      * @return a void
      */
     public AuthenticationMethodsPolicy() {
@@ -34,7 +35,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationMethodsPolicy
+     * @return a authenticationMethodsPolicy
      */
     @javax.annotation.Nonnull
     public static AuthenticationMethodsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +51,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         return this._authenticationMethodConfigurations;
     }
     /**
-     * Gets the description property value. A description of the policy.
+     * Gets the description property value. A description of the policy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +59,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The name of the policy.
+     * Gets the displayName property value. The name of the policy. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +84,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy.
+     * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -91,7 +92,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the policyVersion property value. The version of the policy in use.
+     * Gets the policyVersion property value. The version of the policy in use. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -139,7 +140,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         this._authenticationMethodConfigurations = value;
     }
     /**
-     * Sets the description property value. A description of the policy.
+     * Sets the description property value. A description of the policy. Read-only.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -147,7 +148,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The name of the policy.
+     * Sets the displayName property value. The name of the policy. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -155,7 +156,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy.
+     * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
@@ -163,7 +164,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the policyVersion property value. The version of the policy in use.
+     * Sets the policyVersion property value. The version of the policy in use. Read-only.
      * @param value Value to set for the policyVersion property.
      * @return a void
      */

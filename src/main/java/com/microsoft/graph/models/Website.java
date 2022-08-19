@@ -17,7 +17,7 @@ public class Website implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The OdataType property */
     private String _odataType;
-    /** Possible values are: other, home, work, blog, profile. */
+    /** The possible values are: other, home, work, blog, profile. */
     private WebsiteType _type;
     /**
      * Instantiates a new website and sets the default values.
@@ -84,7 +84,7 @@ public class Website implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the type property value. Possible values are: other, home, work, blog, profile.
+     * Gets the type property value. The possible values are: other, home, work, blog, profile.
      * @return a websiteType
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class Website implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the type property value. Possible values are: other, home, work, blog, profile.
+     * Sets the type property value. The possible values are: other, home, work, blog, profile.
      * @param value Value to set for the type property.
      * @return a void
      */

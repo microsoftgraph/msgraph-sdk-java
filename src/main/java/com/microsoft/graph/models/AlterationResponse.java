@@ -15,9 +15,9 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Defines the original user query string. */
     private String _originalQueryString;
-    /** Defines the details of alteration information for the spelling correction. */
+    /** Defines the details of the alteration information for the spelling correction. */
     private SearchAlteration _queryAlteration;
-    /** Defines the type of the spelling correction. Possible values are suggestion, modification. */
+    /** Defines the type of the spelling correction. Possible values are: suggestion, modification. */
     private SearchAlterationType _queryAlterationType;
     /**
      * Instantiates a new alterationResponse and sets the default values.
@@ -76,7 +76,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         return this._originalQueryString;
     }
     /**
-     * Gets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
+     * Gets the queryAlteration property value. Defines the details of the alteration information for the spelling correction.
      * @return a searchAlteration
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         return this._queryAlteration;
     }
     /**
-     * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
+     * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
      * @return a searchAlterationType
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         this._originalQueryString = value;
     }
     /**
-     * Sets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
+     * Sets the queryAlteration property value. Defines the details of the alteration information for the spelling correction.
      * @param value Value to set for the queryAlteration property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
         this._queryAlteration = value;
     }
     /**
-     * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
+     * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
      * @param value Value to set for the queryAlterationType property.
      * @return a void
      */

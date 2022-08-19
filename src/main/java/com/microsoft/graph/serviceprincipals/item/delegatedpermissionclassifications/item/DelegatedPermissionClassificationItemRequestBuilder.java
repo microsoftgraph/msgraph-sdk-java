@@ -80,7 +80,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         }
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @return a CompletableFuture of delegatedPermissionClassification
      */
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> get() {
@@ -209,7 +209,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         }
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedPermissionClassification
      */
@@ -226,7 +226,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         }
     }
     /**
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * Get delegatedPermissionClassifications from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of delegatedPermissionClassification
@@ -313,7 +313,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder {
         public DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand. */
+    /** Get delegatedPermissionClassifications from servicePrincipals */
     public class DelegatedPermissionClassificationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

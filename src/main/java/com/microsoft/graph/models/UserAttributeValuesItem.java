@@ -11,9 +11,9 @@ import java.util.Objects;
 public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Used to set the value as the default. */
+    /** Determines whether the value is set as the default. */
     private Boolean _isDefault;
-    /** The display name of the property displayed to the end user in the user flow. */
+    /** The display name of the property displayed to the user in the user flow. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
@@ -60,7 +60,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isDefault property value. Used to set the value as the default.
+     * Gets the isDefault property value. Determines whether the value is set as the default.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         return this._isDefault;
     }
     /**
-     * Gets the name property value. The display name of the property displayed to the end user in the user flow.
+     * Gets the name property value. The display name of the property displayed to the user in the user flow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the isDefault property value. Used to set the value as the default.
+     * Sets the isDefault property value. Determines whether the value is set as the default.
      * @param value Value to set for the isDefault property.
      * @return a void
      */
@@ -121,7 +121,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
         this._isDefault = value;
     }
     /**
-     * Sets the name property value. The display name of the property displayed to the end user in the user flow.
+     * Sets the name property value. The display name of the property displayed to the user in the user flow.
      * @param value Value to set for the name property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationExternalResource extends EducationResource implements Parsable {
-    /** Location of the resource. Required. */
+    /** Location of the resource. Required */
     private String _webUrl;
     /**
      * Instantiates a new EducationExternalResource and sets the default values.
@@ -40,7 +40,7 @@ public class EducationExternalResource extends EducationResource implements Pars
         }};
     }
     /**
-     * Gets the webUrl property value. Location of the resource. Required.
+     * Gets the webUrl property value. Location of the resource. Required
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class EducationExternalResource extends EducationResource implements Pars
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the webUrl property value. Location of the resource. Required.
+     * Sets the webUrl property value. Location of the resource. Required
      * @param value Value to set for the webUrl property.
      * @return a void
      */

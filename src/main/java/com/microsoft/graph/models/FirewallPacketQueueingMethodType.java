@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public enum FirewallPacketQueueingMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),

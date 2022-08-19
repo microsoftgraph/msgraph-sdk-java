@@ -11,11 +11,11 @@ import java.util.Objects;
 public class KeyValue implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present. */
+    /** Key for the key-value pair. */
     private String _key;
     /** The OdataType property */
     private String _odataType;
-    /** Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false. */
+    /** Value for the key-value pair. */
     private String _value;
     /**
      * Instantiates a new keyValue and sets the default values.
@@ -57,7 +57,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the key property value. Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.
+     * Gets the key property value. Key for the key-value pair.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the value property value. Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+     * Gets the value property value. Value for the key-value pair.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the key property value. Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.
+     * Sets the key property value. Key for the key-value pair.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the value property value. Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+     * Sets the value property value. Value for the key-value pair.
      * @param value Value to set for the value property.
      * @return a void
      */

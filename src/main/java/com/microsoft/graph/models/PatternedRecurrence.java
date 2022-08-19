@@ -13,7 +13,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported. */
+    /** The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported. */
     private RecurrencePattern _pattern;
     /** The duration of an event. */
     private RecurrenceRange _range;
@@ -65,7 +65,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Gets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
      * @return a recurrencePattern
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the pattern property value. The frequency of an event. Do not specify for a one-time access review.  For access reviews: Do not specify this property for a one-time access review.   Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Sets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
      * @param value Value to set for the pattern property.
      * @return a void
      */

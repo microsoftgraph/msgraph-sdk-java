@@ -132,7 +132,7 @@ public class InReplyToRequestBuilder {
         return requestInfo;
     }
     /**
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -140,7 +140,7 @@ public class InReplyToRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -257,7 +257,7 @@ public class InReplyToRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      * @return a CompletableFuture of post
      */
     public java.util.concurrent.CompletableFuture<Post> get() {
@@ -273,7 +273,7 @@ public class InReplyToRequestBuilder {
         }
     }
     /**
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of post
      */
@@ -290,7 +290,7 @@ public class InReplyToRequestBuilder {
         }
     }
     /**
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of post
@@ -401,7 +401,7 @@ public class InReplyToRequestBuilder {
         public InReplyToRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand. */
+    /** Read-only. Supports $expand. */
     public class InReplyToRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

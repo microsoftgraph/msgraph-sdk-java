@@ -11,21 +11,21 @@ import java.util.Objects;
 public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates the browser information of the used for signing-in. */
+    /** Indicates the browser information of the used for signing in. */
     private String _browser;
-    /** Refers to the UniqueID of the device used for signing-in. */
+    /** Refers to the UniqueID of the device used for signing in. */
     private String _deviceId;
-    /** Refers to the name of the device used for signing-in. */
+    /** Refers to the name of the device used for signing in. */
     private String _displayName;
-    /** Indicates whether the device is compliant or not. */
+    /** Indicates whether the device is compliant. */
     private Boolean _isCompliant;
-    /** Indicates if the device is managed or not. */
+    /** Indicates whether the device is managed. */
     private Boolean _isManaged;
     /** The OdataType property */
     private String _odataType;
-    /** Indicates the OS name and version used for signing-in. */
+    /** Indicates the operating system name and version used for signing in. */
     private String _operatingSystem;
-    /** Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
+    /** Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
     private String _trustType;
     /**
      * Instantiates a new deviceDetail and sets the default values.
@@ -54,7 +54,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the browser property value. Indicates the browser information of the used for signing-in.
+     * Gets the browser property value. Indicates the browser information of the used for signing in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._browser;
     }
     /**
-     * Gets the deviceId property value. Refers to the UniqueID of the device used for signing-in.
+     * Gets the deviceId property value. Refers to the UniqueID of the device used for signing in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._deviceId;
     }
     /**
-     * Gets the displayName property value. Refers to the name of the device used for signing-in.
+     * Gets the displayName property value. Refers to the name of the device used for signing in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the isCompliant property value. Indicates whether the device is compliant or not.
+     * Gets the isCompliant property value. Indicates whether the device is compliant.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._isCompliant;
     }
     /**
-     * Gets the isManaged property value. Indicates if the device is managed or not.
+     * Gets the isManaged property value. Indicates whether the device is managed.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -120,7 +120,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the operatingSystem property value. Indicates the OS name and version used for signing-in.
+     * Gets the operatingSystem property value. Indicates the operating system name and version used for signing in.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return this._operatingSystem;
     }
     /**
-     * Gets the trustType property value. Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Gets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the browser property value. Indicates the browser information of the used for signing-in.
+     * Sets the browser property value. Indicates the browser information of the used for signing in.
      * @param value Value to set for the browser property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._browser = value;
     }
     /**
-     * Sets the deviceId property value. Refers to the UniqueID of the device used for signing-in.
+     * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
@@ -177,7 +177,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._deviceId = value;
     }
     /**
-     * Sets the displayName property value. Refers to the name of the device used for signing-in.
+     * Sets the displayName property value. Refers to the name of the device used for signing in.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -185,7 +185,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the isCompliant property value. Indicates whether the device is compliant or not.
+     * Sets the isCompliant property value. Indicates whether the device is compliant.
      * @param value Value to set for the isCompliant property.
      * @return a void
      */
@@ -193,7 +193,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._isCompliant = value;
     }
     /**
-     * Sets the isManaged property value. Indicates if the device is managed or not.
+     * Sets the isManaged property value. Indicates whether the device is managed.
      * @param value Value to set for the isManaged property.
      * @return a void
      */
@@ -209,7 +209,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the operatingSystem property value. Indicates the OS name and version used for signing-in.
+     * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         this._operatingSystem = value;
     }
     /**
-     * Sets the trustType property value. Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      * @param value Value to set for the trustType property.
      * @return a void
      */

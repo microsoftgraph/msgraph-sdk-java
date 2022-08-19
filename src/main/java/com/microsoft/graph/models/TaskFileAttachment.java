@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
-    /** The base64-encoded contents of the file. */
+    /** The contentBytes property */
     private byte[] _contentBytes;
     /**
      * Instantiates a new TaskFileAttachment and sets the default values.
@@ -29,7 +29,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
         return new TaskFileAttachment();
     }
     /**
-     * Gets the contentBytes property value. The base64-encoded contents of the file.
+     * Gets the contentBytes property value. The contentBytes property
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
         writer.writeByteArrayValue("contentBytes", this.getContentBytes());
     }
     /**
-     * Sets the contentBytes property value. The base64-encoded contents of the file.
+     * Sets the contentBytes property value. The contentBytes property
      * @param value Value to set for the contentBytes property.
      * @return a void
      */

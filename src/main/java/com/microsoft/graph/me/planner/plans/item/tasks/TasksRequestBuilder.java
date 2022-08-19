@@ -59,7 +59,7 @@ public class TasksRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TasksRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class TasksRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
@@ -155,7 +155,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlannerTaskCollectionResponse
@@ -227,7 +227,7 @@ public class TasksRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Collection of tasks in the plan. Read-only. Nullable. */
+    /** Read-only. Nullable. Collection of tasks in the plan. */
     public class TasksRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

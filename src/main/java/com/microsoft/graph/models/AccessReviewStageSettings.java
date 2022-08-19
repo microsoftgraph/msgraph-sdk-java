@@ -25,7 +25,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     private Boolean _recommendationsEnabled;
     /** Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition. */
     private java.util.List<AccessReviewReviewerScope> _reviewers;
-    /** Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required. */
+    /** Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required. */
     private String _stageId;
     /**
      * Instantiates a new accessReviewStageSettings and sets the default values.
@@ -128,7 +128,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         return this._reviewers;
     }
     /**
-     * Gets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
+     * Gets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -217,7 +217,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
         this._reviewers = value;
     }
     /**
-     * Sets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
+     * Sets the stageId property value. Unique identifier of the accessReviewStageSettings object. The stageId will be used by the dependsOn property to indicate the order of the stages. Required.
      * @param value Value to set for the stageId property.
      * @return a void
      */

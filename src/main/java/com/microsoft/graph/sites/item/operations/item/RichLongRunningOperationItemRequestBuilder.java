@@ -80,7 +80,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @return a CompletableFuture of richLongRunningOperation
      */
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> get() {
@@ -209,7 +209,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of richLongRunningOperation
      */
@@ -226,7 +226,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         }
     }
     /**
-     * The collection of long running operations for the site.
+     * The collection of long-running operations on the site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of richLongRunningOperation
@@ -313,7 +313,7 @@ public class RichLongRunningOperationItemRequestBuilder {
         public RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of long running operations for the site. */
+    /** The collection of long-running operations on the site. */
     public class RichLongRunningOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

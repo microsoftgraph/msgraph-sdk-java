@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingCustomer extends BookingCustomerBase implements Parsable {
-    /** Addresses associated with the customer, including home, business and other addresses. */
+    /** Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
     private java.util.List<PhysicalAddress> _addresses;
     /** The name of the customer. */
     private String _displayName;
@@ -35,7 +35,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
         return new BookingCustomer();
     }
     /**
-     * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
+     * Gets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @return a physicalAddress
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class BookingCustomer extends BookingCustomerBase implements Parsable {
         writer.writeCollectionOfObjectValues("phones", this.getPhones());
     }
     /**
-     * Sets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
+     * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      * @param value Value to set for the addresses property.
      * @return a void
      */

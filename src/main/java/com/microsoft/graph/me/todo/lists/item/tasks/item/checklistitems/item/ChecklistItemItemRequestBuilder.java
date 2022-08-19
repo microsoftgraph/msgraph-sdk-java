@@ -80,7 +80,7 @@ public class ChecklistItemItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ChecklistItemItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @return a CompletableFuture of checklistItem
      */
     public java.util.concurrent.CompletableFuture<ChecklistItem> get() {
@@ -209,7 +209,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checklistItem
      */
@@ -226,7 +226,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * A collection of smaller subtasks linked to the more complex parent task.
+     * A collection of checklistItems linked to a task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of checklistItem
@@ -313,7 +313,7 @@ public class ChecklistItemItemRequestBuilder {
         public ChecklistItemItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** A collection of smaller subtasks linked to the more complex parent task. */
+    /** A collection of checklistItems linked to a task. */
     public class ChecklistItemItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

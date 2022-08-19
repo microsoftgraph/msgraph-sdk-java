@@ -104,7 +104,7 @@ public class PlannerTaskItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class PlannerTaskItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @return a CompletableFuture of plannerTask
      */
     public java.util.concurrent.CompletableFuture<PlannerTask> get() {
@@ -233,7 +233,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTask
      */
@@ -250,7 +250,7 @@ public class PlannerTaskItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of plannerTask
@@ -337,7 +337,7 @@ public class PlannerTaskItemRequestBuilder {
         public PlannerTaskItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /** Read-only. Nullable. Returns the plannerPlans shared with the user. */
     public class PlannerTaskItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -11,15 +11,15 @@ import java.util.Objects;
 public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Default value for the setting. Read-only. */
+    /** Default value for the setting. */
     private String _defaultValue;
-    /** Description of the setting. Read-only. */
+    /** Description of the setting. */
     private String _description;
-    /** Name of the setting. Read-only. */
+    /** Name of the setting. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
-    /** Type of the setting. Read-only. */
+    /** Type of the setting. */
     private String _type;
     /**
      * Instantiates a new settingTemplateValue and sets the default values.
@@ -48,7 +48,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the defaultValue property value. Default value for the setting. Read-only.
+     * Gets the defaultValue property value. Default value for the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         return this._defaultValue;
     }
     /**
-     * Gets the description property value. Description of the setting. Read-only.
+     * Gets the description property value. Description of the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. Name of the setting. Read-only.
+     * Gets the name property value. Name of the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the type property value. Type of the setting. Read-only.
+     * Gets the type property value. Type of the setting.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the defaultValue property value. Default value for the setting. Read-only.
+     * Sets the defaultValue property value. Default value for the setting.
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         this._defaultValue = value;
     }
     /**
-     * Sets the description property value. Description of the setting. Read-only.
+     * Sets the description property value. Description of the setting.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         this._description = value;
     }
     /**
-     * Sets the name property value. Name of the setting. Read-only.
+     * Sets the name property value. Name of the setting.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class SettingTemplateValue implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the type property value. Type of the setting. Read-only.
+     * Sets the type property value. Type of the setting.
      * @param value Value to set for the type property.
      * @return a void
      */

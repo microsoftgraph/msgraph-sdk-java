@@ -12,19 +12,19 @@ import java.util.Objects;
 public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only. */
+    /** The assignedByGroup property */
     private String _assignedByGroup;
-    /** The service plans that are disabled in this assignment. Read-Only. */
+    /** The disabledPlans property */
     private java.util.List<String> _disabledPlans;
-    /** License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here. */
+    /** The error property */
     private String _error;
-    /** The timestamp when the state of the license assignment was last updated. */
+    /** The lastUpdatedDateTime property */
     private OffsetDateTime _lastUpdatedDateTime;
     /** The OdataType property */
     private String _odataType;
-    /** The unique identifier for the SKU. Read-Only. */
+    /** The skuId property */
     private String _skuId;
-    /** Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error. */
+    /** The state property */
     private String _state;
     /**
      * Instantiates a new licenseAssignmentState and sets the default values.
@@ -53,7 +53,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the assignedByGroup property value. The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+     * Gets the assignedByGroup property value. The assignedByGroup property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return this._assignedByGroup;
     }
     /**
-     * Gets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
+     * Gets the disabledPlans property value. The disabledPlans property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return this._disabledPlans;
     }
     /**
-     * Gets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+     * Gets the error property value. The error property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the skuId property value. The unique identifier for the SKU. Read-Only.
+     * Gets the skuId property value. The skuId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         return this._skuId;
     }
     /**
-     * Gets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+     * Gets the state property value. The state property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the assignedByGroup property value. The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
+     * Sets the assignedByGroup property value. The assignedByGroup property
      * @param value Value to set for the assignedByGroup property.
      * @return a void
      */
@@ -158,7 +158,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._assignedByGroup = value;
     }
     /**
-     * Sets the disabledPlans property value. The service plans that are disabled in this assignment. Read-Only.
+     * Sets the disabledPlans property value. The disabledPlans property
      * @param value Value to set for the disabledPlans property.
      * @return a void
      */
@@ -166,7 +166,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._disabledPlans = value;
     }
     /**
-     * Sets the error property value. License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
+     * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */
@@ -174,7 +174,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._error = value;
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The timestamp when the state of the license assignment was last updated.
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
@@ -190,7 +190,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the skuId property value. The unique identifier for the SKU. Read-Only.
+     * Sets the skuId property value. The skuId property
      * @param value Value to set for the skuId property.
      * @return a void
      */
@@ -198,7 +198,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         this._skuId = value;
     }
     /**
-     * Sets the state property value. Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

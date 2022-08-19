@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewReviewer extends Entity implements Parsable {
     /** The date when the reviewer was added for the access review. */
     private OffsetDateTime _createdDateTime;
     /** Name of reviewer. */
     private String _displayName;
-    /** User principal name of the user. */
+    /** User principal name of the reviewer. */
     private String _userPrincipalName;
     /**
      * Instantiates a new accessReviewReviewer and sets the default values.
@@ -64,7 +64,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the userPrincipalName property value. User principal name of the user.
+     * Gets the userPrincipalName property value. User principal name of the reviewer.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AccessReviewReviewer extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the userPrincipalName property value. User principal name of the user.
+     * Sets the userPrincipalName property value. User principal name of the reviewer.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */

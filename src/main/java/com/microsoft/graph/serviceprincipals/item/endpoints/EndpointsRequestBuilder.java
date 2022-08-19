@@ -59,7 +59,7 @@ public class EndpointsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class EndpointsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class EndpointsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @return a CompletableFuture of EndpointCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EndpointCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class EndpointsRequestBuilder {
         }
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EndpointCollectionResponse
      */
@@ -155,7 +155,7 @@ public class EndpointsRequestBuilder {
         }
     }
     /**
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * Get endpoints from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EndpointCollectionResponse
@@ -227,7 +227,7 @@ public class EndpointsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
+    /** Get endpoints from servicePrincipals */
     public class EndpointsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

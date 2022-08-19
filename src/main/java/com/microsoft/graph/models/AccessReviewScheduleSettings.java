@@ -21,7 +21,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     private String _defaultDecision;
     /** Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false. */
     private Boolean _defaultDecisionEnabled;
-    /** Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property. */
+    /** Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property. */
     private Integer _instanceDurationInDays;
     /** Indicates whether reviewers are required to provide justification with their decision. Default value is false. */
     private Boolean _justificationRequiredOnApproval;
@@ -124,7 +124,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the instanceDurationInDays property value. Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * Gets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         this._defaultDecisionEnabled = value;
     }
     /**
-     * Sets the instanceDurationInDays property value. Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * Sets the instanceDurationInDays property value. Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      * @param value Value to set for the instanceDurationInDays property.
      * @return a void
      */

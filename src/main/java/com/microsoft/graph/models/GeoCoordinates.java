@@ -13,9 +13,9 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Optional. The altitude (height), in feet,  above sea level for the item. Read-only. */
     private Double _altitude;
-    /** Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal. */
+    /** Optional. The latitude, in decimal, for the item. Read-only. */
     private Double _latitude;
-    /** Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal. */
+    /** Optional. The longitude, in decimal, for the item. Read-only. */
     private Double _longitude;
     /** The OdataType property */
     private String _odataType;
@@ -68,7 +68,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
      * @return a double
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
         return this._latitude;
     }
     /**
-     * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
      * @return a double
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
         this._altitude = value;
     }
     /**
-     * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
      * @param value Value to set for the latitude property.
      * @return a void
      */
@@ -129,7 +129,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
         this._latitude = value;
     }
     /**
-     * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
      * @param value Value to set for the longitude property.
      * @return a void
      */

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional. */
+    /** Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional. */
     private Boolean _enableModification;
     /** Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional. */
     private Boolean _enableSuggestion;
@@ -44,7 +44,7 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
+     * Gets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
+     * Sets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
      * @param value Value to set for the enableModification property.
      * @return a void
      */

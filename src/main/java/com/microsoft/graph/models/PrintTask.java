@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the admin singleton. */
 public class PrintTask extends Entity implements Parsable {
     /** The definition property */
     private PrintTaskDefinition _definition;
-    /** The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only. */
+    /** The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only. */
     private String _parentUrl;
     /** The status property */
     private PrintTaskStatus _status;
@@ -58,7 +58,7 @@ public class PrintTask extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Gets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class PrintTask extends Entity implements Parsable {
         this._definition = value;
     }
     /**
-     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      * @param value Value to set for the parentUrl property.
      * @return a void
      */
