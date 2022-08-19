@@ -37,6 +37,7 @@ sourceSets {
 repositories {
     // You can declare any Maven/Ivy/file repository here.
     mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply from: "gradle/dependencies.gradle"
@@ -150,8 +151,8 @@ def fixAscNames = { name ->
 
 compileJava {
   options.compilerArgs << "-parameters"
-  sourceCompatibility = 1.8
-  targetCompatibility = 1.8
+  sourceCompatibility = '17'
+  targetCompatibility = '17'
 }
 
 def getVersionCode() {
