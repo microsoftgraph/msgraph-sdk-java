@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.ScopedRoleMembership;
-import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -51,7 +49,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Visibility.
-     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -63,7 +61,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * Users and groups that are members of this administrative unit. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage members;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage members;
 
     /**
      * The Scoped Role Members.
@@ -72,7 +70,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
     @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose
 	@Nullable
-    public ScopedRoleMembershipCollectionPage scopedRoleMembers;
+    public com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage scopedRoleMembers;
 
     /**
      * The Extensions.
@@ -81,7 +79,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
 
     /**
@@ -94,15 +92,15 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedRoleMembers")) {
-            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers"), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers"), com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
     }
 }

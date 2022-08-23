@@ -11,11 +11,6 @@ import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.TargetedManagedAppGroupType;
-import com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedMobileAppRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -73,8 +68,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedMobileAppCollectionRequestBuilder apps() {
-        return new ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder apps() {
+        return new com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apps"), getClient(), null);
     }
 
     /**
@@ -84,8 +79,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
-        return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedMobileAppRequestBuilder apps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TargetedManagedAppPolicyAssignment collection
@@ -93,8 +88,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -104,8 +99,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**
@@ -114,8 +109,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @return the ManagedAppPolicyDeploymentSummaryRequestBuilder instance
      */
     @Nonnull
-    public ManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary() {
-        return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary() {
+        return new com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
     }
 
     /**

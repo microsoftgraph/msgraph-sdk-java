@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerPlanCollectionPage;
 
@@ -35,7 +34,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
 	@Nullable
-    public PlannerPlanCollectionPage plans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionPage plans;
 
 
     /**
@@ -48,7 +47,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans"), PlannerPlanCollectionPage.class);
+            plans = serializer.deserializeObject(json.get("plans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
         }
     }
 }

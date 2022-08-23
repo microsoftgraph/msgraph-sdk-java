@@ -10,7 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AadUserConversationMember;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ActionResultPart;
-import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,7 +65,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder<
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder user() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder user() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
     }
 }

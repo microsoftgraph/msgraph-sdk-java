@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintTaskTrigger;
-import com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder<PrintTask
      * @return the PrintTaskDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrintTaskDefinitionWithReferenceRequestBuilder definition() {
-        return new PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder definition() {
+        return new com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

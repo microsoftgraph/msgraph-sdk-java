@@ -8,8 +8,6 @@ package com.microsoft.graph.callrecords.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.callrecords.models.CallRecord;
-import com.microsoft.graph.callrecords.requests.SessionCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.SessionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

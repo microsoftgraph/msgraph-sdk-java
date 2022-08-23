@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AgreementFileLocalization;
-import com.microsoft.graph.requests.AgreementFileVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementFileVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementFileVersionCollectionRequestBuilder versions() {
-        return new AgreementFileVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileVersionCollectionRequestBuilder versions() {
+        return new com.microsoft.graph.requests.AgreementFileVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementFileVersionRequestBuilder versions(@Nonnull final String id) {
-        return new AgreementFileVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileVersionRequestBuilder versions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementFileVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 }

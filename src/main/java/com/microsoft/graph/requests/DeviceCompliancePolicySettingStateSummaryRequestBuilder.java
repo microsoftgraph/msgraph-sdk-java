@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceComplianceSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
-        return new DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
+        return new com.microsoft.graph.requests.DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(@Nonnull final String id) {
-        return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
     }
 }

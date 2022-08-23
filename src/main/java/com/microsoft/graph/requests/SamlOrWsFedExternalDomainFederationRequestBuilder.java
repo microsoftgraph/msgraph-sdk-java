@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SamlOrWsFedExternalDomainFederation;
-import com.microsoft.graph.requests.ExternalDomainNameCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExternalDomainNameRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class SamlOrWsFedExternalDomainFederationRequestBuilder extends BaseReque
      * @return the collection request builder
      */
     @Nonnull
-    public ExternalDomainNameCollectionRequestBuilder domains() {
-        return new ExternalDomainNameCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("domains"), getClient(), null);
+    public com.microsoft.graph.requests.ExternalDomainNameCollectionRequestBuilder domains() {
+        return new com.microsoft.graph.requests.ExternalDomainNameCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("domains"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class SamlOrWsFedExternalDomainFederationRequestBuilder extends BaseReque
      * @param id the item identifier
      */
     @Nonnull
-    public ExternalDomainNameRequestBuilder domains(@Nonnull final String id) {
-        return new ExternalDomainNameRequestBuilder(getRequestUrlWithAdditionalSegment("domains") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExternalDomainNameRequestBuilder domains(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExternalDomainNameRequestBuilder(getRequestUrlWithAdditionalSegment("domains") + "/" + id, getClient(), null);
     }
 }

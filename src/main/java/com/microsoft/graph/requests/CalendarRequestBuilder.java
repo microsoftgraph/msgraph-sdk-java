@@ -11,14 +11,6 @@ import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.ScheduleInformation;
 import com.microsoft.graph.models.CalendarRoleType;
-import com.microsoft.graph.requests.CalendarPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.CalendarPermissionRequestBuilder;
-import com.microsoft.graph.requests.EventCollectionRequestBuilder;
-import com.microsoft.graph.requests.EventRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +67,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @return the collection request builder
      */
     @Nonnull
-    public CalendarPermissionCollectionRequestBuilder calendarPermissions() {
-        return new CalendarPermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions"), getClient(), null);
+    public com.microsoft.graph.requests.CalendarPermissionCollectionRequestBuilder calendarPermissions() {
+        return new com.microsoft.graph.requests.CalendarPermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions"), getClient(), null);
     }
 
     /**
@@ -86,8 +78,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param id the item identifier
      */
     @Nonnull
-    public CalendarPermissionRequestBuilder calendarPermissions(@Nonnull final String id) {
-        return new CalendarPermissionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CalendarPermissionRequestBuilder calendarPermissions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CalendarPermissionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Event collection
@@ -95,8 +87,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @return the collection request builder
      */
     @Nonnull
-    public EventCollectionRequestBuilder calendarView() {
-        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
+    public com.microsoft.graph.requests.EventCollectionRequestBuilder calendarView() {
+        return new com.microsoft.graph.requests.EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
     /**
@@ -106,8 +98,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param id the item identifier
      */
     @Nonnull
-    public EventRequestBuilder calendarView(@Nonnull final String id) {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EventRequestBuilder calendarView(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Event collection
@@ -115,8 +107,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @return the collection request builder
      */
     @Nonnull
-    public EventCollectionRequestBuilder events() {
-        return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
+    public com.microsoft.graph.requests.EventCollectionRequestBuilder events() {
+        return new com.microsoft.graph.requests.EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
     /**
@@ -126,8 +118,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param id the item identifier
      */
     @Nonnull
-    public EventRequestBuilder events(@Nonnull final String id) {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EventRequestBuilder events(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
@@ -135,8 +127,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @return the collection request builder
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -146,8 +138,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param id the item identifier
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
-        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
@@ -155,8 +147,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @return the collection request builder
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -166,8 +158,8 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param id the item identifier
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
-        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
     /**

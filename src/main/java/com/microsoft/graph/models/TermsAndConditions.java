@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
-import com.microsoft.graph.models.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionPage;
 import com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionPage;
@@ -109,7 +107,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
     @SerializedName(value = "acceptanceStatuses", alternate = {"AcceptanceStatuses"})
     @Expose
 	@Nullable
-    public TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
+    public com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
 
     /**
      * The Assignments.
@@ -118,7 +116,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TermsAndConditionsAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionPage assignments;
 
 
     /**
@@ -131,11 +129,11 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptanceStatuses")) {
-            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses"), TermsAndConditionsAcceptanceStatusCollectionPage.class);
+            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses"), com.microsoft.graph.requests.TermsAndConditionsAcceptanceStatusCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TermsAndConditionsAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TermsAndConditionsAssignmentCollectionPage.class);
         }
     }
 }

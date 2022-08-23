@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ServiceHealth;
-import com.microsoft.graph.models.ServiceHealthIssue;
-import com.microsoft.graph.models.ServiceUpdateMessage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ServiceHealthCollectionPage;
 import com.microsoft.graph.requests.ServiceHealthIssueCollectionPage;
@@ -39,7 +36,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "healthOverviews", alternate = {"HealthOverviews"})
     @Expose
 	@Nullable
-    public ServiceHealthCollectionPage healthOverviews;
+    public com.microsoft.graph.requests.ServiceHealthCollectionPage healthOverviews;
 
     /**
      * The Issues.
@@ -48,7 +45,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "issues", alternate = {"Issues"})
     @Expose
 	@Nullable
-    public ServiceHealthIssueCollectionPage issues;
+    public com.microsoft.graph.requests.ServiceHealthIssueCollectionPage issues;
 
     /**
      * The Messages.
@@ -57,7 +54,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public ServiceUpdateMessageCollectionPage messages;
+    public com.microsoft.graph.requests.ServiceUpdateMessageCollectionPage messages;
 
 
     /**
@@ -70,15 +67,15 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("healthOverviews")) {
-            healthOverviews = serializer.deserializeObject(json.get("healthOverviews"), ServiceHealthCollectionPage.class);
+            healthOverviews = serializer.deserializeObject(json.get("healthOverviews"), com.microsoft.graph.requests.ServiceHealthCollectionPage.class);
         }
 
         if (json.has("issues")) {
-            issues = serializer.deserializeObject(json.get("issues"), ServiceHealthIssueCollectionPage.class);
+            issues = serializer.deserializeObject(json.get("issues"), com.microsoft.graph.requests.ServiceHealthIssueCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), ServiceUpdateMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ServiceUpdateMessageCollectionPage.class);
         }
     }
 }

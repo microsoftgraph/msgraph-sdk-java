@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;
-import com.microsoft.graph.requests.UserFlowLanguagePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserFlowLanguagePageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserFlowLanguageConfigurationRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public UserFlowLanguagePageCollectionRequestBuilder defaultPages() {
-        return new UserFlowLanguagePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultPages"), getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguagePageCollectionRequestBuilder defaultPages() {
+        return new com.microsoft.graph.requests.UserFlowLanguagePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("defaultPages"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class UserFlowLanguageConfigurationRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public UserFlowLanguagePageRequestBuilder defaultPages(@Nonnull final String id) {
-        return new UserFlowLanguagePageRequestBuilder(getRequestUrlWithAdditionalSegment("defaultPages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguagePageRequestBuilder defaultPages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserFlowLanguagePageRequestBuilder(getRequestUrlWithAdditionalSegment("defaultPages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserFlowLanguagePage collection
@@ -84,8 +82,8 @@ public class UserFlowLanguageConfigurationRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public UserFlowLanguagePageCollectionRequestBuilder overridesPages() {
-        return new UserFlowLanguagePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overridesPages"), getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguagePageCollectionRequestBuilder overridesPages() {
+        return new com.microsoft.graph.requests.UserFlowLanguagePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overridesPages"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class UserFlowLanguageConfigurationRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public UserFlowLanguagePageRequestBuilder overridesPages(@Nonnull final String id) {
-        return new UserFlowLanguagePageRequestBuilder(getRequestUrlWithAdditionalSegment("overridesPages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguagePageRequestBuilder overridesPages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserFlowLanguagePageRequestBuilder(getRequestUrlWithAdditionalSegment("overridesPages") + "/" + id, getClient(), null);
     }
 }

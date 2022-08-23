@@ -20,8 +20,6 @@ import com.microsoft.graph.models.DeviceManagementExchangeAccessStateReason;
 import com.microsoft.graph.models.ManagedDeviceOwnerType;
 import com.microsoft.graph.models.ManagementAgentType;
 import com.microsoft.graph.models.ManagedDevicePartnerReportedHealthState;
-import com.microsoft.graph.models.DeviceCompliancePolicyState;
-import com.microsoft.graph.models.DeviceConfigurationState;
 import com.microsoft.graph.models.DeviceCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
@@ -125,7 +123,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Enrollment Type.
-     * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+     * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount.
      */
     @SerializedName(value = "deviceEnrollmentType", alternate = {"DeviceEnrollmentType"})
     @Expose
@@ -323,7 +321,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Agent.
-     * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      */
     @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
@@ -508,7 +506,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
@@ -517,7 +515,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deviceConfigurationStates", alternate = {"DeviceConfigurationStates"})
     @Expose
 	@Nullable
-    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
+    public com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
      * The Device Category.
@@ -539,11 +537,11 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), DeviceCompliancePolicyStateCollectionPage.class);
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), DeviceConfigurationStateCollectionPage.class);
+            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage.class);
         }
     }
 }

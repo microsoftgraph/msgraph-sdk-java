@@ -8,7 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.SiteSource;
-import com.microsoft.graph.requests.SiteWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class SiteSourceRequestBuilder extends BaseRequestBuilder<SiteSource> {
      * @return the SiteWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public SiteWithReferenceRequestBuilder site() {
-        return new SiteWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
+    public com.microsoft.graph.requests.SiteWithReferenceRequestBuilder site() {
+        return new com.microsoft.graph.requests.SiteWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
     }
 }

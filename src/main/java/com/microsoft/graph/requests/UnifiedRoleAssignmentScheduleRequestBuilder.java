@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
 import com.microsoft.graph.models.RoleAssignmentScheduleFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +64,8 @@ public class UnifiedRoleAssignmentScheduleRequestBuilder extends BaseRequestBuil
      * @return the AppScopeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AppScopeWithReferenceRequestBuilder appScope() {
-        return new AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
+    public com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder appScope() {
+        return new com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
     }
 
     /**
@@ -75,8 +74,8 @@ public class UnifiedRoleAssignmentScheduleRequestBuilder extends BaseRequestBuil
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder directoryScope() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder directoryScope() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
     }
 
     /**
@@ -85,8 +84,8 @@ public class UnifiedRoleAssignmentScheduleRequestBuilder extends BaseRequestBuil
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder principal() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder principal() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
     }
 
     /**
@@ -95,8 +94,8 @@ public class UnifiedRoleAssignmentScheduleRequestBuilder extends BaseRequestBuil
      * @return the UnifiedRoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 
     /**
@@ -105,7 +104,7 @@ public class UnifiedRoleAssignmentScheduleRequestBuilder extends BaseRequestBuil
      * @return the UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder activatedUsing() {
-        return new UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activatedUsing"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder activatedUsing() {
+        return new com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activatedUsing"), getClient(), null);
     }
 }

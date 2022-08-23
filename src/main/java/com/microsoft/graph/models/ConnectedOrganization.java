@@ -11,9 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySource;
 import com.microsoft.graph.models.ConnectedOrganizationState;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -59,7 +57,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity Sources.
-     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
+     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      */
     @SerializedName(value = "identitySources", alternate = {"IdentitySources"})
     @Expose
@@ -77,7 +75,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -91,7 +89,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage externalSponsors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage externalSponsors;
 
     /**
      * The Internal Sponsors.
@@ -100,7 +98,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
     @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage internalSponsors;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage internalSponsors;
 
 
     /**
@@ -113,11 +111,11 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
 
         if (json.has("externalSponsors")) {
-            externalSponsors = serializer.deserializeObject(json.get("externalSponsors"), DirectoryObjectCollectionPage.class);
+            externalSponsors = serializer.deserializeObject(json.get("externalSponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("internalSponsors")) {
-            internalSponsors = serializer.deserializeObject(json.get("internalSponsors"), DirectoryObjectCollectionPage.class);
+            internalSponsors = serializer.deserializeObject(json.get("internalSponsors"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ManagedAppRegistration;
-import com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
-        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
+        return new com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
-        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedAppPolicy collection
@@ -86,8 +82,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
-        return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
+        return new com.microsoft.graph.requests.ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
 
     /**
@@ -97,8 +93,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
-        return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedAppOperation collection
@@ -106,8 +102,8 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedAppOperationCollectionRequestBuilder operations() {
-        return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -117,7 +113,7 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<Man
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
-        return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

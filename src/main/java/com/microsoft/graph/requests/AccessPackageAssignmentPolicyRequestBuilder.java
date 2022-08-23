@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the AccessPackageWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageWithReferenceRequestBuilder accessPackage() {
-        return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackage() {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @return the AccessPackageCatalogWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageCatalogWithReferenceRequestBuilder catalog() {
-        return new AccessPackageCatalogWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder catalog() {
+        return new com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
     }
 }

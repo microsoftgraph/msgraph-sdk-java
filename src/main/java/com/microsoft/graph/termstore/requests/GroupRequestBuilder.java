@@ -8,8 +8,6 @@ package com.microsoft.graph.termstore.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.termstore.models.Group;
-import com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @return the collection request builder
      */
     @Nonnull
-    public SetCollectionRequestBuilder sets() {
-        return new SetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sets"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder sets() {
+        return new com.microsoft.graph.termstore.requests.SetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sets"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @param id the item identifier
      */
     @Nonnull
-    public SetRequestBuilder sets(@Nonnull final String id) {
-        return new SetRequestBuilder(getRequestUrlWithAdditionalSegment("sets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.termstore.requests.SetRequestBuilder sets(@Nonnull final String id) {
+        return new com.microsoft.graph.termstore.requests.SetRequestBuilder(getRequestUrlWithAdditionalSegment("sets") + "/" + id, getClient(), null);
     }
 }

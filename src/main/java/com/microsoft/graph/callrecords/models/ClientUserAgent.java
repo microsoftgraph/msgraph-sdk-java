@@ -38,7 +38,7 @@ public class ClientUserAgent extends UserAgent implements IJsonBackedObject {
 
     /**
      * The Product Family.
-     * Identifies the family of application software used by this endpoint. Possible values are: unknown, teams, skypeForBusiness, lync, unknownFutureValue, azureCommunicationServices.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: azureCommunicationServices.
+     * Identifies the family of application software used by this endpoint. Possible values are: unknown, teams, skypeForBusiness, lync, unknownFutureValue, azureCommunicationServices. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: azureCommunicationServices.
      */
     @SerializedName(value = "productFamily", alternate = {"ProductFamily"})
     @Expose

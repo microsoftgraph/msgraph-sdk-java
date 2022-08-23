@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Disk Type.
-     * The user experience analytics device disk type. Possible values are: unknown, hdd, ssd, unknownFutureValue.
+     * The user experience analytics device disk type.
      */
     @SerializedName(value = "diskType", alternate = {"DiskType"})
     @Expose
@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+     * The health state of the user experience analytics device.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

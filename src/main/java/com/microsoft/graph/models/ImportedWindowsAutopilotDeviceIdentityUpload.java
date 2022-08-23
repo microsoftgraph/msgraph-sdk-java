@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityUploadStatus;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
 
@@ -54,7 +53,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     @SerializedName(value = "deviceIdentities", alternate = {"DeviceIdentities"})
     @Expose
 	@Nullable
-    public ImportedWindowsAutopilotDeviceIdentityCollectionPage deviceIdentities;
+    public com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage deviceIdentities;
 
 
     /**
@@ -67,7 +66,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
 
 
         if (json.has("deviceIdentities")) {
-            deviceIdentities = serializer.deserializeObject(json.get("deviceIdentities"), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
+            deviceIdentities = serializer.deserializeObject(json.get("deviceIdentities"), com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
         }
     }
 }

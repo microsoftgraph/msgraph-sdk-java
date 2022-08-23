@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkbookRangeBorder;
 import com.microsoft.graph.models.WorkbookRangeFill;
 import com.microsoft.graph.models.WorkbookRangeFont;
 import com.microsoft.graph.models.WorkbookFormatProtection;
@@ -42,7 +41,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
     /**
      * The Horizontal Alignment.
-     * Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      */
     @SerializedName(value = "horizontalAlignment", alternate = {"HorizontalAlignment"})
     @Expose
@@ -60,7 +59,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
     /**
      * The Vertical Alignment.
-     * Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      */
     @SerializedName(value = "verticalAlignment", alternate = {"VerticalAlignment"})
     @Expose
@@ -83,7 +82,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "borders", alternate = {"Borders"})
     @Expose
 	@Nullable
-    public WorkbookRangeBorderCollectionPage borders;
+    public com.microsoft.graph.requests.WorkbookRangeBorderCollectionPage borders;
 
     /**
      * The Fill.
@@ -123,7 +122,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("borders")) {
-            borders = serializer.deserializeObject(json.get("borders"), WorkbookRangeBorderCollectionPage.class);
+            borders = serializer.deserializeObject(json.get("borders"), com.microsoft.graph.requests.WorkbookRangeBorderCollectionPage.class);
         }
     }
 }

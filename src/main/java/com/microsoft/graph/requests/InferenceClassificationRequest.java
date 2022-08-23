@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InferenceClassification;
-import com.microsoft.graph.requests.InferenceClassificationOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.InferenceClassificationOverrideRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

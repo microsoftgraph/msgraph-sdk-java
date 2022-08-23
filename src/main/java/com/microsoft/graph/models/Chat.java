@@ -11,10 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
 import com.microsoft.graph.models.TeamworkOnlineMeetingInfo;
-import com.microsoft.graph.models.TeamsAppInstallation;
-import com.microsoft.graph.models.ConversationMember;
-import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
@@ -106,7 +102,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
 	@Nullable
-    public TeamsAppInstallationCollectionPage installedApps;
+    public com.microsoft.graph.requests.TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Members.
@@ -115,7 +111,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public ConversationMemberCollectionPage members;
+    public com.microsoft.graph.requests.ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
@@ -124,7 +120,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public ChatMessageCollectionPage messages;
+    public com.microsoft.graph.requests.ChatMessageCollectionPage messages;
 
     /**
      * The Tabs.
@@ -133,7 +129,7 @@ public class Chat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
 	@Nullable
-    public TeamsTabCollectionPage tabs;
+    public com.microsoft.graph.requests.TeamsTabCollectionPage tabs;
 
 
     /**
@@ -146,19 +142,19 @@ public class Chat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps"), TeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), com.microsoft.graph.requests.TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConversationMemberCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs"), TeamsTabCollectionPage.class);
+            tabs = serializer.deserializeObject(json.get("tabs"), com.microsoft.graph.requests.TeamsTabCollectionPage.class);
         }
     }
 }

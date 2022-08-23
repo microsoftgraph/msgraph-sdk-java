@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationSubmission;
-import com.microsoft.graph.requests.EducationOutcomeCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationOutcomeRequestBuilder;
-import com.microsoft.graph.requests.EducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationSubmissionResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationOutcomeCollectionRequestBuilder outcomes() {
-        return new EducationOutcomeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes"), getClient(), null);
+    public com.microsoft.graph.requests.EducationOutcomeCollectionRequestBuilder outcomes() {
+        return new com.microsoft.graph.requests.EducationOutcomeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationOutcomeRequestBuilder outcomes(@Nonnull final String id) {
-        return new EducationOutcomeRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationOutcomeRequestBuilder outcomes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationOutcomeRequestBuilder(getRequestUrlWithAdditionalSegment("outcomes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationSubmissionResource collection
@@ -86,8 +82,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationSubmissionResourceCollectionRequestBuilder resources() {
-        return new EducationSubmissionResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionResourceCollectionRequestBuilder resources() {
+        return new com.microsoft.graph.requests.EducationSubmissionResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
 
     /**
@@ -97,8 +93,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationSubmissionResourceRequestBuilder resources(@Nonnull final String id) {
-        return new EducationSubmissionResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionResourceRequestBuilder resources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationSubmissionResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationSubmissionResource collection
@@ -106,8 +102,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @return the collection request builder
      */
     @Nonnull
-    public EducationSubmissionResourceCollectionRequestBuilder submittedResources() {
-        return new EducationSubmissionResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submittedResources"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionResourceCollectionRequestBuilder submittedResources() {
+        return new com.microsoft.graph.requests.EducationSubmissionResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("submittedResources"), getClient(), null);
     }
 
     /**
@@ -117,8 +113,8 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @param id the item identifier
      */
     @Nonnull
-    public EducationSubmissionResourceRequestBuilder submittedResources(@Nonnull final String id) {
-        return new EducationSubmissionResourceRequestBuilder(getRequestUrlWithAdditionalSegment("submittedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationSubmissionResourceRequestBuilder submittedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationSubmissionResourceRequestBuilder(getRequestUrlWithAdditionalSegment("submittedResources") + "/" + id, getClient(), null);
     }
 
     /**

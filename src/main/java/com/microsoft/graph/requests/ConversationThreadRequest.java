@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Post;
-import com.microsoft.graph.requests.PostCollectionRequestBuilder;
-import com.microsoft.graph.requests.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

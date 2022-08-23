@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SharedDriveItem;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ListRequestBuilder;
-import com.microsoft.graph.requests.ListItemRequestBuilder;
-import com.microsoft.graph.requests.PermissionRequestBuilder;
-import com.microsoft.graph.requests.SiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -69,8 +63,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
@@ -89,8 +83,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the DriveItemRequestBuilder instance
      */
     @Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder driveItem() {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DriveItem collection
@@ -98,8 +92,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the collection request builder
      */
     @Nonnull
-    public DriveItemCollectionRequestBuilder items() {
-        return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.requests.DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -109,8 +103,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @param id the item identifier
      */
     @Nonnull
-    public DriveItemRequestBuilder items(@Nonnull final String id) {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
     /**
@@ -119,8 +113,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the ListRequestBuilder instance
      */
     @Nonnull
-    public ListRequestBuilder list() {
-        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
+    public com.microsoft.graph.requests.ListRequestBuilder list() {
+        return new com.microsoft.graph.requests.ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
@@ -129,8 +123,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the ListItemRequestBuilder instance
      */
     @Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemRequestBuilder listItem() {
+        return new com.microsoft.graph.requests.ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 
     /**
@@ -139,8 +133,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the PermissionRequestBuilder instance
      */
     @Nonnull
-    public PermissionRequestBuilder permission() {
-        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionRequestBuilder permission() {
+        return new com.microsoft.graph.requests.PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
     }
 
     /**
@@ -149,8 +143,8 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the DriveItemRequestBuilder instance
      */
     @Nonnull
-    public DriveItemRequestBuilder root() {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder root() {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
 
     /**
@@ -159,7 +153,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder<SharedDriv
      * @return the SiteRequestBuilder instance
      */
     @Nonnull
-    public SiteRequestBuilder site() {
-        return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
+    public com.microsoft.graph.requests.SiteRequestBuilder site() {
+        return new com.microsoft.graph.requests.SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
     }
 }

@@ -12,12 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ListInfo;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.SystemFacet;
-import com.microsoft.graph.models.ColumnDefinition;
-import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.RichLongRunningOperation;
-import com.microsoft.graph.models.Subscription;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 import com.microsoft.graph.requests.ContentTypeCollectionPage;
@@ -83,7 +78,7 @@ public class List extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
 	@Nullable
-    public ColumnDefinitionCollectionPage columns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
@@ -92,7 +87,7 @@ public class List extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
 	@Nullable
-    public ContentTypeCollectionPage contentTypes;
+    public com.microsoft.graph.requests.ContentTypeCollectionPage contentTypes;
 
     /**
      * The Drive.
@@ -110,16 +105,16 @@ public class List extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public ListItemCollectionPage items;
+    public com.microsoft.graph.requests.ListItemCollectionPage items;
 
     /**
      * The Operations.
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public RichLongRunningOperationCollectionPage operations;
+    public com.microsoft.graph.requests.RichLongRunningOperationCollectionPage operations;
 
     /**
      * The Subscriptions.
@@ -128,7 +123,7 @@ public class List extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
 	@Nullable
-    public SubscriptionCollectionPage subscriptions;
+    public com.microsoft.graph.requests.SubscriptionCollectionPage subscriptions;
 
 
     /**
@@ -141,23 +136,23 @@ public class List extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), com.microsoft.graph.requests.ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes"), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes"), com.microsoft.graph.requests.ContentTypeCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), ListItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.requests.ListItemCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), RichLongRunningOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.RichLongRunningOperationCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions"), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions"), com.microsoft.graph.requests.SubscriptionCollectionPage.class);
         }
     }
 }

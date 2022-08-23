@@ -11,8 +11,6 @@ import com.microsoft.graph.models.OnenotePage;
 import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.graph.models.OnenotePatchContentCommand;
 import com.microsoft.graph.models.OnenotePagePreview;
-import com.microsoft.graph.requests.NotebookRequestBuilder;
-import com.microsoft.graph.requests.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Call;
-import com.microsoft.graph.callrecords.models.CallRecord;
-import com.microsoft.graph.models.OnlineMeeting;
-import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CallCollectionPage;
 import com.microsoft.graph.callrecords.requests.CallRecordCollectionPage;
@@ -41,7 +37,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
 	@Nullable
-    public CallCollectionPage calls;
+    public com.microsoft.graph.requests.CallCollectionPage calls;
 
     /**
      * The Call Records.
@@ -50,7 +46,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @SerializedName(value = "callRecords", alternate = {"CallRecords"})
     @Expose
 	@Nullable
-    public CallRecordCollectionPage callRecords;
+    public com.microsoft.graph.callrecords.requests.CallRecordCollectionPage callRecords;
 
     /**
      * The Online Meetings.
@@ -59,7 +55,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
 	@Nullable
-    public OnlineMeetingCollectionPage onlineMeetings;
+    public com.microsoft.graph.requests.OnlineMeetingCollectionPage onlineMeetings;
 
     /**
      * The Presences.
@@ -68,7 +64,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
     @SerializedName(value = "presences", alternate = {"Presences"})
     @Expose
 	@Nullable
-    public PresenceCollectionPage presences;
+    public com.microsoft.graph.requests.PresenceCollectionPage presences;
 
 
     /**
@@ -81,19 +77,19 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calls")) {
-            calls = serializer.deserializeObject(json.get("calls"), CallCollectionPage.class);
+            calls = serializer.deserializeObject(json.get("calls"), com.microsoft.graph.requests.CallCollectionPage.class);
         }
 
         if (json.has("callRecords")) {
-            callRecords = serializer.deserializeObject(json.get("callRecords"), CallRecordCollectionPage.class);
+            callRecords = serializer.deserializeObject(json.get("callRecords"), com.microsoft.graph.callrecords.requests.CallRecordCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), com.microsoft.graph.requests.OnlineMeetingCollectionPage.class);
         }
 
         if (json.has("presences")) {
-            presences = serializer.deserializeObject(json.get("presences"), PresenceCollectionPage.class);
+            presences = serializer.deserializeObject(json.get("presences"), com.microsoft.graph.requests.PresenceCollectionPage.class);
         }
     }
 }

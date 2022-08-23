@@ -11,10 +11,6 @@ import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
-import com.microsoft.graph.requests.AssociatedTeamInfoCollectionRequestBuilder;
-import com.microsoft.graph.requests.AssociatedTeamInfoRequestBuilder;
-import com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserScopeTeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +66,8 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
      * @return the collection request builder
      */
     @Nonnull
-    public AssociatedTeamInfoCollectionRequestBuilder associatedTeams() {
-        return new AssociatedTeamInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams"), getClient(), null);
+    public com.microsoft.graph.requests.AssociatedTeamInfoCollectionRequestBuilder associatedTeams() {
+        return new com.microsoft.graph.requests.AssociatedTeamInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams"), getClient(), null);
     }
 
     /**
@@ -81,8 +77,8 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
      * @param id the item identifier
      */
     @Nonnull
-    public AssociatedTeamInfoRequestBuilder associatedTeams(@Nonnull final String id) {
-        return new AssociatedTeamInfoRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AssociatedTeamInfoRequestBuilder associatedTeams(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AssociatedTeamInfoRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserScopeTeamsAppInstallation collection
@@ -90,8 +86,8 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
      * @return the collection request builder
      */
     @Nonnull
-    public UserScopeTeamsAppInstallationCollectionRequestBuilder installedApps() {
-        return new UserScopeTeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
+    public com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionRequestBuilder installedApps() {
+        return new com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
     }
 
     /**
@@ -101,8 +97,8 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
      * @param id the item identifier
      */
     @Nonnull
-    public UserScopeTeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
-        return new UserScopeTeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserScopeTeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserScopeTeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }
 
     /**

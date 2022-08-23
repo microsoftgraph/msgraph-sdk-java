@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ManagedAppDataEncryptionType;
-import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.TargetedManagedAppProtection;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -41,7 +40,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The Custom Browser Protocol.
-     * A custom browser protocol to open weblink on iOS.
+     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
     @SerializedName(value = "customBrowserProtocol", alternate = {"CustomBrowserProtocol"})
     @Expose
@@ -82,7 +81,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Deployment Summary.
@@ -104,7 +103,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
     }
 }

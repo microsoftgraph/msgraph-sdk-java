@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.Modality;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.callrecords.models.CallType;
-import com.microsoft.graph.callrecords.models.Session;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.callrecords.requests.SessionCollectionPage;
 
@@ -87,7 +86,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -105,7 +104,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -119,7 +118,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose
 	@Nullable
-    public SessionCollectionPage sessions;
+    public com.microsoft.graph.callrecords.requests.SessionCollectionPage sessions;
 
 
     /**
@@ -132,7 +131,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions"), SessionCollectionPage.class);
+            sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.callrecords.requests.SessionCollectionPage.class);
         }
     }
 }

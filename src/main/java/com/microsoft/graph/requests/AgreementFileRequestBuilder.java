@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AgreementFile;
-import com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AgreementFileRequestBuilder extends BaseRequestBuilder<AgreementFil
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementFileLocalizationCollectionRequestBuilder localizations() {
-        return new AgreementFileLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizations"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder localizations() {
+        return new com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AgreementFileRequestBuilder extends BaseRequestBuilder<AgreementFil
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementFileLocalizationRequestBuilder localizations(@Nonnull final String id) {
-        return new AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder localizations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
     }
 }

@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityGovernance;
-import com.microsoft.graph.requests.AccessReviewSetRequestBuilder;
-import com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder;
-import com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder;
-import com.microsoft.graph.requests.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +63,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
      * @return the AccessReviewSetRequestBuilder instance
      */
     @Nonnull
-    public AccessReviewSetRequestBuilder accessReviews() {
-        return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewSetRequestBuilder accessReviews() {
+        return new com.microsoft.graph.requests.AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
      * @return the AppConsentApprovalRouteRequestBuilder instance
      */
     @Nonnull
-    public AppConsentApprovalRouteRequestBuilder appConsent() {
-        return new AppConsentApprovalRouteRequestBuilder(getRequestUrlWithAdditionalSegment("appConsent"), getClient(), null);
+    public com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder appConsent() {
+        return new com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder(getRequestUrlWithAdditionalSegment("appConsent"), getClient(), null);
     }
 
     /**
@@ -87,8 +83,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
      * @return the TermsOfUseContainerRequestBuilder instance
      */
     @Nonnull
-    public TermsOfUseContainerRequestBuilder termsOfUse() {
-        return new TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
+    public com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder termsOfUse() {
+        return new com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
      * @return the EntitlementManagementRequestBuilder instance
      */
     @Nonnull
-    public EntitlementManagementRequestBuilder entitlementManagement() {
-        return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    public com.microsoft.graph.requests.EntitlementManagementRequestBuilder entitlementManagement() {
+        return new com.microsoft.graph.requests.EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 }

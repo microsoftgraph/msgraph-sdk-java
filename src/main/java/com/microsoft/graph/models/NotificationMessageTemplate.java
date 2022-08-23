@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.NotificationTemplateBrandingOptions;
-import com.microsoft.graph.models.LocalizedNotificationMessage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.LocalizedNotificationMessageCollectionPage;
 
@@ -31,7 +30,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
     /**
      * The Branding Options.
-     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink, includeDeviceDetails.
+     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeDeviceDetails.
      */
     @SerializedName(value = "brandingOptions", alternate = {"BrandingOptions"})
     @Expose
@@ -72,7 +71,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
     @SerializedName(value = "localizedNotificationMessages", alternate = {"LocalizedNotificationMessages"})
     @Expose
 	@Nullable
-    public LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
+    public com.microsoft.graph.requests.LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
 
 
     /**
@@ -85,7 +84,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
         if (json.has("localizedNotificationMessages")) {
-            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages"), LocalizedNotificationMessageCollectionPage.class);
+            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages"), com.microsoft.graph.requests.LocalizedNotificationMessageCollectionPage.class);
         }
     }
 }

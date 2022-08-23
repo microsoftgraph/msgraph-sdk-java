@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.Endpoint;
 import com.microsoft.graph.callrecords.models.FailureInfo;
 import com.microsoft.graph.callrecords.models.Modality;
-import com.microsoft.graph.callrecords.models.Segment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.callrecords.requests.SegmentCollectionPage;
 
@@ -78,7 +77,7 @@ public class Session extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -92,7 +91,7 @@ public class Session extends Entity implements IJsonBackedObject {
     @SerializedName(value = "segments", alternate = {"Segments"})
     @Expose
 	@Nullable
-    public SegmentCollectionPage segments;
+    public com.microsoft.graph.callrecords.requests.SegmentCollectionPage segments;
 
 
     /**
@@ -105,7 +104,7 @@ public class Session extends Entity implements IJsonBackedObject {
 
 
         if (json.has("segments")) {
-            segments = serializer.deserializeObject(json.get("segments"), SegmentCollectionPage.class);
+            segments = serializer.deserializeObject(json.get("segments"), com.microsoft.graph.callrecords.requests.SegmentCollectionPage.class);
         }
     }
 }

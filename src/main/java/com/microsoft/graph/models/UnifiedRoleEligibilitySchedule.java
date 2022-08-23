@@ -28,7 +28,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
 
     /**
      * The Member Type.
-     * Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
+     * How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
 
     /**
      * The Schedule Info.
-     * The schedule object of the eligible role assignment request.
+     * The period of the role eligibility.
      */
     @SerializedName(value = "scheduleInfo", alternate = {"ScheduleInfo"})
     @Expose

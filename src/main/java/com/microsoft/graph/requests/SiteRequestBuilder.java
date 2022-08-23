@@ -10,28 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.ItemActivityStat;
 import com.microsoft.graph.models.ContentType;
-import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.DriveRequestBuilder;
-import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.BaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.ListCollectionRequestBuilder;
-import com.microsoft.graph.requests.ListRequestBuilder;
-import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
-import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.PermissionRequestBuilder;
-import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.SiteRequestBuilder;
-import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
-import com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -90,8 +68,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -100,8 +78,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
@@ -110,8 +88,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
-        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    public com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
@@ -119,8 +97,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnDefinitionCollectionRequestBuilder columns() {
-        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder columns() {
+        return new com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
     /**
@@ -130,8 +108,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
-        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ContentType collection
@@ -139,8 +117,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public ContentTypeCollectionRequestBuilder contentTypes() {
-        return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder contentTypes() {
+        return new com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
     /**
@@ -150,8 +128,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
-        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
@@ -160,8 +138,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the DriveRequestBuilder instance
      */
     @Nonnull
-    public DriveRequestBuilder drive() {
-        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
+    public com.microsoft.graph.requests.DriveRequestBuilder drive() {
+        return new com.microsoft.graph.requests.DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Drive collection
@@ -169,8 +147,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public DriveCollectionRequestBuilder drives() {
-        return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
+    public com.microsoft.graph.requests.DriveCollectionRequestBuilder drives() {
+        return new com.microsoft.graph.requests.DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
     /**
@@ -180,8 +158,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public DriveRequestBuilder drives(@Nonnull final String id) {
-        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DriveRequestBuilder drives(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
@@ -189,8 +167,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns() {
-        return new ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns() {
+        return new com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns"), getClient(), null);
     }
 
     /**
@@ -200,8 +178,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnDefinitionWithReferenceRequestBuilder externalColumns(@Nonnull final String id) {
-        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder externalColumns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BaseItem collection
@@ -209,8 +187,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public BaseItemCollectionRequestBuilder items() {
-        return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.requests.BaseItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.requests.BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -220,8 +198,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public BaseItemRequestBuilder items(@Nonnull final String id) {
-        return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BaseItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the List collection
@@ -229,8 +207,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public ListCollectionRequestBuilder lists() {
-        return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
+    public com.microsoft.graph.requests.ListCollectionRequestBuilder lists() {
+        return new com.microsoft.graph.requests.ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
     /**
@@ -240,8 +218,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public ListRequestBuilder lists(@Nonnull final String id) {
-        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ListRequestBuilder lists(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RichLongRunningOperation collection
@@ -249,8 +227,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public RichLongRunningOperationCollectionRequestBuilder operations() {
-        return new RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -260,8 +238,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
-        return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Permission collection
@@ -269,8 +247,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public PermissionCollectionRequestBuilder permissions() {
-        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionCollectionRequestBuilder permissions() {
+        return new com.microsoft.graph.requests.PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
     }
 
     /**
@@ -280,8 +258,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public PermissionRequestBuilder permissions(@Nonnull final String id) {
-        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PermissionRequestBuilder permissions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Site collection
@@ -289,8 +267,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public SiteCollectionRequestBuilder sites() {
-        return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
+    public com.microsoft.graph.requests.SiteCollectionRequestBuilder sites() {
+        return new com.microsoft.graph.requests.SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
 
     /**
@@ -300,8 +278,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public SiteRequestBuilder sites(@Nonnull final String id) {
-        return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SiteRequestBuilder sites(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
     /**
@@ -310,8 +288,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the StoreRequestBuilder instance
      */
     @Nonnull
-    public StoreRequestBuilder termStore() {
-        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.StoreRequestBuilder termStore() {
+        return new com.microsoft.graph.termstore.requests.StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Store collection
@@ -319,8 +297,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the collection request builder
      */
     @Nonnull
-    public StoreCollectionRequestBuilder termStores() {
-        return new StoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termStores"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder termStores() {
+        return new com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termStores"), getClient(), null);
     }
 
     /**
@@ -330,8 +308,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param id the item identifier
      */
     @Nonnull
-    public StoreRequestBuilder termStores(@Nonnull final String id) {
-        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStores") + "/" + id, getClient(), null);
+    public com.microsoft.graph.termstore.requests.StoreRequestBuilder termStores(@Nonnull final String id) {
+        return new com.microsoft.graph.termstore.requests.StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStores") + "/" + id, getClient(), null);
     }
 
     /**
@@ -340,8 +318,8 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @return the OnenoteRequestBuilder instance
      */
     @Nonnull
-    public OnenoteRequestBuilder onenote() {
-        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    public com.microsoft.graph.requests.OnenoteRequestBuilder onenote() {
+        return new com.microsoft.graph.requests.OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
     /**

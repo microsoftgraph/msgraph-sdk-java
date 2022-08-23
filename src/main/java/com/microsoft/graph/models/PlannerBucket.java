@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerTaskCollectionPage;
 
@@ -62,7 +61,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PlannerTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -75,7 +74,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
 
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PlannerTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PlannerTaskCollectionPage.class);
         }
     }
 }

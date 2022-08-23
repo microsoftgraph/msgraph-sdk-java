@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.ChildSelectability;
 import com.microsoft.graph.security.models.EdiscoveryReviewTag;
 import com.microsoft.graph.security.models.Tag;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,7 +42,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
      * Returns the tags that are a child of a tag.
      */
 	@Nullable
-    public EdiscoveryReviewTagCollectionPage childTags;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage childTags;
 
     /**
      * The Parent.
@@ -65,7 +64,7 @@ public class EdiscoveryReviewTag extends Tag implements IJsonBackedObject {
 
 
         if (json.has("childTags")) {
-            childTags = serializer.deserializeObject(json.get("childTags"), EdiscoveryReviewTagCollectionPage.class);
+            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage.class);
         }
     }
 }

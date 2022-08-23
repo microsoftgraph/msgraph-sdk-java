@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RiskyUser;
-import com.microsoft.graph.requests.RiskyUserHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.RiskyUserHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class RiskyUserRequestBuilder extends BaseRequestBuilder<RiskyUser> {
      * @return the collection request builder
      */
     @Nonnull
-    public RiskyUserHistoryItemCollectionRequestBuilder history() {
-        return new RiskyUserHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
+    public com.microsoft.graph.requests.RiskyUserHistoryItemCollectionRequestBuilder history() {
+        return new com.microsoft.graph.requests.RiskyUserHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class RiskyUserRequestBuilder extends BaseRequestBuilder<RiskyUser> {
      * @param id the item identifier
      */
     @Nonnull
-    public RiskyUserHistoryItemRequestBuilder history(@Nonnull final String id) {
-        return new RiskyUserHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RiskyUserHistoryItemRequestBuilder history(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyUserHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
     }
 }

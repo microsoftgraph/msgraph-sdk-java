@@ -11,11 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.Recipient;
-import com.microsoft.graph.models.Attachment;
-import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.Post;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.OutlookItem;
 import com.microsoft.graph.requests.AttachmentCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -111,12 +107,12 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
+     * Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
 	@Nullable
-    public AttachmentCollectionPage attachments;
+    public com.microsoft.graph.requests.AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
@@ -125,11 +121,11 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The In Reply To.
-     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
+     * Read-only. Supports $expand.
      */
     @SerializedName(value = "inReplyTo", alternate = {"InReplyTo"})
     @Expose
@@ -143,7 +139,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -152,7 +148,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -165,19 +161,19 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments"), AttachmentCollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments"), com.microsoft.graph.requests.AttachmentCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

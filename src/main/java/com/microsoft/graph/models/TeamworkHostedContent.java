@@ -36,7 +36,7 @@ public class TeamworkHostedContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * Write only. Content type, such as image/png, image/jpg.
+     * Write only. Content type. sicj as image/png, image/jpg.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose

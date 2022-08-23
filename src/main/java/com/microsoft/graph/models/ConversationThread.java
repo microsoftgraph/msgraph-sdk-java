@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Recipient;
-import com.microsoft.graph.models.Post;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PostCollectionPage;
 
@@ -58,7 +57,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Delivered Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      */
     @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
@@ -108,7 +107,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
     @SerializedName(value = "posts", alternate = {"Posts"})
     @Expose
 	@Nullable
-    public PostCollectionPage posts;
+    public com.microsoft.graph.requests.PostCollectionPage posts;
 
 
     /**
@@ -121,7 +120,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
 
         if (json.has("posts")) {
-            posts = serializer.deserializeObject(json.get("posts"), PostCollectionPage.class);
+            posts = serializer.deserializeObject(json.get("posts"), com.microsoft.graph.requests.PostCollectionPage.class);
         }
     }
 }

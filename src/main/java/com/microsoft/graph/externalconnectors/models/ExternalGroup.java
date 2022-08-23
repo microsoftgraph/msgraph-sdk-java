@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.externalconnectors.models.Identity;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.externalconnectors.requests.IdentityCollectionPage;
 
@@ -48,12 +47,12 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public IdentityCollectionPage members;
+    public com.microsoft.graph.externalconnectors.requests.IdentityCollectionPage members;
 
 
     /**
@@ -66,7 +65,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), IdentityCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.externalconnectors.requests.IdentityCollectionPage.class);
         }
     }
 }

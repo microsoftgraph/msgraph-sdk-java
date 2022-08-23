@@ -8,15 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityContainer;
-import com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder;
-import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
-import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
-import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
-import com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -71,8 +62,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityApiConnectorCollectionRequestBuilder apiConnectors() {
-        return new IdentityApiConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder apiConnectors() {
+        return new com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors"), getClient(), null);
     }
 
     /**
@@ -82,8 +73,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityApiConnectorRequestBuilder apiConnectors(@Nonnull final String id) {
-        return new IdentityApiConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder apiConnectors(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the B2xIdentityUserFlow collection
@@ -91,8 +82,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @return the collection request builder
      */
     @Nonnull
-    public B2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows() {
-        return new B2xIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows"), getClient(), null);
+    public com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows() {
+        return new com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows"), getClient(), null);
     }
 
     /**
@@ -102,8 +93,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @param id the item identifier
      */
     @Nonnull
-    public B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
-        return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityProviderBase collection
@@ -111,8 +102,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityProviderBaseCollectionRequestBuilder identityProviders() {
-        return new IdentityProviderBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder identityProviders() {
+        return new com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders"), getClient(), null);
     }
 
     /**
@@ -122,8 +113,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityProviderBaseRequestBuilder identityProviders(@Nonnull final String id) {
-        return new IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder identityProviders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityUserFlowAttribute collection
@@ -131,8 +122,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
-        return new IdentityUserFlowAttributeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
+        return new com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes"), getClient(), null);
     }
 
     /**
@@ -142,8 +133,8 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityUserFlowAttributeRequestBuilder userFlowAttributes(@Nonnull final String id) {
-        return new IdentityUserFlowAttributeRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder userFlowAttributes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes") + "/" + id, getClient(), null);
     }
 
     /**
@@ -152,7 +143,7 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
      * @return the ConditionalAccessRootRequestBuilder instance
      */
     @Nonnull
-    public ConditionalAccessRootRequestBuilder conditionalAccess() {
-        return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
+    public com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder conditionalAccess() {
+        return new com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
 }

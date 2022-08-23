@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationRoot;
-import com.microsoft.graph.requests.EducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.EducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.EducationUserCollectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the collection request builder
      */
     @Nonnull
-    public EducationClassCollectionRequestBuilder classes() {
-        return new EducationClassCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
+    public com.microsoft.graph.requests.EducationClassCollectionRequestBuilder classes() {
+        return new com.microsoft.graph.requests.EducationClassCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param id the item identifier
      */
     @Nonnull
-    public EducationClassRequestBuilder classes(@Nonnull final String id) {
-        return new EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationClassRequestBuilder classes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
 
     /**
@@ -89,8 +83,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the EducationUserRequestBuilder instance
      */
     @Nonnull
-    public EducationUserRequestBuilder me() {
-        return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
+    public com.microsoft.graph.requests.EducationUserRequestBuilder me() {
+        return new com.microsoft.graph.requests.EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationSchool collection
@@ -98,8 +92,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the collection request builder
      */
     @Nonnull
-    public EducationSchoolCollectionRequestBuilder schools() {
-        return new EducationSchoolCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
+    public com.microsoft.graph.requests.EducationSchoolCollectionRequestBuilder schools() {
+        return new com.microsoft.graph.requests.EducationSchoolCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
     /**
@@ -109,8 +103,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param id the item identifier
      */
     @Nonnull
-    public EducationSchoolRequestBuilder schools(@Nonnull final String id) {
-        return new EducationSchoolRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationSchoolRequestBuilder schools(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationSchoolRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationUser collection
@@ -118,8 +112,8 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @return the collection request builder
      */
     @Nonnull
-    public EducationUserCollectionRequestBuilder users() {
-        return new EducationUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    public com.microsoft.graph.requests.EducationUserCollectionRequestBuilder users() {
+        return new com.microsoft.graph.requests.EducationUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
     /**
@@ -129,7 +123,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param id the item identifier
      */
     @Nonnull
-    public EducationUserRequestBuilder users(@Nonnull final String id) {
-        return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationUserRequestBuilder users(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

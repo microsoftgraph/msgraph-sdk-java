@@ -8,13 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryCustodian;
-import com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder;
-import com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.SiteSourceRequestBuilder;
-import com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.UserSourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +63,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the EdiscoveryIndexOperationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
-        return new EdiscoveryIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
+        return new com.microsoft.graph.security.requests.EdiscoveryIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SiteSource collection
@@ -79,8 +72,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public SiteSourceCollectionRequestBuilder siteSources() {
-        return new SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder siteSources() {
+        return new com.microsoft.graph.security.requests.SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
     }
 
     /**
@@ -90,8 +83,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
-        return new SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedGroupSource collection
@@ -99,8 +92,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
-        return new UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
+        return new com.microsoft.graph.security.requests.UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
     }
 
     /**
@@ -110,8 +103,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
-        return new UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserSource collection
@@ -119,8 +112,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public UserSourceCollectionRequestBuilder userSources() {
-        return new UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder userSources() {
+        return new com.microsoft.graph.security.requests.UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
     }
 
     /**
@@ -130,8 +123,8 @@ public class EdiscoveryCustodianRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public UserSourceRequestBuilder userSources(@Nonnull final String id) {
-        return new UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.UserSourceRequestBuilder userSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
     }
 
     /**

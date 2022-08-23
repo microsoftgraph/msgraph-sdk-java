@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.BitlockerRecoveryKey;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionPage;
 
@@ -35,7 +34,7 @@ public class Bitlocker extends Entity implements IJsonBackedObject {
     @SerializedName(value = "recoveryKeys", alternate = {"RecoveryKeys"})
     @Expose
 	@Nullable
-    public BitlockerRecoveryKeyCollectionPage recoveryKeys;
+    public com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionPage recoveryKeys;
 
 
     /**
@@ -48,7 +47,7 @@ public class Bitlocker extends Entity implements IJsonBackedObject {
 
 
         if (json.has("recoveryKeys")) {
-            recoveryKeys = serializer.deserializeObject(json.get("recoveryKeys"), BitlockerRecoveryKeyCollectionPage.class);
+            recoveryKeys = serializer.deserializeObject(json.get("recoveryKeys"), com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionPage.class);
         }
     }
 }

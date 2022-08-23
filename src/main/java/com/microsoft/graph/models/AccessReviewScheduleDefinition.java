@@ -15,7 +15,6 @@ import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewScheduleSettings;
 import com.microsoft.graph.models.AccessReviewStageSettings;
-import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceCollectionPage;
 
@@ -162,12 +161,12 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Instances.
-     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceCollectionPage instances;
+    public com.microsoft.graph.requests.AccessReviewInstanceCollectionPage instances;
 
 
     /**
@@ -180,7 +179,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
 
         if (json.has("instances")) {
-            instances = serializer.deserializeObject(json.get("instances"), AccessReviewInstanceCollectionPage.class);
+            instances = serializer.deserializeObject(json.get("instances"), com.microsoft.graph.requests.AccessReviewInstanceCollectionPage.class);
         }
     }
 }

@@ -9,12 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceCompliancePolicyAssignment;
-import com.microsoft.graph.models.SettingStateDeviceSummary;
-import com.microsoft.graph.models.DeviceComplianceDeviceStatus;
 import com.microsoft.graph.models.DeviceComplianceDeviceOverview;
-import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.models.DeviceComplianceUserStatus;
 import com.microsoft.graph.models.DeviceComplianceUserOverview;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentCollectionPage;
@@ -90,7 +85,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public DeviceCompliancePolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentCollectionPage assignments;
 
     /**
      * The Device Setting State Summaries.
@@ -99,7 +94,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
 	@Nullable
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
@@ -108,7 +103,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The Device Status Overview.
@@ -121,12 +116,12 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
 
     /**
      * The Scheduled Actions For Rule.
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      */
     @SerializedName(value = "scheduledActionsForRule", alternate = {"ScheduledActionsForRule"})
     @Expose
 	@Nullable
-    public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
+    public com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
 
     /**
      * The User Statuses.
@@ -135,7 +130,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
 	@Nullable
-    public DeviceComplianceUserStatusCollectionPage userStatuses;
+    public com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionPage userStatuses;
 
     /**
      * The User Status Overview.
@@ -157,23 +152,23 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), DeviceCompliancePolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), DeviceComplianceDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionPage.class);
         }
 
         if (json.has("scheduledActionsForRule")) {
-            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule"), DeviceComplianceScheduledActionForRuleCollectionPage.class);
+            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule"), com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), DeviceComplianceUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionPage.class);
         }
     }
 }

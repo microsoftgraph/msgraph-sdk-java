@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartSeriesFormat;
-import com.microsoft.graph.requests.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder<
      * @return the WorkbookChartFillRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartFillRequestBuilder fill() {
-        return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartFillRequestBuilder fill() {
+        return new com.microsoft.graph.requests.WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder<
      * @return the WorkbookChartLineFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartLineFormatRequestBuilder line() {
-        return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartLineFormatRequestBuilder line() {
+        return new com.microsoft.graph.requests.WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }
 }

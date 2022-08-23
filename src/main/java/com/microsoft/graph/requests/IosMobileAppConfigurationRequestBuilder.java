@@ -64,8 +64,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
-        return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -75,8 +75,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus collection
@@ -84,8 +84,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -95,8 +95,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -105,8 +105,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
-        return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus collection
@@ -114,8 +114,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
-        return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -125,8 +125,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -135,8 +135,8 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder<
      * @return the ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
      */
     @Nonnull
-    public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
-        return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
+        return new com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
     }
 
     /**

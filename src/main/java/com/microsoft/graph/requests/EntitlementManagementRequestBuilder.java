@@ -8,21 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EntitlementManagement;
-import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApprovalRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder;
-import com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,8 +62,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public ApprovalCollectionRequestBuilder accessPackageAssignmentApprovals() {
-        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals"), getClient(), null);
+    public com.microsoft.graph.requests.ApprovalCollectionRequestBuilder accessPackageAssignmentApprovals() {
+        return new com.microsoft.graph.requests.ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals"), getClient(), null);
     }
 
     /**
@@ -88,8 +73,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public ApprovalRequestBuilder accessPackageAssignmentApprovals(@Nonnull final String id) {
-        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ApprovalRequestBuilder accessPackageAssignmentApprovals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackage collection
@@ -97,8 +82,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCollectionRequestBuilder accessPackages() {
-        return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder accessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
     /**
@@ -108,8 +93,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
-        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentPolicy collection
@@ -117,8 +102,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentPolicyCollectionRequestBuilder assignmentPolicies() {
-        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder assignmentPolicies() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies"), getClient(), null);
     }
 
     /**
@@ -128,8 +113,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentPolicyRequestBuilder assignmentPolicies(@Nonnull final String id) {
-        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder assignmentPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentRequest collection
@@ -137,8 +122,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentRequestCollectionRequestBuilder assignmentRequests() {
-        return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder assignmentRequests() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests"), getClient(), null);
     }
 
     /**
@@ -148,8 +133,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentRequestRequestBuilder assignmentRequests(@Nonnull final String id) {
-        return new AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder assignmentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignment collection
@@ -157,8 +142,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageAssignmentCollectionRequestBuilder assignments() {
-        return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -168,8 +153,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageCatalog collection
@@ -177,8 +162,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCatalogCollectionRequestBuilder catalogs() {
-        return new AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder catalogs() {
+        return new com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs"), getClient(), null);
     }
 
     /**
@@ -188,8 +173,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageCatalogRequestBuilder catalogs(@Nonnull final String id) {
-        return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder catalogs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConnectedOrganization collection
@@ -197,8 +182,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the collection request builder
      */
     @Nonnull
-    public ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
-        return new ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
+    public com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
+        return new com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
     }
 
     /**
@@ -208,8 +193,8 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @param id the item identifier
      */
     @Nonnull
-    public ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
-        return new ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
     }
 
     /**
@@ -218,7 +203,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
      * @return the EntitlementManagementSettingsRequestBuilder instance
      */
     @Nonnull
-    public EntitlementManagementSettingsRequestBuilder settings() {
-        return new EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder settings() {
+        return new com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 }

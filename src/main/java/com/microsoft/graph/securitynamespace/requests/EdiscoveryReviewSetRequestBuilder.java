@@ -11,8 +11,6 @@ import com.microsoft.graph.security.models.EdiscoveryReviewSet;
 import com.microsoft.graph.security.models.EdiscoverySearch;
 import com.microsoft.graph.security.models.AdditionalDataOptions;
 import java.util.EnumSet;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +66,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewSetQueryCollectionRequestBuilder queries() {
-        return new EdiscoveryReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder queries() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("queries"), getClient(), null);
     }
 
     /**
@@ -79,8 +77,8 @@ public class EdiscoveryReviewSetRequestBuilder extends BaseRequestBuilder<Edisco
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
-        return new EdiscoveryReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder queries(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetQueryRequestBuilder(getRequestUrlWithAdditionalSegment("queries") + "/" + id, getClient(), null);
     }
 
     /**

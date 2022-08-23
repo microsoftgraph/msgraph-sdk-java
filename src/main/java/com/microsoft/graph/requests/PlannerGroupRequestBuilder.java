@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PlannerGroup;
-import com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder<PlannerGroup>
      * @return the collection request builder
      */
     @Nonnull
-    public PlannerPlanCollectionRequestBuilder plans() {
-        return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder plans() {
+        return new com.microsoft.graph.requests.PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder<PlannerGroup>
      * @param id the item identifier
      */
     @Nonnull
-    public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
-        return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PlannerPlanRequestBuilder plans(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.AccessReviewStageFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

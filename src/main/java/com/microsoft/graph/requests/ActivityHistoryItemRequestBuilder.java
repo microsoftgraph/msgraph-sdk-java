@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ActivityHistoryItem;
-import com.microsoft.graph.requests.UserActivityWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder<Activi
      * @return the UserActivityWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserActivityWithReferenceRequestBuilder activity() {
-        return new UserActivityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
+    public com.microsoft.graph.requests.UserActivityWithReferenceRequestBuilder activity() {
+        return new com.microsoft.graph.requests.UserActivityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activity"), getClient(), null);
     }
 }

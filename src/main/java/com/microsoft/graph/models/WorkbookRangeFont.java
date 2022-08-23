@@ -72,7 +72,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Underline.
-     * Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      */
     @SerializedName(value = "underline", alternate = {"Underline"})
     @Expose

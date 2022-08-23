@@ -10,9 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationDefaultRequestBuilder;
-import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionRequestBuilder;
-import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +69,8 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder<Cr
      * @return the CrossTenantAccessPolicyConfigurationDefaultRequestBuilder instance
      */
     @Nonnull
-    public CrossTenantAccessPolicyConfigurationDefaultRequestBuilder msgraphDefault() {
-        return new CrossTenantAccessPolicyConfigurationDefaultRequestBuilder(getRequestUrlWithAdditionalSegment("default"), getClient(), null);
+    public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationDefaultRequestBuilder msgraphDefault() {
+        return new com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationDefaultRequestBuilder(getRequestUrlWithAdditionalSegment("default"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CrossTenantAccessPolicyConfigurationPartner collection
@@ -81,8 +78,8 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder<Cr
      * @return the collection request builder
      */
     @Nonnull
-    public CrossTenantAccessPolicyConfigurationPartnerCollectionRequestBuilder partners() {
-        return new CrossTenantAccessPolicyConfigurationPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("partners"), getClient(), null);
+    public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionRequestBuilder partners() {
+        return new com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("partners"), getClient(), null);
     }
 
     /**
@@ -92,8 +89,8 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder<Cr
      * @param id the item identifier
      */
     @Nonnull
-    public CrossTenantAccessPolicyConfigurationPartnerRequestBuilder partners(@Nonnull final String id) {
-        return new CrossTenantAccessPolicyConfigurationPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("partners") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerRequestBuilder partners(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("partners") + "/" + id, getClient(), null);
     }
 
     /**

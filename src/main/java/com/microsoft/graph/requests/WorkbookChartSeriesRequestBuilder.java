@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartSeries;
-import com.microsoft.graph.requests.WorkbookChartSeriesFormatRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartPointCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartPointRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookChartSeriesFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartSeriesFormatRequestBuilder format() {
-        return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartSeriesFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
     /**
      *  Gets a request builder for the WorkbookChartPoint collection
@@ -75,8 +72,8 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookChartPointCollectionRequestBuilder points() {
-        return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartPointCollectionRequestBuilder points() {
+        return new com.microsoft.graph.requests.WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
     }
 
     /**
@@ -86,7 +83,7 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<Workbo
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookChartPointRequestBuilder points(@Nonnull final String id) {
-        return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartPointRequestBuilder points(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }

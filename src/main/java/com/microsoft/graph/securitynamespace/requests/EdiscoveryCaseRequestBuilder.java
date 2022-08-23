@@ -8,19 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryCase;
-import com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryCustodianRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceRequestBuilder;
-import com.microsoft.graph.security.requests.CaseOperationCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.CaseOperationRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoverySearchCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoverySearchRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryCaseSettingsRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +62,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryCustodianCollectionRequestBuilder custodians() {
-        return new EdiscoveryCustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionRequestBuilder custodians() {
+        return new com.microsoft.graph.security.requests.EdiscoveryCustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
     }
 
     /**
@@ -86,8 +73,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryCustodianRequestBuilder custodians(@Nonnull final String id) {
-        return new EdiscoveryCustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryCustodianRequestBuilder custodians(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryCustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoveryNoncustodialDataSource collection
@@ -95,8 +82,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryNoncustodialDataSourceCollectionRequestBuilder noncustodialDataSources() {
-        return new EdiscoveryNoncustodialDataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceCollectionRequestBuilder noncustodialDataSources() {
+        return new com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources"), getClient(), null);
     }
 
     /**
@@ -106,8 +93,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryNoncustodialDataSourceRequestBuilder noncustodialDataSources(@Nonnull final String id) {
-        return new EdiscoveryNoncustodialDataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceRequestBuilder noncustodialDataSources(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryNoncustodialDataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialDataSources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CaseOperation collection
@@ -115,8 +102,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public CaseOperationCollectionRequestBuilder operations() {
-        return new CaseOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.security.requests.CaseOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.security.requests.CaseOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -126,8 +113,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public CaseOperationRequestBuilder operations(@Nonnull final String id) {
-        return new CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.CaseOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoveryReviewSet collection
@@ -135,8 +122,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewSetCollectionRequestBuilder reviewSets() {
-        return new EdiscoveryReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetCollectionRequestBuilder reviewSets() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
     }
 
     /**
@@ -146,8 +133,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewSetRequestBuilder reviewSets(@Nonnull final String id) {
-        return new EdiscoveryReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetRequestBuilder reviewSets(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoverySearch collection
@@ -155,8 +142,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoverySearchCollectionRequestBuilder searches() {
-        return new EdiscoverySearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("searches"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoverySearchCollectionRequestBuilder searches() {
+        return new com.microsoft.graph.security.requests.EdiscoverySearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("searches"), getClient(), null);
     }
 
     /**
@@ -166,8 +153,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoverySearchRequestBuilder searches(@Nonnull final String id) {
-        return new EdiscoverySearchRequestBuilder(getRequestUrlWithAdditionalSegment("searches") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoverySearchRequestBuilder searches(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoverySearchRequestBuilder(getRequestUrlWithAdditionalSegment("searches") + "/" + id, getClient(), null);
     }
 
     /**
@@ -176,8 +163,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the EdiscoveryCaseSettingsRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryCaseSettingsRequestBuilder settings() {
-        return new EdiscoveryCaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryCaseSettingsRequestBuilder settings() {
+        return new com.microsoft.graph.security.requests.EdiscoveryCaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EdiscoveryReviewTag collection
@@ -185,8 +172,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @return the collection request builder
      */
     @Nonnull
-    public EdiscoveryReviewTagCollectionRequestBuilder tags() {
-        return new EdiscoveryReviewTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionRequestBuilder tags() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
     }
 
     /**
@@ -196,8 +183,8 @@ public class EdiscoveryCaseRequestBuilder extends BaseRequestBuilder<EdiscoveryC
      * @param id the item identifier
      */
     @Nonnull
-    public EdiscoveryReviewTagRequestBuilder tags(@Nonnull final String id) {
-        return new EdiscoveryReviewTagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagRequestBuilder tags(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewTagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
     }
 
     /**

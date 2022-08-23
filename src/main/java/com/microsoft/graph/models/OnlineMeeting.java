@@ -17,7 +17,6 @@ import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
-import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
 
@@ -56,7 +55,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting.
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -74,7 +73,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Teamwork Reactions.
-     * Indicates if Teams reactions are enabled for the meeting.
+     * Indicates whether Teams reactions are enabled for the meeting.
      */
     @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
     @Expose
@@ -128,7 +127,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * The external ID. A custom ID. Optional.
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -137,7 +136,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * Indicates whether this is a Teams live event.
+     * Indicates if this is a Teams live event.
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose
@@ -155,7 +154,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only.
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -173,7 +172,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting lobby.
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -182,7 +181,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * The participants associated with the online meeting. This includes the organizer and the attendees.
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
@@ -232,7 +231,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
     @Expose
 	@Nullable
-    public MeetingAttendanceReportCollectionPage attendanceReports;
+    public com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage attendanceReports;
 
 
     /**
@@ -245,7 +244,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
 
         if (json.has("attendanceReports")) {
-            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), MeetingAttendanceReportCollectionPage.class);
+            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage.class);
         }
     }
 }

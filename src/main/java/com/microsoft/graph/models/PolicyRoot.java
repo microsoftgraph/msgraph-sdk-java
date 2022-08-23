@@ -11,20 +11,10 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
-import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.PermissionGrantPolicy;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
-import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
-import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
@@ -77,7 +67,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
 	@Nullable
-    public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
+    public com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
     /**
      * The Authorization Policy.
@@ -95,7 +85,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "claimsMappingPolicies", alternate = {"ClaimsMappingPolicies"})
     @Expose
 	@Nullable
-    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+    public com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
     /**
      * The Cross Tenant Access Policy.
@@ -113,7 +103,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
 	@Nullable
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Permission Grant Policies.
@@ -122,7 +112,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "permissionGrantPolicies", alternate = {"PermissionGrantPolicies"})
     @Expose
 	@Nullable
-    public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
+    public com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage permissionGrantPolicies;
 
     /**
      * The Token Issuance Policies.
@@ -131,7 +121,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
 	@Nullable
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
@@ -140,7 +130,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose
 	@Nullable
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Feature Rollout Policies.
@@ -149,7 +139,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "featureRolloutPolicies", alternate = {"FeatureRolloutPolicies"})
     @Expose
 	@Nullable
-    public FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
+    public com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
 
     /**
      * The Admin Consent Request Policy.
@@ -167,7 +157,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "conditionalAccessPolicies", alternate = {"ConditionalAccessPolicies"})
     @Expose
 	@Nullable
-    public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
     /**
      * The Identity Security Defaults Enforcement Policy.
@@ -180,21 +170,21 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Management Policies.
-     * Represents the role management policies.
+     * Specifies the various policies associated with scopes and roles.
      */
     @SerializedName(value = "roleManagementPolicies", alternate = {"RoleManagementPolicies"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyCollectionPage roleManagementPolicies;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage roleManagementPolicies;
 
     /**
      * The Role Management Policy Assignments.
-     * Represents the role management policy assignments.
+     * The assignment of a role management policy to a role definition object.
      */
     @SerializedName(value = "roleManagementPolicyAssignments", alternate = {"RoleManagementPolicyAssignments"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyAssignmentCollectionPage roleManagementPolicyAssignments;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage roleManagementPolicyAssignments;
 
 
     /**
@@ -207,43 +197,43 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activityBasedTimeoutPolicies")) {
-            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), ActivityBasedTimeoutPolicyCollectionPage.class);
+            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("permissionGrantPolicies")) {
-            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies"), PermissionGrantPolicyCollectionPage.class);
+            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies"), com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
         }
 
         if (json.has("featureRolloutPolicies")) {
-            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies"), FeatureRolloutPolicyCollectionPage.class);
+            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies"), com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage.class);
         }
 
         if (json.has("conditionalAccessPolicies")) {
-            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), ConditionalAccessPolicyCollectionPage.class);
+            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage.class);
         }
 
         if (json.has("roleManagementPolicies")) {
-            roleManagementPolicies = serializer.deserializeObject(json.get("roleManagementPolicies"), UnifiedRoleManagementPolicyCollectionPage.class);
+            roleManagementPolicies = serializer.deserializeObject(json.get("roleManagementPolicies"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage.class);
         }
 
         if (json.has("roleManagementPolicyAssignments")) {
-            roleManagementPolicyAssignments = serializer.deserializeObject(json.get("roleManagementPolicyAssignments"), UnifiedRoleManagementPolicyAssignmentCollectionPage.class);
+            roleManagementPolicyAssignments = serializer.deserializeObject(json.get("roleManagementPolicyAssignments"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage.class);
         }
     }
 }

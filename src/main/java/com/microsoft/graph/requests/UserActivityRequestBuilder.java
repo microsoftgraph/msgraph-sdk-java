@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserActivity;
-import com.microsoft.graph.requests.ActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @return the collection request builder
      */
     @Nonnull
-    public ActivityHistoryItemCollectionRequestBuilder historyItems() {
-        return new ActivityHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems"), getClient(), null);
+    public com.microsoft.graph.requests.ActivityHistoryItemCollectionRequestBuilder historyItems() {
+        return new com.microsoft.graph.requests.ActivityHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder<UserActivity>
      * @param id the item identifier
      */
     @Nonnull
-    public ActivityHistoryItemRequestBuilder historyItems(@Nonnull final String id) {
-        return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ActivityHistoryItemRequestBuilder historyItems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
     }
 }

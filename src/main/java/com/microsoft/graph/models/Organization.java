@@ -15,8 +15,6 @@ import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.VerifiedDomain;
 import com.microsoft.graph.models.MdmAuthority;
 import com.microsoft.graph.models.OrganizationalBranding;
-import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
-import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -110,7 +108,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -119,7 +117,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -137,7 +135,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
+     * The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -236,7 +234,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Branding.
-     * Resource to manage the default branding for the organization. Nullable.
+     * Branding for the organization. Nullable.
      */
     @SerializedName(value = "branding", alternate = {"Branding"})
     @Expose
@@ -248,16 +246,16 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
 	@Nullable
-    public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the organization resource. Nullable.
+     * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
 
     /**
@@ -270,11 +268,11 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), CertificateBasedAuthConfigurationCollectionPage.class);
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsApp;
-import com.microsoft.graph.requests.TeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
-        return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
+        return new com.microsoft.graph.requests.TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder<TeamsApp> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamsAppDefinitionRequestBuilder appDefinitions(@Nonnull final String id) {
-        return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppDefinitionRequestBuilder appDefinitions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }
 }

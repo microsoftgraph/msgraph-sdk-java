@@ -63,7 +63,7 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * @return the RoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Todo;
-import com.microsoft.graph.requests.TodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.TodoTaskListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class TodoRequestBuilder extends BaseRequestBuilder<Todo> {
      * @return the collection request builder
      */
     @Nonnull
-    public TodoTaskListCollectionRequestBuilder lists() {
-        return new TodoTaskListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
+    public com.microsoft.graph.requests.TodoTaskListCollectionRequestBuilder lists() {
+        return new com.microsoft.graph.requests.TodoTaskListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder<Todo> {
      * @param id the item identifier
      */
     @Nonnull
-    public TodoTaskListRequestBuilder lists(@Nonnull final String id) {
-        return new TodoTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TodoTaskListRequestBuilder lists(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TodoTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
 }

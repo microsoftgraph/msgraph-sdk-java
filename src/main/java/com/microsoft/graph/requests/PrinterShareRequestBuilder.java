@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrinterShare;
-import com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +62,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @return the collection request builder
      */
     @Nonnull
-    public PrintJobCollectionRequestBuilder jobs() {
-        return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
+    public com.microsoft.graph.requests.PrintJobCollectionRequestBuilder jobs() {
+        return new com.microsoft.graph.requests.PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @param id the item identifier
      */
     @Nonnull
-    public PrintJobRequestBuilder jobs(@Nonnull final String id) {
-        return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintJobRequestBuilder jobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Group collection
@@ -87,8 +82,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @return the collection request builder
      */
     @Nonnull
-    public GroupCollectionWithReferencesRequestBuilder allowedGroups() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups"), getClient(), null);
+    public com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder allowedGroups() {
+        return new com.microsoft.graph.requests.GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups"), getClient(), null);
     }
 
     /**
@@ -98,8 +93,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @param id the item identifier
      */
     @Nonnull
-    public GroupWithReferenceRequestBuilder allowedGroups(@Nonnull final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.GroupWithReferenceRequestBuilder allowedGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the User collection
@@ -107,8 +102,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionWithReferencesRequestBuilder allowedUsers() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers"), getClient(), null);
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder allowedUsers() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers"), getClient(), null);
     }
 
     /**
@@ -118,8 +113,8 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @param id the item identifier
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder allowedUsers(@Nonnull final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder allowedUsers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedUsers") + "/" + id, getClient(), null);
     }
 
     /**
@@ -128,7 +123,7 @@ public class PrinterShareRequestBuilder extends BaseRequestBuilder<PrinterShare>
      * @return the PrinterWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrinterWithReferenceRequestBuilder printer() {
-        return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
+    public com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder printer() {
+        return new com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
     }
 }

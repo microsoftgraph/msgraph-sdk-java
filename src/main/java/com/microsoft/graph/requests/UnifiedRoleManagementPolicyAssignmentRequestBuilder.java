@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class UnifiedRoleManagementPolicyAssignmentRequestBuilder extends BaseReq
      * @return the UnifiedRoleManagementPolicyWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyWithReferenceRequestBuilder policy() {
-        return new UnifiedRoleManagementPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyWithReferenceRequestBuilder policy() {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
 }

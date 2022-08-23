@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Privacy;
-import com.microsoft.graph.requests.SubjectRightsRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder<Privacy> {
      * @return the collection request builder
      */
     @Nonnull
-    public SubjectRightsRequestCollectionRequestBuilder subjectRightsRequests() {
-        return new SubjectRightsRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests"), getClient(), null);
+    public com.microsoft.graph.requests.SubjectRightsRequestCollectionRequestBuilder subjectRightsRequests() {
+        return new com.microsoft.graph.requests.SubjectRightsRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder<Privacy> {
      * @param id the item identifier
      */
     @Nonnull
-    public SubjectRightsRequestRequestBuilder subjectRightsRequests(@Nonnull final String id) {
-        return new SubjectRightsRequestRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder subjectRightsRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests") + "/" + id, getClient(), null);
     }
 }

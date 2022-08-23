@@ -9,9 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageAssignmentWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageSubjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +64,8 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * @return the AccessPackageWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageWithReferenceRequestBuilder accessPackage() {
-        return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackage() {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
@@ -77,8 +74,8 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * @return the AccessPackageAssignmentWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageAssignmentWithReferenceRequestBuilder assignment() {
-        return new AccessPackageAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignment"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageAssignmentWithReferenceRequestBuilder assignment() {
+        return new com.microsoft.graph.requests.AccessPackageAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignment"), getClient(), null);
     }
 
     /**
@@ -87,8 +84,8 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * @return the AccessPackageSubjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AccessPackageSubjectWithReferenceRequestBuilder requestor() {
-        return new AccessPackageSubjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageSubjectWithReferenceRequestBuilder requestor() {
+        return new com.microsoft.graph.requests.AccessPackageSubjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
     }
 
     /**

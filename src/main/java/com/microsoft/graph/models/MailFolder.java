@@ -9,11 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MailFolder;
-import com.microsoft.graph.models.MessageRule;
-import com.microsoft.graph.models.Message;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MailFolderCollectionPage;
 import com.microsoft.graph.requests.MessageRuleCollectionPage;
@@ -97,7 +92,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
 	@Nullable
-    public MailFolderCollectionPage childFolders;
+    public com.microsoft.graph.requests.MailFolderCollectionPage childFolders;
 
     /**
      * The Message Rules.
@@ -106,7 +101,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messageRules", alternate = {"MessageRules"})
     @Expose
 	@Nullable
-    public MessageRuleCollectionPage messageRules;
+    public com.microsoft.graph.requests.MessageRuleCollectionPage messageRules;
 
     /**
      * The Messages.
@@ -115,7 +110,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
 	@Nullable
-    public MessageCollectionPage messages;
+    public com.microsoft.graph.requests.MessageCollectionPage messages;
 
     /**
      * The Multi Value Extended Properties.
@@ -124,7 +119,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -133,7 +128,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -146,23 +141,23 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders"), MailFolderCollectionPage.class);
+            childFolders = serializer.deserializeObject(json.get("childFolders"), com.microsoft.graph.requests.MailFolderCollectionPage.class);
         }
 
         if (json.has("messageRules")) {
-            messageRules = serializer.deserializeObject(json.get("messageRules"), MessageRuleCollectionPage.class);
+            messageRules = serializer.deserializeObject(json.get("messageRules"), com.microsoft.graph.requests.MessageRuleCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages"), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.MessageCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

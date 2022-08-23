@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class FeatureRolloutPolicyRequestBuilder extends BaseRequestBuilder<Featu
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder appliesTo() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder appliesTo() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class FeatureRolloutPolicyRequestBuilder extends BaseRequestBuilder<Featu
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder appliesTo(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder appliesTo(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

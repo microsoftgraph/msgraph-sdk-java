@@ -8,8 +8,6 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.External;
-import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder;
-import com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ExternalRequestBuilder extends BaseRequestBuilder<External> {
      * @return the collection request builder
      */
     @Nonnull
-    public ExternalConnectionCollectionRequestBuilder connections() {
-        return new ExternalConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections"), getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder connections() {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder<External> {
      * @param id the item identifier
      */
     @Nonnull
-    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
-        return new ExternalConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
+        return new com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections") + "/" + id, getClient(), null);
     }
 }

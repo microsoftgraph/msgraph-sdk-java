@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AssociatedTeamInfo;
-import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AssociatedTeamInfoCollectionPage;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionPage;
@@ -37,7 +35,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
     @SerializedName(value = "associatedTeams", alternate = {"AssociatedTeams"})
     @Expose
 	@Nullable
-    public AssociatedTeamInfoCollectionPage associatedTeams;
+    public com.microsoft.graph.requests.AssociatedTeamInfoCollectionPage associatedTeams;
 
     /**
      * The Installed Apps.
@@ -46,7 +44,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
 	@Nullable
-    public UserScopeTeamsAppInstallationCollectionPage installedApps;
+    public com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionPage installedApps;
 
 
     /**
@@ -59,11 +57,11 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("associatedTeams")) {
-            associatedTeams = serializer.deserializeObject(json.get("associatedTeams"), AssociatedTeamInfoCollectionPage.class);
+            associatedTeams = serializer.deserializeObject(json.get("associatedTeams"), com.microsoft.graph.requests.AssociatedTeamInfoCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps"), UserScopeTeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DetectedApp;
-import com.microsoft.graph.requests.ManagedDeviceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder<DetectedApp> {
      * @return the collection request builder
      */
     @Nonnull
-    public ManagedDeviceCollectionWithReferencesRequestBuilder managedDevices() {
-        return new ManagedDeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceCollectionWithReferencesRequestBuilder managedDevices() {
+        return new com.microsoft.graph.requests.ManagedDeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder<DetectedApp> {
      * @param id the item identifier
      */
     @Nonnull
-    public ManagedDeviceWithReferenceRequestBuilder managedDevices(@Nonnull final String id) {
-        return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder managedDevices(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
 }

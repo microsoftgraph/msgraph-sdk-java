@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UnifiedRoleManagementPolicyRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyRuleCollectionRequestBuilder effectiveRules() {
-        return new UnifiedRoleManagementPolicyRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("effectiveRules"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionRequestBuilder effectiveRules() {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("effectiveRules"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class UnifiedRoleManagementPolicyRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyRuleRequestBuilder effectiveRules(@Nonnull final String id) {
-        return new UnifiedRoleManagementPolicyRuleRequestBuilder(getRequestUrlWithAdditionalSegment("effectiveRules") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleRequestBuilder effectiveRules(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleRequestBuilder(getRequestUrlWithAdditionalSegment("effectiveRules") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleManagementPolicyRule collection
@@ -84,8 +82,8 @@ public class UnifiedRoleManagementPolicyRequestBuilder extends BaseRequestBuilde
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyRuleCollectionRequestBuilder rules() {
-        return new UnifiedRoleManagementPolicyRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rules"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionRequestBuilder rules() {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rules"), getClient(), null);
     }
 
     /**
@@ -95,7 +93,7 @@ public class UnifiedRoleManagementPolicyRequestBuilder extends BaseRequestBuilde
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyRuleRequestBuilder rules(@Nonnull final String id) {
-        return new UnifiedRoleManagementPolicyRuleRequestBuilder(getRequestUrlWithAdditionalSegment("rules") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleRequestBuilder rules(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleRequestBuilder(getRequestUrlWithAdditionalSegment("rules") + "/" + id, getClient(), null);
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.ConsentRequestFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.UserConsentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserConsentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

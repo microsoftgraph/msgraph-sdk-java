@@ -9,15 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookWorksheet;
 import com.microsoft.graph.models.WorkbookRange;
-import com.microsoft.graph.requests.WorkbookChartCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartRequestBuilder;
-import com.microsoft.graph.requests.WorkbookNamedItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookNamedItemRequestBuilder;
-import com.microsoft.graph.requests.WorkbookPivotTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookPivotTableRequestBuilder;
-import com.microsoft.graph.requests.WorkbookWorksheetProtectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookTableRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -75,8 +66,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookChartCollectionRequestBuilder charts() {
-        return new WorkbookChartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("charts"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartCollectionRequestBuilder charts() {
+        return new com.microsoft.graph.requests.WorkbookChartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("charts"), getClient(), null);
     }
 
     /**
@@ -86,8 +77,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookChartRequestBuilder charts(@Nonnull final String id) {
-        return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment("charts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartRequestBuilder charts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment("charts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WorkbookNamedItem collection
@@ -95,8 +86,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookNamedItemCollectionRequestBuilder names() {
-        return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookNamedItemCollectionRequestBuilder names() {
+        return new com.microsoft.graph.requests.WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
     /**
@@ -106,8 +97,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookNamedItemRequestBuilder names(@Nonnull final String id) {
-        return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookNamedItemRequestBuilder names(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WorkbookPivotTable collection
@@ -115,8 +106,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookPivotTableCollectionRequestBuilder pivotTables() {
-        return new WorkbookPivotTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookPivotTableCollectionRequestBuilder pivotTables() {
+        return new com.microsoft.graph.requests.WorkbookPivotTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables"), getClient(), null);
     }
 
     /**
@@ -126,8 +117,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookPivotTableRequestBuilder pivotTables(@Nonnull final String id) {
-        return new WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookPivotTableRequestBuilder pivotTables(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment("pivotTables") + "/" + id, getClient(), null);
     }
 
     /**
@@ -136,8 +127,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the WorkbookWorksheetProtectionRequestBuilder instance
      */
     @Nonnull
-    public WorkbookWorksheetProtectionRequestBuilder protection() {
-        return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookWorksheetProtectionRequestBuilder protection() {
+        return new com.microsoft.graph.requests.WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
     /**
      *  Gets a request builder for the WorkbookTable collection
@@ -145,8 +136,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookTableCollectionRequestBuilder tables() {
-        return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookTableCollectionRequestBuilder tables() {
+        return new com.microsoft.graph.requests.WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
 
     /**
@@ -156,8 +147,8 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder<Workbook
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookTableRequestBuilder tables(@Nonnull final String id) {
-        return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookTableRequestBuilder tables(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
 
     /**

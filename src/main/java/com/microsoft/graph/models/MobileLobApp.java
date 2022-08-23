@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.MobileAppContent;
 import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.requests.MobileAppContentCollectionPage;
 
@@ -62,7 +61,7 @@ public class MobileLobApp extends MobileApp implements IJsonBackedObject {
     @SerializedName(value = "contentVersions", alternate = {"ContentVersions"})
     @Expose
 	@Nullable
-    public MobileAppContentCollectionPage contentVersions;
+    public com.microsoft.graph.requests.MobileAppContentCollectionPage contentVersions;
 
 
     /**
@@ -75,7 +74,7 @@ public class MobileLobApp extends MobileApp implements IJsonBackedObject {
 
 
         if (json.has("contentVersions")) {
-            contentVersions = serializer.deserializeObject(json.get("contentVersions"), MobileAppContentCollectionPage.class);
+            contentVersions = serializer.deserializeObject(json.get("contentVersions"), com.microsoft.graph.requests.MobileAppContentCollectionPage.class);
         }
     }
 }

@@ -9,14 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.ItemReference;
-import com.microsoft.graph.requests.ContentTypeWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ContentTypeCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ColumnLinkCollectionRequestBuilder;
-import com.microsoft.graph.requests.ColumnLinkRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +66,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @return the ContentTypeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ContentTypeWithReferenceRequestBuilder base() {
-        return new ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("base"), getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeWithReferenceRequestBuilder base() {
+        return new com.microsoft.graph.requests.ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("base"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ContentType collection
@@ -83,8 +75,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @return the collection request builder
      */
     @Nonnull
-    public ContentTypeCollectionWithReferencesRequestBuilder baseTypes() {
-        return new ContentTypeCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes"), getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeCollectionWithReferencesRequestBuilder baseTypes() {
+        return new com.microsoft.graph.requests.ContentTypeCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes"), getClient(), null);
     }
 
     /**
@@ -94,8 +86,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @param id the item identifier
      */
     @Nonnull
-    public ContentTypeWithReferenceRequestBuilder baseTypes(@Nonnull final String id) {
-        return new ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeWithReferenceRequestBuilder baseTypes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnLink collection
@@ -103,8 +95,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnLinkCollectionRequestBuilder columnLinks() {
-        return new ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnLinkCollectionRequestBuilder columnLinks() {
+        return new com.microsoft.graph.requests.ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
     }
 
     /**
@@ -114,8 +106,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnLinkRequestBuilder columnLinks(@Nonnull final String id) {
-        return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnLinkRequestBuilder columnLinks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
@@ -123,8 +115,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnDefinitionCollectionWithReferencesRequestBuilder columnPositions() {
-        return new ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder columnPositions() {
+        return new com.microsoft.graph.requests.ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions"), getClient(), null);
     }
 
     /**
@@ -134,8 +126,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnDefinitionWithReferenceRequestBuilder columnPositions(@Nonnull final String id) {
-        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder columnPositions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
@@ -143,8 +135,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnDefinitionCollectionRequestBuilder columns() {
-        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder columns() {
+        return new com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
     /**
@@ -154,8 +146,8 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
-        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
 
     /**

@@ -40,7 +40,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Content Source.
-     * The name of the content source which the externalItem is part of .
+     * The name of the content source that the externalItem is part of.
      */
     @SerializedName(value = "contentSource", alternate = {"ContentSource"})
     @Expose
@@ -67,7 +67,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Result Template Id.
-     * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
      */
     @SerializedName(value = "resultTemplateId", alternate = {"ResultTemplateId"})
     @Expose

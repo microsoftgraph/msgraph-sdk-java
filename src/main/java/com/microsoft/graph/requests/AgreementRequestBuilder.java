@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Agreement;
-import com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.AgreementFileRequestBuilder;
-import com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -67,8 +62,8 @@ public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementAcceptanceCollectionRequestBuilder acceptances() {
-        return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder acceptances() {
+        return new com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementAcceptanceRequestBuilder acceptances(@Nonnull final String id) {
-        return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder acceptances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
      * @return the AgreementFileRequestBuilder instance
      */
     @Nonnull
-    public AgreementFileRequestBuilder file() {
-        return new AgreementFileRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileRequestBuilder file() {
+        return new com.microsoft.graph.requests.AgreementFileRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
     }
     /**
      *  Gets a request builder for the AgreementFileLocalization collection
@@ -97,8 +92,8 @@ public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
      * @return the collection request builder
      */
     @Nonnull
-    public AgreementFileLocalizationCollectionRequestBuilder files() {
-        return new AgreementFileLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder files() {
+        return new com.microsoft.graph.requests.AgreementFileLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
     /**
@@ -108,7 +103,7 @@ public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
      * @param id the item identifier
      */
     @Nonnull
-    public AgreementFileLocalizationRequestBuilder files(@Nonnull final String id) {
-        return new AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder files(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

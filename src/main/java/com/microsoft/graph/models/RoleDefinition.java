@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RolePermission;
-import com.microsoft.graph.models.RoleAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.RoleAssignmentCollectionPage;
 
@@ -72,7 +71,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
 	@Nullable
-    public RoleAssignmentCollectionPage roleAssignments;
+    public com.microsoft.graph.requests.RoleAssignmentCollectionPage roleAssignments;
 
 
     /**
@@ -85,7 +84,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), RoleAssignmentCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), com.microsoft.graph.requests.RoleAssignmentCollectionPage.class);
         }
     }
 }

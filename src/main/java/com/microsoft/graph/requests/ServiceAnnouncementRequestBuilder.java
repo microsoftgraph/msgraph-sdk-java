@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServiceAnnouncement;
-import com.microsoft.graph.requests.ServiceHealthCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServiceHealthRequestBuilder;
-import com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder;
-import com.microsoft.graph.requests.ServiceUpdateMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServiceUpdateMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @return the collection request builder
      */
     @Nonnull
-    public ServiceHealthCollectionRequestBuilder healthOverviews() {
-        return new ServiceHealthCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("healthOverviews"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthCollectionRequestBuilder healthOverviews() {
+        return new com.microsoft.graph.requests.ServiceHealthCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("healthOverviews"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @param id the item identifier
      */
     @Nonnull
-    public ServiceHealthRequestBuilder healthOverviews(@Nonnull final String id) {
-        return new ServiceHealthRequestBuilder(getRequestUrlWithAdditionalSegment("healthOverviews") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthRequestBuilder healthOverviews(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceHealthRequestBuilder(getRequestUrlWithAdditionalSegment("healthOverviews") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ServiceHealthIssue collection
@@ -88,8 +82,8 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @return the collection request builder
      */
     @Nonnull
-    public ServiceHealthIssueCollectionRequestBuilder issues() {
-        return new ServiceHealthIssueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("issues"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder issues() {
+        return new com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("issues"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @param id the item identifier
      */
     @Nonnull
-    public ServiceHealthIssueRequestBuilder issues(@Nonnull final String id) {
-        return new ServiceHealthIssueRequestBuilder(getRequestUrlWithAdditionalSegment("issues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder issues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder(getRequestUrlWithAdditionalSegment("issues") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ServiceUpdateMessage collection
@@ -108,8 +102,8 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @return the collection request builder
      */
     @Nonnull
-    public ServiceUpdateMessageCollectionRequestBuilder messages() {
-        return new ServiceUpdateMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceUpdateMessageCollectionRequestBuilder messages() {
+        return new com.microsoft.graph.requests.ServiceUpdateMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder<Servic
      * @param id the item identifier
      */
     @Nonnull
-    public ServiceUpdateMessageRequestBuilder messages(@Nonnull final String id) {
-        return new ServiceUpdateMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServiceUpdateMessageRequestBuilder messages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceUpdateMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
 }
