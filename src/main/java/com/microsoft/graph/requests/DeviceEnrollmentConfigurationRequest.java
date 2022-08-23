@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.requests.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

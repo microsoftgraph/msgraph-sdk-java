@@ -55,7 +55,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements IJsonBa
 
     /**
      * The Preferred Authentication Protocol.
-     * Preferred authentication protocol. Supported values include saml or wsfed.
+     * Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      */
     @SerializedName(value = "preferredAuthenticationProtocol", alternate = {"PreferredAuthenticationProtocol"})
     @Expose

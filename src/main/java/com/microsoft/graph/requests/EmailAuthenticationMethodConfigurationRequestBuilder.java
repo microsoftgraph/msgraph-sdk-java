@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EmailAuthenticationMethodConfiguration;
-import com.microsoft.graph.requests.AuthenticationMethodTargetCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationMethodTargetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class EmailAuthenticationMethodConfigurationRequestBuilder extends BaseRe
      * @return the collection request builder
      */
     @Nonnull
-    public AuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
-        return new AuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
+        return new com.microsoft.graph.requests.AuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class EmailAuthenticationMethodConfigurationRequestBuilder extends BaseRe
      * @param id the item identifier
      */
     @Nonnull
-    public AuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
-        return new AuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
     }
 }

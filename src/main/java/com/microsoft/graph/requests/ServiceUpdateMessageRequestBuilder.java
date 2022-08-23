@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServiceUpdateMessage;
-import com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServiceAnnouncementAttachmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ServiceUpdateMessageRequestBuilder extends BaseRequestBuilder<Servi
      * @return the collection request builder
      */
     @Nonnull
-    public ServiceAnnouncementAttachmentCollectionRequestBuilder attachments() {
-        return new ServiceAnnouncementAttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionRequestBuilder attachments() {
+        return new com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class ServiceUpdateMessageRequestBuilder extends BaseRequestBuilder<Servi
      * @param id the item identifier
      */
     @Nonnull
-    public ServiceAnnouncementAttachmentRequestBuilder attachments(@Nonnull final String id) {
-        return new ServiceAnnouncementAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServiceAnnouncementAttachmentRequestBuilder attachments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceAnnouncementAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
 
     /**

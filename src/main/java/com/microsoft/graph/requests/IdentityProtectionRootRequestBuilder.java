@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityProtectionRoot;
-import com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.RiskDetectionRequestBuilder;
-import com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.RiskyUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
      * @return the collection request builder
      */
     @Nonnull
-    public RiskDetectionCollectionRequestBuilder riskDetections() {
-        return new RiskDetectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskDetections"), getClient(), null);
+    public com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder riskDetections() {
+        return new com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskDetections"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
      * @param id the item identifier
      */
     @Nonnull
-    public RiskDetectionRequestBuilder riskDetections(@Nonnull final String id) {
-        return new RiskDetectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskDetections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RiskDetectionRequestBuilder riskDetections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskDetectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskDetections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RiskyUser collection
@@ -86,8 +82,8 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
      * @return the collection request builder
      */
     @Nonnull
-    public RiskyUserCollectionRequestBuilder riskyUsers() {
-        return new RiskyUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers"), getClient(), null);
+    public com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder riskyUsers() {
+        return new com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class IdentityProtectionRootRequestBuilder extends BaseRequestBuilder<Ide
      * @param id the item identifier
      */
     @Nonnull
-    public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
-        return new RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
     }
 }

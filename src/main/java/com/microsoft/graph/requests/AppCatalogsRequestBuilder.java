@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AppCatalogs;
-import com.microsoft.graph.requests.TeamsAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder<AppCatalogs> {
      * @return the collection request builder
      */
     @Nonnull
-    public TeamsAppCollectionRequestBuilder teamsApps() {
-        return new TeamsAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppCollectionRequestBuilder teamsApps() {
+        return new com.microsoft.graph.requests.TeamsAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder<AppCatalogs> {
      * @param id the item identifier
      */
     @Nonnull
-    public TeamsAppRequestBuilder teamsApps(@Nonnull final String id) {
-        return new TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppRequestBuilder teamsApps(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps") + "/" + id, getClient(), null);
     }
 }

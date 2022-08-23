@@ -66,8 +66,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceCompliancePolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SettingStateDeviceSummary collection
@@ -86,8 +86,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
     /**
@@ -97,8 +97,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceComplianceDeviceStatus collection
@@ -106,8 +106,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
-        return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
+        return new com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
     /**
@@ -117,8 +117,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
-        return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -127,8 +127,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the DeviceComplianceDeviceOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
-        return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceComplianceScheduledActionForRule collection
@@ -136,8 +136,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
-        return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
+        return new com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
     /**
@@ -147,8 +147,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(@Nonnull final String id) {
-        return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceComplianceUserStatus collection
@@ -156,8 +156,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
+        return new com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
     /**
@@ -167,8 +167,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceComplianceUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
-        return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -177,8 +177,8 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder<
      * @return the DeviceComplianceUserOverviewRequestBuilder instance
      */
     @Nonnull
-    public DeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
-        return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
+        return new com.microsoft.graph.requests.DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
     /**

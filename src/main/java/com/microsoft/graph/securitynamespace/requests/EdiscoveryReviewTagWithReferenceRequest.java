@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryReviewTag;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

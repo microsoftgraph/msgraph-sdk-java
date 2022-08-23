@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InferenceClassification;
-import com.microsoft.graph.requests.InferenceClassificationOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.InferenceClassificationOverrideRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder<In
      * @return the collection request builder
      */
     @Nonnull
-    public InferenceClassificationOverrideCollectionRequestBuilder overrides() {
-        return new InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
+    public com.microsoft.graph.requests.InferenceClassificationOverrideCollectionRequestBuilder overrides() {
+        return new com.microsoft.graph.requests.InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder<In
      * @param id the item identifier
      */
     @Nonnull
-    public InferenceClassificationOverrideRequestBuilder overrides(@Nonnull final String id) {
-        return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.InferenceClassificationOverrideRequestBuilder overrides(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
     }
 }

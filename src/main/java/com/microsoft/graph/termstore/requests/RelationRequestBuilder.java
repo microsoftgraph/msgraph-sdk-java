@@ -8,8 +8,6 @@ package com.microsoft.graph.termstore.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.termstore.models.Relation;
-import com.microsoft.graph.termstore.requests.TermWithReferenceRequestBuilder;
-import com.microsoft.graph.termstore.requests.SetWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class RelationRequestBuilder extends BaseRequestBuilder<Relation> {
      * @return the TermWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TermWithReferenceRequestBuilder fromTerm() {
-        return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("fromTerm"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.TermWithReferenceRequestBuilder fromTerm() {
+        return new com.microsoft.graph.termstore.requests.TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("fromTerm"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class RelationRequestBuilder extends BaseRequestBuilder<Relation> {
      * @return the SetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public SetWithReferenceRequestBuilder set() {
-        return new SetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("set"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.SetWithReferenceRequestBuilder set() {
+        return new com.microsoft.graph.termstore.requests.SetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("set"), getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class RelationRequestBuilder extends BaseRequestBuilder<Relation> {
      * @return the TermWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TermWithReferenceRequestBuilder toTerm() {
-        return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("toTerm"), getClient(), null);
+    public com.microsoft.graph.termstore.requests.TermWithReferenceRequestBuilder toTerm() {
+        return new com.microsoft.graph.termstore.requests.TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("toTerm"), getClient(), null);
     }
 }

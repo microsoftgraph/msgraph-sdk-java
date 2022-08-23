@@ -8,10 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SolutionsRoot;
-import com.microsoft.graph.requests.BookingBusinessCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingBusinessRequestBuilder;
-import com.microsoft.graph.requests.BookingCurrencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookingCurrencyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +62,8 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
      * @return the collection request builder
      */
     @Nonnull
-    public BookingBusinessCollectionRequestBuilder bookingBusinesses() {
-        return new BookingBusinessCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookingBusinesses"), getClient(), null);
+    public com.microsoft.graph.requests.BookingBusinessCollectionRequestBuilder bookingBusinesses() {
+        return new com.microsoft.graph.requests.BookingBusinessCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookingBusinesses"), getClient(), null);
     }
 
     /**
@@ -77,8 +73,8 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
      * @param id the item identifier
      */
     @Nonnull
-    public BookingBusinessRequestBuilder bookingBusinesses(@Nonnull final String id) {
-        return new BookingBusinessRequestBuilder(getRequestUrlWithAdditionalSegment("bookingBusinesses") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingBusinessRequestBuilder bookingBusinesses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingBusinessRequestBuilder(getRequestUrlWithAdditionalSegment("bookingBusinesses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the BookingCurrency collection
@@ -86,8 +82,8 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
      * @return the collection request builder
      */
     @Nonnull
-    public BookingCurrencyCollectionRequestBuilder bookingCurrencies() {
-        return new BookingCurrencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookingCurrencies"), getClient(), null);
+    public com.microsoft.graph.requests.BookingCurrencyCollectionRequestBuilder bookingCurrencies() {
+        return new com.microsoft.graph.requests.BookingCurrencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookingCurrencies"), getClient(), null);
     }
 
     /**
@@ -97,7 +93,7 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
      * @param id the item identifier
      */
     @Nonnull
-    public BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
-        return new BookingCurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("bookingCurrencies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BookingCurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("bookingCurrencies") + "/" + id, getClient(), null);
     }
 }

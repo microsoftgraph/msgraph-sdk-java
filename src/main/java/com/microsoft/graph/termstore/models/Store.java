@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.termstore.models.Group;
-import com.microsoft.graph.termstore.models.Set;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.termstore.requests.GroupCollectionPage;
 import com.microsoft.graph.termstore.requests.SetCollectionPage;
@@ -55,7 +53,7 @@ public class Store extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
 	@Nullable
-    public GroupCollectionPage groups;
+    public com.microsoft.graph.termstore.requests.GroupCollectionPage groups;
 
     /**
      * The Sets.
@@ -64,7 +62,7 @@ public class Store extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose
 	@Nullable
-    public SetCollectionPage sets;
+    public com.microsoft.graph.termstore.requests.SetCollectionPage sets;
 
 
     /**
@@ -77,11 +75,11 @@ public class Store extends Entity implements IJsonBackedObject {
 
 
         if (json.has("groups")) {
-            groups = serializer.deserializeObject(json.get("groups"), GroupCollectionPage.class);
+            groups = serializer.deserializeObject(json.get("groups"), com.microsoft.graph.termstore.requests.GroupCollectionPage.class);
         }
 
         if (json.has("sets")) {
-            sets = serializer.deserializeObject(json.get("sets"), SetCollectionPage.class);
+            sets = serializer.deserializeObject(json.get("sets"), com.microsoft.graph.termstore.requests.SetCollectionPage.class);
         }
     }
 }

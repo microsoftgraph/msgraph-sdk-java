@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Status;
 import com.microsoft.graph.models.VisualInfo;
-import com.microsoft.graph.models.ActivityHistoryItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ActivityHistoryItemCollectionPage;
 
@@ -154,7 +153,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "historyItems", alternate = {"HistoryItems"})
     @Expose
 	@Nullable
-    public ActivityHistoryItemCollectionPage historyItems;
+    public com.microsoft.graph.requests.ActivityHistoryItemCollectionPage historyItems;
 
 
     /**
@@ -167,7 +166,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("historyItems")) {
-            historyItems = serializer.deserializeObject(json.get("historyItems"), ActivityHistoryItemCollectionPage.class);
+            historyItems = serializer.deserializeObject(json.get("historyItems"), com.microsoft.graph.requests.ActivityHistoryItemCollectionPage.class);
         }
     }
 }

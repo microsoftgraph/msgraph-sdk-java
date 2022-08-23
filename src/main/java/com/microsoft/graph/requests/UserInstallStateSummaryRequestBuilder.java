@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserInstallStateSummary;
-import com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceInstallStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class UserInstallStateSummaryRequestBuilder extends BaseRequestBuilder<Us
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceInstallStateRequestBuilder deviceStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 }

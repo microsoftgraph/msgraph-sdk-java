@@ -8,12 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OfficeGraphInsights;
-import com.microsoft.graph.requests.SharedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.SharedInsightRequestBuilder;
-import com.microsoft.graph.requests.TrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.TrendingRequestBuilder;
-import com.microsoft.graph.requests.UsedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.UsedInsightRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +62,8 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @return the collection request builder
      */
     @Nonnull
-    public SharedInsightCollectionRequestBuilder shared() {
-        return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
+    public com.microsoft.graph.requests.SharedInsightCollectionRequestBuilder shared() {
+        return new com.microsoft.graph.requests.SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
     /**
@@ -79,8 +73,8 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @param id the item identifier
      */
     @Nonnull
-    public SharedInsightRequestBuilder shared(@Nonnull final String id) {
-        return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SharedInsightRequestBuilder shared(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Trending collection
@@ -88,8 +82,8 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @return the collection request builder
      */
     @Nonnull
-    public TrendingCollectionRequestBuilder trending() {
-        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
+    public com.microsoft.graph.requests.TrendingCollectionRequestBuilder trending() {
+        return new com.microsoft.graph.requests.TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
     }
 
     /**
@@ -99,8 +93,8 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @param id the item identifier
      */
     @Nonnull
-    public TrendingRequestBuilder trending(@Nonnull final String id) {
-        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TrendingRequestBuilder trending(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UsedInsight collection
@@ -108,8 +102,8 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @return the collection request builder
      */
     @Nonnull
-    public UsedInsightCollectionRequestBuilder used() {
-        return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
+    public com.microsoft.graph.requests.UsedInsightCollectionRequestBuilder used() {
+        return new com.microsoft.graph.requests.UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
     }
 
     /**
@@ -119,7 +113,7 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<Office
      * @param id the item identifier
      */
     @Nonnull
-    public UsedInsightRequestBuilder used(@Nonnull final String id) {
-        return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UsedInsightRequestBuilder used(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
     }
 }

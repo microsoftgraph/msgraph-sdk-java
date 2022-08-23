@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.DeviceComplianceActionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceComplianceActionItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
-        return new DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
+        return new com.microsoft.graph.requests.DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
-        return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }
 }

@@ -11,9 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Notebook;
 import com.microsoft.graph.models.SectionGroup;
-import com.microsoft.graph.models.OnenoteSection;
 import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.SectionGroupCollectionPage;
 import com.microsoft.graph.requests.OnenoteSectionCollectionPage;
 
 
@@ -74,7 +72,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
 	@Nullable
-    public SectionGroupCollectionPage sectionGroups;
+    public com.microsoft.graph.requests.SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Sections.
@@ -83,7 +81,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
 	@Nullable
-    public OnenoteSectionCollectionPage sections;
+    public com.microsoft.graph.requests.OnenoteSectionCollectionPage sections;
 
 
     /**
@@ -96,11 +94,11 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups"), SectionGroupCollectionPage.class);
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups"), com.microsoft.graph.requests.SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections"), OnenoteSectionCollectionPage.class);
+            sections = serializer.deserializeObject(json.get("sections"), com.microsoft.graph.requests.OnenoteSectionCollectionPage.class);
         }
     }
 }

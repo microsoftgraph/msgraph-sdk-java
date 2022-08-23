@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionRequestBuilder;
-import com.microsoft.graph.requests.BitlockerRecoveryKeyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

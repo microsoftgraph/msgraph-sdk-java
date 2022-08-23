@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrinterCreateOperation;
-import com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder<Pri
      * @return the PrinterWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrinterWithReferenceRequestBuilder printer() {
-        return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
+    public com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder printer() {
+        return new com.microsoft.graph.requests.PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
     }
 }

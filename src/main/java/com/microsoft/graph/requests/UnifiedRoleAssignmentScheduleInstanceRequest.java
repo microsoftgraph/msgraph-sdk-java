@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleInstance;
 import com.microsoft.graph.models.RoleAssignmentScheduleInstanceFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleInstanceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

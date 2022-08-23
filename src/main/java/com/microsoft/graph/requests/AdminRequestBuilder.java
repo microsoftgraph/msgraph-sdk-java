@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Admin;
-import com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the ServiceAnnouncementRequestBuilder instance
      */
     @Nonnull
-    public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
-        return new ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder serviceAnnouncement() {
+        return new com.microsoft.graph.requests.ServiceAnnouncementRequestBuilder(getRequestUrlWithAdditionalSegment("serviceAnnouncement"), getClient(), null);
     }
 }

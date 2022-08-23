@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ItemActionStat;
 import com.microsoft.graph.models.IncompleteData;
-import com.microsoft.graph.models.ItemActivity;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ItemActivityCollectionPage;
 
@@ -118,7 +117,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
 	@Nullable
-    public ItemActivityCollectionPage activities;
+    public com.microsoft.graph.requests.ItemActivityCollectionPage activities;
 
 
     /**
@@ -131,7 +130,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities"), ItemActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), com.microsoft.graph.requests.ItemActivityCollectionPage.class);
         }
     }
 }

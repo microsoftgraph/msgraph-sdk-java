@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PermissionGrantConditionSet;
 import com.microsoft.graph.models.PolicyBase;
-import com.microsoft.graph.requests.PermissionGrantConditionSetCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,7 +33,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
     @SerializedName(value = "excludes", alternate = {"Excludes"})
     @Expose
 	@Nullable
-    public PermissionGrantConditionSetCollectionPage excludes;
+    public com.microsoft.graph.requests.PermissionGrantConditionSetCollectionPage excludes;
 
     /**
      * The Includes.
@@ -44,7 +42,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
     @SerializedName(value = "includes", alternate = {"Includes"})
     @Expose
 	@Nullable
-    public PermissionGrantConditionSetCollectionPage includes;
+    public com.microsoft.graph.requests.PermissionGrantConditionSetCollectionPage includes;
 
 
     /**
@@ -57,11 +55,11 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
 
         if (json.has("excludes")) {
-            excludes = serializer.deserializeObject(json.get("excludes"), PermissionGrantConditionSetCollectionPage.class);
+            excludes = serializer.deserializeObject(json.get("excludes"), com.microsoft.graph.requests.PermissionGrantConditionSetCollectionPage.class);
         }
 
         if (json.has("includes")) {
-            includes = serializer.deserializeObject(json.get("includes"), PermissionGrantConditionSetCollectionPage.class);
+            includes = serializer.deserializeObject(json.get("includes"), com.microsoft.graph.requests.PermissionGrantConditionSetCollectionPage.class);
         }
     }
 }

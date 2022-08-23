@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.BookingBusiness;
-import com.microsoft.graph.models.BookingCurrency;
 import com.microsoft.graph.requests.BookingBusinessCollectionPage;
 import com.microsoft.graph.requests.BookingCurrencyCollectionPage;
 
@@ -49,7 +47,7 @@ public class SolutionsRoot implements IJsonBackedObject {
     @SerializedName(value = "bookingBusinesses", alternate = {"BookingBusinesses"})
     @Expose
 	@Nullable
-    public BookingBusinessCollectionPage bookingBusinesses;
+    public com.microsoft.graph.requests.BookingBusinessCollectionPage bookingBusinesses;
 
     /**
      * The Booking Currencies.
@@ -58,7 +56,7 @@ public class SolutionsRoot implements IJsonBackedObject {
     @SerializedName(value = "bookingCurrencies", alternate = {"BookingCurrencies"})
     @Expose
 	@Nullable
-    public BookingCurrencyCollectionPage bookingCurrencies;
+    public com.microsoft.graph.requests.BookingCurrencyCollectionPage bookingCurrencies;
 
 
     /**
@@ -71,11 +69,11 @@ public class SolutionsRoot implements IJsonBackedObject {
 
 
         if (json.has("bookingBusinesses")) {
-            bookingBusinesses = serializer.deserializeObject(json.get("bookingBusinesses"), BookingBusinessCollectionPage.class);
+            bookingBusinesses = serializer.deserializeObject(json.get("bookingBusinesses"), com.microsoft.graph.requests.BookingBusinessCollectionPage.class);
         }
 
         if (json.has("bookingCurrencies")) {
-            bookingCurrencies = serializer.deserializeObject(json.get("bookingCurrencies"), BookingCurrencyCollectionPage.class);
+            bookingCurrencies = serializer.deserializeObject(json.get("bookingCurrencies"), com.microsoft.graph.requests.BookingCurrencyCollectionPage.class);
         }
     }
 }

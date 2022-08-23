@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityUpload;
-import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
      * @return the collection request builder
      */
     @Nonnull
-    public ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder deviceIdentities() {
-        return new ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities"), getClient(), null);
+    public com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder deviceIdentities() {
+        return new com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
      * @param id the item identifier
      */
     @Nonnull
-    public ImportedWindowsAutopilotDeviceIdentityRequestBuilder deviceIdentities(@Nonnull final String id) {
-        return new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityRequestBuilder deviceIdentities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities") + "/" + id, getClient(), null);
     }
 }

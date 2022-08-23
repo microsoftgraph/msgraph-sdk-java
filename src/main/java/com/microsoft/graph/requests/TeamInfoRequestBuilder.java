@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamInfo;
-import com.microsoft.graph.requests.TeamWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class TeamInfoRequestBuilder extends BaseRequestBuilder<TeamInfo> {
      * @return the TeamWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamWithReferenceRequestBuilder team() {
-        return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    public com.microsoft.graph.requests.TeamWithReferenceRequestBuilder team() {
+        return new com.microsoft.graph.requests.TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
 }

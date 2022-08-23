@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CalendarCollectionPage;
 
@@ -62,7 +61,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
 	@Nullable
-    public CalendarCollectionPage calendars;
+    public com.microsoft.graph.requests.CalendarCollectionPage calendars;
 
 
     /**
@@ -75,7 +74,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars"), CalendarCollectionPage.class);
+            calendars = serializer.deserializeObject(json.get("calendars"), com.microsoft.graph.requests.CalendarCollectionPage.class);
         }
     }
 }

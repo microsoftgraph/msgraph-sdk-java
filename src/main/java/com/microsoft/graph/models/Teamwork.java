@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkforceIntegrationCollectionPage;
 
@@ -30,12 +29,12 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Workforce Integrations.
-     * A workforce integration with shifts.
+     * 
      */
     @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
 	@Nullable
-    public WorkforceIntegrationCollectionPage workforceIntegrations;
+    public com.microsoft.graph.requests.WorkforceIntegrationCollectionPage workforceIntegrations;
 
 
     /**
@@ -48,7 +47,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), WorkforceIntegrationCollectionPage.class);
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), com.microsoft.graph.requests.WorkforceIntegrationCollectionPage.class);
         }
     }
 }

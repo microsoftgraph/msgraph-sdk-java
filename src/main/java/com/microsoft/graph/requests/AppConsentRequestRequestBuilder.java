@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.ConsentRequestFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.UserConsentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserConsentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder<AppConse
      * @return the collection request builder
      */
     @Nonnull
-    public UserConsentRequestCollectionRequestBuilder userConsentRequests() {
-        return new UserConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests"), getClient(), null);
+    public com.microsoft.graph.requests.UserConsentRequestCollectionRequestBuilder userConsentRequests() {
+        return new com.microsoft.graph.requests.UserConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests"), getClient(), null);
     }
 
     /**
@@ -76,7 +74,7 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder<AppConse
      * @param id the item identifier
      */
     @Nonnull
-    public UserConsentRequestRequestBuilder userConsentRequests(@Nonnull final String id) {
-        return new UserConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserConsentRequestRequestBuilder userConsentRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests") + "/" + id, getClient(), null);
     }
 }

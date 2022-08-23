@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppIdentity;
-import com.microsoft.graph.models.PrintTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PrintTaskCollectionPage;
 
@@ -54,7 +53,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PrintTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PrintTaskCollectionPage tasks;
 
 
     /**
@@ -67,7 +66,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PrintTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PrintTaskCollectionPage.class);
         }
     }
 }

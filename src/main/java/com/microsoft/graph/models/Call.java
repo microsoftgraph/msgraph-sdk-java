@@ -24,9 +24,6 @@ import com.microsoft.graph.models.CallState;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.ToneInfo;
 import com.microsoft.graph.models.CallTranscriptionInfo;
-import com.microsoft.graph.models.AudioRoutingGroup;
-import com.microsoft.graph.models.CommsOperation;
-import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AudioRoutingGroupCollectionPage;
 import com.microsoft.graph.requests.CommsOperationCollectionPage;
@@ -67,7 +64,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Options.
-     * Contains the optional features for the call.
+     * 
      */
     @SerializedName(value = "callOptions", alternate = {"CallOptions"})
     @Expose
@@ -85,7 +82,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * The chat information. Required information for meeting scenarios.
+     * The chat information. Required information for joining a meeting.
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
@@ -103,7 +100,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Context.
-     * The context associated with an incoming call. Read-only. Server generated.
+     * 
      */
     @SerializedName(value = "incomingContext", alternate = {"IncomingContext"})
     @Expose
@@ -112,7 +109,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Config.
-     * The media configuration. Required information for creating peer to peer calls or joining meetings.
+     * The media configuration. Required.
      */
     @SerializedName(value = "mediaConfig", alternate = {"MediaConfig"})
     @Expose
@@ -130,7 +127,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Info.
-     * The meeting information. Required information for meeting scenarios.
+     * The meeting information that's required for joining a meeting.
      */
     @SerializedName(value = "meetingInfo", alternate = {"MeetingInfo"})
     @Expose
@@ -220,7 +217,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcription.
-     * The transcription information for the call. Read-only.
+     * 
      */
     @SerializedName(value = "transcription", alternate = {"Transcription"})
     @Expose
@@ -234,7 +231,7 @@ public class Call extends Entity implements IJsonBackedObject {
     @SerializedName(value = "audioRoutingGroups", alternate = {"AudioRoutingGroups"})
     @Expose
 	@Nullable
-    public AudioRoutingGroupCollectionPage audioRoutingGroups;
+    public com.microsoft.graph.requests.AudioRoutingGroupCollectionPage audioRoutingGroups;
 
     /**
      * The Operations.
@@ -243,7 +240,7 @@ public class Call extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public CommsOperationCollectionPage operations;
+    public com.microsoft.graph.requests.CommsOperationCollectionPage operations;
 
     /**
      * The Participants.
@@ -252,7 +249,7 @@ public class Call extends Entity implements IJsonBackedObject {
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
 	@Nullable
-    public ParticipantCollectionPage participants;
+    public com.microsoft.graph.requests.ParticipantCollectionPage participants;
 
 
     /**
@@ -265,15 +262,15 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("audioRoutingGroups")) {
-            audioRoutingGroups = serializer.deserializeObject(json.get("audioRoutingGroups"), AudioRoutingGroupCollectionPage.class);
+            audioRoutingGroups = serializer.deserializeObject(json.get("audioRoutingGroups"), com.microsoft.graph.requests.AudioRoutingGroupCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), CommsOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.CommsOperationCollectionPage.class);
         }
 
         if (json.has("participants")) {
-            participants = serializer.deserializeObject(json.get("participants"), ParticipantCollectionPage.class);
+            participants = serializer.deserializeObject(json.get("participants"), com.microsoft.graph.requests.ParticipantCollectionPage.class);
         }
     }
 }

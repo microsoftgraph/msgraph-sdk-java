@@ -25,12 +25,6 @@ import com.microsoft.graph.models.UnmuteParticipantOperation;
 import com.microsoft.graph.models.RecordingStatus;
 import com.microsoft.graph.models.UpdateRecordingStatusOperation;
 import com.microsoft.graph.models.TeleconferenceDeviceQuality;
-import com.microsoft.graph.requests.AudioRoutingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder;
-import com.microsoft.graph.requests.CommsOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.CommsOperationRequestBuilder;
-import com.microsoft.graph.requests.ParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.ParticipantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -97,8 +91,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the collection request builder
      */
     @Nonnull
-    public AudioRoutingGroupCollectionRequestBuilder audioRoutingGroups() {
-        return new AudioRoutingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups"), getClient(), null);
+    public com.microsoft.graph.requests.AudioRoutingGroupCollectionRequestBuilder audioRoutingGroups() {
+        return new com.microsoft.graph.requests.AudioRoutingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups"), getClient(), null);
     }
 
     /**
@@ -108,8 +102,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param id the item identifier
      */
     @Nonnull
-    public AudioRoutingGroupRequestBuilder audioRoutingGroups(@Nonnull final String id) {
-        return new AudioRoutingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder audioRoutingGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CommsOperation collection
@@ -117,8 +111,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the collection request builder
      */
     @Nonnull
-    public CommsOperationCollectionRequestBuilder operations() {
-        return new CommsOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.CommsOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.CommsOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -128,8 +122,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param id the item identifier
      */
     @Nonnull
-    public CommsOperationRequestBuilder operations(@Nonnull final String id) {
-        return new CommsOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CommsOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CommsOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Participant collection
@@ -137,8 +131,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @return the collection request builder
      */
     @Nonnull
-    public ParticipantCollectionRequestBuilder participants() {
-        return new ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants"), getClient(), null);
+    public com.microsoft.graph.requests.ParticipantCollectionRequestBuilder participants() {
+        return new com.microsoft.graph.requests.ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants"), getClient(), null);
     }
 
     /**
@@ -148,8 +142,8 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param id the item identifier
      */
     @Nonnull
-    public ParticipantRequestBuilder participants(@Nonnull final String id) {
-        return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ParticipantRequestBuilder participants(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
     }
 
     /**

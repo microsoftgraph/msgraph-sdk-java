@@ -9,8 +9,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

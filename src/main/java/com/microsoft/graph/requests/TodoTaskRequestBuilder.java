@@ -8,16 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TodoTask;
-import com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.AttachmentBaseRequestBuilder;
-import com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder;
-import com.microsoft.graph.requests.AttachmentSessionRequestBuilder;
-import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ChecklistItemRequestBuilder;
-import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.LinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.LinkedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -72,8 +62,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public AttachmentBaseCollectionRequestBuilder attachments() {
-        return new AttachmentBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    public com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder attachments() {
+        return new com.microsoft.graph.requests.AttachmentBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
     /**
@@ -83,8 +73,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public AttachmentBaseRequestBuilder attachments(@Nonnull final String id) {
-        return new AttachmentBaseRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AttachmentBaseRequestBuilder attachments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttachmentBaseRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AttachmentSession collection
@@ -92,8 +82,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public AttachmentSessionCollectionRequestBuilder attachmentSessions() {
-        return new AttachmentSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions"), getClient(), null);
+    public com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder attachmentSessions() {
+        return new com.microsoft.graph.requests.AttachmentSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions"), getClient(), null);
     }
 
     /**
@@ -103,8 +93,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public AttachmentSessionRequestBuilder attachmentSessions(@Nonnull final String id) {
-        return new AttachmentSessionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AttachmentSessionRequestBuilder attachmentSessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttachmentSessionRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentSessions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ChecklistItem collection
@@ -112,8 +102,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public ChecklistItemCollectionRequestBuilder checklistItems() {
-        return new ChecklistItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems"), getClient(), null);
+    public com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder checklistItems() {
+        return new com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems"), getClient(), null);
     }
 
     /**
@@ -123,8 +113,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public ChecklistItemRequestBuilder checklistItems(@Nonnull final String id) {
-        return new ChecklistItemRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ChecklistItemRequestBuilder checklistItems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ChecklistItemRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Extension collection
@@ -132,8 +122,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public ExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public com.microsoft.graph.requests.ExtensionCollectionRequestBuilder extensions() {
+        return new com.microsoft.graph.requests.ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
     /**
@@ -143,8 +133,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExtensionRequestBuilder extensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the LinkedResource collection
@@ -152,8 +142,8 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @return the collection request builder
      */
     @Nonnull
-    public LinkedResourceCollectionRequestBuilder linkedResources() {
-        return new LinkedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
+    public com.microsoft.graph.requests.LinkedResourceCollectionRequestBuilder linkedResources() {
+        return new com.microsoft.graph.requests.LinkedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
     }
 
     /**
@@ -163,7 +153,7 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
      * @param id the item identifier
      */
     @Nonnull
-    public LinkedResourceRequestBuilder linkedResources(@Nonnull final String id) {
-        return new LinkedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.LinkedResourceRequestBuilder linkedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LinkedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
     }
 }

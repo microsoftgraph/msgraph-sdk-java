@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AdministrativeUnit;
-import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
@@ -39,7 +36,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
 	@Nullable
-    public AdministrativeUnitCollectionPage administrativeUnits;
+    public com.microsoft.graph.requests.AdministrativeUnitCollectionPage administrativeUnits;
 
     /**
      * The Deleted Items.
@@ -48,7 +45,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage deletedItems;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage deletedItems;
 
     /**
      * The Federation Configurations.
@@ -57,7 +54,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "federationConfigurations", alternate = {"FederationConfigurations"})
     @Expose
 	@Nullable
-    public IdentityProviderBaseCollectionPage federationConfigurations;
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage federationConfigurations;
 
 
     /**
@@ -70,15 +67,15 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("administrativeUnits")) {
-            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), com.microsoft.graph.requests.AdministrativeUnitCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {
-            deletedItems = serializer.deserializeObject(json.get("deletedItems"), DirectoryObjectCollectionPage.class);
+            deletedItems = serializer.deserializeObject(json.get("deletedItems"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("federationConfigurations")) {
-            federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), IdentityProviderBaseCollectionPage.class);
+            federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
         }
     }
 }

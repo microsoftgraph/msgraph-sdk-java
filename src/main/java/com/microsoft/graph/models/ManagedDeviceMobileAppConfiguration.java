@@ -9,10 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationDeviceSummary;
-import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
@@ -95,7 +92,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Statuses.
@@ -104,7 +101,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The Device Status Summary.
@@ -122,7 +119,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
 	@Nullable
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
+    public com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
     /**
      * The User Status Summary.
@@ -144,15 +141,15 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses"), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
         }
     }
 }

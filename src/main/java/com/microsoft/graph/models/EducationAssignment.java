@@ -16,10 +16,7 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationAssignmentGradeType;
 import com.microsoft.graph.models.EducationItemBody;
 import com.microsoft.graph.models.EducationAssignmentStatus;
-import com.microsoft.graph.models.EducationCategory;
-import com.microsoft.graph.models.EducationAssignmentResource;
 import com.microsoft.graph.models.EducationRubric;
-import com.microsoft.graph.models.EducationSubmission;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationCategoryCollectionPage;
 import com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage;
@@ -60,7 +57,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Late Submissions.
-     * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
+     * Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
      */
     @SerializedName(value = "allowLateSubmissions", alternate = {"AllowLateSubmissions"})
     @Expose
@@ -78,7 +75,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Assign Date Time.
-     * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "assignDateTime", alternate = {"AssignDateTime"})
     @Expose
@@ -195,7 +192,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Channel Url.
-     * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
+     * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
      */
     @SerializedName(value = "notificationChannelUrl", alternate = {"NotificationChannelUrl"})
     @Expose
@@ -213,7 +210,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -236,7 +233,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
 	@Nullable
-    public EducationCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.EducationCategoryCollectionPage categories;
 
     /**
      * The Resources.
@@ -245,7 +242,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
 	@Nullable
-    public EducationAssignmentResourceCollectionPage resources;
+    public com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage resources;
 
     /**
      * The Rubric.
@@ -263,7 +260,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @SerializedName(value = "submissions", alternate = {"Submissions"})
     @Expose
 	@Nullable
-    public EducationSubmissionCollectionPage submissions;
+    public com.microsoft.graph.requests.EducationSubmissionCollectionPage submissions;
 
 
     /**
@@ -276,15 +273,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), EducationCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.EducationCategoryCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            resources = serializer.deserializeObject(json.get("resources"), EducationAssignmentResourceCollectionPage.class);
+            resources = serializer.deserializeObject(json.get("resources"), com.microsoft.graph.requests.EducationAssignmentResourceCollectionPage.class);
         }
 
         if (json.has("submissions")) {
-            submissions = serializer.deserializeObject(json.get("submissions"), EducationSubmissionCollectionPage.class);
+            submissions = serializer.deserializeObject(json.get("submissions"), com.microsoft.graph.requests.EducationSubmissionCollectionPage.class);
         }
     }
 }

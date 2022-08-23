@@ -10,9 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Identity;
-import com.microsoft.graph.models.UnifiedRoleManagementPolicyRule;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -99,7 +97,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
     @SerializedName(value = "effectiveRules", alternate = {"EffectiveRules"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyRuleCollectionPage effectiveRules;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage effectiveRules;
 
     /**
      * The Rules.
@@ -108,7 +106,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose
 	@Nullable
-    public UnifiedRoleManagementPolicyRuleCollectionPage rules;
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage rules;
 
 
     /**
@@ -121,11 +119,11 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
 
         if (json.has("effectiveRules")) {
-            effectiveRules = serializer.deserializeObject(json.get("effectiveRules"), UnifiedRoleManagementPolicyRuleCollectionPage.class);
+            effectiveRules = serializer.deserializeObject(json.get("effectiveRules"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage.class);
         }
 
         if (json.has("rules")) {
-            rules = serializer.deserializeObject(json.get("rules"), UnifiedRoleManagementPolicyRuleCollectionPage.class);
+            rules = serializer.deserializeObject(json.get("rules"), com.microsoft.graph.requests.UnifiedRoleManagementPolicyRuleCollectionPage.class);
         }
     }
 }

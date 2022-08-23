@@ -11,9 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.externalconnectors.models.Configuration;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
-import com.microsoft.graph.externalconnectors.models.ExternalGroup;
-import com.microsoft.graph.externalconnectors.models.ExternalItem;
-import com.microsoft.graph.externalconnectors.models.ConnectionOperation;
 import com.microsoft.graph.externalconnectors.models.Schema;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage;
@@ -64,7 +61,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
+     * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -78,7 +75,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
 	@Nullable
-    public ExternalGroupCollectionPage groups;
+    public com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage groups;
 
     /**
      * The Items.
@@ -87,7 +84,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public ExternalItemCollectionPage items;
+    public com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionPage items;
 
     /**
      * The Operations.
@@ -96,7 +93,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
-    public ConnectionOperationCollectionPage operations;
+    public com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionPage operations;
 
     /**
      * The Schema.
@@ -118,15 +115,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("groups")) {
-            groups = serializer.deserializeObject(json.get("groups"), ExternalGroupCollectionPage.class);
+            groups = serializer.deserializeObject(json.get("groups"), com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), ExternalItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations"), ConnectionOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionPage.class);
         }
     }
 }

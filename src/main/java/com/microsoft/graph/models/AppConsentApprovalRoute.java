@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AppConsentRequestCollectionPage;
 
@@ -35,7 +34,7 @@ public class AppConsentApprovalRoute extends Entity implements IJsonBackedObject
     @SerializedName(value = "appConsentRequests", alternate = {"AppConsentRequests"})
     @Expose
 	@Nullable
-    public AppConsentRequestCollectionPage appConsentRequests;
+    public com.microsoft.graph.requests.AppConsentRequestCollectionPage appConsentRequests;
 
 
     /**
@@ -48,7 +47,7 @@ public class AppConsentApprovalRoute extends Entity implements IJsonBackedObject
 
 
         if (json.has("appConsentRequests")) {
-            appConsentRequests = serializer.deserializeObject(json.get("appConsentRequests"), AppConsentRequestCollectionPage.class);
+            appConsentRequests = serializer.deserializeObject(json.get("appConsentRequests"), com.microsoft.graph.requests.AppConsentRequestCollectionPage.class);
         }
     }
 }

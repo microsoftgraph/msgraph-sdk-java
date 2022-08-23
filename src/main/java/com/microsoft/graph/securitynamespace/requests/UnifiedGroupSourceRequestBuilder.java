@@ -8,7 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.UnifiedGroupSource;
-import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder<Unified
      * @return the GroupWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public GroupWithReferenceRequestBuilder group() {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
+    public com.microsoft.graph.requests.GroupWithReferenceRequestBuilder group() {
+        return new com.microsoft.graph.requests.GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
 }

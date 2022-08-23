@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.TeamInfo;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 
@@ -42,7 +41,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements IJsonBackedOb
      * A collection of team members who have access to the shared channel.
      */
 	@Nullable
-    public ConversationMemberCollectionPage allowedMembers;
+    public com.microsoft.graph.requests.ConversationMemberCollectionPage allowedMembers;
 
 
     /**
@@ -55,7 +54,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements IJsonBackedOb
 
 
         if (json.has("allowedMembers")) {
-            allowedMembers = serializer.deserializeObject(json.get("allowedMembers"), ConversationMemberCollectionPage.class);
+            allowedMembers = serializer.deserializeObject(json.get("allowedMembers"), com.microsoft.graph.requests.ConversationMemberCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AgreementAcceptance;
-import com.microsoft.graph.models.Agreement;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AgreementAcceptanceCollectionPage;
 import com.microsoft.graph.requests.AgreementCollectionPage;
@@ -37,7 +35,7 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agreementAcceptances", alternate = {"AgreementAcceptances"})
     @Expose
 	@Nullable
-    public AgreementAcceptanceCollectionPage agreementAcceptances;
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionPage agreementAcceptances;
 
     /**
      * The Agreements.
@@ -46,7 +44,7 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
     @SerializedName(value = "agreements", alternate = {"Agreements"})
     @Expose
 	@Nullable
-    public AgreementCollectionPage agreements;
+    public com.microsoft.graph.requests.AgreementCollectionPage agreements;
 
 
     /**
@@ -59,11 +57,11 @@ public class TermsOfUseContainer extends Entity implements IJsonBackedObject {
 
 
         if (json.has("agreementAcceptances")) {
-            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), AgreementAcceptanceCollectionPage.class);
+            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionPage.class);
         }
 
         if (json.has("agreements")) {
-            agreements = serializer.deserializeObject(json.get("agreements"), AgreementCollectionPage.class);
+            agreements = serializer.deserializeObject(json.get("agreements"), com.microsoft.graph.requests.AgreementCollectionPage.class);
         }
     }
 }

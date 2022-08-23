@@ -41,7 +41,7 @@ public class SearchAlteration implements IJsonBackedObject {
 
     /**
      * The Altered Highlighted Query String.
-     * Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
+     * Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      */
     @SerializedName(value = "alteredHighlightedQueryString", alternate = {"AlteredHighlightedQueryString"})
     @Expose
@@ -59,7 +59,7 @@ public class SearchAlteration implements IJsonBackedObject {
 
     /**
      * The Altered Query Tokens.
-     * Represents changed segments with respect to original query.
+     * Represents changed segments related to an original user query.
      */
     @SerializedName(value = "alteredQueryTokens", alternate = {"AlteredQueryTokens"})
     @Expose

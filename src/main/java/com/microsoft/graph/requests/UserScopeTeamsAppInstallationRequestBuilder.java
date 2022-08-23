@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
-import com.microsoft.graph.requests.ChatWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * @return the TeamsAppWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppWithReferenceRequestBuilder teamsApp() {
-        return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder teamsApp() {
+        return new com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
     }
 
     /**
@@ -74,8 +73,8 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * @return the TeamsAppDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
-        return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
+        return new com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 
     /**
@@ -84,8 +83,8 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * @return the ChatWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ChatWithReferenceRequestBuilder chat() {
-        return new ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
+    public com.microsoft.graph.requests.ChatWithReferenceRequestBuilder chat() {
+        return new com.microsoft.graph.requests.ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
     }
 
     /**

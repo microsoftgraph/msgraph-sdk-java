@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookTableColumn;
 import com.microsoft.graph.models.WorkbookRange;
-import com.microsoft.graph.requests.WorkbookFilterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +64,8 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder<Workbo
      * @return the WorkbookFilterRequestBuilder instance
      */
     @Nonnull
-    public WorkbookFilterRequestBuilder filter() {
-        return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookFilterRequestBuilder filter() {
+        return new com.microsoft.graph.requests.WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
     }
 
     /**

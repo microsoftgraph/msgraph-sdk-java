@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.RiskDetection;
-import com.microsoft.graph.models.RiskyUser;
 import com.microsoft.graph.requests.RiskDetectionCollectionPage;
 import com.microsoft.graph.requests.RiskyUserCollectionPage;
 
@@ -49,7 +47,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "riskDetections", alternate = {"RiskDetections"})
     @Expose
 	@Nullable
-    public RiskDetectionCollectionPage riskDetections;
+    public com.microsoft.graph.requests.RiskDetectionCollectionPage riskDetections;
 
     /**
      * The Risky Users.
@@ -58,7 +56,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
     @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
 	@Nullable
-    public RiskyUserCollectionPage riskyUsers;
+    public com.microsoft.graph.requests.RiskyUserCollectionPage riskyUsers;
 
 
     /**
@@ -71,11 +69,11 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
 
         if (json.has("riskDetections")) {
-            riskDetections = serializer.deserializeObject(json.get("riskDetections"), RiskDetectionCollectionPage.class);
+            riskDetections = serializer.deserializeObject(json.get("riskDetections"), com.microsoft.graph.requests.RiskDetectionCollectionPage.class);
         }
 
         if (json.has("riskyUsers")) {
-            riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), RiskyUserCollectionPage.class);
+            riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), com.microsoft.graph.requests.RiskyUserCollectionPage.class);
         }
     }
 }

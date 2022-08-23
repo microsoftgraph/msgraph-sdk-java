@@ -11,8 +11,6 @@ import com.microsoft.graph.models.OnenotePage;
 import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.graph.models.OnenotePatchContentCommand;
 import com.microsoft.graph.models.OnenotePagePreview;
-import com.microsoft.graph.requests.NotebookRequestBuilder;
-import com.microsoft.graph.requests.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +68,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @return the NotebookRequestBuilder instance
      */
     @Nonnull
-    public NotebookRequestBuilder parentNotebook() {
-        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
+    public com.microsoft.graph.requests.NotebookRequestBuilder parentNotebook() {
+        return new com.microsoft.graph.requests.NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
@@ -80,8 +78,8 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder<OnenotePage> {
      * @return the OnenoteSectionRequestBuilder instance
      */
     @Nonnull
-    public OnenoteSectionRequestBuilder parentSection() {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
+    public com.microsoft.graph.requests.OnenoteSectionRequestBuilder parentSection() {
+        return new com.microsoft.graph.requests.OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
 
     /**

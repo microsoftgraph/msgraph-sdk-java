@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookRangeView;
 import com.microsoft.graph.models.WorkbookRange;
-import com.microsoft.graph.requests.WorkbookRangeViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeViewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder<Workbook
      * @return the collection request builder
      */
     @Nonnull
-    public WorkbookRangeViewCollectionRequestBuilder rows() {
-        return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeViewCollectionRequestBuilder rows() {
+        return new com.microsoft.graph.requests.WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder<Workbook
      * @param id the item identifier
      */
     @Nonnull
-    public WorkbookRangeViewRequestBuilder rows(@Nonnull final String id) {
-        return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRangeViewRequestBuilder rows(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
     /**

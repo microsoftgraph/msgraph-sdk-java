@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintTask;
-import com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskTriggerWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class PrintTaskRequestBuilder extends BaseRequestBuilder<PrintTask> {
      * @return the PrintTaskDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrintTaskDefinitionWithReferenceRequestBuilder definition() {
-        return new PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder definition() {
+        return new com.microsoft.graph.requests.PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PrintTaskRequestBuilder extends BaseRequestBuilder<PrintTask> {
      * @return the PrintTaskTriggerWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public PrintTaskTriggerWithReferenceRequestBuilder trigger() {
-        return new PrintTaskTriggerWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("trigger"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskTriggerWithReferenceRequestBuilder trigger() {
+        return new com.microsoft.graph.requests.PrintTaskTriggerWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("trigger"), getClient(), null);
     }
 }

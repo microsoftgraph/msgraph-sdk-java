@@ -8,14 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ContactFolder;
-import com.microsoft.graph.requests.ContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.ContactFolderRequestBuilder;
-import com.microsoft.graph.requests.ContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.ContactRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @return the collection request builder
      */
     @Nonnull
-    public ContactFolderCollectionRequestBuilder childFolders() {
-        return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
+    public com.microsoft.graph.requests.ContactFolderCollectionRequestBuilder childFolders() {
+        return new com.microsoft.graph.requests.ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @param id the item identifier
      */
     @Nonnull
-    public ContactFolderRequestBuilder childFolders(@Nonnull final String id) {
-        return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ContactFolderRequestBuilder childFolders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Contact collection
@@ -90,8 +82,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @return the collection request builder
      */
     @Nonnull
-    public ContactCollectionRequestBuilder contacts() {
-        return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
+    public com.microsoft.graph.requests.ContactCollectionRequestBuilder contacts() {
+        return new com.microsoft.graph.requests.ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
     }
 
     /**
@@ -101,8 +93,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @param id the item identifier
      */
     @Nonnull
-    public ContactRequestBuilder contacts(@Nonnull final String id) {
-        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ContactRequestBuilder contacts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
@@ -110,8 +102,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @return the collection request builder
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @param id the item identifier
      */
     @Nonnull
-    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
-        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
@@ -130,8 +122,8 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @return the collection request builder
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
     /**
@@ -141,7 +133,7 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder<ContactFolde
      * @param id the item identifier
      */
     @Nonnull
-    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
-        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 }

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.AgreementFileProperties;
 import com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage;
 
@@ -35,7 +34,7 @@ public class AgreementFile extends AgreementFileProperties implements IJsonBacke
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose
 	@Nullable
-    public AgreementFileLocalizationCollectionPage localizations;
+    public com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage localizations;
 
 
     /**
@@ -48,7 +47,7 @@ public class AgreementFile extends AgreementFileProperties implements IJsonBacke
 
 
         if (json.has("localizations")) {
-            localizations = serializer.deserializeObject(json.get("localizations"), AgreementFileLocalizationCollectionPage.class);
+            localizations = serializer.deserializeObject(json.get("localizations"), com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage.class);
         }
     }
 }

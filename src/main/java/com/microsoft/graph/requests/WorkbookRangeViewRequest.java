@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookRangeView;
 import com.microsoft.graph.models.WorkbookRange;
-import com.microsoft.graph.requests.WorkbookRangeViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRangeViewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -8,17 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.List;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.DriveRequestBuilder;
-import com.microsoft.graph.requests.ListItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.ListItemRequestBuilder;
-import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
-import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.SubscriptionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +63,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -84,8 +73,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
@@ -93,8 +82,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the collection request builder
      */
     @Nonnull
-    public ColumnDefinitionCollectionRequestBuilder columns() {
-        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder columns() {
+        return new com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
     /**
@@ -104,8 +93,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param id the item identifier
      */
     @Nonnull
-    public ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
-        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ColumnDefinitionRequestBuilder columns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ContentType collection
@@ -113,8 +102,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the collection request builder
      */
     @Nonnull
-    public ContentTypeCollectionRequestBuilder contentTypes() {
-        return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder contentTypes() {
+        return new com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
     /**
@@ -124,8 +113,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param id the item identifier
      */
     @Nonnull
-    public ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
-        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ContentTypeRequestBuilder contentTypes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
@@ -134,8 +123,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the DriveRequestBuilder instance
      */
     @Nonnull
-    public DriveRequestBuilder drive() {
-        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
+    public com.microsoft.graph.requests.DriveRequestBuilder drive() {
+        return new com.microsoft.graph.requests.DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ListItem collection
@@ -143,8 +132,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the collection request builder
      */
     @Nonnull
-    public ListItemCollectionRequestBuilder items() {
-        return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemCollectionRequestBuilder items() {
+        return new com.microsoft.graph.requests.ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
     /**
@@ -154,8 +143,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param id the item identifier
      */
     @Nonnull
-    public ListItemRequestBuilder items(@Nonnull final String id) {
-        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ListItemRequestBuilder items(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RichLongRunningOperation collection
@@ -163,8 +152,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the collection request builder
      */
     @Nonnull
-    public RichLongRunningOperationCollectionRequestBuilder operations() {
-        return new RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     /**
@@ -174,8 +163,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param id the item identifier
      */
     @Nonnull
-    public RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
-        return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Subscription collection
@@ -183,8 +172,8 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @return the collection request builder
      */
     @Nonnull
-    public SubscriptionCollectionRequestBuilder subscriptions() {
-        return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
+    public com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder subscriptions() {
+        return new com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
 
     /**
@@ -194,7 +183,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param id the item identifier
      */
     @Nonnull
-    public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
-        return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
 }

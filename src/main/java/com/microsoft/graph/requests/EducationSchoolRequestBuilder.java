@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationSchool;
-import com.microsoft.graph.requests.AdministrativeUnitWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.EducationUserWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +63,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @return the AdministrativeUnitWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AdministrativeUnitWithReferenceRequestBuilder administrativeUnit() {
-        return new AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
+    public com.microsoft.graph.requests.AdministrativeUnitWithReferenceRequestBuilder administrativeUnit() {
+        return new com.microsoft.graph.requests.AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationClass collection
@@ -77,8 +72,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @return the collection request builder
      */
     @Nonnull
-    public EducationClassCollectionWithReferencesRequestBuilder classes() {
-        return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
+    public com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder classes() {
+        return new com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
     /**
@@ -88,8 +83,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @param id the item identifier
      */
     @Nonnull
-    public EducationClassWithReferenceRequestBuilder classes(@Nonnull final String id) {
-        return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder classes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the EducationUser collection
@@ -97,8 +92,8 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @return the collection request builder
      */
     @Nonnull
-    public EducationUserCollectionWithReferencesRequestBuilder users() {
-        return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    public com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder users() {
+        return new com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
     /**
@@ -108,7 +103,7 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
      * @param id the item identifier
      */
     @Nonnull
-    public EducationUserWithReferenceRequestBuilder users(@Nonnull final String id) {
-        return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.EducationUserWithReferenceRequestBuilder users(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

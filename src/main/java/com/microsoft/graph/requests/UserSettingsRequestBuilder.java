@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserSettings;
-import com.microsoft.graph.requests.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
      * @return the ShiftPreferencesRequestBuilder instance
      */
     @Nonnull
-    public ShiftPreferencesRequestBuilder shiftPreferences() {
-        return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
+    public com.microsoft.graph.requests.ShiftPreferencesRequestBuilder shiftPreferences() {
+        return new com.microsoft.graph.requests.ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
     }
 }

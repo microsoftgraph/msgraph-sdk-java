@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
-import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
 
@@ -31,7 +30,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * DateTime when review stage is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. This property is the cumulative total of the durationInDays for all stages. Read-only.
+     * The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -58,7 +57,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * DateTime when review stage is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -81,7 +80,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceDecisionItemCollectionPage decisions;
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage decisions;
 
 
     /**
@@ -94,7 +93,7 @@ public class AccessReviewStage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("decisions")) {
-            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+            decisions = serializer.deserializeObject(json.get("decisions"), com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage.class);
         }
     }
 }

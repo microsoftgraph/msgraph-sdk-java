@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PrintServiceEndpoint;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PrintServiceEndpointCollectionPage;
 
@@ -35,7 +34,7 @@ public class PrintService extends Entity implements IJsonBackedObject {
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
 	@Nullable
-    public PrintServiceEndpointCollectionPage endpoints;
+    public com.microsoft.graph.requests.PrintServiceEndpointCollectionPage endpoints;
 
 
     /**
@@ -48,7 +47,7 @@ public class PrintService extends Entity implements IJsonBackedObject {
 
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints"), PrintServiceEndpointCollectionPage.class);
+            endpoints = serializer.deserializeObject(json.get("endpoints"), com.microsoft.graph.requests.PrintServiceEndpointCollectionPage.class);
         }
     }
 }

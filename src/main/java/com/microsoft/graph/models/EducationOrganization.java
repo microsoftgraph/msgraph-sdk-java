@@ -46,7 +46,7 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * Where this user was created from. Possible values are: sis, lms, or manual.
+     * Source where this organization was created from. Possible values are: sis, manual.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionRequestBuilder;
-import com.microsoft.graph.requests.BitlockerRecoveryKeyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder<Bitlocker> {
      * @return the collection request builder
      */
     @Nonnull
-    public BitlockerRecoveryKeyCollectionRequestBuilder recoveryKeys() {
-        return new BitlockerRecoveryKeyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys"), getClient(), null);
+    public com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionRequestBuilder recoveryKeys() {
+        return new com.microsoft.graph.requests.BitlockerRecoveryKeyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder<Bitlocker> {
      * @param id the item identifier
      */
     @Nonnull
-    public BitlockerRecoveryKeyRequestBuilder recoveryKeys(@Nonnull final String id) {
-        return new BitlockerRecoveryKeyRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.BitlockerRecoveryKeyRequestBuilder recoveryKeys(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BitlockerRecoveryKeyRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys") + "/" + id, getClient(), null);
     }
 }

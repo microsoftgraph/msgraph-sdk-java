@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SharedWithChannelTeamInfo;
-import com.microsoft.graph.requests.ConversationMemberCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.ConversationMemberWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class SharedWithChannelTeamInfoRequestBuilder extends BaseRequestBuilder<
      * @return the TeamWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamWithReferenceRequestBuilder team() {
-        return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    public com.microsoft.graph.requests.TeamWithReferenceRequestBuilder team() {
+        return new com.microsoft.graph.requests.TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ConversationMember collection
@@ -74,8 +72,8 @@ public class SharedWithChannelTeamInfoRequestBuilder extends BaseRequestBuilder<
      * @return the collection request builder
      */
     @Nonnull
-    public ConversationMemberCollectionWithReferencesRequestBuilder allowedMembers() {
-        return new ConversationMemberCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedMembers"), getClient(), null);
+    public com.microsoft.graph.requests.ConversationMemberCollectionWithReferencesRequestBuilder allowedMembers() {
+        return new com.microsoft.graph.requests.ConversationMemberCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allowedMembers"), getClient(), null);
     }
 
     /**
@@ -85,7 +83,7 @@ public class SharedWithChannelTeamInfoRequestBuilder extends BaseRequestBuilder<
      * @param id the item identifier
      */
     @Nonnull
-    public ConversationMemberWithReferenceRequestBuilder allowedMembers(@Nonnull final String id) {
-        return new ConversationMemberWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedMembers") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConversationMemberWithReferenceRequestBuilder allowedMembers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConversationMemberWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allowedMembers") + "/" + id, getClient(), null);
     }
 }

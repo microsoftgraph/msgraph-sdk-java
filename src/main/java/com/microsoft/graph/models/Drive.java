@@ -13,10 +13,9 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.Quota;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.SystemFacet;
-import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.BaseItem;
-import com.microsoft.graph.requests.DriveItemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -85,7 +84,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "bundles", alternate = {"Bundles"})
     @Expose
 	@Nullable
-    public DriveItemCollectionPage bundles;
+    public com.microsoft.graph.requests.DriveItemCollectionPage bundles;
 
     /**
      * The Following.
@@ -94,7 +93,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "following", alternate = {"Following"})
     @Expose
 	@Nullable
-    public DriveItemCollectionPage following;
+    public com.microsoft.graph.requests.DriveItemCollectionPage following;
 
     /**
      * The Items.
@@ -103,7 +102,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
-    public DriveItemCollectionPage items;
+    public com.microsoft.graph.requests.DriveItemCollectionPage items;
 
     /**
      * The List.
@@ -130,7 +129,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "special", alternate = {"Special"})
     @Expose
 	@Nullable
-    public DriveItemCollectionPage special;
+    public com.microsoft.graph.requests.DriveItemCollectionPage special;
 
 
     /**
@@ -143,19 +142,19 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("bundles")) {
-            bundles = serializer.deserializeObject(json.get("bundles"), DriveItemCollectionPage.class);
+            bundles = serializer.deserializeObject(json.get("bundles"), com.microsoft.graph.requests.DriveItemCollectionPage.class);
         }
 
         if (json.has("following")) {
-            following = serializer.deserializeObject(json.get("following"), DriveItemCollectionPage.class);
+            following = serializer.deserializeObject(json.get("following"), com.microsoft.graph.requests.DriveItemCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items"), DriveItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), com.microsoft.graph.requests.DriveItemCollectionPage.class);
         }
 
         if (json.has("special")) {
-            special = serializer.deserializeObject(json.get("special"), DriveItemCollectionPage.class);
+            special = serializer.deserializeObject(json.get("special"), com.microsoft.graph.requests.DriveItemCollectionPage.class);
         }
     }
 }

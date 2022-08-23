@@ -28,7 +28,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time when the key was originally backed up to Azure Active Directory.
+     * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * ID of the device the BitLocker key is originally backed up from.
+     * Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -46,7 +46,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
 
     /**
      * The Key.
-     * The BitLocker recovery key.
+     * The BitLocker recovery key. Returned only on $select. Not nullable.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -55,7 +55,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
 
     /**
      * The Volume Type.
-     * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
+     * Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
      */
     @SerializedName(value = "volumeType", alternate = {"VolumeType"})
     @Expose

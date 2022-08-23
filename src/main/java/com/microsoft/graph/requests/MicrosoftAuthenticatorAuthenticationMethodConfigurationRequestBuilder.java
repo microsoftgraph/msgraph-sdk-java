@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodConfiguration;
-import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionRequestBuilder;
-import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfigurationRequestBuild
      * @return the collection request builder
      */
     @Nonnull
-    public MicrosoftAuthenticatorAuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
-        return new MicrosoftAuthenticatorAuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
+        return new com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfigurationRequestBuild
      * @param id the item identifier
      */
     @Nonnull
-    public MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
-        return new MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
     }
 }

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OrganizationalBrandingLocalization;
 import com.microsoft.graph.models.OrganizationalBrandingProperties;
 import com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionPage;
 
@@ -35,7 +34,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose
 	@Nullable
-    public OrganizationalBrandingLocalizationCollectionPage localizations;
+    public com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionPage localizations;
 
 
     /**
@@ -48,7 +47,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
 
 
         if (json.has("localizations")) {
-            localizations = serializer.deserializeObject(json.get("localizations"), OrganizationalBrandingLocalizationCollectionPage.class);
+            localizations = serializer.deserializeObject(json.get("localizations"), com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionPage.class);
         }
     }
 }

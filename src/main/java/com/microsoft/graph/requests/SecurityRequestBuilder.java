@@ -8,13 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
-import com.microsoft.graph.security.requests.CasesRootRequestBuilder;
-import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.AlertRequestBuilder;
-import com.microsoft.graph.requests.SecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.SecureScoreControlProfileRequestBuilder;
-import com.microsoft.graph.requests.SecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.SecureScoreRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +63,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @return the CasesRootRequestBuilder instance
      */
     @Nonnull
-    public CasesRootRequestBuilder cases() {
-        return new CasesRootRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
+    public com.microsoft.graph.security.requests.CasesRootRequestBuilder cases() {
+        return new com.microsoft.graph.security.requests.CasesRootRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Alert collection
@@ -79,8 +72,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @return the collection request builder
      */
     @Nonnull
-    public AlertCollectionRequestBuilder alerts() {
-        return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
+    public com.microsoft.graph.requests.AlertCollectionRequestBuilder alerts() {
+        return new com.microsoft.graph.requests.AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
     }
 
     /**
@@ -90,8 +83,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @param id the item identifier
      */
     @Nonnull
-    public AlertRequestBuilder alerts(@Nonnull final String id) {
-        return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AlertRequestBuilder alerts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SecureScoreControlProfile collection
@@ -99,8 +92,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @return the collection request builder
      */
     @Nonnull
-    public SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
-        return new SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
+    public com.microsoft.graph.requests.SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
+        return new com.microsoft.graph.requests.SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
     }
 
     /**
@@ -110,8 +103,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @param id the item identifier
      */
     @Nonnull
-    public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(@Nonnull final String id) {
-        return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SecureScore collection
@@ -119,8 +112,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @return the collection request builder
      */
     @Nonnull
-    public SecureScoreCollectionRequestBuilder secureScores() {
-        return new SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
+    public com.microsoft.graph.requests.SecureScoreCollectionRequestBuilder secureScores() {
+        return new com.microsoft.graph.requests.SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
     }
 
     /**
@@ -130,7 +123,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
      * @param id the item identifier
      */
     @Nonnull
-    public SecureScoreRequestBuilder secureScores(@Nonnull final String id) {
-        return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SecureScoreRequestBuilder secureScores(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
     }
 }

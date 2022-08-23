@@ -9,7 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.graph.models.ConsentRequestFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.ApprovalRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,7 +64,7 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder<UserCon
      * @return the ApprovalRequestBuilder instance
      */
     @Nonnull
-    public ApprovalRequestBuilder approval() {
-        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
+    public com.microsoft.graph.requests.ApprovalRequestBuilder approval() {
+        return new com.microsoft.graph.requests.ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
     }
 }

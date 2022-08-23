@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintService;
-import com.microsoft.graph.requests.PrintServiceEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintServiceEndpointRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder<PrintService>
      * @return the collection request builder
      */
     @Nonnull
-    public PrintServiceEndpointCollectionRequestBuilder endpoints() {
-        return new PrintServiceEndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
+    public com.microsoft.graph.requests.PrintServiceEndpointCollectionRequestBuilder endpoints() {
+        return new com.microsoft.graph.requests.PrintServiceEndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder<PrintService>
      * @param id the item identifier
      */
     @Nonnull
-    public PrintServiceEndpointRequestBuilder endpoints(@Nonnull final String id) {
-        return new PrintServiceEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintServiceEndpointRequestBuilder endpoints(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintServiceEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
     }
 }

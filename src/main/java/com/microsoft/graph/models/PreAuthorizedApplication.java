@@ -40,7 +40,7 @@ public class PreAuthorizedApplication implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the client application.
+     * The unique identifier for the application.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose

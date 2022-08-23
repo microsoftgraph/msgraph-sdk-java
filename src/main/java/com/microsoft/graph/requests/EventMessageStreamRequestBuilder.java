@@ -10,7 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EventMessage;
 import com.microsoft.graph.models.Recipient;
 import com.microsoft.graph.models.Message;
-import com.microsoft.graph.requests.EventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -11,9 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
-import com.microsoft.graph.models.AccessReviewReviewer;
-import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
-import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewReviewerCollectionPage;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
@@ -95,7 +92,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @SerializedName(value = "contactedReviewers", alternate = {"ContactedReviewers"})
     @Expose
 	@Nullable
-    public AccessReviewReviewerCollectionPage contactedReviewers;
+    public com.microsoft.graph.requests.AccessReviewReviewerCollectionPage contactedReviewers;
 
     /**
      * The Decisions.
@@ -104,7 +101,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
 	@Nullable
-    public AccessReviewInstanceDecisionItemCollectionPage decisions;
+    public com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage decisions;
 
     /**
      * The Stages.
@@ -113,7 +110,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @SerializedName(value = "stages", alternate = {"Stages"})
     @Expose
 	@Nullable
-    public AccessReviewStageCollectionPage stages;
+    public com.microsoft.graph.requests.AccessReviewStageCollectionPage stages;
 
 
     /**
@@ -126,15 +123,15 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
 
         if (json.has("contactedReviewers")) {
-            contactedReviewers = serializer.deserializeObject(json.get("contactedReviewers"), AccessReviewReviewerCollectionPage.class);
+            contactedReviewers = serializer.deserializeObject(json.get("contactedReviewers"), com.microsoft.graph.requests.AccessReviewReviewerCollectionPage.class);
         }
 
         if (json.has("decisions")) {
-            decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);
+            decisions = serializer.deserializeObject(json.get("decisions"), com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage.class);
         }
 
         if (json.has("stages")) {
-            stages = serializer.deserializeObject(json.get("stages"), AccessReviewStageCollectionPage.class);
+            stages = serializer.deserializeObject(json.get("stages"), com.microsoft.graph.requests.AccessReviewStageCollectionPage.class);
         }
     }
 }

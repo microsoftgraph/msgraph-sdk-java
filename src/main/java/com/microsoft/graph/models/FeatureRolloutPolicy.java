@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.StagedFeatureName;
-import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 
@@ -81,7 +80,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
 	@Nullable
-    public DirectoryObjectCollectionPage appliesTo;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage appliesTo;
 
 
     /**
@@ -94,7 +93,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appliesTo")) {
-            appliesTo = serializer.deserializeObject(json.get("appliesTo"), DirectoryObjectCollectionPage.class);
+            appliesTo = serializer.deserializeObject(json.get("appliesTo"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OrganizationalBranding;
-import com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder<Org
      * @return the collection request builder
      */
     @Nonnull
-    public OrganizationalBrandingLocalizationCollectionRequestBuilder localizations() {
-        return new OrganizationalBrandingLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizations"), getClient(), null);
+    public com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder localizations() {
+        return new com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("localizations"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class OrganizationalBrandingRequestBuilder extends BaseRequestBuilder<Org
      * @param id the item identifier
      */
     @Nonnull
-    public OrganizationalBrandingLocalizationRequestBuilder localizations(@Nonnull final String id) {
-        return new OrganizationalBrandingLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder localizations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("localizations") + "/" + id, getClient(), null);
     }
 }

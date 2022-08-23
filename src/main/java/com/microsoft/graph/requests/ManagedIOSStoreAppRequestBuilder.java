@@ -64,8 +64,8 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder<Managed
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppAssignmentCollectionRequestBuilder assignments() {
-        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
     /**
@@ -75,8 +75,8 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder<Managed
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
-        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the MobileAppCategory collection
@@ -84,8 +84,8 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder<Managed
      * @return the collection request builder
      */
     @Nonnull
-    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
-        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
     /**
@@ -95,8 +95,8 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder<Managed
      * @param id the item identifier
      */
     @Nonnull
-    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
-        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 
     /**

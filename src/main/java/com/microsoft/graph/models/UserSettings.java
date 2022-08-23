@@ -28,7 +28,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Contribution To Content Discovery As Organization Disabled.
-     * Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * 
      */
     @SerializedName(value = "contributionToContentDiscoveryAsOrganizationDisabled", alternate = {"ContributionToContentDiscoveryAsOrganizationDisabled"})
     @Expose
@@ -37,7 +37,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Contribution To Content Discovery Disabled.
-     * When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * 
      */
     @SerializedName(value = "contributionToContentDiscoveryDisabled", alternate = {"ContributionToContentDiscoveryDisabled"})
     @Expose
@@ -46,7 +46,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Shift Preferences.
-     * The shift preferences for the user.
+     * 
      */
     @SerializedName(value = "shiftPreferences", alternate = {"ShiftPreferences"})
     @Expose

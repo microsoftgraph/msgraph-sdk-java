@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ListItemVersion;
-import com.microsoft.graph.requests.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder<ListItemVe
      * @return the FieldValueSetRequestBuilder instance
      */
     @Nonnull
-    public FieldValueSetRequestBuilder fields() {
-        return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
+    public com.microsoft.graph.requests.FieldValueSetRequestBuilder fields() {
+        return new com.microsoft.graph.requests.FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 
     /**

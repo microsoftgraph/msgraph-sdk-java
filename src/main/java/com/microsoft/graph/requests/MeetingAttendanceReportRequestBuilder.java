@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MeetingAttendanceReport;
-import com.microsoft.graph.requests.AttendanceRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.AttendanceRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder<Me
      * @return the collection request builder
      */
     @Nonnull
-    public AttendanceRecordCollectionRequestBuilder attendanceRecords() {
-        return new AttendanceRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceRecords"), getClient(), null);
+    public com.microsoft.graph.requests.AttendanceRecordCollectionRequestBuilder attendanceRecords() {
+        return new com.microsoft.graph.requests.AttendanceRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceRecords"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder<Me
      * @param id the item identifier
      */
     @Nonnull
-    public AttendanceRecordRequestBuilder attendanceRecords(@Nonnull final String id) {
-        return new AttendanceRecordRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceRecords") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AttendanceRecordRequestBuilder attendanceRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttendanceRecordRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceRecords") + "/" + id, getClient(), null);
     }
 }
