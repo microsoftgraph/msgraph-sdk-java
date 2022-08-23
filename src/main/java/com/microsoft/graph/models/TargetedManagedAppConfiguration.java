@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ManagedMobileApp;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.ManagedAppConfiguration;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -56,7 +54,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Assignments.
@@ -65,7 +63,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Deployment Summary.
@@ -87,11 +85,11 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

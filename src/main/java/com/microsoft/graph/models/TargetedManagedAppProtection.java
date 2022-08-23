@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedAppProtection;
 import com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage;
 
@@ -44,7 +43,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -57,7 +56,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

@@ -41,7 +41,7 @@ public class SearchAggregation implements IJsonBackedObject {
 
     /**
      * The Buckets.
-     * Defines the actual buckets of the computed aggregation.
+     * 
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -50,7 +50,7 @@ public class SearchAggregation implements IJsonBackedObject {
 
     /**
      * The Field.
-     * Defines on which field the aggregation was computed on.
+     * 
      */
     @SerializedName(value = "field", alternate = {"Field"})
     @Expose

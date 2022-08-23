@@ -18,7 +18,6 @@ import com.microsoft.graph.models.SubjectRightsRequestDetail;
 import com.microsoft.graph.models.SubjectRightsRequestStageDetail;
 import com.microsoft.graph.models.SubjectRightsRequestStatus;
 import com.microsoft.graph.models.SubjectRightsRequestType;
-import com.microsoft.graph.models.AuthoredNote;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthoredNoteCollectionPage;
@@ -175,7 +174,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the request. Possible values are: active, closed, unknownFutureValue.
+     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -184,7 +183,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
+     * The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -193,12 +192,12 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * List of notes associated with the request.
+     * List of notes associcated with the request.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
 	@Nullable
-    public AuthoredNoteCollectionPage notes;
+    public com.microsoft.graph.requests.AuthoredNoteCollectionPage notes;
 
     /**
      * The Team.
@@ -220,7 +219,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
 
         if (json.has("notes")) {
-            notes = serializer.deserializeObject(json.get("notes"), AuthoredNoteCollectionPage.class);
+            notes = serializer.deserializeObject(json.get("notes"), com.microsoft.graph.requests.AuthoredNoteCollectionPage.class);
         }
     }
 }

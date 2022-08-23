@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ContactFolder;
-import com.microsoft.graph.models.Contact;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ContactFolderCollectionPage;
 import com.microsoft.graph.requests.ContactCollectionPage;
@@ -59,7 +55,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
 	@Nullable
-    public ContactFolderCollectionPage childFolders;
+    public com.microsoft.graph.requests.ContactFolderCollectionPage childFolders;
 
     /**
      * The Contacts.
@@ -68,7 +64,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
 	@Nullable
-    public ContactCollectionPage contacts;
+    public com.microsoft.graph.requests.ContactCollectionPage contacts;
 
     /**
      * The Multi Value Extended Properties.
@@ -77,7 +73,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -86,7 +82,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -99,19 +95,19 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders"), ContactFolderCollectionPage.class);
+            childFolders = serializer.deserializeObject(json.get("childFolders"), com.microsoft.graph.requests.ContactFolderCollectionPage.class);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts"), ContactCollectionPage.class);
+            contacts = serializer.deserializeObject(json.get("contacts"), com.microsoft.graph.requests.ContactCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

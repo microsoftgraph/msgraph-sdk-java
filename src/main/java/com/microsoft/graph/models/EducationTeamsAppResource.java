@@ -27,7 +27,7 @@ public class EducationTeamsAppResource extends EducationResource implements IJso
 
     /**
      * The App Icon Web Url.
-     * URL that points to the app's icon.
+     * 
      */
     @SerializedName(value = "appIconWebUrl", alternate = {"AppIconWebUrl"})
     @Expose
@@ -36,7 +36,7 @@ public class EducationTeamsAppResource extends EducationResource implements IJso
 
     /**
      * The App Id.
-     * Teams App ID of the application.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -45,7 +45,7 @@ public class EducationTeamsAppResource extends EducationResource implements IJso
 
     /**
      * The Teams Embedded Content Url.
-     * URL for the app resource that will be opened by Teams.
+     * 
      */
     @SerializedName(value = "teamsEmbeddedContentUrl", alternate = {"TeamsEmbeddedContentUrl"})
     @Expose
@@ -54,7 +54,7 @@ public class EducationTeamsAppResource extends EducationResource implements IJso
 
     /**
      * The Web Url.
-     * URL for the app resource that can be opened in the browser.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

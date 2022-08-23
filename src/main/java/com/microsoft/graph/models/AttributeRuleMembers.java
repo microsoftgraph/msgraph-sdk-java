@@ -27,7 +27,7 @@ public class AttributeRuleMembers extends SubjectSet implements IJsonBackedObjec
 
     /**
      * The Description.
-     * 
+     * A description of the membership rule.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class AttributeRuleMembers extends SubjectSet implements IJsonBackedObjec
 
     /**
      * The Membership Rule.
-     * 
+     * Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      */
     @SerializedName(value = "membershipRule", alternate = {"MembershipRule"})
     @Expose

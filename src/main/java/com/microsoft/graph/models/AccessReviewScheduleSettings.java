@@ -87,7 +87,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Instance Duration In Days.
-     * Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     * Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      */
     @SerializedName(value = "instanceDurationInDays", alternate = {"InstanceDurationInDays"})
     @Expose

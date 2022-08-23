@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.AccessReviewScheduleDefinitionFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewInstanceCollectionRequestBuilder instances() {
-        return new AccessReviewInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder instances() {
+        return new com.microsoft.graph.requests.AccessReviewInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
     /**
@@ -76,8 +74,8 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewInstanceRequestBuilder instances(@Nonnull final String id) {
-        return new AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder instances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
 
     /**

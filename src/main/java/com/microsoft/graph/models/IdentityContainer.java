@@ -9,10 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.IdentityApiConnector;
-import com.microsoft.graph.models.B2xIdentityUserFlow;
-import com.microsoft.graph.models.IdentityProviderBase;
-import com.microsoft.graph.models.IdentityUserFlowAttribute;
 import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionPage;
@@ -42,25 +38,25 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
     @SerializedName(value = "apiConnectors", alternate = {"ApiConnectors"})
     @Expose
 	@Nullable
-    public IdentityApiConnectorCollectionPage apiConnectors;
+    public com.microsoft.graph.requests.IdentityApiConnectorCollectionPage apiConnectors;
 
     /**
      * The B2x User Flows.
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      */
     @SerializedName(value = "b2xUserFlows", alternate = {"B2xUserFlows"})
     @Expose
 	@Nullable
-    public B2xIdentityUserFlowCollectionPage b2xUserFlows;
+    public com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage b2xUserFlows;
 
     /**
      * The Identity Providers.
-     * Represents entry point for identity provider base.
+     * 
      */
     @SerializedName(value = "identityProviders", alternate = {"IdentityProviders"})
     @Expose
 	@Nullable
-    public IdentityProviderBaseCollectionPage identityProviders;
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionPage identityProviders;
 
     /**
      * The User Flow Attributes.
@@ -69,7 +65,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userFlowAttributes", alternate = {"UserFlowAttributes"})
     @Expose
 	@Nullable
-    public IdentityUserFlowAttributeCollectionPage userFlowAttributes;
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionPage userFlowAttributes;
 
     /**
      * The Conditional Access.
@@ -91,19 +87,19 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
 
         if (json.has("apiConnectors")) {
-            apiConnectors = serializer.deserializeObject(json.get("apiConnectors"), IdentityApiConnectorCollectionPage.class);
+            apiConnectors = serializer.deserializeObject(json.get("apiConnectors"), com.microsoft.graph.requests.IdentityApiConnectorCollectionPage.class);
         }
 
         if (json.has("b2xUserFlows")) {
-            b2xUserFlows = serializer.deserializeObject(json.get("b2xUserFlows"), B2xIdentityUserFlowCollectionPage.class);
+            b2xUserFlows = serializer.deserializeObject(json.get("b2xUserFlows"), com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage.class);
         }
 
         if (json.has("identityProviders")) {
-            identityProviders = serializer.deserializeObject(json.get("identityProviders"), IdentityProviderBaseCollectionPage.class);
+            identityProviders = serializer.deserializeObject(json.get("identityProviders"), com.microsoft.graph.requests.IdentityProviderBaseCollectionPage.class);
         }
 
         if (json.has("userFlowAttributes")) {
-            userFlowAttributes = serializer.deserializeObject(json.get("userFlowAttributes"), IdentityUserFlowAttributeCollectionPage.class);
+            userFlowAttributes = serializer.deserializeObject(json.get("userFlowAttributes"), com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionPage.class);
         }
     }
 }

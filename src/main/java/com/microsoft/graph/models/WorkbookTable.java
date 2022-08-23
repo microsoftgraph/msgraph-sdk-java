@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkbookTableColumn;
-import com.microsoft.graph.models.WorkbookTableRow;
 import com.microsoft.graph.models.WorkbookTableSort;
 import com.microsoft.graph.models.WorkbookWorksheet;
 import com.microsoft.graph.models.Entity;
@@ -115,7 +113,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Style.
-     * Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      */
     @SerializedName(value = "style", alternate = {"Style"})
     @Expose
@@ -129,7 +127,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
 	@Nullable
-    public WorkbookTableColumnCollectionPage columns;
+    public com.microsoft.graph.requests.WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
@@ -138,7 +136,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
     @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
 	@Nullable
-    public WorkbookTableRowCollectionPage rows;
+    public com.microsoft.graph.requests.WorkbookTableRowCollectionPage rows;
 
     /**
      * The Sort.
@@ -169,11 +167,11 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns"), WorkbookTableColumnCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), com.microsoft.graph.requests.WorkbookTableColumnCollectionPage.class);
         }
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows"), WorkbookTableRowCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows"), com.microsoft.graph.requests.WorkbookTableRowCollectionPage.class);
         }
     }
 }

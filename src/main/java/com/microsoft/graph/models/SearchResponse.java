@@ -52,7 +52,7 @@ public class SearchResponse implements IJsonBackedObject {
 
     /**
      * The Query Alteration Response.
-     * Provides details of query alteration response for spelling correction.
+     * Provides information related to spelling corrections in the alteration response.
      */
     @SerializedName(value = "queryAlterationResponse", alternate = {"QueryAlterationResponse"})
     @Expose

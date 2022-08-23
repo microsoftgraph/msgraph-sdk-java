@@ -10,8 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.requests.PermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

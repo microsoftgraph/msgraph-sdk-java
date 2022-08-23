@@ -9,9 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.UserFlowLanguagePage;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.UserFlowLanguagePageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -53,7 +51,7 @@ public class UserFlowLanguageConfiguration extends Entity implements IJsonBacked
     @SerializedName(value = "defaultPages", alternate = {"DefaultPages"})
     @Expose
 	@Nullable
-    public UserFlowLanguagePageCollectionPage defaultPages;
+    public com.microsoft.graph.requests.UserFlowLanguagePageCollectionPage defaultPages;
 
     /**
      * The Overrides Pages.
@@ -62,7 +60,7 @@ public class UserFlowLanguageConfiguration extends Entity implements IJsonBacked
     @SerializedName(value = "overridesPages", alternate = {"OverridesPages"})
     @Expose
 	@Nullable
-    public UserFlowLanguagePageCollectionPage overridesPages;
+    public com.microsoft.graph.requests.UserFlowLanguagePageCollectionPage overridesPages;
 
 
     /**
@@ -75,11 +73,11 @@ public class UserFlowLanguageConfiguration extends Entity implements IJsonBacked
 
 
         if (json.has("defaultPages")) {
-            defaultPages = serializer.deserializeObject(json.get("defaultPages"), UserFlowLanguagePageCollectionPage.class);
+            defaultPages = serializer.deserializeObject(json.get("defaultPages"), com.microsoft.graph.requests.UserFlowLanguagePageCollectionPage.class);
         }
 
         if (json.has("overridesPages")) {
-            overridesPages = serializer.deserializeObject(json.get("overridesPages"), UserFlowLanguagePageCollectionPage.class);
+            overridesPages = serializer.deserializeObject(json.get("overridesPages"), com.microsoft.graph.requests.UserFlowLanguagePageCollectionPage.class);
         }
     }
 }

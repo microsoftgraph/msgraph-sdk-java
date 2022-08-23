@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageCatalog;
-import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessPackageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @return the collection request builder
      */
     @Nonnull
-    public AccessPackageCollectionRequestBuilder accessPackages() {
-        return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder accessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
      * @param id the item identifier
      */
     @Nonnull
-    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
-        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartTitleFormat;
-import com.microsoft.graph.requests.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class WorkbookChartTitleFormatRequestBuilder extends BaseRequestBuilder<W
      * @return the WorkbookChartFillRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartFillRequestBuilder fill() {
-        return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartFillRequestBuilder fill() {
+        return new com.microsoft.graph.requests.WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class WorkbookChartTitleFormatRequestBuilder extends BaseRequestBuilder<W
      * @return the WorkbookChartFontRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartFontRequestBuilder font() {
-        return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartFontRequestBuilder font() {
+        return new com.microsoft.graph.requests.WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }

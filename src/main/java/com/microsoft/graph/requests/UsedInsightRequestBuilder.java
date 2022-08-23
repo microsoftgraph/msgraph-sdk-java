@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UsedInsight;
-import com.microsoft.graph.requests.EntityWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder<UsedInsight> {
      * @return the EntityWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EntityWithReferenceRequestBuilder resource() {
-        return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
+    public com.microsoft.graph.requests.EntityWithReferenceRequestBuilder resource() {
+        return new com.microsoft.graph.requests.EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }

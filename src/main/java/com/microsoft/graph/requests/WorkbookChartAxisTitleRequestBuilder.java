@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartAxisTitle;
-import com.microsoft.graph.requests.WorkbookChartAxisTitleFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder<Wor
      * @return the WorkbookChartAxisTitleFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartAxisTitleFormatRequestBuilder format() {
-        return new WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartAxisTitleFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChartDataLabels;
-import com.microsoft.graph.requests.WorkbookChartDataLabelFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder<Wo
      * @return the WorkbookChartDataLabelFormatRequestBuilder instance
      */
     @Nonnull
-    public WorkbookChartDataLabelFormatRequestBuilder format() {
-        return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookChartDataLabelFormatRequestBuilder format() {
+        return new com.microsoft.graph.requests.WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

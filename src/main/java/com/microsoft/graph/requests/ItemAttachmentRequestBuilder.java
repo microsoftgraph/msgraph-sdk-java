@@ -10,7 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ItemAttachment;
 import com.microsoft.graph.models.AttachmentItem;
 import com.microsoft.graph.models.UploadSession;
-import com.microsoft.graph.requests.OutlookItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,7 +65,7 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder<ItemAttachm
      * @return the OutlookItemRequestBuilder instance
      */
     @Nonnull
-    public OutlookItemRequestBuilder item() {
-        return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
+    public com.microsoft.graph.requests.OutlookItemRequestBuilder item() {
+        return new com.microsoft.graph.requests.OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }

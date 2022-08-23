@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServiceHealth;
-import com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder;
-import com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ServiceHealthRequestBuilder extends BaseRequestBuilder<ServiceHealt
      * @return the collection request builder
      */
     @Nonnull
-    public ServiceHealthIssueCollectionRequestBuilder issues() {
-        return new ServiceHealthIssueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("issues"), getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder issues() {
+        return new com.microsoft.graph.requests.ServiceHealthIssueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("issues"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ServiceHealthRequestBuilder extends BaseRequestBuilder<ServiceHealt
      * @param id the item identifier
      */
     @Nonnull
-    public ServiceHealthIssueRequestBuilder issues(@Nonnull final String id) {
-        return new ServiceHealthIssueRequestBuilder(getRequestUrlWithAdditionalSegment("issues") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder issues(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceHealthIssueRequestBuilder(getRequestUrlWithAdditionalSegment("issues") + "/" + id, getClient(), null);
     }
 }

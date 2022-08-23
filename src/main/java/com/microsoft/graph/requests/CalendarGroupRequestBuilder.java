@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CalendarGroup;
-import com.microsoft.graph.requests.CalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @return the collection request builder
      */
     @Nonnull
-    public CalendarCollectionRequestBuilder calendars() {
-        return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
+    public com.microsoft.graph.requests.CalendarCollectionRequestBuilder calendars() {
+        return new com.microsoft.graph.requests.CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder<CalendarGrou
      * @param id the item identifier
      */
     @Nonnull
-    public CalendarRequestBuilder calendars(@Nonnull final String id) {
-        return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CalendarRequestBuilder calendars(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
 }

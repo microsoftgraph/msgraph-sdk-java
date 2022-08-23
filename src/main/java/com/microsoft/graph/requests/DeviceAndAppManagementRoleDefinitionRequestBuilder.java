@@ -62,8 +62,8 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * @return the collection request builder
      */
     @Nonnull
-    public RoleAssignmentCollectionRequestBuilder roleAssignments() {
-        return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.RoleAssignmentCollectionRequestBuilder roleAssignments() {
+        return new com.microsoft.graph.requests.RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
     /**
@@ -73,7 +73,7 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * @param id the item identifier
      */
     @Nonnull
-    public RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
-        return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }

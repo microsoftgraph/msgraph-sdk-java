@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OutlookCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.OutlookCategoryCollectionPage;
 
@@ -35,7 +34,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "masterCategories", alternate = {"MasterCategories"})
     @Expose
 	@Nullable
-    public OutlookCategoryCollectionPage masterCategories;
+    public com.microsoft.graph.requests.OutlookCategoryCollectionPage masterCategories;
 
 
     /**
@@ -48,7 +47,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("masterCategories")) {
-            masterCategories = serializer.deserializeObject(json.get("masterCategories"), OutlookCategoryCollectionPage.class);
+            masterCategories = serializer.deserializeObject(json.get("masterCategories"), com.microsoft.graph.requests.OutlookCategoryCollectionPage.class);
         }
     }
 }

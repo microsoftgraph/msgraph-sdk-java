@@ -10,8 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WellknownListName;
-import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.TodoTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.TodoTaskCollectionPage;
@@ -74,7 +72,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
 	@Nullable
-    public ExtensionCollectionPage extensions;
+    public com.microsoft.graph.requests.ExtensionCollectionPage extensions;
 
     /**
      * The Tasks.
@@ -83,7 +81,7 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public TodoTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.TodoTaskCollectionPage tasks;
 
 
     /**
@@ -96,11 +94,11 @@ public class TodoTaskList extends Entity implements IJsonBackedObject {
 
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), com.microsoft.graph.requests.ExtensionCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), TodoTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.TodoTaskCollectionPage.class);
         }
     }
 }

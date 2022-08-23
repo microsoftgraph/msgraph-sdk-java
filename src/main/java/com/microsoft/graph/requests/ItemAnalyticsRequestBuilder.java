@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ItemAnalytics;
-import com.microsoft.graph.requests.ItemActivityStatWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +63,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ItemActivityStatWithReferenceRequestBuilder allTime() {
-        return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityStatWithReferenceRequestBuilder allTime() {
+        return new com.microsoft.graph.requests.ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ItemActivityStat collection
@@ -75,8 +72,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @return the collection request builder
      */
     @Nonnull
-    public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
-        return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityStatCollectionRequestBuilder itemActivityStats() {
+        return new com.microsoft.graph.requests.ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @param id the item identifier
      */
     @Nonnull
-    public ItemActivityStatRequestBuilder itemActivityStats(@Nonnull final String id) {
-        return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityStatRequestBuilder itemActivityStats(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }
 
     /**
@@ -96,7 +93,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytic
      * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
-        return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
+    public com.microsoft.graph.requests.ItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
+        return new com.microsoft.graph.requests.ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
     }
 }

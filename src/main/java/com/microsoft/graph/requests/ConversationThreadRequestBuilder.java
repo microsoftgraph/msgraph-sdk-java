@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Post;
-import com.microsoft.graph.requests.PostCollectionRequestBuilder;
-import com.microsoft.graph.requests.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,8 +64,8 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder<Convers
      * @return the collection request builder
      */
     @Nonnull
-    public PostCollectionRequestBuilder posts() {
-        return new PostCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("posts"), getClient(), null);
+    public com.microsoft.graph.requests.PostCollectionRequestBuilder posts() {
+        return new com.microsoft.graph.requests.PostCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("posts"), getClient(), null);
     }
 
     /**
@@ -77,8 +75,8 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder<Convers
      * @param id the item identifier
      */
     @Nonnull
-    public PostRequestBuilder posts(@Nonnull final String id) {
-        return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("posts") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PostRequestBuilder posts(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PostRequestBuilder(getRequestUrlWithAdditionalSegment("posts") + "/" + id, getClient(), null);
     }
 
     /**

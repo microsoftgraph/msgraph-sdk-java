@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.ApprovalStageCollectionRequestBuilder;
-import com.microsoft.graph.requests.ApprovalStageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder<Approval> {
      * @return the collection request builder
      */
     @Nonnull
-    public ApprovalStageCollectionRequestBuilder stages() {
-        return new ApprovalStageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("stages"), getClient(), null);
+    public com.microsoft.graph.requests.ApprovalStageCollectionRequestBuilder stages() {
+        return new com.microsoft.graph.requests.ApprovalStageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("stages"), getClient(), null);
     }
 
     /**
@@ -76,7 +74,7 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder<Approval> {
      * @param id the item identifier
      */
     @Nonnull
-    public ApprovalStageRequestBuilder stages(@Nonnull final String id) {
-        return new ApprovalStageRequestBuilder(getRequestUrlWithAdditionalSegment("stages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ApprovalStageRequestBuilder stages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalStageRequestBuilder(getRequestUrlWithAdditionalSegment("stages") + "/" + id, getClient(), null);
     }
 }

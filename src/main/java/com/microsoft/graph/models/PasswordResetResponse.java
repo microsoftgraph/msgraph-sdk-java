@@ -39,7 +39,7 @@ public class PasswordResetResponse implements IJsonBackedObject {
 
     /**
      * The New Password.
-     * 
+     * The Azure AD-generated password.
      */
     @SerializedName(value = "newPassword", alternate = {"NewPassword"})
     @Expose

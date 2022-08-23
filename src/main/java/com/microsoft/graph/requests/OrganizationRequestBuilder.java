@@ -10,11 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Organization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -74,8 +69,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @return the OrganizationalBrandingRequestBuilder instance
      */
     @Nonnull
-    public OrganizationalBrandingRequestBuilder branding() {
-        return new OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("branding"), getClient(), null);
+    public com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder branding() {
+        return new com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("branding"), getClient(), null);
     }
     /**
      *  Gets a request builder for the CertificateBasedAuthConfiguration collection
@@ -83,8 +78,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @return the collection request builder
      */
     @Nonnull
-    public CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
-        return new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
     }
 
     /**
@@ -94,8 +89,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @param id the item identifier
      */
     @Nonnull
-    public CertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
-        return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Extension collection
@@ -103,8 +98,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @return the collection request builder
      */
     @Nonnull
-    public ExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public com.microsoft.graph.requests.ExtensionCollectionRequestBuilder extensions() {
+        return new com.microsoft.graph.requests.ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
     /**
@@ -114,8 +109,8 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @param id the item identifier
      */
     @Nonnull
-    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ExtensionRequestBuilder extensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 
     /**

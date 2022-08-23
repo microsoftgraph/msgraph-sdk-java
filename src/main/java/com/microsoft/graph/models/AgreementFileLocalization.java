@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AgreementFileVersion;
 import com.microsoft.graph.models.AgreementFileProperties;
 import com.microsoft.graph.requests.AgreementFileVersionCollectionPage;
 
@@ -35,7 +34,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose
 	@Nullable
-    public AgreementFileVersionCollectionPage versions;
+    public com.microsoft.graph.requests.AgreementFileVersionCollectionPage versions;
 
 
     /**
@@ -48,7 +47,7 @@ public class AgreementFileLocalization extends AgreementFileProperties implement
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions"), AgreementFileVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.requests.AgreementFileVersionCollectionPage.class);
         }
     }
 }

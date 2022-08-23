@@ -10,9 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.TermsExpiration;
-import com.microsoft.graph.models.AgreementAcceptance;
 import com.microsoft.graph.models.AgreementFile;
-import com.microsoft.graph.models.AgreementFileLocalization;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AgreementAcceptanceCollectionPage;
 import com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage;
@@ -43,7 +41,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Per Device Acceptance Required.
-     * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      */
     @SerializedName(value = "isPerDeviceAcceptanceRequired", alternate = {"IsPerDeviceAcceptanceRequired"})
     @Expose
@@ -61,7 +59,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms Expiration.
-     * Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
+     * Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      */
     @SerializedName(value = "termsExpiration", alternate = {"TermsExpiration"})
     @Expose
@@ -70,7 +68,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The User Reaccept Required Frequency.
-     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      */
     @SerializedName(value = "userReacceptRequiredFrequency", alternate = {"UserReacceptRequiredFrequency"})
     @Expose
@@ -84,7 +82,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "acceptances", alternate = {"Acceptances"})
     @Expose
 	@Nullable
-    public AgreementAcceptanceCollectionPage acceptances;
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionPage acceptances;
 
     /**
      * The File.
@@ -97,12 +95,12 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Files.
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose
 	@Nullable
-    public AgreementFileLocalizationCollectionPage files;
+    public com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage files;
 
 
     /**
@@ -115,11 +113,11 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptances")) {
-            acceptances = serializer.deserializeObject(json.get("acceptances"), AgreementAcceptanceCollectionPage.class);
+            acceptances = serializer.deserializeObject(json.get("acceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionPage.class);
         }
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files"), AgreementFileLocalizationCollectionPage.class);
+            files = serializer.deserializeObject(json.get("files"), com.microsoft.graph.requests.AgreementFileLocalizationCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

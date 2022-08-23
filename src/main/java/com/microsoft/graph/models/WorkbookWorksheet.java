@@ -9,11 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.WorkbookChart;
-import com.microsoft.graph.models.WorkbookNamedItem;
-import com.microsoft.graph.models.WorkbookPivotTable;
 import com.microsoft.graph.models.WorkbookWorksheetProtection;
-import com.microsoft.graph.models.WorkbookTable;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WorkbookChartCollectionPage;
 import com.microsoft.graph.requests.WorkbookNamedItemCollectionPage;
@@ -69,7 +65,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "charts", alternate = {"Charts"})
     @Expose
 	@Nullable
-    public WorkbookChartCollectionPage charts;
+    public com.microsoft.graph.requests.WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
@@ -78,7 +74,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
 	@Nullable
-    public WorkbookNamedItemCollectionPage names;
+    public com.microsoft.graph.requests.WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
@@ -87,7 +83,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "pivotTables", alternate = {"PivotTables"})
     @Expose
 	@Nullable
-    public WorkbookPivotTableCollectionPage pivotTables;
+    public com.microsoft.graph.requests.WorkbookPivotTableCollectionPage pivotTables;
 
     /**
      * The Protection.
@@ -105,7 +101,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
 	@Nullable
-    public WorkbookTableCollectionPage tables;
+    public com.microsoft.graph.requests.WorkbookTableCollectionPage tables;
 
 
     /**
@@ -118,19 +114,19 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("charts")) {
-            charts = serializer.deserializeObject(json.get("charts"), WorkbookChartCollectionPage.class);
+            charts = serializer.deserializeObject(json.get("charts"), com.microsoft.graph.requests.WorkbookChartCollectionPage.class);
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names"), WorkbookNamedItemCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names"), com.microsoft.graph.requests.WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("pivotTables")) {
-            pivotTables = serializer.deserializeObject(json.get("pivotTables"), WorkbookPivotTableCollectionPage.class);
+            pivotTables = serializer.deserializeObject(json.get("pivotTables"), com.microsoft.graph.requests.WorkbookPivotTableCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables"), WorkbookTableCollectionPage.class);
+            tables = serializer.deserializeObject(json.get("tables"), com.microsoft.graph.requests.WorkbookTableCollectionPage.class);
         }
     }
 }

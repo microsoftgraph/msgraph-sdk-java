@@ -57,7 +57,7 @@ public class AccessPackageAutomaticRequestSettings implements IJsonBackedObject 
 
     /**
      * The Request Access For Allowed Targets.
-     * 
+     * If set to true, automatic assignments will be created for targets in the allowed target scope.
      */
     @SerializedName(value = "requestAccessForAllowedTargets", alternate = {"RequestAccessForAllowedTargets"})
     @Expose

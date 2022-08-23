@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppInstallation;
-import com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<Teams
      * @return the TeamsAppWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppWithReferenceRequestBuilder teamsApp() {
-        return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder teamsApp() {
+        return new com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
     }
 
     /**
@@ -75,8 +73,8 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<Teams
      * @return the TeamsAppDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
-        return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
+        return new com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 
     /**

@@ -8,14 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.B2xIdentityUserFlow;
-import com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.IdentityProviderWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserFlowLanguageConfigurationRequestBuilder;
-import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentRequestBuilder;
-import com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.IdentityProviderBaseWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityProviderCollectionWithReferencesRequestBuilder identityProviders() {
-        return new IdentityProviderCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesRequestBuilder identityProviders() {
+        return new com.microsoft.graph.requests.IdentityProviderCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityProviderWithReferenceRequestBuilder identityProviders(@Nonnull final String id) {
-        return new IdentityProviderWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderWithReferenceRequestBuilder identityProviders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityProviderWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserFlowLanguageConfiguration collection
@@ -90,8 +82,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @return the collection request builder
      */
     @Nonnull
-    public UserFlowLanguageConfigurationCollectionRequestBuilder languages() {
-        return new UserFlowLanguageConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("languages"), getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionRequestBuilder languages() {
+        return new com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("languages"), getClient(), null);
     }
 
     /**
@@ -101,8 +93,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @param id the item identifier
      */
     @Nonnull
-    public UserFlowLanguageConfigurationRequestBuilder languages(@Nonnull final String id) {
-        return new UserFlowLanguageConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("languages") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserFlowLanguageConfigurationRequestBuilder languages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserFlowLanguageConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("languages") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityUserFlowAttributeAssignment collection
@@ -110,8 +102,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments() {
-        return new IdentityUserFlowAttributeAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments() {
+        return new com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments"), getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityUserFlowAttributeAssignmentRequestBuilder userAttributeAssignments(@Nonnull final String id) {
-        return new IdentityUserFlowAttributeAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentRequestBuilder userAttributeAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityProviderBase collection
@@ -130,8 +122,8 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @return the collection request builder
      */
     @Nonnull
-    public IdentityProviderBaseCollectionWithReferencesRequestBuilder userFlowIdentityProviders() {
-        return new IdentityProviderBaseCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders"), getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesRequestBuilder userFlowIdentityProviders() {
+        return new com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders"), getClient(), null);
     }
 
     /**
@@ -141,7 +133,7 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
      * @param id the item identifier
      */
     @Nonnull
-    public IdentityProviderBaseWithReferenceRequestBuilder userFlowIdentityProviders(@Nonnull final String id) {
-        return new IdentityProviderBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.IdentityProviderBaseWithReferenceRequestBuilder userFlowIdentityProviders(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IdentityProviderBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders") + "/" + id, getClient(), null);
     }
 }

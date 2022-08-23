@@ -17,21 +17,10 @@ import com.microsoft.graph.models.PermissionScope;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.ResourceSpecificPermission;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
-import com.microsoft.graph.models.AppRoleAssignment;
-import com.microsoft.graph.models.ClaimsMappingPolicy;
+import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.DelegatedPermissionClassification;
-import com.microsoft.graph.models.Endpoint;
-import com.microsoft.graph.models.FederatedIdentityCredential;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.OAuth2PermissionGrant;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
-import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage;
-import com.microsoft.graph.requests.EndpointCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
@@ -118,7 +107,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Owner Organization Id.
-     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      */
     @SerializedName(value = "appOwnerOrganizationId", alternate = {"AppOwnerOrganizationId"})
     @Expose
@@ -244,7 +233,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Password Credentials.
-     * The collection of password credentials associated with the service principal. Not nullable.
+     * The collection of password credentials associated with the application. Not nullable.
      */
     @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose
@@ -307,7 +296,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Service Principal Type.
-     * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
+     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
      */
     @SerializedName(value = "servicePrincipalType", alternate = {"ServicePrincipalType"})
     @Expose
@@ -342,13 +331,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.UUID tokenEncryptionKeyId;
 
     /**
+     * The Verified Publisher.
+     * Specifies the verified publisher of the application which this service principal represents.
+     */
+    @SerializedName(value = "verifiedPublisher", alternate = {"VerifiedPublisher"})
+    @Expose
+	@Nullable
+    public VerifiedPublisher verifiedPublisher;
+
+    /**
      * The App Role Assigned To.
-     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
 	@Nullable
-    public AppRoleAssignmentCollectionPage appRoleAssignedTo;
+    public com.microsoft.graph.requests.AppRoleAssignmentCollectionPage appRoleAssignedTo;
 
     /**
      * The App Role Assignments.
@@ -357,39 +355,39 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
 	@Nullable
-    public AppRoleAssignmentCollectionPage appRoleAssignments;
+    public com.microsoft.graph.requests.AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
      * The Claims Mapping Policies.
      * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+    public com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
     /**
      * The Created Objects.
      * Directory objects created by this service principal. Read-only. Nullable.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage createdObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Delegated Permission Classifications.
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
+     * 
      */
     @SerializedName(value = "delegatedPermissionClassifications", alternate = {"DelegatedPermissionClassifications"})
     @Expose
 	@Nullable
-    public DelegatedPermissionClassificationCollectionPage delegatedPermissionClassifications;
+    public com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage delegatedPermissionClassifications;
 
     /**
      * The Endpoints.
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * 
      */
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose
 	@Nullable
-    public EndpointCollectionPage endpoints;
+    public com.microsoft.graph.requests.EndpointCollectionPage endpoints;
 
     /**
      * The Federated Identity Credentials.
@@ -398,63 +396,63 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
 	@Nullable
-    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+    public com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
 
     /**
      * The Home Realm Discovery Policies.
      * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Member Of.
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      */
 	@Nullable
-    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage ownedObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Owners.
      * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
-     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+     * The tokenIssuancePolicies assigned to this service principal.
      */
 	@Nullable
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
-     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+     * The tokenLifetimePolicies assigned to this service principal.
      */
 	@Nullable
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Transitive Member Of.
      * 
      */
 	@Nullable
-    public DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
 
 
     /**
@@ -467,63 +465,63 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appRoleAssignedTo")) {
-            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo"), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo"), com.microsoft.graph.requests.AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), com.microsoft.graph.requests.AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects"), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("delegatedPermissionClassifications")) {
-            delegatedPermissionClassifications = serializer.deserializeObject(json.get("delegatedPermissionClassifications"), DelegatedPermissionClassificationCollectionPage.class);
+            delegatedPermissionClassifications = serializer.deserializeObject(json.get("delegatedPermissionClassifications"), com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage.class);
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints"), EndpointCollectionPage.class);
+            endpoints = serializer.deserializeObject(json.get("endpoints"), com.microsoft.graph.requests.EndpointCollectionPage.class);
         }
 
         if (json.has("federatedIdentityCredentials")) {
-            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
     }
 }

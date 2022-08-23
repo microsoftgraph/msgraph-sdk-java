@@ -8,8 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryAddToReviewSetOperation;
-import com.microsoft.graph.security.requests.EdiscoveryReviewSetWithReferenceRequestBuilder;
-import com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +63,8 @@ public class EdiscoveryAddToReviewSetOperationRequestBuilder extends BaseRequest
      * @return the EdiscoveryReviewSetWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoveryReviewSetWithReferenceRequestBuilder reviewSet() {
-        return new EdiscoveryReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoveryReviewSetWithReferenceRequestBuilder reviewSet() {
+        return new com.microsoft.graph.security.requests.EdiscoveryReviewSetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSet"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class EdiscoveryAddToReviewSetOperationRequestBuilder extends BaseRequest
      * @return the EdiscoverySearchWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoverySearchWithReferenceRequestBuilder search() {
-        return new EdiscoverySearchWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("search"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder search() {
+        return new com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("search"), getClient(), null);
     }
 }

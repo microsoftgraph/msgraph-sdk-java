@@ -12,13 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingProviderType;
 import com.microsoft.graph.models.CalendarColor;
 import com.microsoft.graph.models.EmailAddress;
-import com.microsoft.graph.models.CalendarPermission;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CalendarPermissionCollectionPage;
-import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage;
 
@@ -48,7 +43,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Edit.
-     * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      */
     @SerializedName(value = "canEdit", alternate = {"CanEdit"})
     @Expose
@@ -57,7 +52,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Share.
-     * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      */
     @SerializedName(value = "canShare", alternate = {"CanShare"})
     @Expose
@@ -66,7 +61,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can View Private Items.
-     * true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * true if the user can read calendar items that have been marked private, false otherwise.
      */
     @SerializedName(value = "canViewPrivateItems", alternate = {"CanViewPrivateItems"})
     @Expose
@@ -102,7 +97,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Hex Color.
-     * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
      */
     @SerializedName(value = "hexColor", alternate = {"HexColor"})
     @Expose
@@ -147,7 +142,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
+     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
@@ -161,7 +156,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendarPermissions", alternate = {"CalendarPermissions"})
     @Expose
 	@Nullable
-    public CalendarPermissionCollectionPage calendarPermissions;
+    public com.microsoft.graph.requests.CalendarPermissionCollectionPage calendarPermissions;
 
     /**
      * The Calendar View.
@@ -170,7 +165,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
 	@Nullable
-    public EventCollectionPage calendarView;
+    public com.microsoft.graph.requests.EventCollectionPage calendarView;
 
     /**
      * The Events.
@@ -179,7 +174,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
 	@Nullable
-    public EventCollectionPage events;
+    public com.microsoft.graph.requests.EventCollectionPage events;
 
     /**
      * The Multi Value Extended Properties.
@@ -188,7 +183,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
 	@Nullable
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
@@ -197,7 +192,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
 	@Nullable
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -210,23 +205,23 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendarPermissions")) {
-            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions"), CalendarPermissionCollectionPage.class);
+            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions"), com.microsoft.graph.requests.CalendarPermissionCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), com.microsoft.graph.requests.EventCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

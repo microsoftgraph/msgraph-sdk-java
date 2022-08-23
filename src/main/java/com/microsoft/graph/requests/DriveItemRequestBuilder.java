@@ -15,19 +15,6 @@ import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.ItemPreviewInfo;
 import com.microsoft.graph.models.ItemActivityStat;
-import com.microsoft.graph.requests.WorkbookRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.ListItemRequestBuilder;
-import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.PermissionRequestBuilder;
-import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.ThumbnailSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.ThumbnailSetRequestBuilder;
-import com.microsoft.graph.requests.DriveItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DriveItemVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -110,8 +97,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder createdByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
@@ -120,8 +107,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the UserWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
@@ -130,8 +117,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the WorkbookRequestBuilder instance
      */
     @Nonnull
-    public WorkbookRequestBuilder workbook() {
-        return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
+    public com.microsoft.graph.requests.WorkbookRequestBuilder workbook() {
+        return new com.microsoft.graph.requests.WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
     }
 
     /**
@@ -140,8 +127,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
-        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    public com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DriveItem collection
@@ -149,8 +136,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public DriveItemCollectionRequestBuilder children() {
-        return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemCollectionRequestBuilder children() {
+        return new com.microsoft.graph.requests.DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
     /**
@@ -160,8 +147,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public DriveItemRequestBuilder children(@Nonnull final String id) {
-        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DriveItemRequestBuilder children(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
     }
 
     /**
@@ -170,8 +157,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the ListItemRequestBuilder instance
      */
     @Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    public com.microsoft.graph.requests.ListItemRequestBuilder listItem() {
+        return new com.microsoft.graph.requests.ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
     /**
      *  Gets a request builder for the Permission collection
@@ -179,8 +166,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public PermissionCollectionRequestBuilder permissions() {
-        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionCollectionRequestBuilder permissions() {
+        return new com.microsoft.graph.requests.PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
     }
 
     /**
@@ -190,8 +177,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public PermissionRequestBuilder permissions(@Nonnull final String id) {
-        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PermissionRequestBuilder permissions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Subscription collection
@@ -199,8 +186,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public SubscriptionCollectionRequestBuilder subscriptions() {
-        return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
+    public com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder subscriptions() {
+        return new com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
 
     /**
@@ -210,8 +197,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
-        return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ThumbnailSet collection
@@ -219,8 +206,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public ThumbnailSetCollectionRequestBuilder thumbnails() {
-        return new ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);
+    public com.microsoft.graph.requests.ThumbnailSetCollectionRequestBuilder thumbnails() {
+        return new com.microsoft.graph.requests.ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);
     }
 
     /**
@@ -230,8 +217,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public ThumbnailSetRequestBuilder thumbnails(@Nonnull final String id) {
-        return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ThumbnailSetRequestBuilder thumbnails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DriveItemVersion collection
@@ -239,8 +226,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @return the collection request builder
      */
     @Nonnull
-    public DriveItemVersionCollectionRequestBuilder versions() {
-        return new DriveItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    public com.microsoft.graph.requests.DriveItemVersionCollectionRequestBuilder versions() {
+        return new com.microsoft.graph.requests.DriveItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
     /**
@@ -250,8 +237,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      * @param id the item identifier
      */
     @Nonnull
-    public DriveItemVersionRequestBuilder versions(@Nonnull final String id) {
-        return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DriveItemVersionRequestBuilder versions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
     /**

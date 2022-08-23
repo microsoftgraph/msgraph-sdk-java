@@ -8,32 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PolicyRoot;
-import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
-import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
-import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;
-import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder;
-import com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder;
-import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -89,8 +63,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the AuthenticationMethodsPolicyRequestBuilder instance
      */
     @Nonnull
-    public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
-        return new AuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodsPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodsPolicy"), getClient(), null);
     }
 
     /**
@@ -99,8 +73,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the AuthenticationFlowsPolicyRequestBuilder instance
      */
     @Nonnull
-    public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
-        return new AuthenticationFlowsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationFlowsPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
+        return new com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationFlowsPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
@@ -108,8 +82,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public ActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
-        return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
+        return new com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);
     }
 
     /**
@@ -119,8 +93,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
-        return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
 
     /**
@@ -129,8 +103,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the AuthorizationPolicyRequestBuilder instance
      */
     @Nonnull
-    public AuthorizationPolicyRequestBuilder authorizationPolicy() {
-        return new AuthorizationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder authorizationPolicy() {
+        return new com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ClaimsMappingPolicy collection
@@ -138,8 +112,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public ClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
-        return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
+        return new com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);
     }
 
     /**
@@ -149,8 +123,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
-        return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
     }
 
     /**
@@ -159,8 +133,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the CrossTenantAccessPolicyRequestBuilder instance
      */
     @Nonnull
-    public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
-        return new CrossTenantAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("crossTenantAccessPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
+        return new com.microsoft.graph.requests.CrossTenantAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("crossTenantAccessPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
@@ -168,8 +142,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public HomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
-        return new HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
+        return new com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
     /**
@@ -179,8 +153,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(@Nonnull final String id) {
-        return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PermissionGrantPolicy collection
@@ -188,8 +162,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public PermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
-        return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
+        return new com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
     }
 
     /**
@@ -199,8 +173,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
-        return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection
@@ -208,8 +182,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public TokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
-        return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
+        return new com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }
 
     /**
@@ -219,8 +193,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(@Nonnull final String id) {
-        return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenLifetimePolicy collection
@@ -228,8 +202,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public TokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
-        return new TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
+        return new com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
     }
 
     /**
@@ -239,8 +213,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
-        return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the FeatureRolloutPolicy collection
@@ -248,8 +222,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public FeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
-        return new FeatureRolloutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
+        return new com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies"), getClient(), null);
     }
 
     /**
@@ -259,8 +233,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public FeatureRolloutPolicyRequestBuilder featureRolloutPolicies(@Nonnull final String id) {
-        return new FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder featureRolloutPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
     }
 
     /**
@@ -269,8 +243,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the AdminConsentRequestPolicyRequestBuilder instance
      */
     @Nonnull
-    public AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
-        return new AdminConsentRequestPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("adminConsentRequestPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
+        return new com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("adminConsentRequestPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ConditionalAccessPolicy collection
@@ -278,8 +252,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public ConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
-        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
+        return new com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
     }
 
     /**
@@ -289,8 +263,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(@Nonnull final String id) {
-        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 
     /**
@@ -299,8 +273,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the IdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
     @Nonnull
-    public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
-        return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    public com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
+        return new com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleManagementPolicy collection
@@ -308,8 +282,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyCollectionRequestBuilder roleManagementPolicies() {
-        return new UnifiedRoleManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder roleManagementPolicies() {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies"), getClient(), null);
     }
 
     /**
@@ -319,8 +293,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyRequestBuilder roleManagementPolicies(@Nonnull final String id) {
-        return new UnifiedRoleManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder roleManagementPolicies(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleManagementPolicyAssignment collection
@@ -328,8 +302,8 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @return the collection request builder
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder roleManagementPolicyAssignments() {
-        return new UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder roleManagementPolicyAssignments() {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments"), getClient(), null);
     }
 
     /**
@@ -339,7 +313,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
      * @param id the item identifier
      */
     @Nonnull
-    public UnifiedRoleManagementPolicyAssignmentRequestBuilder roleManagementPolicyAssignments(@Nonnull final String id) {
-        return new UnifiedRoleManagementPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentRequestBuilder roleManagementPolicyAssignments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments") + "/" + id, getClient(), null);
     }
 }

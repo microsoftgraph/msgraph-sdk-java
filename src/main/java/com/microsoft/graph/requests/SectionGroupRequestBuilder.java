@@ -8,11 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SectionGroup;
-import com.microsoft.graph.requests.NotebookRequestBuilder;
-import com.microsoft.graph.requests.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.SectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +63,8 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @return the NotebookRequestBuilder instance
      */
     @Nonnull
-    public NotebookRequestBuilder parentNotebook() {
-        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
+    public com.microsoft.graph.requests.NotebookRequestBuilder parentNotebook() {
+        return new com.microsoft.graph.requests.NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
@@ -78,8 +73,8 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @return the SectionGroupRequestBuilder instance
      */
     @Nonnull
-    public SectionGroupRequestBuilder parentSectionGroup() {
-        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
+    public com.microsoft.graph.requests.SectionGroupRequestBuilder parentSectionGroup() {
+        return new com.microsoft.graph.requests.SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SectionGroup collection
@@ -87,8 +82,8 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @return the collection request builder
      */
     @Nonnull
-    public SectionGroupCollectionRequestBuilder sectionGroups() {
-        return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
+    public com.microsoft.graph.requests.SectionGroupCollectionRequestBuilder sectionGroups() {
+        return new com.microsoft.graph.requests.SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
     /**
@@ -98,8 +93,8 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @param id the item identifier
      */
     @Nonnull
-    public SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
-        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SectionGroupRequestBuilder sectionGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the OnenoteSection collection
@@ -107,8 +102,8 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @return the collection request builder
      */
     @Nonnull
-    public OnenoteSectionCollectionRequestBuilder sections() {
-        return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
+    public com.microsoft.graph.requests.OnenoteSectionCollectionRequestBuilder sections() {
+        return new com.microsoft.graph.requests.OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
     /**
@@ -118,7 +113,7 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder<SectionGroup>
      * @param id the item identifier
      */
     @Nonnull
-    public OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.OnenoteSectionRequestBuilder sections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 }

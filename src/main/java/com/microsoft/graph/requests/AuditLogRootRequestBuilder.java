@@ -8,14 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuditLogRoot;
-import com.microsoft.graph.requests.DirectoryAuditCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder;
-import com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.RestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.SignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.SignInRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +62,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryAuditCollectionRequestBuilder directoryAudits() {
-        return new DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryAuditCollectionRequestBuilder directoryAudits() {
+        return new com.microsoft.graph.requests.DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
     }
 
     /**
@@ -81,8 +73,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryAuditRequestBuilder directoryAudits(@Nonnull final String id) {
-        return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryAuditRequestBuilder directoryAudits(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ProvisioningObjectSummary collection
@@ -90,8 +82,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @return the collection request builder
      */
     @Nonnull
-    public ProvisioningObjectSummaryCollectionRequestBuilder provisioning() {
-        return new ProvisioningObjectSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning"), getClient(), null);
+    public com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionRequestBuilder provisioning() {
+        return new com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning"), getClient(), null);
     }
 
     /**
@@ -101,8 +93,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @param id the item identifier
      */
     @Nonnull
-    public ProvisioningObjectSummaryRequestBuilder provisioning(@Nonnull final String id) {
-        return new ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder provisioning(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RestrictedSignIn collection
@@ -110,8 +102,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @return the collection request builder
      */
     @Nonnull
-    public RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
-        return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
+    public com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
+        return new com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
     }
 
     /**
@@ -121,8 +113,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @param id the item identifier
      */
     @Nonnull
-    public RestrictedSignInRequestBuilder restrictedSignIns(@Nonnull final String id) {
-        return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.RestrictedSignInRequestBuilder restrictedSignIns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SignIn collection
@@ -130,8 +122,8 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @return the collection request builder
      */
     @Nonnull
-    public SignInCollectionRequestBuilder signIns() {
-        return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
+    public com.microsoft.graph.requests.SignInCollectionRequestBuilder signIns() {
+        return new com.microsoft.graph.requests.SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
     }
 
     /**
@@ -141,7 +133,7 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
      * @param id the item identifier
      */
     @Nonnull
-    public SignInRequestBuilder signIns(@Nonnull final String id) {
-        return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.SignInRequestBuilder signIns(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.callrecords.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.callrecords.models.Session;
-import com.microsoft.graph.callrecords.requests.SegmentCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.SegmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @return the collection request builder
      */
     @Nonnull
-    public SegmentCollectionRequestBuilder segments() {
-        return new SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
+    public com.microsoft.graph.callrecords.requests.SegmentCollectionRequestBuilder segments() {
+        return new com.microsoft.graph.callrecords.requests.SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class SessionRequestBuilder extends BaseRequestBuilder<Session> {
      * @param id the item identifier
      */
     @Nonnull
-    public SegmentRequestBuilder segments(@Nonnull final String id) {
-        return new SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);
+    public com.microsoft.graph.callrecords.requests.SegmentRequestBuilder segments(@Nonnull final String id) {
+        return new com.microsoft.graph.callrecords.requests.SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);
     }
 }

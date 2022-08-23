@@ -9,9 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PrintConnector;
-import com.microsoft.graph.models.PrinterShare;
-import com.microsoft.graph.models.PrintTaskTrigger;
 import com.microsoft.graph.models.PrinterBase;
 import com.microsoft.graph.requests.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.PrinterShareCollectionPage;
@@ -73,14 +70,14 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
      * The connectors that are associated with the printer.
      */
 	@Nullable
-    public PrintConnectorCollectionPage connectors;
+    public com.microsoft.graph.requests.PrintConnectorCollectionPage connectors;
 
     /**
      * The Shares.
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      */
 	@Nullable
-    public PrinterShareCollectionPage shares;
+    public com.microsoft.graph.requests.PrinterShareCollectionPage shares;
 
     /**
      * The Task Triggers.
@@ -89,7 +86,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     @SerializedName(value = "taskTriggers", alternate = {"TaskTriggers"})
     @Expose
 	@Nullable
-    public PrintTaskTriggerCollectionPage taskTriggers;
+    public com.microsoft.graph.requests.PrintTaskTriggerCollectionPage taskTriggers;
 
 
     /**
@@ -102,15 +99,15 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("connectors")) {
-            connectors = serializer.deserializeObject(json.get("connectors"), PrintConnectorCollectionPage.class);
+            connectors = serializer.deserializeObject(json.get("connectors"), com.microsoft.graph.requests.PrintConnectorCollectionPage.class);
         }
 
         if (json.has("shares")) {
-            shares = serializer.deserializeObject(json.get("shares"), PrinterShareCollectionPage.class);
+            shares = serializer.deserializeObject(json.get("shares"), com.microsoft.graph.requests.PrinterShareCollectionPage.class);
         }
 
         if (json.has("taskTriggers")) {
-            taskTriggers = serializer.deserializeObject(json.get("taskTriggers"), PrintTaskTriggerCollectionPage.class);
+            taskTriggers = serializer.deserializeObject(json.get("taskTriggers"), com.microsoft.graph.requests.PrintTaskTriggerCollectionPage.class);
         }
     }
 }

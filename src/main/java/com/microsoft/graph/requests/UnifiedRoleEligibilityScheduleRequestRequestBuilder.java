@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
 import com.microsoft.graph.models.RoleEligibilityScheduleRequestFilterByCurrentUserOptions;
-import com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -68,8 +64,8 @@ public class UnifiedRoleEligibilityScheduleRequestRequestBuilder extends BaseReq
      * @return the AppScopeWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public AppScopeWithReferenceRequestBuilder appScope() {
-        return new AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
+    public com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder appScope() {
+        return new com.microsoft.graph.requests.AppScopeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appScope"), getClient(), null);
     }
 
     /**
@@ -78,8 +74,8 @@ public class UnifiedRoleEligibilityScheduleRequestRequestBuilder extends BaseReq
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder directoryScope() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder directoryScope() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directoryScope"), getClient(), null);
     }
 
     /**
@@ -88,8 +84,8 @@ public class UnifiedRoleEligibilityScheduleRequestRequestBuilder extends BaseReq
      * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public DirectoryObjectWithReferenceRequestBuilder principal() {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder principal() {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("principal"), getClient(), null);
     }
 
     /**
@@ -98,8 +94,8 @@ public class UnifiedRoleEligibilityScheduleRequestRequestBuilder extends BaseReq
      * @return the UnifiedRoleDefinitionWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
-        return new UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+        return new com.microsoft.graph.requests.UnifiedRoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 
     /**
@@ -108,8 +104,8 @@ public class UnifiedRoleEligibilityScheduleRequestRequestBuilder extends BaseReq
      * @return the UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder targetSchedule() {
-        return new UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("targetSchedule"), getClient(), null);
+    public com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder targetSchedule() {
+        return new com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("targetSchedule"), getClient(), null);
     }
 
     /**

@@ -10,10 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintJob;
 import com.microsoft.graph.models.PrintJobConfiguration;
 import com.microsoft.graph.models.PrintJobStatus;
-import com.microsoft.graph.requests.PrintDocumentCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintDocumentRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -70,8 +66,8 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintDocumentCollectionRequestBuilder documents() {
-        return new PrintDocumentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("documents"), getClient(), null);
+    public com.microsoft.graph.requests.PrintDocumentCollectionRequestBuilder documents() {
+        return new com.microsoft.graph.requests.PrintDocumentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("documents"), getClient(), null);
     }
 
     /**
@@ -81,8 +77,8 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintDocumentRequestBuilder documents(@Nonnull final String id) {
-        return new PrintDocumentRequestBuilder(getRequestUrlWithAdditionalSegment("documents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintDocumentRequestBuilder documents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintDocumentRequestBuilder(getRequestUrlWithAdditionalSegment("documents") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the PrintTask collection
@@ -90,8 +86,8 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
      * @return the collection request builder
      */
     @Nonnull
-    public PrintTaskCollectionRequestBuilder tasks() {
-        return new PrintTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder tasks() {
+        return new com.microsoft.graph.requests.PrintTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
     /**
@@ -101,8 +97,8 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
      * @param id the item identifier
      */
     @Nonnull
-    public PrintTaskRequestBuilder tasks(@Nonnull final String id) {
-        return new PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.PrintTaskRequestBuilder tasks(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 
     /**

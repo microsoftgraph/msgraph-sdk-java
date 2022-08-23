@@ -10,7 +10,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ItemAttachment;
 import com.microsoft.graph.models.AttachmentItem;
 import com.microsoft.graph.models.UploadSession;
-import com.microsoft.graph.requests.OutlookItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

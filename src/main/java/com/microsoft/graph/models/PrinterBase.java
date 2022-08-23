@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PrinterCapabilities;
 import com.microsoft.graph.models.PrinterDefaults;
 import com.microsoft.graph.models.PrinterLocation;
 import com.microsoft.graph.models.PrinterStatus;
-import com.microsoft.graph.models.PrintJob;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PrintJobCollectionPage;
 
@@ -111,7 +110,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
     @SerializedName(value = "jobs", alternate = {"Jobs"})
     @Expose
 	@Nullable
-    public PrintJobCollectionPage jobs;
+    public com.microsoft.graph.requests.PrintJobCollectionPage jobs;
 
 
     /**
@@ -124,7 +123,7 @@ public class PrinterBase extends Entity implements IJsonBackedObject {
 
 
         if (json.has("jobs")) {
-            jobs = serializer.deserializeObject(json.get("jobs"), PrintJobCollectionPage.class);
+            jobs = serializer.deserializeObject(json.get("jobs"), com.microsoft.graph.requests.PrintJobCollectionPage.class);
         }
     }
 }

@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

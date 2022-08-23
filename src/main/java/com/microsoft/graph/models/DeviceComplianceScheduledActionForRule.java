@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceComplianceActionItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceComplianceActionItemCollectionPage;
 
@@ -44,7 +43,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
     @SerializedName(value = "scheduledActionConfigurations", alternate = {"ScheduledActionConfigurations"})
     @Expose
 	@Nullable
-    public DeviceComplianceActionItemCollectionPage scheduledActionConfigurations;
+    public com.microsoft.graph.requests.DeviceComplianceActionItemCollectionPage scheduledActionConfigurations;
 
 
     /**
@@ -57,7 +56,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
 
         if (json.has("scheduledActionConfigurations")) {
-            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations"), DeviceComplianceActionItemCollectionPage.class);
+            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations"), com.microsoft.graph.requests.DeviceComplianceActionItemCollectionPage.class);
         }
     }
 }

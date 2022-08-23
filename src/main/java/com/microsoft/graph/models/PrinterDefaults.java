@@ -110,7 +110,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Input Bin.
-     * The default input bin that serves as the paper source.
+     * 
      */
     @SerializedName(value = "inputBin", alternate = {"InputBin"})
     @Expose

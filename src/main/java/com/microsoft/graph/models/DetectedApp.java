@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
 
@@ -69,7 +68,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
      * The devices that have the discovered application installed
      */
 	@Nullable
-    public ManagedDeviceCollectionPage managedDevices;
+    public com.microsoft.graph.requests.ManagedDeviceCollectionPage managedDevices;
 
 
     /**
@@ -82,7 +81,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), com.microsoft.graph.requests.ManagedDeviceCollectionPage.class);
         }
     }
 }

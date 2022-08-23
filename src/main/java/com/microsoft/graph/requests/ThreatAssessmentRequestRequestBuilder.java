@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ThreatAssessmentRequest;
-import com.microsoft.graph.requests.ThreatAssessmentResultCollectionRequestBuilder;
-import com.microsoft.graph.requests.ThreatAssessmentResultRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @return the collection request builder
      */
     @Nonnull
-    public ThreatAssessmentResultCollectionRequestBuilder results() {
-        return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentResultCollectionRequestBuilder results() {
+        return new com.microsoft.graph.requests.ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder<Th
      * @param id the item identifier
      */
     @Nonnull
-    public ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
-        return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ThreatAssessmentResultRequestBuilder results(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }

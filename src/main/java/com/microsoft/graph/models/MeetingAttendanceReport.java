@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AttendanceRecordCollectionPage;
 
@@ -62,7 +61,7 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
     @SerializedName(value = "attendanceRecords", alternate = {"AttendanceRecords"})
     @Expose
 	@Nullable
-    public AttendanceRecordCollectionPage attendanceRecords;
+    public com.microsoft.graph.requests.AttendanceRecordCollectionPage attendanceRecords;
 
 
     /**
@@ -75,7 +74,7 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
 
 
         if (json.has("attendanceRecords")) {
-            attendanceRecords = serializer.deserializeObject(json.get("attendanceRecords"), AttendanceRecordCollectionPage.class);
+            attendanceRecords = serializer.deserializeObject(json.get("attendanceRecords"), com.microsoft.graph.requests.AttendanceRecordCollectionPage.class);
         }
     }
 }

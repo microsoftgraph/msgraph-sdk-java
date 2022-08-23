@@ -15,7 +15,6 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.ThreatExpectedAssessment;
 import com.microsoft.graph.models.ThreatAssessmentRequestSource;
 import com.microsoft.graph.models.ThreatAssessmentStatus;
-import com.microsoft.graph.models.ThreatAssessmentResult;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ThreatAssessmentResultCollectionPage;
 
@@ -81,7 +80,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Request Source.
-     * The source of the threat assessment request. Possible values are: user, administrator.
+     * The source of the threat assessment request. Possible values are: administrator.
      */
     @SerializedName(value = "requestSource", alternate = {"RequestSource"})
     @Expose
@@ -104,7 +103,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
     @SerializedName(value = "results", alternate = {"Results"})
     @Expose
 	@Nullable
-    public ThreatAssessmentResultCollectionPage results;
+    public com.microsoft.graph.requests.ThreatAssessmentResultCollectionPage results;
 
 
     /**
@@ -117,7 +116,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
 
         if (json.has("results")) {
-            results = serializer.deserializeObject(json.get("results"), ThreatAssessmentResultCollectionPage.class);
+            results = serializer.deserializeObject(json.get("results"), com.microsoft.graph.requests.ThreatAssessmentResultCollectionPage.class);
         }
     }
 }

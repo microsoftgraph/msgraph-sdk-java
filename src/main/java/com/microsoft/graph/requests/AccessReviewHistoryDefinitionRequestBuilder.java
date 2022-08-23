@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
-import com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.AccessReviewHistoryInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +62,8 @@ public class AccessReviewHistoryDefinitionRequestBuilder extends BaseRequestBuil
      * @return the collection request builder
      */
     @Nonnull
-    public AccessReviewHistoryInstanceCollectionRequestBuilder instances() {
-        return new AccessReviewHistoryInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionRequestBuilder instances() {
+        return new com.microsoft.graph.requests.AccessReviewHistoryInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
     /**
@@ -75,7 +73,7 @@ public class AccessReviewHistoryDefinitionRequestBuilder extends BaseRequestBuil
      * @param id the item identifier
      */
     @Nonnull
-    public AccessReviewHistoryInstanceRequestBuilder instances(@Nonnull final String id) {
-        return new AccessReviewHistoryInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AccessReviewHistoryInstanceRequestBuilder instances(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessReviewHistoryInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
 }

@@ -9,11 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -73,8 +68,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
-        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
     /**
@@ -84,8 +79,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
-        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationState collection
@@ -93,8 +88,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
-        return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
+        return new com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
     }
 
     /**
@@ -104,8 +99,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceConfigurationStateRequestBuilder deviceConfigurationStates(@Nonnull final String id) {
-        return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder deviceConfigurationStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -114,8 +109,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the DeviceCategoryRequestBuilder instance
      */
     @Nonnull
-    public DeviceCategoryRequestBuilder deviceCategory() {
-        return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceCategoryRequestBuilder deviceCategory() {
+        return new com.microsoft.graph.requests.DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
 
     /**

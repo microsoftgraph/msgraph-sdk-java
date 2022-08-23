@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleManagement;
-import com.microsoft.graph.requests.RbacApplicationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,8 +63,8 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationRequestBuilder directory() {
-        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationRequestBuilder directory() {
+        return new com.microsoft.graph.requests.RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
     }
 
     /**
@@ -74,7 +73,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
      * @return the RbacApplicationRequestBuilder instance
      */
     @Nonnull
-    public RbacApplicationRequestBuilder entitlementManagement() {
-        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    public com.microsoft.graph.requests.RbacApplicationRequestBuilder entitlementManagement() {
+        return new com.microsoft.graph.requests.RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 }

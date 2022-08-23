@@ -12,13 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PhysicalAddress;
 import com.microsoft.graph.models.BookingWorkHours;
 import com.microsoft.graph.models.BookingSchedulingPolicy;
-import com.microsoft.graph.models.BookingAppointment;
-import com.microsoft.graph.models.BookingCustomerBase;
-import com.microsoft.graph.models.BookingCustomQuestion;
-import com.microsoft.graph.models.BookingService;
-import com.microsoft.graph.models.BookingStaffMemberBase;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.BookingAppointmentCollectionPage;
 import com.microsoft.graph.requests.BookingCustomerBaseCollectionPage;
 import com.microsoft.graph.requests.BookingCustomQuestionCollectionPage;
 import com.microsoft.graph.requests.BookingServiceCollectionPage;
@@ -41,7 +35,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
 
     /**
      * The Address.
-     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
+     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -145,7 +139,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "appointments", alternate = {"Appointments"})
     @Expose
 	@Nullable
-    public BookingAppointmentCollectionPage appointments;
+    public com.microsoft.graph.requests.BookingAppointmentCollectionPage appointments;
 
     /**
      * The Calendar View.
@@ -154,7 +148,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
 	@Nullable
-    public BookingAppointmentCollectionPage calendarView;
+    public com.microsoft.graph.requests.BookingAppointmentCollectionPage calendarView;
 
     /**
      * The Customers.
@@ -163,7 +157,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
 	@Nullable
-    public BookingCustomerBaseCollectionPage customers;
+    public com.microsoft.graph.requests.BookingCustomerBaseCollectionPage customers;
 
     /**
      * The Custom Questions.
@@ -172,7 +166,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "customQuestions", alternate = {"CustomQuestions"})
     @Expose
 	@Nullable
-    public BookingCustomQuestionCollectionPage customQuestions;
+    public com.microsoft.graph.requests.BookingCustomQuestionCollectionPage customQuestions;
 
     /**
      * The Services.
@@ -181,7 +175,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "services", alternate = {"Services"})
     @Expose
 	@Nullable
-    public BookingServiceCollectionPage services;
+    public com.microsoft.graph.requests.BookingServiceCollectionPage services;
 
     /**
      * The Staff Members.
@@ -190,7 +184,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
     @SerializedName(value = "staffMembers", alternate = {"StaffMembers"})
     @Expose
 	@Nullable
-    public BookingStaffMemberBaseCollectionPage staffMembers;
+    public com.microsoft.graph.requests.BookingStaffMemberBaseCollectionPage staffMembers;
 
 
     /**
@@ -203,27 +197,27 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appointments")) {
-            appointments = serializer.deserializeObject(json.get("appointments"), BookingAppointmentCollectionPage.class);
+            appointments = serializer.deserializeObject(json.get("appointments"), com.microsoft.graph.requests.BookingAppointmentCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView"), BookingAppointmentCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), com.microsoft.graph.requests.BookingAppointmentCollectionPage.class);
         }
 
         if (json.has("customers")) {
-            customers = serializer.deserializeObject(json.get("customers"), BookingCustomerBaseCollectionPage.class);
+            customers = serializer.deserializeObject(json.get("customers"), com.microsoft.graph.requests.BookingCustomerBaseCollectionPage.class);
         }
 
         if (json.has("customQuestions")) {
-            customQuestions = serializer.deserializeObject(json.get("customQuestions"), BookingCustomQuestionCollectionPage.class);
+            customQuestions = serializer.deserializeObject(json.get("customQuestions"), com.microsoft.graph.requests.BookingCustomQuestionCollectionPage.class);
         }
 
         if (json.has("services")) {
-            services = serializer.deserializeObject(json.get("services"), BookingServiceCollectionPage.class);
+            services = serializer.deserializeObject(json.get("services"), com.microsoft.graph.requests.BookingServiceCollectionPage.class);
         }
 
         if (json.has("staffMembers")) {
-            staffMembers = serializer.deserializeObject(json.get("staffMembers"), BookingStaffMemberBaseCollectionPage.class);
+            staffMembers = serializer.deserializeObject(json.get("staffMembers"), com.microsoft.graph.requests.BookingStaffMemberBaseCollectionPage.class);
         }
     }
 }

@@ -39,7 +39,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
 
     /**
      * The Custom Question Answers.
-     * It consists of the list of custom questions and answers given by the customer as part of the appointment.
+     * It consists of the list of custom questions and answers given by the customer as part of the appointment
      */
     @SerializedName(value = "customQuestionAnswers", alternate = {"CustomQuestionAnswers"})
     @Expose
@@ -48,7 +48,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
 
     /**
      * The Email Address.
-     * The SMTP address of the bookingCustomer who is booking the appointment.
+     * The SMTP address of the bookingCustomer who is booking the appointment
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -57,7 +57,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
 
     /**
      * The Location.
-     * Represents location information for the bookingCustomer who is booking the appointment.
+     * Represents location information for the bookingCustomer who is booking the appointment.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose

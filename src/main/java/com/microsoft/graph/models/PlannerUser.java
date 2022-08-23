@@ -9,8 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PlannerPlan;
-import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerPlanCollectionPage;
 import com.microsoft.graph.requests.PlannerTaskCollectionPage;
@@ -37,16 +35,16 @@ public class PlannerUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
 	@Nullable
-    public PlannerPlanCollectionPage plans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionPage plans;
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
 	@Nullable
-    public PlannerTaskCollectionPage tasks;
+    public com.microsoft.graph.requests.PlannerTaskCollectionPage tasks;
 
 
     /**
@@ -59,11 +57,11 @@ public class PlannerUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans"), PlannerPlanCollectionPage.class);
+            plans = serializer.deserializeObject(json.get("plans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            tasks = serializer.deserializeObject(json.get("tasks"), PlannerTaskCollectionPage.class);
+            tasks = serializer.deserializeObject(json.get("tasks"), com.microsoft.graph.requests.PlannerTaskCollectionPage.class);
         }
     }
 }

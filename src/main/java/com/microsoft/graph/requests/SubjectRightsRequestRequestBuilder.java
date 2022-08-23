@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SubjectRightsRequest;
-import com.microsoft.graph.requests.AuthoredNoteCollectionRequestBuilder;
-import com.microsoft.graph.requests.AuthoredNoteRequestBuilder;
-import com.microsoft.graph.requests.TeamWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -65,8 +62,8 @@ public class SubjectRightsRequestRequestBuilder extends BaseRequestBuilder<Subje
      * @return the collection request builder
      */
     @Nonnull
-    public AuthoredNoteCollectionRequestBuilder notes() {
-        return new AuthoredNoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notes"), getClient(), null);
+    public com.microsoft.graph.requests.AuthoredNoteCollectionRequestBuilder notes() {
+        return new com.microsoft.graph.requests.AuthoredNoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notes"), getClient(), null);
     }
 
     /**
@@ -76,8 +73,8 @@ public class SubjectRightsRequestRequestBuilder extends BaseRequestBuilder<Subje
      * @param id the item identifier
      */
     @Nonnull
-    public AuthoredNoteRequestBuilder notes(@Nonnull final String id) {
-        return new AuthoredNoteRequestBuilder(getRequestUrlWithAdditionalSegment("notes") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.AuthoredNoteRequestBuilder notes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthoredNoteRequestBuilder(getRequestUrlWithAdditionalSegment("notes") + "/" + id, getClient(), null);
     }
 
     /**
@@ -86,8 +83,8 @@ public class SubjectRightsRequestRequestBuilder extends BaseRequestBuilder<Subje
      * @return the TeamWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public TeamWithReferenceRequestBuilder team() {
-        return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    public com.microsoft.graph.requests.TeamWithReferenceRequestBuilder team() {
+        return new com.microsoft.graph.requests.TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
 
     /**

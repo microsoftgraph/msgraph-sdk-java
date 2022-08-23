@@ -8,7 +8,6 @@ package com.microsoft.graph.security.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.security.models.EdiscoveryEstimateOperation;
-import com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -64,7 +63,7 @@ public class EdiscoveryEstimateOperationRequestBuilder extends BaseRequestBuilde
      * @return the EdiscoverySearchWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public EdiscoverySearchWithReferenceRequestBuilder search() {
-        return new EdiscoverySearchWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("search"), getClient(), null);
+    public com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder search() {
+        return new com.microsoft.graph.security.requests.EdiscoverySearchWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("search"), getClient(), null);
     }
 }

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.TargetedManagedAppProtection;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionPage;
@@ -31,7 +30,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android.
+     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
     @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
@@ -40,7 +39,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Package Id.
-     * Unique identifier of a custom browser to open weblink on Android.
+     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
     @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose
@@ -108,7 +107,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
 	@Nullable
-    public ManagedMobileAppCollectionPage apps;
+    public com.microsoft.graph.requests.ManagedMobileAppCollectionPage apps;
 
     /**
      * The Deployment Summary.
@@ -130,7 +129,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), com.microsoft.graph.requests.ManagedMobileAppCollectionPage.class);
         }
     }
 }

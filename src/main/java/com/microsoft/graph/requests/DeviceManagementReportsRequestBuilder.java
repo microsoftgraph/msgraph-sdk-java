@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -81,8 +79,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @return the collection request builder
      */
     @Nonnull
-    public DeviceManagementExportJobCollectionRequestBuilder exportJobs() {
-        return new DeviceManagementExportJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder exportJobs() {
+        return new com.microsoft.graph.requests.DeviceManagementExportJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs"), getClient(), null);
     }
 
     /**
@@ -92,8 +90,8 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param id the item identifier
      */
     @Nonnull
-    public DeviceManagementExportJobRequestBuilder exportJobs(@Nonnull final String id) {
-        return new DeviceManagementExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder exportJobs(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementExportJobRequestBuilder(getRequestUrlWithAdditionalSegment("exportJobs") + "/" + id, getClient(), null);
     }
 
     /**

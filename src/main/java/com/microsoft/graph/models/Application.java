@@ -24,15 +24,9 @@ import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.ExtensionProperty;
-import com.microsoft.graph.models.FederatedIdentityCredential;
-import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.TokenIssuancePolicy;
-import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 
@@ -71,7 +65,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -116,7 +110,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
+     * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -143,7 +137,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -161,7 +155,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Info.
-     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -179,7 +173,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      */
     @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
@@ -251,7 +245,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Publisher Domain.
-     * The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
+     * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
      */
     @SerializedName(value = "publisherDomain", alternate = {"PublisherDomain"})
     @Expose
@@ -305,7 +299,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
+     * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -355,7 +349,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
 	@Nullable
-    public ExtensionPropertyCollectionPage extensionProperties;
+    public com.microsoft.graph.requests.ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Federated Identity Credentials.
@@ -364,35 +358,35 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
 	@Nullable
-    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+    public com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
 
     /**
      * The Home Realm Discovery Policies.
      * 
      */
 	@Nullable
-    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Owners.
      * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      */
 	@Nullable
-    public DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
      * 
      */
 	@Nullable
-    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * 
      */
 	@Nullable
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
 
     /**
@@ -405,27 +399,27 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("extensionProperties")) {
-            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), ExtensionPropertyCollectionPage.class);
+            extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), com.microsoft.graph.requests.ExtensionPropertyCollectionPage.class);
         }
 
         if (json.has("federatedIdentityCredentials")) {
-            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
         }
     }
 }

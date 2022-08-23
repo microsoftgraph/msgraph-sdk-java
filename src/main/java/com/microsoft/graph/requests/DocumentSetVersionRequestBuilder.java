@@ -63,8 +63,8 @@ public class DocumentSetVersionRequestBuilder extends BaseRequestBuilder<Documen
      * @return the FieldValueSetRequestBuilder instance
      */
     @Nonnull
-    public FieldValueSetRequestBuilder fields() {
-        return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
+    public com.microsoft.graph.requests.FieldValueSetRequestBuilder fields() {
+        return new com.microsoft.graph.requests.FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 
     /**

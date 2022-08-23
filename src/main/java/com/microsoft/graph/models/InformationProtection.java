@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Bitlocker;
-import com.microsoft.graph.models.ThreatAssessmentRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage;
 
@@ -45,7 +44,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
     @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
 	@Nullable
-    public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
+    public com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 
 
     /**
@@ -58,7 +57,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests"), ThreatAssessmentRequestCollectionPage.class);
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests"), com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage.class);
         }
     }
 }

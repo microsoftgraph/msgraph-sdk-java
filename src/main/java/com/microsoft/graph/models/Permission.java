@@ -82,7 +82,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Password.
-     * Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
+     * Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      */
     @SerializedName(value = "hasPassword", alternate = {"HasPassword"})
     @Expose
@@ -127,7 +127,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Share Id.
-     * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * A unique token that can be used to access this shared item via the **shares** API. Read-only.
      */
     @SerializedName(value = "shareId", alternate = {"ShareId"})
     @Expose

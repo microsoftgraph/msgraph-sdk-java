@@ -12,8 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.termstore.models.LocalizedDescription;
 import com.microsoft.graph.termstore.models.LocalizedLabel;
 import com.microsoft.graph.models.KeyValue;
-import com.microsoft.graph.termstore.models.Term;
-import com.microsoft.graph.termstore.models.Relation;
 import com.microsoft.graph.termstore.models.Set;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.termstore.requests.TermCollectionPage;
@@ -86,7 +84,7 @@ public class Term extends Entity implements IJsonBackedObject {
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
 	@Nullable
-    public TermCollectionPage children;
+    public com.microsoft.graph.termstore.requests.TermCollectionPage children;
 
     /**
      * The Relations.
@@ -95,7 +93,7 @@ public class Term extends Entity implements IJsonBackedObject {
     @SerializedName(value = "relations", alternate = {"Relations"})
     @Expose
 	@Nullable
-    public RelationCollectionPage relations;
+    public com.microsoft.graph.termstore.requests.RelationCollectionPage relations;
 
     /**
      * The Set.
@@ -117,11 +115,11 @@ public class Term extends Entity implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children"), TermCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.termstore.requests.TermCollectionPage.class);
         }
 
         if (json.has("relations")) {
-            relations = serializer.deserializeObject(json.get("relations"), RelationCollectionPage.class);
+            relations = serializer.deserializeObject(json.get("relations"), com.microsoft.graph.termstore.requests.RelationCollectionPage.class);
         }
     }
 }

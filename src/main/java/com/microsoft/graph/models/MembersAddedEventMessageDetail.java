@@ -48,7 +48,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Visible History Start Date Time.
-     * The timestamp denoting how far back a conversation's history is shared with the conversation members.
+     * The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      */
     @SerializedName(value = "visibleHistoryStartDateTime", alternate = {"VisibleHistoryStartDateTime"})
     @Expose

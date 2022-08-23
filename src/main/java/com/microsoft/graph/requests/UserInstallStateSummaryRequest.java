@@ -8,8 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserInstallStateSummary;
-import com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceInstallStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

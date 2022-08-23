@@ -13,7 +13,6 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.ServiceUpdateCategory;
 import com.microsoft.graph.models.ServiceUpdateSeverity;
 import com.microsoft.graph.models.ServiceUpdateMessageViewpoint;
-import com.microsoft.graph.models.ServiceAnnouncementAttachment;
 import com.microsoft.graph.models.ServiceAnnouncementBase;
 import com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionPage;
 
@@ -120,7 +119,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
 	@Nullable
-    public ServiceAnnouncementAttachmentCollectionPage attachments;
+    public com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionPage attachments;
 
 
     /**
@@ -133,7 +132,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
 
         if (json.has("attachments")) {
-            attachments = serializer.deserializeObject(json.get("attachments"), ServiceAnnouncementAttachmentCollectionPage.class);
+            attachments = serializer.deserializeObject(json.get("attachments"), com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionPage.class);
         }
     }
 }

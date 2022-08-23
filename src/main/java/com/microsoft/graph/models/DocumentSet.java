@@ -11,8 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
 import com.microsoft.graph.models.DocumentSetContent;
-import com.microsoft.graph.models.ColumnDefinition;
-import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -62,7 +60,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Propagate Welcome Page Changes.
-     * Indicates whether to add the name of the document set to each file name.
+     * Specifies whether to push welcome page changes to inherited content types.
      */
     @SerializedName(value = "propagateWelcomePageChanges", alternate = {"PropagateWelcomePageChanges"})
     @Expose
@@ -71,7 +69,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Should Prefix Name To File.
-     * Add the name of the Document Set to each file name.
+     * Indicates whether to add the name of the document set to each file name.
      */
     @SerializedName(value = "shouldPrefixNameToFile", alternate = {"ShouldPrefixNameToFile"})
     @Expose
@@ -92,14 +90,14 @@ public class DocumentSet implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage sharedColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage sharedColumns;
 
     /**
      * The Welcome Page Columns.
      * 
      */
 	@Nullable
-    public ColumnDefinitionCollectionPage welcomePageColumns;
+    public com.microsoft.graph.requests.ColumnDefinitionCollectionPage welcomePageColumns;
 
 
     /**

@@ -10,9 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.CasesRoot;
-import com.microsoft.graph.models.Alert;
-import com.microsoft.graph.models.SecureScoreControlProfile;
-import com.microsoft.graph.models.SecureScore;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
@@ -44,12 +41,12 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * Notifications for suspicious or potential security issues in a customer’s tenant.
+     * 
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
 	@Nullable
-    public AlertCollectionPage alerts;
+    public com.microsoft.graph.requests.AlertCollectionPage alerts;
 
     /**
      * The Secure Score Control Profiles.
@@ -58,7 +55,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
 	@Nullable
-    public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
+    public com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
@@ -67,7 +64,7 @@ public class Security extends Entity implements IJsonBackedObject {
     @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
 	@Nullable
-    public SecureScoreCollectionPage secureScores;
+    public com.microsoft.graph.requests.SecureScoreCollectionPage secureScores;
 
 
     /**
@@ -80,15 +77,15 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts"), AlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.requests.AlertCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles"), SecureScoreControlProfileCollectionPage.class);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles"), com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            secureScores = serializer.deserializeObject(json.get("secureScores"), SecureScoreCollectionPage.class);
+            secureScores = serializer.deserializeObject(json.get("secureScores"), com.microsoft.graph.requests.SecureScoreCollectionPage.class);
         }
     }
 }

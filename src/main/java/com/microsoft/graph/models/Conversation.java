@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationThreadCollectionPage;
 
@@ -39,7 +38,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Delivered Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
@@ -48,7 +47,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-     * A short summary from the body of the latest post in this conversation.
+     * A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      */
     @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose
@@ -80,7 +79,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
 	@Nullable
-    public ConversationThreadCollectionPage threads;
+    public com.microsoft.graph.requests.ConversationThreadCollectionPage threads;
 
 
     /**
@@ -93,7 +92,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads"), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads"), com.microsoft.graph.requests.ConversationThreadCollectionPage.class);
         }
     }
 }

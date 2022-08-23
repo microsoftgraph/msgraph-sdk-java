@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ApprovalStage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalStageCollectionPage;
 
@@ -30,12 +29,12 @@ public class Approval extends Entity implements IJsonBackedObject {
 
     /**
      * The Stages.
-     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
+     * A collection of stages in the approval decision.
      */
     @SerializedName(value = "stages", alternate = {"Stages"})
     @Expose
 	@Nullable
-    public ApprovalStageCollectionPage stages;
+    public com.microsoft.graph.requests.ApprovalStageCollectionPage stages;
 
 
     /**
@@ -48,7 +47,7 @@ public class Approval extends Entity implements IJsonBackedObject {
 
 
         if (json.has("stages")) {
-            stages = serializer.deserializeObject(json.get("stages"), ApprovalStageCollectionPage.class);
+            stages = serializer.deserializeObject(json.get("stages"), com.microsoft.graph.requests.ApprovalStageCollectionPage.class);
         }
     }
 }

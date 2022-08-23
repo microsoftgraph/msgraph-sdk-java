@@ -29,7 +29,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Phone Number.
-     * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
+     * The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.
      */
     @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose

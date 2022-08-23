@@ -40,7 +40,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * A plain-text representation of the contents of the item. The text in this property is full-text indexed. Optional.
+     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
