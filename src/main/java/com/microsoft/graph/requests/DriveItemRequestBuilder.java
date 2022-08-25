@@ -124,11 +124,11 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
     /**
      * Gets the request builder for ItemAnalytics
      *
-     * @return the ItemAnalyticsWithReferenceRequestBuilder instance
+     * @return the ItemAnalyticsRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder analytics() {
-        return new com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    public com.microsoft.graph.requests.ItemAnalyticsRequestBuilder analytics() {
+        return new com.microsoft.graph.requests.ItemAnalyticsRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DriveItem collection
