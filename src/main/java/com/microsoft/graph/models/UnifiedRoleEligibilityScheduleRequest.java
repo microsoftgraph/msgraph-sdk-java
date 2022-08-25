@@ -24,7 +24,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     private String _justification;
     /** The principal that's getting a role eligibility through the request. Supports $expand. */
     private DirectoryObject _principal;
-    /** Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne). */
+    /** Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne). */
     private String _principalId;
     /** Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand. */
     private UnifiedRoleDefinition _roleDefinition;
@@ -146,7 +146,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         return this._principal;
     }
     /**
-     * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+     * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -290,7 +290,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
         this._principal = value;
     }
     /**
-     * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Supports $filter (eq, ne).
+     * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      * @param value Value to set for the principalId property.
      * @return a void
      */

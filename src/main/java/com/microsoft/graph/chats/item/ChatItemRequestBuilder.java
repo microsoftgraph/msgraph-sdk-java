@@ -144,7 +144,7 @@ public class ChatItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update entity in chats
+     * Update the properties of a chat object.
      * @param body 
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class ChatItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update entity in chats
+     * Update the properties of a chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -314,7 +314,7 @@ public class ChatItemRequestBuilder {
         return new ChatMessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update entity in chats
+     * Update the properties of a chat object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -331,7 +331,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Update entity in chats
+     * Update the properties of a chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -349,7 +349,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Update entity in chats
+     * Update the properties of a chat object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service

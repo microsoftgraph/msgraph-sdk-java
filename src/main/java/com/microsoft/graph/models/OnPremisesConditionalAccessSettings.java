@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Singleton entity which represents the Exchange OnPremises Conditional Access Settings for a tenant. */
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
     /** Indicates if on premises conditional access is enabled for this organization */
     private Boolean _enabled;
@@ -18,7 +17,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /** Override the default access rule when allowing a device to ensure access is granted. */
     private Boolean _overrideDefaultRule;
     /**
-     * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
+     * Instantiates a new OnPremisesConditionalAccessSettings and sets the default values.
      * @return a void
      */
     public OnPremisesConditionalAccessSettings() {
@@ -28,7 +27,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      */
     @javax.annotation.Nonnull
     public static OnPremisesConditionalAccessSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

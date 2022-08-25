@@ -8,6 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientUserAgent extends UserAgent implements Parsable {
+    /** The azureADAppId property */
+    private String _azureADAppId;
+    /** The communicationServiceId property */
+    private String _communicationServiceId;
     /** The platform property */
     private ClientPlatform _platform;
     /** The productFamily property */
@@ -31,6 +35,22 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         return new ClientUserAgent();
     }
     /**
+     * Gets the azureADAppId property value. The azureADAppId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAzureADAppId() {
+        return this._azureADAppId;
+    }
+    /**
+     * Gets the communicationServiceId property value. The communicationServiceId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getCommunicationServiceId() {
+        return this._communicationServiceId;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -38,6 +58,8 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClientUserAgent currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
+            this.put("communicationServiceId", (n) -> { currentObject.setCommunicationServiceId(n.getStringValue()); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(ClientPlatform.class)); });
             this.put("productFamily", (n) -> { currentObject.setProductFamily(n.getEnumValue(ProductFamily.class)); });
         }};
@@ -66,8 +88,26 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("azureADAppId", this.getAzureADAppId());
+        writer.writeStringValue("communicationServiceId", this.getCommunicationServiceId());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeEnumValue("productFamily", this.getProductFamily());
+    }
+    /**
+     * Sets the azureADAppId property value. The azureADAppId property
+     * @param value Value to set for the azureADAppId property.
+     * @return a void
+     */
+    public void setAzureADAppId(@javax.annotation.Nullable final String value) {
+        this._azureADAppId = value;
+    }
+    /**
+     * Sets the communicationServiceId property value. The communicationServiceId property
+     * @param value Value to set for the communicationServiceId property.
+     * @return a void
+     */
+    public void setCommunicationServiceId(@javax.annotation.Nullable final String value) {
+        this._communicationServiceId = value;
     }
     /**
      * Sets the platform property value. The platform property

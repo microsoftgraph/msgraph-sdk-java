@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Base Class of Device Enrollment Configuration */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the device configuration profile */
     private java.util.List<EnrollmentConfigurationAssignment> _assignments;
@@ -25,7 +24,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The version of the device enrollment configuration */
     private Integer _version;
     /**
-     * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
      * @return a void
      */
     public DeviceEnrollmentConfiguration() {
@@ -35,7 +34,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentConfiguration
+     * @return a DeviceEnrollmentConfiguration
      */
     @javax.annotation.Nonnull
     public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
