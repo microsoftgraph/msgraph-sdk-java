@@ -26,7 +26,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     private String _justification;
     /** The principal that's getting a role assignment through the request. Supports $expand. */
     private DirectoryObject _principal;
-    /** Identifier of the principal that has been granted the assignment. Supports $filter (eq, ne). */
+    /** Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne). */
     private String _principalId;
     /** Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand. */
     private UnifiedRoleDefinition _roleDefinition;
@@ -157,7 +157,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         return this._principal;
     }
     /**
-     * Gets the principalId property value. Identifier of the principal that has been granted the assignment. Supports $filter (eq, ne).
+     * Gets the principalId property value. Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
         this._principal = value;
     }
     /**
-     * Sets the principalId property value. Identifier of the principal that has been granted the assignment. Supports $filter (eq, ne).
+     * Sets the principalId property value. Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne).
      * @param value Value to set for the principalId property.
      * @return a void
      */

@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeRuleMembers extends SubjectSet implements Parsable {
-    /** The description property */
+    /** A description of the membership rule. */
     private String _description;
-    /** The membershipRule property */
+    /** Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax. */
     private String _membershipRule;
     /**
      * Instantiates a new AttributeRuleMembers and sets the default values.
@@ -31,7 +31,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
         return new AttributeRuleMembers();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the membership rule.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
         }};
     }
     /**
-     * Gets the membershipRule property value. The membershipRule property
+     * Gets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
         writer.writeStringValue("membershipRule", this.getMembershipRule());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the membership rule.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -78,7 +78,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the membershipRule property value. The membershipRule property
+     * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      * @param value Value to set for the membershipRule property.
      * @return a void
      */
