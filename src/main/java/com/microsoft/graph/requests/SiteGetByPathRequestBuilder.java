@@ -99,11 +99,11 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     /**
      * Gets the request builder for ItemAnalytics
      *
-     * @return the ItemAnalyticsWithReferenceRequestBuilder instance
+     * @return the ItemAnalyticsRequestBuilder instance
      */
     @Nonnull
-    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
-        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    public ItemAnalyticsRequestBuilder analytics() {
+        return new ItemAnalyticsRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ColumnDefinition collection
