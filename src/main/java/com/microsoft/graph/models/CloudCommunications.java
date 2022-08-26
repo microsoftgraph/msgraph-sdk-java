@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.callrecords.CallRecord;
-/** Provides operations to manage the cloudCommunications singleton. */
 public class CloudCommunications extends Entity implements Parsable {
     /** The callRecords property */
     private java.util.List<CallRecord> _callRecords;
@@ -19,7 +18,7 @@ public class CloudCommunications extends Entity implements Parsable {
     /** The presences property */
     private java.util.List<Presence> _presences;
     /**
-     * Instantiates a new cloudCommunications and sets the default values.
+     * Instantiates a new CloudCommunications and sets the default values.
      * @return a void
      */
     public CloudCommunications() {
@@ -29,7 +28,7 @@ public class CloudCommunications extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudCommunications
+     * @return a CloudCommunications
      */
     @javax.annotation.Nonnull
     public static CloudCommunications createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

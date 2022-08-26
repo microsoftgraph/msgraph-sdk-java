@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum WindowsUserAccountControlSettings implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

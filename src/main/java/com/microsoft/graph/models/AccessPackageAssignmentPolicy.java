@@ -8,13 +8,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /** Access package containing this policy. Read-only. */
     private AccessPackage _accessPackage;
     /** Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue. */
     private AllowedTargetScope _allowedTargetScope;
-    /** The automaticRequestSettings property */
+    /** This property is only present for an auto assignment policy; if absent, this is a request-based policy. */
     private AccessPackageAutomaticRequestSettings _automaticRequestSettings;
     /** Catalog of the access package containing this policy. Read-only. */
     private AccessPackageCatalog _catalog;
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this._allowedTargetScope;
     }
     /**
-     * Gets the automaticRequestSettings property value. The automaticRequestSettings property
+     * Gets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      * @return a accessPackageAutomaticRequestSettings
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this._allowedTargetScope = value;
     }
     /**
-     * Sets the automaticRequestSettings property value. The automaticRequestSettings property
+     * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      * @param value Value to set for the automaticRequestSettings property.
      * @return a void
      */

@@ -18,7 +18,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     private String _odataType;
     /** The removeAccessWhenTargetLeavesAllowedTargets property */
     private Boolean _removeAccessWhenTargetLeavesAllowedTargets;
-    /** The requestAccessForAllowedTargets property */
+    /** If set to true, automatic assignments will be created for targets in the allowed target scope. */
     private Boolean _requestAccessForAllowedTargets;
     /**
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
@@ -85,7 +85,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         return this._removeAccessWhenTargetLeavesAllowedTargets;
     }
     /**
-     * Gets the requestAccessForAllowedTargets property value. The requestAccessForAllowedTargets property
+     * Gets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         this._removeAccessWhenTargetLeavesAllowedTargets = value;
     }
     /**
-     * Sets the requestAccessForAllowedTargets property value. The requestAccessForAllowedTargets property
+     * Sets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
      * @param value Value to set for the requestAccessForAllowedTargets property.
      * @return a void
      */

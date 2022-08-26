@@ -60,7 +60,7 @@ public class ChatsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve the list of chats that the user is part of.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ChatsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class ChatsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve the list of chats that the user is part of.
      * @return a CompletableFuture of ChatCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get() {
@@ -139,7 +139,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatCollectionResponse
      */
@@ -156,7 +156,7 @@ public class ChatsRequestBuilder {
         }
     }
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve the list of chats that the user is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChatCollectionResponse
@@ -236,7 +236,7 @@ public class ChatsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Retrieve a single chat (without its messages). */
+    /** Retrieve the list of chats that the user is part of. */
     public class ChatsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

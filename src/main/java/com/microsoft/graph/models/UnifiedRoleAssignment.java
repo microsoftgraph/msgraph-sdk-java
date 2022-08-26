@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UnifiedRoleAssignment extends Entity implements Parsable {
     /** Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand. */
     private AppScope _appScope;

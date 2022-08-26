@@ -78,7 +78,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<PasswordCredential> _passwordCredentials;
     /** Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc. */
     private String _preferredSingleSignOnMode;
-    /** The preferredTokenSigningKeyThumbprint property */
+    /** Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions. */
     private String _preferredTokenSigningKeyThumbprint;
     /** The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
     private java.util.List<String> _replyUrls;
@@ -102,8 +102,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
     /** The transitiveMemberOf property */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
+    /** Specifies the verified publisher of the application which this service principal represents. */
+    private VerifiedPublisher _verifiedPublisher;
     /**
-     * Instantiates a new servicePrincipal and sets the default values.
+     * Instantiates a new ServicePrincipal and sets the default values.
      * @return a void
      */
     public ServicePrincipal() {
@@ -113,7 +115,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipal
+     * @return a ServicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -335,6 +337,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
             this.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
             this.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
             this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+            this.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -458,7 +461,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._preferredSingleSignOnMode;
     }
     /**
-     * Gets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
+     * Gets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -554,6 +557,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._transitiveMemberOf;
     }
     /**
+     * Gets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     * @return a verifiedPublisher
+     */
+    @javax.annotation.Nullable
+    public VerifiedPublisher getVerifiedPublisher() {
+        return this._verifiedPublisher;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -608,6 +619,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
         writer.writeCollectionOfObjectValues("tokenLifetimePolicies", this.getTokenLifetimePolicies());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
+        writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
     }
     /**
      * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
@@ -890,7 +902,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this._preferredSingleSignOnMode = value;
     }
     /**
-     * Sets the preferredTokenSigningKeyThumbprint property value. The preferredTokenSigningKeyThumbprint property
+     * Sets the preferredTokenSigningKeyThumbprint property value. Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
      * @param value Value to set for the preferredTokenSigningKeyThumbprint property.
      * @return a void
      */
@@ -984,5 +996,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
+    }
+    /**
+     * Sets the verifiedPublisher property value. Specifies the verified publisher of the application which this service principal represents.
+     * @param value Value to set for the verifiedPublisher property.
+     * @return a void
+     */
+    public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
+        this._verifiedPublisher = value;
     }
 }

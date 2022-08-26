@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public class LinkedResource extends Entity implements Parsable {
     /** Field indicating the app name of the source that is sending the linkedResource. */
     private String _applicationName;

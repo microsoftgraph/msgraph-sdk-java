@@ -3,7 +3,7 @@ package microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum MediaStreamDirection implements ValuedEnum {
     CallerToCallee("callerToCallee"),
     CalleeToCaller("calleeToCaller");

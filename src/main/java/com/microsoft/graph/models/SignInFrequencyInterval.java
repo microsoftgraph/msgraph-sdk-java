@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum SignInFrequencyInterval implements ValuedEnum {
     TimeBased("timeBased"),
     EveryTime("everyTime"),

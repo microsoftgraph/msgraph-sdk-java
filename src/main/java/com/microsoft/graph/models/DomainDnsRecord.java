@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class DomainDnsRecord extends Entity implements Parsable {
     /** If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain. */
     private Boolean _isOptional;
@@ -20,7 +19,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     /** Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable. */
     private Integer _ttl;
     /**
-     * Instantiates a new domainDnsRecord and sets the default values.
+     * Instantiates a new DomainDnsRecord and sets the default values.
      * @return a void
      */
     public DomainDnsRecord() {
@@ -30,7 +29,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domainDnsRecord
+     * @return a DomainDnsRecord
      */
     @javax.annotation.Nonnull
     public static DomainDnsRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
