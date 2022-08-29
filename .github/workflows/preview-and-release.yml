@@ -17,7 +17,7 @@ env:
 
 jobs:
   maven_Preview:
-    if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/dev/feature/6.0' }}
+    if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/feature/6.0' }}
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
