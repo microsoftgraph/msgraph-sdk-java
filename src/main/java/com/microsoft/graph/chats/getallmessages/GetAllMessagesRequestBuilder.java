@@ -1,5 +1,6 @@
-package microsoft.graph.chats.getallmessages;
+package com.microsoft.graph.chats.getallmessages;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getAllMessages method. */
 public class GetAllMessagesRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.compliancemanagementpartners;
+package com.microsoft.graph.devicemanagement.compliancemanagementpartners;
 
+import com.microsoft.graph.devicemanagement.compliancemanagementpartners.count.CountRequestBuilder;
+import com.microsoft.graph.models.ComplianceManagementPartner;
+import com.microsoft.graph.models.ComplianceManagementPartnerCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.compliancemanagementpartners.count.CountRequestBuilder;
-import microsoft.graph.models.ComplianceManagementPartner;
-import microsoft.graph.models.ComplianceManagementPartnerCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity. */
 public class ComplianceManagementPartnersRequestBuilder {
     /** The Count property */

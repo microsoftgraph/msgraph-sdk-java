@@ -1,9 +1,9 @@
-package microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item;
+package com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item;
 
+import com.microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userFlowIdentityProviders/{identityProviderBase-id} */
 public class IdentityProviderBaseItemRequestBuilder {
     /** Path parameters for the request */

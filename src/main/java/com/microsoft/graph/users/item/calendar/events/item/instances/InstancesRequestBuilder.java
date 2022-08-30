@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.calendar.events.item.instances;
+package com.microsoft.graph.users.item.calendar.events.item.instances;
 
+import com.microsoft.graph.models.Event;
+import com.microsoft.graph.models.EventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.calendar.events.item.instances.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.calendar.events.item.instances.delta.DeltaRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Event;
-import microsoft.graph.models.EventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.calendar.events.item.instances.count.CountRequestBuilder;
-import microsoft.graph.users.item.calendar.events.item.instances.delta.DeltaRequestBuilder;
 /** Provides operations to manage the instances property of the microsoft.graph.event entity. */
 public class InstancesRequestBuilder {
     /** The Count property */

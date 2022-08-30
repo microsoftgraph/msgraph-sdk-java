@@ -1,5 +1,9 @@
-package microsoft.graph.me.drives.item.root.versions.item;
+package com.microsoft.graph.me.drives.item.root.versions.item;
 
+import com.microsoft.graph.me.drives.item.root.versions.item.content.ContentRequestBuilder;
+import com.microsoft.graph.me.drives.item.root.versions.item.restoreversion.RestoreVersionRequestBuilder;
+import com.microsoft.graph.models.DriveItemVersion;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.drives.item.root.versions.item.content.ContentRequestBuilder;
-import microsoft.graph.me.drives.item.root.versions.item.restoreversion.RestoreVersionRequestBuilder;
-import microsoft.graph.models.DriveItemVersion;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the versions property of the microsoft.graph.driveItem entity. */
 public class DriveItemVersionItemRequestBuilder {
     /** The content property */

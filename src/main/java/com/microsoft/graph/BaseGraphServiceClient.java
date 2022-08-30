@@ -1,5 +1,113 @@
-package microsoft.graph;
+package com.microsoft.graph;
 
+import com.microsoft.graph.admin.AdminRequestBuilder;
+import com.microsoft.graph.agreementacceptances.AgreementAcceptancesRequestBuilder;
+import com.microsoft.graph.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
+import com.microsoft.graph.agreements.AgreementsRequestBuilder;
+import com.microsoft.graph.agreements.item.AgreementItemRequestBuilder;
+import com.microsoft.graph.appcatalogs.AppCatalogsRequestBuilder;
+import com.microsoft.graph.applications.ApplicationsRequestBuilder;
+import com.microsoft.graph.applications.item.ApplicationItemRequestBuilder;
+import com.microsoft.graph.applicationtemplates.ApplicationTemplatesRequestBuilder;
+import com.microsoft.graph.applicationtemplates.item.ApplicationTemplateItemRequestBuilder;
+import com.microsoft.graph.auditlogs.AuditLogsRequestBuilder;
+import com.microsoft.graph.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
+import com.microsoft.graph.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
+import com.microsoft.graph.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.branding.BrandingRequestBuilder;
+import com.microsoft.graph.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
+import com.microsoft.graph.chats.ChatsRequestBuilder;
+import com.microsoft.graph.chats.item.ChatItemRequestBuilder;
+import com.microsoft.graph.communications.CommunicationsRequestBuilder;
+import com.microsoft.graph.compliance.ComplianceRequestBuilder;
+import com.microsoft.graph.connections.ConnectionsRequestBuilder;
+import com.microsoft.graph.connections.item.ExternalConnectionItemRequestBuilder;
+import com.microsoft.graph.contacts.ContactsRequestBuilder;
+import com.microsoft.graph.contacts.item.OrgContactItemRequestBuilder;
+import com.microsoft.graph.contracts.ContractsRequestBuilder;
+import com.microsoft.graph.contracts.item.ContractItemRequestBuilder;
+import com.microsoft.graph.datapolicyoperations.DataPolicyOperationsRequestBuilder;
+import com.microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder;
+import com.microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
+import com.microsoft.graph.devices.DevicesRequestBuilder;
+import com.microsoft.graph.devices.item.DeviceItemRequestBuilder;
+import com.microsoft.graph.directory.DirectoryRequestBuilder;
+import com.microsoft.graph.directoryobjects.DirectoryObjectsRequestBuilder;
+import com.microsoft.graph.directoryobjects.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.directoryroles.DirectoryRolesRequestBuilder;
+import com.microsoft.graph.directoryroles.item.DirectoryRoleItemRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.DirectoryRoleTemplatesRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.DirectoryRoleTemplateItemRequestBuilder;
+import com.microsoft.graph.domaindnsrecords.DomainDnsRecordsRequestBuilder;
+import com.microsoft.graph.domaindnsrecords.item.DomainDnsRecordItemRequestBuilder;
+import com.microsoft.graph.domains.DomainsRequestBuilder;
+import com.microsoft.graph.domains.item.DomainItemRequestBuilder;
+import com.microsoft.graph.drive.DriveRequestBuilder;
+import com.microsoft.graph.drives.DrivesRequestBuilder;
+import com.microsoft.graph.drives.item.DriveItemRequestBuilder;
+import com.microsoft.graph.education.EducationRequestBuilder;
+import com.microsoft.graph.external.ExternalRequestBuilder;
+import com.microsoft.graph.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
+import com.microsoft.graph.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
+import com.microsoft.graph.groups.GroupsRequestBuilder;
+import com.microsoft.graph.groups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.groupsettings.GroupSettingsRequestBuilder;
+import com.microsoft.graph.groupsettings.item.GroupSettingItemRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.GroupSettingTemplatesRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.GroupSettingTemplateItemRequestBuilder;
+import com.microsoft.graph.identity.IdentityRequestBuilder;
+import com.microsoft.graph.identitygovernance.IdentityGovernanceRequestBuilder;
+import com.microsoft.graph.identityprotection.IdentityProtectionRequestBuilder;
+import com.microsoft.graph.identityproviders.IdentityProvidersRequestBuilder;
+import com.microsoft.graph.identityproviders.item.IdentityProviderItemRequestBuilder;
+import com.microsoft.graph.informationprotection.InformationProtectionRequestBuilder;
+import com.microsoft.graph.invitations.InvitationsRequestBuilder;
+import com.microsoft.graph.invitations.item.InvitationItemRequestBuilder;
+import com.microsoft.graph.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
+import com.microsoft.graph.localizations.LocalizationsRequestBuilder;
+import com.microsoft.graph.me.MeRequestBuilder;
+import com.microsoft.graph.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
+import com.microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
+import com.microsoft.graph.organization.item.OrganizationItemRequestBuilder;
+import com.microsoft.graph.organization.OrganizationRequestBuilder;
+import com.microsoft.graph.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
+import com.microsoft.graph.permissiongrants.PermissionGrantsRequestBuilder;
+import com.microsoft.graph.places.item.PlaceItemRequestBuilder;
+import com.microsoft.graph.places.PlacesRequestBuilder;
+import com.microsoft.graph.planner.PlannerRequestBuilder;
+import com.microsoft.graph.policies.PoliciesRequestBuilder;
+import com.microsoft.graph.print.PrintRequestBuilder;
+import com.microsoft.graph.privacy.PrivacyRequestBuilder;
+import com.microsoft.graph.reports.ReportsRequestBuilder;
+import com.microsoft.graph.rolemanagement.RoleManagementRequestBuilder;
+import com.microsoft.graph.schemaextensions.item.SchemaExtensionItemRequestBuilder;
+import com.microsoft.graph.schemaextensions.SchemaExtensionsRequestBuilder;
+import com.microsoft.graph.scopedrolememberships.item.ScopedRoleMembershipItemRequestBuilder;
+import com.microsoft.graph.scopedrolememberships.ScopedRoleMembershipsRequestBuilder;
+import com.microsoft.graph.search.SearchRequestBuilder;
+import com.microsoft.graph.security.SecurityRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ServicePrincipalItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.ServicePrincipalsRequestBuilder;
+import com.microsoft.graph.shares.item.SharedDriveItemItemRequestBuilder;
+import com.microsoft.graph.shares.SharesRequestBuilder;
+import com.microsoft.graph.sites.item.SiteItemRequestBuilder;
+import com.microsoft.graph.sites.SitesRequestBuilder;
+import com.microsoft.graph.solutions.SolutionsRequestBuilder;
+import com.microsoft.graph.subscribedskus.item.SubscribedSkuItemRequestBuilder;
+import com.microsoft.graph.subscribedskus.SubscribedSkusRequestBuilder;
+import com.microsoft.graph.subscriptions.item.SubscriptionItemRequestBuilder;
+import com.microsoft.graph.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.teams.item.TeamItemRequestBuilder;
+import com.microsoft.graph.teams.TeamsRequestBuilder;
+import com.microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
+import com.microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
+import com.microsoft.graph.teamwork.TeamworkRequestBuilder;
+import com.microsoft.graph.users.item.UserItemRequestBuilder;
+import com.microsoft.graph.users.UsersRequestBuilder;
+import com.microsoft.graph.workbooks.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.workbooks.WorkbooksRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.serialization.JsonParseNodeFactory;
@@ -10,114 +118,6 @@ import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.admin.AdminRequestBuilder;
-import microsoft.graph.agreementacceptances.AgreementAcceptancesRequestBuilder;
-import microsoft.graph.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
-import microsoft.graph.agreements.AgreementsRequestBuilder;
-import microsoft.graph.agreements.item.AgreementItemRequestBuilder;
-import microsoft.graph.appcatalogs.AppCatalogsRequestBuilder;
-import microsoft.graph.applications.ApplicationsRequestBuilder;
-import microsoft.graph.applications.item.ApplicationItemRequestBuilder;
-import microsoft.graph.applicationtemplates.ApplicationTemplatesRequestBuilder;
-import microsoft.graph.applicationtemplates.item.ApplicationTemplateItemRequestBuilder;
-import microsoft.graph.auditlogs.AuditLogsRequestBuilder;
-import microsoft.graph.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
-import microsoft.graph.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
-import microsoft.graph.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
-import microsoft.graph.branding.BrandingRequestBuilder;
-import microsoft.graph.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
-import microsoft.graph.certificatebasedauthconfiguration.item.CertificateBasedAuthConfigurationItemRequestBuilder;
-import microsoft.graph.chats.ChatsRequestBuilder;
-import microsoft.graph.chats.item.ChatItemRequestBuilder;
-import microsoft.graph.communications.CommunicationsRequestBuilder;
-import microsoft.graph.compliance.ComplianceRequestBuilder;
-import microsoft.graph.connections.ConnectionsRequestBuilder;
-import microsoft.graph.connections.item.ExternalConnectionItemRequestBuilder;
-import microsoft.graph.contacts.ContactsRequestBuilder;
-import microsoft.graph.contacts.item.OrgContactItemRequestBuilder;
-import microsoft.graph.contracts.ContractsRequestBuilder;
-import microsoft.graph.contracts.item.ContractItemRequestBuilder;
-import microsoft.graph.datapolicyoperations.DataPolicyOperationsRequestBuilder;
-import microsoft.graph.datapolicyoperations.item.DataPolicyOperationItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.DeviceAppManagementRequestBuilder;
-import microsoft.graph.devicemanagement.DeviceManagementRequestBuilder;
-import microsoft.graph.devices.DevicesRequestBuilder;
-import microsoft.graph.devices.item.DeviceItemRequestBuilder;
-import microsoft.graph.directory.DirectoryRequestBuilder;
-import microsoft.graph.directoryobjects.DirectoryObjectsRequestBuilder;
-import microsoft.graph.directoryobjects.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.directoryroles.DirectoryRolesRequestBuilder;
-import microsoft.graph.directoryroles.item.DirectoryRoleItemRequestBuilder;
-import microsoft.graph.directoryroletemplates.DirectoryRoleTemplatesRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.DirectoryRoleTemplateItemRequestBuilder;
-import microsoft.graph.domaindnsrecords.DomainDnsRecordsRequestBuilder;
-import microsoft.graph.domaindnsrecords.item.DomainDnsRecordItemRequestBuilder;
-import microsoft.graph.domains.DomainsRequestBuilder;
-import microsoft.graph.domains.item.DomainItemRequestBuilder;
-import microsoft.graph.drive.DriveRequestBuilder;
-import microsoft.graph.drives.DrivesRequestBuilder;
-import microsoft.graph.drives.item.DriveItemRequestBuilder;
-import microsoft.graph.education.EducationRequestBuilder;
-import microsoft.graph.external.ExternalRequestBuilder;
-import microsoft.graph.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
-import microsoft.graph.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
-import microsoft.graph.groups.GroupsRequestBuilder;
-import microsoft.graph.groups.item.GroupItemRequestBuilder;
-import microsoft.graph.groupsettings.GroupSettingsRequestBuilder;
-import microsoft.graph.groupsettings.item.GroupSettingItemRequestBuilder;
-import microsoft.graph.groupsettingtemplates.GroupSettingTemplatesRequestBuilder;
-import microsoft.graph.groupsettingtemplates.item.GroupSettingTemplateItemRequestBuilder;
-import microsoft.graph.identity.IdentityRequestBuilder;
-import microsoft.graph.identitygovernance.IdentityGovernanceRequestBuilder;
-import microsoft.graph.identityprotection.IdentityProtectionRequestBuilder;
-import microsoft.graph.identityproviders.IdentityProvidersRequestBuilder;
-import microsoft.graph.identityproviders.item.IdentityProviderItemRequestBuilder;
-import microsoft.graph.informationprotection.InformationProtectionRequestBuilder;
-import microsoft.graph.invitations.InvitationsRequestBuilder;
-import microsoft.graph.invitations.item.InvitationItemRequestBuilder;
-import microsoft.graph.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
-import microsoft.graph.localizations.LocalizationsRequestBuilder;
-import microsoft.graph.me.MeRequestBuilder;
-import microsoft.graph.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
-import microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
-import microsoft.graph.organization.item.OrganizationItemRequestBuilder;
-import microsoft.graph.organization.OrganizationRequestBuilder;
-import microsoft.graph.permissiongrants.item.ResourceSpecificPermissionGrantItemRequestBuilder;
-import microsoft.graph.permissiongrants.PermissionGrantsRequestBuilder;
-import microsoft.graph.places.item.PlaceItemRequestBuilder;
-import microsoft.graph.places.PlacesRequestBuilder;
-import microsoft.graph.planner.PlannerRequestBuilder;
-import microsoft.graph.policies.PoliciesRequestBuilder;
-import microsoft.graph.print.PrintRequestBuilder;
-import microsoft.graph.privacy.PrivacyRequestBuilder;
-import microsoft.graph.reports.ReportsRequestBuilder;
-import microsoft.graph.rolemanagement.RoleManagementRequestBuilder;
-import microsoft.graph.schemaextensions.item.SchemaExtensionItemRequestBuilder;
-import microsoft.graph.schemaextensions.SchemaExtensionsRequestBuilder;
-import microsoft.graph.scopedrolememberships.item.ScopedRoleMembershipItemRequestBuilder;
-import microsoft.graph.scopedrolememberships.ScopedRoleMembershipsRequestBuilder;
-import microsoft.graph.search.SearchRequestBuilder;
-import microsoft.graph.security.SecurityRequestBuilder;
-import microsoft.graph.serviceprincipals.item.ServicePrincipalItemRequestBuilder;
-import microsoft.graph.serviceprincipals.ServicePrincipalsRequestBuilder;
-import microsoft.graph.shares.item.SharedDriveItemItemRequestBuilder;
-import microsoft.graph.shares.SharesRequestBuilder;
-import microsoft.graph.sites.item.SiteItemRequestBuilder;
-import microsoft.graph.sites.SitesRequestBuilder;
-import microsoft.graph.solutions.SolutionsRequestBuilder;
-import microsoft.graph.subscribedskus.item.SubscribedSkuItemRequestBuilder;
-import microsoft.graph.subscribedskus.SubscribedSkusRequestBuilder;
-import microsoft.graph.subscriptions.item.SubscriptionItemRequestBuilder;
-import microsoft.graph.subscriptions.SubscriptionsRequestBuilder;
-import microsoft.graph.teams.item.TeamItemRequestBuilder;
-import microsoft.graph.teams.TeamsRequestBuilder;
-import microsoft.graph.teamstemplates.item.TeamsTemplateItemRequestBuilder;
-import microsoft.graph.teamstemplates.TeamsTemplatesRequestBuilder;
-import microsoft.graph.teamwork.TeamworkRequestBuilder;
-import microsoft.graph.users.item.UserItemRequestBuilder;
-import microsoft.graph.users.UsersRequestBuilder;
-import microsoft.graph.workbooks.item.DriveItemItemRequestBuilder;
-import microsoft.graph.workbooks.WorkbooksRequestBuilder;
 /** The main entry point of the SDK, exposes the configuration and the fluent API. */
 public class BaseGraphServiceClient {
     /** The admin property */
@@ -467,7 +467,7 @@ public class BaseGraphServiceClient {
         return new WorkbooksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.agreementAcceptances.item collection
+     * Gets an item from the com.Microsoft.Graph.agreementAcceptances.item collection
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -479,7 +479,7 @@ public class BaseGraphServiceClient {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.agreements.item collection
+     * Gets an item from the com.Microsoft.Graph.agreements.item collection
      * @param id Unique identifier of the item
      * @return a AgreementItemRequestBuilder
      */
@@ -491,7 +491,7 @@ public class BaseGraphServiceClient {
         return new AgreementItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item collection
      * @param id Unique identifier of the item
      * @return a ApplicationItemRequestBuilder
      */
@@ -503,7 +503,7 @@ public class BaseGraphServiceClient {
         return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.applicationTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.applicationTemplates.item collection
      * @param id Unique identifier of the item
      * @return a ApplicationTemplateItemRequestBuilder
      */
@@ -515,7 +515,7 @@ public class BaseGraphServiceClient {
         return new ApplicationTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.authenticationMethodConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.authenticationMethodConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */
@@ -527,7 +527,7 @@ public class BaseGraphServiceClient {
         return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.certificateBasedAuthConfiguration.item collection
+     * Gets an item from the com.Microsoft.Graph.certificateBasedAuthConfiguration.item collection
      * @param id Unique identifier of the item
      * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
@@ -539,7 +539,7 @@ public class BaseGraphServiceClient {
         return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.chats.item collection
+     * Gets an item from the com.Microsoft.Graph.chats.item collection
      * @param id Unique identifier of the item
      * @return a ChatItemRequestBuilder
      */
@@ -551,7 +551,7 @@ public class BaseGraphServiceClient {
         return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.connections.item collection
+     * Gets an item from the com.Microsoft.Graph.connections.item collection
      * @param id Unique identifier of the item
      * @return a ExternalConnectionItemRequestBuilder
      */
@@ -581,7 +581,7 @@ public class BaseGraphServiceClient {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.contacts.item collection
+     * Gets an item from the com.Microsoft.Graph.contacts.item collection
      * @param id Unique identifier of the item
      * @return a OrgContactItemRequestBuilder
      */
@@ -593,7 +593,7 @@ public class BaseGraphServiceClient {
         return new OrgContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.contracts.item collection
+     * Gets an item from the com.Microsoft.Graph.contracts.item collection
      * @param id Unique identifier of the item
      * @return a ContractItemRequestBuilder
      */
@@ -605,7 +605,7 @@ public class BaseGraphServiceClient {
         return new ContractItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.dataPolicyOperations.item collection
+     * Gets an item from the com.Microsoft.Graph.dataPolicyOperations.item collection
      * @param id Unique identifier of the item
      * @return a DataPolicyOperationItemRequestBuilder
      */
@@ -617,7 +617,7 @@ public class BaseGraphServiceClient {
         return new DataPolicyOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.devices.item collection
+     * Gets an item from the com.Microsoft.Graph.devices.item collection
      * @param id Unique identifier of the item
      * @return a DeviceItemRequestBuilder
      */
@@ -629,7 +629,7 @@ public class BaseGraphServiceClient {
         return new DeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directoryObjects.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryObjects.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -641,7 +641,7 @@ public class BaseGraphServiceClient {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directoryRoles.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryRoles.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryRoleItemRequestBuilder
      */
@@ -653,7 +653,7 @@ public class BaseGraphServiceClient {
         return new DirectoryRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directoryRoleTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.directoryRoleTemplates.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryRoleTemplateItemRequestBuilder
      */
@@ -665,7 +665,7 @@ public class BaseGraphServiceClient {
         return new DirectoryRoleTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.domainDnsRecords.item collection
+     * Gets an item from the com.Microsoft.Graph.domainDnsRecords.item collection
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */
@@ -677,7 +677,7 @@ public class BaseGraphServiceClient {
         return new DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.domains.item collection
+     * Gets an item from the com.Microsoft.Graph.domains.item collection
      * @param id Unique identifier of the item
      * @return a DomainItemRequestBuilder
      */
@@ -689,7 +689,7 @@ public class BaseGraphServiceClient {
         return new DomainItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
      */
@@ -701,7 +701,7 @@ public class BaseGraphServiceClient {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groupLifecyclePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.groupLifecyclePolicies.item collection
      * @param id Unique identifier of the item
      * @return a GroupLifecyclePolicyItemRequestBuilder
      */
@@ -713,7 +713,7 @@ public class BaseGraphServiceClient {
         return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -725,7 +725,7 @@ public class BaseGraphServiceClient {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groupSettings.item collection
+     * Gets an item from the com.Microsoft.Graph.groupSettings.item collection
      * @param id Unique identifier of the item
      * @return a GroupSettingItemRequestBuilder
      */
@@ -737,7 +737,7 @@ public class BaseGraphServiceClient {
         return new GroupSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groupSettingTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.groupSettingTemplates.item collection
      * @param id Unique identifier of the item
      * @return a GroupSettingTemplateItemRequestBuilder
      */
@@ -749,7 +749,7 @@ public class BaseGraphServiceClient {
         return new GroupSettingTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityProviders.item collection
+     * Gets an item from the com.Microsoft.Graph.identityProviders.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderItemRequestBuilder
      */
@@ -761,7 +761,7 @@ public class BaseGraphServiceClient {
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.invitations.item collection
+     * Gets an item from the com.Microsoft.Graph.invitations.item collection
      * @param id Unique identifier of the item
      * @return a InvitationItemRequestBuilder
      */
@@ -773,7 +773,7 @@ public class BaseGraphServiceClient {
         return new InvitationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.localizations.item collection
+     * Gets an item from the com.Microsoft.Graph.localizations.item collection
      * @param id Unique identifier of the item
      * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */
@@ -785,7 +785,7 @@ public class BaseGraphServiceClient {
         return new OrganizationalBrandingLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.oauth2PermissionGrants.item collection
+     * Gets an item from the com.Microsoft.Graph.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
      * @return a OAuth2PermissionGrantItemRequestBuilder
      */
@@ -797,7 +797,7 @@ public class BaseGraphServiceClient {
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.organization.item collection
+     * Gets an item from the com.Microsoft.Graph.organization.item collection
      * @param id Unique identifier of the item
      * @return a OrganizationItemRequestBuilder
      */
@@ -809,7 +809,7 @@ public class BaseGraphServiceClient {
         return new OrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.permissionGrants.item collection
+     * Gets an item from the com.Microsoft.Graph.permissionGrants.item collection
      * @param id Unique identifier of the item
      * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
@@ -821,7 +821,7 @@ public class BaseGraphServiceClient {
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.places.item collection
+     * Gets an item from the com.Microsoft.Graph.places.item collection
      * @param id Unique identifier of the item
      * @return a PlaceItemRequestBuilder
      */
@@ -833,7 +833,7 @@ public class BaseGraphServiceClient {
         return new PlaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.schemaExtensions.item collection
+     * Gets an item from the com.Microsoft.Graph.schemaExtensions.item collection
      * @param id Unique identifier of the item
      * @return a SchemaExtensionItemRequestBuilder
      */
@@ -845,7 +845,7 @@ public class BaseGraphServiceClient {
         return new SchemaExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.scopedRoleMemberships.item collection
+     * Gets an item from the com.Microsoft.Graph.scopedRoleMemberships.item collection
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */
@@ -857,7 +857,7 @@ public class BaseGraphServiceClient {
         return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item collection
      * @param id Unique identifier of the item
      * @return a ServicePrincipalItemRequestBuilder
      */
@@ -869,7 +869,7 @@ public class BaseGraphServiceClient {
         return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.shares.item collection
+     * Gets an item from the com.Microsoft.Graph.shares.item collection
      * @param id Unique identifier of the item
      * @return a SharedDriveItemItemRequestBuilder
      */
@@ -881,7 +881,7 @@ public class BaseGraphServiceClient {
         return new SharedDriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item collection
      * @param id Unique identifier of the item
      * @return a SiteItemRequestBuilder
      */
@@ -893,7 +893,7 @@ public class BaseGraphServiceClient {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.subscribedSkus.item collection
+     * Gets an item from the com.Microsoft.Graph.subscribedSkus.item collection
      * @param id Unique identifier of the item
      * @return a SubscribedSkuItemRequestBuilder
      */
@@ -905,7 +905,7 @@ public class BaseGraphServiceClient {
         return new SubscribedSkuItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.subscriptions.item collection
+     * Gets an item from the com.Microsoft.Graph.subscriptions.item collection
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */
@@ -917,7 +917,7 @@ public class BaseGraphServiceClient {
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item collection
      * @param id Unique identifier of the item
      * @return a TeamItemRequestBuilder
      */
@@ -929,7 +929,7 @@ public class BaseGraphServiceClient {
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamsTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.teamsTemplates.item collection
      * @param id Unique identifier of the item
      * @return a TeamsTemplateItemRequestBuilder
      */
@@ -941,7 +941,7 @@ public class BaseGraphServiceClient {
         return new TeamsTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item collection
      * @param id Unique identifier of the item
      * @return a UserItemRequestBuilder
      */
@@ -953,7 +953,7 @@ public class BaseGraphServiceClient {
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.workbooks.item collection
+     * Gets an item from the com.Microsoft.Graph.workbooks.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */

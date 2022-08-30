@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.item;
+package com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.item;
 
+import com.microsoft.graph.models.ChecklistItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChecklistItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity. */
 public class ChecklistItemItemRequestBuilder {
     /** Path parameters for the request */

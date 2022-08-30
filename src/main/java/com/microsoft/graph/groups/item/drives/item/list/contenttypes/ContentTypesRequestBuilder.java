@@ -1,5 +1,12 @@
-package microsoft.graph.groups.item.drives.item.list.contenttypes;
+package com.microsoft.graph.groups.item.drives.item.list.contenttypes;
 
+import com.microsoft.graph.groups.item.drives.item.list.contenttypes.addcopy.AddCopyRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.list.contenttypes.addcopyfromcontenttypehub.AddCopyFromContentTypeHubRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.list.contenttypes.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.list.contenttypes.getcompatiblehubcontenttypes.GetCompatibleHubContentTypesRequestBuilder;
+import com.microsoft.graph.models.ContentType;
+import com.microsoft.graph.models.ContentTypeCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.drives.item.list.contenttypes.addcopy.AddCopyRequestBuilder;
-import microsoft.graph.groups.item.drives.item.list.contenttypes.addcopyfromcontenttypehub.AddCopyFromContentTypeHubRequestBuilder;
-import microsoft.graph.groups.item.drives.item.list.contenttypes.count.CountRequestBuilder;
-import microsoft.graph.groups.item.drives.item.list.contenttypes.getcompatiblehubcontenttypes.GetCompatibleHubContentTypesRequestBuilder;
-import microsoft.graph.models.ContentType;
-import microsoft.graph.models.ContentTypeCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
 public class ContentTypesRequestBuilder {
     /** The addCopy property */

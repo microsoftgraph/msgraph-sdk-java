@@ -1,5 +1,15 @@
-package microsoft.graph.admin.serviceannouncement.messages;
+package com.microsoft.graph.admin.serviceannouncement.messages;
 
+import com.microsoft.graph.admin.serviceannouncement.messages.archive.ArchiveRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.count.CountRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.favorite.FavoriteRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.markread.MarkReadRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.markunread.MarkUnreadRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.unarchive.UnarchiveRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.unfavorite.UnfavoriteRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceUpdateMessage;
+import com.microsoft.graph.models.ServiceUpdateMessageCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.messages.archive.ArchiveRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.count.CountRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.favorite.FavoriteRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.markread.MarkReadRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.markunread.MarkUnreadRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.unarchive.UnarchiveRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.unfavorite.UnfavoriteRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceUpdateMessage;
-import microsoft.graph.models.ServiceUpdateMessageCollectionResponse;
 /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
 public class MessagesRequestBuilder {
     /** The archive property */

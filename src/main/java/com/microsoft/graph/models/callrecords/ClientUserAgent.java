@@ -1,4 +1,4 @@
-package microsoft.graph.models.callrecords;
+package com.microsoft.graph.models.callrecords;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientUserAgent extends UserAgent implements Parsable {
-    /** The azureADAppId property */
+    /** The unique identifier of the Azure AD application used by this endpoint. */
     private String _azureADAppId;
-    /** The communicationServiceId property */
+    /** Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs. */
     private String _communicationServiceId;
     /** The platform property */
     private ClientPlatform _platform;
@@ -35,7 +35,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         return new ClientUserAgent();
     }
     /**
-     * Gets the azureADAppId property value. The azureADAppId property
+     * Gets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         return this._azureADAppId;
     }
     /**
-     * Gets the communicationServiceId property value. The communicationServiceId property
+     * Gets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         writer.writeEnumValue("productFamily", this.getProductFamily());
     }
     /**
-     * Sets the azureADAppId property value. The azureADAppId property
+     * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
@@ -102,7 +102,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
         this._azureADAppId = value;
     }
     /**
-     * Sets the communicationServiceId property value. The communicationServiceId property
+     * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      * @param value Value to set for the communicationServiceId property.
      * @return a void
      */

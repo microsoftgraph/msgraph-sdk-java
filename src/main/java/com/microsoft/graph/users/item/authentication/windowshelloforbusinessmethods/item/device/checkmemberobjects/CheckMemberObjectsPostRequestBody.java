@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.checkmemberobjects;
+package com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

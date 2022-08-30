@@ -1,5 +1,11 @@
-package microsoft.graph.education.users.item.assignments.item.categories;
+package com.microsoft.graph.education.users.item.assignments.item.categories;
 
+import com.microsoft.graph.education.users.item.assignments.item.categories.count.CountRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.categories.delta.DeltaRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.categories.ref.RefRequestBuilder;
+import com.microsoft.graph.models.EducationCategory;
+import com.microsoft.graph.models.EducationCategoryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.users.item.assignments.item.categories.count.CountRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.categories.delta.DeltaRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.categories.ref.RefRequestBuilder;
-import microsoft.graph.models.EducationCategory;
-import microsoft.graph.models.EducationCategoryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity. */
 public class CategoriesRequestBuilder {
     /** The Count property */

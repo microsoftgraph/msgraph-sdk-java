@@ -1,5 +1,9 @@
-package microsoft.graph.domaindnsrecords;
+package com.microsoft.graph.domaindnsrecords;
 
+import com.microsoft.graph.domaindnsrecords.count.CountRequestBuilder;
+import com.microsoft.graph.models.DomainDnsRecord;
+import com.microsoft.graph.models.DomainDnsRecordCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.domaindnsrecords.count.CountRequestBuilder;
-import microsoft.graph.models.DomainDnsRecord;
-import microsoft.graph.models.DomainDnsRecordCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of domainDnsRecord entities. */
 public class DomainDnsRecordsRequestBuilder {
     /** The Count property */

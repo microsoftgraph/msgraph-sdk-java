@@ -1,4 +1,4 @@
-package microsoft.graph.models.externalconnectors;
+package com.microsoft.graph.models.externalconnectors;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

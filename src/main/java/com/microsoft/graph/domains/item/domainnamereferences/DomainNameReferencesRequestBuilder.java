@@ -1,5 +1,8 @@
-package microsoft.graph.domains.item.domainnamereferences;
+package com.microsoft.graph.domains.item.domainnamereferences;
 
+import com.microsoft.graph.domains.item.domainnamereferences.count.CountRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.domains.item.domainnamereferences.count.CountRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity. */
 public class DomainNameReferencesRequestBuilder {
     /** The Count property */

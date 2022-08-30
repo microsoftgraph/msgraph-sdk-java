@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.audioroutinggroups.item;
+package com.microsoft.graph.communications.calls.item.audioroutinggroups.item;
 
+import com.microsoft.graph.models.AudioRoutingGroup;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AudioRoutingGroup;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity. */
 public class AudioRoutingGroupItemRequestBuilder {
     /** Path parameters for the request */

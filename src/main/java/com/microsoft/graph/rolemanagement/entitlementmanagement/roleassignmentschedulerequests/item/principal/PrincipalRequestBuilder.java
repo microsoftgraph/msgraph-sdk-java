@@ -1,5 +1,7 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.principal;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.principal;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignmentScheduleRequest entity. */
 public class PrincipalRequestBuilder {
     /** Path parameters for the request */

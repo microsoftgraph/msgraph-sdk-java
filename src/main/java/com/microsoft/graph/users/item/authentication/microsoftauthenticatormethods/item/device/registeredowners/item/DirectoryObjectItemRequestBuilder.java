@@ -1,13 +1,13 @@
-package microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item;
+package com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item;
 
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.ref.RefRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.endpoint.EndpointRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.ref.RefRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The appRoleAssignment property */

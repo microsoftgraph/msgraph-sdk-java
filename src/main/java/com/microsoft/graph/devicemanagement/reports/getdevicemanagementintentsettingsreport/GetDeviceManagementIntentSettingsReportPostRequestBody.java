@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport;
+package com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

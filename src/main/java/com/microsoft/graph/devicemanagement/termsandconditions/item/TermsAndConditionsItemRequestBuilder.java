@@ -1,5 +1,11 @@
-package microsoft.graph.devicemanagement.termsandconditions.item;
+package com.microsoft.graph.devicemanagement.termsandconditions.item;
 
+import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.AcceptanceStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.TermsAndConditionsAcceptanceStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.item.TermsAndConditionsAssignmentItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.AcceptanceStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.TermsAndConditionsAcceptanceStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.termsandconditions.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.termsandconditions.item.assignments.item.TermsAndConditionsAssignmentItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TermsAndConditions;
 /** Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity. */
 public class TermsAndConditionsItemRequestBuilder {
     /** The acceptanceStatuses property */
@@ -39,7 +39,7 @@ public class TermsAndConditionsItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a TermsAndConditionsAcceptanceStatusItemRequestBuilder
      */
@@ -51,7 +51,7 @@ public class TermsAndConditionsItemRequestBuilder {
         return new TermsAndConditionsAcceptanceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.termsAndConditions.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a TermsAndConditionsAssignmentItemRequestBuilder
      */

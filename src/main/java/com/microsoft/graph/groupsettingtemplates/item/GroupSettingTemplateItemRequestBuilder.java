@@ -1,5 +1,12 @@
-package microsoft.graph.groupsettingtemplates.item;
+package com.microsoft.graph.groupsettingtemplates.item;
 
+import com.microsoft.graph.groupsettingtemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.groupsettingtemplates.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.GroupSettingTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groupsettingtemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.groupsettingtemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.groupsettingtemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.groupsettingtemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.groupsettingtemplates.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.GroupSettingTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of groupSettingTemplate entities. */
 public class GroupSettingTemplateItemRequestBuilder {
     /** The checkMemberGroups property */

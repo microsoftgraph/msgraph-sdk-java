@@ -1,5 +1,9 @@
-package microsoft.graph.me.createdobjects;
+package com.microsoft.graph.me.createdobjects;
 
+import com.microsoft.graph.me.createdobjects.count.CountRequestBuilder;
+import com.microsoft.graph.me.createdobjects.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.createdobjects.count.CountRequestBuilder;
-import microsoft.graph.me.createdobjects.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the createdObjects property of the microsoft.graph.user entity. */
 public class CreatedObjectsRequestBuilder {
     /** The Count property */

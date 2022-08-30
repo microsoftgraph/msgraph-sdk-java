@@ -1,5 +1,11 @@
-package microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item;
+package com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item;
 
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.ChildrenRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.relations.item.RelationItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.relations.RelationsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.TermsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.ChildrenRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.relations.item.RelationItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.relations.RelationsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.TermsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Set;
 /** Provides operations to manage the sets property of the microsoft.graph.termStore.group entity. */
 public class SetItemRequestBuilder {
     /** The children property */
@@ -44,16 +44,16 @@ public class SetItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.children.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.children.item collection
      * @param id Unique identifier of the item
      * @return a TermItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder children(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("term%2Did", id);
-        return new microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SetItemRequestBuilder and sets the default values.
@@ -330,7 +330,7 @@ public class SetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.relations.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.relations.item collection
      * @param id Unique identifier of the item
      * @return a RelationItemRequestBuilder
      */
@@ -342,16 +342,16 @@ public class SetItemRequestBuilder {
         return new RelationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item collection
      * @param id Unique identifier of the item
      * @return a TermItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder terms(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder terms(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("term%2Did", id);
-        return new microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class SetItemRequestBuilderDeleteRequestConfiguration {

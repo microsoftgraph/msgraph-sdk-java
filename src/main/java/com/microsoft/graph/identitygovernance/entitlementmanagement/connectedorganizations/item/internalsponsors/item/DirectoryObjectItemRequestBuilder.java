@@ -1,9 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization-id}/internalSponsors/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */

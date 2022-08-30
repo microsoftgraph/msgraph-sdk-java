@@ -1,5 +1,14 @@
-package microsoft.graph.serviceprincipals.item.transitivememberof;
+package com.microsoft.graph.serviceprincipals.item.transitivememberof;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.application.ApplicationRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.device.DeviceRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.group.GroupRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.transitivememberof.application.ApplicationRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.count.CountRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.device.DeviceRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.group.GroupRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.user.UserRequestBuilder;
 /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity. */
 public class TransitiveMemberOfRequestBuilder {
     /** The application property */

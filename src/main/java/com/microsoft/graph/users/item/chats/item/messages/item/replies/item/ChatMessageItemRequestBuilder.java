@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.chats.item.messages.item.replies.item;
+package com.microsoft.graph.users.item.chats.item.messages.item.replies.item;
 
+import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.chats.item.messages.item.replies.item.hostedcontents.HostedContentsRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessage;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.chats.item.messages.item.replies.item.hostedcontents.HostedContentsRequestBuilder;
-import microsoft.graph.users.item.chats.item.messages.item.replies.item.hostedcontents.item.ChatMessageHostedContentItemRequestBuilder;
 /** Provides operations to manage the replies property of the microsoft.graph.chatMessage entity. */
 public class ChatMessageItemRequestBuilder {
     /** The hostedContents property */
@@ -251,7 +251,7 @@ public class ChatMessageItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item.messages.item.replies.item.hostedContents.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item.messages.item.replies.item.hostedContents.item collection
      * @param id Unique identifier of the item
      * @return a ChatMessageHostedContentItemRequestBuilder
      */

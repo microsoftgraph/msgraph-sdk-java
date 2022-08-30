@@ -1,5 +1,9 @@
-package microsoft.graph.policies.crosstenantaccesspolicy.partners;
+package com.microsoft.graph.policies.crosstenantaccesspolicy.partners;
 
+import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
+import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartnerCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartner;
-import microsoft.graph.models.CrossTenantAccessPolicyConfigurationPartnerCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.crosstenantaccesspolicy.partners.count.CountRequestBuilder;
 /** Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity. */
 public class PartnersRequestBuilder {
     /** The Count property */

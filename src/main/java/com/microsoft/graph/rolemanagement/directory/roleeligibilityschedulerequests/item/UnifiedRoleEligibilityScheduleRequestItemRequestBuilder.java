@@ -1,5 +1,13 @@
-package microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item;
+package com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.appscope.AppScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.directoryscope.DirectoryScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.principal.PrincipalRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.roledefinition.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.appscope.AppScopeRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.cancel.CancelRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.directoryscope.DirectoryScopeRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.principal.PrincipalRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.roledefinition.RoleDefinitionRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
 /** Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
     /** The appScope property */

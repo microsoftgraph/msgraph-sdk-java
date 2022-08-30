@@ -1,5 +1,13 @@
-package microsoft.graph.applications.item.owners;
+package com.microsoft.graph.applications.item.owners;
 
+import com.microsoft.graph.applications.item.owners.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.applications.item.owners.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.owners.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.applications.item.owners.ref.RefRequestBuilder;
+import com.microsoft.graph.applications.item.owners.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.applications.item.owners.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.owners.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.applications.item.owners.count.CountRequestBuilder;
-import microsoft.graph.applications.item.owners.endpoint.EndpointRequestBuilder;
-import microsoft.graph.applications.item.owners.ref.RefRequestBuilder;
-import microsoft.graph.applications.item.owners.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.applications.item.owners.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the owners property of the microsoft.graph.application entity. */
 public class OwnersRequestBuilder {
     /** The appRoleAssignment property */

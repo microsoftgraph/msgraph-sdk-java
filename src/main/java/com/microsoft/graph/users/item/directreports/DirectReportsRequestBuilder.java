@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.directreports;
+package com.microsoft.graph.users.item.directreports;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.directreports.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.directreports.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.users.item.directreports.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.directreports.count.CountRequestBuilder;
-import microsoft.graph.users.item.directreports.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.users.item.directreports.user.UserRequestBuilder;
 /** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
 public class DirectReportsRequestBuilder {
     /** The Count property */

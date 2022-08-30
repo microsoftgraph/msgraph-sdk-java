@@ -1,5 +1,7 @@
-package microsoft.graph.solutions.bookingbusinesses.item.customers.item;
+package com.microsoft.graph.solutions.bookingbusinesses.item.customers.item;
 
+import com.microsoft.graph.models.BookingCustomerBase;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingCustomerBase;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity. */
 public class BookingCustomerBaseItemRequestBuilder {
     /** Path parameters for the request */

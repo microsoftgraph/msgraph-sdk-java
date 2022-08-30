@@ -1,5 +1,8 @@
-package microsoft.graph.drive.following.item;
+package com.microsoft.graph.drive.following.item;
 
+import com.microsoft.graph.drive.following.item.content.ContentRequestBuilder;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.following.item.content.ContentRequestBuilder;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the following property of the microsoft.graph.drive entity. */
 public class DriveItemItemRequestBuilder {
     /** The content property */

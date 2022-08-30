@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.AccessPackageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.models.AccessPackage;
-import microsoft.graph.models.AccessPackageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity. */
 public class AccessPackagesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,15 @@
-package microsoft.graph.directory.deleteditems;
+package com.microsoft.graph.directory.deleteditems;
 
+import com.microsoft.graph.directory.deleteditems.application.ApplicationRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.count.CountRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.group.GroupRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.user.UserRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.deleteditems.application.ApplicationRequestBuilder;
-import microsoft.graph.directory.deleteditems.count.CountRequestBuilder;
-import microsoft.graph.directory.deleteditems.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.directory.deleteditems.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.directory.deleteditems.group.GroupRequestBuilder;
-import microsoft.graph.directory.deleteditems.user.UserRequestBuilder;
-import microsoft.graph.directory.deleteditems.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
 public class DeletedItemsRequestBuilder {
     /** The application property */

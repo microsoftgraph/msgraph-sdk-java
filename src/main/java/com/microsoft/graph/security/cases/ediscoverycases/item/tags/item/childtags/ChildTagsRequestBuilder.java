@@ -1,5 +1,8 @@
-package microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags;
+package com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryReviewTagCollectionResponse;
-import microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.count.CountRequestBuilder;
 /** Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity. */
 public class ChildTagsRequestBuilder {
     /** The Count property */

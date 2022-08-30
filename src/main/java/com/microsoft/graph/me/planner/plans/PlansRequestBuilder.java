@@ -1,5 +1,9 @@
-package microsoft.graph.me.planner.plans;
+package com.microsoft.graph.me.planner.plans;
 
+import com.microsoft.graph.me.planner.plans.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerPlan;
+import com.microsoft.graph.models.PlannerPlanCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.planner.plans.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerPlan;
-import microsoft.graph.models.PlannerPlanCollectionResponse;
 /** Provides operations to manage the plans property of the microsoft.graph.plannerUser entity. */
 public class PlansRequestBuilder {
     /** The Count property */

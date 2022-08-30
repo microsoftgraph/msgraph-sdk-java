@@ -1,5 +1,9 @@
-package microsoft.graph.workbooks.item.versions;
+package com.microsoft.graph.workbooks.item.versions;
 
+import com.microsoft.graph.models.DriveItemVersion;
+import com.microsoft.graph.models.DriveItemVersionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.workbooks.item.versions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveItemVersion;
-import microsoft.graph.models.DriveItemVersionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.workbooks.item.versions.count.CountRequestBuilder;
 /** Provides operations to manage the versions property of the microsoft.graph.driveItem entity. */
 public class VersionsRequestBuilder {
     /** The Count property */

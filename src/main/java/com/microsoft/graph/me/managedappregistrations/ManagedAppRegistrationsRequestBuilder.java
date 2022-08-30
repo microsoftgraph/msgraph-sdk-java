@@ -1,5 +1,8 @@
-package microsoft.graph.me.managedappregistrations;
+package com.microsoft.graph.me.managedappregistrations;
 
+import com.microsoft.graph.me.managedappregistrations.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedAppRegistrationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.managedappregistrations.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedAppRegistrationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity. */
 public class ManagedAppRegistrationsRequestBuilder {
     /** The Count property */

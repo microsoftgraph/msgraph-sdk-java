@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.events.item.attachments;
+package com.microsoft.graph.users.item.events.item.attachments;
 
+import com.microsoft.graph.models.Attachment;
+import com.microsoft.graph.models.AttachmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.events.item.attachments.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.events.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Attachment;
-import microsoft.graph.models.AttachmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.events.item.attachments.count.CountRequestBuilder;
-import microsoft.graph.users.item.events.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
 /** Provides operations to manage the attachments property of the microsoft.graph.event entity. */
 public class AttachmentsRequestBuilder {
     /** The Count property */

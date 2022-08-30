@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp;
 
+import com.microsoft.graph.models.MobileLobApp;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileLobApp;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to mobileLobApp. */
 public class MobileLobAppRequestBuilder {
     /** Path parameters for the request */

@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.ispublished;
+package com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.ispublished;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

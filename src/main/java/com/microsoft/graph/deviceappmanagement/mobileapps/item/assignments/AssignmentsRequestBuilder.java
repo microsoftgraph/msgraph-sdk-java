@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.assignments;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.MobileAppAssignment;
+import com.microsoft.graph.models.MobileAppAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.MobileAppAssignment;
-import microsoft.graph.models.MobileAppAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

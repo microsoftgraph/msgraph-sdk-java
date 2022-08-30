@@ -1,5 +1,11 @@
-package microsoft.graph.groups.item.sites.item.termstore;
+package com.microsoft.graph.groups.item.sites.item.termstore;
 
+import com.microsoft.graph.groups.item.sites.item.termstore.groups.GroupsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.groups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.SetItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.SetsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Store;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.termstore.groups.GroupsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.groups.item.GroupItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.SetItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.SetsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Store;
 /** Provides operations to manage the termStore property of the microsoft.graph.site entity. */
 public class TermStoreRequestBuilder {
     /** The groups property */
@@ -258,7 +258,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.groups.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.groups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class TermStoreRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item collection
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

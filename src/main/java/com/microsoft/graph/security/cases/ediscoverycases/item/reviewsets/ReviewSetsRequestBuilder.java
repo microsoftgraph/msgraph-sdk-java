@@ -1,5 +1,9 @@
-package microsoft.graph.security.cases.ediscoverycases.item.reviewsets;
+package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryReviewSet;
+import com.microsoft.graph.models.security.EdiscoveryReviewSetCollectionResponse;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryReviewSet;
-import microsoft.graph.models.security.EdiscoveryReviewSetCollectionResponse;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.count.CountRequestBuilder;
 /** Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity. */
 public class ReviewSetsRequestBuilder {
     /** The Count property */

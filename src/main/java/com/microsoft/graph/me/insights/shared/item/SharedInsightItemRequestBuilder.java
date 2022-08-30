@@ -1,5 +1,9 @@
-package microsoft.graph.me.insights.shared.item;
+package com.microsoft.graph.me.insights.shared.item;
 
+import com.microsoft.graph.me.insights.shared.item.lastsharedmethod.LastSharedMethodRequestBuilder;
+import com.microsoft.graph.me.insights.shared.item.resource.ResourceRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SharedInsight;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.insights.shared.item.lastsharedmethod.LastSharedMethodRequestBuilder;
-import microsoft.graph.me.insights.shared.item.resource.ResourceRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SharedInsight;
 /** Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity. */
 public class SharedInsightItemRequestBuilder {
     /** The lastSharedMethod property */

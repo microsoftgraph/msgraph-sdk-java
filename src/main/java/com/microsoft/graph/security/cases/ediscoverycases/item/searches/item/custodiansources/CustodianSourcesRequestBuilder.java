@@ -1,5 +1,8 @@
-package microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources;
+package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.DataSourceCollectionResponse;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.DataSourceCollectionResponse;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.count.CountRequestBuilder;
 /** Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity. */
 public class CustodianSourcesRequestBuilder {
     /** The Count property */

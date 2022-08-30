@@ -1,4 +1,4 @@
-package microsoft.graph.models.termstore;
+package com.microsoft.graph.models.termstore;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

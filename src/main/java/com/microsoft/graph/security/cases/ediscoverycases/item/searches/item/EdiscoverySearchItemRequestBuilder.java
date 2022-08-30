@@ -1,5 +1,14 @@
-package microsoft.graph.security.cases.ediscoverycases.item.searches.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoverySearch;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.AdditionalSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.estimatestatistics.EstimateStatisticsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoverySearch;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.AdditionalSourcesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.estimatestatistics.EstimateStatisticsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
 /** Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoverySearchItemRequestBuilder {
     /** The additionalSources property */
@@ -62,16 +62,16 @@ public class EdiscoverySearchItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.additionalSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.additionalSources.item collection
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder additionalSources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder additionalSources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dataSource%2Did", id);
-        return new microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoverySearchItemRequestBuilder and sets the default values.
@@ -191,16 +191,16 @@ public class EdiscoverySearchItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.custodianSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.custodianSources.item collection
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder custodianSources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder custodianSources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dataSource%2Did", id);
-        return new microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property searches for security
@@ -305,7 +305,7 @@ public class EdiscoverySearchItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.noncustodialSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.noncustodialSources.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
      */

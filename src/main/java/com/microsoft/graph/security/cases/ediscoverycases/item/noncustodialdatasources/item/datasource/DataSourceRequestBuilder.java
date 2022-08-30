@@ -1,5 +1,7 @@
-package microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.datasource;
+package com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.datasource;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.DataSource;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.DataSource;
 /** Provides operations to manage the dataSource property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity. */
 public class DataSourceRequestBuilder {
     /** Path parameters for the request */

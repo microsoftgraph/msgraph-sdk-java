@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.InstancesRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.AccessReviewInstanceItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.stop.StopRequestBuilder;
+import com.microsoft.graph.models.AccessReviewScheduleDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.InstancesRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.AccessReviewInstanceItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.stop.StopRequestBuilder;
-import microsoft.graph.models.AccessReviewScheduleDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity. */
 public class AccessReviewScheduleDefinitionItemRequestBuilder {
     /** The instances property */
@@ -257,7 +257,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceItemRequestBuilder
      */

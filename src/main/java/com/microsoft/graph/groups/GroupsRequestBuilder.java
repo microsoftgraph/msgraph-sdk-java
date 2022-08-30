@@ -1,5 +1,13 @@
-package microsoft.graph.groups;
+package com.microsoft.graph.groups;
 
+import com.microsoft.graph.groups.count.CountRequestBuilder;
+import com.microsoft.graph.groups.delta.DeltaRequestBuilder;
+import com.microsoft.graph.groups.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.groups.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.groups.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.GroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.count.CountRequestBuilder;
-import microsoft.graph.groups.delta.DeltaRequestBuilder;
-import microsoft.graph.groups.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.groups.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.groups.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.Group;
-import microsoft.graph.models.GroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of group entities. */
 public class GroupsRequestBuilder {
     /** The Count property */

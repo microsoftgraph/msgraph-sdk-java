@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.planner;
+package com.microsoft.graph.groups.item.planner;
 
+import com.microsoft.graph.groups.item.planner.plans.item.PlannerPlanItemRequestBuilder;
+import com.microsoft.graph.groups.item.planner.plans.PlansRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerGroup;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.planner.plans.item.PlannerPlanItemRequestBuilder;
-import microsoft.graph.groups.item.planner.plans.PlansRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerGroup;
 /** Provides operations to manage the planner property of the microsoft.graph.group entity. */
 public class PlannerRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.planner.plans.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.planner.plans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */

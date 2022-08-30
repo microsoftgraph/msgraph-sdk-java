@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.remoteassistancepartners.item;
+package com.microsoft.graph.devicemanagement.remoteassistancepartners.item;
 
+import com.microsoft.graph.devicemanagement.remoteassistancepartners.item.beginonboarding.BeginOnboardingRequestBuilder;
+import com.microsoft.graph.devicemanagement.remoteassistancepartners.item.disconnect.DisconnectRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RemoteAssistancePartner;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.remoteassistancepartners.item.beginonboarding.BeginOnboardingRequestBuilder;
-import microsoft.graph.devicemanagement.remoteassistancepartners.item.disconnect.DisconnectRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RemoteAssistancePartner;
 /** Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity. */
 public class RemoteAssistancePartnerItemRequestBuilder {
     /** The beginOnboarding property */

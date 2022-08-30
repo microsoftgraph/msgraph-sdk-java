@@ -1,5 +1,7 @@
-package microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation;
+package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryAddToReviewSetOperation;
 /** Provides operations to manage the addToReviewSetOperation property of the microsoft.graph.security.ediscoverySearch entity. */
 public class AddToReviewSetOperationRequestBuilder {
     /** Path parameters for the request */

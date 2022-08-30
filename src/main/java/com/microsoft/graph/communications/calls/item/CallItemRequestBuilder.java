@@ -1,5 +1,26 @@
-package microsoft.graph.communications.calls.item;
+package com.microsoft.graph.communications.calls.item;
 
+import com.microsoft.graph.communications.calls.item.answer.AnswerRequestBuilder;
+import com.microsoft.graph.communications.calls.item.audioroutinggroups.AudioRoutingGroupsRequestBuilder;
+import com.microsoft.graph.communications.calls.item.audioroutinggroups.item.AudioRoutingGroupItemRequestBuilder;
+import com.microsoft.graph.communications.calls.item.cancelmediaprocessing.CancelMediaProcessingRequestBuilder;
+import com.microsoft.graph.communications.calls.item.changescreensharingrole.ChangeScreenSharingRoleRequestBuilder;
+import com.microsoft.graph.communications.calls.item.keepalive.KeepAliveRequestBuilder;
+import com.microsoft.graph.communications.calls.item.mute.MuteRequestBuilder;
+import com.microsoft.graph.communications.calls.item.operations.item.CommsOperationItemRequestBuilder;
+import com.microsoft.graph.communications.calls.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.communications.calls.item.participants.item.ParticipantItemRequestBuilder;
+import com.microsoft.graph.communications.calls.item.participants.ParticipantsRequestBuilder;
+import com.microsoft.graph.communications.calls.item.playprompt.PlayPromptRequestBuilder;
+import com.microsoft.graph.communications.calls.item.recordresponse.RecordResponseRequestBuilder;
+import com.microsoft.graph.communications.calls.item.redirect.RedirectRequestBuilder;
+import com.microsoft.graph.communications.calls.item.reject.RejectRequestBuilder;
+import com.microsoft.graph.communications.calls.item.subscribetotone.SubscribeToToneRequestBuilder;
+import com.microsoft.graph.communications.calls.item.transfer.TransferRequestBuilder;
+import com.microsoft.graph.communications.calls.item.unmute.UnmuteRequestBuilder;
+import com.microsoft.graph.communications.calls.item.updaterecordingstatus.UpdateRecordingStatusRequestBuilder;
+import com.microsoft.graph.models.Call;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,27 +35,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.calls.item.answer.AnswerRequestBuilder;
-import microsoft.graph.communications.calls.item.audioroutinggroups.AudioRoutingGroupsRequestBuilder;
-import microsoft.graph.communications.calls.item.audioroutinggroups.item.AudioRoutingGroupItemRequestBuilder;
-import microsoft.graph.communications.calls.item.cancelmediaprocessing.CancelMediaProcessingRequestBuilder;
-import microsoft.graph.communications.calls.item.changescreensharingrole.ChangeScreenSharingRoleRequestBuilder;
-import microsoft.graph.communications.calls.item.keepalive.KeepAliveRequestBuilder;
-import microsoft.graph.communications.calls.item.mute.MuteRequestBuilder;
-import microsoft.graph.communications.calls.item.operations.item.CommsOperationItemRequestBuilder;
-import microsoft.graph.communications.calls.item.operations.OperationsRequestBuilder;
-import microsoft.graph.communications.calls.item.participants.item.ParticipantItemRequestBuilder;
-import microsoft.graph.communications.calls.item.participants.ParticipantsRequestBuilder;
-import microsoft.graph.communications.calls.item.playprompt.PlayPromptRequestBuilder;
-import microsoft.graph.communications.calls.item.recordresponse.RecordResponseRequestBuilder;
-import microsoft.graph.communications.calls.item.redirect.RedirectRequestBuilder;
-import microsoft.graph.communications.calls.item.reject.RejectRequestBuilder;
-import microsoft.graph.communications.calls.item.subscribetotone.SubscribeToToneRequestBuilder;
-import microsoft.graph.communications.calls.item.transfer.TransferRequestBuilder;
-import microsoft.graph.communications.calls.item.unmute.UnmuteRequestBuilder;
-import microsoft.graph.communications.calls.item.updaterecordingstatus.UpdateRecordingStatusRequestBuilder;
-import microsoft.graph.models.Call;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
 public class CallItemRequestBuilder {
     /** The answer property */
@@ -124,7 +124,7 @@ public class CallItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.communications.calls.item.audioRoutingGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.calls.item.audioRoutingGroups.item collection
      * @param id Unique identifier of the item
      * @return a AudioRoutingGroupItemRequestBuilder
      */
@@ -355,7 +355,7 @@ public class CallItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.communications.calls.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.calls.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a CommsOperationItemRequestBuilder
      */
@@ -367,7 +367,7 @@ public class CallItemRequestBuilder {
         return new CommsOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.communications.calls.item.participants.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.calls.item.participants.item collection
      * @param id Unique identifier of the item
      * @return a ParticipantItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.calendargroups.item;
+package com.microsoft.graph.users.item.calendargroups.item;
 
+import com.microsoft.graph.models.CalendarGroup;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.calendargroups.item.calendars.CalendarsRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CalendarGroup;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.calendargroups.item.calendars.CalendarsRequestBuilder;
-import microsoft.graph.users.item.calendargroups.item.calendars.item.CalendarItemRequestBuilder;
 /** Provides operations to manage the calendarGroups property of the microsoft.graph.user entity. */
 public class CalendarGroupItemRequestBuilder {
     /** The calendars property */
@@ -32,7 +32,7 @@ public class CalendarGroupItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item.calendars.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendarGroups.item.calendars.item collection
      * @param id Unique identifier of the item
      * @return a CalendarItemRequestBuilder
      */

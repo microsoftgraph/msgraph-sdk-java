@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname;
+package com.microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

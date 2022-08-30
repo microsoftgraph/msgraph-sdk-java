@@ -1,5 +1,8 @@
-package microsoft.graph.sites.item.externalcolumns;
+package com.microsoft.graph.sites.item.externalcolumns;
 
+import com.microsoft.graph.models.ColumnDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.sites.item.externalcolumns.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ColumnDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.sites.item.externalcolumns.count.CountRequestBuilder;
 /** Provides operations to manage the externalColumns property of the microsoft.graph.site entity. */
 public class ExternalColumnsRequestBuilder {
     /** The Count property */

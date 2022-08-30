@@ -1,5 +1,12 @@
-package microsoft.graph.contracts.item;
+package com.microsoft.graph.contracts.item;
 
+import com.microsoft.graph.contracts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.contracts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.contracts.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.contracts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.contracts.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.Contract;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contracts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.contracts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.contracts.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.contracts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.contracts.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.Contract;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of contract entities. */
 public class ContractItemRequestBuilder {
     /** The checkMemberGroups property */

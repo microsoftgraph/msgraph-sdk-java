@@ -1,5 +1,9 @@
-package microsoft.graph.identity.b2xuserflows.item.languages;
+package com.microsoft.graph.identity.b2xuserflows.item.languages;
 
+import com.microsoft.graph.identity.b2xuserflows.item.languages.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserFlowLanguageConfiguration;
+import com.microsoft.graph.models.UserFlowLanguageConfigurationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2xuserflows.item.languages.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserFlowLanguageConfiguration;
-import microsoft.graph.models.UserFlowLanguageConfigurationCollectionResponse;
 /** Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class LanguagesRequestBuilder {
     /** The Count property */

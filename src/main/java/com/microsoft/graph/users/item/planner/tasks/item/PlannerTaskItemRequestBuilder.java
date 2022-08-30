@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.planner.tasks.item;
+package com.microsoft.graph.users.item.planner.tasks.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerTask;
+import com.microsoft.graph.users.item.planner.tasks.item.assignedtotaskboardformat.AssignedToTaskBoardFormatRequestBuilder;
+import com.microsoft.graph.users.item.planner.tasks.item.buckettaskboardformat.BucketTaskBoardFormatRequestBuilder;
+import com.microsoft.graph.users.item.planner.tasks.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.users.item.planner.tasks.item.progresstaskboardformat.ProgressTaskBoardFormatRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerTask;
-import microsoft.graph.users.item.planner.tasks.item.assignedtotaskboardformat.AssignedToTaskBoardFormatRequestBuilder;
-import microsoft.graph.users.item.planner.tasks.item.buckettaskboardformat.BucketTaskBoardFormatRequestBuilder;
-import microsoft.graph.users.item.planner.tasks.item.details.DetailsRequestBuilder;
-import microsoft.graph.users.item.planner.tasks.item.progresstaskboardformat.ProgressTaskBoardFormatRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity. */
 public class PlannerTaskItemRequestBuilder {
     /** The assignedToTaskBoardFormat property */

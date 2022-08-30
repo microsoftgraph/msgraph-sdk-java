@@ -1,5 +1,8 @@
-package microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.basetypes;
+package com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.basetypes;
 
+import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.basetypes.count.CountRequestBuilder;
+import com.microsoft.graph.models.ContentTypeCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.basetypes.count.CountRequestBuilder;
-import microsoft.graph.models.ContentTypeCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity. */
 public class BaseTypesRequestBuilder {
     /** The Count property */

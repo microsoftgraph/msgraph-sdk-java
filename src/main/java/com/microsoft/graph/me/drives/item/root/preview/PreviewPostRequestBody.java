@@ -1,4 +1,4 @@
-package microsoft.graph.me.drives.item.root.preview;
+package com.microsoft.graph.me.drives.item.root.preview;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

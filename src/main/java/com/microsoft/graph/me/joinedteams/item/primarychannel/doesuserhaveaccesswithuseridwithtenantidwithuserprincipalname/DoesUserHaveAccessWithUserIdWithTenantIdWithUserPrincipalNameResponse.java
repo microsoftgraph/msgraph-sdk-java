@@ -1,4 +1,4 @@
-package microsoft.graph.me.joinedteams.item.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
+package com.microsoft.graph.me.joinedteams.item.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

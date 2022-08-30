@@ -1,5 +1,7 @@
-package microsoft.graph.education.me.assignments.item.submissions.item.outcomes.item;
+package com.microsoft.graph.education.me.assignments.item.submissions.item.outcomes.item;
 
+import com.microsoft.graph.models.EducationOutcome;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationOutcome;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity. */
 public class EducationOutcomeItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,10 @@
-package microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item;
+package com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item;
 
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.relations.item.RelationItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.relations.RelationsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.set.SetRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Term;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.relations.item.RelationItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.relations.RelationsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.sets.item.terms.item.children.item.set.SetRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Term;
 /** Provides operations to manage the children property of the microsoft.graph.termStore.term entity. */
 public class TermItemRequestBuilder {
     /** Path parameters for the request */
@@ -312,7 +312,7 @@ public class TermItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item.children.item.relations.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item.parentGroup.sets.item.terms.item.children.item.relations.item collection
      * @param id Unique identifier of the item
      * @return a RelationItemRequestBuilder
      */

@@ -1,5 +1,10 @@
-package microsoft.graph.teams.item.primarychannel.members;
+package com.microsoft.graph.teams.item.primarychannel.members;
 
+import com.microsoft.graph.models.ConversationMember;
+import com.microsoft.graph.models.ConversationMemberCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teams.item.primarychannel.members.add.AddRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.members.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConversationMember;
-import microsoft.graph.models.ConversationMemberCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teams.item.primarychannel.members.add.AddRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.members.count.CountRequestBuilder;
 /** Provides operations to manage the members property of the microsoft.graph.channel entity. */
 public class MembersRequestBuilder {
     /** The add property */

@@ -1,5 +1,32 @@
-package microsoft.graph.sites.item;
+package com.microsoft.graph.sites.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Site;
+import com.microsoft.graph.sites.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.sites.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.sites.item.contenttypes.ContentTypesRequestBuilder;
+import com.microsoft.graph.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
+import com.microsoft.graph.sites.item.drive.DriveRequestBuilder;
+import com.microsoft.graph.sites.item.drives.DrivesRequestBuilder;
+import com.microsoft.graph.sites.item.drives.item.DriveItemRequestBuilder;
+import com.microsoft.graph.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
+import com.microsoft.graph.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import com.microsoft.graph.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
+import com.microsoft.graph.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
+import com.microsoft.graph.sites.item.items.item.BaseItemItemRequestBuilder;
+import com.microsoft.graph.sites.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.sites.item.lists.item.ListItemRequestBuilder;
+import com.microsoft.graph.sites.item.lists.ListsRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.OnenoteRequestBuilder;
+import com.microsoft.graph.sites.item.operations.item.RichLongRunningOperationItemRequestBuilder;
+import com.microsoft.graph.sites.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder;
+import com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.sites.item.sites.SitesRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.TermStoreRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.item.StoreItemRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.TermStoresRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,33 +41,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Site;
-import microsoft.graph.sites.item.analytics.AnalyticsRequestBuilder;
-import microsoft.graph.sites.item.columns.ColumnsRequestBuilder;
-import microsoft.graph.sites.item.contenttypes.ContentTypesRequestBuilder;
-import microsoft.graph.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
-import microsoft.graph.sites.item.drive.DriveRequestBuilder;
-import microsoft.graph.sites.item.drives.DrivesRequestBuilder;
-import microsoft.graph.sites.item.drives.item.DriveItemRequestBuilder;
-import microsoft.graph.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
-import microsoft.graph.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import microsoft.graph.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import microsoft.graph.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
-import microsoft.graph.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
-import microsoft.graph.sites.item.items.item.BaseItemItemRequestBuilder;
-import microsoft.graph.sites.item.items.ItemsRequestBuilder;
-import microsoft.graph.sites.item.lists.item.ListItemRequestBuilder;
-import microsoft.graph.sites.item.lists.ListsRequestBuilder;
-import microsoft.graph.sites.item.onenote.OnenoteRequestBuilder;
-import microsoft.graph.sites.item.operations.item.RichLongRunningOperationItemRequestBuilder;
-import microsoft.graph.sites.item.operations.OperationsRequestBuilder;
-import microsoft.graph.sites.item.permissions.item.PermissionItemRequestBuilder;
-import microsoft.graph.sites.item.permissions.PermissionsRequestBuilder;
-import microsoft.graph.sites.item.sites.SitesRequestBuilder;
-import microsoft.graph.sites.item.termstore.TermStoreRequestBuilder;
-import microsoft.graph.sites.item.termstores.item.StoreItemRequestBuilder;
-import microsoft.graph.sites.item.termstores.TermStoresRequestBuilder;
 /** Provides operations to manage the collection of site entities. */
 public class SiteItemRequestBuilder {
     /** The analytics property */
@@ -120,16 +120,16 @@ public class SiteItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.columns.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.columns.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("columnDefinition%2Did", id);
-        return new microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.sites.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new SiteItemRequestBuilder and sets the default values.
@@ -159,7 +159,7 @@ public class SiteItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.contentTypes.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.contentTypes.item collection
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -233,7 +233,7 @@ public class SiteItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.drives.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.drives.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
      */
@@ -245,16 +245,16 @@ public class SiteItemRequestBuilder {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.externalColumns.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.externalColumns.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder externalColumns(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder externalColumns(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("columnDefinition%2Did", id);
-        return new microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
@@ -350,7 +350,7 @@ public class SiteItemRequestBuilder {
         return new GetByPathWithPathRequestBuilder(pathParameters, requestAdapter, path);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.items.item collection
      * @param id Unique identifier of the item
      * @return a BaseItemItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class SiteItemRequestBuilder {
         return new BaseItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.lists.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.lists.item collection
      * @param id Unique identifier of the item
      * @return a ListItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class SiteItemRequestBuilder {
         return new ListItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a RichLongRunningOperationItemRequestBuilder
      */
@@ -441,7 +441,7 @@ public class SiteItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.permissions.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.permissions.item collection
      * @param id Unique identifier of the item
      * @return a PermissionItemRequestBuilder
      */
@@ -453,7 +453,7 @@ public class SiteItemRequestBuilder {
         return new PermissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.sites.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.sites.item collection
      * @param id Unique identifier of the item
      * @return a SiteItemRequestBuilder
      */
@@ -465,7 +465,7 @@ public class SiteItemRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStores.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item collection
      * @param id Unique identifier of the item
      * @return a StoreItemRequestBuilder
      */

@@ -1,5 +1,14 @@
-package microsoft.graph.me.contactfolders.item;
+package com.microsoft.graph.me.contactfolders.item;
 
+import com.microsoft.graph.me.contactfolders.item.childfolders.ChildFoldersRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.contacts.ContactsRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.contacts.item.ContactItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.models.ContactFolder;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.contactfolders.item.childfolders.ChildFoldersRequestBuilder;
-import microsoft.graph.me.contactfolders.item.contacts.ContactsRequestBuilder;
-import microsoft.graph.me.contactfolders.item.contacts.item.ContactItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.contactfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.models.ContactFolder;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contactFolders property of the microsoft.graph.user entity. */
 public class ContactFolderItemRequestBuilder {
     /** The childFolders property */
@@ -52,7 +52,7 @@ public class ContactFolderItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.childFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.childFolders.item collection
      * @param id Unique identifier of the item
      * @return a ContactFolderItemRequestBuilder
      */
@@ -91,7 +91,7 @@ public class ContactFolderItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.contacts.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.contacts.item collection
      * @param id Unique identifier of the item
      * @return a ContactItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

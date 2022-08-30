@@ -1,4 +1,4 @@
-package microsoft.graph.workbooks.item.preview;
+package com.microsoft.graph.workbooks.item.preview;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

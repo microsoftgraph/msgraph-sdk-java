@@ -1,5 +1,9 @@
-package microsoft.graph.connections.item.groups.item;
+package com.microsoft.graph.connections.item.groups.item;
 
+import com.microsoft.graph.connections.item.groups.item.members.item.IdentityItemRequestBuilder;
+import com.microsoft.graph.connections.item.groups.item.members.MembersRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.ExternalGroup;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.connections.item.groups.item.members.item.IdentityItemRequestBuilder;
-import microsoft.graph.connections.item.groups.item.members.MembersRequestBuilder;
-import microsoft.graph.models.externalconnectors.ExternalGroup;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class ExternalGroupItemRequestBuilder {
     /** The members property */
@@ -251,7 +251,7 @@ public class ExternalGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.connections.item.groups.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.connections.item.groups.item.members.item collection
      * @param id Unique identifier of the item
      * @return a IdentityItemRequestBuilder
      */

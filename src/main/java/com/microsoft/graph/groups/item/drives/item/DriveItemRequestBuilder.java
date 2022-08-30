@@ -1,5 +1,16 @@
-package microsoft.graph.groups.item.drives.item;
+package com.microsoft.graph.groups.item.drives.item;
 
+import com.microsoft.graph.groups.item.drives.item.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.following.FollowingRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.list.ListRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.recent.RecentRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.root.RootRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.searchwithq.SearchWithQRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.sharedwithme.SharedWithMeRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.special.SpecialRequestBuilder;
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.drives.item.bundles.BundlesRequestBuilder;
-import microsoft.graph.groups.item.drives.item.following.FollowingRequestBuilder;
-import microsoft.graph.groups.item.drives.item.items.ItemsRequestBuilder;
-import microsoft.graph.groups.item.drives.item.list.ListRequestBuilder;
-import microsoft.graph.groups.item.drives.item.recent.RecentRequestBuilder;
-import microsoft.graph.groups.item.drives.item.root.RootRequestBuilder;
-import microsoft.graph.groups.item.drives.item.searchwithq.SearchWithQRequestBuilder;
-import microsoft.graph.groups.item.drives.item.sharedwithme.SharedWithMeRequestBuilder;
-import microsoft.graph.groups.item.drives.item.special.SpecialRequestBuilder;
-import microsoft.graph.models.Drive;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the drives property of the microsoft.graph.group entity. */
 public class DriveItemRequestBuilder {
     /** The bundles property */
@@ -64,16 +64,16 @@ public class DriveItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.drives.item.bundles.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.bundles.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.drives.item.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.drives.item.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.groups.item.drives.item.bundles.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.drives.item.bundles.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DriveItemRequestBuilder and sets the default values.
@@ -244,16 +244,16 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.drives.item.following.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.following.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.drives.item.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.drives.item.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.groups.item.drives.item.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.drives.item.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The group's drives. Read-only.
@@ -307,16 +307,16 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.drives.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.items.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.drives.item.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.drives.item.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.groups.item.drives.item.items.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.drives.item.items.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property drives in groups
@@ -400,16 +400,16 @@ public class DriveItemRequestBuilder {
         return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.drives.item.special.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.special.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.drives.item.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.drives.item.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.groups.item.drives.item.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.drives.item.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class DriveItemRequestBuilderDeleteRequestConfiguration {

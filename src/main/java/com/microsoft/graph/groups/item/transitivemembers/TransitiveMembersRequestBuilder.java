@@ -1,5 +1,14 @@
-package microsoft.graph.groups.item.transitivemembers;
+package com.microsoft.graph.groups.item.transitivemembers;
 
+import com.microsoft.graph.groups.item.transitivemembers.application.ApplicationRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.device.DeviceRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.group.GroupRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.groups.item.transitivemembers.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.transitivemembers.application.ApplicationRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.count.CountRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.device.DeviceRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.group.GroupRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.groups.item.transitivemembers.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity. */
 public class TransitiveMembersRequestBuilder {
     /** The application property */

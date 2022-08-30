@@ -1,5 +1,64 @@
-package microsoft.graph.devicemanagement;
+package com.microsoft.graph.devicemanagement;
 
+import com.microsoft.graph.devicemanagement.applepushnotificationcertificate.ApplePushNotificationCertificateRequestBuilder;
+import com.microsoft.graph.devicemanagement.compliancemanagementpartners.ComplianceManagementPartnersRequestBuilder;
+import com.microsoft.graph.devicemanagement.compliancemanagementpartners.item.ComplianceManagementPartnerItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.detectedapps.DetectedAppsRequestBuilder;
+import com.microsoft.graph.devicemanagement.detectedapps.item.DetectedAppItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecategories.DeviceCategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecategories.item.DeviceCategoryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.DeviceCompliancePoliciesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.DeviceCompliancePolicyItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicydevicestatesummary.DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.DeviceCompliancePolicySettingStateSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.DeviceConfigurationItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
+import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.DeviceEnrollmentConfigurationItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicemanagementpartners.DeviceManagementPartnersRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicemanagementpartners.item.DeviceManagementPartnerItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.exchangeconnectors.ExchangeConnectorsRequestBuilder;
+import com.microsoft.graph.devicemanagement.exchangeconnectors.item.DeviceManagementExchangeConnectorItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.geteffectivepermissionswithscope.GetEffectivePermissionsWithScopeRequestBuilder;
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.item.ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.iosupdatestatuses.IosUpdateStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.iosupdatestatuses.item.IosUpdateDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddeviceoverview.ManagedDeviceOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.ManagedDeviceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.ManagedDevicesRequestBuilder;
+import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.item.MobileThreatDefenseConnectorItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.MobileThreatDefenseConnectorsRequestBuilder;
+import com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.NotificationMessageTemplateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.remoteassistancepartners.item.RemoteAssistancePartnerItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
+import com.microsoft.graph.devicemanagement.reports.ReportsRequestBuilder;
+import com.microsoft.graph.devicemanagement.resourceoperations.item.ResourceOperationItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.resourceoperations.ResourceOperationsRequestBuilder;
+import com.microsoft.graph.devicemanagement.roleassignments.item.DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.roledefinitions.item.RoleDefinitionItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.softwareupdatestatussummary.SoftwareUpdateStatusSummaryRequestBuilder;
+import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.item.TelecomExpenseManagementPartnerItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.item.TermsAndConditionsItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
+import com.microsoft.graph.devicemanagement.troubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
+import com.microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname.VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.WindowsAutopilotDeviceIdentitiesRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.item.WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.item.WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
+import com.microsoft.graph.models.DeviceManagement;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,65 +73,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.applepushnotificationcertificate.ApplePushNotificationCertificateRequestBuilder;
-import microsoft.graph.devicemanagement.compliancemanagementpartners.ComplianceManagementPartnersRequestBuilder;
-import microsoft.graph.devicemanagement.compliancemanagementpartners.item.ComplianceManagementPartnerItemRequestBuilder;
-import microsoft.graph.devicemanagement.conditionalaccesssettings.ConditionalAccessSettingsRequestBuilder;
-import microsoft.graph.devicemanagement.detectedapps.DetectedAppsRequestBuilder;
-import microsoft.graph.devicemanagement.detectedapps.item.DetectedAppItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecategories.DeviceCategoriesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecategories.item.DeviceCategoryItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.DeviceCompliancePoliciesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.DeviceCompliancePolicyItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicydevicestatesummary.DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.DeviceConfigurationItemRequestBuilder;
-import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
-import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.item.DeviceEnrollmentConfigurationItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicemanagementpartners.DeviceManagementPartnersRequestBuilder;
-import microsoft.graph.devicemanagement.devicemanagementpartners.item.DeviceManagementPartnerItemRequestBuilder;
-import microsoft.graph.devicemanagement.exchangeconnectors.ExchangeConnectorsRequestBuilder;
-import microsoft.graph.devicemanagement.exchangeconnectors.item.DeviceManagementExchangeConnectorItemRequestBuilder;
-import microsoft.graph.devicemanagement.geteffectivepermissionswithscope.GetEffectivePermissionsWithScopeRequestBuilder;
-import microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
-import microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.item.ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
-import microsoft.graph.devicemanagement.iosupdatestatuses.IosUpdateStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.iosupdatestatuses.item.IosUpdateDeviceStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.manageddeviceoverview.ManagedDeviceOverviewRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.ManagedDeviceItemRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.ManagedDevicesRequestBuilder;
-import microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.item.MobileThreatDefenseConnectorItemRequestBuilder;
-import microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.MobileThreatDefenseConnectorsRequestBuilder;
-import microsoft.graph.devicemanagement.notificationmessagetemplates.item.NotificationMessageTemplateItemRequestBuilder;
-import microsoft.graph.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
-import microsoft.graph.devicemanagement.remoteassistancepartners.item.RemoteAssistancePartnerItemRequestBuilder;
-import microsoft.graph.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
-import microsoft.graph.devicemanagement.reports.ReportsRequestBuilder;
-import microsoft.graph.devicemanagement.resourceoperations.item.ResourceOperationItemRequestBuilder;
-import microsoft.graph.devicemanagement.resourceoperations.ResourceOperationsRequestBuilder;
-import microsoft.graph.devicemanagement.roleassignments.item.DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.roledefinitions.item.RoleDefinitionItemRequestBuilder;
-import microsoft.graph.devicemanagement.roledefinitions.RoleDefinitionsRequestBuilder;
-import microsoft.graph.devicemanagement.softwareupdatestatussummary.SoftwareUpdateStatusSummaryRequestBuilder;
-import microsoft.graph.devicemanagement.telecomexpensemanagementpartners.item.TelecomExpenseManagementPartnerItemRequestBuilder;
-import microsoft.graph.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
-import microsoft.graph.devicemanagement.termsandconditions.item.TermsAndConditionsItemRequestBuilder;
-import microsoft.graph.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
-import microsoft.graph.devicemanagement.troubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
-import microsoft.graph.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
-import microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname.VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.WindowsAutopilotDeviceIdentityItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.WindowsAutopilotDeviceIdentitiesRequestBuilder;
-import microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.item.WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.item.WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
-import microsoft.graph.models.DeviceManagement;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceManagement singleton. */
 public class DeviceManagementRequestBuilder {
     /** The applePushNotificationCertificate property */
@@ -237,7 +237,7 @@ public class DeviceManagementRequestBuilder {
         return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.complianceManagementPartners.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.complianceManagementPartners.item collection
      * @param id Unique identifier of the item
      * @return a ComplianceManagementPartnerItemRequestBuilder
      */
@@ -338,7 +338,7 @@ public class DeviceManagementRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.detectedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.detectedApps.item collection
      * @param id Unique identifier of the item
      * @return a DetectedAppItemRequestBuilder
      */
@@ -350,7 +350,7 @@ public class DeviceManagementRequestBuilder {
         return new DetectedAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCategories.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCategoryItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceCompliancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
      */
@@ -386,7 +386,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationItemRequestBuilder
      */
@@ -398,7 +398,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceEnrollmentConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceEnrollmentConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a DeviceEnrollmentConfigurationItemRequestBuilder
      */
@@ -410,7 +410,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceManagementPartners.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceManagementPartners.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementPartnerItemRequestBuilder
      */
@@ -422,7 +422,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.exchangeConnectors.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.exchangeConnectors.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementExchangeConnectorItemRequestBuilder
      */
@@ -495,7 +495,7 @@ public class DeviceManagementRequestBuilder {
         return new GetEffectivePermissionsWithScopeRequestBuilder(pathParameters, requestAdapter, scope);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.importedWindowsAutopilotDeviceIdentities.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.importedWindowsAutopilotDeviceIdentities.item collection
      * @param id Unique identifier of the item
      * @return a ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
      */
@@ -507,7 +507,7 @@ public class DeviceManagementRequestBuilder {
         return new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.iosUpdateStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.iosUpdateStatuses.item collection
      * @param id Unique identifier of the item
      * @return a IosUpdateDeviceStatusItemRequestBuilder
      */
@@ -519,7 +519,7 @@ public class DeviceManagementRequestBuilder {
         return new IosUpdateDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.managedDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.managedDevices.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceItemRequestBuilder
      */
@@ -531,7 +531,7 @@ public class DeviceManagementRequestBuilder {
         return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.mobileThreatDefenseConnectors.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.mobileThreatDefenseConnectors.item collection
      * @param id Unique identifier of the item
      * @return a MobileThreatDefenseConnectorItemRequestBuilder
      */
@@ -543,7 +543,7 @@ public class DeviceManagementRequestBuilder {
         return new MobileThreatDefenseConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.notificationMessageTemplates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.notificationMessageTemplates.item collection
      * @param id Unique identifier of the item
      * @return a NotificationMessageTemplateItemRequestBuilder
      */
@@ -610,7 +610,7 @@ public class DeviceManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.remoteAssistancePartners.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.remoteAssistancePartners.item collection
      * @param id Unique identifier of the item
      * @return a RemoteAssistancePartnerItemRequestBuilder
      */
@@ -622,7 +622,7 @@ public class DeviceManagementRequestBuilder {
         return new RemoteAssistancePartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.resourceOperations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.resourceOperations.item collection
      * @param id Unique identifier of the item
      * @return a ResourceOperationItemRequestBuilder
      */
@@ -634,7 +634,7 @@ public class DeviceManagementRequestBuilder {
         return new ResourceOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceAndAppManagementRoleAssignmentItemRequestBuilder
      */
@@ -646,7 +646,7 @@ public class DeviceManagementRequestBuilder {
         return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.roleDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.roleDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a RoleDefinitionItemRequestBuilder
      */
@@ -658,7 +658,7 @@ public class DeviceManagementRequestBuilder {
         return new RoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.telecomExpenseManagementPartners.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.telecomExpenseManagementPartners.item collection
      * @param id Unique identifier of the item
      * @return a TelecomExpenseManagementPartnerItemRequestBuilder
      */
@@ -670,7 +670,7 @@ public class DeviceManagementRequestBuilder {
         return new TelecomExpenseManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.termsAndConditions.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.termsAndConditions.item collection
      * @param id Unique identifier of the item
      * @return a TermsAndConditionsItemRequestBuilder
      */
@@ -682,7 +682,7 @@ public class DeviceManagementRequestBuilder {
         return new TermsAndConditionsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.troubleshootingEvents.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.troubleshootingEvents.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
      */
@@ -704,7 +704,7 @@ public class DeviceManagementRequestBuilder {
         return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder(pathParameters, requestAdapter, domainName);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsAutopilotDeviceIdentities.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsAutopilotDeviceIdentities.item collection
      * @param id Unique identifier of the item
      * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
      */
@@ -716,7 +716,7 @@ public class DeviceManagementRequestBuilder {
         return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsInformationProtectionAppLearningSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsInformationProtectionAppLearningSummaries.item collection
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
      */
@@ -728,7 +728,7 @@ public class DeviceManagementRequestBuilder {
         return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.windowsInformationProtectionNetworkLearningSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.windowsInformationProtectionNetworkLearningSummaries.item collection
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
      */

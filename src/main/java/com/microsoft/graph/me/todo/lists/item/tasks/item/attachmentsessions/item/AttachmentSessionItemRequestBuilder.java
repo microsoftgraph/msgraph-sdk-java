@@ -1,5 +1,8 @@
-package microsoft.graph.me.todo.lists.item.tasks.item.attachmentsessions.item;
+package com.microsoft.graph.me.todo.lists.item.tasks.item.attachmentsessions.item;
 
+import com.microsoft.graph.me.todo.lists.item.tasks.item.attachmentsessions.item.content.ContentRequestBuilder;
+import com.microsoft.graph.models.AttachmentSession;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.todo.lists.item.tasks.item.attachmentsessions.item.content.ContentRequestBuilder;
-import microsoft.graph.models.AttachmentSession;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity. */
 public class AttachmentSessionItemRequestBuilder {
     /** The content property */

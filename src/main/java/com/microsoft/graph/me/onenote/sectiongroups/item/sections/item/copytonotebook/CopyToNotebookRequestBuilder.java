@@ -1,5 +1,7 @@
-package microsoft.graph.me.onenote.sectiongroups.item.sections.item.copytonotebook;
+package com.microsoft.graph.me.onenote.sectiongroups.item.sections.item.copytonotebook;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteOperation;
 /** Provides operations to call the copyToNotebook method. */
 public class CopyToNotebookRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.identity.userflowattributes;
+package com.microsoft.graph.identity.userflowattributes;
 
+import com.microsoft.graph.identity.userflowattributes.count.CountRequestBuilder;
+import com.microsoft.graph.models.IdentityUserFlowAttribute;
+import com.microsoft.graph.models.IdentityUserFlowAttributeCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.userflowattributes.count.CountRequestBuilder;
-import microsoft.graph.models.IdentityUserFlowAttribute;
-import microsoft.graph.models.IdentityUserFlowAttributeCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity. */
 public class UserFlowAttributesRequestBuilder {
     /** The Count property */

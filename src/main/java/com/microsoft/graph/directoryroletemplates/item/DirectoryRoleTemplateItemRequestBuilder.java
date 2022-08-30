@@ -1,5 +1,12 @@
-package microsoft.graph.directoryroletemplates.item;
+package com.microsoft.graph.directoryroletemplates.item;
 
+import com.microsoft.graph.directoryroletemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directoryroletemplates.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.DirectoryRoleTemplate;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroletemplates.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directoryroletemplates.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.DirectoryRoleTemplate;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryRoleTemplate entities. */
 public class DirectoryRoleTemplateItemRequestBuilder {
     /** The checkMemberGroups property */

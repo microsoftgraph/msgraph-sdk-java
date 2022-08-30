@@ -1,5 +1,18 @@
-package microsoft.graph.me.drives.item.list;
+package com.microsoft.graph.me.drives.item.list;
 
+import com.microsoft.graph.me.drives.item.list.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.columns.item.ColumnDefinitionItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.contenttypes.ContentTypesRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.contenttypes.item.ContentTypeItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.drive.DriveRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.items.item.ListItemItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.items.ItemsRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.operations.item.RichLongRunningOperationItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.operations.OperationsRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.subscriptions.item.SubscriptionItemRequestBuilder;
+import com.microsoft.graph.me.drives.item.list.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.drives.item.list.columns.ColumnsRequestBuilder;
-import microsoft.graph.me.drives.item.list.columns.item.ColumnDefinitionItemRequestBuilder;
-import microsoft.graph.me.drives.item.list.contenttypes.ContentTypesRequestBuilder;
-import microsoft.graph.me.drives.item.list.contenttypes.item.ContentTypeItemRequestBuilder;
-import microsoft.graph.me.drives.item.list.drive.DriveRequestBuilder;
-import microsoft.graph.me.drives.item.list.items.item.ListItemItemRequestBuilder;
-import microsoft.graph.me.drives.item.list.items.ItemsRequestBuilder;
-import microsoft.graph.me.drives.item.list.operations.item.RichLongRunningOperationItemRequestBuilder;
-import microsoft.graph.me.drives.item.list.operations.OperationsRequestBuilder;
-import microsoft.graph.me.drives.item.list.subscriptions.item.SubscriptionItemRequestBuilder;
-import microsoft.graph.me.drives.item.list.subscriptions.SubscriptionsRequestBuilder;
-import microsoft.graph.models.List;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the list property of the microsoft.graph.drive entity. */
 public class ListRequestBuilder {
     /** The columns property */
@@ -66,7 +66,7 @@ public class ListRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.drives.item.list.columns.item collection
+     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.columns.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
@@ -105,7 +105,7 @@ public class ListRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.drives.item.list.contentTypes.item collection
+     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.contentTypes.item collection
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -309,7 +309,7 @@ public class ListRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.drives.item.list.items.item collection
+     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.items.item collection
      * @param id Unique identifier of the item
      * @return a ListItemItemRequestBuilder
      */
@@ -321,7 +321,7 @@ public class ListRequestBuilder {
         return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.drives.item.list.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.operations.item collection
      * @param id Unique identifier of the item
      * @return a RichLongRunningOperationItemRequestBuilder
      */
@@ -388,7 +388,7 @@ public class ListRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.drives.item.list.subscriptions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.subscriptions.item collection
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */

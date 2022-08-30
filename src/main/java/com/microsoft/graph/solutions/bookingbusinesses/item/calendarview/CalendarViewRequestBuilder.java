@@ -1,5 +1,9 @@
-package microsoft.graph.solutions.bookingbusinesses.item.calendarview;
+package com.microsoft.graph.solutions.bookingbusinesses.item.calendarview;
 
+import com.microsoft.graph.models.BookingAppointment;
+import com.microsoft.graph.models.BookingAppointmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingAppointment;
-import microsoft.graph.models.BookingAppointmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingbusinesses.item.calendarview.count.CountRequestBuilder;
 /** Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity. */
 public class CalendarViewRequestBuilder {
     /** The Count property */

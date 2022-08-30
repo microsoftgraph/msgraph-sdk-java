@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.item.ApprovalStageItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.StagesRequestBuilder;
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.item.ApprovalStageItemRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.accesspackageassignmentapprovals.item.stages.StagesRequestBuilder;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity. */
 public class ApprovalItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
      * @param id Unique identifier of the item
      * @return a ApprovalStageItemRequestBuilder
      */

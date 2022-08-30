@@ -1,5 +1,13 @@
-package microsoft.graph.directoryroles;
+package com.microsoft.graph.directoryroles;
 
+import com.microsoft.graph.directoryroles.count.CountRequestBuilder;
+import com.microsoft.graph.directoryroles.delta.DeltaRequestBuilder;
+import com.microsoft.graph.directoryroles.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.directoryroles.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.directoryroles.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectoryRole;
+import com.microsoft.graph.models.DirectoryRoleCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroles.count.CountRequestBuilder;
-import microsoft.graph.directoryroles.delta.DeltaRequestBuilder;
-import microsoft.graph.directoryroles.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.directoryroles.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.directoryroles.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectoryRole;
-import microsoft.graph.models.DirectoryRoleCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRolesRequestBuilder {
     /** The Count property */

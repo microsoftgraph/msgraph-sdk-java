@@ -1,5 +1,11 @@
-package microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item;
+package com.microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Term;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.children.ChildrenRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.relations.item.RelationItemRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.relations.RelationsRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.set.SetRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Term;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.children.ChildrenRequestBuilder;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.relations.item.RelationItemRequestBuilder;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.relations.RelationsRequestBuilder;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.terms.item.set.SetRequestBuilder;
 /** Provides operations to manage the terms property of the microsoft.graph.termStore.set entity. */
 public class TermItemRequestBuilder {
     /** The children property */
@@ -44,7 +44,7 @@ public class TermItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStore.groups.item.sets.item.terms.item.children.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStore.groups.item.sets.item.terms.item.children.item collection
      * @param id Unique identifier of the item
      * @return a TermItemRequestBuilder
      */
@@ -330,7 +330,7 @@ public class TermItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStore.groups.item.sets.item.terms.item.relations.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStore.groups.item.sets.item.terms.item.relations.item collection
      * @param id Unique identifier of the item
      * @return a RelationItemRequestBuilder
      */

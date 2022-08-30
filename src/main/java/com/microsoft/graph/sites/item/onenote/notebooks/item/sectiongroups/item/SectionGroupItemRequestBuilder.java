@@ -1,5 +1,12 @@
-package microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item;
+package com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SectionGroup;
+import com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.parentnotebook.ParentNotebookRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sectiongroups.SectionGroupsRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sections.SectionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SectionGroup;
-import microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.parentnotebook.ParentNotebookRequestBuilder;
-import microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
-import microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sectiongroups.SectionGroupsRequestBuilder;
-import microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
-import microsoft.graph.sites.item.onenote.notebooks.item.sectiongroups.item.sections.SectionsRequestBuilder;
 /** Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity. */
 public class SectionGroupItemRequestBuilder {
     /** The parentNotebook property */
@@ -324,7 +324,7 @@ public class SectionGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.onenote.notebooks.item.sectionGroups.item.sectionGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.notebooks.item.sectionGroups.item.sectionGroups.item collection
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -336,7 +336,7 @@ public class SectionGroupItemRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.onenote.notebooks.item.sectionGroups.item.sections.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.notebooks.item.sectionGroups.item.sections.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

@@ -1,5 +1,7 @@
-package microsoft.graph.auditlogs.provisioning.item;
+package com.microsoft.graph.auditlogs.provisioning.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProvisioningObjectSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProvisioningObjectSummary;
 /** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
 public class ProvisioningObjectSummaryItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,20 @@
-package microsoft.graph.teams.item.primarychannel;
+package com.microsoft.graph.teams.item.primarychannel;
 
+import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teams.item.primarychannel.completemigration.CompleteMigrationRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.members.MembersRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.messages.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.messages.MessagesRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.removeemail.RemoveEmailRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.tabs.item.TeamsTabItemRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.tabs.TabsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Channel;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teams.item.primarychannel.completemigration.CompleteMigrationRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.filesfolder.FilesFolderRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.members.MembersRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.messages.item.ChatMessageItemRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.messages.MessagesRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.removeemail.RemoveEmailRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.tabs.item.TeamsTabItemRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.tabs.TabsRequestBuilder;
 /** Provides operations to manage the primaryChannel property of the microsoft.graph.team entity. */
 public class PrimaryChannelRequestBuilder {
     /** The completeMigration property */
@@ -305,7 +305,7 @@ public class PrimaryChannelRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.primaryChannel.members.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -317,7 +317,7 @@ public class PrimaryChannelRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.primaryChannel.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.messages.item collection
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
@@ -384,7 +384,7 @@ public class PrimaryChannelRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.primaryChannel.sharedWithTeams.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.sharedWithTeams.item collection
      * @param id Unique identifier of the item
      * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
@@ -396,7 +396,7 @@ public class PrimaryChannelRequestBuilder {
         return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.primaryChannel.tabs.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.tabs.item collection
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */

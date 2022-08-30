@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.oauth2permissiongrants;
+package com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants;
 
+import com.microsoft.graph.models.OAuth2PermissionGrantCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.OAuth2PermissionGrantCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.oauth2permissiongrants.count.CountRequestBuilder;
 /** Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity. */
 public class Oauth2PermissionGrantsRequestBuilder {
     /** The Count property */

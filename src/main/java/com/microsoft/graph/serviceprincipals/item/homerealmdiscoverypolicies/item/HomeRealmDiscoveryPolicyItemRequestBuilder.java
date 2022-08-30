@@ -1,9 +1,9 @@
-package microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item;
+package com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item;
 
+import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id} */
 public class HomeRealmDiscoveryPolicyItemRequestBuilder {
     /** Path parameters for the request */

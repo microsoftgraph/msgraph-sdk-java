@@ -1,5 +1,6 @@
-package microsoft.graph.groups.item.threads.item.posts.item.reply;
+package com.microsoft.graph.groups.item.threads.item.posts.item.reply;
 
+import com.microsoft.graph.models.Post;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Post;
 /** Provides operations to call the reply method. */
 public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

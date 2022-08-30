@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.changepassword;
+package com.microsoft.graph.users.item.changepassword;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

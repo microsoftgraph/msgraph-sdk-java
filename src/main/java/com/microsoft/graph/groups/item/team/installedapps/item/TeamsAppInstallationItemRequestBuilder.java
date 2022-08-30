@@ -1,5 +1,10 @@
-package microsoft.graph.groups.item.team.installedapps.item;
+package com.microsoft.graph.groups.item.team.installedapps.item;
 
+import com.microsoft.graph.groups.item.team.installedapps.item.teamsapp.TeamsAppRequestBuilder;
+import com.microsoft.graph.groups.item.team.installedapps.item.teamsappdefinition.TeamsAppDefinitionRequestBuilder;
+import com.microsoft.graph.groups.item.team.installedapps.item.upgrade.UpgradeRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.installedapps.item.teamsapp.TeamsAppRequestBuilder;
-import microsoft.graph.groups.item.team.installedapps.item.teamsappdefinition.TeamsAppDefinitionRequestBuilder;
-import microsoft.graph.groups.item.team.installedapps.item.upgrade.UpgradeRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppInstallation;
 /** Provides operations to manage the installedApps property of the microsoft.graph.team entity. */
 public class TeamsAppInstallationItemRequestBuilder {
     /** Path parameters for the request */

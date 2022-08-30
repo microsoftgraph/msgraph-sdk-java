@@ -1,5 +1,9 @@
-package microsoft.graph.education.users.item.assignments.item.resources;
+package com.microsoft.graph.education.users.item.assignments.item.resources;
 
+import com.microsoft.graph.education.users.item.assignments.item.resources.count.CountRequestBuilder;
+import com.microsoft.graph.models.EducationAssignmentResource;
+import com.microsoft.graph.models.EducationAssignmentResourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.users.item.assignments.item.resources.count.CountRequestBuilder;
-import microsoft.graph.models.EducationAssignmentResource;
-import microsoft.graph.models.EducationAssignmentResourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity. */
 public class ResourcesRequestBuilder {
     /** The Count property */

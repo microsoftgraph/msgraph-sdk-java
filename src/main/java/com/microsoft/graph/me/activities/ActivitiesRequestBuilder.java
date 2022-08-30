@@ -1,5 +1,10 @@
-package microsoft.graph.me.activities;
+package com.microsoft.graph.me.activities;
 
+import com.microsoft.graph.me.activities.count.CountRequestBuilder;
+import com.microsoft.graph.me.activities.recent.RecentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserActivity;
+import com.microsoft.graph.models.UserActivityCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.activities.count.CountRequestBuilder;
-import microsoft.graph.me.activities.recent.RecentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserActivity;
-import microsoft.graph.models.UserActivityCollectionResponse;
 /** Provides operations to manage the activities property of the microsoft.graph.user entity. */
 public class ActivitiesRequestBuilder {
     /** The Count property */

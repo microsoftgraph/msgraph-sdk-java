@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.drives.item.root.thumbnails;
+package com.microsoft.graph.groups.item.drives.item.root.thumbnails;
 
+import com.microsoft.graph.groups.item.drives.item.root.thumbnails.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ThumbnailSet;
+import com.microsoft.graph.models.ThumbnailSetCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.drives.item.root.thumbnails.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ThumbnailSet;
-import microsoft.graph.models.ThumbnailSetCollectionResponse;
 /** Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity. */
 public class ThumbnailsRequestBuilder {
     /** The Count property */

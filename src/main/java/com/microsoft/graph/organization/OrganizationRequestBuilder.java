@@ -1,5 +1,12 @@
-package microsoft.graph.organization;
+package com.microsoft.graph.organization;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Organization;
+import com.microsoft.graph.models.OrganizationCollectionResponse;
+import com.microsoft.graph.organization.count.CountRequestBuilder;
+import com.microsoft.graph.organization.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.organization.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.organization.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Organization;
-import microsoft.graph.models.OrganizationCollectionResponse;
-import microsoft.graph.organization.count.CountRequestBuilder;
-import microsoft.graph.organization.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.organization.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.organization.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of organization entities. */
 public class OrganizationRequestBuilder {
     /** The Count property */

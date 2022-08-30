@@ -1,5 +1,9 @@
-package microsoft.graph.education.schools.item.classes;
+package com.microsoft.graph.education.schools.item.classes;
 
+import com.microsoft.graph.education.schools.item.classes.count.CountRequestBuilder;
+import com.microsoft.graph.education.schools.item.classes.ref.RefRequestBuilder;
+import com.microsoft.graph.models.EducationClassCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.schools.item.classes.count.CountRequestBuilder;
-import microsoft.graph.education.schools.item.classes.ref.RefRequestBuilder;
-import microsoft.graph.models.EducationClassCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the classes property of the microsoft.graph.educationSchool entity. */
 public class ClassesRequestBuilder {
     /** The Count property */

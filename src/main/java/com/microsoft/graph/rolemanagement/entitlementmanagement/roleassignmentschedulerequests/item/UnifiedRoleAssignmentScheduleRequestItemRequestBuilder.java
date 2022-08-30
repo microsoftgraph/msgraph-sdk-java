@@ -1,5 +1,14 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.activatedusing.ActivatedUsingRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.appscope.AppScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.directoryscope.DirectoryScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.principal.PrincipalRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.roledefinition.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.activatedusing.ActivatedUsingRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.appscope.AppScopeRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.cancel.CancelRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.directoryscope.DirectoryScopeRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.principal.PrincipalRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.roledefinition.RoleDefinitionRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.targetschedule.TargetScheduleRequestBuilder;
 /** Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder {
     /** The activatedUsing property */

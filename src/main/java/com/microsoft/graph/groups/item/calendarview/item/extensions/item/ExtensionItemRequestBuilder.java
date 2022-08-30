@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.calendarview.item.extensions.item;
+package com.microsoft.graph.groups.item.calendarview.item.extensions.item;
 
+import com.microsoft.graph.models.Extension;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Extension;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the extensions property of the microsoft.graph.event entity. */
 public class ExtensionItemRequestBuilder {
     /** Path parameters for the request */

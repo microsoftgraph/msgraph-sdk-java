@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.chats.item.messages;
+package com.microsoft.graph.users.item.chats.item.messages;
 
+import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.ChatMessageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.chats.item.messages.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.messages.delta.DeltaRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessage;
-import microsoft.graph.models.ChatMessageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.chats.item.messages.count.CountRequestBuilder;
-import microsoft.graph.users.item.chats.item.messages.delta.DeltaRequestBuilder;
 /** Provides operations to manage the messages property of the microsoft.graph.chat entity. */
 public class MessagesRequestBuilder {
     /** The Count property */

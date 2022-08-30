@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -15,6 +15,10 @@ public class DetectedApp extends Entity implements Parsable {
     private String _displayName;
     /** The devices that have the discovered application installed */
     private java.util.List<ManagedDevice> _managedDevices;
+    /** Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). */
+    private DetectedAppPlatformType _platform;
+    /** Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string. */
+    private String _publisher;
     /** Discovered application size in bytes. Read-only */
     private Long _sizeInByte;
     /** Version of the discovered application. Read-only */
@@ -64,6 +68,8 @@ public class DetectedApp extends Entity implements Parsable {
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DetectedAppPlatformType.class)); });
+            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
             this.put("sizeInByte", (n) -> { currentObject.setSizeInByte(n.getLongValue()); });
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
         }};
@@ -75,6 +81,22 @@ public class DetectedApp extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
         return this._managedDevices;
+    }
+    /**
+     * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     * @return a detectedAppPlatformType
+     */
+    @javax.annotation.Nullable
+    public DetectedAppPlatformType getPlatform() {
+        return this._platform;
+    }
+    /**
+     * Gets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getPublisher() {
+        return this._publisher;
     }
     /**
      * Gets the sizeInByte property value. Discovered application size in bytes. Read-only
@@ -103,6 +125,8 @@ public class DetectedApp extends Entity implements Parsable {
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
+        writer.writeEnumValue("platform", this.getPlatform());
+        writer.writeStringValue("publisher", this.getPublisher());
         writer.writeLongValue("sizeInByte", this.getSizeInByte());
         writer.writeStringValue("version", this.getVersion());
     }
@@ -129,6 +153,22 @@ public class DetectedApp extends Entity implements Parsable {
      */
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
+    }
+    /**
+     * Sets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     * @param value Value to set for the platform property.
+     * @return a void
+     */
+    public void setPlatform(@javax.annotation.Nullable final DetectedAppPlatformType value) {
+        this._platform = value;
+    }
+    /**
+     * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     * @param value Value to set for the publisher property.
+     * @return a void
+     */
+    public void setPublisher(@javax.annotation.Nullable final String value) {
+        this._publisher = value;
     }
     /**
      * Sets the sizeInByte property value. Discovered application size in bytes. Read-only

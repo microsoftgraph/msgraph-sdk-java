@@ -1,5 +1,7 @@
-package microsoft.graph.identity.b2xuserflows.item.userattributeassignments.getorder;
+package com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.getorder;
 
+import com.microsoft.graph.models.AssignmentOrder;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AssignmentOrder;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getOrder method. */
 public class GetOrderRequestBuilder {
     /** Path parameters for the request */

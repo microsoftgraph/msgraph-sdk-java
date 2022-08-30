@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.sites.item.onenote.pages.item.parentsection;
+package com.microsoft.graph.groups.item.sites.item.onenote.pages.item.parentsection;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteSection;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteSection;
 /** Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity. */
 public class ParentSectionRequestBuilder {
     /** Path parameters for the request */

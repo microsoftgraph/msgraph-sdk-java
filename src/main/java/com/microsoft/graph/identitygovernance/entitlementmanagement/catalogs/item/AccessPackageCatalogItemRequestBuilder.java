@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.AccessPackageItemRequestBuilder;
+import com.microsoft.graph.models.AccessPackageCatalog;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.AccessPackagesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.AccessPackageItemRequestBuilder;
-import microsoft.graph.models.AccessPackageCatalog;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageCatalogItemRequestBuilder {
     /** The accessPackages property */
@@ -32,7 +32,7 @@ public class AccessPackageCatalogItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */

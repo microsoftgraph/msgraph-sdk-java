@@ -1,4 +1,4 @@
-package microsoft.graph.me.drives.item.items.item.validatepermission;
+package com.microsoft.graph.me.drives.item.items.item.validatepermission;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

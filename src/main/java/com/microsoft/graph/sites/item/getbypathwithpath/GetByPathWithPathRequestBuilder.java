@@ -1,5 +1,7 @@
-package microsoft.graph.sites.item.getbypathwithpath;
+package com.microsoft.graph.sites.item.getbypathwithpath;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Site;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Site;
 /** Provides operations to call the getByPath method. */
 public class GetByPathWithPathRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,7 @@
-package microsoft.graph.contacts.item.manager;
+package com.microsoft.graph.contacts.item.manager;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the manager property of the microsoft.graph.orgContact entity. */
 public class ManagerRequestBuilder {
     /** Path parameters for the request */

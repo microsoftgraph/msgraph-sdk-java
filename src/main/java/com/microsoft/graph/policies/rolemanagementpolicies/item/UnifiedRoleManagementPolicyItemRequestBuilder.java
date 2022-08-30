@@ -1,5 +1,9 @@
-package microsoft.graph.policies.rolemanagementpolicies.item;
+package com.microsoft.graph.policies.rolemanagementpolicies.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.EffectiveRulesRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.RulesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleManagementPolicy;
-import microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.EffectiveRulesRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicies.item.rules.RulesRequestBuilder;
 /** Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity. */
 public class UnifiedRoleManagementPolicyItemRequestBuilder {
     /** The effectiveRules property */
@@ -205,16 +205,16 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item.effectiveRules.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item.effectiveRules.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder effectiveRules(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder effectiveRules(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleManagementPolicyRule%2Did", id);
-        return new microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Specifies the various policies associated with scopes and roles.
@@ -323,16 +323,16 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item.rules.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item.rules.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder rules(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder rules(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("unifiedRoleManagementPolicyRule%2Did", id);
-        return new microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class UnifiedRoleManagementPolicyItemRequestBuilderDeleteRequestConfiguration {

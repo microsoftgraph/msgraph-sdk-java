@@ -1,5 +1,36 @@
-package microsoft.graph.drives.item.root;
+package com.microsoft.graph.drives.item.root;
 
+import com.microsoft.graph.drives.item.root.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.drives.item.root.checkin.CheckinRequestBuilder;
+import com.microsoft.graph.drives.item.root.checkout.CheckoutRequestBuilder;
+import com.microsoft.graph.drives.item.root.children.ChildrenRequestBuilder;
+import com.microsoft.graph.drives.item.root.children.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.content.ContentRequestBuilder;
+import com.microsoft.graph.drives.item.root.copy.CopyRequestBuilder;
+import com.microsoft.graph.drives.item.root.createlink.CreateLinkRequestBuilder;
+import com.microsoft.graph.drives.item.root.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.drives.item.root.delta.DeltaRequestBuilder;
+import com.microsoft.graph.drives.item.root.deltawithtoken.DeltaWithTokenRequestBuilder;
+import com.microsoft.graph.drives.item.root.follow.FollowRequestBuilder;
+import com.microsoft.graph.drives.item.root.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import com.microsoft.graph.drives.item.root.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.drives.item.root.invite.InviteRequestBuilder;
+import com.microsoft.graph.drives.item.root.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.permissions.item.PermissionItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.drives.item.root.preview.PreviewRequestBuilder;
+import com.microsoft.graph.drives.item.root.restore.RestoreRequestBuilder;
+import com.microsoft.graph.drives.item.root.searchwithq.SearchWithQRequestBuilder;
+import com.microsoft.graph.drives.item.root.subscriptions.item.SubscriptionItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.drives.item.root.thumbnails.item.ThumbnailSetItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.thumbnails.ThumbnailsRequestBuilder;
+import com.microsoft.graph.drives.item.root.unfollow.UnfollowRequestBuilder;
+import com.microsoft.graph.drives.item.root.validatepermission.ValidatePermissionRequestBuilder;
+import com.microsoft.graph.drives.item.root.versions.item.DriveItemVersionItemRequestBuilder;
+import com.microsoft.graph.drives.item.root.versions.VersionsRequestBuilder;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,37 +45,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drives.item.root.analytics.AnalyticsRequestBuilder;
-import microsoft.graph.drives.item.root.checkin.CheckinRequestBuilder;
-import microsoft.graph.drives.item.root.checkout.CheckoutRequestBuilder;
-import microsoft.graph.drives.item.root.children.ChildrenRequestBuilder;
-import microsoft.graph.drives.item.root.children.item.DriveItemItemRequestBuilder;
-import microsoft.graph.drives.item.root.content.ContentRequestBuilder;
-import microsoft.graph.drives.item.root.copy.CopyRequestBuilder;
-import microsoft.graph.drives.item.root.createlink.CreateLinkRequestBuilder;
-import microsoft.graph.drives.item.root.createuploadsession.CreateUploadSessionRequestBuilder;
-import microsoft.graph.drives.item.root.delta.DeltaRequestBuilder;
-import microsoft.graph.drives.item.root.deltawithtoken.DeltaWithTokenRequestBuilder;
-import microsoft.graph.drives.item.root.follow.FollowRequestBuilder;
-import microsoft.graph.drives.item.root.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import microsoft.graph.drives.item.root.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import microsoft.graph.drives.item.root.invite.InviteRequestBuilder;
-import microsoft.graph.drives.item.root.listitem.ListItemRequestBuilder;
-import microsoft.graph.drives.item.root.permissions.item.PermissionItemRequestBuilder;
-import microsoft.graph.drives.item.root.permissions.PermissionsRequestBuilder;
-import microsoft.graph.drives.item.root.preview.PreviewRequestBuilder;
-import microsoft.graph.drives.item.root.restore.RestoreRequestBuilder;
-import microsoft.graph.drives.item.root.searchwithq.SearchWithQRequestBuilder;
-import microsoft.graph.drives.item.root.subscriptions.item.SubscriptionItemRequestBuilder;
-import microsoft.graph.drives.item.root.subscriptions.SubscriptionsRequestBuilder;
-import microsoft.graph.drives.item.root.thumbnails.item.ThumbnailSetItemRequestBuilder;
-import microsoft.graph.drives.item.root.thumbnails.ThumbnailsRequestBuilder;
-import microsoft.graph.drives.item.root.unfollow.UnfollowRequestBuilder;
-import microsoft.graph.drives.item.root.validatepermission.ValidatePermissionRequestBuilder;
-import microsoft.graph.drives.item.root.versions.item.DriveItemVersionItemRequestBuilder;
-import microsoft.graph.drives.item.root.versions.VersionsRequestBuilder;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the root property of the microsoft.graph.drive entity. */
 public class RootRequestBuilder {
     /** The analytics property */
@@ -149,7 +149,7 @@ public class RootRequestBuilder {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item.root.children.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item.root.children.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -475,7 +475,7 @@ public class RootRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item.root.permissions.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item.root.permissions.item collection
      * @param id Unique identifier of the item
      * @return a PermissionItemRequestBuilder
      */
@@ -497,7 +497,7 @@ public class RootRequestBuilder {
         return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item.root.subscriptions.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item.root.subscriptions.item collection
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */
@@ -509,7 +509,7 @@ public class RootRequestBuilder {
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item.root.thumbnails.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item.root.thumbnails.item collection
      * @param id Unique identifier of the item
      * @return a ThumbnailSetItemRequestBuilder
      */
@@ -521,7 +521,7 @@ public class RootRequestBuilder {
         return new ThumbnailSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drives.item.root.versions.item collection
+     * Gets an item from the com.Microsoft.Graph.drives.item.root.versions.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemVersionItemRequestBuilder
      */

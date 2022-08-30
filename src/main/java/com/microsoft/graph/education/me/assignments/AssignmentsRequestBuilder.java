@@ -1,5 +1,10 @@
-package microsoft.graph.education.me.assignments;
+package com.microsoft.graph.education.me.assignments;
 
+import com.microsoft.graph.education.me.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.education.me.assignments.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.EducationAssignment;
+import com.microsoft.graph.models.EducationAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.me.assignments.count.CountRequestBuilder;
-import microsoft.graph.education.me.assignments.delta.DeltaRequestBuilder;
-import microsoft.graph.models.EducationAssignment;
-import microsoft.graph.models.EducationAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.educationUser entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

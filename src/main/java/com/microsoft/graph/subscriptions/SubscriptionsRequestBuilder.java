@@ -1,5 +1,8 @@
-package microsoft.graph.subscriptions;
+package com.microsoft.graph.subscriptions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Subscription;
+import com.microsoft.graph.models.SubscriptionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Subscription;
-import microsoft.graph.models.SubscriptionCollectionResponse;
 /** Provides operations to manage the collection of subscription entities. */
 public class SubscriptionsRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,8 @@
-package microsoft.graph.shares.item.items.item;
+package com.microsoft.graph.shares.item.items.item;
 
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.shares.item.items.item.content.ContentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.shares.item.items.item.content.ContentRequestBuilder;
 /** Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity. */
 public class DriveItemItemRequestBuilder {
     /** The content property */

@@ -1,5 +1,10 @@
-package microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item;
+package com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item;
 
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.apps.AppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.apps.item.ManagedMobileAppItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
+import com.microsoft.graph.models.DefaultManagedAppProtection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.apps.AppsRequestBuilder;
-import microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.apps.item.ManagedMobileAppItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
-import microsoft.graph.models.DefaultManagedAppProtection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
 public class DefaultManagedAppProtectionItemRequestBuilder {
     /** The apps property */
@@ -38,7 +38,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item.apps.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item.apps.item collection
      * @param id Unique identifier of the item
      * @return a ManagedMobileAppItemRequestBuilder
      */

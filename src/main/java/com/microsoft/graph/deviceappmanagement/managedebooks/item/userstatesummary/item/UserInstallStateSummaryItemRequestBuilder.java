@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item;
+package com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item;
 
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.DeviceStatesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserInstallStateSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.DeviceStatesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserInstallStateSummary;
 /** Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity. */
 public class UserInstallStateSummaryItemRequestBuilder {
     /** The deviceStates property */
@@ -200,7 +200,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceInstallStateItemRequestBuilder
      */

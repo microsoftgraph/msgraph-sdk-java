@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.models.AccessPackageAssignmentRequest;
+import com.microsoft.graph.models.AccessPackageAssignmentRequestCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.models.AccessPackageAssignmentRequest;
-import microsoft.graph.models.AccessPackageAssignmentRequestCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity. */
 public class AssignmentRequestsRequestBuilder {
     /** The Count property */

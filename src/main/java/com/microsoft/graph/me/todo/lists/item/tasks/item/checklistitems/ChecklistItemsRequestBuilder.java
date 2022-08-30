@@ -1,5 +1,9 @@
-package microsoft.graph.me.todo.lists.item.tasks.item.checklistitems;
+package com.microsoft.graph.me.todo.lists.item.tasks.item.checklistitems;
 
+import com.microsoft.graph.me.todo.lists.item.tasks.item.checklistitems.count.CountRequestBuilder;
+import com.microsoft.graph.models.ChecklistItem;
+import com.microsoft.graph.models.ChecklistItemCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.todo.lists.item.tasks.item.checklistitems.count.CountRequestBuilder;
-import microsoft.graph.models.ChecklistItem;
-import microsoft.graph.models.ChecklistItemCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity. */
 public class ChecklistItemsRequestBuilder {
     /** The Count property */

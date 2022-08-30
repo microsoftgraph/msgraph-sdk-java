@@ -1,5 +1,8 @@
-package microsoft.graph.me.settings;
+package com.microsoft.graph.me.settings;
 
+import com.microsoft.graph.me.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserSettings;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserSettings;
 /** Provides operations to manage the settings property of the microsoft.graph.user entity. */
 public class SettingsRequestBuilder {
     /** Path parameters for the request */

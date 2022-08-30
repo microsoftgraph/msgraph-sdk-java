@@ -1,4 +1,4 @@
-package microsoft.graph.applications.item.setverifiedpublisher;
+package com.microsoft.graph.applications.item.setverifiedpublisher;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

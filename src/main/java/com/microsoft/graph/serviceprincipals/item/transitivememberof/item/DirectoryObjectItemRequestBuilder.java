@@ -1,5 +1,13 @@
-package microsoft.graph.serviceprincipals.item.transitivememberof.item;
+package com.microsoft.graph.serviceprincipals.item.transitivememberof.item;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.group.GroupRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.item.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.application.ApplicationRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.device.DeviceRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.group.GroupRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.user.UserRequestBuilder;
 /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

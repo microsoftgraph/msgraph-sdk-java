@@ -1,9 +1,9 @@
-package microsoft.graph.applications.item.tokenissuancepolicies.item;
+package com.microsoft.graph.applications.item.tokenissuancepolicies.item;
 
+import com.microsoft.graph.applications.item.tokenissuancepolicies.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.applications.item.tokenissuancepolicies.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /applications/{application-id}/tokenIssuancePolicies/{tokenIssuancePolicy-id} */
 public class TokenIssuancePolicyItemRequestBuilder {
     /** Path parameters for the request */

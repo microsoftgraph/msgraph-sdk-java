@@ -1,5 +1,7 @@
-package microsoft.graph.chats.item.installedapps.item.teamsappdefinition;
+package com.microsoft.graph.chats.item.installedapps.item.teamsappdefinition;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppDefinition;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppDefinition;
 /** Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity. */
 public class TeamsAppDefinitionRequestBuilder {
     /** Path parameters for the request */

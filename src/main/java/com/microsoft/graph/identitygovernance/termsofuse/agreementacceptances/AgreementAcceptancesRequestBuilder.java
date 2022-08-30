@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.termsofuse.agreementacceptances;
+package com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances;
 
+import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.count.CountRequestBuilder;
+import com.microsoft.graph.models.AgreementAcceptance;
+import com.microsoft.graph.models.AgreementAcceptanceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.termsofuse.agreementacceptances.count.CountRequestBuilder;
-import microsoft.graph.models.AgreementAcceptance;
-import microsoft.graph.models.AgreementAcceptanceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity. */
 public class AgreementAcceptancesRequestBuilder {
     /** The Count property */

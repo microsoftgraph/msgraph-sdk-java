@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.owners.approleassignment;
+package com.microsoft.graph.serviceprincipals.item.owners.approleassignment;
 
+import com.microsoft.graph.models.AppRoleAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.owners.approleassignment.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppRoleAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.owners.approleassignment.count.CountRequestBuilder;
 /** Casts the previous resource to appRoleAssignment. */
 public class AppRoleAssignmentRequestBuilder {
     /** The Count property */

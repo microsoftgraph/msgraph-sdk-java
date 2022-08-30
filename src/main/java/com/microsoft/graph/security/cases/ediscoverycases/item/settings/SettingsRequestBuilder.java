@@ -1,5 +1,8 @@
-package microsoft.graph.security.cases.ediscoverycases.item.settings;
+package com.microsoft.graph.security.cases.ediscoverycases.item.settings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryCaseSettings;
+import com.microsoft.graph.security.cases.ediscoverycases.item.settings.resettodefault.ResetToDefaultRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryCaseSettings;
-import microsoft.graph.security.cases.ediscoverycases.item.settings.resettodefault.ResetToDefaultRequestBuilder;
 /** Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity. */
 public class SettingsRequestBuilder {
     /** Path parameters for the request */

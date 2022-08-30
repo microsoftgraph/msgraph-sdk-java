@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.DecisionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.stop.StopRequestBuilder;
+import com.microsoft.graph.models.AccessReviewStage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.DecisionsRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.stop.StopRequestBuilder;
-import microsoft.graph.models.AccessReviewStage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity. */
 public class AccessReviewStageItemRequestBuilder {
     /** The decisions property */
@@ -155,7 +155,7 @@ public class AccessReviewStageItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item collection
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */

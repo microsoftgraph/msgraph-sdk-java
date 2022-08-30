@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.devicemanagementtroubleshootingevents;
+package com.microsoft.graph.users.item.devicemanagementtroubleshootingevents;
 
+import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
+import com.microsoft.graph.models.DeviceManagementTroubleshootingEventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import microsoft.graph.models.DeviceManagementTroubleshootingEventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.devicemanagementtroubleshootingevents.count.CountRequestBuilder;
 /** Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity. */
 public class DeviceManagementTroubleshootingEventsRequestBuilder {
     /** The Count property */

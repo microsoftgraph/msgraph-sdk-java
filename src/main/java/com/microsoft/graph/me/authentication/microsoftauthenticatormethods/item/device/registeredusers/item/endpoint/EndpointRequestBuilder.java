@@ -1,5 +1,7 @@
-package microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.endpoint;
+package com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.endpoint;
 
+import com.microsoft.graph.models.Endpoint;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Endpoint;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to endpoint. */
 public class EndpointRequestBuilder {
     /** Path parameters for the request */

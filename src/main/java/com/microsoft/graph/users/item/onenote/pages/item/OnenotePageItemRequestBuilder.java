@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.onenote.pages.item;
+package com.microsoft.graph.users.item.onenote.pages.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenotePage;
+import com.microsoft.graph.users.item.onenote.pages.item.content.ContentRequestBuilder;
+import com.microsoft.graph.users.item.onenote.pages.item.copytosection.CopyToSectionRequestBuilder;
+import com.microsoft.graph.users.item.onenote.pages.item.onenotepatchcontent.OnenotePatchContentRequestBuilder;
+import com.microsoft.graph.users.item.onenote.pages.item.parentnotebook.ParentNotebookRequestBuilder;
+import com.microsoft.graph.users.item.onenote.pages.item.parentsection.ParentSectionRequestBuilder;
+import com.microsoft.graph.users.item.onenote.pages.item.preview.PreviewRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenotePage;
-import microsoft.graph.users.item.onenote.pages.item.content.ContentRequestBuilder;
-import microsoft.graph.users.item.onenote.pages.item.copytosection.CopyToSectionRequestBuilder;
-import microsoft.graph.users.item.onenote.pages.item.onenotepatchcontent.OnenotePatchContentRequestBuilder;
-import microsoft.graph.users.item.onenote.pages.item.parentnotebook.ParentNotebookRequestBuilder;
-import microsoft.graph.users.item.onenote.pages.item.parentsection.ParentSectionRequestBuilder;
-import microsoft.graph.users.item.onenote.pages.item.preview.PreviewRequestBuilder;
 /** Provides operations to manage the pages property of the microsoft.graph.onenote entity. */
 public class OnenotePageItemRequestBuilder {
     /** The content property */

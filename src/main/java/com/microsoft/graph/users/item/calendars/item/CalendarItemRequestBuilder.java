@@ -1,5 +1,17 @@
-package microsoft.graph.users.item.calendars.item;
+package com.microsoft.graph.users.item.calendars.item;
 
+import com.microsoft.graph.models.Calendar;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.calendars.item.allowedcalendarsharingroleswithuser.AllowedCalendarSharingRolesWithUserRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.calendarpermissions.CalendarPermissionsRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.events.EventsRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.getschedule.GetScheduleRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Calendar;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.calendars.item.allowedcalendarsharingroleswithuser.AllowedCalendarSharingRolesWithUserRequestBuilder;
-import microsoft.graph.users.item.calendars.item.calendarpermissions.CalendarPermissionsRequestBuilder;
-import microsoft.graph.users.item.calendars.item.calendarpermissions.item.CalendarPermissionItemRequestBuilder;
-import microsoft.graph.users.item.calendars.item.calendarview.CalendarViewRequestBuilder;
-import microsoft.graph.users.item.calendars.item.events.EventsRequestBuilder;
-import microsoft.graph.users.item.calendars.item.getschedule.GetScheduleRequestBuilder;
-import microsoft.graph.users.item.calendars.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.calendars.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.users.item.calendars.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.calendars.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 /** Provides operations to manage the calendars property of the microsoft.graph.user entity. */
 public class CalendarItemRequestBuilder {
     /** The calendarPermissions property */
@@ -75,7 +75,7 @@ public class CalendarItemRequestBuilder {
         return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item.calendarPermissions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item.calendarPermissions.item collection
      * @param id Unique identifier of the item
      * @return a CalendarPermissionItemRequestBuilder
      */
@@ -87,16 +87,16 @@ public class CalendarItemRequestBuilder {
         return new CalendarPermissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item.calendarView.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item.calendarView.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.calendars.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.calendars.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
-        return new microsoft.graph.users.item.calendars.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.calendars.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
@@ -267,16 +267,16 @@ public class CalendarItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item.events.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item.events.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.calendars.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.calendars.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
-        return new microsoft.graph.users.item.calendars.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.calendars.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The user's calendars. Read-only. Nullable.
@@ -330,7 +330,7 @@ public class CalendarItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -397,7 +397,7 @@ public class CalendarItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.solutions.bookingbusinesses.item.staffmembers;
+package com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers;
 
+import com.microsoft.graph.models.BookingStaffMemberBase;
+import com.microsoft.graph.models.BookingStaffMemberBaseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingStaffMemberBase;
-import microsoft.graph.models.BookingStaffMemberBaseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingbusinesses.item.staffmembers.count.CountRequestBuilder;
 /** Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity. */
 public class StaffMembersRequestBuilder {
     /** The Count property */

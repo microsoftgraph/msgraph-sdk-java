@@ -1,5 +1,18 @@
-package microsoft.graph.groups.item.sites.item.lists.item;
+package com.microsoft.graph.groups.item.sites.item.lists.item;
 
+import com.microsoft.graph.groups.item.sites.item.lists.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.columns.item.ColumnDefinitionItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.ContentTypesRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.ContentTypeItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.drive.DriveRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.ListItemItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.operations.item.RichLongRunningOperationItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.subscriptions.item.SubscriptionItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.lists.item.columns.ColumnsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.columns.item.ColumnDefinitionItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.contenttypes.ContentTypesRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.ContentTypeItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.drive.DriveRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.items.item.ListItemItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.items.ItemsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.operations.item.RichLongRunningOperationItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.operations.OperationsRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.subscriptions.item.SubscriptionItemRequestBuilder;
-import microsoft.graph.groups.item.sites.item.lists.item.subscriptions.SubscriptionsRequestBuilder;
-import microsoft.graph.models.List;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the lists property of the microsoft.graph.site entity. */
 public class ListItemRequestBuilder {
     /** The columns property */
@@ -66,7 +66,7 @@ public class ListItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.columns.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.lists.item.columns.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
@@ -105,7 +105,7 @@ public class ListItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.lists.item.contentTypes.item collection
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -309,7 +309,7 @@ public class ListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.lists.item.items.item collection
      * @param id Unique identifier of the item
      * @return a ListItemItemRequestBuilder
      */
@@ -321,7 +321,7 @@ public class ListItemRequestBuilder {
         return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.lists.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a RichLongRunningOperationItemRequestBuilder
      */
@@ -388,7 +388,7 @@ public class ListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.sites.item.lists.item.subscriptions.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.lists.item.subscriptions.item collection
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */

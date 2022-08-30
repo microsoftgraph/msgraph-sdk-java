@@ -1,5 +1,7 @@
-package microsoft.graph.identity.conditionalaccess.namedlocations.item;
+package com.microsoft.graph.identity.conditionalaccess.namedlocations.item;
 
+import com.microsoft.graph.models.NamedLocation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.NamedLocation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity. */
 public class NamedLocationItemRequestBuilder {
     /** Path parameters for the request */

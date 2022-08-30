@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.team.schedule.timeoffreasons;
+package com.microsoft.graph.groups.item.team.schedule.timeoffreasons;
 
+import com.microsoft.graph.groups.item.team.schedule.timeoffreasons.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TimeOffReason;
+import com.microsoft.graph.models.TimeOffReasonCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.schedule.timeoffreasons.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TimeOffReason;
-import microsoft.graph.models.TimeOffReasonCollectionResponse;
 /** Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity. */
 public class TimeOffReasonsRequestBuilder {
     /** The Count property */

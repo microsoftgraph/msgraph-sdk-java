@@ -1,4 +1,4 @@
-package microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.checkmemberobjects;
+package com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

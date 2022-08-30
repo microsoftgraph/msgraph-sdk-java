@@ -1,5 +1,12 @@
-package microsoft.graph.planner.plans.item;
+package com.microsoft.graph.planner.plans.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerPlan;
+import com.microsoft.graph.planner.plans.item.buckets.BucketsRequestBuilder;
+import com.microsoft.graph.planner.plans.item.buckets.item.PlannerBucketItemRequestBuilder;
+import com.microsoft.graph.planner.plans.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.planner.plans.item.tasks.item.PlannerTaskItemRequestBuilder;
+import com.microsoft.graph.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerPlan;
-import microsoft.graph.planner.plans.item.buckets.BucketsRequestBuilder;
-import microsoft.graph.planner.plans.item.buckets.item.PlannerBucketItemRequestBuilder;
-import microsoft.graph.planner.plans.item.details.DetailsRequestBuilder;
-import microsoft.graph.planner.plans.item.tasks.item.PlannerTaskItemRequestBuilder;
-import microsoft.graph.planner.plans.item.tasks.TasksRequestBuilder;
 /** Provides operations to manage the plans property of the microsoft.graph.planner entity. */
 public class PlannerPlanItemRequestBuilder {
     /** The buckets property */
@@ -45,7 +45,7 @@ public class PlannerPlanItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.planner.plans.item.buckets.item collection
+     * Gets an item from the com.Microsoft.Graph.planner.plans.item.buckets.item collection
      * @param id Unique identifier of the item
      * @return a PlannerBucketItemRequestBuilder
      */
@@ -331,7 +331,7 @@ public class PlannerPlanItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.planner.plans.item.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.planner.plans.item.tasks.item collection
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

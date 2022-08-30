@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.conversations.item.threads.item.posts;
+package com.microsoft.graph.groups.item.conversations.item.threads.item.posts;
 
+import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Post;
+import com.microsoft.graph.models.PostCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.conversations.item.threads.item.posts.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Post;
-import microsoft.graph.models.PostCollectionResponse;
 /** Provides operations to manage the posts property of the microsoft.graph.conversationThread entity. */
 public class PostsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.applications.item.tokenlifetimepolicies;
+package com.microsoft.graph.applications.item.tokenlifetimepolicies;
 
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.ref.RefRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.tokenlifetimepolicies.count.CountRequestBuilder;
-import microsoft.graph.applications.item.tokenlifetimepolicies.ref.RefRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TokenLifetimePolicyCollectionResponse;
 /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity. */
 public class TokenLifetimePoliciesRequestBuilder {
     /** The Count property */

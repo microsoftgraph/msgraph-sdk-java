@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroletemplates.item.checkmemberobjects;
+package com.microsoft.graph.directoryroletemplates.item.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

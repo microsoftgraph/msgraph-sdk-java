@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.catalog;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.item.catalog;
 
+import com.microsoft.graph.models.AccessPackageCatalog;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessPackageCatalog;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the catalog property of the microsoft.graph.accessPackage entity. */
 public class CatalogRequestBuilder {
     /** Path parameters for the request */

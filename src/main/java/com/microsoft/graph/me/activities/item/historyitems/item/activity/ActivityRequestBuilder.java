@@ -1,5 +1,7 @@
-package microsoft.graph.me.activities.item.historyitems.item.activity;
+package com.microsoft.graph.me.activities.item.historyitems.item.activity;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserActivity;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserActivity;
 /** Provides operations to manage the activity property of the microsoft.graph.activityHistoryItem entity. */
 public class ActivityRequestBuilder {
     /** Path parameters for the request */

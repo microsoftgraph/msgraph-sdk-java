@@ -1,5 +1,9 @@
-package microsoft.graph.policies.featurerolloutpolicies.item;
+package com.microsoft.graph.policies.featurerolloutpolicies.item;
 
+import com.microsoft.graph.models.FeatureRolloutPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.featurerolloutpolicies.item.appliesto.AppliesToRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.item.appliesto.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.FeatureRolloutPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.AppliesToRequestBuilder;
-import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.item.DirectoryObjectItemRequestBuilder;
 /** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
 public class FeatureRolloutPolicyItemRequestBuilder {
     /** The appliesTo property */
@@ -32,7 +32,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

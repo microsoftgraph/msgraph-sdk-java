@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.remoteassistancepartners;
+package com.microsoft.graph.devicemanagement.remoteassistancepartners;
 
+import com.microsoft.graph.devicemanagement.remoteassistancepartners.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RemoteAssistancePartner;
+import com.microsoft.graph.models.RemoteAssistancePartnerCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.remoteassistancepartners.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RemoteAssistancePartner;
-import microsoft.graph.models.RemoteAssistancePartnerCollectionResponse;
 /** Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity. */
 public class RemoteAssistancePartnersRequestBuilder {
     /** The Count property */

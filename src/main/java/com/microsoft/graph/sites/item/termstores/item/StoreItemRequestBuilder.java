@@ -1,5 +1,11 @@
-package microsoft.graph.sites.item.termstores.item;
+package com.microsoft.graph.sites.item.termstores.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Store;
+import com.microsoft.graph.sites.item.termstores.item.groups.GroupsRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.item.groups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.item.sets.item.SetItemRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.item.sets.SetsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Store;
-import microsoft.graph.sites.item.termstores.item.groups.GroupsRequestBuilder;
-import microsoft.graph.sites.item.termstores.item.groups.item.GroupItemRequestBuilder;
-import microsoft.graph.sites.item.termstores.item.sets.item.SetItemRequestBuilder;
-import microsoft.graph.sites.item.termstores.item.sets.SetsRequestBuilder;
 /** Provides operations to manage the termStores property of the microsoft.graph.site entity. */
 public class StoreItemRequestBuilder {
     /** The groups property */
@@ -258,7 +258,7 @@ public class StoreItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStores.item.groups.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item.groups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class StoreItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStores.item.sets.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item.sets.item collection
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

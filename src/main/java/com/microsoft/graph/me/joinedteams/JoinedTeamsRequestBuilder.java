@@ -1,5 +1,10 @@
-package microsoft.graph.me.joinedteams;
+package com.microsoft.graph.me.joinedteams;
 
+import com.microsoft.graph.me.joinedteams.count.CountRequestBuilder;
+import com.microsoft.graph.me.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Team;
+import com.microsoft.graph.models.TeamCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.joinedteams.count.CountRequestBuilder;
-import microsoft.graph.me.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Team;
-import microsoft.graph.models.TeamCollectionResponse;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class JoinedTeamsRequestBuilder {
     /** The Count property */

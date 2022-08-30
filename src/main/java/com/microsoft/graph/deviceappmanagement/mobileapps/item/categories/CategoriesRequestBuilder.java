@@ -1,5 +1,8 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item.categories;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item.categories;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.count.CountRequestBuilder;
+import com.microsoft.graph.models.MobileAppCategoryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.categories.count.CountRequestBuilder;
-import microsoft.graph.models.MobileAppCategoryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the categories property of the microsoft.graph.mobileApp entity. */
 public class CategoriesRequestBuilder {
     /** The Count property */

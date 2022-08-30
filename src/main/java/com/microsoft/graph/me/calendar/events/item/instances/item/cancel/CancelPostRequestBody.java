@@ -1,4 +1,4 @@
-package microsoft.graph.me.calendar.events.item.instances.item.cancel;
+package com.microsoft.graph.me.calendar.events.item.instances.item.cancel;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.contacts.getbyids;
+package com.microsoft.graph.contacts.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

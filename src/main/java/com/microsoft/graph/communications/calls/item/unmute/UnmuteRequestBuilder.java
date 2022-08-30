@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.unmute;
+package com.microsoft.graph.communications.calls.item.unmute;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnmuteParticipantOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnmuteParticipantOperation;
 /** Provides operations to call the unmute method. */
 public class UnmuteRequestBuilder {
     /** Path parameters for the request */

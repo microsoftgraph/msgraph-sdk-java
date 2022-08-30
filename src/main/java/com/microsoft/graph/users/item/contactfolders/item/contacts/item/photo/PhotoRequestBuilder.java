@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.contactfolders.item.contacts.item.photo;
+package com.microsoft.graph.users.item.contactfolders.item.contacts.item.photo;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProfilePhoto;
+import com.microsoft.graph.users.item.contactfolders.item.contacts.item.photo.value.ContentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProfilePhoto;
-import microsoft.graph.users.item.contactfolders.item.contacts.item.photo.value.ContentRequestBuilder;
 /** Provides operations to manage the photo property of the microsoft.graph.contact entity. */
 public class PhotoRequestBuilder {
     /** The Content property */

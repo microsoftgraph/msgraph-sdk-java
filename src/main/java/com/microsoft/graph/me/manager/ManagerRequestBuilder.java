@@ -1,5 +1,8 @@
-package microsoft.graph.me.manager;
+package com.microsoft.graph.me.manager;
 
+import com.microsoft.graph.me.manager.ref.RefRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.manager.ref.RefRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the manager property of the microsoft.graph.user entity. */
 public class ManagerRequestBuilder {
     /** Path parameters for the request */

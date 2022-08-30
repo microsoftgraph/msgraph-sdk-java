@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.sectiongroups;
+package com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.sectiongroups;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SectionGroupCollectionResponse;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.sectiongroups.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SectionGroupCollectionResponse;
-import microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.sectiongroups.count.CountRequestBuilder;
 /** Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity. */
 public class SectionGroupsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.teamwork.installedapps.item;
+package com.microsoft.graph.users.item.teamwork.installedapps.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
+import com.microsoft.graph.users.item.teamwork.installedapps.item.chat.ChatRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserScopeTeamsAppInstallation;
-import microsoft.graph.users.item.teamwork.installedapps.item.chat.ChatRequestBuilder;
 /** Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity. */
 public class UserScopeTeamsAppInstallationItemRequestBuilder {
     /** The chat property */

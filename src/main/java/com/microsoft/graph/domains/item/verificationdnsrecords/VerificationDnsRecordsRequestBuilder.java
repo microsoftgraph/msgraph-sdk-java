@@ -1,5 +1,9 @@
-package microsoft.graph.domains.item.verificationdnsrecords;
+package com.microsoft.graph.domains.item.verificationdnsrecords;
 
+import com.microsoft.graph.domains.item.verificationdnsrecords.count.CountRequestBuilder;
+import com.microsoft.graph.models.DomainDnsRecord;
+import com.microsoft.graph.models.DomainDnsRecordCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.domains.item.verificationdnsrecords.count.CountRequestBuilder;
-import microsoft.graph.models.DomainDnsRecord;
-import microsoft.graph.models.DomainDnsRecordCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity. */
 public class VerificationDnsRecordsRequestBuilder {
     /** The Count property */

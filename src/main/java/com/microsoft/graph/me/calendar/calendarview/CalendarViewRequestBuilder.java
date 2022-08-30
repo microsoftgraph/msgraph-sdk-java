@@ -1,5 +1,10 @@
-package microsoft.graph.me.calendar.calendarview;
+package com.microsoft.graph.me.calendar.calendarview;
 
+import com.microsoft.graph.me.calendar.calendarview.count.CountRequestBuilder;
+import com.microsoft.graph.me.calendar.calendarview.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.Event;
+import com.microsoft.graph.models.EventCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.calendar.calendarview.count.CountRequestBuilder;
-import microsoft.graph.me.calendar.calendarview.delta.DeltaRequestBuilder;
-import microsoft.graph.models.Event;
-import microsoft.graph.models.EventCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendarView property of the microsoft.graph.calendar entity. */
 public class CalendarViewRequestBuilder {
     /** The Count property */

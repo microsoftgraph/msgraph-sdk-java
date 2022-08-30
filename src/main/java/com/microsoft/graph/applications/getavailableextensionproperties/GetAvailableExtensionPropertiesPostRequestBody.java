@@ -1,4 +1,4 @@
-package microsoft.graph.applications.getavailableextensionproperties;
+package com.microsoft.graph.applications.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

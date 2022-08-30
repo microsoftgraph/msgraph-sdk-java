@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.transfer;
+package com.microsoft.graph.communications.calls.item.transfer;
 
+import com.microsoft.graph.models.InvitationParticipantInfo;
+import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.InvitationParticipantInfo;
-import microsoft.graph.models.ParticipantInfo;
 /** Provides operations to call the transfer method. */
 public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

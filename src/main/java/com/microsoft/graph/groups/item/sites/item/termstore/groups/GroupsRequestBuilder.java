@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.sites.item.termstore.groups;
+package com.microsoft.graph.groups.item.sites.item.termstore.groups;
 
+import com.microsoft.graph.groups.item.sites.item.termstore.groups.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Group;
+import com.microsoft.graph.models.termstore.GroupCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.termstore.groups.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Group;
-import microsoft.graph.models.termstore.GroupCollectionResponse;
 /** Provides operations to manage the groups property of the microsoft.graph.termStore.store entity. */
 public class GroupsRequestBuilder {
     /** The Count property */

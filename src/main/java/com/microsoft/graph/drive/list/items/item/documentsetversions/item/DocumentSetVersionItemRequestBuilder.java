@@ -1,5 +1,8 @@
-package microsoft.graph.drive.list.items.item.documentsetversions.item;
+package com.microsoft.graph.drive.list.items.item.documentsetversions.item;
 
+import com.microsoft.graph.drive.list.items.item.documentsetversions.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.DocumentSetVersion;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.list.items.item.documentsetversions.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.DocumentSetVersion;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
 public class DocumentSetVersionItemRequestBuilder {
     /** Path parameters for the request */

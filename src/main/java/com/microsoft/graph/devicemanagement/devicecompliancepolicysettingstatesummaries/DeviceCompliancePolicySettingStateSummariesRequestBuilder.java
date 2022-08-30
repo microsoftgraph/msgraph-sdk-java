@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
+import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import microsoft.graph.models.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePolicySettingStateSummariesRequestBuilder {
     /** The Count property */

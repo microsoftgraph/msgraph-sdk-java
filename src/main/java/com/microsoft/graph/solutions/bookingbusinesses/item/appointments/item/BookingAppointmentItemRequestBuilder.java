@@ -1,5 +1,8 @@
-package microsoft.graph.solutions.bookingbusinesses.item.appointments.item;
+package com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item;
 
+import com.microsoft.graph.models.BookingAppointment;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.cancel.CancelRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingAppointment;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingbusinesses.item.appointments.item.cancel.CancelRequestBuilder;
 /** Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity. */
 public class BookingAppointmentItemRequestBuilder {
     /** The cancel property */

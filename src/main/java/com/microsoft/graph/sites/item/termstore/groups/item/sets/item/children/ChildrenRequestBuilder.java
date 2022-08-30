@@ -1,5 +1,9 @@
-package microsoft.graph.sites.item.termstore.groups.item.sets.item.children;
+package com.microsoft.graph.sites.item.termstore.groups.item.sets.item.children;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Term;
+import com.microsoft.graph.models.termstore.TermCollectionResponse;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.children.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Term;
-import microsoft.graph.models.termstore.TermCollectionResponse;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.children.count.CountRequestBuilder;
 /** Provides operations to manage the children property of the microsoft.graph.termStore.set entity. */
 public class ChildrenRequestBuilder {
     /** The Count property */

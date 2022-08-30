@@ -1,5 +1,9 @@
-package microsoft.graph.teams.item.schedule.openshifts;
+package com.microsoft.graph.teams.item.schedule.openshifts;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OpenShift;
+import com.microsoft.graph.models.OpenShiftCollectionResponse;
+import com.microsoft.graph.teams.item.schedule.openshifts.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OpenShift;
-import microsoft.graph.models.OpenShiftCollectionResponse;
-import microsoft.graph.teams.item.schedule.openshifts.count.CountRequestBuilder;
 /** Provides operations to manage the openShifts property of the microsoft.graph.schedule entity. */
 public class OpenShiftsRequestBuilder {
     /** The Count property */

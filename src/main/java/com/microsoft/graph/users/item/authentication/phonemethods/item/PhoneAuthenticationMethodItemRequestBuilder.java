@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.authentication.phonemethods.item;
+package com.microsoft.graph.users.item.authentication.phonemethods.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PhoneAuthenticationMethod;
+import com.microsoft.graph.users.item.authentication.phonemethods.item.disablesmssignin.DisableSmsSignInRequestBuilder;
+import com.microsoft.graph.users.item.authentication.phonemethods.item.enablesmssignin.EnableSmsSignInRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PhoneAuthenticationMethod;
-import microsoft.graph.users.item.authentication.phonemethods.item.disablesmssignin.DisableSmsSignInRequestBuilder;
-import microsoft.graph.users.item.authentication.phonemethods.item.enablesmssignin.EnableSmsSignInRequestBuilder;
 /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
 public class PhoneAuthenticationMethodItemRequestBuilder {
     /** The disableSmsSignIn property */

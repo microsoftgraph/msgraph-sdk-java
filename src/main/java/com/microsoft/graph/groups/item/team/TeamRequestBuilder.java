@@ -1,5 +1,26 @@
-package microsoft.graph.groups.item.team;
+package com.microsoft.graph.groups.item.team;
 
+import com.microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
+import com.microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
+import com.microsoft.graph.groups.item.team.group.GroupRequestBuilder;
+import com.microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.groups.item.team.installedapps.item.TeamsAppInstallationItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.members.MembersRequestBuilder;
+import com.microsoft.graph.groups.item.team.operations.item.TeamsAsyncOperationItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.operations.OperationsRequestBuilder;
+import com.microsoft.graph.groups.item.team.photo.PhotoRequestBuilder;
+import com.microsoft.graph.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
+import com.microsoft.graph.groups.item.team.schedule.ScheduleRequestBuilder;
+import com.microsoft.graph.groups.item.team.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.groups.item.team.template.TemplateRequestBuilder;
+import com.microsoft.graph.groups.item.team.unarchive.UnarchiveRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Team;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,27 +35,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
-import microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
-import microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
-import microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
-import microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
-import microsoft.graph.groups.item.team.group.GroupRequestBuilder;
-import microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsRequestBuilder;
-import microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
-import microsoft.graph.groups.item.team.installedapps.item.TeamsAppInstallationItemRequestBuilder;
-import microsoft.graph.groups.item.team.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.groups.item.team.members.MembersRequestBuilder;
-import microsoft.graph.groups.item.team.operations.item.TeamsAsyncOperationItemRequestBuilder;
-import microsoft.graph.groups.item.team.operations.OperationsRequestBuilder;
-import microsoft.graph.groups.item.team.photo.PhotoRequestBuilder;
-import microsoft.graph.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
-import microsoft.graph.groups.item.team.schedule.ScheduleRequestBuilder;
-import microsoft.graph.groups.item.team.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import microsoft.graph.groups.item.team.template.TemplateRequestBuilder;
-import microsoft.graph.groups.item.team.unarchive.UnarchiveRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Team;
 /** Provides operations to manage the team property of the microsoft.graph.group entity. */
 public class TeamRequestBuilder {
     /** The allChannels property */
@@ -124,28 +124,28 @@ public class TeamRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.allChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.allChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamRequestBuilder and sets the default values.
@@ -367,19 +367,19 @@ public class TeamRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.incomingChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.incomingChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.installedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.installedApps.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -391,7 +391,7 @@ public class TeamRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.members.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -403,7 +403,7 @@ public class TeamRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.operations.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAsyncOperationItemRequestBuilder
      */

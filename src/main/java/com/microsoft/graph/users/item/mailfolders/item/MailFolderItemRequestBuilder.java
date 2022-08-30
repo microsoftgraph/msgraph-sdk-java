@@ -1,5 +1,18 @@
-package microsoft.graph.users.item.mailfolders.item;
+package com.microsoft.graph.users.item.mailfolders.item;
 
+import com.microsoft.graph.models.MailFolder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.mailfolders.item.childfolders.ChildFoldersRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.copy.CopyRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messagerules.item.MessageRuleItemRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messagerules.MessageRulesRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messages.item.MessageItemRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.move.MoveRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MailFolder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.mailfolders.item.childfolders.ChildFoldersRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.copy.CopyRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.messagerules.item.MessageRuleItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.messagerules.MessageRulesRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.messages.item.MessageItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.messages.MessagesRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.move.MoveRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 /** Provides operations to manage the mailFolders property of the microsoft.graph.user entity. */
 public class MailFolderItemRequestBuilder {
     /** The childFolders property */
@@ -71,7 +71,7 @@ public class MailFolderItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.childFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item.childFolders.item collection
      * @param id Unique identifier of the item
      * @return a MailFolderItemRequestBuilder
      */
@@ -302,7 +302,7 @@ public class MailFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.messageRules.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item.messageRules.item collection
      * @param id Unique identifier of the item
      * @return a MessageRuleItemRequestBuilder
      */
@@ -314,7 +314,7 @@ public class MailFolderItemRequestBuilder {
         return new MessageRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item.messages.item collection
      * @param id Unique identifier of the item
      * @return a MessageItemRequestBuilder
      */
@@ -326,7 +326,7 @@ public class MailFolderItemRequestBuilder {
         return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -393,7 +393,7 @@ public class MailFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

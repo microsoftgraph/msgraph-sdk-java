@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.findmeetingtimes;
+package com.microsoft.graph.users.item.findmeetingtimes;
 
+import com.microsoft.graph.models.AttendeeBase;
+import com.microsoft.graph.models.LocationConstraint;
+import com.microsoft.graph.models.TimeConstraint;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,9 +12,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AttendeeBase;
-import microsoft.graph.models.LocationConstraint;
-import microsoft.graph.models.TimeConstraint;
 /** Provides operations to call the findMeetingTimes method. */
 public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

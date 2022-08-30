@@ -1,5 +1,8 @@
-package microsoft.graph.teams.item.primarychannel.filesfolder;
+package com.microsoft.graph.teams.item.primarychannel.filesfolder;
 
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teams.item.primarychannel.filesfolder.content.ContentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teams.item.primarychannel.filesfolder.content.ContentRequestBuilder;
 /** Provides operations to manage the filesFolder property of the microsoft.graph.channel entity. */
 public class FilesFolderRequestBuilder {
     /** The content property */

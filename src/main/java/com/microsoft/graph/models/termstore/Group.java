@@ -1,5 +1,6 @@
-package microsoft.graph.models.termstore;
+package com.microsoft.graph.models.termstore;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,8 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Group extends Entity implements Parsable {
     /** Date and time of the group creation. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -19,7 +19,7 @@ public class Group extends Entity implements Parsable {
     private String _displayName;
     /** ID of the parent site of this group. */
     private String _parentSiteId;
-    /** Returns the type of the group. Possible values are global, system, and siteCollection. */
+    /** Returns the type of the group. Possible values are: global, system, and siteCollection. */
     private TermGroupScope _scope;
     /** All sets under the group in a term [store]. */
     private java.util.List<Set> _sets;
@@ -90,7 +90,7 @@ public class Group extends Entity implements Parsable {
         return this._parentSiteId;
     }
     /**
-     * Gets the scope property value. Returns the type of the group. Possible values are global, system, and siteCollection.
+     * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      * @return a termGroupScope
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class Group extends Entity implements Parsable {
         this._parentSiteId = value;
     }
     /**
-     * Sets the scope property value. Returns the type of the group. Possible values are global, system, and siteCollection.
+     * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      * @param value Value to set for the scope property.
      * @return a void
      */

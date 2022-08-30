@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles. */
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
     /** The list of ids of role member security groups. These are IDs from Azure Active Directory. */
     private java.util.List<String> _members;
     /**
-     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
      * @return a void
      */
     public DeviceAndAppManagementRoleAssignment() {
@@ -22,7 +21,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementRoleAssignment
+     * @return a DeviceAndAppManagementRoleAssignment
      */
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementRoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

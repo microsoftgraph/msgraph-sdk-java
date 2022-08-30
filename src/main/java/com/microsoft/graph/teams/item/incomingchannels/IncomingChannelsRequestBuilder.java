@@ -1,5 +1,8 @@
-package microsoft.graph.teams.item.incomingchannels;
+package com.microsoft.graph.teams.item.incomingchannels;
 
+import com.microsoft.graph.models.ChannelCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teams.item.incomingchannels.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChannelCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teams.item.incomingchannels.count.CountRequestBuilder;
 /** Provides operations to manage the incomingChannels property of the microsoft.graph.team entity. */
 public class IncomingChannelsRequestBuilder {
     /** The Count property */

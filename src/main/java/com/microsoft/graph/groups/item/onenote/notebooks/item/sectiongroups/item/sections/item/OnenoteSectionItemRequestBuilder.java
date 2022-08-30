@@ -1,5 +1,13 @@
-package microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item;
+package com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item;
 
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.copytonotebook.CopyToNotebookRequestBuilder;
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.copytosectiongroup.CopyToSectionGroupRequestBuilder;
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.item.OnenotePageItemRequestBuilder;
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.PagesRequestBuilder;
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.parentnotebook.ParentNotebookRequestBuilder;
+import com.microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteSection;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.copytonotebook.CopyToNotebookRequestBuilder;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.copytosectiongroup.CopyToSectionGroupRequestBuilder;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.item.OnenotePageItemRequestBuilder;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.PagesRequestBuilder;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.parentnotebook.ParentNotebookRequestBuilder;
-import microsoft.graph.groups.item.onenote.notebooks.item.sectiongroups.item.sections.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteSection;
 /** Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity. */
 public class OnenoteSectionItemRequestBuilder {
     /** The copyToNotebook property */
@@ -275,7 +275,7 @@ public class OnenoteSectionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.onenote.notebooks.item.sectionGroups.item.sections.item.pages.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.onenote.notebooks.item.sectionGroups.item.sections.item.pages.item collection
      * @param id Unique identifier of the item
      * @return a OnenotePageItemRequestBuilder
      */

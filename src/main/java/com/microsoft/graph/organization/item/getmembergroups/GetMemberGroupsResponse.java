@@ -1,4 +1,4 @@
-package microsoft.graph.organization.item.getmembergroups;
+package com.microsoft.graph.organization.item.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

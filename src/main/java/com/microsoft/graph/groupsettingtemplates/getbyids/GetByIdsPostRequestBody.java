@@ -1,4 +1,4 @@
-package microsoft.graph.groupsettingtemplates.getbyids;
+package com.microsoft.graph.groupsettingtemplates.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

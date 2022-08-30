@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.teamwork.sendactivitynotification;
+package com.microsoft.graph.users.item.teamwork.sendactivitynotification;
 
+import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,9 +11,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemBody;
-import microsoft.graph.models.KeyValuePair;
-import microsoft.graph.models.TeamworkActivityTopic;
 /** Provides operations to call the sendActivityNotification method. */
 public class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The activityType property */

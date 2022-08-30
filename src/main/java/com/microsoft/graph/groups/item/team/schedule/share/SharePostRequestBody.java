@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.team.schedule.share;
+package com.microsoft.graph.groups.item.team.schedule.share;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

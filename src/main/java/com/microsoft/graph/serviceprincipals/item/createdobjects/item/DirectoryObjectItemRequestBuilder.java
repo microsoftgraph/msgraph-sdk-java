@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.createdobjects.item;
+package com.microsoft.graph.serviceprincipals.item.createdobjects.item;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.createdobjects.item.serviceprincipal.ServicePrincipalRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.createdobjects.item.serviceprincipal.ServicePrincipalRequestBuilder;
 /** Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */

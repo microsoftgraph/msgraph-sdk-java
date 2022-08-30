@@ -1,9 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the deviceAppManagement singleton. */
 public enum Win32LobAppRuleType implements ValuedEnum {
     /** Detection rule. */
     Detection("detection"),

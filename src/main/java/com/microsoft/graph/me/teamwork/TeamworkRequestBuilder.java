@@ -1,5 +1,12 @@
-package microsoft.graph.me.teamwork;
+package com.microsoft.graph.me.teamwork;
 
+import com.microsoft.graph.me.teamwork.associatedteams.AssociatedTeamsRequestBuilder;
+import com.microsoft.graph.me.teamwork.associatedteams.item.AssociatedTeamInfoItemRequestBuilder;
+import com.microsoft.graph.me.teamwork.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.me.teamwork.installedapps.item.UserScopeTeamsAppInstallationItemRequestBuilder;
+import com.microsoft.graph.me.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.teamwork.associatedteams.AssociatedTeamsRequestBuilder;
-import microsoft.graph.me.teamwork.associatedteams.item.AssociatedTeamInfoItemRequestBuilder;
-import microsoft.graph.me.teamwork.installedapps.InstalledAppsRequestBuilder;
-import microsoft.graph.me.teamwork.installedapps.item.UserScopeTeamsAppInstallationItemRequestBuilder;
-import microsoft.graph.me.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserTeamwork;
 /** Provides operations to manage the teamwork property of the microsoft.graph.user entity. */
 public class TeamworkRequestBuilder {
     /** The associatedTeams property */
@@ -45,7 +45,7 @@ public class TeamworkRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.teamwork.associatedTeams.item collection
+     * Gets an item from the com.Microsoft.Graph.me.teamwork.associatedTeams.item collection
      * @param id Unique identifier of the item
      * @return a AssociatedTeamInfoItemRequestBuilder
      */
@@ -276,7 +276,7 @@ public class TeamworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.teamwork.installedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.me.teamwork.installedApps.item collection
      * @param id Unique identifier of the item
      * @return a UserScopeTeamsAppInstallationItemRequestBuilder
      */

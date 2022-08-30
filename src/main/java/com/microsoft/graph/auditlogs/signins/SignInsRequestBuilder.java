@@ -1,5 +1,9 @@
-package microsoft.graph.auditlogs.signins;
+package com.microsoft.graph.auditlogs.signins;
 
+import com.microsoft.graph.auditlogs.signins.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SignIn;
+import com.microsoft.graph.models.SignInCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.auditlogs.signins.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SignIn;
-import microsoft.graph.models.SignInCollectionResponse;
 /** Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity. */
 public class SignInsRequestBuilder {
     /** The Count property */

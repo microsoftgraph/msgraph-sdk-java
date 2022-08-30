@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval;
+package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval;
 
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.item.ApprovalStageItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.StagesRequestBuilder;
+import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.item.ApprovalStageItemRequestBuilder;
-import microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.StagesRequestBuilder;
-import microsoft.graph.models.Approval;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the approval property of the microsoft.graph.userConsentRequest entity. */
 public class ApprovalRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class ApprovalRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item.approval.stages.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item.approval.stages.item collection
      * @param id Unique identifier of the item
      * @return a ApprovalStageItemRequestBuilder
      */

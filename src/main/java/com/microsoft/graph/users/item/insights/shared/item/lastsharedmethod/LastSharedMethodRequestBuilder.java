@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.insights.shared.item.lastsharedmethod;
+package com.microsoft.graph.users.item.insights.shared.item.lastsharedmethod;
 
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity. */
 public class LastSharedMethodRequestBuilder {
     /** Path parameters for the request */

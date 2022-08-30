@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.item;
+package com.microsoft.graph.devicemanagement.notificationmessagetemplates.item.localizednotificationmessages.item;
 
+import com.microsoft.graph.models.LocalizedNotificationMessage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.LocalizedNotificationMessage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity. */
 public class LocalizedNotificationMessageItemRequestBuilder {
     /** Path parameters for the request */

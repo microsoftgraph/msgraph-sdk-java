@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroletemplates.getavailableextensionproperties;
+package com.microsoft.graph.directoryroletemplates.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

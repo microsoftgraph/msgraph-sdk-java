@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.target;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.item.target;
 
+import com.microsoft.graph.models.AccessPackageSubject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AccessPackageSubject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity. */
 public class TargetRequestBuilder {
     /** Path parameters for the request */

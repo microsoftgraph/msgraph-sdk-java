@@ -1,5 +1,16 @@
-package microsoft.graph.education.users.item.assignments.item.submissions.item;
+package com.microsoft.graph.education.users.item.assignments.item.submissions.item;
 
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.item.EducationOutcomeItemRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.return_escaped.ReturnRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submit.SubmitRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.SubmittedResourcesRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.unsubmit.UnsubmitRequestBuilder;
+import com.microsoft.graph.models.EducationSubmission;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.item.EducationOutcomeItemRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.return_escaped.ReturnRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.submit.SubmitRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.SubmittedResourcesRequestBuilder;
-import microsoft.graph.education.users.item.assignments.item.submissions.item.unsubmit.UnsubmitRequestBuilder;
-import microsoft.graph.models.EducationSubmission;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity. */
 public class EducationSubmissionItemRequestBuilder {
     /** The outcomes property */
@@ -293,7 +293,7 @@ public class EducationSubmissionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.users.item.assignments.item.submissions.item.outcomes.item collection
+     * Gets an item from the com.Microsoft.Graph.education.users.item.assignments.item.submissions.item.outcomes.item collection
      * @param id Unique identifier of the item
      * @return a EducationOutcomeItemRequestBuilder
      */
@@ -360,28 +360,28 @@ public class EducationSubmissionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.users.item.assignments.item.submissions.item.resources.item collection
+     * Gets an item from the com.Microsoft.Graph.education.users.item.assignments.item.submissions.item.resources.item collection
      * @param id Unique identifier of the item
      * @return a EducationSubmissionResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.users.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder resources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationSubmissionResource%2Did", id);
-        return new microsoft.graph.education.users.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.users.item.assignments.item.submissions.item.submittedResources.item collection
+     * Gets an item from the com.Microsoft.Graph.education.users.item.assignments.item.submissions.item.submittedResources.item collection
      * @param id Unique identifier of the item
      * @return a EducationSubmissionResourceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder submittedResources(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder submittedResources(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationSubmissionResource%2Did", id);
-        return new microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class EducationSubmissionItemRequestBuilderDeleteRequestConfiguration {

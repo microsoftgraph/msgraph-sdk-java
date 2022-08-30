@@ -1,5 +1,12 @@
-package microsoft.graph.print.shares.item;
+package com.microsoft.graph.print.shares.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrinterShare;
+import com.microsoft.graph.print.shares.item.allowedgroups.AllowedGroupsRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedgroups.item.GroupItemRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedusers.AllowedUsersRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedusers.item.UserItemRequestBuilder;
+import com.microsoft.graph.print.shares.item.printer.PrinterRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrinterShare;
-import microsoft.graph.print.shares.item.allowedgroups.AllowedGroupsRequestBuilder;
-import microsoft.graph.print.shares.item.allowedgroups.item.GroupItemRequestBuilder;
-import microsoft.graph.print.shares.item.allowedusers.AllowedUsersRequestBuilder;
-import microsoft.graph.print.shares.item.allowedusers.item.UserItemRequestBuilder;
-import microsoft.graph.print.shares.item.printer.PrinterRequestBuilder;
 /** Provides operations to manage the shares property of the microsoft.graph.print entity. */
 public class PrinterShareItemRequestBuilder {
     /** The allowedGroups property */
@@ -45,7 +45,7 @@ public class PrinterShareItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.print.shares.item.allowedGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedGroups.item collection
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -57,7 +57,7 @@ public class PrinterShareItemRequestBuilder {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.shares.item.allowedUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.print.shares.item.allowedUsers.item collection
      * @param id Unique identifier of the item
      * @return a UserItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.applications.item.removepassword;
+package com.microsoft.graph.applications.item.removepassword;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

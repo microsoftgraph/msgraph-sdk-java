@@ -1,5 +1,9 @@
-package microsoft.graph.communications.callrecords.item.sessions;
+package com.microsoft.graph.communications.callrecords.item.sessions;
 
+import com.microsoft.graph.communications.callrecords.item.sessions.count.CountRequestBuilder;
+import com.microsoft.graph.models.callrecords.Session;
+import com.microsoft.graph.models.callrecords.SessionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.callrecords.item.sessions.count.CountRequestBuilder;
-import microsoft.graph.models.callrecords.Session;
-import microsoft.graph.models.callrecords.SessionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity. */
 public class SessionsRequestBuilder {
     /** The Count property */

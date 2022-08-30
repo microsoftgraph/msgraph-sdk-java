@@ -1,4 +1,4 @@
-package microsoft.graph.domains.item.forcedelete;
+package com.microsoft.graph.domains.item.forcedelete;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.team.clone;
+package com.microsoft.graph.groups.item.team.clone;
 
+import com.microsoft.graph.models.ClonableTeamParts;
+import com.microsoft.graph.models.TeamVisibilityType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ClonableTeamParts;
-import microsoft.graph.models.TeamVisibilityType;
 /** Provides operations to call the clone method. */
 public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,8 @@
-package microsoft.graph.serviceprincipals.item.transitivememberof.user;
+package com.microsoft.graph.serviceprincipals.item.transitivememberof.user;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserCollectionResponse;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.user.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserCollectionResponse;
-import microsoft.graph.serviceprincipals.item.transitivememberof.user.count.CountRequestBuilder;
 /** Casts the previous resource to user. */
 public class UserRequestBuilder {
     /** The Count property */

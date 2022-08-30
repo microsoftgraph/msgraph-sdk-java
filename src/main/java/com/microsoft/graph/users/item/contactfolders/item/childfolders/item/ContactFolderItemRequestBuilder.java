@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.contactfolders.item.childfolders.item;
+package com.microsoft.graph.users.item.contactfolders.item.childfolders.item;
 
+import com.microsoft.graph.models.ContactFolder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.ContactsRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.ContactItemRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.childfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ContactFolder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.ContactsRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.contacts.item.ContactItemRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.childfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 /** Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity. */
 public class ContactFolderItemRequestBuilder {
     /** The contacts property */
@@ -73,7 +73,7 @@ public class ContactFolderItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.childFolders.item.contacts.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.contactFolders.item.childFolders.item.contacts.item collection
      * @param id Unique identifier of the item
      * @return a ContactItemRequestBuilder
      */
@@ -277,7 +277,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.childFolders.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.contactFolders.item.childFolders.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.contactFolders.item.childFolders.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.contactFolders.item.childFolders.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

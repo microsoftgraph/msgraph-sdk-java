@@ -1,5 +1,9 @@
-package microsoft.graph.policies.claimsmappingpolicies;
+package com.microsoft.graph.policies.claimsmappingpolicies;
 
+import com.microsoft.graph.models.ClaimsMappingPolicy;
+import com.microsoft.graph.models.ClaimsMappingPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.claimsmappingpolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ClaimsMappingPolicy;
-import microsoft.graph.models.ClaimsMappingPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.claimsmappingpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity. */
 public class ClaimsMappingPoliciesRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.contacts.getavailableextensionproperties;
+package com.microsoft.graph.contacts.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.admin.serviceannouncement.messages.unfavorite;
+package com.microsoft.graph.admin.serviceannouncement.messages.unfavorite;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

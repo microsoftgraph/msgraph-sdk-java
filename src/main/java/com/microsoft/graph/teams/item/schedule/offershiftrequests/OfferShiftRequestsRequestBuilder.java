@@ -1,5 +1,9 @@
-package microsoft.graph.teams.item.schedule.offershiftrequests;
+package com.microsoft.graph.teams.item.schedule.offershiftrequests;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OfferShiftRequest;
+import com.microsoft.graph.models.OfferShiftRequestCollectionResponse;
+import com.microsoft.graph.teams.item.schedule.offershiftrequests.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OfferShiftRequest;
-import microsoft.graph.models.OfferShiftRequestCollectionResponse;
-import microsoft.graph.teams.item.schedule.offershiftrequests.count.CountRequestBuilder;
 /** Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity. */
 public class OfferShiftRequestsRequestBuilder {
     /** The Count property */

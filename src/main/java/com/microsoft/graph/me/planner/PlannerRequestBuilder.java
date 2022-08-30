@@ -1,5 +1,11 @@
-package microsoft.graph.me.planner;
+package com.microsoft.graph.me.planner;
 
+import com.microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder;
+import com.microsoft.graph.me.planner.plans.PlansRequestBuilder;
+import com.microsoft.graph.me.planner.tasks.item.PlannerTaskItemRequestBuilder;
+import com.microsoft.graph.me.planner.tasks.TasksRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.planner.plans.item.PlannerPlanItemRequestBuilder;
-import microsoft.graph.me.planner.plans.PlansRequestBuilder;
-import microsoft.graph.me.planner.tasks.item.PlannerTaskItemRequestBuilder;
-import microsoft.graph.me.planner.tasks.TasksRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerUser;
 /** Provides operations to manage the planner property of the microsoft.graph.user entity. */
 public class PlannerRequestBuilder {
     /** Path parameters for the request */
@@ -313,7 +313,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.plans.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.plans.item collection
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class PlannerRequestBuilder {
         return new PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.planner.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.me.planner.tasks.item collection
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

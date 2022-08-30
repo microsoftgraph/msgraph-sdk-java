@@ -1,5 +1,8 @@
-package microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp;
+package com.microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedMobileLobAppCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedMobileLobAppCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to managedMobileLobApp. */
 public class ManagedMobileLobAppRequestBuilder {
     /** The Count property */

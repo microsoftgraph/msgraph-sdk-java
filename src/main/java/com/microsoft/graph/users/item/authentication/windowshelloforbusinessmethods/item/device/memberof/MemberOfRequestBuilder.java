@@ -1,5 +1,14 @@
-package microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof;
+package com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.application.ApplicationRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.device.DeviceRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.group.GroupRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.application.ApplicationRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.count.CountRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.device.DeviceRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.group.GroupRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.memberof.user.UserRequestBuilder;
 /** Provides operations to manage the memberOf property of the microsoft.graph.device entity. */
 public class MemberOfRequestBuilder {
     /** The application property */

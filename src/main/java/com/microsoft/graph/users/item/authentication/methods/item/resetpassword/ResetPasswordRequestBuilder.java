@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.authentication.methods.item.resetpassword;
+package com.microsoft.graph.users.item.authentication.methods.item.resetpassword;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PasswordResetResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PasswordResetResponse;
 /** Provides operations to call the resetPassword method. */
 public class ResetPasswordRequestBuilder {
     /** Path parameters for the request */

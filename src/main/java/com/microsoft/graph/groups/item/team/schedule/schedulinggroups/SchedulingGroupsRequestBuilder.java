@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.team.schedule.schedulinggroups;
+package com.microsoft.graph.groups.item.team.schedule.schedulinggroups;
 
+import com.microsoft.graph.groups.item.team.schedule.schedulinggroups.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SchedulingGroup;
+import com.microsoft.graph.models.SchedulingGroupCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.schedule.schedulinggroups.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SchedulingGroup;
-import microsoft.graph.models.SchedulingGroupCollectionResponse;
 /** Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity. */
 public class SchedulingGroupsRequestBuilder {
     /** The Count property */

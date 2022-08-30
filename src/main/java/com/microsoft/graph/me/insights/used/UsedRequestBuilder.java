@@ -1,5 +1,9 @@
-package microsoft.graph.me.insights.used;
+package com.microsoft.graph.me.insights.used;
 
+import com.microsoft.graph.me.insights.used.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UsedInsight;
+import com.microsoft.graph.models.UsedInsightCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.insights.used.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UsedInsight;
-import microsoft.graph.models.UsedInsightCollectionResponse;
 /** Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity. */
 public class UsedRequestBuilder {
     /** The Count property */

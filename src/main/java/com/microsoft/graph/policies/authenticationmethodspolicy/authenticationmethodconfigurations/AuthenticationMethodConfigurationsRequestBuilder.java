@@ -1,5 +1,9 @@
-package microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations;
+package com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations;
 
+import com.microsoft.graph.models.AuthenticationMethodConfiguration;
+import com.microsoft.graph.models.AuthenticationMethodConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AuthenticationMethodConfiguration;
-import microsoft.graph.models.AuthenticationMethodConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.count.CountRequestBuilder;
 /** Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity. */
 public class AuthenticationMethodConfigurationsRequestBuilder {
     /** The Count property */

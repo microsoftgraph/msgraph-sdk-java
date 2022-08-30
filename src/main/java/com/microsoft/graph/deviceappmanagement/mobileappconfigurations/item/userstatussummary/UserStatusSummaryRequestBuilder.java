@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatussummary;
+package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatussummary;
 
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedDeviceMobileAppConfigurationUserSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userStatusSummary property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
 public class UserStatusSummaryRequestBuilder {
     /** Path parameters for the request */

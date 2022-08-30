@@ -1,5 +1,95 @@
-package microsoft.graph.users.item;
+package com.microsoft.graph.users.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.User;
+import com.microsoft.graph.users.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.users.item.activities.item.UserActivityItemRequestBuilder;
+import com.microsoft.graph.users.item.agreementacceptances.AgreementAcceptancesRequestBuilder;
+import com.microsoft.graph.users.item.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
+import com.microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
+import com.microsoft.graph.users.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.users.item.assignlicense.AssignLicenseRequestBuilder;
+import com.microsoft.graph.users.item.authentication.AuthenticationRequestBuilder;
+import com.microsoft.graph.users.item.calendar.CalendarRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.CalendarGroupsRequestBuilder;
+import com.microsoft.graph.users.item.calendargroups.item.CalendarGroupItemRequestBuilder;
+import com.microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
+import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
+import com.microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
+import com.microsoft.graph.users.item.chats.ChatsRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
+import com.microsoft.graph.users.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.users.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.ContactFoldersRequestBuilder;
+import com.microsoft.graph.users.item.contactfolders.item.ContactFolderItemRequestBuilder;
+import com.microsoft.graph.users.item.contacts.ContactsRequestBuilder;
+import com.microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
+import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
+import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
+import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
+import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
+import com.microsoft.graph.users.item.events.EventsRequestBuilder;
+import com.microsoft.graph.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
+import com.microsoft.graph.users.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.users.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.users.item.findmeetingtimes.FindMeetingTimesRequestBuilder;
+import com.microsoft.graph.users.item.followedsites.FollowedSitesRequestBuilder;
+import com.microsoft.graph.users.item.followedsites.item.SiteItemRequestBuilder;
+import com.microsoft.graph.users.item.getmailtips.GetMailTipsRequestBuilder;
+import com.microsoft.graph.users.item.getmanagedappdiagnosticstatuses.GetManagedAppDiagnosticStatusesRequestBuilder;
+import com.microsoft.graph.users.item.getmanagedapppolicies.GetManagedAppPoliciesRequestBuilder;
+import com.microsoft.graph.users.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.users.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.users.item.inferenceclassification.InferenceClassificationRequestBuilder;
+import com.microsoft.graph.users.item.insights.InsightsRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.TeamItemRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.JoinedTeamsRequestBuilder;
+import com.microsoft.graph.users.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
+import com.microsoft.graph.users.item.licensedetails.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.item.MailFolderItemRequestBuilder;
+import com.microsoft.graph.users.item.mailfolders.MailFoldersRequestBuilder;
+import com.microsoft.graph.users.item.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
+import com.microsoft.graph.users.item.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
+import com.microsoft.graph.users.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
+import com.microsoft.graph.users.item.manageddevices.ManagedDevicesRequestBuilder;
+import com.microsoft.graph.users.item.manager.ManagerRequestBuilder;
+import com.microsoft.graph.users.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.users.item.messages.item.MessageItemRequestBuilder;
+import com.microsoft.graph.users.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.users.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
+import com.microsoft.graph.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
+import com.microsoft.graph.users.item.onenote.OnenoteRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.users.item.outlook.OutlookRequestBuilder;
+import com.microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
+import com.microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.people.item.PersonItemRequestBuilder;
+import com.microsoft.graph.users.item.people.PeopleRequestBuilder;
+import com.microsoft.graph.users.item.photo.PhotoRequestBuilder;
+import com.microsoft.graph.users.item.photos.item.ProfilePhotoItemRequestBuilder;
+import com.microsoft.graph.users.item.photos.PhotosRequestBuilder;
+import com.microsoft.graph.users.item.planner.PlannerRequestBuilder;
+import com.microsoft.graph.users.item.presence.PresenceRequestBuilder;
+import com.microsoft.graph.users.item.registereddevices.RegisteredDevicesRequestBuilder;
+import com.microsoft.graph.users.item.reminderviewwithstartdatetimewithenddatetime.ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.users.item.removealldevicesfrommanagement.RemoveAllDevicesFromManagementRequestBuilder;
+import com.microsoft.graph.users.item.reprocesslicenseassignment.ReprocessLicenseAssignmentRequestBuilder;
+import com.microsoft.graph.users.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.users.item.revokesigninsessions.RevokeSignInSessionsRequestBuilder;
+import com.microsoft.graph.users.item.scopedrolememberof.item.ScopedRoleMembershipItemRequestBuilder;
+import com.microsoft.graph.users.item.scopedrolememberof.ScopedRoleMemberOfRequestBuilder;
+import com.microsoft.graph.users.item.sendmail.SendMailRequestBuilder;
+import com.microsoft.graph.users.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.users.item.teamwork.TeamworkRequestBuilder;
+import com.microsoft.graph.users.item.todo.TodoRequestBuilder;
+import com.microsoft.graph.users.item.transitivememberof.TransitiveMemberOfRequestBuilder;
+import com.microsoft.graph.users.item.translateexchangeids.TranslateExchangeIdsRequestBuilder;
+import com.microsoft.graph.users.item.wipemanagedappregistrationsbydevicetag.WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,96 +104,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.User;
-import microsoft.graph.users.item.activities.ActivitiesRequestBuilder;
-import microsoft.graph.users.item.activities.item.UserActivityItemRequestBuilder;
-import microsoft.graph.users.item.agreementacceptances.AgreementAcceptancesRequestBuilder;
-import microsoft.graph.users.item.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
-import microsoft.graph.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
-import microsoft.graph.users.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
-import microsoft.graph.users.item.assignlicense.AssignLicenseRequestBuilder;
-import microsoft.graph.users.item.authentication.AuthenticationRequestBuilder;
-import microsoft.graph.users.item.calendar.CalendarRequestBuilder;
-import microsoft.graph.users.item.calendargroups.CalendarGroupsRequestBuilder;
-import microsoft.graph.users.item.calendargroups.item.CalendarGroupItemRequestBuilder;
-import microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
-import microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
-import microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
-import microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
-import microsoft.graph.users.item.chats.ChatsRequestBuilder;
-import microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
-import microsoft.graph.users.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.users.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.users.item.contactfolders.ContactFoldersRequestBuilder;
-import microsoft.graph.users.item.contactfolders.item.ContactFolderItemRequestBuilder;
-import microsoft.graph.users.item.contacts.ContactsRequestBuilder;
-import microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
-import microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
-import microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
-import microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
-import microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
-import microsoft.graph.users.item.drive.DriveRequestBuilder;
-import microsoft.graph.users.item.drives.DrivesRequestBuilder;
-import microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
-import microsoft.graph.users.item.events.EventsRequestBuilder;
-import microsoft.graph.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
-import microsoft.graph.users.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.users.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.users.item.findmeetingtimes.FindMeetingTimesRequestBuilder;
-import microsoft.graph.users.item.followedsites.FollowedSitesRequestBuilder;
-import microsoft.graph.users.item.followedsites.item.SiteItemRequestBuilder;
-import microsoft.graph.users.item.getmailtips.GetMailTipsRequestBuilder;
-import microsoft.graph.users.item.getmanagedappdiagnosticstatuses.GetManagedAppDiagnosticStatusesRequestBuilder;
-import microsoft.graph.users.item.getmanagedapppolicies.GetManagedAppPoliciesRequestBuilder;
-import microsoft.graph.users.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.users.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.users.item.inferenceclassification.InferenceClassificationRequestBuilder;
-import microsoft.graph.users.item.insights.InsightsRequestBuilder;
-import microsoft.graph.users.item.joinedteams.item.TeamItemRequestBuilder;
-import microsoft.graph.users.item.joinedteams.JoinedTeamsRequestBuilder;
-import microsoft.graph.users.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
-import microsoft.graph.users.item.licensedetails.LicenseDetailsRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.MailFolderItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.MailFoldersRequestBuilder;
-import microsoft.graph.users.item.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
-import microsoft.graph.users.item.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
-import microsoft.graph.users.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
-import microsoft.graph.users.item.manageddevices.ManagedDevicesRequestBuilder;
-import microsoft.graph.users.item.manager.ManagerRequestBuilder;
-import microsoft.graph.users.item.memberof.MemberOfRequestBuilder;
-import microsoft.graph.users.item.messages.item.MessageItemRequestBuilder;
-import microsoft.graph.users.item.messages.MessagesRequestBuilder;
-import microsoft.graph.users.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
-import microsoft.graph.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
-import microsoft.graph.users.item.onenote.OnenoteRequestBuilder;
-import microsoft.graph.users.item.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
-import microsoft.graph.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
-import microsoft.graph.users.item.outlook.OutlookRequestBuilder;
-import microsoft.graph.users.item.owneddevices.OwnedDevicesRequestBuilder;
-import microsoft.graph.users.item.ownedobjects.OwnedObjectsRequestBuilder;
-import microsoft.graph.users.item.people.item.PersonItemRequestBuilder;
-import microsoft.graph.users.item.people.PeopleRequestBuilder;
-import microsoft.graph.users.item.photo.PhotoRequestBuilder;
-import microsoft.graph.users.item.photos.item.ProfilePhotoItemRequestBuilder;
-import microsoft.graph.users.item.photos.PhotosRequestBuilder;
-import microsoft.graph.users.item.planner.PlannerRequestBuilder;
-import microsoft.graph.users.item.presence.PresenceRequestBuilder;
-import microsoft.graph.users.item.registereddevices.RegisteredDevicesRequestBuilder;
-import microsoft.graph.users.item.reminderviewwithstartdatetimewithenddatetime.ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
-import microsoft.graph.users.item.removealldevicesfrommanagement.RemoveAllDevicesFromManagementRequestBuilder;
-import microsoft.graph.users.item.reprocesslicenseassignment.ReprocessLicenseAssignmentRequestBuilder;
-import microsoft.graph.users.item.restore.RestoreRequestBuilder;
-import microsoft.graph.users.item.revokesigninsessions.RevokeSignInSessionsRequestBuilder;
-import microsoft.graph.users.item.scopedrolememberof.item.ScopedRoleMembershipItemRequestBuilder;
-import microsoft.graph.users.item.scopedrolememberof.ScopedRoleMemberOfRequestBuilder;
-import microsoft.graph.users.item.sendmail.SendMailRequestBuilder;
-import microsoft.graph.users.item.settings.SettingsRequestBuilder;
-import microsoft.graph.users.item.teamwork.TeamworkRequestBuilder;
-import microsoft.graph.users.item.todo.TodoRequestBuilder;
-import microsoft.graph.users.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import microsoft.graph.users.item.translateexchangeids.TranslateExchangeIdsRequestBuilder;
-import microsoft.graph.users.item.wipemanagedappregistrationsbydevicetag.WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 /** Provides operations to manage the collection of user entities. */
 public class UserItemRequestBuilder {
     /** The activities property */
@@ -423,7 +423,7 @@ public class UserItemRequestBuilder {
         return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.activities.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.activities.item collection
      * @param id Unique identifier of the item
      * @return a UserActivityItemRequestBuilder
      */
@@ -435,7 +435,7 @@ public class UserItemRequestBuilder {
         return new UserActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.agreementAcceptances.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.agreementAcceptances.item collection
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -447,7 +447,7 @@ public class UserItemRequestBuilder {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.appRoleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
      */
@@ -459,7 +459,7 @@ public class UserItemRequestBuilder {
         return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendarGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendarGroups.item collection
      * @param id Unique identifier of the item
      * @return a CalendarGroupItemRequestBuilder
      */
@@ -471,7 +471,7 @@ public class UserItemRequestBuilder {
         return new CalendarGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendars.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendars.item collection
      * @param id Unique identifier of the item
      * @return a CalendarItemRequestBuilder
      */
@@ -483,19 +483,19 @@ public class UserItemRequestBuilder {
         return new CalendarItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.calendarView.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.calendarView.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
-        return new microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item collection
      * @param id Unique identifier of the item
      * @return a ChatItemRequestBuilder
      */
@@ -534,7 +534,7 @@ public class UserItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.contactFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.contactFolders.item collection
      * @param id Unique identifier of the item
      * @return a ContactFolderItemRequestBuilder
      */
@@ -546,7 +546,7 @@ public class UserItemRequestBuilder {
         return new ContactFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.contacts.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.contacts.item collection
      * @param id Unique identifier of the item
      * @return a ContactItemRequestBuilder
      */
@@ -586,16 +586,16 @@ public class UserItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.createdObjects.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.createdObjects.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of user object.
@@ -711,7 +711,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.deviceManagementTroubleshootingEvents.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.deviceManagementTroubleshootingEvents.item collection
      * @param id Unique identifier of the item
      * @return a DeviceManagementTroubleshootingEventItemRequestBuilder
      */
@@ -723,19 +723,19 @@ public class UserItemRequestBuilder {
         return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.directReports.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.directReports.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.drives.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.drives.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
      */
@@ -747,19 +747,19 @@ public class UserItemRequestBuilder {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.events.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.events.item collection
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.events.item.EventItemRequestBuilder events(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("event%2Did", id);
-        return new microsoft.graph.users.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -771,7 +771,7 @@ public class UserItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.followedSites.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.followedSites.item collection
      * @param id Unique identifier of the item
      * @return a SiteItemRequestBuilder
      */
@@ -850,7 +850,7 @@ public class UserItemRequestBuilder {
         return new GetManagedAppPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.joinedTeams.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.joinedTeams.item collection
      * @param id Unique identifier of the item
      * @return a TeamItemRequestBuilder
      */
@@ -862,7 +862,7 @@ public class UserItemRequestBuilder {
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.licenseDetails.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.licenseDetails.item collection
      * @param id Unique identifier of the item
      * @return a LicenseDetailsItemRequestBuilder
      */
@@ -874,7 +874,7 @@ public class UserItemRequestBuilder {
         return new LicenseDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.mailFolders.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.mailFolders.item collection
      * @param id Unique identifier of the item
      * @return a MailFolderItemRequestBuilder
      */
@@ -886,7 +886,7 @@ public class UserItemRequestBuilder {
         return new MailFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.managedAppRegistrations.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.managedAppRegistrations.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppRegistrationItemRequestBuilder
      */
@@ -898,7 +898,7 @@ public class UserItemRequestBuilder {
         return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.managedDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.managedDevices.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceItemRequestBuilder
      */
@@ -910,19 +910,19 @@ public class UserItemRequestBuilder {
         return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.messages.item collection
      * @param id Unique identifier of the item
      * @return a MessageItemRequestBuilder
      */
@@ -934,7 +934,7 @@ public class UserItemRequestBuilder {
         return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.oauth2PermissionGrants.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
      * @return a OAuth2PermissionGrantItemRequestBuilder
      */
@@ -946,7 +946,7 @@ public class UserItemRequestBuilder {
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.onlineMeetings.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.onlineMeetings.item collection
      * @param id Unique identifier of the item
      * @return a OnlineMeetingItemRequestBuilder
      */
@@ -958,28 +958,28 @@ public class UserItemRequestBuilder {
         return new OnlineMeetingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.ownedDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.ownedDevices.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder ownedDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.owneddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.ownedObjects.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.ownedObjects.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
@@ -1037,7 +1037,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.people.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.people.item collection
      * @param id Unique identifier of the item
      * @return a PersonItemRequestBuilder
      */
@@ -1049,7 +1049,7 @@ public class UserItemRequestBuilder {
         return new PersonItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.photos.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.photos.item collection
      * @param id Unique identifier of the item
      * @return a ProfilePhotoItemRequestBuilder
      */
@@ -1061,16 +1061,16 @@ public class UserItemRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.registeredDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.registeredDevices.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder registeredDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Provides operations to call the reminderView method.
@@ -1085,7 +1085,7 @@ public class UserItemRequestBuilder {
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.scopedRoleMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.scopedRoleMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */
@@ -1097,16 +1097,16 @@ public class UserItemRequestBuilder {
         return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class UserItemRequestBuilderDeleteRequestConfiguration {

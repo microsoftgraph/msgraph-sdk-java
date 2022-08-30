@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.photos;
+package com.microsoft.graph.users.item.photos;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProfilePhoto;
+import com.microsoft.graph.models.ProfilePhotoCollectionResponse;
+import com.microsoft.graph.users.item.photos.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProfilePhoto;
-import microsoft.graph.models.ProfilePhotoCollectionResponse;
-import microsoft.graph.users.item.photos.count.CountRequestBuilder;
 /** Provides operations to manage the photos property of the microsoft.graph.user entity. */
 public class PhotosRequestBuilder {
     /** The Count property */

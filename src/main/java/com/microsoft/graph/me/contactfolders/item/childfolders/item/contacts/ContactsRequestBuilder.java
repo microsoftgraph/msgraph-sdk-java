@@ -1,5 +1,10 @@
-package microsoft.graph.me.contactfolders.item.childfolders.item.contacts;
+package com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts;
 
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.count.CountRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.Contact;
+import com.microsoft.graph.models.ContactCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.count.CountRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.delta.DeltaRequestBuilder;
-import microsoft.graph.models.Contact;
-import microsoft.graph.models.ContactCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity. */
 public class ContactsRequestBuilder {
     /** The Count property */

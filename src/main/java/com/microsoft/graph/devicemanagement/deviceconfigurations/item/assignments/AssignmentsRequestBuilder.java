@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.item.assignments;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments;
 
+import com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.DeviceConfigurationAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceConfigurationAssignment;
-import microsoft.graph.models.DeviceConfigurationAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

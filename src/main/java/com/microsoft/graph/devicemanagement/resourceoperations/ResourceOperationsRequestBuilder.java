@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.resourceoperations;
+package com.microsoft.graph.devicemanagement.resourceoperations;
 
+import com.microsoft.graph.devicemanagement.resourceoperations.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ResourceOperation;
+import com.microsoft.graph.models.ResourceOperationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.resourceoperations.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ResourceOperation;
-import microsoft.graph.models.ResourceOperationCollectionResponse;
 /** Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity. */
 public class ResourceOperationsRequestBuilder {
     /** The Count property */

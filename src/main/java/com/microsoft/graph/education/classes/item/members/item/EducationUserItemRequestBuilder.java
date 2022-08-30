@@ -1,9 +1,9 @@
-package microsoft.graph.education.classes.item.members.item;
+package com.microsoft.graph.education.classes.item.members.item;
 
+import com.microsoft.graph.education.classes.item.members.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.education.classes.item.members.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /education/classes/{educationClass-id}/members/{educationUser-id} */
 public class EducationUserItemRequestBuilder {
     /** Path parameters for the request */

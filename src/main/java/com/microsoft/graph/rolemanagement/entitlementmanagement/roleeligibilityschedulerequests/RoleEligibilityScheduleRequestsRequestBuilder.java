@@ -1,5 +1,10 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
+import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleRequestCollectionResponse;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleEligibilityScheduleRequest;
-import microsoft.graph.models.UnifiedRoleEligibilityScheduleRequestCollectionResponse;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.count.CountRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.roleeligibilityschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity. */
 public class RoleEligibilityScheduleRequestsRequestBuilder {
     /** The Count property */

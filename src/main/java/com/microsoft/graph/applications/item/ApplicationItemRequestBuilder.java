@@ -1,5 +1,32 @@
-package microsoft.graph.applications.item;
+package com.microsoft.graph.applications.item;
 
+import com.microsoft.graph.applications.item.addkey.AddKeyRequestBuilder;
+import com.microsoft.graph.applications.item.addpassword.AddPasswordRequestBuilder;
+import com.microsoft.graph.applications.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.applications.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.applications.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
+import com.microsoft.graph.applications.item.extensionproperties.ExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.applications.item.extensionproperties.item.ExtensionPropertyItemRequestBuilder;
+import com.microsoft.graph.applications.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import com.microsoft.graph.applications.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
+import com.microsoft.graph.applications.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.applications.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
+import com.microsoft.graph.applications.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
+import com.microsoft.graph.applications.item.logo.LogoRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.applications.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.applications.item.removekey.RemoveKeyRequestBuilder;
+import com.microsoft.graph.applications.item.removepassword.RemovePasswordRequestBuilder;
+import com.microsoft.graph.applications.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.applications.item.setverifiedpublisher.SetVerifiedPublisherRequestBuilder;
+import com.microsoft.graph.applications.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
+import com.microsoft.graph.applications.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
+import com.microsoft.graph.applications.item.unsetverifiedpublisher.UnsetVerifiedPublisherRequestBuilder;
+import com.microsoft.graph.models.Application;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,33 +41,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.addkey.AddKeyRequestBuilder;
-import microsoft.graph.applications.item.addpassword.AddPasswordRequestBuilder;
-import microsoft.graph.applications.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.applications.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.applications.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
-import microsoft.graph.applications.item.extensionproperties.ExtensionPropertiesRequestBuilder;
-import microsoft.graph.applications.item.extensionproperties.item.ExtensionPropertyItemRequestBuilder;
-import microsoft.graph.applications.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
-import microsoft.graph.applications.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
-import microsoft.graph.applications.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.applications.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.applications.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import microsoft.graph.applications.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
-import microsoft.graph.applications.item.logo.LogoRequestBuilder;
-import microsoft.graph.applications.item.owners.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.applications.item.owners.OwnersRequestBuilder;
-import microsoft.graph.applications.item.removekey.RemoveKeyRequestBuilder;
-import microsoft.graph.applications.item.removepassword.RemovePasswordRequestBuilder;
-import microsoft.graph.applications.item.restore.RestoreRequestBuilder;
-import microsoft.graph.applications.item.setverifiedpublisher.SetVerifiedPublisherRequestBuilder;
-import microsoft.graph.applications.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
-import microsoft.graph.applications.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import microsoft.graph.applications.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
-import microsoft.graph.applications.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
-import microsoft.graph.applications.item.unsetverifiedpublisher.UnsetVerifiedPublisherRequestBuilder;
-import microsoft.graph.models.Application;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of application entities. */
 public class ApplicationItemRequestBuilder {
     /** The addKey property */
@@ -313,7 +313,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.extensionProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.extensionProperties.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionPropertyItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class ApplicationItemRequestBuilder {
         return new ExtensionPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.federatedIdentityCredentials.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.federatedIdentityCredentials.item collection
      * @param id Unique identifier of the item
      * @return a FederatedIdentityCredentialItemRequestBuilder
      */
@@ -388,7 +388,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -400,7 +400,7 @@ public class ApplicationItemRequestBuilder {
         return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.owners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -467,7 +467,7 @@ public class ApplicationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -479,7 +479,7 @@ public class ApplicationItemRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.applications.item.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */

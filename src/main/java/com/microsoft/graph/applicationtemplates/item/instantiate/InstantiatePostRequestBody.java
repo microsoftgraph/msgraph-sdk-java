@@ -1,4 +1,4 @@
-package microsoft.graph.applicationtemplates.item.instantiate;
+package com.microsoft.graph.applicationtemplates.item.instantiate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

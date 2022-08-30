@@ -1,4 +1,4 @@
-package microsoft.graph.me.exportpersonaldata;
+package com.microsoft.graph.me.exportpersonaldata;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

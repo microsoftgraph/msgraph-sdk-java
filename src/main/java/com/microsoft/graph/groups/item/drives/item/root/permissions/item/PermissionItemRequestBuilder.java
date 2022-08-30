@@ -1,5 +1,8 @@
-package microsoft.graph.groups.item.drives.item.root.permissions.item;
+package com.microsoft.graph.groups.item.drives.item.root.permissions.item;
 
+import com.microsoft.graph.groups.item.drives.item.root.permissions.item.grant.GrantRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Permission;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.drives.item.root.permissions.item.grant.GrantRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Permission;
 /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
 public class PermissionItemRequestBuilder {
     /** The grant property */

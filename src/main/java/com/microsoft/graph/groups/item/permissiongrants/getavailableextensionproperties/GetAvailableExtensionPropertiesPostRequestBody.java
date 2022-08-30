@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties;
+package com.microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

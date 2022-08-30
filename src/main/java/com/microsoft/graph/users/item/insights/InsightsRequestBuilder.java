@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.insights;
+package com.microsoft.graph.users.item.insights;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OfficeGraphInsights;
+import com.microsoft.graph.users.item.insights.shared.item.SharedInsightItemRequestBuilder;
+import com.microsoft.graph.users.item.insights.shared.SharedRequestBuilder;
+import com.microsoft.graph.users.item.insights.trending.item.TrendingItemRequestBuilder;
+import com.microsoft.graph.users.item.insights.trending.TrendingRequestBuilder;
+import com.microsoft.graph.users.item.insights.used.item.UsedInsightItemRequestBuilder;
+import com.microsoft.graph.users.item.insights.used.UsedRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OfficeGraphInsights;
-import microsoft.graph.users.item.insights.shared.item.SharedInsightItemRequestBuilder;
-import microsoft.graph.users.item.insights.shared.SharedRequestBuilder;
-import microsoft.graph.users.item.insights.trending.item.TrendingItemRequestBuilder;
-import microsoft.graph.users.item.insights.trending.TrendingRequestBuilder;
-import microsoft.graph.users.item.insights.used.item.UsedInsightItemRequestBuilder;
-import microsoft.graph.users.item.insights.used.UsedRequestBuilder;
 /** Provides operations to manage the insights property of the microsoft.graph.user entity. */
 public class InsightsRequestBuilder {
     /** Path parameters for the request */
@@ -320,7 +320,7 @@ public class InsightsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.insights.shared.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.insights.shared.item collection
      * @param id Unique identifier of the item
      * @return a SharedInsightItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class InsightsRequestBuilder {
         return new SharedInsightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.insights.trending.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.insights.trending.item collection
      * @param id Unique identifier of the item
      * @return a TrendingItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class InsightsRequestBuilder {
         return new TrendingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.insights.used.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.insights.used.item collection
      * @param id Unique identifier of the item
      * @return a UsedInsightItemRequestBuilder
      */

@@ -1,5 +1,11 @@
-package microsoft.graph.identitygovernance.termsofuse;
+package com.microsoft.graph.identitygovernance.termsofuse;
 
+import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.AgreementAcceptancesRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.agreements.AgreementsRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.agreements.item.AgreementItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TermsOfUseContainer;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.termsofuse.agreementacceptances.AgreementAcceptancesRequestBuilder;
-import microsoft.graph.identitygovernance.termsofuse.agreementacceptances.item.AgreementAcceptanceItemRequestBuilder;
-import microsoft.graph.identitygovernance.termsofuse.agreements.AgreementsRequestBuilder;
-import microsoft.graph.identitygovernance.termsofuse.agreements.item.AgreementItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TermsOfUseContainer;
 /** Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity. */
 public class TermsOfUseRequestBuilder {
     /** The agreementAcceptances property */
@@ -39,7 +39,7 @@ public class TermsOfUseRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreementAcceptances.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreementAcceptances.item collection
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -51,7 +51,7 @@ public class TermsOfUseRequestBuilder {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreements.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item collection
      * @param id Unique identifier of the item
      * @return a AgreementItemRequestBuilder
      */

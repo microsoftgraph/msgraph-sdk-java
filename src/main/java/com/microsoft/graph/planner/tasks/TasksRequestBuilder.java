@@ -1,5 +1,9 @@
-package microsoft.graph.planner.tasks;
+package com.microsoft.graph.planner.tasks;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerTask;
+import com.microsoft.graph.models.PlannerTaskCollectionResponse;
+import com.microsoft.graph.planner.tasks.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerTask;
-import microsoft.graph.models.PlannerTaskCollectionResponse;
-import microsoft.graph.planner.tasks.count.CountRequestBuilder;
 /** Provides operations to manage the tasks property of the microsoft.graph.planner entity. */
 public class TasksRequestBuilder {
     /** The Count property */

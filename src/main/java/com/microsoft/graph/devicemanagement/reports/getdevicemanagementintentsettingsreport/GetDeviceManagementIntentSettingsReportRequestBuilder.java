@@ -1,5 +1,6 @@
-package microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport;
+package com.microsoft.graph.devicemanagement.reports.getdevicemanagementintentsettingsreport;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -14,7 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the getDeviceManagementIntentSettingsReport method. */
 public class GetDeviceManagementIntentSettingsReportRequestBuilder {
     /** Path parameters for the request */

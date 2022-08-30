@@ -1,5 +1,6 @@
-package microsoft.graph.communications.calls.item.playprompt;
+package com.microsoft.graph.communications.calls.item.playprompt;
 
+import com.microsoft.graph.models.Prompt;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Prompt;
 /** Provides operations to call the playPrompt method. */
 public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

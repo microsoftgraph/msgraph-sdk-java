@@ -1,5 +1,8 @@
-package microsoft.graph.print.printers.item.tasktriggers.item;
+package com.microsoft.graph.print.printers.item.tasktriggers.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintTaskTrigger;
+import com.microsoft.graph.print.printers.item.tasktriggers.item.definition.DefinitionRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintTaskTrigger;
-import microsoft.graph.print.printers.item.tasktriggers.item.definition.DefinitionRequestBuilder;
 /** Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity. */
 public class PrintTaskTriggerItemRequestBuilder {
     /** The definition property */

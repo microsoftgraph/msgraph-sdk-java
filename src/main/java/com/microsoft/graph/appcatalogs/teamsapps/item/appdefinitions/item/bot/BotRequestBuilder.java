@@ -1,5 +1,7 @@
-package microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.bot;
+package com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.bot;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamworkBot;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamworkBot;
 /** Provides operations to manage the bot property of the microsoft.graph.teamsAppDefinition entity. */
 public class BotRequestBuilder {
     /** Path parameters for the request */

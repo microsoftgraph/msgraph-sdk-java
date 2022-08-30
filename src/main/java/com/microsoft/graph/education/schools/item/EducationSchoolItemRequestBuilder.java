@@ -1,5 +1,12 @@
-package microsoft.graph.education.schools.item;
+package com.microsoft.graph.education.schools.item;
 
+import com.microsoft.graph.education.schools.item.administrativeunit.AdministrativeUnitRequestBuilder;
+import com.microsoft.graph.education.schools.item.classes.ClassesRequestBuilder;
+import com.microsoft.graph.education.schools.item.classes.item.EducationClassItemRequestBuilder;
+import com.microsoft.graph.education.schools.item.users.item.EducationUserItemRequestBuilder;
+import com.microsoft.graph.education.schools.item.users.UsersRequestBuilder;
+import com.microsoft.graph.models.EducationSchool;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.schools.item.administrativeunit.AdministrativeUnitRequestBuilder;
-import microsoft.graph.education.schools.item.classes.ClassesRequestBuilder;
-import microsoft.graph.education.schools.item.classes.item.EducationClassItemRequestBuilder;
-import microsoft.graph.education.schools.item.users.item.EducationUserItemRequestBuilder;
-import microsoft.graph.education.schools.item.users.UsersRequestBuilder;
-import microsoft.graph.models.EducationSchool;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the schools property of the microsoft.graph.educationRoot entity. */
 public class EducationSchoolItemRequestBuilder {
     /** The administrativeUnit property */
@@ -45,7 +45,7 @@ public class EducationSchoolItemRequestBuilder {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.schools.item.classes.item collection
+     * Gets an item from the com.Microsoft.Graph.education.schools.item.classes.item collection
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
@@ -331,7 +331,7 @@ public class EducationSchoolItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.schools.item.users.item collection
+     * Gets an item from the com.Microsoft.Graph.education.schools.item.users.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */

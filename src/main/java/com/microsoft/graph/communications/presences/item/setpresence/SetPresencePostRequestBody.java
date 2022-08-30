@@ -1,4 +1,4 @@
-package microsoft.graph.communications.presences.item.setpresence;
+package com.microsoft.graph.communications.presences.item.setpresence;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

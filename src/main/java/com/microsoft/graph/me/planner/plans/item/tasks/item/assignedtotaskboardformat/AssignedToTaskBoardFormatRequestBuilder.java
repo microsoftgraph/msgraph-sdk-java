@@ -1,5 +1,7 @@
-package microsoft.graph.me.planner.plans.item.tasks.item.assignedtotaskboardformat;
+package com.microsoft.graph.me.planner.plans.item.tasks.item.assignedtotaskboardformat;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
 /** Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
 public class AssignedToTaskBoardFormatRequestBuilder {
     /** Path parameters for the request */

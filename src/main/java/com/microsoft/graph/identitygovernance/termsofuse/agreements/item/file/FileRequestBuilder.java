@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.termsofuse.agreements.item.file;
+package com.microsoft.graph.identitygovernance.termsofuse.agreements.item.file;
 
+import com.microsoft.graph.identitygovernance.termsofuse.agreements.item.file.localizations.item.AgreementFileLocalizationItemRequestBuilder;
+import com.microsoft.graph.identitygovernance.termsofuse.agreements.item.file.localizations.LocalizationsRequestBuilder;
+import com.microsoft.graph.models.AgreementFile;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.termsofuse.agreements.item.file.localizations.item.AgreementFileLocalizationItemRequestBuilder;
-import microsoft.graph.identitygovernance.termsofuse.agreements.item.file.localizations.LocalizationsRequestBuilder;
-import microsoft.graph.models.AgreementFile;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the file property of the microsoft.graph.agreement entity. */
 public class FileRequestBuilder {
     /** The localizations property */
@@ -251,7 +251,7 @@ public class FileRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
      * @param id Unique identifier of the item
      * @return a AgreementFileLocalizationItemRequestBuilder
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.solutions.bookingcurrencies;
+package com.microsoft.graph.solutions.bookingcurrencies;
 
+import com.microsoft.graph.models.BookingCurrency;
+import com.microsoft.graph.models.BookingCurrencyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingcurrencies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingCurrency;
-import microsoft.graph.models.BookingCurrencyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingcurrencies.count.CountRequestBuilder;
 /** Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity. */
 public class BookingCurrenciesRequestBuilder {
     /** The Count property */

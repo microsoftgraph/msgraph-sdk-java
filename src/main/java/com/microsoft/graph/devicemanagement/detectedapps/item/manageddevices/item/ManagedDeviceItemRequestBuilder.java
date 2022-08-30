@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item;
+package com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item;
 
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity. */
 public class ManagedDeviceItemRequestBuilder {
     /** Path parameters for the request */

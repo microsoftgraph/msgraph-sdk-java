@@ -1,5 +1,9 @@
-package microsoft.graph.external.connections.item.groups.item.members;
+package com.microsoft.graph.external.connections.item.groups.item.members;
 
+import com.microsoft.graph.external.connections.item.groups.item.members.count.CountRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.Identity;
+import com.microsoft.graph.models.externalconnectors.IdentityCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.external.connections.item.groups.item.members.count.CountRequestBuilder;
-import microsoft.graph.models.externalconnectors.Identity;
-import microsoft.graph.models.externalconnectors.IdentityCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity. */
 public class MembersRequestBuilder {
     /** The Count property */

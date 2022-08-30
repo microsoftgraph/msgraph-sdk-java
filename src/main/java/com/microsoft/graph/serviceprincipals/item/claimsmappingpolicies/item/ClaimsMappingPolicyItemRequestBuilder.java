@@ -1,9 +1,9 @@
-package microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item;
+package com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item;
 
+import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/claimsMappingPolicies/{claimsMappingPolicy-id} */
 public class ClaimsMappingPolicyItemRequestBuilder {
     /** Path parameters for the request */

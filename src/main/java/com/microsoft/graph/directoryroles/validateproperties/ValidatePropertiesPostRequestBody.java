@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroles.validateproperties;
+package com.microsoft.graph.directoryroles.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

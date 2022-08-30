@@ -1,5 +1,11 @@
-package microsoft.graph.me.presence;
+package com.microsoft.graph.me.presence;
 
+import com.microsoft.graph.me.presence.clearpresence.ClearPresenceRequestBuilder;
+import com.microsoft.graph.me.presence.clearuserpreferredpresence.ClearUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.me.presence.setpresence.SetPresenceRequestBuilder;
+import com.microsoft.graph.me.presence.setuserpreferredpresence.SetUserPreferredPresenceRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Presence;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +20,17 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.presence.clearpresence.ClearPresenceRequestBuilder;
-import microsoft.graph.me.presence.setpresence.SetPresenceRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Presence;
 /** Provides operations to manage the presence property of the microsoft.graph.user entity. */
 public class PresenceRequestBuilder {
     /** The clearPresence property */
     @javax.annotation.Nonnull
     public ClearPresenceRequestBuilder clearPresence() {
         return new ClearPresenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The clearUserPreferredPresence property */
+    @javax.annotation.Nonnull
+    public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
+        return new ClearUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -33,6 +40,11 @@ public class PresenceRequestBuilder {
     @javax.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The setUserPreferredPresence property */
+    @javax.annotation.Nonnull
+    public SetUserPreferredPresenceRequestBuilder setUserPreferredPresence() {
+        return new SetUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

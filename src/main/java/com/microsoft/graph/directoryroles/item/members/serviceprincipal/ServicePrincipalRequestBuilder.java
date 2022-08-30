@@ -1,5 +1,8 @@
-package microsoft.graph.directoryroles.item.members.serviceprincipal;
+package com.microsoft.graph.directoryroles.item.members.serviceprincipal;
 
+import com.microsoft.graph.directoryroles.item.members.serviceprincipal.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipalCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroles.item.members.serviceprincipal.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipalCollectionResponse;
 /** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipalRequestBuilder {
     /** The Count property */

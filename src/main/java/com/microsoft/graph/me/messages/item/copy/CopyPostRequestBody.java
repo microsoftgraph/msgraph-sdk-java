@@ -1,4 +1,4 @@
-package microsoft.graph.me.messages.item.copy;
+package com.microsoft.graph.me.messages.item.copy;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

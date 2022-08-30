@@ -1,5 +1,7 @@
-package microsoft.graph.teams.item.channels.item.provisionemail;
+package com.microsoft.graph.teams.item.channels.item.provisionemail;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProvisionChannelEmailResult;
 /** Provides operations to call the provisionEmail method. */
 public class ProvisionEmailRequestBuilder {
     /** Path parameters for the request */

@@ -1,4 +1,4 @@
-package microsoft.graph.groupsettingtemplates.item.checkmemberobjects;
+package com.microsoft.graph.groupsettingtemplates.item.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

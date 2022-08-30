@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests;
+package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests;
 
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserConsentRequest;
+import com.microsoft.graph.models.UserConsentRequestCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserConsentRequest;
-import microsoft.graph.models.UserConsentRequestCollectionResponse;
 /** Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity. */
 public class UserConsentRequestsRequestBuilder {
     /** The Count property */

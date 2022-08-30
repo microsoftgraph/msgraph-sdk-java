@@ -1,4 +1,4 @@
-package microsoft.graph.directoryobjects.getbyids;
+package com.microsoft.graph.directoryobjects.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

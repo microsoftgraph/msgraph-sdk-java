@@ -1,4 +1,4 @@
-package microsoft.graph.identity.apiconnectors.item.uploadclientcertificate;
+package com.microsoft.graph.identity.apiconnectors.item.uploadclientcertificate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

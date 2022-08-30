@@ -1,5 +1,7 @@
-package microsoft.graph.drives.item.list.items.item.versions.item.fields;
+package com.microsoft.graph.drives.item.list.items.item.versions.item.fields;
 
+import com.microsoft.graph.models.FieldValueSet;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.FieldValueSet;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity. */
 public class FieldsRequestBuilder {
     /** Path parameters for the request */

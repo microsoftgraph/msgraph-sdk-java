@@ -1,5 +1,9 @@
-package microsoft.graph.policies.tokenissuancepolicies;
+package com.microsoft.graph.policies.tokenissuancepolicies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TokenIssuancePolicy;
+import com.microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
+import com.microsoft.graph.policies.tokenissuancepolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TokenIssuancePolicy;
-import microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
-import microsoft.graph.policies.tokenissuancepolicies.count.CountRequestBuilder;
 /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity. */
 public class TokenIssuancePoliciesRequestBuilder {
     /** The Count property */

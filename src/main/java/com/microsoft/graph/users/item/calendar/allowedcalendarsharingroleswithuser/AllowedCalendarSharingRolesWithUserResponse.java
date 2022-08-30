@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.calendar.allowedcalendarsharingroleswithuser;
+package com.microsoft.graph.users.item.calendar.allowedcalendarsharingroleswithuser;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

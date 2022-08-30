@@ -1,5 +1,9 @@
-package microsoft.graph.teamwork;
+package com.microsoft.graph.teamwork;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Teamwork;
+import com.microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
+import com.microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Teamwork;
-import microsoft.graph.teamwork.workforceintegrations.item.WorkforceIntegrationItemRequestBuilder;
-import microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 /** Provides operations to manage the teamwork singleton. */
 public class TeamworkRequestBuilder {
     /** Path parameters for the request */
@@ -227,7 +227,7 @@ public class TeamworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.teamwork.workforceIntegrations.item collection
+     * Gets an item from the com.Microsoft.Graph.teamwork.workforceIntegrations.item collection
      * @param id Unique identifier of the item
      * @return a WorkforceIntegrationItemRequestBuilder
      */

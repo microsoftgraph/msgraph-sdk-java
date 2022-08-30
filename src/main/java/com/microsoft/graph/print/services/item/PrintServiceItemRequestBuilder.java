@@ -1,5 +1,9 @@
-package microsoft.graph.print.services.item;
+package com.microsoft.graph.print.services.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintService;
+import com.microsoft.graph.print.services.item.endpoints.EndpointsRequestBuilder;
+import com.microsoft.graph.print.services.item.endpoints.item.PrintServiceEndpointItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintService;
-import microsoft.graph.print.services.item.endpoints.EndpointsRequestBuilder;
-import microsoft.graph.print.services.item.endpoints.item.PrintServiceEndpointItemRequestBuilder;
 /** Provides operations to manage the services property of the microsoft.graph.print entity. */
 public class PrintServiceItemRequestBuilder {
     /** The endpoints property */
@@ -200,7 +200,7 @@ public class PrintServiceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.services.item.endpoints.item collection
+     * Gets an item from the com.Microsoft.Graph.print.services.item.endpoints.item collection
      * @param id Unique identifier of the item
      * @return a PrintServiceEndpointItemRequestBuilder
      */

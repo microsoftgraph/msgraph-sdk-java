@@ -1,4 +1,4 @@
-package microsoft.graph.directoryobjects.item.getmembergroups;
+package com.microsoft.graph.directoryobjects.item.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

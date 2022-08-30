@@ -1,5 +1,15 @@
-package microsoft.graph.directory.deleteditems.item;
+package com.microsoft.graph.directory.deleteditems.item;
 
+import com.microsoft.graph.directory.deleteditems.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.group.GroupRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.deleteditems.item.application.ApplicationRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.group.GroupRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.restore.RestoreRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

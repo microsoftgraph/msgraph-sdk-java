@@ -1,5 +1,9 @@
-package microsoft.graph.security.securescores;
+package com.microsoft.graph.security.securescores;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SecureScore;
+import com.microsoft.graph.models.SecureScoreCollectionResponse;
+import com.microsoft.graph.security.securescores.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SecureScore;
-import microsoft.graph.models.SecureScoreCollectionResponse;
-import microsoft.graph.security.securescores.count.CountRequestBuilder;
 /** Provides operations to manage the secureScores property of the microsoft.graph.security entity. */
 public class SecureScoresRequestBuilder {
     /** The Count property */

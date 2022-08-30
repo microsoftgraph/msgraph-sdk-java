@@ -1,5 +1,8 @@
-package microsoft.graph.search;
+package com.microsoft.graph.search;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SearchEntity;
+import com.microsoft.graph.search.query.QueryRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SearchEntity;
-import microsoft.graph.search.query.QueryRequestBuilder;
 /** Provides operations to manage the searchEntity singleton. */
 public class SearchRequestBuilder {
     /** Path parameters for the request */

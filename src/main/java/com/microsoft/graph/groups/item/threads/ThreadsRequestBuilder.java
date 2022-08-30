@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.threads;
+package com.microsoft.graph.groups.item.threads;
 
+import com.microsoft.graph.groups.item.threads.count.CountRequestBuilder;
+import com.microsoft.graph.models.ConversationThread;
+import com.microsoft.graph.models.ConversationThreadCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.threads.count.CountRequestBuilder;
-import microsoft.graph.models.ConversationThread;
-import microsoft.graph.models.ConversationThreadCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the threads property of the microsoft.graph.group entity. */
 public class ThreadsRequestBuilder {
     /** The Count property */

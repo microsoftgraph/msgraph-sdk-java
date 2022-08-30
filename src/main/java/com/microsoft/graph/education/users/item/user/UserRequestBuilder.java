@@ -1,5 +1,7 @@
-package microsoft.graph.education.users.item.user;
+package com.microsoft.graph.education.users.item.user;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.User;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.User;
 /** Provides operations to manage the user property of the microsoft.graph.educationUser entity. */
 public class UserRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.item.DeviceComplianceActionItemItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.ScheduledActionConfigurationsRequestBuilder;
+import com.microsoft.graph.models.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.item.DeviceComplianceActionItemItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.scheduledactionconfigurations.ScheduledActionConfigurationsRequestBuilder;
-import microsoft.graph.models.DeviceComplianceScheduledActionForRule;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity. */
 public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceActionItemItemRequestBuilder
      */

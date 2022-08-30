@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.manageddevices.item.cleanwindowsdevice;
+package com.microsoft.graph.devicemanagement.manageddevices.item.cleanwindowsdevice;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

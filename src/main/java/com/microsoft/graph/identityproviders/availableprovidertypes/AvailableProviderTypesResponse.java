@@ -1,4 +1,4 @@
-package microsoft.graph.identityproviders.availableprovidertypes;
+package com.microsoft.graph.identityproviders.availableprovidertypes;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

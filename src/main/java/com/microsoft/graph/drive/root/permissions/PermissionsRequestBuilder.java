@@ -1,5 +1,9 @@
-package microsoft.graph.drive.root.permissions;
+package com.microsoft.graph.drive.root.permissions;
 
+import com.microsoft.graph.drive.root.permissions.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Permission;
+import com.microsoft.graph.models.PermissionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.root.permissions.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Permission;
-import microsoft.graph.models.PermissionCollectionResponse;
 /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
 public class PermissionsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.sites.item.onenote.resources;
+package com.microsoft.graph.sites.item.onenote.resources;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteResource;
+import com.microsoft.graph.models.OnenoteResourceCollectionResponse;
+import com.microsoft.graph.sites.item.onenote.resources.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteResource;
-import microsoft.graph.models.OnenoteResourceCollectionResponse;
-import microsoft.graph.sites.item.onenote.resources.count.CountRequestBuilder;
 /** Provides operations to manage the resources property of the microsoft.graph.onenote entity. */
 public class ResourcesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,26 @@
-package microsoft.graph.me.joinedteams.item;
+package com.microsoft.graph.me.joinedteams.item;
 
+import com.microsoft.graph.me.joinedteams.item.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.archive.ArchiveRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.channels.ChannelsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.clone.CloneRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.completemigration.CompleteMigrationRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.group.GroupRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.incomingchannels.IncomingChannelsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.members.MembersRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.operations.item.TeamsAsyncOperationItemRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.photo.PhotoRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.primarychannel.PrimaryChannelRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.schedule.ScheduleRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.template.TemplateRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.unarchive.UnarchiveRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Team;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,27 +35,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.joinedteams.item.allchannels.AllChannelsRequestBuilder;
-import microsoft.graph.me.joinedteams.item.archive.ArchiveRequestBuilder;
-import microsoft.graph.me.joinedteams.item.channels.ChannelsRequestBuilder;
-import microsoft.graph.me.joinedteams.item.clone.CloneRequestBuilder;
-import microsoft.graph.me.joinedteams.item.completemigration.CompleteMigrationRequestBuilder;
-import microsoft.graph.me.joinedteams.item.group.GroupRequestBuilder;
-import microsoft.graph.me.joinedteams.item.incomingchannels.IncomingChannelsRequestBuilder;
-import microsoft.graph.me.joinedteams.item.installedapps.InstalledAppsRequestBuilder;
-import microsoft.graph.me.joinedteams.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
-import microsoft.graph.me.joinedteams.item.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.me.joinedteams.item.members.MembersRequestBuilder;
-import microsoft.graph.me.joinedteams.item.operations.item.TeamsAsyncOperationItemRequestBuilder;
-import microsoft.graph.me.joinedteams.item.operations.OperationsRequestBuilder;
-import microsoft.graph.me.joinedteams.item.photo.PhotoRequestBuilder;
-import microsoft.graph.me.joinedteams.item.primarychannel.PrimaryChannelRequestBuilder;
-import microsoft.graph.me.joinedteams.item.schedule.ScheduleRequestBuilder;
-import microsoft.graph.me.joinedteams.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import microsoft.graph.me.joinedteams.item.template.TemplateRequestBuilder;
-import microsoft.graph.me.joinedteams.item.unarchive.UnarchiveRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Team;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class TeamItemRequestBuilder {
     /** The allChannels property */
@@ -124,28 +124,28 @@ public class TeamItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.allChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.allChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.channels.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.channels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.joinedteams.item.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.joinedteams.item.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.me.joinedteams.item.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.joinedteams.item.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamItemRequestBuilder and sets the default values.
@@ -367,19 +367,19 @@ public class TeamItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.incomingChannels.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.incomingChannels.item collection
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.joinedteams.item.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.joinedteams.item.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new microsoft.graph.me.joinedteams.item.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.joinedteams.item.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.installedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.installedApps.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -391,7 +391,7 @@ public class TeamItemRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -403,7 +403,7 @@ public class TeamItemRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.me.joinedTeams.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAsyncOperationItemRequestBuilder
      */

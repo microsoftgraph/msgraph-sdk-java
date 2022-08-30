@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.deviceenrollmentconfigurations;
+package com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations;
 
+import com.microsoft.graph.devicemanagement.deviceenrollmentconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.deviceenrollmentconfigurations.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceEnrollmentConfiguration;
-import microsoft.graph.models.DeviceEnrollmentConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity. */
 public class DeviceEnrollmentConfigurationsRequestBuilder {
     /** The Count property */

@@ -1,14 +1,18 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum DeviceManagementReportFileFormat implements ValuedEnum {
     /** CSV Format */
     Csv("csv"),
-    /** Portable Document Format */
-    Pdf("pdf");
+    /** PDF Format */
+    Pdf("pdf"),
+    /** JSON Format */
+    Json("json"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementReportFileFormat(final String value) {
         this.value = value;
@@ -21,6 +25,8 @@ public enum DeviceManagementReportFileFormat implements ValuedEnum {
         switch(searchValue) {
             case "csv": return Csv;
             case "pdf": return Pdf;
+            case "json": return Json;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

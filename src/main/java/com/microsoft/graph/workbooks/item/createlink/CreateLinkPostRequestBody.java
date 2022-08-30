@@ -1,4 +1,4 @@
-package microsoft.graph.workbooks.item.createlink;
+package com.microsoft.graph.workbooks.item.createlink;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
-    /** The enhancedBiometricsState property */
+    /** Possible values of a property */
     private Enablement _enhancedBiometricsState;
     /** Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire */
     private Integer _pinExpirationInDays;
@@ -28,7 +28,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     private Boolean _remotePassportEnabled;
     /** Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM. */
     private Boolean _securityDeviceRequired;
-    /** The state property */
+    /** Possible values of a property */
     private Enablement _state;
     /** Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures. */
     private Boolean _unlockWithBiometricsEnabled;
@@ -51,7 +51,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         return new DeviceEnrollmentWindowsHelloForBusinessConfiguration();
     }
     /**
-     * Gets the enhancedBiometricsState property value. The enhancedBiometricsState property
+     * Gets the enhancedBiometricsState property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         return this._securityDeviceRequired;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. Possible values of a property
      * @return a enablement
      */
     @javax.annotation.Nullable
@@ -190,7 +190,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         writer.writeBooleanValue("unlockWithBiometricsEnabled", this.getUnlockWithBiometricsEnabled());
     }
     /**
-     * Sets the enhancedBiometricsState property value. The enhancedBiometricsState property
+     * Sets the enhancedBiometricsState property value. Possible values of a property
      * @param value Value to set for the enhancedBiometricsState property.
      * @return a void
      */
@@ -270,7 +270,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         this._securityDeviceRequired = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. Possible values of a property
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources;
+package com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources;
 
+import com.microsoft.graph.models.LinkedResource;
+import com.microsoft.graph.models.LinkedResourceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.LinkedResource;
-import microsoft.graph.models.LinkedResourceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources.count.CountRequestBuilder;
 /** Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity. */
 public class LinkedResourcesRequestBuilder {
     /** The Count property */

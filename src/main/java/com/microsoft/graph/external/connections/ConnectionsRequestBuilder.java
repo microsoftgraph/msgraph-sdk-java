@@ -1,5 +1,9 @@
-package microsoft.graph.external.connections;
+package com.microsoft.graph.external.connections;
 
+import com.microsoft.graph.external.connections.count.CountRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.ExternalConnection;
+import com.microsoft.graph.models.externalconnectors.ExternalConnectionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.external.connections.count.CountRequestBuilder;
-import microsoft.graph.models.externalconnectors.ExternalConnection;
-import microsoft.graph.models.externalconnectors.ExternalConnectionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity. */
 public class ConnectionsRequestBuilder {
     /** The Count property */

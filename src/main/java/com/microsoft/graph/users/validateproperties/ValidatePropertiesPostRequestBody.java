@@ -1,4 +1,4 @@
-package microsoft.graph.users.validateproperties;
+package com.microsoft.graph.users.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.me.authentication.phonemethods;
+package com.microsoft.graph.me.authentication.phonemethods;
 
+import com.microsoft.graph.me.authentication.phonemethods.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.PhoneAuthenticationMethodCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.phonemethods.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PhoneAuthenticationMethod;
-import microsoft.graph.models.PhoneAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
 public class PhoneMethodsRequestBuilder {
     /** The Count property */

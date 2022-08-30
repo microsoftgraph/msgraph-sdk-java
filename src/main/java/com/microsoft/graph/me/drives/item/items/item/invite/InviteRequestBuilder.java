@@ -1,5 +1,6 @@
-package microsoft.graph.me.drives.item.items.item.invite;
+package com.microsoft.graph.me.drives.item.items.item.invite;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the invite method. */
 public class InviteRequestBuilder {
     /** Path parameters for the request */

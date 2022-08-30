@@ -1,5 +1,36 @@
-package microsoft.graph.deviceappmanagement;
+package com.microsoft.graph.deviceappmanagement;
 
+import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.AndroidManagedAppProtectionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.AndroidManagedAppProtectionItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.DefaultManagedAppProtectionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.DefaultManagedAppProtectionItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.IosManagedAppProtectionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.IosManagedAppProtectionItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedapppolicies.item.ManagedAppPolicyItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedapppolicies.ManagedAppPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappstatuses.item.ManagedAppStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappstatuses.ManagedAppStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.ManagedEBookItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.ManagedEBooksRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.MdmWindowsInformationProtectionPolicyItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.MdmWindowsInformationProtectionPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappcategories.item.MobileAppCategoryItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappcategories.MobileAppCategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.ManagedDeviceMobileAppConfigurationItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.MobileAppConfigurationsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.MobileAppItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.syncmicrosoftstoreforbusinessapps.SyncMicrosoftStoreForBusinessAppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.TargetedManagedAppConfigurationItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.TargetedManagedAppConfigurationsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.vpptokens.item.VppTokenItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.vpptokens.VppTokensRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.item.WindowsInformationProtectionPolicyItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.WindowsInformationProtectionPoliciesRequestBuilder;
+import com.microsoft.graph.models.DeviceAppManagement;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,37 +45,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.androidmanagedappprotections.AndroidManagedAppProtectionsRequestBuilder;
-import microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.AndroidManagedAppProtectionItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.defaultmanagedappprotections.DefaultManagedAppProtectionsRequestBuilder;
-import microsoft.graph.deviceappmanagement.defaultmanagedappprotections.item.DefaultManagedAppProtectionItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.iosmanagedappprotections.IosManagedAppProtectionsRequestBuilder;
-import microsoft.graph.deviceappmanagement.iosmanagedappprotections.item.IosManagedAppProtectionItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedapppolicies.item.ManagedAppPolicyItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedapppolicies.ManagedAppPoliciesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.ManagedAppRegistrationItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappstatuses.item.ManagedAppStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappstatuses.ManagedAppStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.ManagedEBookItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.ManagedEBooksRequestBuilder;
-import microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.MdmWindowsInformationProtectionPolicyItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.MdmWindowsInformationProtectionPoliciesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappcategories.item.MobileAppCategoryItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappcategories.MobileAppCategoriesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.ManagedDeviceMobileAppConfigurationItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.MobileAppConfigurationsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.MobileAppItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
-import microsoft.graph.deviceappmanagement.syncmicrosoftstoreforbusinessapps.SyncMicrosoftStoreForBusinessAppsRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.TargetedManagedAppConfigurationItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.TargetedManagedAppConfigurationsRequestBuilder;
-import microsoft.graph.deviceappmanagement.vpptokens.item.VppTokenItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.vpptokens.VppTokensRequestBuilder;
-import microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.item.WindowsInformationProtectionPolicyItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.windowsinformationprotectionpolicies.WindowsInformationProtectionPoliciesRequestBuilder;
-import microsoft.graph.models.DeviceAppManagement;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceAppManagement singleton. */
 public class DeviceAppManagementRequestBuilder {
     /** The androidManagedAppProtections property */
@@ -129,7 +129,7 @@ public class DeviceAppManagementRequestBuilder {
         return new WindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item collection
      * @param id Unique identifier of the item
      * @return a AndroidManagedAppProtectionItemRequestBuilder
      */
@@ -230,7 +230,7 @@ public class DeviceAppManagementRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item collection
      * @param id Unique identifier of the item
      * @return a DefaultManagedAppProtectionItemRequestBuilder
      */
@@ -293,7 +293,7 @@ public class DeviceAppManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item collection
      * @param id Unique identifier of the item
      * @return a IosManagedAppProtectionItemRequestBuilder
      */
@@ -305,7 +305,7 @@ public class DeviceAppManagementRequestBuilder {
         return new IosManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
@@ -317,7 +317,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppRegistrationItemRequestBuilder
      */
@@ -329,7 +329,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppStatusItemRequestBuilder
      */
@@ -341,7 +341,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item collection
      * @param id Unique identifier of the item
      * @return a ManagedEBookItemRequestBuilder
      */
@@ -353,7 +353,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedEBookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
      * @param id Unique identifier of the item
      * @return a MdmWindowsInformationProtectionPolicyItemRequestBuilder
      */
@@ -365,7 +365,7 @@ public class DeviceAppManagementRequestBuilder {
         return new MdmWindowsInformationProtectionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppCategories.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */
@@ -377,7 +377,7 @@ public class DeviceAppManagementRequestBuilder {
         return new MobileAppCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
      */
@@ -389,7 +389,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedDeviceMobileAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppItemRequestBuilder
      */
@@ -456,7 +456,7 @@ public class DeviceAppManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a TargetedManagedAppConfigurationItemRequestBuilder
      */
@@ -468,7 +468,7 @@ public class DeviceAppManagementRequestBuilder {
         return new TargetedManagedAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.vppTokens.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.vppTokens.item collection
      * @param id Unique identifier of the item
      * @return a VppTokenItemRequestBuilder
      */
@@ -480,7 +480,7 @@ public class DeviceAppManagementRequestBuilder {
         return new VppTokenItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionPolicyItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class EducationAssignmentResource extends Entity implements Parsable {
     /** Indicates whether this resource should be copied to each student submission for modification and submission. Required */
     private Boolean _distributeForStudentWork;
     /** Resource object that has been associated with this assignment. */
     private EducationResource _resource;
     /**
-     * Instantiates a new EducationAssignmentResource and sets the default values.
+     * Instantiates a new educationAssignmentResource and sets the default values.
      * @return a void
      */
     public EducationAssignmentResource() {
@@ -23,7 +24,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentResource
+     * @return a educationAssignmentResource
      */
     @javax.annotation.Nonnull
     public static EducationAssignmentResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

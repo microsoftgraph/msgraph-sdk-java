@@ -1,4 +1,4 @@
-package microsoft.graph.organization.item.setmobiledevicemanagementauthority;
+package com.microsoft.graph.organization.item.setmobiledevicemanagementauthority;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

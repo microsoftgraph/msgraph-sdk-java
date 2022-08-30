@@ -1,5 +1,9 @@
-package microsoft.graph.certificatebasedauthconfiguration;
+package com.microsoft.graph.certificatebasedauthconfiguration;
 
+import com.microsoft.graph.certificatebasedauthconfiguration.count.CountRequestBuilder;
+import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
+import com.microsoft.graph.models.CertificateBasedAuthConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.certificatebasedauthconfiguration.count.CountRequestBuilder;
-import microsoft.graph.models.CertificateBasedAuthConfiguration;
-import microsoft.graph.models.CertificateBasedAuthConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of certificateBasedAuthConfiguration entities. */
 public class CertificateBasedAuthConfigurationRequestBuilder {
     /** The Count property */

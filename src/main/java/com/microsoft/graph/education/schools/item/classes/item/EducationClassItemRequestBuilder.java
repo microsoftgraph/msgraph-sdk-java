@@ -1,9 +1,9 @@
-package microsoft.graph.education.schools.item.classes.item;
+package com.microsoft.graph.education.schools.item.classes.item;
 
+import com.microsoft.graph.education.schools.item.classes.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.education.schools.item.classes.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /education/schools/{educationSchool-id}/classes/{educationClass-id} */
 public class EducationClassItemRequestBuilder {
     /** Path parameters for the request */

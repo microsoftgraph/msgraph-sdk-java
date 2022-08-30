@@ -1,5 +1,9 @@
-package microsoft.graph.me.inferenceclassification.overrides;
+package com.microsoft.graph.me.inferenceclassification.overrides;
 
+import com.microsoft.graph.me.inferenceclassification.overrides.count.CountRequestBuilder;
+import com.microsoft.graph.models.InferenceClassificationOverride;
+import com.microsoft.graph.models.InferenceClassificationOverrideCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.inferenceclassification.overrides.count.CountRequestBuilder;
-import microsoft.graph.models.InferenceClassificationOverride;
-import microsoft.graph.models.InferenceClassificationOverrideCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity. */
 public class OverridesRequestBuilder {
     /** The Count property */

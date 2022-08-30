@@ -1,5 +1,10 @@
-package microsoft.graph.me.todo.lists;
+package com.microsoft.graph.me.todo.lists;
 
+import com.microsoft.graph.me.todo.lists.count.CountRequestBuilder;
+import com.microsoft.graph.me.todo.lists.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TodoTaskList;
+import com.microsoft.graph.models.TodoTaskListCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.todo.lists.count.CountRequestBuilder;
-import microsoft.graph.me.todo.lists.delta.DeltaRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TodoTaskList;
-import microsoft.graph.models.TodoTaskListCollectionResponse;
 /** Provides operations to manage the lists property of the microsoft.graph.todo entity. */
 public class ListsRequestBuilder {
     /** The Count property */

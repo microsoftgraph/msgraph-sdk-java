@@ -1,4 +1,4 @@
-package microsoft.graph.contacts.validateproperties;
+package com.microsoft.graph.contacts.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

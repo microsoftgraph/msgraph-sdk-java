@@ -1,5 +1,10 @@
-package microsoft.graph.policies.crosstenantaccesspolicy;
+package com.microsoft.graph.policies.crosstenantaccesspolicy;
 
+import com.microsoft.graph.models.CrossTenantAccessPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.default_escaped.DefaultRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CrossTenantAccessPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.crosstenantaccesspolicy.default_escaped.DefaultRequestBuilder;
-import microsoft.graph.policies.crosstenantaccesspolicy.partners.item.CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
-import microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
 /** Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity. */
 public class CrossTenantAccessPolicyRequestBuilder {
     /** The default property */
@@ -257,7 +257,7 @@ public class CrossTenantAccessPolicyRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.crossTenantAccessPolicy.partners.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.crossTenantAccessPolicy.partners.item collection
      * @param id Unique identifier of the item
      * @return a CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      */

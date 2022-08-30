@@ -1,5 +1,22 @@
-package microsoft.graph.security.cases.ediscoverycases.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryCase;
+import com.microsoft.graph.security.cases.ediscoverycases.item.close.CloseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.CustodiansRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.operations.item.CaseOperationItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reopen.ReopenRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.EdiscoveryReviewSetItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.ReviewSetsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.EdiscoverySearchItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.SearchesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.settings.SettingsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.TagsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,23 +31,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryCase;
-import microsoft.graph.security.cases.ediscoverycases.item.close.CloseRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.custodians.CustodiansRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.operations.item.CaseOperationItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.operations.OperationsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reopen.ReopenRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.EdiscoveryReviewSetItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.reviewsets.ReviewSetsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.item.EdiscoverySearchItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.searches.SearchesRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.settings.SettingsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.tags.item.EdiscoveryReviewTagItemRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.tags.TagsRequestBuilder;
 /** Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity. */
 public class EdiscoveryCaseItemRequestBuilder {
     /** The close property */
@@ -202,7 +202,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryCustodianItemRequestBuilder
      */
@@ -316,7 +316,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.noncustodialDataSources.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.noncustodialDataSources.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
      */
@@ -328,7 +328,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoveryNoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a CaseOperationItemRequestBuilder
      */
@@ -395,7 +395,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewSetItemRequestBuilder
      */
@@ -407,7 +407,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoveryReviewSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoverySearchItemRequestBuilder
      */
@@ -419,7 +419,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoverySearchItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewTagItemRequestBuilder
      */

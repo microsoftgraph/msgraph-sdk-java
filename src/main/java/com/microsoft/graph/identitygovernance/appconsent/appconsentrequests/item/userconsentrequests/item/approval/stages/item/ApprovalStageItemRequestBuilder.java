@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.item;
+package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.item;
 
+import com.microsoft.graph.models.ApprovalStage;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ApprovalStage;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the stages property of the microsoft.graph.approval entity. */
 public class ApprovalStageItemRequestBuilder {
     /** Path parameters for the request */

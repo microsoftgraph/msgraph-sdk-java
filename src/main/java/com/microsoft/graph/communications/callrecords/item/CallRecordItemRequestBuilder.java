@@ -1,5 +1,9 @@
-package microsoft.graph.communications.callrecords.item;
+package com.microsoft.graph.communications.callrecords.item;
 
+import com.microsoft.graph.communications.callrecords.item.sessions.item.SessionItemRequestBuilder;
+import com.microsoft.graph.communications.callrecords.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.models.callrecords.CallRecord;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.callrecords.item.sessions.item.SessionItemRequestBuilder;
-import microsoft.graph.communications.callrecords.item.sessions.SessionsRequestBuilder;
-import microsoft.graph.models.callrecords.CallRecord;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity. */
 public class CallRecordItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class CallRecordItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.communications.callRecords.item.sessions.item collection
+     * Gets an item from the com.Microsoft.Graph.communications.callRecords.item.sessions.item collection
      * @param id Unique identifier of the item
      * @return a SessionItemRequestBuilder
      */

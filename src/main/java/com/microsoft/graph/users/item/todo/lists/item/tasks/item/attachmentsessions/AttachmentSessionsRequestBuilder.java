@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions;
+package com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions;
 
+import com.microsoft.graph.models.AttachmentSession;
+import com.microsoft.graph.models.AttachmentSessionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AttachmentSession;
-import microsoft.graph.models.AttachmentSessionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.todo.lists.item.tasks.item.attachmentsessions.count.CountRequestBuilder;
 /** Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity. */
 public class AttachmentSessionsRequestBuilder {
     /** The Count property */

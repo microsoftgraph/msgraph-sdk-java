@@ -1,5 +1,7 @@
-package microsoft.graph.serviceprincipals.item.endpoints.item;
+package com.microsoft.graph.serviceprincipals.item.endpoints.item;
 
+import com.microsoft.graph.models.Endpoint;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Endpoint;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity. */
 public class EndpointItemRequestBuilder {
     /** Path parameters for the request */

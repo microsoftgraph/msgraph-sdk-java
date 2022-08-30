@@ -1,4 +1,4 @@
-package microsoft.graph.me.joinedteams.item.archive;
+package com.microsoft.graph.me.joinedteams.item.archive;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

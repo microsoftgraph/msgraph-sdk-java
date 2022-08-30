@@ -1,4 +1,4 @@
-package microsoft.graph.models.callrecords;
+package com.microsoft.graph.models.callrecords;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

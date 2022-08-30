@@ -1,5 +1,7 @@
-package microsoft.graph.policies.activitybasedtimeoutpolicies.item;
+package com.microsoft.graph.policies.activitybasedtimeoutpolicies.item;
 
+import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ActivityBasedTimeoutPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity. */
 public class ActivityBasedTimeoutPolicyItemRequestBuilder {
     /** Path parameters for the request */

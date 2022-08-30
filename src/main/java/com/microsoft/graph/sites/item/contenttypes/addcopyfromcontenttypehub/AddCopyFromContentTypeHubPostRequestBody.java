@@ -1,4 +1,4 @@
-package microsoft.graph.sites.item.contenttypes.addcopyfromcontenttypehub;
+package com.microsoft.graph.sites.item.contenttypes.addcopyfromcontenttypehub;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,16 @@
-package microsoft.graph.shares.item.listitem;
+package com.microsoft.graph.shares.item.listitem;
 
+import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.shares.item.listitem.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.documentsetversions.DocumentSetVersionsRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.driveitem.DriveItemRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.fields.FieldsRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.versions.item.ListItemVersionItemRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.versions.VersionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ListItem;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.shares.item.listitem.analytics.AnalyticsRequestBuilder;
-import microsoft.graph.shares.item.listitem.documentsetversions.DocumentSetVersionsRequestBuilder;
-import microsoft.graph.shares.item.listitem.documentsetversions.item.DocumentSetVersionItemRequestBuilder;
-import microsoft.graph.shares.item.listitem.driveitem.DriveItemRequestBuilder;
-import microsoft.graph.shares.item.listitem.fields.FieldsRequestBuilder;
-import microsoft.graph.shares.item.listitem.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import microsoft.graph.shares.item.listitem.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import microsoft.graph.shares.item.listitem.versions.item.ListItemVersionItemRequestBuilder;
-import microsoft.graph.shares.item.listitem.versions.VersionsRequestBuilder;
 /** Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity. */
 public class ListItemRequestBuilder {
     /** The analytics property */
@@ -227,7 +227,7 @@ public class ListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.shares.item.listItem.documentSetVersions.item collection
+     * Gets an item from the com.Microsoft.Graph.shares.item.listItem.documentSetVersions.item collection
      * @param id Unique identifier of the item
      * @return a DocumentSetVersionItemRequestBuilder
      */
@@ -367,7 +367,7 @@ public class ListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.shares.item.listItem.versions.item collection
+     * Gets an item from the com.Microsoft.Graph.shares.item.listItem.versions.item collection
      * @param id Unique identifier of the item
      * @return a ListItemVersionItemRequestBuilder
      */

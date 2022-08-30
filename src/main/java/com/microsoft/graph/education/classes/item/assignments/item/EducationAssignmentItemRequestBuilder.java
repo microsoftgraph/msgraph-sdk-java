@@ -1,5 +1,16 @@
-package microsoft.graph.education.classes.item.assignments.item;
+package com.microsoft.graph.education.classes.item.assignments.item;
 
+import com.microsoft.graph.education.classes.item.assignments.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.categories.item.EducationCategoryItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.publish.PublishRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.resources.ResourcesRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.rubric.RubricRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.submissions.SubmissionsRequestBuilder;
+import com.microsoft.graph.models.EducationAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.classes.item.assignments.item.categories.CategoriesRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.categories.item.EducationCategoryItemRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.publish.PublishRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.resources.ResourcesRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.rubric.RubricRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.submissions.SubmissionsRequestBuilder;
-import microsoft.graph.models.EducationAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.educationClass entity. */
 public class EducationAssignmentItemRequestBuilder {
     /** The categories property */
@@ -64,7 +64,7 @@ public class EducationAssignmentItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a EducationCategoryItemRequestBuilder
      */
@@ -350,7 +350,7 @@ public class EducationAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.resources.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.resources.item collection
      * @param id Unique identifier of the item
      * @return a EducationAssignmentResourceItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class EducationAssignmentItemRequestBuilder {
         return new EducationAssignmentResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item.submissions.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.submissions.item collection
      * @param id Unique identifier of the item
      * @return a EducationSubmissionItemRequestBuilder
      */

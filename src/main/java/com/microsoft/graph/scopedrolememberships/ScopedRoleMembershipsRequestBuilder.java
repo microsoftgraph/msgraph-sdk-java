@@ -1,5 +1,9 @@
-package microsoft.graph.scopedrolememberships;
+package com.microsoft.graph.scopedrolememberships;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ScopedRoleMembership;
+import com.microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
+import com.microsoft.graph.scopedrolememberships.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ScopedRoleMembership;
-import microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
-import microsoft.graph.scopedrolememberships.count.CountRequestBuilder;
 /** Provides operations to manage the collection of scopedRoleMembership entities. */
 public class ScopedRoleMembershipsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,7 @@
-package microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.lastindexoperation;
+package com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.lastindexoperation;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryIndexOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryIndexOperation;
 /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity. */
 public class LastIndexOperationRequestBuilder {
     /** Path parameters for the request */

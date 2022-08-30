@@ -1,5 +1,7 @@
-package microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.group;
+package com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.item.group;
 
+import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Group;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the group property of the microsoft.graph.security.unifiedGroupSource entity. */
 public class GroupRequestBuilder {
     /** Path parameters for the request */

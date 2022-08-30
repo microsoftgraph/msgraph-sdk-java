@@ -1,5 +1,7 @@
-package microsoft.graph.policies.permissiongrantpolicies.item.excludes.item;
+package com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PermissionGrantConditionSet;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PermissionGrantConditionSet;
 /** Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity. */
 public class PermissionGrantConditionSetItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.notificationmessagetemplates;
+package com.microsoft.graph.devicemanagement.notificationmessagetemplates;
 
+import com.microsoft.graph.devicemanagement.notificationmessagetemplates.count.CountRequestBuilder;
+import com.microsoft.graph.models.NotificationMessageTemplate;
+import com.microsoft.graph.models.NotificationMessageTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.notificationmessagetemplates.count.CountRequestBuilder;
-import microsoft.graph.models.NotificationMessageTemplate;
-import microsoft.graph.models.NotificationMessageTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity. */
 public class NotificationMessageTemplatesRequestBuilder {
     /** The Count property */

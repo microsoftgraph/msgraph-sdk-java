@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.planner.plans.item.buckets.item;
+package com.microsoft.graph.users.item.planner.plans.item.buckets.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerBucket;
+import com.microsoft.graph.users.item.planner.plans.item.buckets.item.tasks.item.PlannerTaskItemRequestBuilder;
+import com.microsoft.graph.users.item.planner.plans.item.buckets.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerBucket;
-import microsoft.graph.users.item.planner.plans.item.buckets.item.tasks.item.PlannerTaskItemRequestBuilder;
-import microsoft.graph.users.item.planner.plans.item.buckets.item.tasks.TasksRequestBuilder;
 /** Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity. */
 public class PlannerBucketItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class PlannerBucketItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.planner.plans.item.buckets.item.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.planner.plans.item.buckets.item.tasks.item collection
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

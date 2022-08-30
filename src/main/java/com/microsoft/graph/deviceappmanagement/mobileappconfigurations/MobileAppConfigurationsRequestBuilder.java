@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.mobileappconfigurations;
+package com.microsoft.graph.deviceappmanagement.mobileappconfigurations;
 
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
-import microsoft.graph.models.ManagedDeviceMobileAppConfigurationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppConfigurationsRequestBuilder {
     /** The Count property */

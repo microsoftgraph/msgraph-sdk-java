@@ -1,5 +1,9 @@
-package microsoft.graph.informationprotection.bitlocker.recoverykeys;
+package com.microsoft.graph.informationprotection.bitlocker.recoverykeys;
 
+import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.count.CountRequestBuilder;
+import com.microsoft.graph.models.BitlockerRecoveryKey;
+import com.microsoft.graph.models.BitlockerRecoveryKeyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.bitlocker.recoverykeys.count.CountRequestBuilder;
-import microsoft.graph.models.BitlockerRecoveryKey;
-import microsoft.graph.models.BitlockerRecoveryKeyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity. */
 public class RecoveryKeysRequestBuilder {
     /** The Count property */

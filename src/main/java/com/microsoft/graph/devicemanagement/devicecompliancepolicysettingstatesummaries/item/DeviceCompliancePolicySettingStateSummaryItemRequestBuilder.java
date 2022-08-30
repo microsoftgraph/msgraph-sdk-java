@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.DeviceComplianceSettingStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.item.DeviceComplianceSettingStateItemRequestBuilder;
+import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.DeviceComplianceSettingStatesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicysettingstatesummaries.item.devicecompliancesettingstates.item.DeviceComplianceSettingStateItemRequestBuilder;
-import microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
     /** The deviceComplianceSettingStates property */
@@ -200,7 +200,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item.deviceComplianceSettingStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item.deviceComplianceSettingStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceSettingStateItemRequestBuilder
      */

@@ -1,5 +1,12 @@
-package microsoft.graph.devices.item.registeredusers;
+package com.microsoft.graph.devices.item.registeredusers;
 
+import com.microsoft.graph.devices.item.registeredusers.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.count.CountRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devices.item.registeredusers.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.devices.item.registeredusers.count.CountRequestBuilder;
-import microsoft.graph.devices.item.registeredusers.endpoint.EndpointRequestBuilder;
-import microsoft.graph.devices.item.registeredusers.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.devices.item.registeredusers.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
 public class RegisteredUsersRequestBuilder {
     /** The appRoleAssignment property */

@@ -1,5 +1,9 @@
-package microsoft.graph.sites.item.lists;
+package com.microsoft.graph.sites.item.lists;
 
+import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.ListCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.sites.item.lists.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.List;
-import microsoft.graph.models.ListCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.sites.item.lists.count.CountRequestBuilder;
 /** Provides operations to manage the lists property of the microsoft.graph.site entity. */
 public class ListsRequestBuilder {
     /** The Count property */

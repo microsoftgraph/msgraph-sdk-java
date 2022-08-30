@@ -1,5 +1,12 @@
-package microsoft.graph.users.item.onenote.notebooks.item;
+package com.microsoft.graph.users.item.onenote.notebooks.item;
 
+import com.microsoft.graph.models.Notebook;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.onenote.notebooks.item.copynotebook.CopyNotebookRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.SectionGroupItemRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.SectionGroupsRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sections.item.OnenoteSectionItemRequestBuilder;
+import com.microsoft.graph.users.item.onenote.notebooks.item.sections.SectionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Notebook;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.onenote.notebooks.item.copynotebook.CopyNotebookRequestBuilder;
-import microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.item.SectionGroupItemRequestBuilder;
-import microsoft.graph.users.item.onenote.notebooks.item.sectiongroups.SectionGroupsRequestBuilder;
-import microsoft.graph.users.item.onenote.notebooks.item.sections.item.OnenoteSectionItemRequestBuilder;
-import microsoft.graph.users.item.onenote.notebooks.item.sections.SectionsRequestBuilder;
 /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
 public class NotebookItemRequestBuilder {
     /** The copyNotebook property */
@@ -319,7 +319,7 @@ public class NotebookItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.onenote.notebooks.item.sectionGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.onenote.notebooks.item.sectionGroups.item collection
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -331,7 +331,7 @@ public class NotebookItemRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.onenote.notebooks.item.sections.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.onenote.notebooks.item.sections.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

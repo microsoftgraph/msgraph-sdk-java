@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.drives.item.list.items.item.driveitem;
+package com.microsoft.graph.users.item.drives.item.list.items.item.driveitem;
 
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.drives.item.list.items.item.driveitem.content.ContentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.drives.item.list.items.item.driveitem.content.ContentRequestBuilder;
 /** Provides operations to manage the driveItem property of the microsoft.graph.listItem entity. */
 public class DriveItemRequestBuilder {
     /** The content property */

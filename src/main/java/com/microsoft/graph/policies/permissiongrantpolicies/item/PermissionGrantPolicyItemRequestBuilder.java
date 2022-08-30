@@ -1,5 +1,9 @@
-package microsoft.graph.policies.permissiongrantpolicies.item;
+package com.microsoft.graph.policies.permissiongrantpolicies.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PermissionGrantPolicy;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.ExcludesRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.IncludesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PermissionGrantPolicy;
-import microsoft.graph.policies.permissiongrantpolicies.item.excludes.ExcludesRequestBuilder;
-import microsoft.graph.policies.permissiongrantpolicies.item.includes.IncludesRequestBuilder;
 /** Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity. */
 public class PermissionGrantPolicyItemRequestBuilder {
     /** The excludes property */
@@ -205,16 +205,16 @@ public class PermissionGrantPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item.excludes.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item.excludes.item collection
      * @param id Unique identifier of the item
      * @return a PermissionGrantConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder excludes(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder excludes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("permissionGrantConditionSet%2Did", id);
-        return new microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * The policy that specifies the conditions under which consent can be granted.
@@ -268,16 +268,16 @@ public class PermissionGrantPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item.includes.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item.includes.item collection
      * @param id Unique identifier of the item
      * @return a PermissionGrantConditionSetItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder includes(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder includes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("permissionGrantConditionSet%2Did", id);
-        return new microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.policies.permissiongrantpolicies.item.includes.item.PermissionGrantConditionSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property permissionGrantPolicies in policies

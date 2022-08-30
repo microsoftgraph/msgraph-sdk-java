@@ -1,5 +1,20 @@
-package microsoft.graph.groups.item.team.channels.item;
+package com.microsoft.graph.groups.item.team.channels.item;
 
+import com.microsoft.graph.groups.item.team.channels.item.completemigration.CompleteMigrationRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.members.MembersRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.messages.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.tabs.item.TeamsTabItemRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.tabs.TabsRequestBuilder;
+import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.channels.item.completemigration.CompleteMigrationRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.members.MembersRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.messages.item.ChatMessageItemRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.messages.MessagesRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.tabs.item.TeamsTabItemRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.tabs.TabsRequestBuilder;
-import microsoft.graph.models.Channel;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
 public class ChannelItemRequestBuilder {
     /** The completeMigration property */
@@ -305,7 +305,7 @@ public class ChannelItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -317,7 +317,7 @@ public class ChannelItemRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item.messages.item collection
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
@@ -384,7 +384,7 @@ public class ChannelItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.sharedWithTeams.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item.sharedWithTeams.item collection
      * @param id Unique identifier of the item
      * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
@@ -396,7 +396,7 @@ public class ChannelItemRequestBuilder {
         return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.tabs.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item.tabs.item collection
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */

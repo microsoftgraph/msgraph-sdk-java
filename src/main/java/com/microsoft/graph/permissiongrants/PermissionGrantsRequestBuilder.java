@@ -1,5 +1,11 @@
-package microsoft.graph.permissiongrants;
+package com.microsoft.graph.permissiongrants;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
+import com.microsoft.graph.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.permissiongrants.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ResourceSpecificPermissionGrant;
-import microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
-import microsoft.graph.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.permissiongrants.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of resourceSpecificPermissionGrant entities. */
 public class PermissionGrantsRequestBuilder {
     /** The getAvailableExtensionProperties property */

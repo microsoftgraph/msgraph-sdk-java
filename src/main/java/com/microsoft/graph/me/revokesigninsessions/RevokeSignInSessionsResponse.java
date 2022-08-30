@@ -1,4 +1,4 @@
-package microsoft.graph.me.revokesigninsessions;
+package com.microsoft.graph.me.revokesigninsessions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

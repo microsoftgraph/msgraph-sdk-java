@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroletemplates.getbyids;
+package com.microsoft.graph.directoryroletemplates.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,6 @@
-package microsoft.graph.me.manageddevices.item.recoverpasscode;
+package com.microsoft.graph.me.manageddevices.item.recoverpasscode;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the recoverPasscode method. */
 public class RecoverPasscodeRequestBuilder {
     /** Path parameters for the request */

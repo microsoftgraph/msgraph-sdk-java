@@ -1,5 +1,14 @@
-package microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item;
+package com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item;
 
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.photo.PhotoRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.models.Contact;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.photo.PhotoRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.me.contactfolders.item.childfolders.item.contacts.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.models.Contact;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity. */
 public class ContactItemRequestBuilder {
     /** The extensions property */
@@ -220,7 +220,7 @@ public class ContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class ContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -350,7 +350,7 @@ public class ContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.childFolders.item.contacts.item.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

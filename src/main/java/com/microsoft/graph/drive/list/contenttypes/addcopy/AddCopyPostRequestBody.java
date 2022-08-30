@@ -1,4 +1,4 @@
-package microsoft.graph.drive.list.contenttypes.addcopy;
+package com.microsoft.graph.drive.list.contenttypes.addcopy;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

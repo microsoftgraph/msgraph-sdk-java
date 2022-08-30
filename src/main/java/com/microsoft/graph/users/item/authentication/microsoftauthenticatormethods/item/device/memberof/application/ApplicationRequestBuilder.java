@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.application;
+package com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.application;
 
+import com.microsoft.graph.models.ApplicationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.application.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ApplicationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.application.count.CountRequestBuilder;
 /** Casts the previous resource to application. */
 public class ApplicationRequestBuilder {
     /** The Count property */

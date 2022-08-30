@@ -1,5 +1,8 @@
-package microsoft.graph.policies.rolemanagementpolicyassignments.item;
+package com.microsoft.graph.policies.rolemanagementpolicyassignments.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.item.policy.PolicyRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
-import microsoft.graph.policies.rolemanagementpolicyassignments.item.policy.PolicyRequestBuilder;
 /** Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity. */
 public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
     /** Path parameters for the request */

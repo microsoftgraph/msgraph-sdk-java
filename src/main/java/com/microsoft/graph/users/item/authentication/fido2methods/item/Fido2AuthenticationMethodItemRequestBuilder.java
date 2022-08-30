@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.authentication.fido2methods.item;
+package com.microsoft.graph.users.item.authentication.fido2methods.item;
 
+import com.microsoft.graph.models.Fido2AuthenticationMethod;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Fido2AuthenticationMethod;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity. */
 public class Fido2AuthenticationMethodItemRequestBuilder {
     /** Path parameters for the request */
