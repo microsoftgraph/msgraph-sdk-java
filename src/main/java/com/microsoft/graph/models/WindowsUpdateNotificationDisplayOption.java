@@ -7,28 +7,32 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Device Management Report File Format.
+ * The Enum Windows Update Notification Display Option.
 */
-public enum DeviceManagementReportFileFormat
+public enum WindowsUpdateNotificationDisplayOption
 {
     /**
-    * csv
+    * not Configured
     */
-    CSV,
+    NOT_CONFIGURED,
     /**
-    * pdf
+    * default Notifications
     */
-    PDF,
+    DEFAULT_NOTIFICATIONS,
     /**
-    * json
+    * restart Warnings Only
     */
-    JSON,
+    RESTART_WARNINGS_ONLY,
+    /**
+    * disable All Notifications
+    */
+    DISABLE_ALL_NOTIFICATIONS,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For DeviceManagementReportFileFormat values that were not expected from the service
+    * For WindowsUpdateNotificationDisplayOption values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

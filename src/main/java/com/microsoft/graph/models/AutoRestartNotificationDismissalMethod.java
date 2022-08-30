@@ -7,28 +7,28 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Device Management Report File Format.
+ * The Enum Auto Restart Notification Dismissal Method.
 */
-public enum DeviceManagementReportFileFormat
+public enum AutoRestartNotificationDismissalMethod
 {
     /**
-    * csv
+    * not Configured
     */
-    CSV,
+    NOT_CONFIGURED,
     /**
-    * pdf
+    * automatic
     */
-    PDF,
+    AUTOMATIC,
     /**
-    * json
+    * user
     */
-    JSON,
+    USER,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For DeviceManagementReportFileFormat values that were not expected from the service
+    * For AutoRestartNotificationDismissalMethod values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
