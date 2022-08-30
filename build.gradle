@@ -60,6 +60,7 @@ tasks.jar {
     manifest {
         attributes('Automatic-Module-Name': project.property('mavenGroupId'))
     }
+    zip64(true)
 }
 
 publishing {
