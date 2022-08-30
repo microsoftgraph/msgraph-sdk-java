@@ -2,7 +2,7 @@ name: Maven Preview/Release and Github Release
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, feature/6.0 ]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
@@ -17,7 +17,7 @@ env:
 
 jobs:
   maven_Preview:
-    if: ${{ github.ref == 'refs/heads/dev' }}
+    if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/feature/6.0' }}
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
@@ -107,7 +107,7 @@ jobs:
         run: .\Scripts\getLatestVersion.ps1
         shell: pwsh
       - name: Create tag
-        uses: rickstaa/action-create-tag@v1.3.1
+        uses: rickstaa/action-create-tag@v1.3.7
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
