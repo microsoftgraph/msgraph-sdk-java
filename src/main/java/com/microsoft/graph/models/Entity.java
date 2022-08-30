@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.security.*;
+import com.microsoft.graph.models.callrecords.*;
+import com.microsoft.graph.models.externalconnectors.*;
+import com.microsoft.graph.models.termstore.*;
+
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -241,7 +246,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.externalConnectors.externalConnection": return new ExternalConnection();
                 case "#microsoft.graph.externalConnectors.externalGroup": return new ExternalGroup();
                 case "#microsoft.graph.externalConnectors.externalItem": return new ExternalItem();
-                case "#microsoft.graph.externalConnectors.identity": return new Identity();
+                case "#microsoft.graph.externalConnectors.identity": return new com.microsoft.graph.models.externalconnectors.Identity();
                 case "#microsoft.graph.externalConnectors.schema": return new Schema();
                 case "#microsoft.graph.externalDomainName": return new ExternalDomainName();
                 case "#microsoft.graph.featureRolloutPolicy": return new FeatureRolloutPolicy();
