@@ -1,5 +1,20 @@
-package microsoft.graph.solutions.bookingbusinesses.item;
+package com.microsoft.graph.solutions.bookingbusinesses.item;
 
+import com.microsoft.graph.models.BookingBusiness;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.AppointmentsRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.customers.CustomersRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.customers.item.BookingCustomerBaseItemRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.CustomQuestionsRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.customquestions.item.BookingCustomQuestionItemRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.getstaffavailability.GetStaffAvailabilityRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.publish.PublishRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.services.item.BookingServiceItemRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.services.ServicesRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.item.BookingStaffMemberBaseItemRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.staffmembers.StaffMembersRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.unpublish.UnpublishRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,21 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingBusiness;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingbusinesses.item.appointments.AppointmentsRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.calendarview.CalendarViewRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.customers.CustomersRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.customers.item.BookingCustomerBaseItemRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.customquestions.CustomQuestionsRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.customquestions.item.BookingCustomQuestionItemRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.getstaffavailability.GetStaffAvailabilityRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.publish.PublishRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.services.item.BookingServiceItemRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.services.ServicesRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.staffmembers.item.BookingStaffMemberBaseItemRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.staffmembers.StaffMembersRequestBuilder;
-import microsoft.graph.solutions.bookingbusinesses.item.unpublish.UnpublishRequestBuilder;
 /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
 public class BookingBusinessItemRequestBuilder {
     /** The appointments property */
@@ -83,28 +83,28 @@ public class BookingBusinessItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.appointments.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.appointments.item collection
      * @param id Unique identifier of the item
      * @return a BookingAppointmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder appointments(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder appointments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("bookingAppointment%2Did", id);
-        return new microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.calendarView.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.calendarView.item collection
      * @param id Unique identifier of the item
      * @return a BookingAppointmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder calendarView(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("bookingAppointment%2Did", id);
-        return new microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new BookingBusinessItemRequestBuilder and sets the default values.
@@ -224,7 +224,7 @@ public class BookingBusinessItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.customers.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.customers.item collection
      * @param id Unique identifier of the item
      * @return a BookingCustomerBaseItemRequestBuilder
      */
@@ -236,7 +236,7 @@ public class BookingBusinessItemRequestBuilder {
         return new BookingCustomerBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.customQuestions.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.customQuestions.item collection
      * @param id Unique identifier of the item
      * @return a BookingCustomQuestionItemRequestBuilder
      */
@@ -405,7 +405,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.services.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.services.item collection
      * @param id Unique identifier of the item
      * @return a BookingServiceItemRequestBuilder
      */
@@ -417,7 +417,7 @@ public class BookingBusinessItemRequestBuilder {
         return new BookingServiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.solutions.bookingBusinesses.item.staffMembers.item collection
+     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.staffMembers.item collection
      * @param id Unique identifier of the item
      * @return a BookingStaffMemberBaseItemRequestBuilder
      */

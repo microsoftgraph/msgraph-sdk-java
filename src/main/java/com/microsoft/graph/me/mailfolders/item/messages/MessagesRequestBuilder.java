@@ -1,5 +1,10 @@
-package microsoft.graph.me.mailfolders.item.messages;
+package com.microsoft.graph.me.mailfolders.item.messages;
 
+import com.microsoft.graph.me.mailfolders.item.messages.count.CountRequestBuilder;
+import com.microsoft.graph.me.mailfolders.item.messages.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.Message;
+import com.microsoft.graph.models.MessageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.mailfolders.item.messages.count.CountRequestBuilder;
-import microsoft.graph.me.mailfolders.item.messages.delta.DeltaRequestBuilder;
-import microsoft.graph.models.Message;
-import microsoft.graph.models.MessageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the messages property of the microsoft.graph.mailFolder entity. */
 public class MessagesRequestBuilder {
     /** The Count property */

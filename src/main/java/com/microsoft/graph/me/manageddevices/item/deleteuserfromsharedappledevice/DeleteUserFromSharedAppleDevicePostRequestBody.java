@@ -1,4 +1,4 @@
-package microsoft.graph.me.manageddevices.item.deleteuserfromsharedappledevice;
+package com.microsoft.graph.me.manageddevices.item.deleteuserfromsharedappledevice;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

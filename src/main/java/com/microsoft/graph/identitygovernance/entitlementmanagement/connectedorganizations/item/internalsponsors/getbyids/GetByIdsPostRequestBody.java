@@ -1,4 +1,4 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

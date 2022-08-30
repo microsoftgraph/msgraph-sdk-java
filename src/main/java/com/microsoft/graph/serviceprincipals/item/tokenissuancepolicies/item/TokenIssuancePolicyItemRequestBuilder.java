@@ -1,5 +1,7 @@
-package microsoft.graph.serviceprincipals.item.tokenissuancepolicies.item;
+package com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TokenIssuancePolicy;
 /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity. */
 public class TokenIssuancePolicyItemRequestBuilder {
     /** Path parameters for the request */

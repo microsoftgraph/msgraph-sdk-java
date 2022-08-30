@@ -1,4 +1,4 @@
-package microsoft.graph.directory.deleteditems.validateproperties;
+package com.microsoft.graph.directory.deleteditems.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

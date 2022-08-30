@@ -1,5 +1,13 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.ref.RefRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.ref.RefRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the internalSponsors property of the microsoft.graph.connectedOrganization entity. */
 public class InternalSponsorsRequestBuilder {
     /** The Count property */

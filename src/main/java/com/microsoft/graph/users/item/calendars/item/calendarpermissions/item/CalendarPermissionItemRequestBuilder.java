@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.calendars.item.calendarpermissions.item;
+package com.microsoft.graph.users.item.calendars.item.calendarpermissions.item;
 
+import com.microsoft.graph.models.CalendarPermission;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CalendarPermission;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity. */
 public class CalendarPermissionItemRequestBuilder {
     /** Path parameters for the request */

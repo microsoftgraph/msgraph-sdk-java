@@ -1,9 +1,9 @@
-package microsoft.graph.applications.item.tokenlifetimepolicies.item;
+package com.microsoft.graph.applications.item.tokenlifetimepolicies.item;
 
+import com.microsoft.graph.applications.item.tokenlifetimepolicies.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.applications.item.tokenlifetimepolicies.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /applications/{application-id}/tokenLifetimePolicies/{tokenLifetimePolicy-id} */
 public class TokenLifetimePolicyItemRequestBuilder {
     /** Path parameters for the request */

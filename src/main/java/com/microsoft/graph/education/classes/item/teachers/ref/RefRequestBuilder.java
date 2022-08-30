@@ -1,5 +1,8 @@
-package microsoft.graph.education.classes.item.teachers.ref;
+package com.microsoft.graph.education.classes.item.teachers.ref;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ReferenceCreate;
+import com.microsoft.graph.models.StringCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ReferenceCreate;
-import microsoft.graph.models.StringCollectionResponse;
 /** Provides operations to manage the collection of educationRoot entities. */
 public class RefRequestBuilder {
     /** Path parameters for the request */

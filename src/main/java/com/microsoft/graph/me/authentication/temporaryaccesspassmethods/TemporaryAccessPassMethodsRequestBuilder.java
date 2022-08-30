@@ -1,5 +1,9 @@
-package microsoft.graph.me.authentication.temporaryaccesspassmethods;
+package com.microsoft.graph.me.authentication.temporaryaccesspassmethods;
 
+import com.microsoft.graph.me.authentication.temporaryaccesspassmethods.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.temporaryaccesspassmethods.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
-import microsoft.graph.models.TemporaryAccessPassAuthenticationMethodCollectionResponse;
 /** Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity. */
 public class TemporaryAccessPassMethodsRequestBuilder {
     /** The Count property */

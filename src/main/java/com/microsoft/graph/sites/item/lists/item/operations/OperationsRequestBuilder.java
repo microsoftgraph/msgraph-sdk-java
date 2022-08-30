@@ -1,5 +1,9 @@
-package microsoft.graph.sites.item.lists.item.operations;
+package com.microsoft.graph.sites.item.lists.item.operations;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RichLongRunningOperation;
+import com.microsoft.graph.models.RichLongRunningOperationCollectionResponse;
+import com.microsoft.graph.sites.item.lists.item.operations.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RichLongRunningOperation;
-import microsoft.graph.models.RichLongRunningOperationCollectionResponse;
-import microsoft.graph.sites.item.lists.item.operations.count.CountRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.list entity. */
 public class OperationsRequestBuilder {
     /** The Count property */

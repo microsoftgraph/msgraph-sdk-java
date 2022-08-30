@@ -1,5 +1,9 @@
-package microsoft.graph.print.taskdefinitions.item;
+package com.microsoft.graph.print.taskdefinitions.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintTaskDefinition;
+import com.microsoft.graph.print.taskdefinitions.item.tasks.item.PrintTaskItemRequestBuilder;
+import com.microsoft.graph.print.taskdefinitions.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintTaskDefinition;
-import microsoft.graph.print.taskdefinitions.item.tasks.item.PrintTaskItemRequestBuilder;
-import microsoft.graph.print.taskdefinitions.item.tasks.TasksRequestBuilder;
 /** Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity. */
 public class PrintTaskDefinitionItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.taskDefinitions.item.tasks.item collection
+     * Gets an item from the com.Microsoft.Graph.print.taskDefinitions.item.tasks.item collection
      * @param id Unique identifier of the item
      * @return a PrintTaskItemRequestBuilder
      */

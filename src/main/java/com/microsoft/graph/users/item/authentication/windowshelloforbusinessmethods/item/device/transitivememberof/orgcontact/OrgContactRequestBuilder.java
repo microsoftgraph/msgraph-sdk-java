@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.orgcontact;
+package com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.orgcontact;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrgContactCollectionResponse;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.orgcontact.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrgContactCollectionResponse;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.orgcontact.count.CountRequestBuilder;
 /** Casts the previous resource to orgContact. */
 public class OrgContactRequestBuilder {
     /** The Count property */

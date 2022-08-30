@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.onenote.notebooks.getnotebookfromweburl;
+package com.microsoft.graph.groups.item.onenote.notebooks.getnotebookfromweburl;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

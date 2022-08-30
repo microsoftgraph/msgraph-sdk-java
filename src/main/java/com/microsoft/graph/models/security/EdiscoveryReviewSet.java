@@ -1,4 +1,4 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

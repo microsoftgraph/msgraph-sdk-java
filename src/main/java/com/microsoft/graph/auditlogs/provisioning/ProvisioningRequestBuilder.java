@@ -1,5 +1,9 @@
-package microsoft.graph.auditlogs.provisioning;
+package com.microsoft.graph.auditlogs.provisioning;
 
+import com.microsoft.graph.auditlogs.provisioning.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProvisioningObjectSummary;
+import com.microsoft.graph.models.ProvisioningObjectSummaryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.auditlogs.provisioning.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProvisioningObjectSummary;
-import microsoft.graph.models.ProvisioningObjectSummaryCollectionResponse;
 /** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
 public class ProvisioningRequestBuilder {
     /** The Count property */

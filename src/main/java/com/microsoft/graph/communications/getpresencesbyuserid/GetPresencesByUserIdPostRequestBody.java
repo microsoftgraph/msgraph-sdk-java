@@ -1,4 +1,4 @@
-package microsoft.graph.communications.getpresencesbyuserid;
+package com.microsoft.graph.communications.getpresencesbyuserid;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

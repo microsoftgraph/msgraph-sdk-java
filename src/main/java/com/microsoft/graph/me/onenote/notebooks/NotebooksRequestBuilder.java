@@ -1,5 +1,11 @@
-package microsoft.graph.me.onenote.notebooks;
+package com.microsoft.graph.me.onenote.notebooks;
 
+import com.microsoft.graph.me.onenote.notebooks.count.CountRequestBuilder;
+import com.microsoft.graph.me.onenote.notebooks.getnotebookfromweburl.GetNotebookFromWebUrlRequestBuilder;
+import com.microsoft.graph.me.onenote.notebooks.getrecentnotebookswithincludepersonalnotebooks.GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+import com.microsoft.graph.models.Notebook;
+import com.microsoft.graph.models.NotebookCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.onenote.notebooks.count.CountRequestBuilder;
-import microsoft.graph.me.onenote.notebooks.getnotebookfromweburl.GetNotebookFromWebUrlRequestBuilder;
-import microsoft.graph.me.onenote.notebooks.getrecentnotebookswithincludepersonalnotebooks.GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
-import microsoft.graph.models.Notebook;
-import microsoft.graph.models.NotebookCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
 public class NotebooksRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.count.CountRequestBuilder;
+import com.microsoft.graph.models.AccessReviewReviewer;
+import com.microsoft.graph.models.AccessReviewReviewerCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.contactedreviewers.count.CountRequestBuilder;
-import microsoft.graph.models.AccessReviewReviewer;
-import microsoft.graph.models.AccessReviewReviewerCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity. */
 public class ContactedReviewersRequestBuilder {
     /** The Count property */

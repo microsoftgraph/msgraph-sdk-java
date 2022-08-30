@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.accessreviews.historydefinitions;
+package com.microsoft.graph.identitygovernance.accessreviews.historydefinitions;
 
+import com.microsoft.graph.identitygovernance.accessreviews.historydefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.models.AccessReviewHistoryDefinition;
+import com.microsoft.graph.models.AccessReviewHistoryDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.historydefinitions.count.CountRequestBuilder;
-import microsoft.graph.models.AccessReviewHistoryDefinition;
-import microsoft.graph.models.AccessReviewHistoryDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity. */
 public class HistoryDefinitionsRequestBuilder {
     /** The Count property */

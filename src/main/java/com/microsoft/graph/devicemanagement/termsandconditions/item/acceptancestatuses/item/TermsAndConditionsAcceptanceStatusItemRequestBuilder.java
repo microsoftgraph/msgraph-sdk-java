@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item;
+package com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item;
 
+import com.microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.termsandconditions.TermsAndConditionsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.termsandconditions.item.acceptancestatuses.item.termsandconditions.TermsAndConditionsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 /** Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity. */
 public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
     /** Path parameters for the request */

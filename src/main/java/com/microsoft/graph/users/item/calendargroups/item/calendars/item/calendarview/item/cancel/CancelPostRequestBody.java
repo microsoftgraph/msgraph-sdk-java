@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.cancel;
+package com.microsoft.graph.users.item.calendargroups.item.calendars.item.calendarview.item.cancel;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

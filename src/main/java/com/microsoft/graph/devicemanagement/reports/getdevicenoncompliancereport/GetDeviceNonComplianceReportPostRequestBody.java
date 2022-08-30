@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getdevicenoncompliancereport;
+package com.microsoft.graph.devicemanagement.reports.getdevicenoncompliancereport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

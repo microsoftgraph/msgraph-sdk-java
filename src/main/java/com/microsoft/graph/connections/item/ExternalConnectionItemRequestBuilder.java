@@ -1,5 +1,14 @@
-package microsoft.graph.connections.item;
+package com.microsoft.graph.connections.item;
 
+import com.microsoft.graph.connections.item.groups.GroupsRequestBuilder;
+import com.microsoft.graph.connections.item.groups.item.ExternalGroupItemRequestBuilder;
+import com.microsoft.graph.connections.item.items.item.ExternalItemItemRequestBuilder;
+import com.microsoft.graph.connections.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.connections.item.operations.item.ConnectionOperationItemRequestBuilder;
+import com.microsoft.graph.connections.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.connections.item.schema.SchemaRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.ExternalConnection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.connections.item.groups.GroupsRequestBuilder;
-import microsoft.graph.connections.item.groups.item.ExternalGroupItemRequestBuilder;
-import microsoft.graph.connections.item.items.item.ExternalItemItemRequestBuilder;
-import microsoft.graph.connections.item.items.ItemsRequestBuilder;
-import microsoft.graph.connections.item.operations.item.ConnectionOperationItemRequestBuilder;
-import microsoft.graph.connections.item.operations.OperationsRequestBuilder;
-import microsoft.graph.connections.item.schema.SchemaRequestBuilder;
-import microsoft.graph.models.externalconnectors.ExternalConnection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalConnectionItemRequestBuilder {
     /** The groups property */
@@ -271,7 +271,7 @@ public class ExternalConnectionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.connections.item.groups.item collection
+     * Gets an item from the com.Microsoft.Graph.connections.item.groups.item collection
      * @param id Unique identifier of the item
      * @return a ExternalGroupItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class ExternalConnectionItemRequestBuilder {
         return new ExternalGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.connections.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.connections.item.items.item collection
      * @param id Unique identifier of the item
      * @return a ExternalItemItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class ExternalConnectionItemRequestBuilder {
         return new ExternalItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.connections.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.connections.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a ConnectionOperationItemRequestBuilder
      */

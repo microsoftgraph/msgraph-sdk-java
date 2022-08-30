@@ -1,5 +1,7 @@
-package microsoft.graph.schemaextensions.item;
+package com.microsoft.graph.schemaextensions.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SchemaExtension;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SchemaExtension;
 /** Provides operations to manage the collection of schemaExtension entities. */
 public class SchemaExtensionItemRequestBuilder {
     /** Path parameters for the request */

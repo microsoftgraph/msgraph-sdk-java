@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates;
+package com.microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates;
 
+import com.microsoft.graph.models.DeviceCompliancePolicyState;
+import com.microsoft.graph.models.DeviceCompliancePolicyStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceCompliancePolicyState;
-import microsoft.graph.models.DeviceCompliancePolicyStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.manageddevices.item.devicecompliancepolicystates.count.CountRequestBuilder;
 /** Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity. */
 public class DeviceCompliancePolicyStatesRequestBuilder {
     /** The Count property */

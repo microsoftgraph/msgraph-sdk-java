@@ -1,5 +1,7 @@
-package microsoft.graph.models.termstore;
+package com.microsoft.graph.models.termstore;
 
+import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.KeyValue;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-import microsoft.graph.models.KeyValue;
 public class Set extends Entity implements Parsable {
     /** Children terms of set in term [store]. */
     private java.util.List<Term> _children;

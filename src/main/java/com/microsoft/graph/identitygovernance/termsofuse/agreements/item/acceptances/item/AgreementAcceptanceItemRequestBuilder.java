@@ -1,5 +1,7 @@
-package microsoft.graph.identitygovernance.termsofuse.agreements.item.acceptances.item;
+package com.microsoft.graph.identitygovernance.termsofuse.agreements.item.acceptances.item;
 
+import com.microsoft.graph.models.AgreementAcceptance;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AgreementAcceptance;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the acceptances property of the microsoft.graph.agreement entity. */
 public class AgreementAcceptanceItemRequestBuilder {
     /** Path parameters for the request */

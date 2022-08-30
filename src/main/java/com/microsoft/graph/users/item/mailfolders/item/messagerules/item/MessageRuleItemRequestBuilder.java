@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.mailfolders.item.messagerules.item;
+package com.microsoft.graph.users.item.mailfolders.item.messagerules.item;
 
+import com.microsoft.graph.models.MessageRule;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MessageRule;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity. */
 public class MessageRuleItemRequestBuilder {
     /** Path parameters for the request */

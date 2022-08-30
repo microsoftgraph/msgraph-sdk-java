@@ -1,4 +1,4 @@
-package microsoft.graph.admin.serviceannouncement.messages.unarchive;
+package com.microsoft.graph.admin.serviceannouncement.messages.unarchive;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,16 @@
-package microsoft.graph.deviceappmanagement.mobileappconfigurations.item;
+package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item;
 
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item.ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatussummary.DeviceStatusSummaryRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.UserStatusesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatussummary.UserStatusSummaryRequestBuilder;
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item.ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatuses.item.ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.devicestatussummary.DeviceStatusSummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.item.ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatuses.UserStatusesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileappconfigurations.item.userstatussummary.UserStatusSummaryRequestBuilder;
-import microsoft.graph.models.ManagedDeviceMobileAppConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
     /** The assign property */
@@ -64,7 +64,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         return new UserStatusSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
      */
@@ -244,7 +244,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
      */

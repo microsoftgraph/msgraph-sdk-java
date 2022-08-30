@@ -1,4 +1,4 @@
-package microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmembergroups;
+package com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

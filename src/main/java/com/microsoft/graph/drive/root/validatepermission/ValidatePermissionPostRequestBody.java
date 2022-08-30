@@ -1,4 +1,4 @@
-package microsoft.graph.drive.root.validatepermission;
+package com.microsoft.graph.drive.root.validatepermission;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

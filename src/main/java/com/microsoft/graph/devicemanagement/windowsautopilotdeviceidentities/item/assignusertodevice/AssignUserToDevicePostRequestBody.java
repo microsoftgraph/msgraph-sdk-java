@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.assignusertodevice;
+package com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.assignusertodevice;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

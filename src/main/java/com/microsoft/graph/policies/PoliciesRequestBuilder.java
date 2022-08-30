@@ -1,5 +1,33 @@
-package microsoft.graph.policies;
+package com.microsoft.graph.policies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PolicyRoot;
+import com.microsoft.graph.policies.activitybasedtimeoutpolicies.ActivityBasedTimeoutPoliciesRequestBuilder;
+import com.microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.adminconsentrequestpolicy.AdminConsentRequestPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
+import com.microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
+import com.microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
+import com.microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
+import com.microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
+import com.microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
+import com.microsoft.graph.policies.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
+import com.microsoft.graph.policies.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
+import com.microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
+import com.microsoft.graph.policies.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,34 +42,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PolicyRoot;
-import microsoft.graph.policies.activitybasedtimeoutpolicies.ActivityBasedTimeoutPoliciesRequestBuilder;
-import microsoft.graph.policies.activitybasedtimeoutpolicies.item.ActivityBasedTimeoutPolicyItemRequestBuilder;
-import microsoft.graph.policies.adminconsentrequestpolicy.AdminConsentRequestPolicyRequestBuilder;
-import microsoft.graph.policies.authenticationflowspolicy.AuthenticationFlowsPolicyRequestBuilder;
-import microsoft.graph.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
-import microsoft.graph.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
-import microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
-import microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
-import microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
-import microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
-import microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
-import microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
-import microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
-import microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import microsoft.graph.policies.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
-import microsoft.graph.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import microsoft.graph.policies.permissiongrantpolicies.item.PermissionGrantPolicyItemRequestBuilder;
-import microsoft.graph.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicies.item.UnifiedRoleManagementPolicyItemRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicyassignments.item.UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
-import microsoft.graph.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
-import microsoft.graph.policies.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
-import microsoft.graph.policies.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import microsoft.graph.policies.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
-import microsoft.graph.policies.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 /** Provides operations to manage the policyRoot singleton. */
 public class PoliciesRequestBuilder {
     /** The activityBasedTimeoutPolicies property */
@@ -131,7 +131,7 @@ public class PoliciesRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
      */
@@ -143,7 +143,7 @@ public class PoliciesRequestBuilder {
         return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.claimsMappingPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
@@ -155,7 +155,7 @@ public class PoliciesRequestBuilder {
         return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.conditionalAccessPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.conditionalAccessPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyItemRequestBuilder
      */
@@ -256,7 +256,7 @@ public class PoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.featureRolloutPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item collection
      * @param id Unique identifier of the item
      * @return a FeatureRolloutPolicyItemRequestBuilder
      */
@@ -319,7 +319,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -386,7 +386,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.permissionGrantPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item collection
      * @param id Unique identifier of the item
      * @return a PermissionGrantPolicyItemRequestBuilder
      */
@@ -398,7 +398,7 @@ public class PoliciesRequestBuilder {
         return new PermissionGrantPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyItemRequestBuilder
      */
@@ -410,7 +410,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
      */
@@ -422,7 +422,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.tokenIssuancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -434,7 +434,7 @@ public class PoliciesRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.policies.tokenLifetimePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */

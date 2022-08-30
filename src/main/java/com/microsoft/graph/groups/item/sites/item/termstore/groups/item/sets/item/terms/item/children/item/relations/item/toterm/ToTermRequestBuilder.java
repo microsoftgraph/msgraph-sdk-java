@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.sites.item.termstore.groups.item.sets.item.terms.item.children.item.relations.item.toterm;
+package com.microsoft.graph.groups.item.sites.item.termstore.groups.item.sets.item.terms.item.children.item.relations.item.toterm;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Term;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Term;
 /** Provides operations to manage the toTerm property of the microsoft.graph.termStore.relation entity. */
 public class ToTermRequestBuilder {
     /** Path parameters for the request */

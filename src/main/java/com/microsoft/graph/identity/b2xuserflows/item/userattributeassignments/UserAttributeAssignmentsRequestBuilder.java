@@ -1,5 +1,11 @@
-package microsoft.graph.identity.b2xuserflows.item.userattributeassignments;
+package com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments;
 
+import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.count.CountRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.getorder.GetOrderRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.setorder.SetOrderRequestBuilder;
+import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
+import com.microsoft.graph.models.IdentityUserFlowAttributeAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2xuserflows.item.userattributeassignments.count.CountRequestBuilder;
-import microsoft.graph.identity.b2xuserflows.item.userattributeassignments.getorder.GetOrderRequestBuilder;
-import microsoft.graph.identity.b2xuserflows.item.userattributeassignments.setorder.SetOrderRequestBuilder;
-import microsoft.graph.models.IdentityUserFlowAttributeAssignment;
-import microsoft.graph.models.IdentityUserFlowAttributeAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class UserAttributeAssignmentsRequestBuilder {
     /** The Count property */

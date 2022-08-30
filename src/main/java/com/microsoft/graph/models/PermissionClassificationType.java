@@ -1,9 +1,9 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Casts the previous resource to servicePrincipal. */
 public enum PermissionClassificationType implements ValuedEnum {
     Low("low"),
     Medium("medium"),

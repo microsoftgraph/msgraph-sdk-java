@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.managedapppolicies;
+package com.microsoft.graph.deviceappmanagement.managedapppolicies;
 
+import com.microsoft.graph.deviceappmanagement.managedapppolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedAppPolicy;
+import com.microsoft.graph.models.ManagedAppPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedapppolicies.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedAppPolicy;
-import microsoft.graph.models.ManagedAppPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedAppPoliciesRequestBuilder {
     /** The Count property */

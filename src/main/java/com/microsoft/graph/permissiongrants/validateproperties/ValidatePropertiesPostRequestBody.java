@@ -1,4 +1,4 @@
-package microsoft.graph.permissiongrants.validateproperties;
+package com.microsoft.graph.permissiongrants.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.me.insights.trending;
+package com.microsoft.graph.me.insights.trending;
 
+import com.microsoft.graph.me.insights.trending.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Trending;
+import com.microsoft.graph.models.TrendingCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.insights.trending.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Trending;
-import microsoft.graph.models.TrendingCollectionResponse;
 /** Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity. */
 public class TrendingRequestBuilder {
     /** The Count property */

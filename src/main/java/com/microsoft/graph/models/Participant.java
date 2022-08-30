@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;

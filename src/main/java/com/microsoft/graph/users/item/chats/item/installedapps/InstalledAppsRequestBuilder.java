@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.chats.item.installedapps;
+package com.microsoft.graph.users.item.chats.item.installedapps;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppInstallation;
+import com.microsoft.graph.models.TeamsAppInstallationCollectionResponse;
+import com.microsoft.graph.users.item.chats.item.installedapps.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppInstallation;
-import microsoft.graph.models.TeamsAppInstallationCollectionResponse;
-import microsoft.graph.users.item.chats.item.installedapps.count.CountRequestBuilder;
 /** Provides operations to manage the installedApps property of the microsoft.graph.chat entity. */
 public class InstalledAppsRequestBuilder {
     /** The Count property */

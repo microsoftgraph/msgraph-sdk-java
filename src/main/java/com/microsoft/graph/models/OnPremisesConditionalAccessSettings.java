@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -17,7 +17,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /** Override the default access rule when allowing a device to ensure access is granted. */
     private Boolean _overrideDefaultRule;
     /**
-     * Instantiates a new OnPremisesConditionalAccessSettings and sets the default values.
+     * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
      * @return a void
      */
     public OnPremisesConditionalAccessSettings() {
@@ -27,7 +27,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesConditionalAccessSettings
+     * @return a onPremisesConditionalAccessSettings
      */
     @javax.annotation.Nonnull
     public static OnPremisesConditionalAccessSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

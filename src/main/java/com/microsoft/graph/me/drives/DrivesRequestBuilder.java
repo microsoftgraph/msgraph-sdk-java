@@ -1,5 +1,9 @@
-package microsoft.graph.me.drives;
+package com.microsoft.graph.me.drives;
 
+import com.microsoft.graph.me.drives.count.CountRequestBuilder;
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.DriveCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.drives.count.CountRequestBuilder;
-import microsoft.graph.models.Drive;
-import microsoft.graph.models.DriveCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the drives property of the microsoft.graph.user entity. */
 public class DrivesRequestBuilder {
     /** The Count property */

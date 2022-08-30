@@ -1,5 +1,9 @@
-package microsoft.graph.policies.authenticationmethodspolicy;
+package com.microsoft.graph.policies.authenticationmethodspolicy;
 
+import com.microsoft.graph.models.AuthenticationMethodsPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
+import com.microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AuthenticationMethodsPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
-import microsoft.graph.policies.authenticationmethodspolicy.authenticationmethodconfigurations.item.AuthenticationMethodConfigurationItemRequestBuilder;
 /** Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity. */
 public class AuthenticationMethodsPolicyRequestBuilder {
     /** The authenticationMethodConfigurations property */
@@ -32,7 +32,7 @@ public class AuthenticationMethodsPolicyRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */

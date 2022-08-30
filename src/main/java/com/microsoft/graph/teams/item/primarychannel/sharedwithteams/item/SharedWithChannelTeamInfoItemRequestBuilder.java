@@ -1,5 +1,9 @@
-package microsoft.graph.teams.item.primarychannel.sharedwithteams.item;
+package com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SharedWithChannelTeamInfo;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.AllowedMembersRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.item.ConversationMemberItemRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SharedWithChannelTeamInfo;
-import microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.AllowedMembersRequestBuilder;
-import microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.item.ConversationMemberItemRequestBuilder;
 /** Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity. */
 public class SharedWithChannelTeamInfoItemRequestBuilder {
     /** The allowedMembers property */
@@ -32,7 +32,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.teams.item.primaryChannel.sharedWithTeams.item.allowedMembers.item collection
+     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.sharedWithTeams.item.allowedMembers.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */

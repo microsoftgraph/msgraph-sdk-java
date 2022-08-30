@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.participants.item.stopholdmusic;
+package com.microsoft.graph.communications.calls.item.participants.item.stopholdmusic;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.StopHoldMusicOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.StopHoldMusicOperation;
 /** Provides operations to call the stopHoldMusic method. */
 public class StopHoldMusicRequestBuilder {
     /** Path parameters for the request */

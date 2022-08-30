@@ -1,5 +1,13 @@
-package microsoft.graph.groups.item.memberswithlicenseerrors.item;
+package com.microsoft.graph.groups.item.memberswithlicenseerrors.item;
 
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.group.GroupRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.application.ApplicationRequestBuilder;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.device.DeviceRequestBuilder;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.group.GroupRequestBuilder;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.groups.item.memberswithlicenseerrors.item.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

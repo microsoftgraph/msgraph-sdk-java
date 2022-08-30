@@ -1,5 +1,11 @@
-package microsoft.graph.deviceappmanagement.managedappregistrations.item;
+package com.microsoft.graph.deviceappmanagement.managedappregistrations.item;
 
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.AppliedPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.IntendedPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.models.ManagedAppRegistration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.AppliedPoliciesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.IntendedPoliciesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.OperationsRequestBuilder;
-import microsoft.graph.models.ManagedAppRegistration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedAppRegistrationItemRequestBuilder {
     /** The appliedPolicies property */
@@ -44,16 +44,16 @@ public class ManagedAppRegistrationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.appliedPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.appliedPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder appliedPolicies(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder appliedPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppPolicy%2Did", id);
-        return new microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ManagedAppRegistrationItemRequestBuilder and sets the default values.
@@ -275,19 +275,19 @@ public class ManagedAppRegistrationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.intendedPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.intendedPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder intendedPolicies(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder intendedPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppPolicy%2Did", id);
-        return new microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.operations.item collection
      * @param id Unique identifier of the item
      * @return a ManagedAppOperationItemRequestBuilder
      */

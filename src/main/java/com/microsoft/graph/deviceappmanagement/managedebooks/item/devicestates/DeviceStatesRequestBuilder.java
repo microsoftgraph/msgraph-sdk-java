@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.managedebooks.item.devicestates;
+package com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates;
 
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceInstallState;
+import com.microsoft.graph.models.DeviceInstallStateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceInstallState;
-import microsoft.graph.models.DeviceInstallStateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity. */
 public class DeviceStatesRequestBuilder {
     /** The Count property */

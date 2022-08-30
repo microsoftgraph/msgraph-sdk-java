@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.DeviceCompliancePolicyAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceCompliancePolicyAssignment;
-import microsoft.graph.models.DeviceCompliancePolicyAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity. */
 public class AssignmentsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,6 @@
-package microsoft.graph.groups.item.calendarview.item.tentativelyaccept;
+package com.microsoft.graph.groups.item.calendarview.item.tentativelyaccept;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,7 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the tentativelyAccept method. */
 public class TentativelyAcceptRequestBuilder {
     /** Path parameters for the request */

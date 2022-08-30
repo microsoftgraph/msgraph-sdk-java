@@ -1,5 +1,8 @@
-package microsoft.graph.agreements;
+package com.microsoft.graph.agreements;
 
+import com.microsoft.graph.models.Agreement;
+import com.microsoft.graph.models.AgreementCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Agreement;
-import microsoft.graph.models.AgreementCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of agreement entities. */
 public class AgreementsRequestBuilder {
     /** Path parameters for the request */

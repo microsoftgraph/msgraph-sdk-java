@@ -1,5 +1,8 @@
-package microsoft.graph.policies.crosstenantaccesspolicy.default_escaped;
+package com.microsoft.graph.policies.crosstenantaccesspolicy.default_escaped;
 
+import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.default_escaped.resettosystemdefault.ResetToSystemDefaultRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.crosstenantaccesspolicy.default_escaped.resettosystemdefault.ResetToSystemDefaultRequestBuilder;
 /** Provides operations to manage the default property of the microsoft.graph.crossTenantAccessPolicy entity. */
 public class DefaultRequestBuilder {
     /** Path parameters for the request */

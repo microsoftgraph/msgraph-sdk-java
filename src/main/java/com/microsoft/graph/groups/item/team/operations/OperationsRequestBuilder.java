@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.team.operations;
+package com.microsoft.graph.groups.item.team.operations;
 
+import com.microsoft.graph.groups.item.team.operations.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAsyncOperation;
+import com.microsoft.graph.models.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.operations.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAsyncOperation;
-import microsoft.graph.models.TeamsAsyncOperationCollectionResponse;
 /** Provides operations to manage the operations property of the microsoft.graph.team entity. */
 public class OperationsRequestBuilder {
     /** The Count property */

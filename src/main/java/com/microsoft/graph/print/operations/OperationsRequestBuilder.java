@@ -1,5 +1,9 @@
-package microsoft.graph.print.operations;
+package com.microsoft.graph.print.operations;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintOperation;
+import com.microsoft.graph.models.PrintOperationCollectionResponse;
+import com.microsoft.graph.print.operations.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintOperation;
-import microsoft.graph.models.PrintOperationCollectionResponse;
-import microsoft.graph.print.operations.count.CountRequestBuilder;
 /** Provides operations to manage the operations property of the microsoft.graph.print entity. */
 public class OperationsRequestBuilder {
     /** The Count property */

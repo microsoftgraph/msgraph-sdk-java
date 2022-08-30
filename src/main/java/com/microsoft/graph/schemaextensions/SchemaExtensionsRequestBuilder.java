@@ -1,5 +1,9 @@
-package microsoft.graph.schemaextensions;
+package com.microsoft.graph.schemaextensions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SchemaExtension;
+import com.microsoft.graph.models.SchemaExtensionCollectionResponse;
+import com.microsoft.graph.schemaextensions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SchemaExtension;
-import microsoft.graph.models.SchemaExtensionCollectionResponse;
-import microsoft.graph.schemaextensions.count.CountRequestBuilder;
 /** Provides operations to manage the collection of schemaExtension entities. */
 public class SchemaExtensionsRequestBuilder {
     /** The Count property */

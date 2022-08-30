@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroles.item.checkmembergroups;
+package com.microsoft.graph.directoryroles.item.checkmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

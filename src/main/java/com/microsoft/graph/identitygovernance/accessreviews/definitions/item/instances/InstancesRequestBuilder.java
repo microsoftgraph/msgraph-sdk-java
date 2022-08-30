@@ -1,5 +1,10 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.count.CountRequestBuilder;
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
+import com.microsoft.graph.models.AccessReviewInstance;
+import com.microsoft.graph.models.AccessReviewInstanceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.count.CountRequestBuilder;
-import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
-import microsoft.graph.models.AccessReviewInstance;
-import microsoft.graph.models.AccessReviewInstanceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity. */
 public class InstancesRequestBuilder {
     /** The Count property */

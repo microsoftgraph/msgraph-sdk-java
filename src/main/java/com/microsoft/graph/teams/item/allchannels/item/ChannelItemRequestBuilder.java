@@ -1,5 +1,7 @@
-package microsoft.graph.teams.item.allchannels.item;
+package com.microsoft.graph.teams.item.allchannels.item;
 
+import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Channel;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the allChannels property of the microsoft.graph.team entity. */
 public class ChannelItemRequestBuilder {
     /** Path parameters for the request */

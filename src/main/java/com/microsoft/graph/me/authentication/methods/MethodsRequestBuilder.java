@@ -1,5 +1,9 @@
-package microsoft.graph.me.authentication.methods;
+package com.microsoft.graph.me.authentication.methods;
 
+import com.microsoft.graph.me.authentication.methods.count.CountRequestBuilder;
+import com.microsoft.graph.models.AuthenticationMethod;
+import com.microsoft.graph.models.AuthenticationMethodCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.methods.count.CountRequestBuilder;
-import microsoft.graph.models.AuthenticationMethod;
-import microsoft.graph.models.AuthenticationMethodCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the methods property of the microsoft.graph.authentication entity. */
 public class MethodsRequestBuilder {
     /** The Count property */

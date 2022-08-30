@@ -1,5 +1,15 @@
-package microsoft.graph.shares.item;
+package com.microsoft.graph.shares.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SharedDriveItem;
+import com.microsoft.graph.shares.item.driveitem.DriveItemRequestBuilder;
+import com.microsoft.graph.shares.item.items.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.shares.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.shares.item.list.ListRequestBuilder;
+import com.microsoft.graph.shares.item.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.shares.item.permission.PermissionRequestBuilder;
+import com.microsoft.graph.shares.item.root.RootRequestBuilder;
+import com.microsoft.graph.shares.item.site.SiteRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SharedDriveItem;
-import microsoft.graph.shares.item.driveitem.DriveItemRequestBuilder;
-import microsoft.graph.shares.item.items.item.DriveItemItemRequestBuilder;
-import microsoft.graph.shares.item.items.ItemsRequestBuilder;
-import microsoft.graph.shares.item.list.ListRequestBuilder;
-import microsoft.graph.shares.item.listitem.ListItemRequestBuilder;
-import microsoft.graph.shares.item.permission.PermissionRequestBuilder;
-import microsoft.graph.shares.item.root.RootRequestBuilder;
-import microsoft.graph.shares.item.site.SiteRequestBuilder;
 /** Provides operations to manage the collection of sharedDriveItem entities. */
 public class SharedDriveItemItemRequestBuilder {
     /** The driveItem property */
@@ -287,7 +287,7 @@ public class SharedDriveItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.shares.item.items.item collection
+     * Gets an item from the com.Microsoft.Graph.shares.item.items.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */

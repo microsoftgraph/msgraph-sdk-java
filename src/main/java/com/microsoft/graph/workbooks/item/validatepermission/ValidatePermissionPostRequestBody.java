@@ -1,4 +1,4 @@
-package microsoft.graph.workbooks.item.validatepermission;
+package com.microsoft.graph.workbooks.item.validatepermission;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

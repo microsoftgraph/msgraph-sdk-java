@@ -1,5 +1,15 @@
-package microsoft.graph.deviceappmanagement.managedebooks.item;
+package com.microsoft.graph.deviceappmanagement.managedebooks.item;
 
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.assignments.item.ManagedEBookAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.DeviceStatesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.installsummary.InstallSummaryRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.UserInstallStateSummaryItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.UserStateSummaryRequestBuilder;
+import com.microsoft.graph.models.ManagedEBook;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedebooks.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.assignments.item.ManagedEBookAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.DeviceStatesRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.devicestates.item.DeviceInstallStateItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.installsummary.InstallSummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.item.UserInstallStateSummaryItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedebooks.item.userstatesummary.UserStateSummaryRequestBuilder;
-import microsoft.graph.models.ManagedEBook;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedEBookItemRequestBuilder {
     /** The assign property */
@@ -58,7 +58,7 @@ public class ManagedEBookItemRequestBuilder {
         return new UserStateSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a ManagedEBookAssignmentItemRequestBuilder
      */
@@ -238,7 +238,7 @@ public class ManagedEBookItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.deviceStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.deviceStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceInstallStateItemRequestBuilder
      */
@@ -356,7 +356,7 @@ public class ManagedEBookItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
      * @param id Unique identifier of the item
      * @return a UserInstallStateSummaryItemRequestBuilder
      */

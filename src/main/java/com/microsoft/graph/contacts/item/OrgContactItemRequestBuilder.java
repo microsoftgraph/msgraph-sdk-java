@@ -1,5 +1,16 @@
-package microsoft.graph.contacts.item;
+package com.microsoft.graph.contacts.item;
 
+import com.microsoft.graph.contacts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.contacts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.contacts.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.contacts.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.contacts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
+import com.microsoft.graph.contacts.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.contacts.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.contacts.item.transitivememberof.TransitiveMemberOfRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrgContact;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contacts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.contacts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.contacts.item.directreports.DirectReportsRequestBuilder;
-import microsoft.graph.contacts.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.contacts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
-import microsoft.graph.contacts.item.memberof.MemberOfRequestBuilder;
-import microsoft.graph.contacts.item.restore.RestoreRequestBuilder;
-import microsoft.graph.contacts.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrgContact;
 /** Provides operations to manage the collection of orgContact entities. */
 public class OrgContactItemRequestBuilder {
     /** The checkMemberGroups property */
@@ -247,16 +247,16 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.contacts.item.directReports.item collection
+     * Gets an item from the com.Microsoft.Graph.contacts.item.directReports.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder directReports(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get the properties and relationships of an organizational contact.
@@ -310,16 +310,16 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.contacts.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.contacts.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update entity in contacts
@@ -377,16 +377,16 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.contacts.item.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.contacts.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class OrgContactItemRequestBuilderDeleteRequestConfiguration {

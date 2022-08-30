@@ -1,5 +1,9 @@
-package microsoft.graph.me.drives.item.root.listitem.versions.item;
+package com.microsoft.graph.me.drives.item.root.listitem.versions.item;
 
+import com.microsoft.graph.me.drives.item.root.listitem.versions.item.fields.FieldsRequestBuilder;
+import com.microsoft.graph.me.drives.item.root.listitem.versions.item.restoreversion.RestoreVersionRequestBuilder;
+import com.microsoft.graph.models.ListItemVersion;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.drives.item.root.listitem.versions.item.fields.FieldsRequestBuilder;
-import microsoft.graph.me.drives.item.root.listitem.versions.item.restoreversion.RestoreVersionRequestBuilder;
-import microsoft.graph.models.ListItemVersion;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
 public class ListItemVersionItemRequestBuilder {
     /** The fields property */

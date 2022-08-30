@@ -1,4 +1,4 @@
-package microsoft.graph.drive.list.contenttypes.item.ispublished;
+package com.microsoft.graph.drive.list.contenttypes.item.ispublished;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

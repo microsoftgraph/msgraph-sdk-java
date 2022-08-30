@@ -1,5 +1,27 @@
-package microsoft.graph.users.item.authentication;
+package com.microsoft.graph.users.item.authentication;
 
+import com.microsoft.graph.models.Authentication;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.authentication.emailmethods.EmailMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.emailmethods.item.EmailAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.fido2methods.Fido2MethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.fido2methods.item.Fido2AuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.methods.item.AuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.methods.MethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.operations.item.LongRunningOperationItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.operations.OperationsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.passwordmethods.item.PasswordAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.phonemethods.item.PhoneAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.softwareoathmethods.item.SoftwareOathAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,28 +36,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Authentication;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.authentication.emailmethods.EmailMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.emailmethods.item.EmailAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.fido2methods.Fido2MethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.fido2methods.item.Fido2AuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.methods.item.AuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.methods.MethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.operations.item.LongRunningOperationItemRequestBuilder;
-import microsoft.graph.users.item.authentication.operations.OperationsRequestBuilder;
-import microsoft.graph.users.item.authentication.passwordmethods.item.PasswordAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.phonemethods.item.PhoneAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.softwareoathmethods.item.SoftwareOathAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
 /** Provides operations to manage the authentication property of the microsoft.graph.user entity. */
 public class AuthenticationRequestBuilder {
     /** The emailMethods property */
@@ -263,7 +263,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.emailMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.emailMethods.item collection
      * @param id Unique identifier of the item
      * @return a EmailAuthenticationMethodItemRequestBuilder
      */
@@ -275,7 +275,7 @@ public class AuthenticationRequestBuilder {
         return new EmailAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.fido2Methods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.fido2Methods.item collection
      * @param id Unique identifier of the item
      * @return a Fido2AuthenticationMethodItemRequestBuilder
      */
@@ -338,7 +338,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.methods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.methods.item collection
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodItemRequestBuilder
      */
@@ -350,7 +350,7 @@ public class AuthenticationRequestBuilder {
         return new AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.microsoftAuthenticatorMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.microsoftAuthenticatorMethods.item collection
      * @param id Unique identifier of the item
      * @return a MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class AuthenticationRequestBuilder {
         return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.operations.item collection
      * @param id Unique identifier of the item
      * @return a LongRunningOperationItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class AuthenticationRequestBuilder {
         return new LongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.passwordMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.passwordMethods.item collection
      * @param id Unique identifier of the item
      * @return a PasswordAuthenticationMethodItemRequestBuilder
      */
@@ -441,7 +441,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.phoneMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.phoneMethods.item collection
      * @param id Unique identifier of the item
      * @return a PhoneAuthenticationMethodItemRequestBuilder
      */
@@ -453,7 +453,7 @@ public class AuthenticationRequestBuilder {
         return new PhoneAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.softwareOathMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.softwareOathMethods.item collection
      * @param id Unique identifier of the item
      * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
      */
@@ -465,7 +465,7 @@ public class AuthenticationRequestBuilder {
         return new SoftwareOathAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.temporaryAccessPassMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.temporaryAccessPassMethods.item collection
      * @param id Unique identifier of the item
      * @return a TemporaryAccessPassAuthenticationMethodItemRequestBuilder
      */
@@ -477,7 +477,7 @@ public class AuthenticationRequestBuilder {
         return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.authentication.windowsHelloForBusinessMethods.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.authentication.windowsHelloForBusinessMethods.item collection
      * @param id Unique identifier of the item
      * @return a WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
      */

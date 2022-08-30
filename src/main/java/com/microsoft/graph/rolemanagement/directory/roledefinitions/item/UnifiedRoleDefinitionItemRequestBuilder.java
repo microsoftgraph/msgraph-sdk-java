@@ -1,5 +1,8 @@
-package microsoft.graph.rolemanagement.directory.roledefinitions.item;
+package com.microsoft.graph.rolemanagement.directory.roledefinitions.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleDefinition;
+import com.microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleDefinition;
-import microsoft.graph.rolemanagement.directory.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleDefinitionItemRequestBuilder {
     /** The inheritsPermissionsFrom property */
@@ -250,7 +250,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleDefinitions.item.inheritsPermissionsFrom.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleDefinitions.item.inheritsPermissionsFrom.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */

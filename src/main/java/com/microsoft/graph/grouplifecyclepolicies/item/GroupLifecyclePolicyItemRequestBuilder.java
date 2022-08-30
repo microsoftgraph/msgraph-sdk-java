@@ -1,5 +1,9 @@
-package microsoft.graph.grouplifecyclepolicies.item;
+package com.microsoft.graph.grouplifecyclepolicies.item;
 
+import com.microsoft.graph.grouplifecyclepolicies.item.addgroup.AddGroupRequestBuilder;
+import com.microsoft.graph.grouplifecyclepolicies.item.removegroup.RemoveGroupRequestBuilder;
+import com.microsoft.graph.models.GroupLifecyclePolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.grouplifecyclepolicies.item.addgroup.AddGroupRequestBuilder;
-import microsoft.graph.grouplifecyclepolicies.item.removegroup.RemoveGroupRequestBuilder;
-import microsoft.graph.models.GroupLifecyclePolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of groupLifecyclePolicy entities. */
 public class GroupLifecyclePolicyItemRequestBuilder {
     /** The addGroup property */

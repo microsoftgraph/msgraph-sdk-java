@@ -1,5 +1,9 @@
-package microsoft.graph.policies.rolemanagementpolicies;
+package com.microsoft.graph.policies.rolemanagementpolicies;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyCollectionResponse;
+import com.microsoft.graph.policies.rolemanagementpolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleManagementPolicy;
-import microsoft.graph.models.UnifiedRoleManagementPolicyCollectionResponse;
-import microsoft.graph.policies.rolemanagementpolicies.count.CountRequestBuilder;
 /** Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity. */
 public class RoleManagementPoliciesRequestBuilder {
     /** The Count property */

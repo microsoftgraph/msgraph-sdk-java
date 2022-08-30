@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item;
+package com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item;
 
+import com.microsoft.graph.models.ManagedAppOperation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedAppOperation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity. */
 public class ManagedAppOperationItemRequestBuilder {
     /** Path parameters for the request */

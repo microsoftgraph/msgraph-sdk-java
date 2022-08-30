@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item;
+package com.microsoft.graph.deviceappmanagement.mobileappconfigurations.item.assignments.item;
 
+import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedDeviceMobileAppConfigurationAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
 public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
     /** Path parameters for the request */

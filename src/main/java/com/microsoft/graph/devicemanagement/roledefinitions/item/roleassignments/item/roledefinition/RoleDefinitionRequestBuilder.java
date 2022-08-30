@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.roledefinition;
+package com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.roledefinition;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleDefinition;
 /** Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity. */
 public class RoleDefinitionRequestBuilder {
     /** Path parameters for the request */

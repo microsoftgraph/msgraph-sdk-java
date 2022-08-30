@@ -1,5 +1,8 @@
-package microsoft.graph.me.photos.item;
+package com.microsoft.graph.me.photos.item;
 
+import com.microsoft.graph.me.photos.item.value.ContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.photos.item.value.ContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProfilePhoto;
 /** Provides operations to manage the photos property of the microsoft.graph.user entity. */
 public class ProfilePhotoItemRequestBuilder {
     /** The Content property */

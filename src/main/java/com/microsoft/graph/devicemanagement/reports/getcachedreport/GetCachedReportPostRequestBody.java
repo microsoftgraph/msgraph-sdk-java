@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getcachedreport;
+package com.microsoft.graph.devicemanagement.reports.getcachedreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

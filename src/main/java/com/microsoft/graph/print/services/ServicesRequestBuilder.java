@@ -1,5 +1,9 @@
-package microsoft.graph.print.services;
+package com.microsoft.graph.print.services;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintService;
+import com.microsoft.graph.models.PrintServiceCollectionResponse;
+import com.microsoft.graph.print.services.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintService;
-import microsoft.graph.models.PrintServiceCollectionResponse;
-import microsoft.graph.print.services.count.CountRequestBuilder;
 /** Provides operations to manage the services property of the microsoft.graph.print entity. */
 public class ServicesRequestBuilder {
     /** The Count property */

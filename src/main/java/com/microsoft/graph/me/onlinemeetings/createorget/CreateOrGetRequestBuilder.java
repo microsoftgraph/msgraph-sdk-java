@@ -1,5 +1,7 @@
-package microsoft.graph.me.onlinemeetings.createorget;
+package com.microsoft.graph.me.onlinemeetings.createorget;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnlineMeeting;
 /** Provides operations to call the createOrGet method. */
 public class CreateOrGetRequestBuilder {
     /** Path parameters for the request */

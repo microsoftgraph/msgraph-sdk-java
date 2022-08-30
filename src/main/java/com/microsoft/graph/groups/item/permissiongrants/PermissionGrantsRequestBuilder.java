@@ -1,5 +1,12 @@
-package microsoft.graph.groups.item.permissiongrants;
+package com.microsoft.graph.groups.item.permissiongrants;
 
+import com.microsoft.graph.groups.item.permissiongrants.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.permissiongrants.count.CountRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ResourceSpecificPermissionGrant;
-import microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
 public class PermissionGrantsRequestBuilder {
     /** The Count property */

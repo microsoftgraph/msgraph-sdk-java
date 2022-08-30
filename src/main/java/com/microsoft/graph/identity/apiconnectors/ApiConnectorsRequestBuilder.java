@@ -1,5 +1,9 @@
-package microsoft.graph.identity.apiconnectors;
+package com.microsoft.graph.identity.apiconnectors;
 
+import com.microsoft.graph.identity.apiconnectors.count.CountRequestBuilder;
+import com.microsoft.graph.models.IdentityApiConnector;
+import com.microsoft.graph.models.IdentityApiConnectorCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.apiconnectors.count.CountRequestBuilder;
-import microsoft.graph.models.IdentityApiConnector;
-import microsoft.graph.models.IdentityApiConnectorCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity. */
 public class ApiConnectorsRequestBuilder {
     /** The Count property */

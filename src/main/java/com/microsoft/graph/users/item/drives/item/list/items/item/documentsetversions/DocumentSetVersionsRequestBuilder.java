@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.drives.item.list.items.item.documentsetversions;
+package com.microsoft.graph.users.item.drives.item.list.items.item.documentsetversions;
 
+import com.microsoft.graph.models.DocumentSetVersion;
+import com.microsoft.graph.models.DocumentSetVersionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.drives.item.list.items.item.documentsetversions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DocumentSetVersion;
-import microsoft.graph.models.DocumentSetVersionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.drives.item.list.items.item.documentsetversions.count.CountRequestBuilder;
 /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
 public class DocumentSetVersionsRequestBuilder {
     /** The Count property */

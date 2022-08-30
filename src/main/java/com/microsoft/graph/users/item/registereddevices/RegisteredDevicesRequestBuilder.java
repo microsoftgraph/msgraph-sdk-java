@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.registereddevices;
+package com.microsoft.graph.users.item.registereddevices;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.registereddevices.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.users.item.registereddevices.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.registereddevices.device.DeviceRequestBuilder;
+import com.microsoft.graph.users.item.registereddevices.endpoint.EndpointRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.registereddevices.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.users.item.registereddevices.count.CountRequestBuilder;
-import microsoft.graph.users.item.registereddevices.device.DeviceRequestBuilder;
-import microsoft.graph.users.item.registereddevices.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the registeredDevices property of the microsoft.graph.user entity. */
 public class RegisteredDevicesRequestBuilder {
     /** The appRoleAssignment property */

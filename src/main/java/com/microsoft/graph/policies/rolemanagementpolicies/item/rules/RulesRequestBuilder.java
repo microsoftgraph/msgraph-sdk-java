@@ -1,5 +1,9 @@
-package microsoft.graph.policies.rolemanagementpolicies.item.rules;
+package com.microsoft.graph.policies.rolemanagementpolicies.item.rules;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyRule;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyRuleCollectionResponse;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleManagementPolicyRule;
-import microsoft.graph.models.UnifiedRoleManagementPolicyRuleCollectionResponse;
-import microsoft.graph.policies.rolemanagementpolicies.item.rules.count.CountRequestBuilder;
 /** Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
 public class RulesRequestBuilder {
     /** The Count property */

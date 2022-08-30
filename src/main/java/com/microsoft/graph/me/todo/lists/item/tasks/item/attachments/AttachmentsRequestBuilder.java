@@ -1,5 +1,10 @@
-package microsoft.graph.me.todo.lists.item.tasks.item.attachments;
+package com.microsoft.graph.me.todo.lists.item.tasks.item.attachments;
 
+import com.microsoft.graph.me.todo.lists.item.tasks.item.attachments.count.CountRequestBuilder;
+import com.microsoft.graph.me.todo.lists.item.tasks.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.models.AttachmentBase;
+import com.microsoft.graph.models.AttachmentBaseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.todo.lists.item.tasks.item.attachments.count.CountRequestBuilder;
-import microsoft.graph.me.todo.lists.item.tasks.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
-import microsoft.graph.models.AttachmentBase;
-import microsoft.graph.models.AttachmentBaseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attachments property of the microsoft.graph.todoTask entity. */
 public class AttachmentsRequestBuilder {
     /** The Count property */

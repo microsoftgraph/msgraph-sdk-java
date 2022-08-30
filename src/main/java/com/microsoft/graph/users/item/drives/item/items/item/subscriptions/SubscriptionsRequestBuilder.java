@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.drives.item.items.item.subscriptions;
+package com.microsoft.graph.users.item.drives.item.items.item.subscriptions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Subscription;
+import com.microsoft.graph.models.SubscriptionCollectionResponse;
+import com.microsoft.graph.users.item.drives.item.items.item.subscriptions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Subscription;
-import microsoft.graph.models.SubscriptionCollectionResponse;
-import microsoft.graph.users.item.drives.item.items.item.subscriptions.count.CountRequestBuilder;
 /** Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity. */
 public class SubscriptionsRequestBuilder {
     /** The Count property */

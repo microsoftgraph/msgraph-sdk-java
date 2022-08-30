@@ -1,5 +1,7 @@
-package microsoft.graph.drives.item.root.thumbnails.item;
+package com.microsoft.graph.drives.item.root.thumbnails.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ThumbnailSet;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ThumbnailSet;
 /** Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity. */
 public class ThumbnailSetItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.teams.item.schedule.shifts;
+package com.microsoft.graph.teams.item.schedule.shifts;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Shift;
+import com.microsoft.graph.models.ShiftCollectionResponse;
+import com.microsoft.graph.teams.item.schedule.shifts.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Shift;
-import microsoft.graph.models.ShiftCollectionResponse;
-import microsoft.graph.teams.item.schedule.shifts.count.CountRequestBuilder;
 /** Provides operations to manage the shifts property of the microsoft.graph.schedule entity. */
 public class ShiftsRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.directory.deleteditems.getavailableextensionproperties;
+package com.microsoft.graph.directory.deleteditems.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

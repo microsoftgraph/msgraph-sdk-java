@@ -1,5 +1,7 @@
-package microsoft.graph.drives.item.items.item.analytics;
+package com.microsoft.graph.drives.item.items.item.analytics;
 
+import com.microsoft.graph.models.ItemAnalytics;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemAnalytics;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the analytics property of the microsoft.graph.driveItem entity. */
 public class AnalyticsRequestBuilder {
     /** Path parameters for the request */

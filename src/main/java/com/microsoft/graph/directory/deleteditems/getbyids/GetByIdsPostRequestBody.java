@@ -1,4 +1,4 @@
-package microsoft.graph.directory.deleteditems.getbyids;
+package com.microsoft.graph.directory.deleteditems.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

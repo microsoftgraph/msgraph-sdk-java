@@ -1,5 +1,10 @@
-package microsoft.graph.teams;
+package com.microsoft.graph.teams;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Team;
+import com.microsoft.graph.models.TeamCollectionResponse;
+import com.microsoft.graph.teams.count.CountRequestBuilder;
+import com.microsoft.graph.teams.getallmessages.GetAllMessagesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Team;
-import microsoft.graph.models.TeamCollectionResponse;
-import microsoft.graph.teams.count.CountRequestBuilder;
-import microsoft.graph.teams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the collection of team entities. */
 public class TeamsRequestBuilder {
     /** The Count property */

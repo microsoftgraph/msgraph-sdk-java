@@ -1,5 +1,35 @@
-package microsoft.graph.drive.items.item;
+package com.microsoft.graph.drive.items.item;
 
+import com.microsoft.graph.drive.items.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.drive.items.item.checkin.CheckinRequestBuilder;
+import com.microsoft.graph.drive.items.item.checkout.CheckoutRequestBuilder;
+import com.microsoft.graph.drive.items.item.children.ChildrenRequestBuilder;
+import com.microsoft.graph.drive.items.item.content.ContentRequestBuilder;
+import com.microsoft.graph.drive.items.item.copy.CopyRequestBuilder;
+import com.microsoft.graph.drive.items.item.createlink.CreateLinkRequestBuilder;
+import com.microsoft.graph.drive.items.item.createuploadsession.CreateUploadSessionRequestBuilder;
+import com.microsoft.graph.drive.items.item.delta.DeltaRequestBuilder;
+import com.microsoft.graph.drive.items.item.deltawithtoken.DeltaWithTokenRequestBuilder;
+import com.microsoft.graph.drive.items.item.follow.FollowRequestBuilder;
+import com.microsoft.graph.drive.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import com.microsoft.graph.drive.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.drive.items.item.invite.InviteRequestBuilder;
+import com.microsoft.graph.drive.items.item.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.drive.items.item.permissions.item.PermissionItemRequestBuilder;
+import com.microsoft.graph.drive.items.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.drive.items.item.preview.PreviewRequestBuilder;
+import com.microsoft.graph.drive.items.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.drive.items.item.searchwithq.SearchWithQRequestBuilder;
+import com.microsoft.graph.drive.items.item.subscriptions.item.SubscriptionItemRequestBuilder;
+import com.microsoft.graph.drive.items.item.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.drive.items.item.thumbnails.item.ThumbnailSetItemRequestBuilder;
+import com.microsoft.graph.drive.items.item.thumbnails.ThumbnailsRequestBuilder;
+import com.microsoft.graph.drive.items.item.unfollow.UnfollowRequestBuilder;
+import com.microsoft.graph.drive.items.item.validatepermission.ValidatePermissionRequestBuilder;
+import com.microsoft.graph.drive.items.item.versions.item.DriveItemVersionItemRequestBuilder;
+import com.microsoft.graph.drive.items.item.versions.VersionsRequestBuilder;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,36 +44,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.items.item.analytics.AnalyticsRequestBuilder;
-import microsoft.graph.drive.items.item.checkin.CheckinRequestBuilder;
-import microsoft.graph.drive.items.item.checkout.CheckoutRequestBuilder;
-import microsoft.graph.drive.items.item.children.ChildrenRequestBuilder;
-import microsoft.graph.drive.items.item.content.ContentRequestBuilder;
-import microsoft.graph.drive.items.item.copy.CopyRequestBuilder;
-import microsoft.graph.drive.items.item.createlink.CreateLinkRequestBuilder;
-import microsoft.graph.drive.items.item.createuploadsession.CreateUploadSessionRequestBuilder;
-import microsoft.graph.drive.items.item.delta.DeltaRequestBuilder;
-import microsoft.graph.drive.items.item.deltawithtoken.DeltaWithTokenRequestBuilder;
-import microsoft.graph.drive.items.item.follow.FollowRequestBuilder;
-import microsoft.graph.drive.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
-import microsoft.graph.drive.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-import microsoft.graph.drive.items.item.invite.InviteRequestBuilder;
-import microsoft.graph.drive.items.item.listitem.ListItemRequestBuilder;
-import microsoft.graph.drive.items.item.permissions.item.PermissionItemRequestBuilder;
-import microsoft.graph.drive.items.item.permissions.PermissionsRequestBuilder;
-import microsoft.graph.drive.items.item.preview.PreviewRequestBuilder;
-import microsoft.graph.drive.items.item.restore.RestoreRequestBuilder;
-import microsoft.graph.drive.items.item.searchwithq.SearchWithQRequestBuilder;
-import microsoft.graph.drive.items.item.subscriptions.item.SubscriptionItemRequestBuilder;
-import microsoft.graph.drive.items.item.subscriptions.SubscriptionsRequestBuilder;
-import microsoft.graph.drive.items.item.thumbnails.item.ThumbnailSetItemRequestBuilder;
-import microsoft.graph.drive.items.item.thumbnails.ThumbnailsRequestBuilder;
-import microsoft.graph.drive.items.item.unfollow.UnfollowRequestBuilder;
-import microsoft.graph.drive.items.item.validatepermission.ValidatePermissionRequestBuilder;
-import microsoft.graph.drive.items.item.versions.item.DriveItemVersionItemRequestBuilder;
-import microsoft.graph.drive.items.item.versions.VersionsRequestBuilder;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the items property of the microsoft.graph.drive entity. */
 public class DriveItemItemRequestBuilder {
     /** The analytics property */
@@ -148,7 +148,7 @@ public class DriveItemItemRequestBuilder {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item.children.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item.children.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -474,7 +474,7 @@ public class DriveItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item.permissions.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item.permissions.item collection
      * @param id Unique identifier of the item
      * @return a PermissionItemRequestBuilder
      */
@@ -496,7 +496,7 @@ public class DriveItemItemRequestBuilder {
         return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item.subscriptions.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item.subscriptions.item collection
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */
@@ -508,7 +508,7 @@ public class DriveItemItemRequestBuilder {
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item.thumbnails.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item.thumbnails.item collection
      * @param id Unique identifier of the item
      * @return a ThumbnailSetItemRequestBuilder
      */
@@ -520,7 +520,7 @@ public class DriveItemItemRequestBuilder {
         return new ThumbnailSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item.versions.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item.versions.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemVersionItemRequestBuilder
      */

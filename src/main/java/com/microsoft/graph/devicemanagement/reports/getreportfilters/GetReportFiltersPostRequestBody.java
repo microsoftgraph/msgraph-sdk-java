@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getreportfilters;
+package com.microsoft.graph.devicemanagement.reports.getreportfilters;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

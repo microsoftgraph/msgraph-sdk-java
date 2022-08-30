@@ -1,4 +1,4 @@
-package microsoft.graph.communications.calls.item.participants.item.mute;
+package com.microsoft.graph.communications.calls.item.participants.item.mute;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

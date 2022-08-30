@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.mobileappcategories.item;
+package com.microsoft.graph.deviceappmanagement.mobileappcategories.item;
 
+import com.microsoft.graph.models.MobileAppCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MobileAppCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppCategoryItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.groups.item.team.schedule.swapshiftschangerequests;
+package com.microsoft.graph.groups.item.team.schedule.swapshiftschangerequests;
 
+import com.microsoft.graph.groups.item.team.schedule.swapshiftschangerequests.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SwapShiftsChangeRequest;
+import com.microsoft.graph.models.SwapShiftsChangeRequestCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.schedule.swapshiftschangerequests.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SwapShiftsChangeRequest;
-import microsoft.graph.models.SwapShiftsChangeRequestCollectionResponse;
 /** Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity. */
 public class SwapShiftsChangeRequestsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.reports.dailyprintusagebyprinter;
+package com.microsoft.graph.reports.dailyprintusagebyprinter;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintUsageByPrinter;
+import com.microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
+import com.microsoft.graph.reports.dailyprintusagebyprinter.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintUsageByPrinter;
-import microsoft.graph.models.PrintUsageByPrinterCollectionResponse;
-import microsoft.graph.reports.dailyprintusagebyprinter.count.CountRequestBuilder;
 /** Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
 public class DailyPrintUsageByPrinterRequestBuilder {
     /** The Count property */

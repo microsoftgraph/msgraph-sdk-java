@@ -1,5 +1,9 @@
-package microsoft.graph.applications.item.federatedidentitycredentials;
+package com.microsoft.graph.applications.item.federatedidentitycredentials;
 
+import com.microsoft.graph.applications.item.federatedidentitycredentials.count.CountRequestBuilder;
+import com.microsoft.graph.models.FederatedIdentityCredential;
+import com.microsoft.graph.models.FederatedIdentityCredentialCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.federatedidentitycredentials.count.CountRequestBuilder;
-import microsoft.graph.models.FederatedIdentityCredential;
-import microsoft.graph.models.FederatedIdentityCredentialCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity. */
 public class FederatedIdentityCredentialsRequestBuilder {
     /** The Count property */

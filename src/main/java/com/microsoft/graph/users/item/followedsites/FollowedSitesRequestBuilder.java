@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.followedsites;
+package com.microsoft.graph.users.item.followedsites;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SiteCollectionResponse;
+import com.microsoft.graph.users.item.followedsites.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SiteCollectionResponse;
-import microsoft.graph.users.item.followedsites.count.CountRequestBuilder;
 /** Provides operations to manage the followedSites property of the microsoft.graph.user entity. */
 public class FollowedSitesRequestBuilder {
     /** The Count property */

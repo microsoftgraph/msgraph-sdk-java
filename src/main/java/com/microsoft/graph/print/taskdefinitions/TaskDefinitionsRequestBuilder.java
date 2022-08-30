@@ -1,5 +1,9 @@
-package microsoft.graph.print.taskdefinitions;
+package com.microsoft.graph.print.taskdefinitions;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PrintTaskDefinition;
+import com.microsoft.graph.models.PrintTaskDefinitionCollectionResponse;
+import com.microsoft.graph.print.taskdefinitions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PrintTaskDefinition;
-import microsoft.graph.models.PrintTaskDefinitionCollectionResponse;
-import microsoft.graph.print.taskdefinitions.count.CountRequestBuilder;
 /** Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity. */
 public class TaskDefinitionsRequestBuilder {
     /** The Count property */

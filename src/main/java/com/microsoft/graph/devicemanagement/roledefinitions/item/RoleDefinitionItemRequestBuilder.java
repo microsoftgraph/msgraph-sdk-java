@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.roledefinitions.item;
+package com.microsoft.graph.devicemanagement.roledefinitions.item;
 
+import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.RoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.item.RoleAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.roledefinitions.item.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleDefinition;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity. */
 public class RoleDefinitionItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class RoleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.roleDefinitions.item.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.roleDefinitions.item.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a RoleAssignmentItemRequestBuilder
      */

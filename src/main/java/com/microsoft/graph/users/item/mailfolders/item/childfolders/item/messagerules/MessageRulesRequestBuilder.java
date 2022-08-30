@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.mailfolders.item.childfolders.item.messagerules;
+package com.microsoft.graph.users.item.mailfolders.item.childfolders.item.messagerules;
 
+import com.microsoft.graph.models.MessageRule;
+import com.microsoft.graph.models.MessageRuleCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.mailfolders.item.childfolders.item.messagerules.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MessageRule;
-import microsoft.graph.models.MessageRuleCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.mailfolders.item.childfolders.item.messagerules.count.CountRequestBuilder;
 /** Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity. */
 public class MessageRulesRequestBuilder {
     /** The Count property */

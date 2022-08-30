@@ -1,5 +1,12 @@
-package microsoft.graph.organization.item.branding;
+package com.microsoft.graph.organization.item.branding;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationalBranding;
+import com.microsoft.graph.organization.item.branding.backgroundimage.BackgroundImageRequestBuilder;
+import com.microsoft.graph.organization.item.branding.bannerlogo.BannerLogoRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.LocalizationsRequestBuilder;
+import com.microsoft.graph.organization.item.branding.squarelogo.SquareLogoRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationalBranding;
-import microsoft.graph.organization.item.branding.backgroundimage.BackgroundImageRequestBuilder;
-import microsoft.graph.organization.item.branding.bannerlogo.BannerLogoRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
-import microsoft.graph.organization.item.branding.localizations.LocalizationsRequestBuilder;
-import microsoft.graph.organization.item.branding.squarelogo.SquareLogoRequestBuilder;
 /** Provides operations to manage the branding property of the microsoft.graph.organization entity. */
 public class BrandingRequestBuilder {
     /** The backgroundImage property */
@@ -269,7 +269,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.organization.item.branding.localizations.item collection
+     * Gets an item from the com.Microsoft.Graph.organization.item.branding.localizations.item collection
      * @param id Unique identifier of the item
      * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */

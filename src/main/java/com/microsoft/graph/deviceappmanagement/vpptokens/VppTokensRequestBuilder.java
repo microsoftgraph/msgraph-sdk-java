@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.vpptokens;
+package com.microsoft.graph.deviceappmanagement.vpptokens;
 
+import com.microsoft.graph.deviceappmanagement.vpptokens.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.VppToken;
+import com.microsoft.graph.models.VppTokenCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.vpptokens.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.VppToken;
-import microsoft.graph.models.VppTokenCollectionResponse;
 /** Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity. */
 public class VppTokensRequestBuilder {
     /** The Count property */

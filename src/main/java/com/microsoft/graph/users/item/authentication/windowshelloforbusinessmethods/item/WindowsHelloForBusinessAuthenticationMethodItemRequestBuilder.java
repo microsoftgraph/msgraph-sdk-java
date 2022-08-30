@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item;
+package com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
+import com.microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.DeviceRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
-import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.device.DeviceRequestBuilder;
 /** Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity. */
 public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
     /** The device property */

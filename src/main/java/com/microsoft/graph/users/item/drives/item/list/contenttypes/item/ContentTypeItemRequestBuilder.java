@@ -1,5 +1,18 @@
-package microsoft.graph.users.item.drives.item.list.contenttypes.item;
+package com.microsoft.graph.users.item.drives.item.list.contenttypes.item;
 
+import com.microsoft.graph.models.ContentType;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.associatewithhubsites.AssociateWithHubSitesRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.base.BaseRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.basetypes.BaseTypesRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.ispublished.IsPublishedRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.publish.PublishRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.unpublish.UnpublishRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ContentType;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.associatewithhubsites.AssociateWithHubSitesRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.base.BaseRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.basetypes.BaseTypesRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.ColumnsRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.ispublished.IsPublishedRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.publish.PublishRequestBuilder;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.unpublish.UnpublishRequestBuilder;
 /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
 public class ContentTypeItemRequestBuilder {
     /** The associateWithHubSites property */
@@ -81,7 +81,7 @@ public class ContentTypeItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.users.item.drives.item.list.contentTypes.item.baseTypes.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.drives.item.list.contentTypes.item.baseTypes.item collection
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -93,7 +93,7 @@ public class ContentTypeItemRequestBuilder {
         return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columnLinks.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columnLinks.item collection
      * @param id Unique identifier of the item
      * @return a ColumnLinkItemRequestBuilder
      */
@@ -105,28 +105,28 @@ public class ContentTypeItemRequestBuilder {
         return new ColumnLinkItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columnPositions.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columnPositions.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder columnPositions(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder columnPositions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("columnDefinition%2Did", id);
-        return new microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columns.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.drives.item.list.contentTypes.item.columns.item collection
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder columns(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("columnDefinition%2Did", id);
-        return new microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.

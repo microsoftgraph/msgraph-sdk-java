@@ -1,5 +1,6 @@
-package microsoft.graph.models.callrecords;
+package com.microsoft.graph.models.callrecords;
 
+import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.IdentitySet;
 public class ParticipantEndpoint extends Endpoint implements Parsable {
     /** The feedback provided by the user of this endpoint about the quality of the session. */
     private UserFeedback _feedback;

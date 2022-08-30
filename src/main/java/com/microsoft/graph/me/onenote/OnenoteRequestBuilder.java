@@ -1,5 +1,19 @@
-package microsoft.graph.me.onenote;
+package com.microsoft.graph.me.onenote;
 
+import com.microsoft.graph.me.onenote.notebooks.item.NotebookItemRequestBuilder;
+import com.microsoft.graph.me.onenote.notebooks.NotebooksRequestBuilder;
+import com.microsoft.graph.me.onenote.operations.item.OnenoteOperationItemRequestBuilder;
+import com.microsoft.graph.me.onenote.operations.OperationsRequestBuilder;
+import com.microsoft.graph.me.onenote.pages.item.OnenotePageItemRequestBuilder;
+import com.microsoft.graph.me.onenote.pages.PagesRequestBuilder;
+import com.microsoft.graph.me.onenote.resources.item.OnenoteResourceItemRequestBuilder;
+import com.microsoft.graph.me.onenote.resources.ResourcesRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.SectionGroupItemRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.SectionGroupsRequestBuilder;
+import com.microsoft.graph.me.onenote.sections.item.OnenoteSectionItemRequestBuilder;
+import com.microsoft.graph.me.onenote.sections.SectionsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Onenote;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,20 +28,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.onenote.notebooks.item.NotebookItemRequestBuilder;
-import microsoft.graph.me.onenote.notebooks.NotebooksRequestBuilder;
-import microsoft.graph.me.onenote.operations.item.OnenoteOperationItemRequestBuilder;
-import microsoft.graph.me.onenote.operations.OperationsRequestBuilder;
-import microsoft.graph.me.onenote.pages.item.OnenotePageItemRequestBuilder;
-import microsoft.graph.me.onenote.pages.PagesRequestBuilder;
-import microsoft.graph.me.onenote.resources.item.OnenoteResourceItemRequestBuilder;
-import microsoft.graph.me.onenote.resources.ResourcesRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.item.SectionGroupItemRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.SectionGroupsRequestBuilder;
-import microsoft.graph.me.onenote.sections.item.OnenoteSectionItemRequestBuilder;
-import microsoft.graph.me.onenote.sections.SectionsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Onenote;
 /** Provides operations to manage the onenote property of the microsoft.graph.user entity. */
 public class OnenoteRequestBuilder {
     /** The notebooks property */
@@ -286,7 +286,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.notebooks.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.notebooks.item collection
      * @param id Unique identifier of the item
      * @return a NotebookItemRequestBuilder
      */
@@ -298,7 +298,7 @@ public class OnenoteRequestBuilder {
         return new NotebookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.operations.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteOperationItemRequestBuilder
      */
@@ -310,7 +310,7 @@ public class OnenoteRequestBuilder {
         return new OnenoteOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.pages.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.pages.item collection
      * @param id Unique identifier of the item
      * @return a OnenotePageItemRequestBuilder
      */
@@ -377,7 +377,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.resources.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.resources.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteResourceItemRequestBuilder
      */
@@ -389,7 +389,7 @@ public class OnenoteRequestBuilder {
         return new OnenoteResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.sectionGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.sectionGroups.item collection
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -401,7 +401,7 @@ public class OnenoteRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.sections.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.sections.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

@@ -1,5 +1,10 @@
-package microsoft.graph.groups.item.threads.item;
+package com.microsoft.graph.groups.item.threads.item;
 
+import com.microsoft.graph.groups.item.threads.item.posts.item.PostItemRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.PostsRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.reply.ReplyRequestBuilder;
+import com.microsoft.graph.models.ConversationThread;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.threads.item.posts.item.PostItemRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.PostsRequestBuilder;
-import microsoft.graph.groups.item.threads.item.reply.ReplyRequestBuilder;
-import microsoft.graph.models.ConversationThread;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the threads property of the microsoft.graph.group entity. */
 public class ConversationThreadItemRequestBuilder {
     /** Path parameters for the request */
@@ -312,7 +312,7 @@ public class ConversationThreadItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item.posts.item collection
      * @param id Unique identifier of the item
      * @return a PostItemRequestBuilder
      */

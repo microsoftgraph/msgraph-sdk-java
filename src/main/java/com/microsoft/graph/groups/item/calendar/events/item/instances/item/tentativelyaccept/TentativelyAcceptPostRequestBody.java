@@ -1,5 +1,6 @@
-package microsoft.graph.groups.item.calendar.events.item.instances.item.tentativelyaccept;
+package com.microsoft.graph.groups.item.calendar.events.item.instances.item.tentativelyaccept;
 
+import com.microsoft.graph.models.TimeSlot;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.TimeSlot;
 /** Provides operations to call the tentativelyAccept method. */
 public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

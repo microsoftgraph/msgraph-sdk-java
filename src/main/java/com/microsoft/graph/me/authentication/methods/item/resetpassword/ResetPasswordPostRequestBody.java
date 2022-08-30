@@ -1,4 +1,4 @@
-package microsoft.graph.me.authentication.methods.item.resetpassword;
+package com.microsoft.graph.me.authentication.methods.item.resetpassword;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

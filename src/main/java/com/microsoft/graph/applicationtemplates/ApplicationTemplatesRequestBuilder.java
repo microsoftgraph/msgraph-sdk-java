@@ -1,5 +1,9 @@
-package microsoft.graph.applicationtemplates;
+package com.microsoft.graph.applicationtemplates;
 
+import com.microsoft.graph.applicationtemplates.count.CountRequestBuilder;
+import com.microsoft.graph.models.ApplicationTemplate;
+import com.microsoft.graph.models.ApplicationTemplateCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applicationtemplates.count.CountRequestBuilder;
-import microsoft.graph.models.ApplicationTemplate;
-import microsoft.graph.models.ApplicationTemplateCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of applicationTemplate entities. */
 public class ApplicationTemplatesRequestBuilder {
     /** The Count property */

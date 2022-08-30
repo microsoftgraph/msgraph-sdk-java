@@ -1,5 +1,9 @@
-package microsoft.graph.communications.presences;
+package com.microsoft.graph.communications.presences;
 
+import com.microsoft.graph.communications.presences.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Presence;
+import com.microsoft.graph.models.PresenceCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.presences.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Presence;
-import microsoft.graph.models.PresenceCollectionResponse;
 /** Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity. */
 public class PresencesRequestBuilder {
     /** The Count property */

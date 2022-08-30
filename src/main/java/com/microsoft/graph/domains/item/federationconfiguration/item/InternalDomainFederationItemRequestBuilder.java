@@ -1,5 +1,7 @@
-package microsoft.graph.domains.item.federationconfiguration.item;
+package com.microsoft.graph.domains.item.federationconfiguration.item;
 
+import com.microsoft.graph.models.InternalDomainFederation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.InternalDomainFederation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity. */
 public class InternalDomainFederationItemRequestBuilder {
     /** Path parameters for the request */

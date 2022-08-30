@@ -1,5 +1,7 @@
-package microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.targetschedule;
+package com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.targetschedule;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignmentSchedule;
 /** Provides operations to manage the targetSchedule property of the microsoft.graph.unifiedRoleAssignmentScheduleRequest entity. */
 public class TargetScheduleRequestBuilder {
     /** Path parameters for the request */

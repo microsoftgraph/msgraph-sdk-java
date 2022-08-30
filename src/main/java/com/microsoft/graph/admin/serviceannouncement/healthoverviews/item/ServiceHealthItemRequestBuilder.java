@@ -1,5 +1,9 @@
-package microsoft.graph.admin.serviceannouncement.healthoverviews.item;
+package com.microsoft.graph.admin.serviceannouncement.healthoverviews.item;
 
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.IssuesRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.item.ServiceHealthIssueItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceHealth;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.IssuesRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.healthoverviews.item.issues.item.ServiceHealthIssueItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceHealth;
 /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
 public class ServiceHealthItemRequestBuilder {
     /** The issues property */
@@ -251,7 +251,7 @@ public class ServiceHealthItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
      * @param id Unique identifier of the item
      * @return a ServiceHealthIssueItemRequestBuilder
      */

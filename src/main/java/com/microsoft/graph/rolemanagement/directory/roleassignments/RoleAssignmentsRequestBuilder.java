@@ -1,5 +1,9 @@
-package microsoft.graph.rolemanagement.directory.roleassignments;
+package com.microsoft.graph.rolemanagement.directory.roleassignments;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignment;
+import com.microsoft.graph.models.UnifiedRoleAssignmentCollectionResponse;
+import com.microsoft.graph.rolemanagement.directory.roleassignments.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignment;
-import microsoft.graph.models.UnifiedRoleAssignmentCollectionResponse;
-import microsoft.graph.rolemanagement.directory.roleassignments.count.CountRequestBuilder;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
 public class RoleAssignmentsRequestBuilder {
     /** The Count property */

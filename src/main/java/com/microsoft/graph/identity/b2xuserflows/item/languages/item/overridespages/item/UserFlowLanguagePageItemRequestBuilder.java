@@ -1,5 +1,8 @@
-package microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item;
+package com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item;
 
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.value.ContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserFlowLanguagePage;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.value.ContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserFlowLanguagePage;
 /** Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
 public class UserFlowLanguagePageItemRequestBuilder {
     /** The Content property */

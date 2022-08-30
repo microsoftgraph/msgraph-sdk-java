@@ -1,5 +1,13 @@
-package microsoft.graph.serviceprincipals;
+package com.microsoft.graph.serviceprincipals;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.models.ServicePrincipalCollectionResponse;
+import com.microsoft.graph.serviceprincipals.count.CountRequestBuilder;
+import com.microsoft.graph.serviceprincipals.delta.DeltaRequestBuilder;
+import com.microsoft.graph.serviceprincipals.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipal;
-import microsoft.graph.models.ServicePrincipalCollectionResponse;
-import microsoft.graph.serviceprincipals.count.CountRequestBuilder;
-import microsoft.graph.serviceprincipals.delta.DeltaRequestBuilder;
-import microsoft.graph.serviceprincipals.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.serviceprincipals.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.serviceprincipals.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of servicePrincipal entities. */
 public class ServicePrincipalsRequestBuilder {
     /** The Count property */

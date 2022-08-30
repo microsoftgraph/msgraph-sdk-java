@@ -1,5 +1,6 @@
-package microsoft.graph.models.termstore;
+package com.microsoft.graph.models.termstore;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
 public class Store extends Entity implements Parsable {
     /** Default language of the term store. */
     private String _defaultLanguageTag;

@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.onlinemeetings;
+package com.microsoft.graph.users.item.onlinemeetings;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.models.OnlineMeetingCollectionResponse;
+import com.microsoft.graph.users.item.onlinemeetings.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.createorget.CreateOrGetRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnlineMeeting;
-import microsoft.graph.models.OnlineMeetingCollectionResponse;
-import microsoft.graph.users.item.onlinemeetings.count.CountRequestBuilder;
-import microsoft.graph.users.item.onlinemeetings.createorget.CreateOrGetRequestBuilder;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity. */
 public class OnlineMeetingsRequestBuilder {
     /** The Count property */

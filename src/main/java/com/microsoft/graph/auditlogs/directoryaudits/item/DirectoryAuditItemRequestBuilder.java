@@ -1,5 +1,7 @@
-package microsoft.graph.auditlogs.directoryaudits.item;
+package com.microsoft.graph.auditlogs.directoryaudits.item;
 
+import com.microsoft.graph.models.DirectoryAudit;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryAudit;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity. */
 public class DirectoryAuditItemRequestBuilder {
     /** Path parameters for the request */

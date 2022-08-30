@@ -1,4 +1,4 @@
-package microsoft.graph.directory.federationconfigurations.availableprovidertypes;
+package com.microsoft.graph.directory.federationconfigurations.availableprovidertypes;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

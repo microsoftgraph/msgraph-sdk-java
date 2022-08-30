@@ -1,5 +1,6 @@
-package microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.filterbycurrentuserwithon;
+package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.filterbycurrentuserwithon;
 
+import com.microsoft.graph.models.UserConsentRequest;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.UserConsentRequest;
 /** Provides operations to call the filterByCurrentUser method. */
 public class FilterByCurrentUserWithOnResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

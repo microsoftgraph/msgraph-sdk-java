@@ -1,5 +1,11 @@
-package microsoft.graph.users.item.owneddevices;
+package com.microsoft.graph.users.item.owneddevices;
 
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.owneddevices.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.users.item.owneddevices.count.CountRequestBuilder;
+import com.microsoft.graph.users.item.owneddevices.device.DeviceRequestBuilder;
+import com.microsoft.graph.users.item.owneddevices.endpoint.EndpointRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.owneddevices.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.users.item.owneddevices.count.CountRequestBuilder;
-import microsoft.graph.users.item.owneddevices.device.DeviceRequestBuilder;
-import microsoft.graph.users.item.owneddevices.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
 public class OwnedDevicesRequestBuilder {
     /** The appRoleAssignment property */

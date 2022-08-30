@@ -1,5 +1,9 @@
-package microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications;
+package com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications;
 
+import com.microsoft.graph.models.DelegatedPermissionClassification;
+import com.microsoft.graph.models.DelegatedPermissionClassificationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DelegatedPermissionClassification;
-import microsoft.graph.models.DelegatedPermissionClassificationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.count.CountRequestBuilder;
 /** Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity. */
 public class DelegatedPermissionClassificationsRequestBuilder {
     /** The Count property */

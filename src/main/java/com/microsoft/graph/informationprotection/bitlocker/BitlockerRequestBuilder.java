@@ -1,5 +1,9 @@
-package microsoft.graph.informationprotection.bitlocker;
+package com.microsoft.graph.informationprotection.bitlocker;
 
+import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.item.BitlockerRecoveryKeyItemRequestBuilder;
+import com.microsoft.graph.informationprotection.bitlocker.recoverykeys.RecoveryKeysRequestBuilder;
+import com.microsoft.graph.models.Bitlocker;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.bitlocker.recoverykeys.item.BitlockerRecoveryKeyItemRequestBuilder;
-import microsoft.graph.informationprotection.bitlocker.recoverykeys.RecoveryKeysRequestBuilder;
-import microsoft.graph.models.Bitlocker;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity. */
 public class BitlockerRequestBuilder {
     /** Path parameters for the request */
@@ -227,7 +227,7 @@ public class BitlockerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.bitlocker.recoveryKeys.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.bitlocker.recoveryKeys.item collection
      * @param id Unique identifier of the item
      * @return a BitlockerRecoveryKeyItemRequestBuilder
      */

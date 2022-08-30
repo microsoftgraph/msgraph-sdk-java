@@ -1,5 +1,9 @@
-package microsoft.graph.appcatalogs.teamsapps.item;
+package com.microsoft.graph.appcatalogs.teamsapps.item;
 
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.AppDefinitionsRequestBuilder;
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.TeamsAppDefinitionItemRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsApp;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.AppDefinitionsRequestBuilder;
-import microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.item.TeamsAppDefinitionItemRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsApp;
 /** Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity. */
 public class TeamsAppItemRequestBuilder {
     /** The appDefinitions property */
@@ -32,7 +32,7 @@ public class TeamsAppItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.appCatalogs.teamsApps.item.appDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.appCatalogs.teamsApps.item.appDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppDefinitionItemRequestBuilder
      */

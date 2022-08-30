@@ -1,5 +1,9 @@
-package microsoft.graph.solutions.bookingbusinesses;
+package com.microsoft.graph.solutions.bookingbusinesses;
 
+import com.microsoft.graph.models.BookingBusiness;
+import com.microsoft.graph.models.BookingBusinessCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.solutions.bookingbusinesses.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.BookingBusiness;
-import microsoft.graph.models.BookingBusinessCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.solutions.bookingbusinesses.count.CountRequestBuilder;
 /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
 public class BookingBusinessesRequestBuilder {
     /** The Count property */

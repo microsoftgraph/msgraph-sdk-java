@@ -1,5 +1,9 @@
-package microsoft.graph.policies.permissiongrantpolicies.item.includes;
+package com.microsoft.graph.policies.permissiongrantpolicies.item.includes;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PermissionGrantConditionSet;
+import com.microsoft.graph.models.PermissionGrantConditionSetCollectionResponse;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PermissionGrantConditionSet;
-import microsoft.graph.models.PermissionGrantConditionSetCollectionResponse;
-import microsoft.graph.policies.permissiongrantpolicies.item.includes.count.CountRequestBuilder;
 /** Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity. */
 public class IncludesRequestBuilder {
     /** The Count property */

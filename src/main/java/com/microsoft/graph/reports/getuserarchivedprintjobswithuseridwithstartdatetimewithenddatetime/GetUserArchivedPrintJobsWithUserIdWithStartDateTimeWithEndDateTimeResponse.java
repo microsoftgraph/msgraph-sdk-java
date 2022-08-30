@@ -1,5 +1,6 @@
-package microsoft.graph.reports.getuserarchivedprintjobswithuseridwithstartdatetimewithenddatetime;
+package com.microsoft.graph.reports.getuserarchivedprintjobswithuseridwithstartdatetimewithenddatetime;
 
+import com.microsoft.graph.models.ArchivedPrintJob;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ArchivedPrintJob;
 /** Provides operations to call the getUserArchivedPrintJobs method. */
 public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

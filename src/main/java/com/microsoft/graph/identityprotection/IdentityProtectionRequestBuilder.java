@@ -1,5 +1,11 @@
-package microsoft.graph.identityprotection;
+package com.microsoft.graph.identityprotection;
 
+import com.microsoft.graph.identityprotection.riskdetections.item.RiskDetectionItemRequestBuilder;
+import com.microsoft.graph.identityprotection.riskdetections.RiskDetectionsRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.item.RiskyUserItemRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.RiskyUsersRequestBuilder;
+import com.microsoft.graph.models.IdentityProtectionRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.riskdetections.item.RiskDetectionItemRequestBuilder;
-import microsoft.graph.identityprotection.riskdetections.RiskDetectionsRequestBuilder;
-import microsoft.graph.identityprotection.riskyusers.item.RiskyUserItemRequestBuilder;
-import microsoft.graph.identityprotection.riskyusers.RiskyUsersRequestBuilder;
-import microsoft.graph.models.IdentityProtectionRoot;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityProtectionRoot singleton. */
 public class IdentityProtectionRequestBuilder {
     /** Path parameters for the request */
@@ -234,7 +234,7 @@ public class IdentityProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityProtection.riskDetections.item collection
+     * Gets an item from the com.Microsoft.Graph.identityProtection.riskDetections.item collection
      * @param id Unique identifier of the item
      * @return a RiskDetectionItemRequestBuilder
      */
@@ -246,7 +246,7 @@ public class IdentityProtectionRequestBuilder {
         return new RiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityProtection.riskyUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.identityProtection.riskyUsers.item collection
      * @param id Unique identifier of the item
      * @return a RiskyUserItemRequestBuilder
      */

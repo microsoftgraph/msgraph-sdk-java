@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.sites.item.lists.item.drive;
+package com.microsoft.graph.groups.item.sites.item.lists.item.drive;
 
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Drive;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the drive property of the microsoft.graph.list entity. */
 public class DriveRequestBuilder {
     /** Path parameters for the request */

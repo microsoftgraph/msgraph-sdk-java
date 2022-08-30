@@ -1,5 +1,8 @@
-package microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item;
+package com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item;
 
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.targetapps.TargetAppsRequestBuilder;
+import com.microsoft.graph.models.ManagedAppPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.targetapps.TargetAppsRequestBuilder;
-import microsoft.graph.models.ManagedAppPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity. */
 public class ManagedAppPolicyItemRequestBuilder {
     /** Path parameters for the request */

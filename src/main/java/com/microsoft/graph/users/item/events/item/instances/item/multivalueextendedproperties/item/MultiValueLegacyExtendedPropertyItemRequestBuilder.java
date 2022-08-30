@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.events.item.instances.item.multivalueextendedproperties.item;
+package com.microsoft.graph.users.item.events.item.instances.item.multivalueextendedproperties.item;
 
+import com.microsoft.graph.models.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MultiValueLegacyExtendedProperty;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity. */
 public class MultiValueLegacyExtendedPropertyItemRequestBuilder {
     /** Path parameters for the request */

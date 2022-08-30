@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.manageddevices;
+package com.microsoft.graph.devicemanagement.manageddevices;
 
+import com.microsoft.graph.devicemanagement.manageddevices.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.ManagedDeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.manageddevices.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.ManagedDeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity. */
 public class ManagedDevicesRequestBuilder {
     /** The Count property */

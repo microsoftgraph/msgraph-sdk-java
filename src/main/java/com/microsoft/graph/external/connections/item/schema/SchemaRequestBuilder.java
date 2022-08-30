@@ -1,5 +1,7 @@
-package microsoft.graph.external.connections.item.schema;
+package com.microsoft.graph.external.connections.item.schema;
 
+import com.microsoft.graph.models.externalconnectors.Schema;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.externalconnectors.Schema;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class SchemaRequestBuilder {
     /** Path parameters for the request */

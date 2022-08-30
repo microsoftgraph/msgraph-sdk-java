@@ -1,5 +1,6 @@
-package microsoft.graph.communications.calls.logteleconferencedevicequality;
+package com.microsoft.graph.communications.calls.logteleconferencedevicequality;
 
+import com.microsoft.graph.models.TeleconferenceDeviceQuality;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.TeleconferenceDeviceQuality;
 /** Provides operations to call the logTeleconferenceDeviceQuality method. */
 public class LogTeleconferenceDeviceQualityPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

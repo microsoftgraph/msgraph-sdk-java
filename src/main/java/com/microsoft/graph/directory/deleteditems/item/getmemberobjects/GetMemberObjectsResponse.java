@@ -1,4 +1,4 @@
-package microsoft.graph.directory.deleteditems.item.getmemberobjects;
+package com.microsoft.graph.directory.deleteditems.item.getmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

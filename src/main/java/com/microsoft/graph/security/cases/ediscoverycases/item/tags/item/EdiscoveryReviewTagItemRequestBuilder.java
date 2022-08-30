@@ -1,5 +1,9 @@
-package microsoft.graph.security.cases.ediscoverycases.item.tags.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.tags.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryReviewTag;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.ChildTagsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.tags.item.parent.ParentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryReviewTag;
-import microsoft.graph.security.cases.ediscoverycases.item.tags.item.childtags.ChildTagsRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.tags.item.parent.ParentRequestBuilder;
 /** Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryReviewTagItemRequestBuilder {
     /** The childTags property */
@@ -37,7 +37,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item.childTags.item collection
+     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item.childTags.item collection
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewTagItemRequestBuilder
      */

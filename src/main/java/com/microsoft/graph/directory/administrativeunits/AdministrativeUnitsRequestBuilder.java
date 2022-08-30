@@ -1,5 +1,10 @@
-package microsoft.graph.directory.administrativeunits;
+package com.microsoft.graph.directory.administrativeunits;
 
+import com.microsoft.graph.directory.administrativeunits.count.CountRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.AdministrativeUnitCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.count.CountRequestBuilder;
-import microsoft.graph.directory.administrativeunits.delta.DeltaRequestBuilder;
-import microsoft.graph.models.AdministrativeUnit;
-import microsoft.graph.models.AdministrativeUnitCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
 public class AdministrativeUnitsRequestBuilder {
     /** The Count property */

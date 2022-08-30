@@ -1,5 +1,9 @@
-package microsoft.graph.me.approleassignments;
+package com.microsoft.graph.me.approleassignments;
 
+import com.microsoft.graph.me.approleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.AppRoleAssignment;
+import com.microsoft.graph.models.AppRoleAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.approleassignments.count.CountRequestBuilder;
-import microsoft.graph.models.AppRoleAssignment;
-import microsoft.graph.models.AppRoleAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity. */
 public class AppRoleAssignmentsRequestBuilder {
     /** The Count property */

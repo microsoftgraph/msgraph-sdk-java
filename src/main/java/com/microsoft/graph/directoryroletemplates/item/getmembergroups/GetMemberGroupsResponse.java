@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroletemplates.item.getmembergroups;
+package com.microsoft.graph.directoryroletemplates.item.getmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

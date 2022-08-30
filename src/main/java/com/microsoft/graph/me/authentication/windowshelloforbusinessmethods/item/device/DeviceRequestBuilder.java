@@ -1,5 +1,18 @@
-package microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device;
+package com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device;
 
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.restore.RestoreRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.TransitiveMemberOfRequestBuilder;
+import com.microsoft.graph.models.Device;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.MemberOfRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.restore.RestoreRequestBuilder;
-import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.TransitiveMemberOfRequestBuilder;
-import microsoft.graph.models.Device;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the device property of the microsoft.graph.windowsHelloForBusinessAuthenticationMethod entity. */
 public class DeviceRequestBuilder {
     /** The checkMemberGroups property */
@@ -254,7 +254,7 @@ public class DeviceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -317,16 +317,16 @@ public class DeviceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property device in me
@@ -384,40 +384,40 @@ public class DeviceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.registeredOwners.item collection
+     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.registeredOwners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder registeredOwners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.registeredUsers.item collection
+     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.registeredUsers.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder registeredUsers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item.device.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class DeviceRequestBuilderDeleteRequestConfiguration {

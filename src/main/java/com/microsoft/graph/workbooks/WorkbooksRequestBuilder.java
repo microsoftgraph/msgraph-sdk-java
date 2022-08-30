@@ -1,5 +1,9 @@
-package microsoft.graph.workbooks;
+package com.microsoft.graph.workbooks;
 
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.DriveItemCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.workbooks.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DriveItem;
-import microsoft.graph.models.DriveItemCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.workbooks.count.CountRequestBuilder;
 /** Provides operations to manage the collection of driveItem entities. */
 public class WorkbooksRequestBuilder {
     /** The Count property */

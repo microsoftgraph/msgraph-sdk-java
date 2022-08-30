@@ -1,5 +1,9 @@
-package microsoft.graph.external;
+package com.microsoft.graph.external;
 
+import com.microsoft.graph.external.connections.ConnectionsRequestBuilder;
+import com.microsoft.graph.external.connections.item.ExternalConnectionItemRequestBuilder;
+import com.microsoft.graph.models.externalconnectors.External;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.external.connections.ConnectionsRequestBuilder;
-import microsoft.graph.external.connections.item.ExternalConnectionItemRequestBuilder;
-import microsoft.graph.models.externalconnectors.External;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the external singleton. */
 public class ExternalRequestBuilder {
     /** The connections property */
@@ -32,7 +32,7 @@ public class ExternalRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.external.connections.item collection
+     * Gets an item from the com.Microsoft.Graph.external.connections.item collection
      * @param id Unique identifier of the item
      * @return a ExternalConnectionItemRequestBuilder
      */

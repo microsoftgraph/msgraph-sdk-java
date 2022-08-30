@@ -1,5 +1,8 @@
-package microsoft.graph.rolemanagement.directory.roleassignmentschedules.item;
+package com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.activatedusing.ActivatedUsingRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignmentSchedule;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.activatedusing.ActivatedUsingRequestBuilder;
 /** Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleAssignmentScheduleItemRequestBuilder {
     /** The activatedUsing property */

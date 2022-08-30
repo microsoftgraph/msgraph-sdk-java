@@ -1,5 +1,9 @@
-package microsoft.graph.auditlogs.restrictedsignins;
+package com.microsoft.graph.auditlogs.restrictedsignins;
 
+import com.microsoft.graph.auditlogs.restrictedsignins.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RestrictedSignIn;
+import com.microsoft.graph.models.RestrictedSignInCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.auditlogs.restrictedsignins.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RestrictedSignIn;
-import microsoft.graph.models.RestrictedSignInCollectionResponse;
 /** Provides operations to manage the restrictedSignIns property of the microsoft.graph.auditLogRoot entity. */
 public class RestrictedSignInsRequestBuilder {
     /** The Count property */

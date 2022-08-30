@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.teamwork.installedapps.item.chat;
+package com.microsoft.graph.users.item.teamwork.installedapps.item.chat;
 
+import com.microsoft.graph.models.Chat;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Chat;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity. */
 public class ChatRequestBuilder {
     /** Path parameters for the request */

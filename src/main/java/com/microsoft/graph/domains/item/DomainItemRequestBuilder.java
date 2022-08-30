@@ -1,5 +1,15 @@
-package microsoft.graph.domains.item;
+package com.microsoft.graph.domains.item;
 
+import com.microsoft.graph.domains.item.domainnamereferences.DomainNameReferencesRequestBuilder;
+import com.microsoft.graph.domains.item.domainnamereferences.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
+import com.microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
+import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
+import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
+import com.microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
+import com.microsoft.graph.domains.item.verify.VerifyRequestBuilder;
+import com.microsoft.graph.models.Domain;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.domains.item.domainnamereferences.DomainNameReferencesRequestBuilder;
-import microsoft.graph.domains.item.domainnamereferences.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
-import microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
-import microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
-import microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
-import microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
-import microsoft.graph.domains.item.verify.VerifyRequestBuilder;
-import microsoft.graph.models.Domain;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of domain entities. */
 public class DomainItemRequestBuilder {
     /** The domainNameReferences property */
@@ -231,7 +231,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.domains.item.domainNameReferences.item collection
+     * Gets an item from the com.Microsoft.Graph.domains.item.domainNameReferences.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -243,7 +243,7 @@ public class DomainItemRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.domains.item.federationConfiguration.item collection
+     * Gets an item from the com.Microsoft.Graph.domains.item.federationConfiguration.item collection
      * @param id Unique identifier of the item
      * @return a InternalDomainFederationItemRequestBuilder
      */
@@ -361,28 +361,28 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.domains.item.serviceConfigurationRecords.item collection
+     * Gets an item from the com.Microsoft.Graph.domains.item.serviceConfigurationRecords.item collection
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder serviceConfigurationRecords(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder serviceConfigurationRecords(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("domainDnsRecord%2Did", id);
-        return new microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.domains.item.verificationDnsRecords.item collection
+     * Gets an item from the com.Microsoft.Graph.domains.item.verificationDnsRecords.item collection
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder verificationDnsRecords(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder verificationDnsRecords(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("domainDnsRecord%2Did", id);
-        return new microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class DomainItemRequestBuilderDeleteRequestConfiguration {

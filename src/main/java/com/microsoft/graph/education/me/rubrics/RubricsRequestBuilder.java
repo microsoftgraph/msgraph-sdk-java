@@ -1,5 +1,9 @@
-package microsoft.graph.education.me.rubrics;
+package com.microsoft.graph.education.me.rubrics;
 
+import com.microsoft.graph.education.me.rubrics.count.CountRequestBuilder;
+import com.microsoft.graph.models.EducationRubric;
+import com.microsoft.graph.models.EducationRubricCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.me.rubrics.count.CountRequestBuilder;
-import microsoft.graph.models.EducationRubric;
-import microsoft.graph.models.EducationRubricCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity. */
 public class RubricsRequestBuilder {
     /** The Count property */

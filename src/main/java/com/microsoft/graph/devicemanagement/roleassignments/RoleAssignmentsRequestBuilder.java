@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.roleassignments;
+package com.microsoft.graph.devicemanagement.roleassignments;
 
+import com.microsoft.graph.devicemanagement.roleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
+import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.roleassignments.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import microsoft.graph.models.DeviceAndAppManagementRoleAssignmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity. */
 public class RoleAssignmentsRequestBuilder {
     /** The Count property */

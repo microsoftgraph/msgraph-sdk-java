@@ -1,5 +1,10 @@
-package microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item;
+package com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item;
 
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.fromterm.FromTermRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.set.SetRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.toterm.ToTermRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Relation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.fromterm.FromTermRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.set.SetRequestBuilder;
-import microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.toterm.ToTermRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Relation;
 /** Provides operations to manage the relations property of the microsoft.graph.termStore.set entity. */
 public class RelationItemRequestBuilder {
     /** The fromTerm property */

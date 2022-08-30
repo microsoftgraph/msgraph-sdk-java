@@ -1,4 +1,4 @@
-package microsoft.graph.me.events.item.accept;
+package com.microsoft.graph.me.events.item.accept;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

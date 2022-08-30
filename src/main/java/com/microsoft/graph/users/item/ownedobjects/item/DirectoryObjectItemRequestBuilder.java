@@ -1,5 +1,10 @@
-package microsoft.graph.users.item.ownedobjects.item;
+package com.microsoft.graph.users.item.ownedobjects.item;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.ownedobjects.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.users.item.ownedobjects.item.group.GroupRequestBuilder;
+import com.microsoft.graph.users.item.ownedobjects.item.serviceprincipal.ServicePrincipalRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.ownedobjects.item.application.ApplicationRequestBuilder;
-import microsoft.graph.users.item.ownedobjects.item.group.GroupRequestBuilder;
-import microsoft.graph.users.item.ownedobjects.item.serviceprincipal.ServicePrincipalRequestBuilder;
 /** Provides operations to manage the ownedObjects property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

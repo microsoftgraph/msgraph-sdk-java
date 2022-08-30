@@ -1,5 +1,6 @@
-package microsoft.graph.communications.calls.item.reject;
+package com.microsoft.graph.communications.calls.item.reject;
 
+import com.microsoft.graph.models.RejectReason;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.RejectReason;
 /** Provides operations to call the reject method. */
 public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,10 @@
-package microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests;
+package com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
+import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleRequestCollectionResponse;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.count.CountRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UnifiedRoleAssignmentScheduleRequest;
-import microsoft.graph.models.UnifiedRoleAssignmentScheduleRequestCollectionResponse;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.count.CountRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.filterbycurrentuserwithon.FilterByCurrentUserWithOnRequestBuilder;
 /** Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity. */
 public class RoleAssignmentScheduleRequestsRequestBuilder {
     /** The Count property */

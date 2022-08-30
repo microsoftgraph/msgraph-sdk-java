@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.mailfolders.item.childfolders.item.copy;
+package com.microsoft.graph.users.item.mailfolders.item.childfolders.item.copy;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

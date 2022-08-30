@@ -1,4 +1,4 @@
-package microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.batchrecorddecisions;
+package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.batchrecorddecisions;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

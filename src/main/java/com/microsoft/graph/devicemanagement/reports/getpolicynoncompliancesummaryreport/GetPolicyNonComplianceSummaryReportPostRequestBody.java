@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.getpolicynoncompliancesummaryreport;
+package com.microsoft.graph.devicemanagement.reports.getpolicynoncompliancesummaryreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

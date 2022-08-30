@@ -1,5 +1,16 @@
-package microsoft.graph.drive;
+package com.microsoft.graph.drive;
 
+import com.microsoft.graph.drive.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.drive.following.FollowingRequestBuilder;
+import com.microsoft.graph.drive.items.ItemsRequestBuilder;
+import com.microsoft.graph.drive.list.ListRequestBuilder;
+import com.microsoft.graph.drive.recent.RecentRequestBuilder;
+import com.microsoft.graph.drive.root.RootRequestBuilder;
+import com.microsoft.graph.drive.searchwithq.SearchWithQRequestBuilder;
+import com.microsoft.graph.drive.sharedwithme.SharedWithMeRequestBuilder;
+import com.microsoft.graph.drive.special.SpecialRequestBuilder;
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.drive.bundles.BundlesRequestBuilder;
-import microsoft.graph.drive.following.FollowingRequestBuilder;
-import microsoft.graph.drive.items.ItemsRequestBuilder;
-import microsoft.graph.drive.list.ListRequestBuilder;
-import microsoft.graph.drive.recent.RecentRequestBuilder;
-import microsoft.graph.drive.root.RootRequestBuilder;
-import microsoft.graph.drive.searchwithq.SearchWithQRequestBuilder;
-import microsoft.graph.drive.sharedwithme.SharedWithMeRequestBuilder;
-import microsoft.graph.drive.special.SpecialRequestBuilder;
-import microsoft.graph.models.Drive;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the drive singleton. */
 public class DriveRequestBuilder {
     /** The bundles property */
@@ -64,16 +64,16 @@ public class DriveRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.drive.bundles.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.bundles.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder bundles(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new DriveRequestBuilder and sets the default values.
@@ -165,16 +165,16 @@ public class DriveRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.following.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.following.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.drive.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.drive.following.item.DriveItemItemRequestBuilder following(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.drive.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.drive.following.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Get drive
@@ -228,16 +228,16 @@ public class DriveRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.items.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.items.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.drive.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.drive.items.item.DriveItemItemRequestBuilder items(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.drive.items.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.drive.items.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update drive
@@ -321,16 +321,16 @@ public class DriveRequestBuilder {
         return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.drive.special.item collection
+     * Gets an item from the com.Microsoft.Graph.drive.special.item collection
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.drive.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.drive.special.item.DriveItemItemRequestBuilder special(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("driveItem%2Did", id);
-        return new microsoft.graph.drive.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.drive.special.item.DriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Get drive */
     public class DriveRequestBuilderGetQueryParameters {

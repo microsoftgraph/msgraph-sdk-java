@@ -1,5 +1,7 @@
-package microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.deploymentsummary;
+package com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.deploymentsummary;
 
+import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deploymentSummary property of the microsoft.graph.androidManagedAppProtection entity. */
 public class DeploymentSummaryRequestBuilder {
     /** Path parameters for the request */

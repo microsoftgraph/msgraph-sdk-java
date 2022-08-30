@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item;
+package com.microsoft.graph.devicemanagement.deviceconfigurations.item.assignments.item;
 
+import com.microsoft.graph.models.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceConfigurationAssignment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity. */
 public class DeviceConfigurationAssignmentItemRequestBuilder {
     /** Path parameters for the request */

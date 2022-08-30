@@ -1,5 +1,6 @@
-package microsoft.graph.models.externalconnectors;
+package com.microsoft.graph.models.externalconnectors;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,8 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
     private java.util.List<Acl> _acl;

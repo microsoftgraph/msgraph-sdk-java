@@ -1,5 +1,7 @@
-package microsoft.graph.organization.item.certificatebasedauthconfiguration.item;
+package com.microsoft.graph.organization.item.certificatebasedauthconfiguration.item;
 
+import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CertificateBasedAuthConfiguration;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity. */
 public class CertificateBasedAuthConfigurationItemRequestBuilder {
     /** Path parameters for the request */

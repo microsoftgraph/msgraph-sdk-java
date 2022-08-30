@@ -1,5 +1,9 @@
-package microsoft.graph.rolemanagement;
+package com.microsoft.graph.rolemanagement;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoleManagement;
+import com.microsoft.graph.rolemanagement.directory.DirectoryRequestBuilder;
+import com.microsoft.graph.rolemanagement.entitlementmanagement.EntitlementManagementRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoleManagement;
-import microsoft.graph.rolemanagement.directory.DirectoryRequestBuilder;
-import microsoft.graph.rolemanagement.entitlementmanagement.EntitlementManagementRequestBuilder;
 /** Provides operations to manage the roleManagement singleton. */
 public class RoleManagementRequestBuilder {
     /** The directory property */

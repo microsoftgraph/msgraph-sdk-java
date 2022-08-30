@@ -1,9 +1,9 @@
-package microsoft.graph.models.externalconnectors;
+package com.microsoft.graph.models.externalconnectors;
 
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of externalConnection entities. */
 public enum IdentityType implements ValuedEnum {
     User("user"),
     Group("group"),

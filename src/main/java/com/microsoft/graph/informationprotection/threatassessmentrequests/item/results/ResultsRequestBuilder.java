@@ -1,5 +1,9 @@
-package microsoft.graph.informationprotection.threatassessmentrequests.item.results;
+package com.microsoft.graph.informationprotection.threatassessmentrequests.item.results;
 
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.results.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ThreatAssessmentResult;
+import com.microsoft.graph.models.ThreatAssessmentResultCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.threatassessmentrequests.item.results.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ThreatAssessmentResult;
-import microsoft.graph.models.ThreatAssessmentResultCollectionResponse;
 /** Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity. */
 public class ResultsRequestBuilder {
     /** The Count property */

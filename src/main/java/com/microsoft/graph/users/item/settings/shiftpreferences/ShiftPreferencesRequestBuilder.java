@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.settings.shiftpreferences;
+package com.microsoft.graph.users.item.settings.shiftpreferences;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ShiftPreferences;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ShiftPreferences;
 /** Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity. */
 public class ShiftPreferencesRequestBuilder {
     /** Path parameters for the request */

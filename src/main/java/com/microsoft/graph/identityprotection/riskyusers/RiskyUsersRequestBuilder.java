@@ -1,5 +1,11 @@
-package microsoft.graph.identityprotection.riskyusers;
+package com.microsoft.graph.identityprotection.riskyusers;
 
+import com.microsoft.graph.identityprotection.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.count.CountRequestBuilder;
+import com.microsoft.graph.identityprotection.riskyusers.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyUser;
+import com.microsoft.graph.models.RiskyUserCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identityprotection.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
-import microsoft.graph.identityprotection.riskyusers.count.CountRequestBuilder;
-import microsoft.graph.identityprotection.riskyusers.dismiss.DismissRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyUser;
-import microsoft.graph.models.RiskyUserCollectionResponse;
 /** Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyUsersRequestBuilder {
     /** The confirmCompromised property */

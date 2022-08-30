@@ -1,5 +1,13 @@
-package microsoft.graph.devices;
+package com.microsoft.graph.devices;
 
+import com.microsoft.graph.devices.count.CountRequestBuilder;
+import com.microsoft.graph.devices.delta.DeltaRequestBuilder;
+import com.microsoft.graph.devices.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.devices.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.devices.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.Device;
+import com.microsoft.graph.models.DeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devices.count.CountRequestBuilder;
-import microsoft.graph.devices.delta.DeltaRequestBuilder;
-import microsoft.graph.devices.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.devices.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.devices.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.Device;
-import microsoft.graph.models.DeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of device entities. */
 public class DevicesRequestBuilder {
     /** The Count property */

@@ -1,5 +1,6 @@
-package microsoft.graph.drives.item.items.item.restore;
+package com.microsoft.graph.drives.item.items.item.restore;
 
+import com.microsoft.graph.models.ItemReference;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ItemReference;
 /** Provides operations to call the restore method. */
 public class RestorePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

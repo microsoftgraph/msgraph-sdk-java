@@ -1,5 +1,14 @@
-package microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item;
+package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item;
 
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.AppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.item.ManagedMobileAppItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.item.TargetedManagedAppPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.deploymentsummary.DeploymentSummaryRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.targetapps.TargetAppsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.AppsRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.apps.item.ManagedMobileAppItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.assignments.item.TargetedManagedAppPolicyAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.deploymentsummary.DeploymentSummaryRequestBuilder;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.targetapps.TargetAppsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TargetedManagedAppConfiguration;
 /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class TargetedManagedAppConfigurationItemRequestBuilder {
     /** The apps property */
@@ -57,7 +57,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
      * @param id Unique identifier of the item
      * @return a ManagedMobileAppItemRequestBuilder
      */
@@ -69,7 +69,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         return new ManagedMobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
      */

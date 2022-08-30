@@ -1,5 +1,15 @@
-package microsoft.graph.groups.item.members;
+package com.microsoft.graph.groups.item.members;
 
+import com.microsoft.graph.groups.item.members.application.ApplicationRequestBuilder;
+import com.microsoft.graph.groups.item.members.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.members.device.DeviceRequestBuilder;
+import com.microsoft.graph.groups.item.members.group.GroupRequestBuilder;
+import com.microsoft.graph.groups.item.members.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.members.ref.RefRequestBuilder;
+import com.microsoft.graph.groups.item.members.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.groups.item.members.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,16 +24,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.members.application.ApplicationRequestBuilder;
-import microsoft.graph.groups.item.members.count.CountRequestBuilder;
-import microsoft.graph.groups.item.members.device.DeviceRequestBuilder;
-import microsoft.graph.groups.item.members.group.GroupRequestBuilder;
-import microsoft.graph.groups.item.members.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.groups.item.members.ref.RefRequestBuilder;
-import microsoft.graph.groups.item.members.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.groups.item.members.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the members property of the microsoft.graph.group entity. */
 public class MembersRequestBuilder {
     /** The application property */

@@ -1,5 +1,6 @@
-package microsoft.graph.models.externalconnectors;
+package com.microsoft.graph.models.externalconnectors;
 
+import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -7,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalGroup extends Entity implements Parsable {
     /** The description of the external group. Optional. */
     private String _description;
@@ -16,7 +17,7 @@ public class ExternalGroup extends Entity implements Parsable {
     /** A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members. */
     private java.util.List<Identity> _members;
     /**
-     * Instantiates a new ExternalGroup and sets the default values.
+     * Instantiates a new externalGroup and sets the default values.
      * @return a void
      */
     public ExternalGroup() {
@@ -26,7 +27,7 @@ public class ExternalGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalGroup
+     * @return a externalGroup
      */
     @javax.annotation.Nonnull
     public static ExternalGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

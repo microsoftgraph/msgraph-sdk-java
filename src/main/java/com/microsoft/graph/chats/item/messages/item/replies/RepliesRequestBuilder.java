@@ -1,5 +1,10 @@
-package microsoft.graph.chats.item.messages.item.replies;
+package com.microsoft.graph.chats.item.messages.item.replies;
 
+import com.microsoft.graph.chats.item.messages.item.replies.count.CountRequestBuilder;
+import com.microsoft.graph.chats.item.messages.item.replies.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.ChatMessageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.chats.item.messages.item.replies.count.CountRequestBuilder;
-import microsoft.graph.chats.item.messages.item.replies.delta.DeltaRequestBuilder;
-import microsoft.graph.models.ChatMessage;
-import microsoft.graph.models.ChatMessageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the replies property of the microsoft.graph.chatMessage entity. */
 public class RepliesRequestBuilder {
     /** The Count property */

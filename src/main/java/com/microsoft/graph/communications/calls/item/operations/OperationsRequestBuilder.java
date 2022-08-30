@@ -1,5 +1,9 @@
-package microsoft.graph.communications.calls.item.operations;
+package com.microsoft.graph.communications.calls.item.operations;
 
+import com.microsoft.graph.communications.calls.item.operations.count.CountRequestBuilder;
+import com.microsoft.graph.models.CommsOperation;
+import com.microsoft.graph.models.CommsOperationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.calls.item.operations.count.CountRequestBuilder;
-import microsoft.graph.models.CommsOperation;
-import microsoft.graph.models.CommsOperationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the operations property of the microsoft.graph.call entity. */
 public class OperationsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,8 @@
-package microsoft.graph.places.room;
+package com.microsoft.graph.places.room;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RoomCollectionResponse;
+import com.microsoft.graph.places.room.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RoomCollectionResponse;
-import microsoft.graph.places.room.count.CountRequestBuilder;
 /** Casts the previous resource to room. */
 public class RoomRequestBuilder {
     /** The Count property */

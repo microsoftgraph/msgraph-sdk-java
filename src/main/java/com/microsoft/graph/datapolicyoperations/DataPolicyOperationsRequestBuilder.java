@@ -1,5 +1,9 @@
-package microsoft.graph.datapolicyoperations;
+package com.microsoft.graph.datapolicyoperations;
 
+import com.microsoft.graph.datapolicyoperations.count.CountRequestBuilder;
+import com.microsoft.graph.models.DataPolicyOperation;
+import com.microsoft.graph.models.DataPolicyOperationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.datapolicyoperations.count.CountRequestBuilder;
-import microsoft.graph.models.DataPolicyOperation;
-import microsoft.graph.models.DataPolicyOperationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of dataPolicyOperation entities. */
 public class DataPolicyOperationsRequestBuilder {
     /** The Count property */

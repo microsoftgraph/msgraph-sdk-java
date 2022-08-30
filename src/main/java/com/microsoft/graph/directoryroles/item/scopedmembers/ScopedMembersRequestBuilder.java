@@ -1,5 +1,9 @@
-package microsoft.graph.directoryroles.item.scopedmembers;
+package com.microsoft.graph.directoryroles.item.scopedmembers;
 
+import com.microsoft.graph.directoryroles.item.scopedmembers.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ScopedRoleMembership;
+import com.microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directoryroles.item.scopedmembers.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ScopedRoleMembership;
-import microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
 /** Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity. */
 public class ScopedMembersRequestBuilder {
     /** The Count property */

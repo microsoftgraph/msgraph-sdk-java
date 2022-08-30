@@ -1,5 +1,8 @@
-package microsoft.graph.groups.item.photo;
+package com.microsoft.graph.groups.item.photo;
 
+import com.microsoft.graph.groups.item.photo.value.ContentRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.photo.value.ContentRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ProfilePhoto;
 /** Provides operations to manage the photo property of the microsoft.graph.group entity. */
 public class PhotoRequestBuilder {
     /** The Content property */

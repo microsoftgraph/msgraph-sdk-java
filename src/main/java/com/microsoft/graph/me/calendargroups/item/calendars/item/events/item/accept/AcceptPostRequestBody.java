@@ -1,4 +1,4 @@
-package microsoft.graph.me.calendargroups.item.calendars.item.events.item.accept;
+package com.microsoft.graph.me.calendargroups.item.calendars.item.events.item.accept;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

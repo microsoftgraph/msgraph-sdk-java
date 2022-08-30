@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.termsandconditions.item.assignments.item;
+package com.microsoft.graph.devicemanagement.termsandconditions.item.assignments.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TermsAndConditionsAssignment;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TermsAndConditionsAssignment;
 /** Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity. */
 public class TermsAndConditionsAssignmentItemRequestBuilder {
     /** Path parameters for the request */

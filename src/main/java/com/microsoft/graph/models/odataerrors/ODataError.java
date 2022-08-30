@@ -1,4 +1,4 @@
-package microsoft.graph.models.odataerrors;
+package com.microsoft.graph.models.odataerrors;
 
 import com.microsoft.kiota.ApiException;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;

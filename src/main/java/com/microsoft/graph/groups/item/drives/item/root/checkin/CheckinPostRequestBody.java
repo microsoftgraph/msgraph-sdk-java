@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.drives.item.root.checkin;
+package com.microsoft.graph.groups.item.drives.item.root.checkin;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

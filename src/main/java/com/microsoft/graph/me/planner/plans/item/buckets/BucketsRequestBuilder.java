@@ -1,5 +1,9 @@
-package microsoft.graph.me.planner.plans.item.buckets;
+package com.microsoft.graph.me.planner.plans.item.buckets;
 
+import com.microsoft.graph.me.planner.plans.item.buckets.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PlannerBucket;
+import com.microsoft.graph.models.PlannerBucketCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.planner.plans.item.buckets.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PlannerBucket;
-import microsoft.graph.models.PlannerBucketCollectionResponse;
 /** Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity. */
 public class BucketsRequestBuilder {
     /** The Count property */

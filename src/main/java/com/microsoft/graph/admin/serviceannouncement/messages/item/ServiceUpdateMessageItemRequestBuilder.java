@@ -1,5 +1,10 @@
-package microsoft.graph.admin.serviceannouncement.messages.item;
+package com.microsoft.graph.admin.serviceannouncement.messages.item;
 
+import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.AttachmentsRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.item.ServiceAnnouncementAttachmentItemRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.item.attachmentsarchive.AttachmentsArchiveRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceUpdateMessage;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.messages.item.attachments.AttachmentsRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.item.attachments.item.ServiceAnnouncementAttachmentItemRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.item.attachmentsarchive.AttachmentsArchiveRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceUpdateMessage;
 /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
 public class ServiceUpdateMessageItemRequestBuilder {
     /** The attachments property */
@@ -38,7 +38,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.messages.item.attachments.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.messages.item.attachments.item collection
      * @param id Unique identifier of the item
      * @return a ServiceAnnouncementAttachmentItemRequestBuilder
      */

@@ -1,4 +1,4 @@
-package microsoft.graph.deviceappmanagement.managedappregistrations.getuseridswithflaggedappregistration;
+package com.microsoft.graph.deviceappmanagement.managedappregistrations.getuseridswithflaggedappregistration;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

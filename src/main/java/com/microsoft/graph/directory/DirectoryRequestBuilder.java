@@ -1,5 +1,13 @@
-package microsoft.graph.directory;
+package com.microsoft.graph.directory;
 
+import com.microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
+import com.microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
+import com.microsoft.graph.models.Directory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
-import microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
-import microsoft.graph.directory.deleteditems.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
-import microsoft.graph.directory.federationconfigurations.item.IdentityProviderBaseItemRequestBuilder;
-import microsoft.graph.models.Directory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directory singleton. */
 public class DirectoryRequestBuilder {
     /** The administrativeUnits property */
@@ -46,7 +46,7 @@ public class DirectoryRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item collection
      * @param id Unique identifier of the item
      * @return a AdministrativeUnitItemRequestBuilder
      */
@@ -147,7 +147,7 @@ public class DirectoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.deletedItems.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.deletedItems.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -159,7 +159,7 @@ public class DirectoryRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.federationConfigurations.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.federationConfigurations.item collection
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */

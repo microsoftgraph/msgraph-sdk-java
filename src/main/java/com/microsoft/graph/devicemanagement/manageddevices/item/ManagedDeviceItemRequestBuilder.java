@@ -1,5 +1,30 @@
-package microsoft.graph.devicemanagement.manageddevices.item;
+package com.microsoft.graph.devicemanagement.manageddevices.item;
 
+import com.microsoft.graph.devicemanagement.manageddevices.item.bypassactivationlock.BypassActivationLockRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.cleanwindowsdevice.CleanWindowsDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.deleteuserfromsharedappledevice.DeleteUserFromSharedAppleDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.devicecategory.DeviceCategoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.devicecompliancepolicystates.DeviceCompliancePolicyStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.devicecompliancepolicystates.item.DeviceCompliancePolicyStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.deviceconfigurationstates.DeviceConfigurationStatesRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.deviceconfigurationstates.item.DeviceConfigurationStateItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.logoutsharedappledeviceactiveuser.LogoutSharedAppleDeviceActiveUserRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.rebootnow.RebootNowRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.remotelock.RemoteLockRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.retire.RetireRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.shutdown.ShutDownRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.wipe.WipeRequestBuilder;
+import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,31 +39,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.manageddevices.item.bypassactivationlock.BypassActivationLockRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.cleanwindowsdevice.CleanWindowsDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.deleteuserfromsharedappledevice.DeleteUserFromSharedAppleDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.devicecategory.DeviceCategoryRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.devicecompliancepolicystates.DeviceCompliancePolicyStatesRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.devicecompliancepolicystates.item.DeviceCompliancePolicyStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.deviceconfigurationstates.DeviceConfigurationStatesRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.deviceconfigurationstates.item.DeviceConfigurationStateItemRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.logoutsharedappledeviceactiveuser.LogoutSharedAppleDeviceActiveUserRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.rebootnow.RebootNowRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.remotelock.RemoteLockRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.retire.RetireRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.shutdown.ShutDownRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
-import microsoft.graph.devicemanagement.manageddevices.item.wipe.WipeRequestBuilder;
-import microsoft.graph.models.ManagedDevice;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity. */
 public class ManagedDeviceItemRequestBuilder {
     /** The bypassActivationLock property */
@@ -321,7 +321,7 @@ public class ManagedDeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.managedDevices.item.deviceCompliancePolicyStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.managedDevices.item.deviceCompliancePolicyStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyStateItemRequestBuilder
      */
@@ -333,7 +333,7 @@ public class ManagedDeviceItemRequestBuilder {
         return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.managedDevices.item.deviceConfigurationStates.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.managedDevices.item.deviceConfigurationStates.item collection
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationStateItemRequestBuilder
      */

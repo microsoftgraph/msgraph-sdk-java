@@ -1,5 +1,7 @@
-package microsoft.graph.applications.item.addkey;
+package com.microsoft.graph.applications.item.addkey;
 
+import com.microsoft.graph.models.KeyCredential;
+import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,8 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.KeyCredential;
-import microsoft.graph.models.PasswordCredential;
 /** Provides operations to call the addKey method. */
 public class KeyCredentialPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.onenote.pages.item.copytosection;
+package com.microsoft.graph.groups.item.onenote.pages.item.copytosection;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

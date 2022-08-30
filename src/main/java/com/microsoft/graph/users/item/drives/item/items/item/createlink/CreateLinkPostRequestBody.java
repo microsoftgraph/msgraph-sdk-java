@@ -1,4 +1,4 @@
-package microsoft.graph.users.item.drives.item.items.item.createlink;
+package com.microsoft.graph.users.item.drives.item.items.item.createlink;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

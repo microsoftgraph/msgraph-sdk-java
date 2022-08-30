@@ -1,5 +1,13 @@
-package microsoft.graph.users.item.memberof.item;
+package com.microsoft.graph.users.item.memberof.item;
 
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.memberof.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.group.GroupRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.users.item.memberof.item.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.memberof.item.application.ApplicationRequestBuilder;
-import microsoft.graph.users.item.memberof.item.device.DeviceRequestBuilder;
-import microsoft.graph.users.item.memberof.item.group.GroupRequestBuilder;
-import microsoft.graph.users.item.memberof.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.users.item.memberof.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.users.item.memberof.item.user.UserRequestBuilder;
 /** Provides operations to manage the memberOf property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

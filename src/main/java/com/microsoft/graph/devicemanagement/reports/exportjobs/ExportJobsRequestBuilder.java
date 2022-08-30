@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.reports.exportjobs;
+package com.microsoft.graph.devicemanagement.reports.exportjobs;
 
+import com.microsoft.graph.devicemanagement.reports.exportjobs.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementExportJob;
+import com.microsoft.graph.models.DeviceManagementExportJobCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.reports.exportjobs.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceManagementExportJob;
-import microsoft.graph.models.DeviceManagementExportJobCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity. */
 public class ExportJobsRequestBuilder {
     /** The Count property */

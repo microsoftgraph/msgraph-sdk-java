@@ -1,5 +1,14 @@
-package microsoft.graph.me.transitivememberof;
+package com.microsoft.graph.me.transitivememberof;
 
+import com.microsoft.graph.me.transitivememberof.application.ApplicationRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.count.CountRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.device.DeviceRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.group.GroupRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.transitivememberof.application.ApplicationRequestBuilder;
-import microsoft.graph.me.transitivememberof.count.CountRequestBuilder;
-import microsoft.graph.me.transitivememberof.device.DeviceRequestBuilder;
-import microsoft.graph.me.transitivememberof.group.GroupRequestBuilder;
-import microsoft.graph.me.transitivememberof.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.me.transitivememberof.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.me.transitivememberof.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObjectCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity. */
 public class TransitiveMemberOfRequestBuilder {
     /** The application property */

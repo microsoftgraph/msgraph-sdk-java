@@ -1,4 +1,4 @@
-package microsoft.graph.directoryroles.getbyids;
+package com.microsoft.graph.directoryroles.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

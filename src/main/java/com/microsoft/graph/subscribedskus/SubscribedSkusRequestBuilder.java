@@ -1,5 +1,8 @@
-package microsoft.graph.subscribedskus;
+package com.microsoft.graph.subscribedskus;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SubscribedSku;
+import com.microsoft.graph.models.SubscribedSkuCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SubscribedSku;
-import microsoft.graph.models.SubscribedSkuCollectionResponse;
 /** Provides operations to manage the collection of subscribedSku entities. */
 public class SubscribedSkusRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,9 @@
-package microsoft.graph.privacy.subjectrightsrequests;
+package com.microsoft.graph.privacy.subjectrightsrequests;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SubjectRightsRequest;
+import com.microsoft.graph.models.SubjectRightsRequestCollectionResponse;
+import com.microsoft.graph.privacy.subjectrightsrequests.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SubjectRightsRequest;
-import microsoft.graph.models.SubjectRightsRequestCollectionResponse;
-import microsoft.graph.privacy.subjectrightsrequests.count.CountRequestBuilder;
 /** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity. */
 public class SubjectRightsRequestsRequestBuilder {
     /** The Count property */

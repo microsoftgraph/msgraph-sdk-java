@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.ExternalSponsorsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.InternalSponsorsRequestBuilder;
+import com.microsoft.graph.models.ConnectedOrganization;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.ExternalSponsorsRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.InternalSponsorsRequestBuilder;
-import microsoft.graph.models.ConnectedOrganization;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity. */
 public class ConnectedOrganizationItemRequestBuilder {
     /** The externalSponsors property */
@@ -205,16 +205,16 @@ public class ConnectedOrganizationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.externalSponsors.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder externalSponsors(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder externalSponsors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.externalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * References to a directory or domain of another organization whose users can request access.
@@ -268,16 +268,16 @@ public class ConnectedOrganizationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
+     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item.internalSponsors.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder internalSponsors(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder internalSponsors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property connectedOrganizations in identityGovernance

@@ -1,5 +1,7 @@
-package microsoft.graph.me.calendar.calendarview.item.calendar;
+package com.microsoft.graph.me.calendar.calendarview.item.calendar;
 
+import com.microsoft.graph.models.Calendar;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Calendar;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the calendar property of the microsoft.graph.event entity. */
 public class CalendarRequestBuilder {
     /** Path parameters for the request */

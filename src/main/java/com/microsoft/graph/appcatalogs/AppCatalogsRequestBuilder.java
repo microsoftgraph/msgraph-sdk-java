@@ -1,5 +1,9 @@
-package microsoft.graph.appcatalogs;
+package com.microsoft.graph.appcatalogs;
 
+import com.microsoft.graph.appcatalogs.teamsapps.item.TeamsAppItemRequestBuilder;
+import com.microsoft.graph.appcatalogs.teamsapps.TeamsAppsRequestBuilder;
+import com.microsoft.graph.models.AppCatalogs;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.appcatalogs.teamsapps.item.TeamsAppItemRequestBuilder;
-import microsoft.graph.appcatalogs.teamsapps.TeamsAppsRequestBuilder;
-import microsoft.graph.models.AppCatalogs;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appCatalogs singleton. */
 public class AppCatalogsRequestBuilder {
     /** Path parameters for the request */
@@ -227,7 +227,7 @@ public class AppCatalogsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.appCatalogs.teamsApps.item collection
+     * Gets an item from the com.Microsoft.Graph.appCatalogs.teamsApps.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppItemRequestBuilder
      */

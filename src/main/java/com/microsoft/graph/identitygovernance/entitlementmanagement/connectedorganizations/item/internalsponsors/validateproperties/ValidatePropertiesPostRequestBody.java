@@ -1,4 +1,4 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

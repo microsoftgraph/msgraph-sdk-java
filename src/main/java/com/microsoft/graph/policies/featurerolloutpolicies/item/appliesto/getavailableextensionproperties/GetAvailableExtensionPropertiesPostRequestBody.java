@@ -1,4 +1,4 @@
-package microsoft.graph.policies.featurerolloutpolicies.item.appliesto.getavailableextensionproperties;
+package com.microsoft.graph.policies.featurerolloutpolicies.item.appliesto.getavailableextensionproperties;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

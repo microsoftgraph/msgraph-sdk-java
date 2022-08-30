@@ -1,5 +1,8 @@
-package microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions;
+package com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions;
 
+import com.microsoft.graph.models.ColumnDefinitionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ColumnDefinitionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.count.CountRequestBuilder;
 /** Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity. */
 public class ColumnPositionsRequestBuilder {
     /** The Count property */

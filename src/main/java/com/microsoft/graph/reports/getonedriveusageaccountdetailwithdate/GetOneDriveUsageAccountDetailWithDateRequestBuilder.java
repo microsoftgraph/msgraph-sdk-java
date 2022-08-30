@@ -1,5 +1,7 @@
-package microsoft.graph.reports.getonedriveusageaccountdetailwithdate;
+package com.microsoft.graph.reports.getonedriveusageaccountdetailwithdate;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Report;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Report;
 /** Provides operations to call the getOneDriveUsageAccountDetail method. */
 public class GetOneDriveUsageAccountDetailWithDateRequestBuilder {
     /** Path parameters for the request */

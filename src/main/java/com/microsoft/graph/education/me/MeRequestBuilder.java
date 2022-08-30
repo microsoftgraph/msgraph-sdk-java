@@ -1,5 +1,16 @@
-package microsoft.graph.education.me;
+package com.microsoft.graph.education.me;
 
+import com.microsoft.graph.education.me.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.education.me.assignments.item.EducationAssignmentItemRequestBuilder;
+import com.microsoft.graph.education.me.classes.ClassesRequestBuilder;
+import com.microsoft.graph.education.me.rubrics.item.EducationRubricItemRequestBuilder;
+import com.microsoft.graph.education.me.rubrics.RubricsRequestBuilder;
+import com.microsoft.graph.education.me.schools.item.EducationSchoolItemRequestBuilder;
+import com.microsoft.graph.education.me.schools.SchoolsRequestBuilder;
+import com.microsoft.graph.education.me.taughtclasses.TaughtClassesRequestBuilder;
+import com.microsoft.graph.education.me.user.UserRequestBuilder;
+import com.microsoft.graph.models.EducationUser;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.me.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.education.me.assignments.item.EducationAssignmentItemRequestBuilder;
-import microsoft.graph.education.me.classes.ClassesRequestBuilder;
-import microsoft.graph.education.me.rubrics.item.EducationRubricItemRequestBuilder;
-import microsoft.graph.education.me.rubrics.RubricsRequestBuilder;
-import microsoft.graph.education.me.schools.item.EducationSchoolItemRequestBuilder;
-import microsoft.graph.education.me.schools.SchoolsRequestBuilder;
-import microsoft.graph.education.me.taughtclasses.TaughtClassesRequestBuilder;
-import microsoft.graph.education.me.user.UserRequestBuilder;
-import microsoft.graph.models.EducationUser;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the me property of the microsoft.graph.educationRoot entity. */
 public class MeRequestBuilder {
     /** The assignments property */
@@ -64,7 +64,7 @@ public class MeRequestBuilder {
         return new UserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.me.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.education.me.assignments.item collection
      * @param id Unique identifier of the item
      * @return a EducationAssignmentItemRequestBuilder
      */
@@ -76,16 +76,16 @@ public class MeRequestBuilder {
         return new EducationAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.me.classes.item collection
+     * Gets an item from the com.Microsoft.Graph.education.me.classes.item collection
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder classes(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationClass%2Did", id);
-        return new microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.me.classes.item.EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new MeRequestBuilder and sets the default values.
@@ -362,7 +362,7 @@ public class MeRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.me.rubrics.item collection
+     * Gets an item from the com.Microsoft.Graph.education.me.rubrics.item collection
      * @param id Unique identifier of the item
      * @return a EducationRubricItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class MeRequestBuilder {
         return new EducationRubricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.me.schools.item collection
+     * Gets an item from the com.Microsoft.Graph.education.me.schools.item collection
      * @param id Unique identifier of the item
      * @return a EducationSchoolItemRequestBuilder
      */
@@ -386,16 +386,16 @@ public class MeRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.me.taughtClasses.item collection
+     * Gets an item from the com.Microsoft.Graph.education.me.taughtClasses.item collection
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.me.taughtclasses.item.EducationClassItemRequestBuilder taughtClasses(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.me.taughtclasses.item.EducationClassItemRequestBuilder taughtClasses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationClass%2Did", id);
-        return new microsoft.graph.education.me.taughtclasses.item.EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.me.taughtclasses.item.EducationClassItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class MeRequestBuilderDeleteRequestConfiguration {

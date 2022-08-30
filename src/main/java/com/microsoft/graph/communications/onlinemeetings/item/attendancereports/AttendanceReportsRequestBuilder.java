@@ -1,5 +1,9 @@
-package microsoft.graph.communications.onlinemeetings.item.attendancereports;
+package com.microsoft.graph.communications.onlinemeetings.item.attendancereports;
 
+import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.count.CountRequestBuilder;
+import com.microsoft.graph.models.MeetingAttendanceReport;
+import com.microsoft.graph.models.MeetingAttendanceReportCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.onlinemeetings.item.attendancereports.count.CountRequestBuilder;
-import microsoft.graph.models.MeetingAttendanceReport;
-import microsoft.graph.models.MeetingAttendanceReportCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity. */
 public class AttendanceReportsRequestBuilder {
     /** The Count property */

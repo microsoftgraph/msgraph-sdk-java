@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations;
+package com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations;
 
+import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TargetedManagedAppConfiguration;
+import com.microsoft.graph.models.TargetedManagedAppConfigurationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TargetedManagedAppConfiguration;
-import microsoft.graph.models.TargetedManagedAppConfigurationCollectionResponse;
 /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class TargetedManagedAppConfigurationsRequestBuilder {
     /** The Count property */

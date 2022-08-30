@@ -1,4 +1,4 @@
-package microsoft.graph.organization.item.checkmemberobjects;
+package com.microsoft.graph.organization.item.checkmemberobjects;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,7 @@
-package microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.attachments.item;
+package com.microsoft.graph.me.mailfolders.item.childfolders.item.messages.item.attachments.item;
 
+import com.microsoft.graph.models.Attachment;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Attachment;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the attachments property of the microsoft.graph.message entity. */
 public class AttachmentItemRequestBuilder {
     /** Path parameters for the request */

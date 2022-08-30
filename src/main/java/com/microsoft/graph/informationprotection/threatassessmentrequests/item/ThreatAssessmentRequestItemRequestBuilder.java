@@ -1,5 +1,9 @@
-package microsoft.graph.informationprotection.threatassessmentrequests.item;
+package com.microsoft.graph.informationprotection.threatassessmentrequests.item;
 
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.results.item.ThreatAssessmentResultItemRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.results.ResultsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ThreatAssessmentRequest;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.threatassessmentrequests.item.results.item.ThreatAssessmentResultItemRequestBuilder;
-import microsoft.graph.informationprotection.threatassessmentrequests.item.results.ResultsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ThreatAssessmentRequest;
 /** Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity. */
 public class ThreatAssessmentRequestItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.threatAssessmentRequests.item.results.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.threatAssessmentRequests.item.results.item collection
      * @param id Unique identifier of the item
      * @return a ThreatAssessmentResultItemRequestBuilder
      */

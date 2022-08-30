@@ -1,5 +1,23 @@
-package microsoft.graph.rolemanagement.directory;
+package com.microsoft.graph.rolemanagement.directory;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignments.RoleAssignmentsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.item.UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.RoleAssignmentScheduleInstancesRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.RoleAssignmentScheduleRequestsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.UnifiedRoleAssignmentScheduleItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleassignmentschedules.RoleAssignmentSchedulesRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roledefinitions.RoleDefinitionsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.RoleEligibilityScheduleInstancesRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.item.UnifiedRoleEligibilityScheduleItemRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,24 +32,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RbacApplication;
-import microsoft.graph.rolemanagement.directory.roleassignments.item.UnifiedRoleAssignmentItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignments.RoleAssignmentsRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.item.UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentscheduleinstances.RoleAssignmentScheduleInstancesRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.item.UnifiedRoleAssignmentScheduleRequestItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedulerequests.RoleAssignmentScheduleRequestsRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedules.item.UnifiedRoleAssignmentScheduleItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleassignmentschedules.RoleAssignmentSchedulesRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roledefinitions.item.UnifiedRoleDefinitionItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roledefinitions.RoleDefinitionsRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.RoleEligibilityScheduleInstancesRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.item.UnifiedRoleEligibilityScheduleRequestItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedules.item.UnifiedRoleEligibilityScheduleItemRequestBuilder;
-import microsoft.graph.rolemanagement.directory.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
 /** Provides operations to manage the directory property of the microsoft.graph.roleManagement entity. */
 public class DirectoryRequestBuilder {
     /** Path parameters for the request */
@@ -355,7 +355,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentItemRequestBuilder
      */
@@ -367,7 +367,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleInstances.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleInstances.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
      */
@@ -379,7 +379,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleRequests.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
      */
@@ -391,7 +391,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleAssignmentSchedules.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentSchedules.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
      */
@@ -403,7 +403,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
@@ -415,7 +415,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleInstances.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleInstances.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
      */
@@ -427,7 +427,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleRequests.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
      */
@@ -439,7 +439,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.roleManagement.directory.roleEligibilitySchedules.item collection
+     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilitySchedules.item collection
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
      */

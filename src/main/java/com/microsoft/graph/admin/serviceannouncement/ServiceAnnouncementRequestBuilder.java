@@ -1,5 +1,13 @@
-package microsoft.graph.admin.serviceannouncement;
+package com.microsoft.graph.admin.serviceannouncement;
 
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.HealthOverviewsRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.item.ServiceHealthItemRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.issues.IssuesRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.issues.item.ServiceHealthIssueItemRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.item.ServiceUpdateMessageItemRequestBuilder;
+import com.microsoft.graph.admin.serviceannouncement.messages.MessagesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.healthoverviews.HealthOverviewsRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.healthoverviews.item.ServiceHealthItemRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.issues.IssuesRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.issues.item.ServiceHealthIssueItemRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.item.ServiceUpdateMessageItemRequestBuilder;
-import microsoft.graph.admin.serviceannouncement.messages.MessagesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceAnnouncement;
 /** Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity. */
 public class ServiceAnnouncementRequestBuilder {
     /** The healthOverviews property */
@@ -265,7 +265,7 @@ public class ServiceAnnouncementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item collection
      * @param id Unique identifier of the item
      * @return a ServiceHealthItemRequestBuilder
      */
@@ -277,7 +277,7 @@ public class ServiceAnnouncementRequestBuilder {
         return new ServiceHealthItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.issues.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.issues.item collection
      * @param id Unique identifier of the item
      * @return a ServiceHealthIssueItemRequestBuilder
      */
@@ -289,7 +289,7 @@ public class ServiceAnnouncementRequestBuilder {
         return new ServiceHealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.admin.serviceAnnouncement.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.messages.item collection
      * @param id Unique identifier of the item
      * @return a ServiceUpdateMessageItemRequestBuilder
      */

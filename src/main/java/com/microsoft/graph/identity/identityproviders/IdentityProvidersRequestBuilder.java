@@ -1,5 +1,10 @@
-package microsoft.graph.identity.identityproviders;
+package com.microsoft.graph.identity.identityproviders;
 
+import com.microsoft.graph.identity.identityproviders.availableprovidertypes.AvailableProviderTypesRequestBuilder;
+import com.microsoft.graph.identity.identityproviders.count.CountRequestBuilder;
+import com.microsoft.graph.models.IdentityProviderBase;
+import com.microsoft.graph.models.IdentityProviderBaseCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.identityproviders.availableprovidertypes.AvailableProviderTypesRequestBuilder;
-import microsoft.graph.identity.identityproviders.count.CountRequestBuilder;
-import microsoft.graph.models.IdentityProviderBase;
-import microsoft.graph.models.IdentityProviderBaseCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity. */
 public class IdentityProvidersRequestBuilder {
     /** The Count property */

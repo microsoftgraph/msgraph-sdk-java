@@ -1,5 +1,10 @@
-package microsoft.graph.places;
+package com.microsoft.graph.places;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Place;
+import com.microsoft.graph.models.PlaceCollectionResponse;
+import com.microsoft.graph.places.count.CountRequestBuilder;
+import com.microsoft.graph.places.room.RoomRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Place;
-import microsoft.graph.models.PlaceCollectionResponse;
-import microsoft.graph.places.count.CountRequestBuilder;
-import microsoft.graph.places.room.RoomRequestBuilder;
 /** Provides operations to manage the collection of place entities. */
 public class PlacesRequestBuilder {
     /** The Count property */

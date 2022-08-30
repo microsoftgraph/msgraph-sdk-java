@@ -1,5 +1,9 @@
-package microsoft.graph.applications.item.extensionproperties;
+package com.microsoft.graph.applications.item.extensionproperties;
 
+import com.microsoft.graph.applications.item.extensionproperties.count.CountRequestBuilder;
+import com.microsoft.graph.models.ExtensionProperty;
+import com.microsoft.graph.models.ExtensionPropertyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.item.extensionproperties.count.CountRequestBuilder;
-import microsoft.graph.models.ExtensionProperty;
-import microsoft.graph.models.ExtensionPropertyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the extensionProperties property of the microsoft.graph.application entity. */
 public class ExtensionPropertiesRequestBuilder {
     /** The Count property */

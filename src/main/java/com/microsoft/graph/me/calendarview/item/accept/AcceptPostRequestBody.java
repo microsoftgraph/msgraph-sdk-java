@@ -1,4 +1,4 @@
-package microsoft.graph.me.calendarview.item.accept;
+package com.microsoft.graph.me.calendarview.item.accept;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

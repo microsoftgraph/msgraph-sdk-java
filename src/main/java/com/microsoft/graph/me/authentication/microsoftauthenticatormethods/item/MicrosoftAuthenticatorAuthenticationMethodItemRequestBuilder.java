@@ -1,5 +1,8 @@
-package microsoft.graph.me.authentication.microsoftauthenticatormethods.item;
+package com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item;
 
+import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.DeviceRequestBuilder;
-import microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
 public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
     /** The device property */

@@ -1,5 +1,10 @@
-package microsoft.graph.me.mailfolders.item.childfolders;
+package com.microsoft.graph.me.mailfolders.item.childfolders;
 
+import com.microsoft.graph.me.mailfolders.item.childfolders.count.CountRequestBuilder;
+import com.microsoft.graph.me.mailfolders.item.childfolders.delta.DeltaRequestBuilder;
+import com.microsoft.graph.models.MailFolder;
+import com.microsoft.graph.models.MailFolderCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.mailfolders.item.childfolders.count.CountRequestBuilder;
-import microsoft.graph.me.mailfolders.item.childfolders.delta.DeltaRequestBuilder;
-import microsoft.graph.models.MailFolder;
-import microsoft.graph.models.MailFolderCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity. */
 public class ChildFoldersRequestBuilder {
     /** The Count property */

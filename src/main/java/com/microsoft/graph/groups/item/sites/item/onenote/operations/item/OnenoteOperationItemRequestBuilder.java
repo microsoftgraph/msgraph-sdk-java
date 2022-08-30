@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.sites.item.onenote.operations.item;
+package com.microsoft.graph.groups.item.sites.item.onenote.operations.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteOperation;
 /** Provides operations to manage the operations property of the microsoft.graph.onenote entity. */
 public class OnenoteOperationItemRequestBuilder {
     /** Path parameters for the request */

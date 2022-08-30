@@ -1,5 +1,17 @@
-package microsoft.graph.groups.item.threads.item.posts.item.inreplyto;
+package com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto;
 
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.attachments.AttachmentsRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.attachments.item.AttachmentItemRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.forward.ForwardRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.reply.ReplyRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
+import com.microsoft.graph.groups.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Post;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,18 +26,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.attachments.AttachmentsRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.attachments.item.AttachmentItemRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.forward.ForwardRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.item.MultiValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.reply.ReplyRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.item.SingleValueLegacyExtendedPropertyItemRequestBuilder;
-import microsoft.graph.groups.item.threads.item.posts.item.inreplyto.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Post;
 /** Provides operations to manage the inReplyTo property of the microsoft.graph.post entity. */
 public class InReplyToRequestBuilder {
     /** The attachments property */
@@ -65,7 +65,7 @@ public class InReplyToRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.attachments.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.attachments.item collection
      * @param id Unique identifier of the item
      * @return a AttachmentItemRequestBuilder
      */
@@ -245,7 +245,7 @@ public class InReplyToRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -308,7 +308,7 @@ public class InReplyToRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.multiValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.multiValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -375,7 +375,7 @@ public class InReplyToRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.singleValueExtendedProperties.item collection
+     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item.posts.item.inReplyTo.singleValueExtendedProperties.item collection
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

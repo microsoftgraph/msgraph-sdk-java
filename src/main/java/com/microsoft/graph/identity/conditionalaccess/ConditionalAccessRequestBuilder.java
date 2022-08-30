@@ -1,5 +1,11 @@
-package microsoft.graph.identity.conditionalaccess;
+package com.microsoft.graph.identity.conditionalaccess;
 
+import com.microsoft.graph.identity.conditionalaccess.namedlocations.item.NamedLocationItemRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.policies.item.ConditionalAccessPolicyItemRequestBuilder;
+import com.microsoft.graph.identity.conditionalaccess.policies.PoliciesRequestBuilder;
+import com.microsoft.graph.models.ConditionalAccessRoot;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,12 +20,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.conditionalaccess.namedlocations.item.NamedLocationItemRequestBuilder;
-import microsoft.graph.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
-import microsoft.graph.identity.conditionalaccess.policies.item.ConditionalAccessPolicyItemRequestBuilder;
-import microsoft.graph.identity.conditionalaccess.policies.PoliciesRequestBuilder;
-import microsoft.graph.models.ConditionalAccessRoot;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity. */
 public class ConditionalAccessRequestBuilder {
     /** The namedLocations property */
@@ -258,7 +258,7 @@ public class ConditionalAccessRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.conditionalAccess.namedLocations.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.namedLocations.item collection
      * @param id Unique identifier of the item
      * @return a NamedLocationItemRequestBuilder
      */
@@ -325,7 +325,7 @@ public class ConditionalAccessRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.conditionalAccess.policies.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.policies.item collection
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyItemRequestBuilder
      */

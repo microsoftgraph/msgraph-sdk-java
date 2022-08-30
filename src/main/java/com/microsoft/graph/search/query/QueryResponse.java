@@ -1,5 +1,6 @@
-package microsoft.graph.search.query;
+package com.microsoft.graph.search.query;
 
+import com.microsoft.graph.models.SearchResponse;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.SearchResponse;
 /** Provides operations to call the query method. */
 public class QueryResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

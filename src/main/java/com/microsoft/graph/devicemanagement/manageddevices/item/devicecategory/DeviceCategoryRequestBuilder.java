@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.manageddevices.item.devicecategory;
+package com.microsoft.graph.devicemanagement.manageddevices.item.devicecategory;
 
+import com.microsoft.graph.models.DeviceCategory;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceCategory;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity. */
 public class DeviceCategoryRequestBuilder {
     /** Path parameters for the request */

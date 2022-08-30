@@ -1,5 +1,6 @@
-package microsoft.graph.models.security;
+package com.microsoft.graph.models.security;
 
+import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.IdentitySet;
 public class EdiscoveryCase extends Case_escaped implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;

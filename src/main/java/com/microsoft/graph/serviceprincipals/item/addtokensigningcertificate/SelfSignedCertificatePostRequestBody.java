@@ -1,4 +1,4 @@
-package microsoft.graph.serviceprincipals.item.addtokensigningcertificate;
+package com.microsoft.graph.serviceprincipals.item.addtokensigningcertificate;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

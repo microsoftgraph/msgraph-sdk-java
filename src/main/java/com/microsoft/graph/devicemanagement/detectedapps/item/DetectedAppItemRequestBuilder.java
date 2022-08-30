@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.detectedapps.item;
+package com.microsoft.graph.devicemanagement.detectedapps.item;
 
+import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.detectedapps.item.manageddevices.ManagedDevicesRequestBuilder;
+import com.microsoft.graph.models.DetectedApp;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.detectedapps.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
-import microsoft.graph.devicemanagement.detectedapps.item.manageddevices.ManagedDevicesRequestBuilder;
-import microsoft.graph.models.DetectedApp;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity. */
 public class DetectedAppItemRequestBuilder {
     /** The managedDevices property */
@@ -251,7 +251,7 @@ public class DetectedAppItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.detectedApps.item.managedDevices.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.detectedApps.item.managedDevices.item collection
      * @param id Unique identifier of the item
      * @return a ManagedDeviceItemRequestBuilder
      */

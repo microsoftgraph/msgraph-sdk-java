@@ -1,15 +1,15 @@
-package microsoft.graph.directory.administrativeunits.item.members.item;
+package com.microsoft.graph.directory.administrativeunits.item.members.item;
 
+import com.microsoft.graph.directory.administrativeunits.item.members.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.group.GroupRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.ref.RefRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.item.members.item.application.ApplicationRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.device.DeviceRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.group.GroupRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.ref.RefRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

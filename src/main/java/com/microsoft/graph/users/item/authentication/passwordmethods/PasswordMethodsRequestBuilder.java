@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.authentication.passwordmethods;
+package com.microsoft.graph.users.item.authentication.passwordmethods;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PasswordAuthenticationMethod;
+import com.microsoft.graph.models.PasswordAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.users.item.authentication.passwordmethods.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PasswordAuthenticationMethod;
-import microsoft.graph.models.PasswordAuthenticationMethodCollectionResponse;
-import microsoft.graph.users.item.authentication.passwordmethods.count.CountRequestBuilder;
 /** Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity. */
 public class PasswordMethodsRequestBuilder {
     /** The Count property */

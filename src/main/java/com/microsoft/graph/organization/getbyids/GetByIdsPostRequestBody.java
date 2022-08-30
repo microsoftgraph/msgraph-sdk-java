@@ -1,4 +1,4 @@
-package microsoft.graph.organization.getbyids;
+package com.microsoft.graph.organization.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

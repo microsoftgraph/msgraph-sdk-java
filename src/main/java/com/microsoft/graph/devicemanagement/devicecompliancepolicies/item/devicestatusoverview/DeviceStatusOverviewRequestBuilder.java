@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatusoverview;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatusoverview;
 
+import com.microsoft.graph.models.DeviceComplianceDeviceOverview;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceComplianceDeviceOverview;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity. */
 public class DeviceStatusOverviewRequestBuilder {
     /** Path parameters for the request */

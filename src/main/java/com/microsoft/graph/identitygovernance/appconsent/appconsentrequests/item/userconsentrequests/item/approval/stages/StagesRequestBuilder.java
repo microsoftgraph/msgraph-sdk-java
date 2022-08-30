@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages;
+package com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages;
 
+import com.microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.count.CountRequestBuilder;
+import com.microsoft.graph.models.ApprovalStage;
+import com.microsoft.graph.models.ApprovalStageCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.appconsent.appconsentrequests.item.userconsentrequests.item.approval.stages.count.CountRequestBuilder;
-import microsoft.graph.models.ApprovalStage;
-import microsoft.graph.models.ApprovalStageCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the stages property of the microsoft.graph.approval entity. */
 public class StagesRequestBuilder {
     /** The Count property */

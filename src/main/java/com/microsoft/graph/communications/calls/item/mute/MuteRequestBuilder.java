@@ -1,5 +1,7 @@
-package microsoft.graph.communications.calls.item.mute;
+package com.microsoft.graph.communications.calls.item.mute;
 
+import com.microsoft.graph.models.MuteParticipantOperation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.MuteParticipantOperation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the mute method. */
 public class MuteRequestBuilder {
     /** Path parameters for the request */

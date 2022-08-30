@@ -1,5 +1,9 @@
-package microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries;
+package com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries;
 
+import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
+import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
-import microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 /** Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity. */
 public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder {
     /** The Count property */

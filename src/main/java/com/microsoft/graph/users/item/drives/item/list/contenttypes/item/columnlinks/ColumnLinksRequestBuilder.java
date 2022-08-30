@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks;
+package com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks;
 
+import com.microsoft.graph.models.ColumnLink;
+import com.microsoft.graph.models.ColumnLinkCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ColumnLink;
-import microsoft.graph.models.ColumnLinkCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.count.CountRequestBuilder;
 /** Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity. */
 public class ColumnLinksRequestBuilder {
     /** The Count property */

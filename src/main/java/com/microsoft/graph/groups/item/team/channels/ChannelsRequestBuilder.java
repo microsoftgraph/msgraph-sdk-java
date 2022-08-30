@@ -1,5 +1,10 @@
-package microsoft.graph.groups.item.team.channels;
+package com.microsoft.graph.groups.item.team.channels;
 
+import com.microsoft.graph.groups.item.team.channels.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.getallmessages.GetAllMessagesRequestBuilder;
+import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.ChannelCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.team.channels.count.CountRequestBuilder;
-import microsoft.graph.groups.item.team.channels.getallmessages.GetAllMessagesRequestBuilder;
-import microsoft.graph.models.Channel;
-import microsoft.graph.models.ChannelCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
 public class ChannelsRequestBuilder {
     /** The Count property */

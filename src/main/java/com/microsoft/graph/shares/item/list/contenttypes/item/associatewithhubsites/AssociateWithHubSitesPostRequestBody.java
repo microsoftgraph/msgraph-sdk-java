@@ -1,4 +1,4 @@
-package microsoft.graph.shares.item.list.contenttypes.item.associatewithhubsites;
+package com.microsoft.graph.shares.item.list.contenttypes.item.associatewithhubsites;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

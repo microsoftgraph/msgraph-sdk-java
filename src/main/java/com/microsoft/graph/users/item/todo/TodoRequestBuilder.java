@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.todo;
+package com.microsoft.graph.users.item.todo;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Todo;
+import com.microsoft.graph.users.item.todo.lists.item.TodoTaskListItemRequestBuilder;
+import com.microsoft.graph.users.item.todo.lists.ListsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Todo;
-import microsoft.graph.users.item.todo.lists.item.TodoTaskListItemRequestBuilder;
-import microsoft.graph.users.item.todo.lists.ListsRequestBuilder;
 /** Provides operations to manage the todo property of the microsoft.graph.user entity. */
 public class TodoRequestBuilder {
     /** The lists property */
@@ -251,7 +251,7 @@ public class TodoRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.todo.lists.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item collection
      * @param id Unique identifier of the item
      * @return a TodoTaskListItemRequestBuilder
      */

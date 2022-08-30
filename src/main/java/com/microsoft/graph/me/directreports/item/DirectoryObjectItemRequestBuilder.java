@@ -1,5 +1,9 @@
-package microsoft.graph.me.directreports.item;
+package com.microsoft.graph.me.directreports.item;
 
+import com.microsoft.graph.me.directreports.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.me.directreports.item.user.UserRequestBuilder;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.directreports.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.me.directreports.item.user.UserRequestBuilder;
-import microsoft.graph.models.DirectoryObject;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
     /** The orgContact property */

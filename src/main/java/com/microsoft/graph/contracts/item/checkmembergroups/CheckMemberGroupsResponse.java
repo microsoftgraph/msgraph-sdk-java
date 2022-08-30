@@ -1,4 +1,4 @@
-package microsoft.graph.contracts.item.checkmembergroups;
+package com.microsoft.graph.contracts.item.checkmembergroups;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

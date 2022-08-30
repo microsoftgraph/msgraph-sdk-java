@@ -1,5 +1,8 @@
-package microsoft.graph.education.users.item.assignments.item.rubric;
+package com.microsoft.graph.education.users.item.assignments.item.rubric;
 
+import com.microsoft.graph.education.users.item.assignments.item.rubric.ref.RefRequestBuilder;
+import com.microsoft.graph.models.EducationRubric;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.users.item.assignments.item.rubric.ref.RefRequestBuilder;
-import microsoft.graph.models.EducationRubric;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity. */
 public class RubricRequestBuilder {
     /** Path parameters for the request */

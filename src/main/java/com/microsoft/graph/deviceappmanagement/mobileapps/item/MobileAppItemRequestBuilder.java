@@ -1,5 +1,14 @@
-package microsoft.graph.deviceappmanagement.mobileapps.item;
+package com.microsoft.graph.deviceappmanagement.mobileapps.item;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
+import com.microsoft.graph.models.MobileApp;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
-import microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
-import microsoft.graph.models.MobileApp;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppItemRequestBuilder {
     /** The assign property */
@@ -57,7 +57,7 @@ public class MobileAppItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppAssignmentItemRequestBuilder
      */
@@ -69,7 +69,7 @@ public class MobileAppItemRequestBuilder {
         return new MobileAppAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */

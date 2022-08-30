@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.licensedetails.item;
+package com.microsoft.graph.users.item.licensedetails.item;
 
+import com.microsoft.graph.models.LicenseDetails;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.LicenseDetails;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the licenseDetails property of the microsoft.graph.user entity. */
 public class LicenseDetailsItemRequestBuilder {
     /** Path parameters for the request */

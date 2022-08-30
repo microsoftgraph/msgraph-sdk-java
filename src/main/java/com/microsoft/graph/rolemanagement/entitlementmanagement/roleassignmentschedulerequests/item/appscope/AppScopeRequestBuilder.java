@@ -1,5 +1,7 @@
-package microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.appscope;
+package com.microsoft.graph.rolemanagement.entitlementmanagement.roleassignmentschedulerequests.item.appscope;
 
+import com.microsoft.graph.models.AppScope;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AppScope;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignmentScheduleRequest entity. */
 public class AppScopeRequestBuilder {
     /** Path parameters for the request */

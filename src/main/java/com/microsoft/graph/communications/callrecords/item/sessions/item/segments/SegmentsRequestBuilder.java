@@ -1,5 +1,9 @@
-package microsoft.graph.communications.callrecords.item.sessions.item.segments;
+package com.microsoft.graph.communications.callrecords.item.sessions.item.segments;
 
+import com.microsoft.graph.communications.callrecords.item.sessions.item.segments.count.CountRequestBuilder;
+import com.microsoft.graph.models.callrecords.Segment;
+import com.microsoft.graph.models.callrecords.SegmentCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.communications.callrecords.item.sessions.item.segments.count.CountRequestBuilder;
-import microsoft.graph.models.callrecords.Segment;
-import microsoft.graph.models.callrecords.SegmentCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity. */
 public class SegmentsRequestBuilder {
     /** The Count property */

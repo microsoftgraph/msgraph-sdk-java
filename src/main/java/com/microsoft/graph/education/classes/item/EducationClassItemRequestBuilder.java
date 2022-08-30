@@ -1,5 +1,18 @@
-package microsoft.graph.education.classes.item;
+package com.microsoft.graph.education.classes.item;
 
+import com.microsoft.graph.education.classes.item.assignmentcategories.AssignmentCategoriesRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignmentcategories.item.EducationCategoryItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignmentdefaults.AssignmentDefaultsRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.EducationAssignmentItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
+import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
+import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
+import com.microsoft.graph.education.classes.item.schools.item.EducationSchoolItemRequestBuilder;
+import com.microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
+import com.microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
+import com.microsoft.graph.models.EducationClass;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,19 +27,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.classes.item.assignmentcategories.AssignmentCategoriesRequestBuilder;
-import microsoft.graph.education.classes.item.assignmentcategories.item.EducationCategoryItemRequestBuilder;
-import microsoft.graph.education.classes.item.assignmentdefaults.AssignmentDefaultsRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.education.classes.item.assignments.item.EducationAssignmentItemRequestBuilder;
-import microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
-import microsoft.graph.education.classes.item.group.GroupRequestBuilder;
-import microsoft.graph.education.classes.item.members.MembersRequestBuilder;
-import microsoft.graph.education.classes.item.schools.item.EducationSchoolItemRequestBuilder;
-import microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
-import microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
-import microsoft.graph.models.EducationClass;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the classes property of the microsoft.graph.educationRoot entity. */
 public class EducationClassItemRequestBuilder {
     /** The assignmentCategories property */
@@ -76,7 +76,7 @@ public class EducationClassItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.assignmentCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignmentCategories.item collection
      * @param id Unique identifier of the item
      * @return a EducationCategoryItemRequestBuilder
      */
@@ -88,7 +88,7 @@ public class EducationClassItemRequestBuilder {
         return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a EducationAssignmentItemRequestBuilder
      */
@@ -319,16 +319,16 @@ public class EducationClassItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.members.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder members(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationUser%2Did", id);
-        return new microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property classes in education
@@ -386,7 +386,7 @@ public class EducationClassItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.schools.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.schools.item collection
      * @param id Unique identifier of the item
      * @return a EducationSchoolItemRequestBuilder
      */
@@ -398,16 +398,16 @@ public class EducationClassItemRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.education.classes.item.teachers.item collection
+     * Gets an item from the com.Microsoft.Graph.education.classes.item.teachers.item collection
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder teachers(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder teachers(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("educationUser%2Did", id);
-        return new microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class EducationClassItemRequestBuilderDeleteRequestConfiguration {

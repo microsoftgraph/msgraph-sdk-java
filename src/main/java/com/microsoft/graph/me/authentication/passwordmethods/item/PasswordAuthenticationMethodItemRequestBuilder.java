@@ -1,5 +1,7 @@
-package microsoft.graph.me.authentication.passwordmethods.item;
+package com.microsoft.graph.me.authentication.passwordmethods.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.PasswordAuthenticationMethod;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.PasswordAuthenticationMethod;
 /** Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity. */
 public class PasswordAuthenticationMethodItemRequestBuilder {
     /** Path parameters for the request */

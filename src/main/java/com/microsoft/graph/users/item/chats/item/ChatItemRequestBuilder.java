@@ -1,5 +1,16 @@
-package microsoft.graph.users.item.chats.item;
+package com.microsoft.graph.users.item.chats.item;
 
+import com.microsoft.graph.models.Chat;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.chats.item.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.members.MembersRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.messages.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.tabs.item.TeamsTabItemRequestBuilder;
+import com.microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,17 +25,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Chat;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.chats.item.installedapps.InstalledAppsRequestBuilder;
-import microsoft.graph.users.item.chats.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
-import microsoft.graph.users.item.chats.item.members.item.ConversationMemberItemRequestBuilder;
-import microsoft.graph.users.item.chats.item.members.MembersRequestBuilder;
-import microsoft.graph.users.item.chats.item.messages.item.ChatMessageItemRequestBuilder;
-import microsoft.graph.users.item.chats.item.messages.MessagesRequestBuilder;
-import microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
-import microsoft.graph.users.item.chats.item.tabs.item.TeamsTabItemRequestBuilder;
-import microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
 /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
 public class ChatItemRequestBuilder {
     /** The installedApps property */
@@ -278,7 +278,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item.installedApps.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item.installedApps.item collection
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class ChatItemRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item.members.item collection
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -302,7 +302,7 @@ public class ChatItemRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item.messages.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item.messages.item collection
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
@@ -369,7 +369,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.chats.item.tabs.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.chats.item.tabs.item collection
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */

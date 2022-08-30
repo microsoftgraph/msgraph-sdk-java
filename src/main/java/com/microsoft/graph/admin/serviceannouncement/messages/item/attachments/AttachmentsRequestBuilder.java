@@ -1,5 +1,9 @@
-package microsoft.graph.admin.serviceannouncement.messages.item.attachments;
+package com.microsoft.graph.admin.serviceannouncement.messages.item.attachments;
 
+import com.microsoft.graph.admin.serviceannouncement.messages.item.attachments.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceAnnouncementAttachment;
+import com.microsoft.graph.models.ServiceAnnouncementAttachmentCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.messages.item.attachments.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceAnnouncementAttachment;
-import microsoft.graph.models.ServiceAnnouncementAttachmentCollectionResponse;
 /** Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity. */
 public class AttachmentsRequestBuilder {
     /** The Count property */

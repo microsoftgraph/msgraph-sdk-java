@@ -1,5 +1,9 @@
-package microsoft.graph.education.me.assignments.item.submissions.item.outcomes;
+package com.microsoft.graph.education.me.assignments.item.submissions.item.outcomes;
 
+import com.microsoft.graph.education.me.assignments.item.submissions.item.outcomes.count.CountRequestBuilder;
+import com.microsoft.graph.models.EducationOutcome;
+import com.microsoft.graph.models.EducationOutcomeCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.education.me.assignments.item.submissions.item.outcomes.count.CountRequestBuilder;
-import microsoft.graph.models.EducationOutcome;
-import microsoft.graph.models.EducationOutcomeCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity. */
 public class OutcomesRequestBuilder {
     /** The Count property */

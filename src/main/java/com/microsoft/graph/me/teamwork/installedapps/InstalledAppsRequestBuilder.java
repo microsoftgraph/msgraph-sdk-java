@@ -1,5 +1,9 @@
-package microsoft.graph.me.teamwork.installedapps;
+package com.microsoft.graph.me.teamwork.installedapps;
 
+import com.microsoft.graph.me.teamwork.installedapps.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
+import com.microsoft.graph.models.UserScopeTeamsAppInstallationCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.teamwork.installedapps.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserScopeTeamsAppInstallation;
-import microsoft.graph.models.UserScopeTeamsAppInstallationCollectionResponse;
 /** Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity. */
 public class InstalledAppsRequestBuilder {
     /** The Count property */

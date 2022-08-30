@@ -1,5 +1,13 @@
-package microsoft.graph.sites.item.onenote.sections.item.pages.item;
+package com.microsoft.graph.sites.item.onenote.sections.item.pages.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenotePage;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.content.ContentRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.copytosection.CopyToSectionRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.onenotepatchcontent.OnenotePatchContentRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.parentnotebook.ParentNotebookRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.parentsection.ParentSectionRequestBuilder;
+import com.microsoft.graph.sites.item.onenote.sections.item.pages.item.preview.PreviewRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenotePage;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.content.ContentRequestBuilder;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.copytosection.CopyToSectionRequestBuilder;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.onenotepatchcontent.OnenotePatchContentRequestBuilder;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.parentnotebook.ParentNotebookRequestBuilder;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.parentsection.ParentSectionRequestBuilder;
-import microsoft.graph.sites.item.onenote.sections.item.pages.item.preview.PreviewRequestBuilder;
 /** Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity. */
 public class OnenotePageItemRequestBuilder {
     /** The content property */

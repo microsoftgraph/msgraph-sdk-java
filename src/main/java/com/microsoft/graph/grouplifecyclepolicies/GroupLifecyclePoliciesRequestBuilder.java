@@ -1,5 +1,9 @@
-package microsoft.graph.grouplifecyclepolicies;
+package com.microsoft.graph.grouplifecyclepolicies;
 
+import com.microsoft.graph.grouplifecyclepolicies.count.CountRequestBuilder;
+import com.microsoft.graph.models.GroupLifecyclePolicy;
+import com.microsoft.graph.models.GroupLifecyclePolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.grouplifecyclepolicies.count.CountRequestBuilder;
-import microsoft.graph.models.GroupLifecyclePolicy;
-import microsoft.graph.models.GroupLifecyclePolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of groupLifecyclePolicy entities. */
 public class GroupLifecyclePoliciesRequestBuilder {
     /** The Count property */

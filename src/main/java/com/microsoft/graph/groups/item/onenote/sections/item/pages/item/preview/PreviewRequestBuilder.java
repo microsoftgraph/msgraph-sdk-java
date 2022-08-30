@@ -1,5 +1,7 @@
-package microsoft.graph.groups.item.onenote.sections.item.pages.item.preview;
+package com.microsoft.graph.groups.item.onenote.sections.item.pages.item.preview;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenotePagePreview;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenotePagePreview;
 /** Provides operations to call the preview method. */
 public class PreviewRequestBuilder {
     /** Path parameters for the request */

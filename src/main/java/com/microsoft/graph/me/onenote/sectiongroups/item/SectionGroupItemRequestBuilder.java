@@ -1,5 +1,12 @@
-package microsoft.graph.me.onenote.sectiongroups.item;
+package com.microsoft.graph.me.onenote.sectiongroups.item;
 
+import com.microsoft.graph.me.onenote.sectiongroups.item.parentnotebook.ParentNotebookRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.sectiongroups.SectionGroupsRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
+import com.microsoft.graph.me.onenote.sectiongroups.item.sections.SectionsRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.onenote.sectiongroups.item.parentnotebook.ParentNotebookRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.item.parentsectiongroup.ParentSectionGroupRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.item.sectiongroups.SectionGroupsRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.item.sections.item.OnenoteSectionItemRequestBuilder;
-import microsoft.graph.me.onenote.sectiongroups.item.sections.SectionsRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SectionGroup;
 /** Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity. */
 public class SectionGroupItemRequestBuilder {
     /** The parentNotebook property */
@@ -324,7 +324,7 @@ public class SectionGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.sectionGroups.item.sectionGroups.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.sectionGroups.item.sectionGroups.item collection
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -336,7 +336,7 @@ public class SectionGroupItemRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.me.onenote.sectionGroups.item.sections.item collection
+     * Gets an item from the com.Microsoft.Graph.me.onenote.sectionGroups.item.sections.item collection
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

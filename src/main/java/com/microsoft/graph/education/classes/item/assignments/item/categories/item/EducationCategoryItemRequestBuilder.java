@@ -1,9 +1,9 @@
-package microsoft.graph.education.classes.item.assignments.item.categories.item;
+package com.microsoft.graph.education.classes.item.assignments.item.categories.item;
 
+import com.microsoft.graph.education.classes.item.assignments.item.categories.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.education.classes.item.assignments.item.categories.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /education/classes/{educationClass-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id} */
 public class EducationCategoryItemRequestBuilder {
     /** Path parameters for the request */

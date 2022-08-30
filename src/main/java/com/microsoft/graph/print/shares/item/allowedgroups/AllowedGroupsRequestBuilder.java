@@ -1,5 +1,9 @@
-package microsoft.graph.print.shares.item.allowedgroups;
+package com.microsoft.graph.print.shares.item.allowedgroups;
 
+import com.microsoft.graph.models.GroupCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.print.shares.item.allowedgroups.count.CountRequestBuilder;
+import com.microsoft.graph.print.shares.item.allowedgroups.ref.RefRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.GroupCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.print.shares.item.allowedgroups.count.CountRequestBuilder;
-import microsoft.graph.print.shares.item.allowedgroups.ref.RefRequestBuilder;
 /** Provides operations to manage the allowedGroups property of the microsoft.graph.printerShare entity. */
 public class AllowedGroupsRequestBuilder {
     /** The Count property */

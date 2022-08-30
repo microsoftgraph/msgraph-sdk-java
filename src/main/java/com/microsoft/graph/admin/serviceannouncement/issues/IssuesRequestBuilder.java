@@ -1,5 +1,9 @@
-package microsoft.graph.admin.serviceannouncement.issues;
+package com.microsoft.graph.admin.serviceannouncement.issues;
 
+import com.microsoft.graph.admin.serviceannouncement.issues.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceHealthIssue;
+import com.microsoft.graph.models.ServiceHealthIssueCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.issues.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceHealthIssue;
-import microsoft.graph.models.ServiceHealthIssueCollectionResponse;
 /** Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity. */
 public class IssuesRequestBuilder {
     /** The Count property */

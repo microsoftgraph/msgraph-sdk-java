@@ -1,5 +1,8 @@
-package microsoft.graph.contacts.item.memberof.device;
+package com.microsoft.graph.contacts.item.memberof.device;
 
+import com.microsoft.graph.contacts.item.memberof.device.count.CountRequestBuilder;
+import com.microsoft.graph.models.DeviceCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contacts.item.memberof.device.count.CountRequestBuilder;
-import microsoft.graph.models.DeviceCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to device. */
 public class DeviceRequestBuilder {
     /** The Count property */

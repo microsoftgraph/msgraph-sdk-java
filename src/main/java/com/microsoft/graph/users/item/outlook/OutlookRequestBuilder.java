@@ -1,5 +1,12 @@
-package microsoft.graph.users.item.outlook;
+package com.microsoft.graph.users.item.outlook;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookUser;
+import com.microsoft.graph.users.item.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
+import com.microsoft.graph.users.item.outlook.mastercategories.MasterCategoriesRequestBuilder;
+import com.microsoft.graph.users.item.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
+import com.microsoft.graph.users.item.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
+import com.microsoft.graph.users.item.outlook.supportedtimezoneswithtimezonestandard.SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookUser;
-import microsoft.graph.users.item.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
-import microsoft.graph.users.item.outlook.mastercategories.MasterCategoriesRequestBuilder;
-import microsoft.graph.users.item.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
-import microsoft.graph.users.item.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
-import microsoft.graph.users.item.outlook.supportedtimezoneswithtimezonestandard.SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 /** Provides operations to manage the outlook property of the microsoft.graph.user entity. */
 public class OutlookRequestBuilder {
     /** The masterCategories property */
@@ -254,7 +254,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.users.item.outlook.masterCategories.item collection
+     * Gets an item from the com.Microsoft.Graph.users.item.outlook.masterCategories.item collection
      * @param id Unique identifier of the item
      * @return a OutlookCategoryItemRequestBuilder
      */

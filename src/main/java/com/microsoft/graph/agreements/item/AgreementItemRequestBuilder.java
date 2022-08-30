@@ -1,5 +1,12 @@
-package microsoft.graph.agreements.item;
+package com.microsoft.graph.agreements.item;
 
+import com.microsoft.graph.agreements.item.acceptances.AcceptancesRequestBuilder;
+import com.microsoft.graph.agreements.item.acceptances.item.AgreementAcceptanceItemRequestBuilder;
+import com.microsoft.graph.agreements.item.file.FileRequestBuilder;
+import com.microsoft.graph.agreements.item.files.FilesRequestBuilder;
+import com.microsoft.graph.agreements.item.files.item.AgreementFileLocalizationItemRequestBuilder;
+import com.microsoft.graph.models.Agreement;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.agreements.item.acceptances.AcceptancesRequestBuilder;
-import microsoft.graph.agreements.item.acceptances.item.AgreementAcceptanceItemRequestBuilder;
-import microsoft.graph.agreements.item.file.FileRequestBuilder;
-import microsoft.graph.agreements.item.files.FilesRequestBuilder;
-import microsoft.graph.agreements.item.files.item.AgreementFileLocalizationItemRequestBuilder;
-import microsoft.graph.models.Agreement;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of agreement entities. */
 public class AgreementItemRequestBuilder {
     /** The acceptances property */
@@ -45,7 +45,7 @@ public class AgreementItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.agreements.item.acceptances.item collection
+     * Gets an item from the com.Microsoft.Graph.agreements.item.acceptances.item collection
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -225,7 +225,7 @@ public class AgreementItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.agreements.item.files.item collection
+     * Gets an item from the com.Microsoft.Graph.agreements.item.files.item collection
      * @param id Unique identifier of the item
      * @return a AgreementFileLocalizationItemRequestBuilder
      */

@@ -1,5 +1,40 @@
-package microsoft.graph.serviceprincipals.item;
+package com.microsoft.graph.serviceprincipals.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServicePrincipal;
+import com.microsoft.graph.serviceprincipals.item.addkey.AddKeyRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.addpassword.AddPasswordRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.addtokensigningcertificate.AddTokenSigningCertificateRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.approleassignedto.AppRoleAssignedToRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.approleassignments.AppRoleAssignmentsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.DelegatedPermissionClassificationsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.item.DelegatedPermissionClassificationItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.endpoints.EndpointsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.endpoints.item.EndpointItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.removekey.RemoveKeyRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.removepassword.RemovePasswordRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,41 +49,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServicePrincipal;
-import microsoft.graph.serviceprincipals.item.addkey.AddKeyRequestBuilder;
-import microsoft.graph.serviceprincipals.item.addpassword.AddPasswordRequestBuilder;
-import microsoft.graph.serviceprincipals.item.addtokensigningcertificate.AddTokenSigningCertificateRequestBuilder;
-import microsoft.graph.serviceprincipals.item.approleassignedto.AppRoleAssignedToRequestBuilder;
-import microsoft.graph.serviceprincipals.item.approleassignments.AppRoleAssignmentsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
-import microsoft.graph.serviceprincipals.item.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.createdobjects.CreatedObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.DelegatedPermissionClassificationsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.item.DelegatedPermissionClassificationItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.endpoints.EndpointsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.endpoints.item.EndpointItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
-import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.item.HomeRealmDiscoveryPolicyItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.memberof.MemberOfRequestBuilder;
-import microsoft.graph.serviceprincipals.item.oauth2permissiongrants.item.OAuth2PermissionGrantItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.owners.OwnersRequestBuilder;
-import microsoft.graph.serviceprincipals.item.removekey.RemoveKeyRequestBuilder;
-import microsoft.graph.serviceprincipals.item.removepassword.RemovePasswordRequestBuilder;
-import microsoft.graph.serviceprincipals.item.restore.RestoreRequestBuilder;
-import microsoft.graph.serviceprincipals.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
-import microsoft.graph.serviceprincipals.item.tokenlifetimepolicies.item.TokenLifetimePolicyItemRequestBuilder;
-import microsoft.graph.serviceprincipals.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 /** Provides operations to manage the collection of servicePrincipal entities. */
 public class ServicePrincipalItemRequestBuilder {
     /** The addKey property */
@@ -183,31 +183,31 @@ public class ServicePrincipalItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.appRoleAssignedTo.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.appRoleAssignedTo.item collection
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder appRoleAssignedTo(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder appRoleAssignedTo(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appRoleAssignment%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.approleassignedto.item.AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.appRoleAssignments.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.appRoleAssignments.item collection
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder appRoleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("appRoleAssignment%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.claimsMappingPolicies.item collection
      * @param id Unique identifier of the item
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
@@ -274,16 +274,16 @@ public class ServicePrincipalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.createdObjects.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.createdObjects.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder createdObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
@@ -348,7 +348,7 @@ public class ServicePrincipalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.delegatedPermissionClassifications.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.delegatedPermissionClassifications.item collection
      * @param id Unique identifier of the item
      * @return a DelegatedPermissionClassificationItemRequestBuilder
      */
@@ -411,7 +411,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.endpoints.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.endpoints.item collection
      * @param id Unique identifier of the item
      * @return a EndpointItemRequestBuilder
      */
@@ -423,7 +423,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new EndpointItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.federatedIdentityCredentials.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.federatedIdentityCredentials.item collection
      * @param id Unique identifier of the item
      * @return a FederatedIdentityCredentialItemRequestBuilder
      */
@@ -486,7 +486,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -498,19 +498,19 @@ public class ServicePrincipalItemRequestBuilder {
         return new HomeRealmDiscoveryPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.memberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.memberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder memberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.oauth2PermissionGrants.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.oauth2PermissionGrants.item collection
      * @param id Unique identifier of the item
      * @return a OAuth2PermissionGrantItemRequestBuilder
      */
@@ -522,28 +522,28 @@ public class ServicePrincipalItemRequestBuilder {
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.ownedObjects.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.ownedObjects.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder ownedObjects(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.owners.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.owners.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder owners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update entity in servicePrincipals
@@ -601,7 +601,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.tokenIssuancePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.tokenIssuancePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -613,7 +613,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.tokenLifetimePolicies.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.tokenLifetimePolicies.item collection
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */
@@ -625,16 +625,16 @@ public class ServicePrincipalItemRequestBuilder {
         return new TokenLifetimePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.servicePrincipals.item.transitiveMemberOf.item collection
+     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item.transitiveMemberOf.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.serviceprincipals.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.serviceprincipals.item.transitivememberof.item.DirectoryObjectItemRequestBuilder transitiveMemberOf(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("directoryObject%2Did", id);
-        return new microsoft.graph.serviceprincipals.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.serviceprincipals.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class ServicePrincipalItemRequestBuilderDeleteRequestConfiguration {

@@ -1,5 +1,7 @@
-package microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.user;
+package com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.user;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.User;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.User;
 /** Casts the previous resource to user. */
 public class UserRequestBuilder {
     /** Path parameters for the request */

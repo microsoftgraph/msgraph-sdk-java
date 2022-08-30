@@ -1,5 +1,9 @@
-package microsoft.graph.identity.b2xuserflows.item.languages.item;
+package com.microsoft.graph.identity.b2xuserflows.item.languages.item;
 
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.DefaultPagesRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.OverridesPagesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.UserFlowLanguageConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.DefaultPagesRequestBuilder;
-import microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.OverridesPagesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.UserFlowLanguageConfiguration;
 /** Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class UserFlowLanguageConfigurationItemRequestBuilder {
     /** The defaultPages property */
@@ -154,16 +154,16 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
      * @param id Unique identifier of the item
      * @return a UserFlowLanguagePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder defaultPages(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder defaultPages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userFlowLanguagePage%2Did", id);
-        return new microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property languages for identity
@@ -268,16 +268,16 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
+     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
      * @param id Unique identifier of the item
      * @return a UserFlowLanguagePageItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder overridesPages(@javax.annotation.Nonnull final String id) {
+    public com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder overridesPages(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userFlowLanguagePage%2Did", id);
-        return new microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
+        return new com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property languages in identity

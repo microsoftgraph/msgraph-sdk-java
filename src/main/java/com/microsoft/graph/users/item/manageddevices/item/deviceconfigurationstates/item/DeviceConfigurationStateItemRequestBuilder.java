@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.manageddevices.item.deviceconfigurationstates.item;
+package com.microsoft.graph.users.item.manageddevices.item.deviceconfigurationstates.item;
 
+import com.microsoft.graph.models.DeviceConfigurationState;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.DeviceConfigurationState;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity. */
 public class DeviceConfigurationStateItemRequestBuilder {
     /** Path parameters for the request */

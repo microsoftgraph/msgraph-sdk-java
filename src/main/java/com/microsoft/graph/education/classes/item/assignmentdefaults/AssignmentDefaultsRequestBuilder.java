@@ -1,5 +1,7 @@
-package microsoft.graph.education.classes.item.assignmentdefaults;
+package com.microsoft.graph.education.classes.item.assignmentdefaults;
 
+import com.microsoft.graph.models.EducationAssignmentDefaults;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationAssignmentDefaults;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity. */
 public class AssignmentDefaultsRequestBuilder {
     /** Path parameters for the request */

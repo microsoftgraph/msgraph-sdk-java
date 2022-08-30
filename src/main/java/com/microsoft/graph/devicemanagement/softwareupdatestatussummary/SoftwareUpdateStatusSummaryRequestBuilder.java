@@ -1,5 +1,7 @@
-package microsoft.graph.devicemanagement.softwareupdatestatussummary;
+package com.microsoft.graph.devicemanagement.softwareupdatestatussummary;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SoftwareUpdateStatusSummary;
 /** Provides operations to manage the softwareUpdateStatusSummary property of the microsoft.graph.deviceManagement entity. */
 public class SoftwareUpdateStatusSummaryRequestBuilder {
     /** Path parameters for the request */

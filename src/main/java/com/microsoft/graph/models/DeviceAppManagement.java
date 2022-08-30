@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity that acts as a container for all device app management functionality. */
 public class DeviceAppManagement extends Entity implements Parsable {
     /** Android managed app policies. */
     private java.util.List<AndroidManagedAppProtection> _androidManagedAppProtections;
@@ -46,7 +47,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /** Windows information protection for apps running on devices which are not MDM enrolled. */
     private java.util.List<WindowsInformationProtectionPolicy> _windowsInformationProtectionPolicies;
     /**
-     * Instantiates a new DeviceAppManagement and sets the default values.
+     * Instantiates a new deviceAppManagement and sets the default values.
      * @return a void
      */
     public DeviceAppManagement() {
@@ -56,7 +57,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAppManagement
+     * @return a deviceAppManagement
      */
     @javax.annotation.Nonnull
     public static DeviceAppManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

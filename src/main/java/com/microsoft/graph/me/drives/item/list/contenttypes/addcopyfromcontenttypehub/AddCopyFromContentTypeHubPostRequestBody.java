@@ -1,4 +1,4 @@
-package microsoft.graph.me.drives.item.list.contenttypes.addcopyfromcontenttypehub;
+package com.microsoft.graph.me.drives.item.list.contenttypes.addcopyfromcontenttypehub;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

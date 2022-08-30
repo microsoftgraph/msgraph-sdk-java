@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class List extends BaseItem implements Parsable {
     /** The collection of field definitions for this list. */
     private java.util.List<ColumnDefinition> _columns;

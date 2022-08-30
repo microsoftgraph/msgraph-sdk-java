@@ -1,5 +1,6 @@
-package microsoft.graph.directory.deleteditems.getavailableextensionproperties;
+package com.microsoft.graph.directory.deleteditems.getavailableextensionproperties;
 
+import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ExtensionProperty;
 /** Provides operations to call the getAvailableExtensionProperties method. */
 public class GetAvailableExtensionPropertiesResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

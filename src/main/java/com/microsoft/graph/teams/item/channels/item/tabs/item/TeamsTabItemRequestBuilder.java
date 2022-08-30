@@ -1,5 +1,8 @@
-package microsoft.graph.teams.item.channels.item.tabs.item;
+package com.microsoft.graph.teams.item.channels.item.tabs.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsTab;
+import com.microsoft.graph.teams.item.channels.item.tabs.item.teamsapp.TeamsAppRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsTab;
-import microsoft.graph.teams.item.channels.item.tabs.item.teamsapp.TeamsAppRequestBuilder;
 /** Provides operations to manage the tabs property of the microsoft.graph.channel entity. */
 public class TeamsTabItemRequestBuilder {
     /** Path parameters for the request */

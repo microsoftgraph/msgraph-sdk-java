@@ -1,5 +1,8 @@
-package microsoft.graph.shares.item.list.columns.item;
+package com.microsoft.graph.shares.item.list.columns.item;
 
+import com.microsoft.graph.models.ColumnDefinition;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.shares.item.list.columns.item.sourcecolumn.SourceColumnRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ColumnDefinition;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.shares.item.list.columns.item.sourcecolumn.SourceColumnRequestBuilder;
 /** Provides operations to manage the columns property of the microsoft.graph.list entity. */
 public class ColumnDefinitionItemRequestBuilder {
     /** Path parameters for the request */

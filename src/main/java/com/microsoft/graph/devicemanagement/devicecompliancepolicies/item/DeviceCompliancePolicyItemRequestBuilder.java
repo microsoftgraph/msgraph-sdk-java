@@ -1,5 +1,21 @@
-package microsoft.graph.devicemanagement.devicecompliancepolicies.item;
+package com.microsoft.graph.devicemanagement.devicecompliancepolicies.item;
 
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.item.DeviceCompliancePolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.DeviceStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.item.DeviceComplianceDeviceStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduleactionsforrules.ScheduleActionsForRulesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.DeviceComplianceScheduledActionForRuleItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.ScheduledActionsForRuleRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.item.DeviceComplianceUserStatusItemRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.UserStatusesRequestBuilder;
+import com.microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatusoverview.UserStatusOverviewRequestBuilder;
+import com.microsoft.graph.models.DeviceCompliancePolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,22 +30,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.assign.AssignRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.AssignmentsRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.assignments.item.DeviceCompliancePolicyAssignmentItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.DeviceSettingStateSummariesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicesettingstatesummaries.item.SettingStateDeviceSummaryItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.DeviceStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatuses.item.DeviceComplianceDeviceStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.devicestatusoverview.DeviceStatusOverviewRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduleactionsforrules.ScheduleActionsForRulesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.item.DeviceComplianceScheduledActionForRuleItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.scheduledactionsforrule.ScheduledActionsForRuleRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.item.DeviceComplianceUserStatusItemRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatuses.UserStatusesRequestBuilder;
-import microsoft.graph.devicemanagement.devicecompliancepolicies.item.userstatusoverview.UserStatusOverviewRequestBuilder;
-import microsoft.graph.models.DeviceCompliancePolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePolicyItemRequestBuilder {
     /** The assign property */
@@ -84,7 +84,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyAssignmentItemRequestBuilder
      */
@@ -264,7 +264,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
      * @param id Unique identifier of the item
      * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
@@ -276,7 +276,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceDeviceStatusItemRequestBuilder
      */
@@ -394,7 +394,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceScheduledActionForRuleItemRequestBuilder
      */
@@ -406,7 +406,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         return new DeviceComplianceScheduledActionForRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
+     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
      * @param id Unique identifier of the item
      * @return a DeviceComplianceUserStatusItemRequestBuilder
      */

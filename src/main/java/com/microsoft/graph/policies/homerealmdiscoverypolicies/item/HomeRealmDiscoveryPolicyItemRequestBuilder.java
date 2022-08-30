@@ -1,5 +1,7 @@
-package microsoft.graph.policies.homerealmdiscoverypolicies.item;
+package com.microsoft.graph.policies.homerealmdiscoverypolicies.item;
 
+import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.HomeRealmDiscoveryPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity. */
 public class HomeRealmDiscoveryPolicyItemRequestBuilder {
     /** Path parameters for the request */

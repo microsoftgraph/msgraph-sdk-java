@@ -1,5 +1,8 @@
-package microsoft.graph.devicemanagement.exchangeconnectors.item;
+package com.microsoft.graph.devicemanagement.exchangeconnectors.item;
 
+import com.microsoft.graph.devicemanagement.exchangeconnectors.item.sync.SyncRequestBuilder;
+import com.microsoft.graph.models.DeviceManagementExchangeConnector;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.exchangeconnectors.item.sync.SyncRequestBuilder;
-import microsoft.graph.models.DeviceManagementExchangeConnector;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity. */
 public class DeviceManagementExchangeConnectorItemRequestBuilder {
     /** Path parameters for the request */

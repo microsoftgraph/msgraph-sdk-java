@@ -1,5 +1,10 @@
-package microsoft.graph.informationprotection;
+package com.microsoft.graph.informationprotection;
 
+import com.microsoft.graph.informationprotection.bitlocker.BitlockerRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
+import com.microsoft.graph.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
+import com.microsoft.graph.models.InformationProtection;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.informationprotection.bitlocker.BitlockerRequestBuilder;
-import microsoft.graph.informationprotection.threatassessmentrequests.item.ThreatAssessmentRequestItemRequestBuilder;
-import microsoft.graph.informationprotection.threatassessmentrequests.ThreatAssessmentRequestsRequestBuilder;
-import microsoft.graph.models.InformationProtection;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the informationProtection singleton. */
 public class InformationProtectionRequestBuilder {
     /** The bitlocker property */
@@ -233,7 +233,7 @@ public class InformationProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
      * @param id Unique identifier of the item
      * @return a ThreatAssessmentRequestItemRequestBuilder
      */

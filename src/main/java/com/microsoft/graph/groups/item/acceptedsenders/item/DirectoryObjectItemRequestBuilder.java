@@ -1,9 +1,9 @@
-package microsoft.graph.groups.item.acceptedsenders.item;
+package com.microsoft.graph.groups.item.acceptedsenders.item;
 
+import com.microsoft.graph.groups.item.acceptedsenders.item.ref.RefRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.groups.item.acceptedsenders.item.ref.RefRequestBuilder;
 /** Builds and executes requests for operations under /groups/{group-id}/acceptedSenders/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */

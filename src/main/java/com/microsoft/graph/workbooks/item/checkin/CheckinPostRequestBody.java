@@ -1,4 +1,4 @@
-package microsoft.graph.workbooks.item.checkin;
+package com.microsoft.graph.workbooks.item.checkin;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

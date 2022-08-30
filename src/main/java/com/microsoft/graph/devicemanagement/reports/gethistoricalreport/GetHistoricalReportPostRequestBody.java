@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.reports.gethistoricalreport;
+package com.microsoft.graph.devicemanagement.reports.gethistoricalreport;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

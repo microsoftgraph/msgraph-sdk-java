@@ -1,5 +1,9 @@
-package microsoft.graph.deviceappmanagement.managedebooks;
+package com.microsoft.graph.deviceappmanagement.managedebooks;
 
+import com.microsoft.graph.deviceappmanagement.managedebooks.count.CountRequestBuilder;
+import com.microsoft.graph.models.ManagedEBook;
+import com.microsoft.graph.models.ManagedEBookCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedebooks.count.CountRequestBuilder;
-import microsoft.graph.models.ManagedEBook;
-import microsoft.graph.models.ManagedEBookCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedEBooksRequestBuilder {
     /** The Count property */

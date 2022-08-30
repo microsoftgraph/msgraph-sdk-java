@@ -1,5 +1,10 @@
-package microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities;
+package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities;
 
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.count.CountRequestBuilder;
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.import_escaped.ImportRequestBuilder;
+import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
+import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.count.CountRequestBuilder;
-import microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.import_escaped.ImportRequestBuilder;
-import microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
-import microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
     /** The Count property */

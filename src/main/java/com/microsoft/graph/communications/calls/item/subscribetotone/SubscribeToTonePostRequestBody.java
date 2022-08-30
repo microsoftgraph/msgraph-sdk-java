@@ -1,4 +1,4 @@
-package microsoft.graph.communications.calls.item.subscribetotone;
+package com.microsoft.graph.communications.calls.item.subscribetotone;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

@@ -1,5 +1,9 @@
-package microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item;
+package com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item;
 
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.catalog.CatalogRequestBuilder;
+import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
-import microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.catalog.CatalogRequestBuilder;
-import microsoft.graph.models.AccessPackageAssignmentPolicy;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageAssignmentPolicyItemRequestBuilder {
     /** The accessPackage property */

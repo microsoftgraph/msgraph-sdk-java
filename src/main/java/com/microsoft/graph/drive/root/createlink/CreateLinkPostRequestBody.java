@@ -1,4 +1,4 @@
-package microsoft.graph.drive.root.createlink;
+package com.microsoft.graph.drive.root.createlink;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

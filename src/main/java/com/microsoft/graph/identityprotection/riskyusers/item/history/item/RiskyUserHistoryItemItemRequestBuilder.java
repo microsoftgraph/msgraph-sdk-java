@@ -1,5 +1,7 @@
-package microsoft.graph.identityprotection.riskyusers.item.history.item;
+package com.microsoft.graph.identityprotection.riskyusers.item.history.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.RiskyUserHistoryItem;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.RiskyUserHistoryItem;
 /** Provides operations to manage the history property of the microsoft.graph.riskyUser entity. */
 public class RiskyUserHistoryItemItemRequestBuilder {
     /** Path parameters for the request */

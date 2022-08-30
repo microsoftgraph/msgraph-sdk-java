@@ -1,4 +1,4 @@
-package microsoft.graph.me.mailfolders.item.messages.item.move;
+package com.microsoft.graph.me.mailfolders.item.messages.item.move;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

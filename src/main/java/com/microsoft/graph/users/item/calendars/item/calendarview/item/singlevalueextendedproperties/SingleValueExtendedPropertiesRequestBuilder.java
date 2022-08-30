@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.calendars.item.calendarview.item.singlevalueextendedproperties;
+package com.microsoft.graph.users.item.calendars.item.calendarview.item.singlevalueextendedproperties;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.users.item.calendars.item.calendarview.item.singlevalueextendedproperties.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SingleValueLegacyExtendedProperty;
-import microsoft.graph.models.SingleValueLegacyExtendedPropertyCollectionResponse;
-import microsoft.graph.users.item.calendars.item.calendarview.item.singlevalueextendedproperties.count.CountRequestBuilder;
 /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity. */
 public class SingleValueExtendedPropertiesRequestBuilder {
     /** The Count property */

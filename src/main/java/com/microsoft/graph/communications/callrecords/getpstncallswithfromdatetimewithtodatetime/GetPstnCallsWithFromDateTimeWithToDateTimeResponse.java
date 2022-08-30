@@ -1,5 +1,6 @@
-package microsoft.graph.communications.callrecords.getpstncallswithfromdatetimewithtodatetime;
+package com.microsoft.graph.communications.callrecords.getpstncallswithfromdatetimewithtodatetime;
 
+import com.microsoft.graph.models.callrecords.PstnCallLogRow;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.callrecords.PstnCallLogRow;
 /** Provides operations to call the getPstnCalls method. */
 public class GetPstnCallsWithFromDateTimeWithToDateTimeResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.drives.item.list.contenttypes.item.basetypes.item;
+package com.microsoft.graph.users.item.drives.item.list.contenttypes.item.basetypes.item;
 
+import com.microsoft.graph.models.ContentType;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ContentType;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity. */
 public class ContentTypeItemRequestBuilder {
     /** Path parameters for the request */

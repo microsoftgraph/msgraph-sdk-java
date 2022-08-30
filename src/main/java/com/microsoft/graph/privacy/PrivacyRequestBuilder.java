@@ -1,5 +1,9 @@
-package microsoft.graph.privacy;
+package com.microsoft.graph.privacy;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Privacy;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
+import com.microsoft.graph.privacy.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Privacy;
-import microsoft.graph.privacy.subjectrightsrequests.item.SubjectRightsRequestItemRequestBuilder;
-import microsoft.graph.privacy.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
 /** Provides operations to manage the privacy singleton. */
 public class PrivacyRequestBuilder {
     /** Path parameters for the request */
@@ -227,7 +227,7 @@ public class PrivacyRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.privacy.subjectRightsRequests.item collection
+     * Gets an item from the com.Microsoft.Graph.privacy.subjectRightsRequests.item collection
      * @param id Unique identifier of the item
      * @return a SubjectRightsRequestItemRequestBuilder
      */

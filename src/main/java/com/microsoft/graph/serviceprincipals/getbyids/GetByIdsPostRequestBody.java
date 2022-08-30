@@ -1,4 +1,4 @@
-package microsoft.graph.serviceprincipals.getbyids;
+package com.microsoft.graph.serviceprincipals.getbyids;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

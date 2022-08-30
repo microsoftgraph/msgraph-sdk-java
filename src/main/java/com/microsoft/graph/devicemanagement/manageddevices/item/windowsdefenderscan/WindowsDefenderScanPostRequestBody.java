@@ -1,4 +1,4 @@
-package microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderscan;
+package com.microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderscan;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

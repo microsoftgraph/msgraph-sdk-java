@@ -1,5 +1,7 @@
-package microsoft.graph.users.item.onenote.sections.item.copytosectiongroup;
+package com.microsoft.graph.users.item.onenote.sections.item.copytosectiongroup;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OnenoteOperation;
 /** Provides operations to call the copyToSectionGroup method. */
 public class CopyToSectionGroupRequestBuilder {
     /** Path parameters for the request */

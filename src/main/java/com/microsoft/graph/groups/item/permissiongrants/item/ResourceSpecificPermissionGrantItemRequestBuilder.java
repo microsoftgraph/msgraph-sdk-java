@@ -1,5 +1,12 @@
-package microsoft.graph.groups.item.permissiongrants.item;
+package com.microsoft.graph.groups.item.permissiongrants.item;
 
+import com.microsoft.graph.groups.item.permissiongrants.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.groups.item.permissiongrants.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.permissiongrants.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.item.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.groups.item.permissiongrants.item.restore.RestoreRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ResourceSpecificPermissionGrant;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
 public class ResourceSpecificPermissionGrantItemRequestBuilder {
     /** The checkMemberGroups property */

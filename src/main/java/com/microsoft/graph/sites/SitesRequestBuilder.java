@@ -1,5 +1,10 @@
-package microsoft.graph.sites;
+package com.microsoft.graph.sites;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.SiteCollectionResponse;
+import com.microsoft.graph.sites.add.AddRequestBuilder;
+import com.microsoft.graph.sites.count.CountRequestBuilder;
+import com.microsoft.graph.sites.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,11 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.SiteCollectionResponse;
-import microsoft.graph.sites.add.AddRequestBuilder;
-import microsoft.graph.sites.count.CountRequestBuilder;
-import microsoft.graph.sites.remove.RemoveRequestBuilder;
 /** Provides operations to manage the collection of site entities. */
 public class SitesRequestBuilder {
     /** The add property */

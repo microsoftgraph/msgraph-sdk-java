@@ -1,5 +1,8 @@
-package microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers;
+package com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers;
 
+import com.microsoft.graph.models.ConversationMemberCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConversationMemberCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.count.CountRequestBuilder;
 /** Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity. */
 public class AllowedMembersRequestBuilder {
     /** The Count property */

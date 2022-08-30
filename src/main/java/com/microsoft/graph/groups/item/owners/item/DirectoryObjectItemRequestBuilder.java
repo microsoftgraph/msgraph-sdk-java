@@ -1,15 +1,15 @@
-package microsoft.graph.groups.item.owners.item;
+package com.microsoft.graph.groups.item.owners.item;
 
+import com.microsoft.graph.groups.item.owners.item.application.ApplicationRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.group.GroupRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.ref.RefRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.groups.item.owners.item.application.ApplicationRequestBuilder;
-import microsoft.graph.groups.item.owners.item.device.DeviceRequestBuilder;
-import microsoft.graph.groups.item.owners.item.group.GroupRequestBuilder;
-import microsoft.graph.groups.item.owners.item.orgcontact.OrgContactRequestBuilder;
-import microsoft.graph.groups.item.owners.item.ref.RefRequestBuilder;
-import microsoft.graph.groups.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.groups.item.owners.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The application property */

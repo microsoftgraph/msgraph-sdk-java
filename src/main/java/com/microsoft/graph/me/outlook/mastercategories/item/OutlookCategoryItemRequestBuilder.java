@@ -1,5 +1,7 @@
-package microsoft.graph.me.outlook.mastercategories.item;
+package com.microsoft.graph.me.outlook.mastercategories.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OutlookCategory;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OutlookCategory;
 /** Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity. */
 public class OutlookCategoryItemRequestBuilder {
     /** Path parameters for the request */

@@ -1,5 +1,13 @@
-package microsoft.graph.applications;
+package com.microsoft.graph.applications;
 
+import com.microsoft.graph.applications.count.CountRequestBuilder;
+import com.microsoft.graph.applications.delta.DeltaRequestBuilder;
+import com.microsoft.graph.applications.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.applications.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.applications.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.Application;
+import com.microsoft.graph.models.ApplicationCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.applications.count.CountRequestBuilder;
-import microsoft.graph.applications.delta.DeltaRequestBuilder;
-import microsoft.graph.applications.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.applications.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.applications.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.Application;
-import microsoft.graph.models.ApplicationCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of application entities. */
 public class ApplicationsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,13 @@
-package microsoft.graph.users;
+package com.microsoft.graph.users;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.UserCollectionResponse;
+import com.microsoft.graph.users.count.CountRequestBuilder;
+import com.microsoft.graph.users.delta.DeltaRequestBuilder;
+import com.microsoft.graph.users.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.users.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.users.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.User;
-import microsoft.graph.models.UserCollectionResponse;
-import microsoft.graph.users.count.CountRequestBuilder;
-import microsoft.graph.users.delta.DeltaRequestBuilder;
-import microsoft.graph.users.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.users.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.users.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the collection of user entities. */
 public class UsersRequestBuilder {
     /** The Count property */

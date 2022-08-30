@@ -1,5 +1,9 @@
-package microsoft.graph.directory.administrativeunits.item.scopedrolemembers;
+package com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers;
 
+import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ScopedRoleMembership;
+import com.microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.item.scopedrolemembers.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ScopedRoleMembership;
-import microsoft.graph.models.ScopedRoleMembershipCollectionResponse;
 /** Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity. */
 public class ScopedRoleMembersRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.policies.conditionalaccesspolicies;
+package com.microsoft.graph.policies.conditionalaccesspolicies;
 
+import com.microsoft.graph.models.ConditionalAccessPolicy;
+import com.microsoft.graph.models.ConditionalAccessPolicyCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.policies.conditionalaccesspolicies.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ConditionalAccessPolicy;
-import microsoft.graph.models.ConditionalAccessPolicyCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.policies.conditionalaccesspolicies.count.CountRequestBuilder;
 /** Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity. */
 public class ConditionalAccessPoliciesRequestBuilder {
     /** The Count property */

@@ -1,4 +1,4 @@
-package microsoft.graph.groups.item.team.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
+package com.microsoft.graph.groups.item.team.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;

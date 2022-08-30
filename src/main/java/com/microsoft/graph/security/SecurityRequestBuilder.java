@@ -1,5 +1,14 @@
-package microsoft.graph.security;
+package com.microsoft.graph.security;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Security;
+import com.microsoft.graph.security.alerts.AlertsRequestBuilder;
+import com.microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
+import com.microsoft.graph.security.cases.CasesRequestBuilder;
+import com.microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
+import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
+import com.microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
+import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,15 +23,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Security;
-import microsoft.graph.security.alerts.AlertsRequestBuilder;
-import microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
-import microsoft.graph.security.cases.CasesRequestBuilder;
-import microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
-import microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
-import microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
-import microsoft.graph.security.securescores.SecureScoresRequestBuilder;
 /** Provides operations to manage the security singleton. */
 public class SecurityRequestBuilder {
     /** The alerts property */
@@ -52,7 +52,7 @@ public class SecurityRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.security.alerts.item collection
+     * Gets an item from the com.Microsoft.Graph.security.alerts.item collection
      * @param id Unique identifier of the item
      * @return a AlertItemRequestBuilder
      */
@@ -259,7 +259,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.secureScoreControlProfiles.item collection
+     * Gets an item from the com.Microsoft.Graph.security.secureScoreControlProfiles.item collection
      * @param id Unique identifier of the item
      * @return a SecureScoreControlProfileItemRequestBuilder
      */
@@ -271,7 +271,7 @@ public class SecurityRequestBuilder {
         return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.security.secureScores.item collection
+     * Gets an item from the com.Microsoft.Graph.security.secureScores.item collection
      * @param id Unique identifier of the item
      * @return a SecureScoreItemRequestBuilder
      */

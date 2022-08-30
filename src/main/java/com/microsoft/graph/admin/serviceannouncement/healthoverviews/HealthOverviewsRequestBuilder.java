@@ -1,5 +1,9 @@
-package microsoft.graph.admin.serviceannouncement.healthoverviews;
+package com.microsoft.graph.admin.serviceannouncement.healthoverviews;
 
+import com.microsoft.graph.admin.serviceannouncement.healthoverviews.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.ServiceHealth;
+import com.microsoft.graph.models.ServiceHealthCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.admin.serviceannouncement.healthoverviews.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ServiceHealth;
-import microsoft.graph.models.ServiceHealthCollectionResponse;
 /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
 public class HealthOverviewsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,9 @@
-package microsoft.graph.privacy.subjectrightsrequests.item.notes;
+package com.microsoft.graph.privacy.subjectrightsrequests.item.notes;
 
+import com.microsoft.graph.models.AuthoredNote;
+import com.microsoft.graph.models.AuthoredNoteCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.privacy.subjectrightsrequests.item.notes.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.AuthoredNote;
-import microsoft.graph.models.AuthoredNoteCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.privacy.subjectrightsrequests.item.notes.count.CountRequestBuilder;
 /** Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity. */
 public class NotesRequestBuilder {
     /** The Count property */

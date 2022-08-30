@@ -1,13 +1,13 @@
-package microsoft.graph.applications.item.owners.item;
+package com.microsoft.graph.applications.item.owners.item;
 
+import com.microsoft.graph.applications.item.owners.item.approleassignment.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.endpoint.EndpointRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.ref.RefRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.applications.item.owners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-import microsoft.graph.applications.item.owners.item.approleassignment.AppRoleAssignmentRequestBuilder;
-import microsoft.graph.applications.item.owners.item.endpoint.EndpointRequestBuilder;
-import microsoft.graph.applications.item.owners.item.ref.RefRequestBuilder;
-import microsoft.graph.applications.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import microsoft.graph.applications.item.owners.item.user.UserRequestBuilder;
 /** Builds and executes requests for operations under /applications/{application-id}/owners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
     /** The appRoleAssignment property */

@@ -1,5 +1,9 @@
-package microsoft.graph.sites.item.termstore.groups.item;
+package com.microsoft.graph.sites.item.termstore.groups.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.termstore.Group;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.item.SetItemRequestBuilder;
+import com.microsoft.graph.sites.item.termstore.groups.item.sets.SetsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.termstore.Group;
-import microsoft.graph.sites.item.termstore.groups.item.sets.item.SetItemRequestBuilder;
-import microsoft.graph.sites.item.termstore.groups.item.sets.SetsRequestBuilder;
 /** Provides operations to manage the groups property of the microsoft.graph.termStore.store entity. */
 public class GroupItemRequestBuilder {
     /** Path parameters for the request */
@@ -306,7 +306,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.sites.item.termStore.groups.item.sets.item collection
+     * Gets an item from the com.Microsoft.Graph.sites.item.termStore.groups.item.sets.item collection
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

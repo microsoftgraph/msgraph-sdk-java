@@ -1,5 +1,13 @@
-package microsoft.graph.contacts;
+package com.microsoft.graph.contacts;
 
+import com.microsoft.graph.contacts.count.CountRequestBuilder;
+import com.microsoft.graph.contacts.delta.DeltaRequestBuilder;
+import com.microsoft.graph.contacts.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import com.microsoft.graph.contacts.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.contacts.validateproperties.ValidatePropertiesRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrgContact;
+import com.microsoft.graph.models.OrgContactCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contacts.count.CountRequestBuilder;
-import microsoft.graph.contacts.delta.DeltaRequestBuilder;
-import microsoft.graph.contacts.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import microsoft.graph.contacts.getbyids.GetByIdsRequestBuilder;
-import microsoft.graph.contacts.validateproperties.ValidatePropertiesRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrgContact;
-import microsoft.graph.models.OrgContactCollectionResponse;
 /** Provides operations to manage the collection of orgContact entities. */
 public class ContactsRequestBuilder {
     /** The Count property */

@@ -1,5 +1,13 @@
-package microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item;
+package com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.applyhold.ApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.datasource.DataSourceRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.lastindexoperation.LastIndexOperationRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.release.ReleaseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.removehold.RemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.updateindex.UpdateIndexRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.security.EdiscoveryNoncustodialDataSource;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.applyhold.ApplyHoldRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.datasource.DataSourceRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.lastindexoperation.LastIndexOperationRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.release.ReleaseRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.removehold.RemoveHoldRequestBuilder;
-import microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.updateindex.UpdateIndexRequestBuilder;
 /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
     /** The applyHold property */

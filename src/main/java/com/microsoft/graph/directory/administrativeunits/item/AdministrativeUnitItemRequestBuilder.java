@@ -1,5 +1,13 @@
-package microsoft.graph.directory.administrativeunits.item;
+package com.microsoft.graph.directory.administrativeunits.item;
 
+import com.microsoft.graph.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.members.MembersRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
+import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
+import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,14 +22,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.extensions.item.ExtensionItemRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.item.DirectoryObjectItemRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.members.MembersRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.scopedrolemembers.item.ScopedRoleMembershipItemRequestBuilder;
-import microsoft.graph.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
-import microsoft.graph.models.AdministrativeUnit;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
 public class AdministrativeUnitItemRequestBuilder {
     /** The extensions property */
@@ -214,7 +214,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.extensions.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.extensions.item collection
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -277,7 +277,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.members.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.members.item collection
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.directory.administrativeUnits.item.scopedRoleMembers.item collection
+     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.scopedRoleMembers.item collection
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */

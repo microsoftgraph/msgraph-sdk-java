@@ -1,4 +1,4 @@
-package microsoft.graph.models;
+package com.microsoft.graph.models;
 
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles. */
 public class RoleAssignment extends Entity implements Parsable {
     /** Description of the Role Assignment. */
     private String _description;
@@ -17,7 +18,7 @@ public class RoleAssignment extends Entity implements Parsable {
     /** Role definition this assignment is part of. */
     private RoleDefinition _roleDefinition;
     /**
-     * Instantiates a new RoleAssignment and sets the default values.
+     * Instantiates a new roleAssignment and sets the default values.
      * @return a void
      */
     public RoleAssignment() {
@@ -27,7 +28,7 @@ public class RoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RoleAssignment
+     * @return a roleAssignment
      */
     @javax.annotation.Nonnull
     public static RoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

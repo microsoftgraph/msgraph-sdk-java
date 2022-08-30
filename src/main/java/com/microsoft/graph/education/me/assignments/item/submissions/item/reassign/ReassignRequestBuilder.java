@@ -1,5 +1,7 @@
-package microsoft.graph.education.me.assignments.item.submissions.item.reassign;
+package com.microsoft.graph.education.me.assignments.item.submissions.item.reassign;
 
+import com.microsoft.graph.models.EducationSubmission;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
@@ -13,8 +15,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.EducationSubmission;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to call the reassign method. */
 public class ReassignRequestBuilder {
     /** Path parameters for the request */

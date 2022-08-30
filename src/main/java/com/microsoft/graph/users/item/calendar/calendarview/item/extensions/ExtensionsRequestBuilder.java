@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.calendar.calendarview.item.extensions;
+package com.microsoft.graph.users.item.calendar.calendarview.item.extensions;
 
+import com.microsoft.graph.models.Extension;
+import com.microsoft.graph.models.ExtensionCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.calendar.calendarview.item.extensions.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Extension;
-import microsoft.graph.models.ExtensionCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.calendar.calendarview.item.extensions.count.CountRequestBuilder;
 /** Provides operations to manage the extensions property of the microsoft.graph.event entity. */
 public class ExtensionsRequestBuilder {
     /** The Count property */

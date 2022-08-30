@@ -1,5 +1,7 @@
-package microsoft.graph.teams.item.channels.item.messages.item.replies.item.hostedcontents.item;
+package com.microsoft.graph.teams.item.channels.item.messages.item.replies.item.hostedcontents.item;
 
+import com.microsoft.graph.models.ChatMessageHostedContent;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,8 +16,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.ChatMessageHostedContent;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity. */
 public class ChatMessageHostedContentItemRequestBuilder {
     /** Path parameters for the request */

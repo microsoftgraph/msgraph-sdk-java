@@ -1,5 +1,8 @@
-package microsoft.graph.invitations.item;
+package com.microsoft.graph.invitations.item;
 
+import com.microsoft.graph.invitations.item.inviteduser.InvitedUserRequestBuilder;
+import com.microsoft.graph.models.Invitation;
+import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,9 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.invitations.item.inviteduser.InvitedUserRequestBuilder;
-import microsoft.graph.models.Invitation;
-import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the collection of invitation entities. */
 public class InvitationItemRequestBuilder {
     /** The invitedUser property */

@@ -1,5 +1,6 @@
-package microsoft.graph.groups.item.sites.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.item.onenotepatchcontent;
+package com.microsoft.graph.groups.item.sites.item.onenote.notebooks.item.sectiongroups.item.sections.item.pages.item.onenotepatchcontent;
 
+import com.microsoft.graph.models.OnenotePatchContentCommand;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +9,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.OnenotePatchContentCommand;
 /** Provides operations to call the onenotePatchContent method. */
 public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */

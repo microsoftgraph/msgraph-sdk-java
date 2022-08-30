@@ -1,5 +1,12 @@
-package microsoft.graph.branding;
+package com.microsoft.graph.branding;
 
+import com.microsoft.graph.branding.backgroundimage.BackgroundImageRequestBuilder;
+import com.microsoft.graph.branding.bannerlogo.BannerLogoRequestBuilder;
+import com.microsoft.graph.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
+import com.microsoft.graph.branding.localizations.LocalizationsRequestBuilder;
+import com.microsoft.graph.branding.squarelogo.SquareLogoRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.OrganizationalBranding;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,13 +21,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.branding.backgroundimage.BackgroundImageRequestBuilder;
-import microsoft.graph.branding.bannerlogo.BannerLogoRequestBuilder;
-import microsoft.graph.branding.localizations.item.OrganizationalBrandingLocalizationItemRequestBuilder;
-import microsoft.graph.branding.localizations.LocalizationsRequestBuilder;
-import microsoft.graph.branding.squarelogo.SquareLogoRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.OrganizationalBranding;
 /** Provides operations to manage the organizationalBranding singleton. */
 public class BrandingRequestBuilder {
     /** The backgroundImage property */
@@ -190,7 +190,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.branding.localizations.item collection
+     * Gets an item from the com.Microsoft.Graph.branding.localizations.item collection
      * @param id Unique identifier of the item
      * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */

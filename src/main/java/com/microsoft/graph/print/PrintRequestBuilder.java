@@ -1,5 +1,19 @@
-package microsoft.graph.print;
+package com.microsoft.graph.print;
 
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Print;
+import com.microsoft.graph.print.connectors.ConnectorsRequestBuilder;
+import com.microsoft.graph.print.connectors.item.PrintConnectorItemRequestBuilder;
+import com.microsoft.graph.print.operations.item.PrintOperationItemRequestBuilder;
+import com.microsoft.graph.print.operations.OperationsRequestBuilder;
+import com.microsoft.graph.print.printers.item.PrinterItemRequestBuilder;
+import com.microsoft.graph.print.printers.PrintersRequestBuilder;
+import com.microsoft.graph.print.services.item.PrintServiceItemRequestBuilder;
+import com.microsoft.graph.print.services.ServicesRequestBuilder;
+import com.microsoft.graph.print.shares.item.PrinterShareItemRequestBuilder;
+import com.microsoft.graph.print.shares.SharesRequestBuilder;
+import com.microsoft.graph.print.taskdefinitions.item.PrintTaskDefinitionItemRequestBuilder;
+import com.microsoft.graph.print.taskdefinitions.TaskDefinitionsRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,20 +28,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.Print;
-import microsoft.graph.print.connectors.ConnectorsRequestBuilder;
-import microsoft.graph.print.connectors.item.PrintConnectorItemRequestBuilder;
-import microsoft.graph.print.operations.item.PrintOperationItemRequestBuilder;
-import microsoft.graph.print.operations.OperationsRequestBuilder;
-import microsoft.graph.print.printers.item.PrinterItemRequestBuilder;
-import microsoft.graph.print.printers.PrintersRequestBuilder;
-import microsoft.graph.print.services.item.PrintServiceItemRequestBuilder;
-import microsoft.graph.print.services.ServicesRequestBuilder;
-import microsoft.graph.print.shares.item.PrinterShareItemRequestBuilder;
-import microsoft.graph.print.shares.SharesRequestBuilder;
-import microsoft.graph.print.taskdefinitions.item.PrintTaskDefinitionItemRequestBuilder;
-import microsoft.graph.print.taskdefinitions.TaskDefinitionsRequestBuilder;
 /** Provides operations to manage the print singleton. */
 public class PrintRequestBuilder {
     /** The connectors property */
@@ -67,7 +67,7 @@ public class PrintRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
-     * Gets an item from the Microsoft.Graph.print.connectors.item collection
+     * Gets an item from the com.Microsoft.Graph.print.connectors.item collection
      * @param id Unique identifier of the item
      * @return a PrintConnectorItemRequestBuilder
      */
@@ -219,7 +219,7 @@ public class PrintRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.operations.item collection
+     * Gets an item from the com.Microsoft.Graph.print.operations.item collection
      * @param id Unique identifier of the item
      * @return a PrintOperationItemRequestBuilder
      */
@@ -286,7 +286,7 @@ public class PrintRequestBuilder {
         }
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.printers.item collection
+     * Gets an item from the com.Microsoft.Graph.print.printers.item collection
      * @param id Unique identifier of the item
      * @return a PrinterItemRequestBuilder
      */
@@ -298,7 +298,7 @@ public class PrintRequestBuilder {
         return new PrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.services.item collection
+     * Gets an item from the com.Microsoft.Graph.print.services.item collection
      * @param id Unique identifier of the item
      * @return a PrintServiceItemRequestBuilder
      */
@@ -310,7 +310,7 @@ public class PrintRequestBuilder {
         return new PrintServiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.shares.item collection
+     * Gets an item from the com.Microsoft.Graph.print.shares.item collection
      * @param id Unique identifier of the item
      * @return a PrinterShareItemRequestBuilder
      */
@@ -322,7 +322,7 @@ public class PrintRequestBuilder {
         return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the Microsoft.Graph.print.taskDefinitions.item collection
+     * Gets an item from the com.Microsoft.Graph.print.taskDefinitions.item collection
      * @param id Unique identifier of the item
      * @return a PrintTaskDefinitionItemRequestBuilder
      */

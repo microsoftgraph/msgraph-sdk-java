@@ -1,5 +1,9 @@
-package microsoft.graph.appcatalogs.teamsapps.item.appdefinitions;
+package com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions;
 
+import com.microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.count.CountRequestBuilder;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.TeamsAppDefinition;
+import com.microsoft.graph.models.TeamsAppDefinitionCollectionResponse;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.appcatalogs.teamsapps.item.appdefinitions.count.CountRequestBuilder;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.TeamsAppDefinition;
-import microsoft.graph.models.TeamsAppDefinitionCollectionResponse;
 /** Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity. */
 public class AppDefinitionsRequestBuilder {
     /** The Count property */

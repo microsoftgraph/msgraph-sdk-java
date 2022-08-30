@@ -1,5 +1,9 @@
-package microsoft.graph.users.item.licensedetails;
+package com.microsoft.graph.users.item.licensedetails;
 
+import com.microsoft.graph.models.LicenseDetails;
+import com.microsoft.graph.models.LicenseDetailsCollectionResponse;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.users.item.licensedetails.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,10 +18,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.LicenseDetails;
-import microsoft.graph.models.LicenseDetailsCollectionResponse;
-import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.users.item.licensedetails.count.CountRequestBuilder;
 /** Provides operations to manage the licenseDetails property of the microsoft.graph.user entity. */
 public class LicenseDetailsRequestBuilder {
     /** The Count property */
