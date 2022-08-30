@@ -15,7 +15,7 @@ import okhttp3.OkHttpClient;
 
 import javax.annotation.Nonnull;
 
-public class GraphServiceClient extends microsoft.graph.BaseGraphServiceClient {
+public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClient {
 
     /**
      * Sets a few basic values for the GraphClientOptions to pass to the client.
