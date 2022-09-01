@@ -11,6 +11,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.34.0] - 2022-09-01
+
+### Added
+
+- AutoRestartNotificationDismissalMethod model. 
+- DetectedAppPlatformType model. 
+- WindowsUpdateForBusinessUpdateWeeks model. 
+- WindowsUpdateNotificationDisplayOption model. 
+- PresenceClearUserPreferredPresence models and related requests. 
+- PresenceSetUserPreferredPresence models and related requests.
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- References to newly added models/requests added to current models/requests.
+- Example: WindowsUpdateForBusinessConfiguration model references newly added WindowsUpdate models and requests.
+- Example: PresenceRequestBuilder request references newly added PresenceClearUserPreferredPresence & PresenceSetUserPreferredPresence models/requests. 
+
 ## [5.33.0] - 2022-08-23
 
 ### Added
