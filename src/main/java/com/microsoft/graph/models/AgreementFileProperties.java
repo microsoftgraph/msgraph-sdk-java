@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AgreementFile;
+import com.microsoft.graph.models.AgreementFileLocalization;
+import com.microsoft.graph.models.AgreementFileVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AllDevicesAssignmentTarget;
+import com.microsoft.graph.models.AllLicensedUsersAssignmentTarget;
+import com.microsoft.graph.models.ConfigurationManagerCollectionAssignmentTarget;
+import com.microsoft.graph.models.ExclusionGroupAssignmentTarget;
+import com.microsoft.graph.models.GroupAssignmentTarget;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

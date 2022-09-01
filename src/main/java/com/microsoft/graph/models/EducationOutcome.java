@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EducationFeedbackOutcome;
+import com.microsoft.graph.models.EducationPointsOutcome;
+import com.microsoft.graph.models.EducationRubricOutcome;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

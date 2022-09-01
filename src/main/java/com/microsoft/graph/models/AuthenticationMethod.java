@@ -1,5 +1,13 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EmailAuthenticationMethod;
+import com.microsoft.graph.models.Fido2AuthenticationMethod;
+import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.PasswordAuthenticationMethod;
+import com.microsoft.graph.models.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
+import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

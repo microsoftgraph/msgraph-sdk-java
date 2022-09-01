@@ -1,5 +1,12 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Notebook;
+import com.microsoft.graph.models.OnenoteEntityHierarchyModel;
+import com.microsoft.graph.models.OnenoteEntitySchemaObjectModel;
+import com.microsoft.graph.models.OnenotePage;
+import com.microsoft.graph.models.OnenoteResource;
+import com.microsoft.graph.models.OnenoteSection;
+import com.microsoft.graph.models.SectionGroup;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

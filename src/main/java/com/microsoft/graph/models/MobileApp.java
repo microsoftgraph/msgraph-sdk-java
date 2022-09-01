@@ -1,5 +1,23 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidLobApp;
+import com.microsoft.graph.models.AndroidStoreApp;
+import com.microsoft.graph.models.IosLobApp;
+import com.microsoft.graph.models.IosStoreApp;
+import com.microsoft.graph.models.IosVppApp;
+import com.microsoft.graph.models.MacOSOfficeSuiteApp;
+import com.microsoft.graph.models.ManagedAndroidLobApp;
+import com.microsoft.graph.models.ManagedAndroidStoreApp;
+import com.microsoft.graph.models.ManagedApp;
+import com.microsoft.graph.models.ManagedIOSLobApp;
+import com.microsoft.graph.models.ManagedIOSStoreApp;
+import com.microsoft.graph.models.ManagedMobileLobApp;
+import com.microsoft.graph.models.MicrosoftStoreForBusinessApp;
+import com.microsoft.graph.models.MobileLobApp;
+import com.microsoft.graph.models.WebApp;
+import com.microsoft.graph.models.Win32LobApp;
+import com.microsoft.graph.models.WindowsMobileMSI;
+import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +26,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** An abstract class containing the base properties for Intune mobile apps. */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;
@@ -41,7 +58,7 @@ public class MobileApp extends Entity implements Parsable {
     /** Indicates the publishing state of an app. */
     private MobileAppPublishingState _publishingState;
     /**
-     * Instantiates a new mobileApp and sets the default values.
+     * Instantiates a new MobileApp and sets the default values.
      * @return a void
      */
     public MobileApp() {
@@ -51,7 +68,7 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileApp
+     * @return a MobileApp
      */
     @javax.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

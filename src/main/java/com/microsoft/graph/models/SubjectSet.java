@@ -1,5 +1,15 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AttributeRuleMembers;
+import com.microsoft.graph.models.ConnectedOrganizationMembers;
+import com.microsoft.graph.models.ExternalSponsors;
+import com.microsoft.graph.models.GroupMembers;
+import com.microsoft.graph.models.InternalSponsors;
+import com.microsoft.graph.models.RequestorManager;
+import com.microsoft.graph.models.SingleServicePrincipal;
+import com.microsoft.graph.models.SingleUser;
+import com.microsoft.graph.models.TargetApplicationOwners;
+import com.microsoft.graph.models.TargetManager;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

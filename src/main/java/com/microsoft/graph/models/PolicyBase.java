@@ -1,5 +1,15 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
+import com.microsoft.graph.models.AuthorizationPolicy;
+import com.microsoft.graph.models.ClaimsMappingPolicy;
+import com.microsoft.graph.models.CrossTenantAccessPolicy;
+import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
+import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
+import com.microsoft.graph.models.PermissionGrantPolicy;
+import com.microsoft.graph.models.StsPolicy;
+import com.microsoft.graph.models.TokenIssuancePolicy;
+import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

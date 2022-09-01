@@ -1,5 +1,7 @@
 package com.microsoft.graph.models.callrecords;
 
+import com.microsoft.graph.models.callrecords.ParticipantEndpoint;
+import com.microsoft.graph.models.callrecords.ServiceEndpoint;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

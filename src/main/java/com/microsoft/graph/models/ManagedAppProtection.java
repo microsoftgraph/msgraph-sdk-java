@@ -1,5 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidManagedAppProtection;
+import com.microsoft.graph.models.DefaultManagedAppProtection;
+import com.microsoft.graph.models.IosManagedAppProtection;
+import com.microsoft.graph.models.TargetedManagedAppProtection;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

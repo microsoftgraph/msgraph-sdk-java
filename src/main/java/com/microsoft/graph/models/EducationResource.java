@@ -1,5 +1,13 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EducationExcelResource;
+import com.microsoft.graph.models.EducationExternalResource;
+import com.microsoft.graph.models.EducationFileResource;
+import com.microsoft.graph.models.EducationLinkResource;
+import com.microsoft.graph.models.EducationMediaResource;
+import com.microsoft.graph.models.EducationPowerPointResource;
+import com.microsoft.graph.models.EducationTeamsAppResource;
+import com.microsoft.graph.models.EducationWordResource;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

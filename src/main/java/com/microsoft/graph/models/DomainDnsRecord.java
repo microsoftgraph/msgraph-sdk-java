@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DomainDnsCnameRecord;
+import com.microsoft.graph.models.DomainDnsMxRecord;
+import com.microsoft.graph.models.DomainDnsSrvRecord;
+import com.microsoft.graph.models.DomainDnsTxtRecord;
+import com.microsoft.graph.models.DomainDnsUnavailableRecord;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
