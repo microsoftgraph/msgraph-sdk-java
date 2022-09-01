@@ -66,7 +66,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * Returns the type of the group. Possible values are global, system, and siteCollection.
+     * Returns the type of the group. Possible values are: global, system, and siteCollection.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

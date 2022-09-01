@@ -28,6 +28,24 @@ public class ClientUserAgent extends UserAgent implements IJsonBackedObject {
 
 
     /**
+     * The Azure ADApp Id.
+     * The unique identifier of the Azure AD application used by this endpoint.
+     */
+    @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
+    @Expose
+	@Nullable
+    public String azureADAppId;
+
+    /**
+     * The Communication Service Id.
+     * Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
+     */
+    @SerializedName(value = "communicationServiceId", alternate = {"CommunicationServiceId"})
+    @Expose
+	@Nullable
+    public String communicationServiceId;
+
+    /**
      * The Platform.
      * Identifies the platform used by this endpoint. Possible values are: unknown, windows, macOS, iOS, android, web, ipPhone, roomSystem, surfaceHub, holoLens, unknownFutureValue.
      */

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DetectedAppPlatformType;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
 
@@ -44,6 +45,24 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Platform.
+     * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     */
+    @SerializedName(value = "platform", alternate = {"Platform"})
+    @Expose
+	@Nullable
+    public DetectedAppPlatformType platform;
+
+    /**
+     * The Publisher.
+     * Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     */
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
+    @Expose
+	@Nullable
+    public String publisher;
 
     /**
      * The Size In Byte.

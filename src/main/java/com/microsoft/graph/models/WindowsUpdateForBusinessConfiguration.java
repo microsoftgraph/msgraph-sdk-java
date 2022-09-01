@@ -9,10 +9,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AutomaticUpdateMode;
+import com.microsoft.graph.models.AutoRestartNotificationDismissalMethod;
 import com.microsoft.graph.models.WindowsUpdateType;
 import com.microsoft.graph.models.WindowsDeliveryOptimizationMode;
 import com.microsoft.graph.models.WindowsUpdateInstallScheduleType;
 import com.microsoft.graph.models.PrereleaseFeatures;
+import com.microsoft.graph.models.WindowsUpdateNotificationDisplayOption;
+import com.microsoft.graph.models.WindowsUpdateForBusinessUpdateWeeks;
+import com.microsoft.graph.models.Enablement;
 import com.microsoft.graph.models.DeviceConfiguration;
 
 
@@ -31,6 +35,15 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
     /**
+     * The Allow Windows11Upgrade.
+     * When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "allowWindows11Upgrade", alternate = {"AllowWindows11Upgrade"})
+    @Expose
+	@Nullable
+    public Boolean allowWindows11Upgrade;
+
+    /**
      * The Automatic Update Mode.
      * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
      */
@@ -40,6 +53,15 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public AutomaticUpdateMode automaticUpdateMode;
 
     /**
+     * The Auto Restart Notification Dismissal.
+     * Specify the method by which the auto-restart required notification is dismissed. Possible values are: NotConfigured, Automatic, User. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "autoRestartNotificationDismissal", alternate = {"AutoRestartNotificationDismissal"})
+    @Expose
+	@Nullable
+    public AutoRestartNotificationDismissalMethod autoRestartNotificationDismissal;
+
+    /**
      * The Business Ready Updates Only.
      * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
      */
@@ -47,6 +69,33 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @Expose
 	@Nullable
     public WindowsUpdateType businessReadyUpdatesOnly;
+
+    /**
+     * The Deadline For Feature Updates In Days.
+     * Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "deadlineForFeatureUpdatesInDays", alternate = {"DeadlineForFeatureUpdatesInDays"})
+    @Expose
+	@Nullable
+    public Integer deadlineForFeatureUpdatesInDays;
+
+    /**
+     * The Deadline For Quality Updates In Days.
+     * Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "deadlineForQualityUpdatesInDays", alternate = {"DeadlineForQualityUpdatesInDays"})
+    @Expose
+	@Nullable
+    public Integer deadlineForQualityUpdatesInDays;
+
+    /**
+     * The Deadline Grace Period In Days.
+     * Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "deadlineGracePeriodInDays", alternate = {"DeadlineGracePeriodInDays"})
+    @Expose
+	@Nullable
+    public Integer deadlineGracePeriodInDays;
 
     /**
      * The Delivery Optimization Mode.
@@ -65,6 +114,33 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @Expose
 	@Nullable
     public Boolean driversExcluded;
+
+    /**
+     * The Engaged Restart Deadline In Days.
+     * Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "engagedRestartDeadlineInDays", alternate = {"EngagedRestartDeadlineInDays"})
+    @Expose
+	@Nullable
+    public Integer engagedRestartDeadlineInDays;
+
+    /**
+     * The Engaged Restart Snooze Schedule In Days.
+     * Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "engagedRestartSnoozeScheduleInDays", alternate = {"EngagedRestartSnoozeScheduleInDays"})
+    @Expose
+	@Nullable
+    public Integer engagedRestartSnoozeScheduleInDays;
+
+    /**
+     * The Engaged Restart Transition Schedule In Days.
+     * Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "engagedRestartTransitionScheduleInDays", alternate = {"EngagedRestartTransitionScheduleInDays"})
+    @Expose
+	@Nullable
+    public Integer engagedRestartTransitionScheduleInDays;
 
     /**
      * The Feature Updates Deferral Period In Days.
@@ -94,6 +170,42 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public java.time.OffsetDateTime featureUpdatesPauseExpiryDateTime;
 
     /**
+     * The Feature Updates Pause Start Date.
+     * The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
+     */
+    @SerializedName(value = "featureUpdatesPauseStartDate", alternate = {"FeatureUpdatesPauseStartDate"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.DateOnly featureUpdatesPauseStartDate;
+
+    /**
+     * The Feature Updates Rollback Start Date Time.
+     * The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
+     */
+    @SerializedName(value = "featureUpdatesRollbackStartDateTime", alternate = {"FeatureUpdatesRollbackStartDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime featureUpdatesRollbackStartDateTime;
+
+    /**
+     * The Feature Updates Rollback Window In Days.
+     * The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "featureUpdatesRollbackWindowInDays", alternate = {"FeatureUpdatesRollbackWindowInDays"})
+    @Expose
+	@Nullable
+    public Integer featureUpdatesRollbackWindowInDays;
+
+    /**
+     * The Feature Updates Will Be Rolled Back.
+     * When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported.
+     */
+    @SerializedName(value = "featureUpdatesWillBeRolledBack", alternate = {"FeatureUpdatesWillBeRolledBack"})
+    @Expose
+	@Nullable
+    public Boolean featureUpdatesWillBeRolledBack;
+
+    /**
      * The Installation Schedule.
      * Installation schedule
      */
@@ -110,6 +222,15 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @Expose
 	@Nullable
     public Boolean microsoftUpdateServiceAllowed;
+
+    /**
+     * The Postpone Reboot Until After Deadline.
+     * When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "postponeRebootUntilAfterDeadline", alternate = {"PostponeRebootUntilAfterDeadline"})
+    @Expose
+	@Nullable
+    public Boolean postponeRebootUntilAfterDeadline;
 
     /**
      * The Prerelease Features.
@@ -146,6 +267,96 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @Expose
 	@Nullable
     public java.time.OffsetDateTime qualityUpdatesPauseExpiryDateTime;
+
+    /**
+     * The Quality Updates Pause Start Date.
+     * The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
+     */
+    @SerializedName(value = "qualityUpdatesPauseStartDate", alternate = {"QualityUpdatesPauseStartDate"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.DateOnly qualityUpdatesPauseStartDate;
+
+    /**
+     * The Quality Updates Rollback Start Date Time.
+     * The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "qualityUpdatesRollbackStartDateTime", alternate = {"QualityUpdatesRollbackStartDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime qualityUpdatesRollbackStartDateTime;
+
+    /**
+     * The Quality Updates Will Be Rolled Back.
+     * When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "qualityUpdatesWillBeRolledBack", alternate = {"QualityUpdatesWillBeRolledBack"})
+    @Expose
+	@Nullable
+    public Boolean qualityUpdatesWillBeRolledBack;
+
+    /**
+     * The Schedule Imminent Restart Warning In Minutes.
+     * Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "scheduleImminentRestartWarningInMinutes", alternate = {"ScheduleImminentRestartWarningInMinutes"})
+    @Expose
+	@Nullable
+    public Integer scheduleImminentRestartWarningInMinutes;
+
+    /**
+     * The Schedule Restart Warning In Hours.
+     * Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "scheduleRestartWarningInHours", alternate = {"ScheduleRestartWarningInHours"})
+    @Expose
+	@Nullable
+    public Integer scheduleRestartWarningInHours;
+
+    /**
+     * The Skip Checks Before Restart.
+     * When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "skipChecksBeforeRestart", alternate = {"SkipChecksBeforeRestart"})
+    @Expose
+	@Nullable
+    public Boolean skipChecksBeforeRestart;
+
+    /**
+     * The Update Notification Level.
+     * Specifies what Windows Update notifications users see. Possible values are: NotConfigured, DefaultNotifications, RestartWarningsOnly, DisableAllNotifications. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "updateNotificationLevel", alternate = {"UpdateNotificationLevel"})
+    @Expose
+	@Nullable
+    public WindowsUpdateNotificationDisplayOption updateNotificationLevel;
+
+    /**
+     * The Update Weeks.
+     * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "updateWeeks", alternate = {"UpdateWeeks"})
+    @Expose
+	@Nullable
+    public EnumSet<WindowsUpdateForBusinessUpdateWeeks> updateWeeks;
+
+    /**
+     * The User Pause Access.
+     * Specifies whether to enable end user’s access to pause software updates. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "userPauseAccess", alternate = {"UserPauseAccess"})
+    @Expose
+	@Nullable
+    public Enablement userPauseAccess;
+
+    /**
+     * The User Windows Update Scan Access.
+     * Specifies whether to disable user’s access to scan Windows Update. Possible values are: NotConfigured, Enabled, Disabled. Returned by default. Query parameters are not supported.
+     */
+    @SerializedName(value = "userWindowsUpdateScanAccess", alternate = {"UserWindowsUpdateScanAccess"})
+    @Expose
+	@Nullable
+    public Enablement userWindowsUpdateScanAccess;
 
 
     /**
