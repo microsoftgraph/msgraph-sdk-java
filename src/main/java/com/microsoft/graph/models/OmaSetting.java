@@ -1,5 +1,12 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.OmaSettingBase64;
+import com.microsoft.graph.models.OmaSettingBoolean;
+import com.microsoft.graph.models.OmaSettingDateTime;
+import com.microsoft.graph.models.OmaSettingFloatingPoint;
+import com.microsoft.graph.models.OmaSettingInteger;
+import com.microsoft.graph.models.OmaSettingString;
+import com.microsoft.graph.models.OmaSettingStringXml;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

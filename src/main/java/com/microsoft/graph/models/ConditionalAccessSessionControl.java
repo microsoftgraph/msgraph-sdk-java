@@ -1,5 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ApplicationEnforcedRestrictionsSessionControl;
+import com.microsoft.graph.models.CloudAppSecuritySessionControl;
+import com.microsoft.graph.models.PersistentBrowserSessionControl;
+import com.microsoft.graph.models.SignInFrequencySessionControl;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

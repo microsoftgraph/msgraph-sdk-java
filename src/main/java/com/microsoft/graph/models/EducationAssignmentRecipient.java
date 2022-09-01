@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EducationAssignmentClassRecipient;
+import com.microsoft.graph.models.EducationAssignmentGroupRecipient;
+import com.microsoft.graph.models.EducationAssignmentIndividualRecipient;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

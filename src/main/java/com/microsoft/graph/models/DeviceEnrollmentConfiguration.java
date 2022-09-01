@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.DeviceEnrollmentLimitConfiguration;
+import com.microsoft.graph.models.DeviceEnrollmentPlatformRestrictionsConfiguration;
+import com.microsoft.graph.models.DeviceEnrollmentWindowsHelloForBusinessConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

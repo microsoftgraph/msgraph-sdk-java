@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyApprovalRule;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyAuthenticationContextRule;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyEnablementRule;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyExpirationRule;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyNotificationRule;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,15 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.CancelMediaProcessingOperation;
+import com.microsoft.graph.models.InviteParticipantsOperation;
+import com.microsoft.graph.models.MuteParticipantOperation;
+import com.microsoft.graph.models.PlayPromptOperation;
+import com.microsoft.graph.models.RecordOperation;
+import com.microsoft.graph.models.StartHoldMusicOperation;
+import com.microsoft.graph.models.StopHoldMusicOperation;
+import com.microsoft.graph.models.SubscribeToToneOperation;
+import com.microsoft.graph.models.UnmuteParticipantOperation;
+import com.microsoft.graph.models.UpdateRecordingStatusOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

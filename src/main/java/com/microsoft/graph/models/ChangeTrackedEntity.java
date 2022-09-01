@@ -1,5 +1,17 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.OfferShiftRequest;
+import com.microsoft.graph.models.OpenShift;
+import com.microsoft.graph.models.OpenShiftChangeRequest;
+import com.microsoft.graph.models.ScheduleChangeRequest;
+import com.microsoft.graph.models.SchedulingGroup;
+import com.microsoft.graph.models.Shift;
+import com.microsoft.graph.models.ShiftPreferences;
+import com.microsoft.graph.models.SwapShiftsChangeRequest;
+import com.microsoft.graph.models.TimeOff;
+import com.microsoft.graph.models.TimeOffReason;
+import com.microsoft.graph.models.TimeOffRequest;
+import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

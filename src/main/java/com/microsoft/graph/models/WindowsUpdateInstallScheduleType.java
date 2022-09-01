@@ -1,5 +1,7 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.WindowsUpdateActiveHoursInstall;
+import com.microsoft.graph.models.WindowsUpdateScheduledInstall;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

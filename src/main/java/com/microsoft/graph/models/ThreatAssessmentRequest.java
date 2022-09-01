@@ -1,5 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EmailFileAssessmentRequest;
+import com.microsoft.graph.models.FileAssessmentRequest;
+import com.microsoft.graph.models.MailAssessmentRequest;
+import com.microsoft.graph.models.UrlAssessmentRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

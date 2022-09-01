@@ -1,5 +1,16 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.Initiator;
+import com.microsoft.graph.models.ProvisionedIdentity;
+import com.microsoft.graph.models.ProvisioningServicePrincipal;
+import com.microsoft.graph.models.ProvisioningSystem;
+import com.microsoft.graph.models.ServicePrincipalIdentity;
+import com.microsoft.graph.models.SharePointIdentity;
+import com.microsoft.graph.models.TeamworkApplicationIdentity;
+import com.microsoft.graph.models.TeamworkConversationIdentity;
+import com.microsoft.graph.models.TeamworkTagIdentity;
+import com.microsoft.graph.models.TeamworkUserIdentity;
+import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

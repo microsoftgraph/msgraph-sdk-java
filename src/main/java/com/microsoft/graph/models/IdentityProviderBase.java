@@ -1,5 +1,11 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AppleManagedIdentityProvider;
+import com.microsoft.graph.models.BuiltInIdentityProvider;
+import com.microsoft.graph.models.InternalDomainFederation;
+import com.microsoft.graph.models.SamlOrWsFedExternalDomainFederation;
+import com.microsoft.graph.models.SamlOrWsFedProvider;
+import com.microsoft.graph.models.SocialIdentityProvider;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

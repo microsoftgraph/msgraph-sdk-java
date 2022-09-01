@@ -1,5 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IPv4CidrRange;
+import com.microsoft.graph.models.IPv4Range;
+import com.microsoft.graph.models.IPv6CidrRange;
+import com.microsoft.graph.models.IPv6Range;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

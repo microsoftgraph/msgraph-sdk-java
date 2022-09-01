@@ -1,5 +1,7 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IncomingCallOptions;
+import com.microsoft.graph.models.OutgoingCallOptions;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

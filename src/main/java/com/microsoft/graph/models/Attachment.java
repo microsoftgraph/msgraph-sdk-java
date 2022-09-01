@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.FileAttachment;
+import com.microsoft.graph.models.ItemAttachment;
+import com.microsoft.graph.models.ReferenceAttachment;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

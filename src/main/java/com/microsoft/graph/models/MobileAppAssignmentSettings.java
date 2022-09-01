@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.IosLobAppAssignmentSettings;
+import com.microsoft.graph.models.IosStoreAppAssignmentSettings;
+import com.microsoft.graph.models.IosVppAppAssignmentSettings;
+import com.microsoft.graph.models.MicrosoftStoreForBusinessAppAssignmentSettings;
+import com.microsoft.graph.models.Win32LobAppAssignmentSettings;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;

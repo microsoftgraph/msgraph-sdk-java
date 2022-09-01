@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.ManagedAndroidLobApp;
+import com.microsoft.graph.models.ManagedAndroidStoreApp;
+import com.microsoft.graph.models.ManagedIOSLobApp;
+import com.microsoft.graph.models.ManagedIOSStoreApp;
+import com.microsoft.graph.models.ManagedMobileLobApp;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

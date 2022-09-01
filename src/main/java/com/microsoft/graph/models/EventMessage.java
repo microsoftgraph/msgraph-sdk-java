@@ -1,5 +1,7 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EventMessageRequest;
+import com.microsoft.graph.models.EventMessageResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

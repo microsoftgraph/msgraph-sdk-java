@@ -1,5 +1,7 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleInstance;
+import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleInstance;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

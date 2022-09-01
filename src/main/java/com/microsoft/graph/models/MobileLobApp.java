@@ -1,5 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AndroidLobApp;
+import com.microsoft.graph.models.IosLobApp;
+import com.microsoft.graph.models.Win32LobApp;
+import com.microsoft.graph.models.WindowsMobileMSI;
+import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

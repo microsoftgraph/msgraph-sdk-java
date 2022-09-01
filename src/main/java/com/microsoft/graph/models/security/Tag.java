@@ -2,6 +2,7 @@ package com.microsoft.graph.models.security;
 
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.security.EdiscoveryReviewTag;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

@@ -1,5 +1,8 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.TeleconferenceDeviceAudioQuality;
+import com.microsoft.graph.models.TeleconferenceDeviceScreenSharingQuality;
+import com.microsoft.graph.models.TeleconferenceDeviceVideoQuality;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
