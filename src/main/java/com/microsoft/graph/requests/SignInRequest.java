@@ -29,21 +29,6 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param responseClass  the class of the response
-     */
-    public SignInRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient<?> client,
-            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            @Nonnull final Class<? extends SignIn> responseClass) {
-        super(requestUrl, client, requestOptions, responseClass);
-    }
-
-    /**
-     * The request for the SignIn
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
      */
     public SignInRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SignIn.class);
