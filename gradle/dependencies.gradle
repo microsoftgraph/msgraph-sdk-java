@@ -8,13 +8,5 @@ dependencies {
     compileOnly 'com.github.spotbugs:spotbugs-annotations:4.7.0'
     
     // Core Http library 
-    implementation 'com.microsoft.graph:microsoft-graph-core:3.0.0-SNAPSHOT'
-    
-    implementation 'com.microsoft.kiota:microsoft-kiota-abstractions:0.0.1-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-abstractions:0.0.1-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-authentication-azure:0.0.1-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-http-okHttp:0.0.1-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-json:0.0.1-SNAPSHOT'
-    implementation 'com.microsoft.kiota:microsoft-kiota-serialization-text:0.0.1-SNAPSHOT'
-
+    api 'com.microsoft.graph:microsoft-graph-core:3.0.0-SNAPSHOT'
 }
