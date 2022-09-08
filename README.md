@@ -19,11 +19,11 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:5.21.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.0.0-SNAPSHOT'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
-    implementation 'com.azure:azure-identity:1.2.5'
+    implementation 'com.azure:azure-identity:1.4.0'
 }
 ```
 
@@ -36,13 +36,13 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>5.20.0</version>
+  <version>6.0.0-SNAPSHOT</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
-  <version>1.2.5</version>
+  <version>1.4.0</version>
 </dependency>
 ```
 
@@ -58,7 +58,7 @@ Register your application by following the steps at [Register your app with the 
 
 ### 2.2 Create an IAuthenticationProvider object
 
-An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `IAuthenticationProvider`, which can authenticate requests to Microsoft Graph.
+An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `AuthenticationProvider`, which can authenticate requests to Microsoft Graph.
 
 For an example of how to get an authentication provider, see [choose a Microsoft Graph authentication provider](https://docs.microsoft.com/graph/sdks/choose-authentication-providers?tabs=Java).
 
@@ -67,11 +67,8 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-GraphServiceClient<Request> graphClient = 
-  GraphServiceClient
-    .builder()
-    .authenticationProvider(authenticationProvider)
-    .buildClient();
+GraphServiceClient graphClient = 
+  new GraphServiceClient(authenticationProvider);
 ```
 
 ## 3. Make requests against the service
