@@ -75,32 +75,18 @@ GraphServiceClient graphClient =
 
 After you have a GraphServiceClient that is authenticated, you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
 
-### 3.1 Get the user's drive
+### 3.1 Get the user info
 
-To retrieve the user's drive:
-
-```java
-final Drive result = graphClient
-  .me()
-  .drive()
-  .buildRequest()
-  .get();
-System.out.println("Found Drive " + result.id);
-```
-
-Or with the asynchronous API.
+To retrieve the user's information:
 
 ```java
-graphClient
-  .me()
-  .drive()
-  .buildRequest()
-  .futureGet()
-  .thenApply(result -> {
-    System.out.println("Found Drive " + result.id);
-  });
+        graphClient.me().get().thenAccept(me -> {
+            System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
+        }).exceptionally(err -> {
+            System.out.printf("Error, %s%n", err.getMessage());
+            return null;
+        }).join();
 ```
-
 ## 4. Documentation
 
 For more detailed documentation, see:
@@ -121,7 +107,7 @@ The Microsoft Graph SDK is open for contribution. To contribute to this project,
 
 ## 7. Supported Java versions
 
-The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 26](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 17+ and [Android API revision 32](http://source.android.com/source/build-numbers.html) and greater.
 
 
 ## 8. License
