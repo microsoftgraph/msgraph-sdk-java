@@ -97,26 +97,6 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
         return new com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the RestrictedSignIn collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
-        return new com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the RestrictedSignIn item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.RestrictedSignInRequestBuilder restrictedSignIns(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the SignIn collection
      *
      * @return the collection request builder

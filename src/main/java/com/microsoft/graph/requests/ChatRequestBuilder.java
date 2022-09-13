@@ -123,6 +123,26 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
         return new com.microsoft.graph.requests.ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the PinnedChatMessageInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder pinnedMessages() {
+        return new com.microsoft.graph.requests.PinnedChatMessageInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PinnedChatMessageInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder pinnedMessages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PinnedChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("pinnedMessages") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the TeamsTab collection
      *
      * @return the collection request builder

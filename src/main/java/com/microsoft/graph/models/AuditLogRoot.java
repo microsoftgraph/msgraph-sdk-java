@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryAuditCollectionPage;
 import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionPage;
-import com.microsoft.graph.requests.RestrictedSignInCollectionPage;
 import com.microsoft.graph.requests.SignInCollectionPage;
 
 
@@ -49,15 +48,6 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionPage provisioning;
 
     /**
-     * The Restricted Sign Ins.
-     * 
-     */
-    @SerializedName(value = "restrictedSignIns", alternate = {"RestrictedSignIns"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.RestrictedSignInCollectionPage restrictedSignIns;
-
-    /**
      * The Sign Ins.
      * 
      */
@@ -82,10 +72,6 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("provisioning")) {
             provisioning = serializer.deserializeObject(json.get("provisioning"), com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionPage.class);
-        }
-
-        if (json.has("restrictedSignIns")) {
-            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns"), com.microsoft.graph.requests.RestrictedSignInCollectionPage.class);
         }
 
         if (json.has("signIns")) {

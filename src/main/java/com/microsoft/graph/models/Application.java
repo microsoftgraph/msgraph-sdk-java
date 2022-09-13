@@ -109,6 +109,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Default Redirect Uri.
+     * 
+     */
+    @SerializedName(value = "defaultRedirectUri", alternate = {"DefaultRedirectUri"})
+    @Expose
+	@Nullable
+    public String defaultRedirectUri;
+
+    /**
      * The Description.
      * Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      */
@@ -353,7 +362,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
