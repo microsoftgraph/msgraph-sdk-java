@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity. */
@@ -317,7 +318,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RemoteAssistancePartnerItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -343,7 +344,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public RemoteAssistancePartnerItemRequestBuilderGetQueryParameters queryParameters = new RemoteAssistancePartnerItemRequestBuilderGetQueryParameters();
@@ -361,7 +362,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

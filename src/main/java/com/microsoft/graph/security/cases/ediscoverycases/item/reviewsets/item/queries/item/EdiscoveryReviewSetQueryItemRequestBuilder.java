@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
@@ -311,7 +312,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -337,7 +338,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters queryParameters = new EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters();
@@ -355,7 +356,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

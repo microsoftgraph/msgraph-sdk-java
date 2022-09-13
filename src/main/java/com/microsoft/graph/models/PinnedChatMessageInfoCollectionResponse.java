@@ -8,29 +8,29 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class RestrictedSignInCollectionResponse implements AdditionalDataHolder, Parsable {
+public class PinnedChatMessageInfoCollectionResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The OdataNextLink property */
     private String _odataNextLink;
     /** The value property */
-    private java.util.List<RestrictedSignIn> _value;
+    private java.util.List<PinnedChatMessageInfo> _value;
     /**
-     * Instantiates a new RestrictedSignInCollectionResponse and sets the default values.
+     * Instantiates a new PinnedChatMessageInfoCollectionResponse and sets the default values.
      * @return a void
      */
-    public RestrictedSignInCollectionResponse() {
+    public PinnedChatMessageInfoCollectionResponse() {
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RestrictedSignInCollectionResponse
+     * @return a PinnedChatMessageInfoCollectionResponse
      */
     @javax.annotation.Nonnull
-    public static RestrictedSignInCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    public static PinnedChatMessageInfoCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new RestrictedSignInCollectionResponse();
+        return new PinnedChatMessageInfoCollectionResponse();
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,10 +46,10 @@ public class RestrictedSignInCollectionResponse implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RestrictedSignInCollectionResponse currentObject = this;
+        final PinnedChatMessageInfoCollectionResponse currentObject = this;
         return new HashMap<>(2) {{
             this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(RestrictedSignIn::createFromDiscriminatorValue)); });
+            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(PinnedChatMessageInfo::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -62,10 +62,10 @@ public class RestrictedSignInCollectionResponse implements AdditionalDataHolder,
     }
     /**
      * Gets the value property value. The value property
-     * @return a restrictedSignIn
+     * @return a pinnedChatMessageInfo
      */
     @javax.annotation.Nullable
-    public java.util.List<RestrictedSignIn> getValue() {
+    public java.util.List<PinnedChatMessageInfo> getValue() {
         return this._value;
     }
     /**
@@ -100,7 +100,7 @@ public class RestrictedSignInCollectionResponse implements AdditionalDataHolder,
      * @param value Value to set for the value property.
      * @return a void
      */
-    public void setValue(@javax.annotation.Nullable final java.util.List<RestrictedSignIn> value) {
+    public void setValue(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
         this._value = value;
     }
 }

@@ -3,7 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum ChildSelectability implements ValuedEnum {
     One("One"),
     Many("Many"),

@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum DetectedAppPlatformType implements ValuedEnum {
     /** Default. Set to unknown when platform cannot be determined. */
     Unknown("unknown"),

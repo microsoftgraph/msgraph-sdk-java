@@ -49,7 +49,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private DefenderCloudBlockLevelType _defenderCloudBlockLevel;
     /** Number of days before deleting quarantined malware. Valid values 0 to 90 */
     private Integer _defenderDaysBeforeDeletingQuarantinedMalware;
-    /** Gets or sets Defender’s actions to take on detected Malware per threat level. */
+    /** Gets or sets Defenders actions to take on detected Malware per threat level. */
     private DefenderDetectedMalwareActions _defenderDetectedMalwareActions;
     /** File extensions to exclude from scans and real time protection. */
     private java.util.List<String> _defenderFileExtensionsToExclude;
@@ -195,7 +195,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _microsoftAccountBlocked;
     /** Indicates whether or not to Block Microsoft account settings sync. */
     private Boolean _microsoftAccountBlockSettingsSync;
-    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM. */
+    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM. */
     private Boolean _networkProxyApplySettingsDeviceWide;
     /** Address to the proxy auto-config (PAC) script you want to use. */
     private String _networkProxyAutomaticConfigurationUrl;
@@ -255,7 +255,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _searchDisableIndexingRemovableDrive;
     /** Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops. */
     private Boolean _searchEnableAutomaticIndexSizeManangement;
-    /** Indicates whether or not to block remote queries of this computer’s index. */
+    /** Indicates whether or not to block remote queries of this computers index. */
     private Boolean _searchEnableRemoteQueries;
     /** Indicates whether or not to block access to Accounts in Settings app. */
     private Boolean _settingsBlockAccountsPage;
@@ -389,7 +389,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _windowsSpotlightBlocked;
     /** Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed */
     private Boolean _windowsSpotlightBlockOnActionCenter;
-    /** Block personalized content in Windows spotlight based on user’s device usage. */
+    /** Block personalized content in Windows spotlight based on users device usage. */
     private Boolean _windowsSpotlightBlockTailoredExperiences;
     /** Block third party content delivered via Windows Spotlight */
     private Boolean _windowsSpotlightBlockThirdPartyNotifications;
@@ -590,7 +590,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderDaysBeforeDeletingQuarantinedMalware;
     }
     /**
-     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @return a defenderDetectedMalwareActions
      */
     @javax.annotation.Nullable
@@ -1385,7 +1385,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._microsoftAccountBlockSettingsSync;
     }
     /**
-     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1625,7 +1625,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._searchEnableAutomaticIndexSizeManangement;
     }
     /**
-     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2161,7 +2161,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._windowsSpotlightBlockOnActionCenter;
     }
     /**
-     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2619,7 +2619,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
     /**
-     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @param value Value to set for the defenderDetectedMalwareActions property.
      * @return a void
      */
@@ -3203,7 +3203,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._microsoftAccountBlockSettingsSync = value;
     }
     /**
-     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @param value Value to set for the networkProxyApplySettingsDeviceWide property.
      * @return a void
      */
@@ -3443,7 +3443,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._searchEnableAutomaticIndexSizeManangement = value;
     }
     /**
-     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @param value Value to set for the searchEnableRemoteQueries property.
      * @return a void
      */
@@ -3979,7 +3979,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._windowsSpotlightBlockOnActionCenter = value;
     }
     /**
-     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @param value Value to set for the windowsSpotlightBlockTailoredExperiences property.
      * @return a void
      */

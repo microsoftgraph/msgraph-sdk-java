@@ -406,7 +406,7 @@ public class ListRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new listRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -432,7 +432,7 @@ public class ListRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ListRequestBuilderGetQueryParameters queryParameters = new ListRequestBuilderGetQueryParameters();
@@ -450,7 +450,7 @@ public class ListRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new listRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

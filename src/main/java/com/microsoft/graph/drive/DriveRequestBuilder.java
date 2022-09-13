@@ -1,6 +1,7 @@
 package com.microsoft.graph.drive;
 
 import com.microsoft.graph.drive.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.drive.bundles.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drive.following.FollowingRequestBuilder;
 import com.microsoft.graph.drive.items.ItemsRequestBuilder;
 import com.microsoft.graph.drive.list.ListRequestBuilder;
@@ -23,6 +24,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the drive singleton. */
@@ -350,7 +352,7 @@ public class DriveRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DriveRequestBuilderGetQueryParameters queryParameters = new DriveRequestBuilderGetQueryParameters();
@@ -368,7 +370,7 @@ public class DriveRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new driveRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

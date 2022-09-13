@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class SignIn extends Entity implements Parsable {
     /** App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
     private String _appDisplayName;
@@ -73,13 +72,6 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
-            }
-        }
         return new SignIn();
     }
     /**

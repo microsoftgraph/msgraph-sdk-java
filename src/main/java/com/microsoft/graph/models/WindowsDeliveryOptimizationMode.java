@@ -3,13 +3,13 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),
     /** HTTP only, no peering */
     HttpOnly("httpOnly"),
-    /** OS default – Http blended with peering behind the same network address translator */
+    /** OS default  Http blended with peering behind the same network address translator */
     HttpWithPeeringNat("httpWithPeeringNat"),
     /** HTTP blended with peering across a private group */
     HttpWithPeeringPrivateGroup("httpWithPeeringPrivateGroup"),

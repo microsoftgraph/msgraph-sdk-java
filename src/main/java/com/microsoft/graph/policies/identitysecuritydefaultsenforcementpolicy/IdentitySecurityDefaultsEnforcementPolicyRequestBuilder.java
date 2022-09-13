@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identitySecurityDefaultsEnforcementPolicy property of the microsoft.graph.policyRoot entity. */
@@ -305,7 +306,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new identitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -331,7 +332,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetQueryParameters queryParameters = new IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetQueryParameters();
@@ -349,7 +350,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new identitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class UserActivity extends Entity implements Parsable {
     /** Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists. */
     private String _activationUrl;
@@ -16,7 +16,7 @@ public class UserActivity extends Entity implements Parsable {
     private String _activitySourceHost;
     /** Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter. */
     private String _appActivityId;
-    /** Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device. */
+    /** Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device. */
     private String _appDisplayName;
     /** Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax. */
     private Json _contentInfo;
@@ -81,7 +81,7 @@ public class UserActivity extends Entity implements Parsable {
         return this._appActivityId;
     }
     /**
-     * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
+     * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -240,7 +240,7 @@ public class UserActivity extends Entity implements Parsable {
         this._appActivityId = value;
     }
     /**
-     * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
+     * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */

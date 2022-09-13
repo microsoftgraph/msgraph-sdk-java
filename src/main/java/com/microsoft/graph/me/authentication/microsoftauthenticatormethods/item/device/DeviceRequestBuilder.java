@@ -6,6 +6,7 @@ import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
@@ -25,6 +26,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the device property of the microsoft.graph.microsoftAuthenticatorAuthenticationMethod entity. */
@@ -426,7 +428,7 @@ public class DeviceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -452,7 +454,7 @@ public class DeviceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceRequestBuilderGetQueryParameters queryParameters = new DeviceRequestBuilderGetQueryParameters();
@@ -470,7 +472,7 @@ public class DeviceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

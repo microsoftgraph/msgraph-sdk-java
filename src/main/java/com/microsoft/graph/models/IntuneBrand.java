@@ -28,11 +28,11 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private MimeContent _lightBackgroundLogo;
     /** The OdataType property */
     private String _odataType;
-    /** Display name of the company/organization’s IT helpdesk site. */
+    /** Display name of the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteName;
-    /** URL to the company/organization’s IT helpdesk site. */
+    /** URL to the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteUrl;
-    /** URL to the company/organization’s privacy policy. */
+    /** URL to the company/organizations privacy policy. */
     private String _privacyUrl;
     /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
     private Boolean _showDisplayNameNextToLogo;
@@ -158,7 +158,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteName;
     }
     /**
-     * Gets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteUrl;
     }
     /**
-     * Gets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -310,7 +310,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
@@ -318,7 +318,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._onlineSupportSiteName = value;
     }
     /**
-     * Sets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
@@ -326,7 +326,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         this._onlineSupportSiteUrl = value;
     }
     /**
-     * Sets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */

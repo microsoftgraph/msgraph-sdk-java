@@ -15,7 +15,7 @@ public class Store extends Entity implements Parsable {
     private java.util.List<Group> _groups;
     /** List of languages for the term store. */
     private java.util.List<String> _languageTags;
-    /** Collection of all sets available in the term store. */
+    /** Collection of all sets available in the term store. This relationship can only be used to load a specific term set. */
     private java.util.List<Set> _sets;
     /**
      * Instantiates a new store and sets the default values.
@@ -74,7 +74,7 @@ public class Store extends Entity implements Parsable {
         return this._languageTags;
     }
     /**
-     * Gets the sets property value. Collection of all sets available in the term store.
+     * Gets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @return a set
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class Store extends Entity implements Parsable {
         this._languageTags = value;
     }
     /**
-     * Sets the sets property value. Collection of all sets available in the term store.
+     * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param value Value to set for the sets property.
      * @return a void
      */

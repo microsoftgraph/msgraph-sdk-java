@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
     /** Retrieve the filter applied to the column. Read-only. */
     private WorkbookFilter _filter;

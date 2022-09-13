@@ -13,6 +13,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the addTokenSigningCertificate method. */
@@ -56,7 +57,7 @@ public class AddTokenSigningCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SelfSignedCertificatePostRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -66,7 +67,7 @@ public class AddTokenSigningCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final SelfSignedCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -88,7 +89,7 @@ public class AddTokenSigningCertificateRequestBuilder {
      * @param body 
      * @return a CompletableFuture of SelfSignedCertificate
      */
-    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final SelfSignedCertificatePostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
@@ -106,7 +107,7 @@ public class AddTokenSigningCertificateRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SelfSignedCertificate
      */
-    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final SelfSignedCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
@@ -125,7 +126,7 @@ public class AddTokenSigningCertificateRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SelfSignedCertificate
      */
-    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final SelfSignedCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<SelfSignedCertificate> post(@javax.annotation.Nonnull final AddTokenSigningCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddTokenSigningCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
@@ -145,7 +146,7 @@ public class AddTokenSigningCertificateRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new addTokenSigningCertificateRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

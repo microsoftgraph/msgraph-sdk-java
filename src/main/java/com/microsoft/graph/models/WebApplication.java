@@ -21,6 +21,8 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. */
     private java.util.List<String> _redirectUris;
+    /** The redirectUriSettings property */
+    private java.util.List<RedirectUriSettings> _redirectUriSettings;
     /**
      * Instantiates a new webApplication and sets the default values.
      * @return a void
@@ -54,12 +56,13 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
             this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
             this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -103,6 +106,14 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         return this._redirectUris;
     }
     /**
+     * Gets the redirectUriSettings property value. The redirectUriSettings property
+     * @return a redirectUriSettings
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RedirectUriSettings> getRedirectUriSettings() {
+        return this._redirectUriSettings;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -114,6 +125,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("redirectUris", this.getRedirectUris());
+        writer.writeCollectionOfObjectValues("redirectUriSettings", this.getRedirectUriSettings());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -163,5 +175,13 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     public void setRedirectUris(@javax.annotation.Nullable final java.util.List<String> value) {
         this._redirectUris = value;
+    }
+    /**
+     * Sets the redirectUriSettings property value. The redirectUriSettings property
+     * @param value Value to set for the redirectUriSettings property.
+     * @return a void
+     */
+    public void setRedirectUriSettings(@javax.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
+        this._redirectUriSettings = value;
     }
 }

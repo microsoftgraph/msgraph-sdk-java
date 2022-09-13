@@ -17,6 +17,8 @@ import com.microsoft.graph.models.MembersAddedEventMessageDetail;
 import com.microsoft.graph.models.MembersDeletedEventMessageDetail;
 import com.microsoft.graph.models.MembersJoinedEventMessageDetail;
 import com.microsoft.graph.models.MembersLeftEventMessageDetail;
+import com.microsoft.graph.models.MessagePinnedEventMessageDetail;
+import com.microsoft.graph.models.MessageUnpinnedEventMessageDetail;
 import com.microsoft.graph.models.TabUpdatedEventMessageDetail;
 import com.microsoft.graph.models.TeamArchivedEventMessageDetail;
 import com.microsoft.graph.models.TeamCreatedEventMessageDetail;
@@ -78,6 +80,8 @@ public class EventMessageDetail implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.membersDeletedEventMessageDetail": return new MembersDeletedEventMessageDetail();
                 case "#microsoft.graph.membersJoinedEventMessageDetail": return new MembersJoinedEventMessageDetail();
                 case "#microsoft.graph.membersLeftEventMessageDetail": return new MembersLeftEventMessageDetail();
+                case "#microsoft.graph.messagePinnedEventMessageDetail": return new MessagePinnedEventMessageDetail();
+                case "#microsoft.graph.messageUnpinnedEventMessageDetail": return new MessageUnpinnedEventMessageDetail();
                 case "#microsoft.graph.tabUpdatedEventMessageDetail": return new TabUpdatedEventMessageDetail();
                 case "#microsoft.graph.teamArchivedEventMessageDetail": return new TeamArchivedEventMessageDetail();
                 case "#microsoft.graph.teamCreatedEventMessageDetail": return new TeamCreatedEventMessageDetail();

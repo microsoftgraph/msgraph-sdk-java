@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the getTeamsUserActivityUserDetail method. */
@@ -139,7 +140,7 @@ public class GetTeamsUserActivityUserDetailWithDateRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new getTeamsUserActivityUserDetailWithDateRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
