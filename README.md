@@ -68,7 +68,8 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-final AzureIdentityAuthenticationProvider authenticationProvider = new AzureIdentityAuthenticationProvider(credential, null, scopes);
+final AzureIdentityAuthenticationProvider authenticationProvider = 
+        new AzureIdentityAuthenticationProvider(credential, null, scopes);
 GraphServiceClient graphClient = new GraphServiceClient(authenticationProvider)
 
 //Alternatively
@@ -84,12 +85,12 @@ After you have a GraphServiceClient that is authenticated, you can begin making 
 To retrieve the user's information:
 
 ```java
-        graphClient.me().get().thenAccept(me -> {
-            System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
-        }).exceptionally(err -> {
-            System.out.printf("Error, %s%n", err.getMessage());
-            return null;
-        }).join();
+graphClient.me().get().thenAccept(me -> {
+    System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
+}).exceptionally(err -> {
+    System.out.printf("Error, %s%n", err.getMessage());
+    return null;
+}).join();
 ```
 ## 4. Documentation
 
