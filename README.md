@@ -15,15 +15,16 @@ Add the repository and a compile dependency for `microsoft-graph` to your projec
 ```groovy
 repositories {
     mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:5.21.0'
+    implementation 'com.microsoft.graph:microsoft-graph:6.0.0-SNAPSHOT'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
-    implementation 'com.azure:azure-identity:1.2.5'
+    implementation 'com.azure:azure-identity:1.4.0'
 }
 ```
 
@@ -36,13 +37,13 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>5.20.0</version>
+  <version>6.0.0-SNAPSHOT</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
-  <version>1.2.5</version>
+  <version>1.4.0</version>
 </dependency>
 ```
 
@@ -58,7 +59,7 @@ Register your application by following the steps at [Register your app with the 
 
 ### 2.2 Create an IAuthenticationProvider object
 
-An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `IAuthenticationProvider`, which can authenticate requests to Microsoft Graph.
+An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `AuthenticationProvider`, which can authenticate requests to Microsoft Graph.
 
 For an example of how to get an authentication provider, see [choose a Microsoft Graph authentication provider](https://docs.microsoft.com/graph/sdks/choose-authentication-providers?tabs=Java).
 
@@ -67,43 +68,30 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-GraphServiceClient<Request> graphClient = 
-  GraphServiceClient
-    .builder()
-    .authenticationProvider(authenticationProvider)
-    .buildClient();
+final AzureIdentityAuthenticationProvider authenticationProvider = 
+        new AzureIdentityAuthenticationProvider(credential, null, scopes);
+GraphServiceClient graphClient = new GraphServiceClient(authenticationProvider)
+
+//Alternatively
+GraphServiceClient graphClient = new GraphServiceClient(credential, scopes);
 ```
 
 ## 3. Make requests against the service
 
 After you have a GraphServiceClient that is authenticated, you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
 
-### 3.1 Get the user's drive
+### 3.1 Get the user info
 
-To retrieve the user's drive:
-
-```java
-final Drive result = graphClient
-  .me()
-  .drive()
-  .buildRequest()
-  .get();
-System.out.println("Found Drive " + result.id);
-```
-
-Or with the asynchronous API.
+To retrieve the user's information:
 
 ```java
-graphClient
-  .me()
-  .drive()
-  .buildRequest()
-  .futureGet()
-  .thenApply(result -> {
-    System.out.println("Found Drive " + result.id);
-  });
+graphClient.me().get().thenAccept(me -> {
+    System.out.printf("Hello %s, your ID is %s%n", me.getDisplayName(), me.getId());
+}).exceptionally(err -> {
+    System.out.printf("Error, %s%n", err.getMessage());
+    return null;
+}).join();
 ```
-
 ## 4. Documentation
 
 For more detailed documentation, see:
@@ -134,23 +122,3 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
