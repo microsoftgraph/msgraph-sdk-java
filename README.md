@@ -68,8 +68,7 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-GraphServiceClient graphClient = 
-  new GraphServiceClient(authenticationProvider);
+GraphServiceClient graphClient = new GraphServiceClient(credential, scopes);
 ```
 
 ## 3. Make requests against the service
@@ -118,23 +117,3 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
