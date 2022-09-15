@@ -57,7 +57,7 @@ public class Store extends Entity implements IJsonBackedObject {
 
     /**
      * The Sets.
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      */
     @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose

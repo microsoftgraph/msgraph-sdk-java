@@ -519,6 +519,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> proxyAddresses;
 
     /**
+     * The Security Identifier.
+     * Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     */
+    @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
+    @Expose
+	@Nullable
+    public String securityIdentifier;
+
+    /**
      * The Show In Address List.
      * Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
      */

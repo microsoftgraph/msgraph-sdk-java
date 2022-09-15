@@ -15,6 +15,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
@@ -123,6 +124,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ChatMessageCollectionPage messages;
 
     /**
+     * The Pinned Messages.
+     * 
+     */
+    @SerializedName(value = "pinnedMessages", alternate = {"PinnedMessages"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PinnedChatMessageInfoCollectionPage pinnedMessages;
+
+    /**
      * The Tabs.
      * A collection of all the tabs in the chat. Nullable.
      */
@@ -151,6 +161,10 @@ public class Chat extends Entity implements IJsonBackedObject {
 
         if (json.has("messages")) {
             messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
+        }
+
+        if (json.has("pinnedMessages")) {
+            pinnedMessages = serializer.deserializeObject(json.get("pinnedMessages"), com.microsoft.graph.requests.PinnedChatMessageInfoCollectionPage.class);
         }
 
         if (json.has("tabs")) {
