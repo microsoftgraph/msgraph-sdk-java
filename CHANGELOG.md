@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.35.0] - 2022-09-015
+
+### Added
+
+- MessagePinnedEventMessageDetail model. 
+- MessageUnpinnedEventMessageDetail model. 
+- RedirectUriSettings model. 
+- PinnedChatMessageInfo and related requests. 
+- ChatMessageReference requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests. 
+- Removed RestrictedSignIn model and related requets. 
+
 ## [5.34.0] - 2022-09-01
 
 ### Added
