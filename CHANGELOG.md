@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MessagePinnedEventMessageDetail model. 
 - MessageUnpinnedEventMessageDetail model. 
 - RedirectUriSettings model. 
-- PinnedChatMessageInfo and related requests. 
+- PinnedChatMessageInfo model and related requests. 
 - ChatMessageReference requests. 
 
 ### Changed
