@@ -5,10 +5,11 @@ on:
   push:
     branches:
       - dev
+      - feature/6.0
   pull_request:
     branches:
       - dev
-      - feature/v3
+      - feature/6.0
 
 jobs:
   lint-api-level:
