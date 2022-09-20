@@ -60,6 +60,10 @@ public enum RiskDetail
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * m365DAdmin Dismissed Detection
+    */
+    M365_D_ADMIN_DISMISSED_DETECTION,
+    /**
     * For RiskDetail values that were not expected from the service
     */
     UNEXPECTED_VALUE

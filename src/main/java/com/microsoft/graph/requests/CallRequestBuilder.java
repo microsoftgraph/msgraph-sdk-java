@@ -106,6 +106,26 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
         return new com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ContentSharingSession collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ContentSharingSessionCollectionRequestBuilder contentSharingSessions() {
+        return new com.microsoft.graph.requests.ContentSharingSessionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentSharingSessions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ContentSharingSession item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ContentSharingSessionRequestBuilder contentSharingSessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ContentSharingSessionRequestBuilder(getRequestUrlWithAdditionalSegment("contentSharingSessions") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CommsOperation collection
      *
      * @return the collection request builder
