@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class Calendar extends Entity implements Parsable {
     /** Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
-    private java.util.List<String> _allowedOnlineMeetingProviders;
+    private java.util.List<OnlineMeetingProviderType> _allowedOnlineMeetingProviders;
     /** The permissions of the users with whom the calendar is shared. */
     private java.util.List<CalendarPermission> _calendarPermissions;
     /** The calendar view for the calendar. Navigation property. Read-only. */
@@ -64,10 +64,10 @@ public class Calendar extends Entity implements Parsable {
     }
     /**
      * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     * @return a string
+     * @return a onlineMeetingProviderType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedOnlineMeetingProviders() {
+    public java.util.List<OnlineMeetingProviderType> getAllowedOnlineMeetingProviders() {
         return this._allowedOnlineMeetingProviders;
     }
     /**
@@ -150,7 +150,7 @@ public class Calendar extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Calendar currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("allowedOnlineMeetingProviders", (n) -> { currentObject.setAllowedOnlineMeetingProviders(n.getCollectionOfEnumValues(OnlineMeetingProviderType.class)); });
             this.put("calendarPermissions", (n) -> { currentObject.setCalendarPermissions(n.getCollectionOfObjectValues(CalendarPermission::createFromDiscriminatorValue)); });
             this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
             this.put("canEdit", (n) -> { currentObject.setCanEdit(n.getBooleanValue()); });
@@ -242,7 +242,7 @@ public class Calendar extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
+        writer.writeCollectionOfEnumValues("allowedOnlineMeetingProviders", this.getAllowedOnlineMeetingProviders());
         writer.writeCollectionOfObjectValues("calendarPermissions", this.getCalendarPermissions());
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
         writer.writeBooleanValue("canEdit", this.getCanEdit());
@@ -266,7 +266,7 @@ public class Calendar extends Entity implements Parsable {
      * @param value Value to set for the allowedOnlineMeetingProviders property.
      * @return a void
      */
-    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAllowedOnlineMeetingProviders(@javax.annotation.Nullable final java.util.List<OnlineMeetingProviderType> value) {
         this._allowedOnlineMeetingProviders = value;
     }
     /**

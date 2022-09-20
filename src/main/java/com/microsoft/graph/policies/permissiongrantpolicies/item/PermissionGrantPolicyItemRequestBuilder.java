@@ -3,6 +3,7 @@ package com.microsoft.graph.policies.permissiongrantpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.ExcludesRequestBuilder;
+import com.microsoft.graph.policies.permissiongrantpolicies.item.excludes.item.PermissionGrantConditionSetItemRequestBuilder;
 import com.microsoft.graph.policies.permissiongrantpolicies.item.includes.IncludesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -16,6 +17,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity. */
@@ -341,7 +343,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -367,7 +369,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PermissionGrantPolicyItemRequestBuilderGetQueryParameters queryParameters = new PermissionGrantPolicyItemRequestBuilderGetQueryParameters();
@@ -385,7 +387,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -20,7 +20,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /** The enableTopResults property */
     private Boolean _enableTopResults;
     /** The entityTypes property */
-    private java.util.List<String> _entityTypes;
+    private java.util.List<EntityType> _entityTypes;
     /** The fields property */
     private java.util.List<String> _fields;
     /** The from property */
@@ -97,10 +97,10 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the entityTypes property value. The entityTypes property
-     * @return a string
+     * @return a entityType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getEntityTypes() {
+    public java.util.List<EntityType> getEntityTypes() {
         return this._entityTypes;
     }
     /**
@@ -115,7 +115,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
             this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("enableTopResults", (n) -> { currentObject.setEnableTopResults(n.getBooleanValue()); });
-            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("from", (n) -> { currentObject.setFrom(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -201,7 +201,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
-        writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
+        writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -257,7 +257,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
-    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
         this._entityTypes = value;
     }
     /**

@@ -6,6 +6,8 @@ import com.microsoft.graph.chats.item.members.item.ConversationMemberItemRequest
 import com.microsoft.graph.chats.item.members.MembersRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.ChatMessageItemRequestBuilder;
 import com.microsoft.graph.chats.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.chats.item.pinnedmessages.item.PinnedChatMessageInfoItemRequestBuilder;
+import com.microsoft.graph.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import com.microsoft.graph.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import com.microsoft.graph.chats.item.tabs.TabsRequestBuilder;
@@ -23,6 +25,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of chat entities. */
@@ -44,6 +47,11 @@ public class ChatItemRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The pinnedMessages property */
+    @javax.annotation.Nonnull
+    public PinnedMessagesRequestBuilder pinnedMessages() {
+        return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** The sendActivityNotification property */
@@ -369,6 +377,18 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
+     * Gets an item from the com.Microsoft.Graph.chats.item.pinnedMessages.item collection
+     * @param id Unique identifier of the item
+     * @return a PinnedChatMessageInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PinnedChatMessageInfoItemRequestBuilder pinnedMessages(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("pinnedChatMessageInfo%2Did", id);
+        return new PinnedChatMessageInfoItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Gets an item from the com.Microsoft.Graph.chats.item.tabs.item collection
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
@@ -387,7 +407,7 @@ public class ChatItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ChatItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -413,7 +433,7 @@ public class ChatItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ChatItemRequestBuilderGetQueryParameters queryParameters = new ChatItemRequestBuilderGetQueryParameters();
@@ -431,7 +451,7 @@ public class ChatItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ChatItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

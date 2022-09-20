@@ -3,6 +3,7 @@ package com.microsoft.graph.sites.item.termstores.item.sets.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.sites.item.termstores.item.sets.item.children.ChildrenRequestBuilder;
+import com.microsoft.graph.sites.item.termstores.item.sets.item.children.item.TermItemRequestBuilder;
 import com.microsoft.graph.sites.item.termstores.item.sets.item.parentgroup.ParentGroupRequestBuilder;
 import com.microsoft.graph.sites.item.termstores.item.sets.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.sites.item.termstores.item.sets.item.relations.RelationsRequestBuilder;
@@ -19,6 +20,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the sets property of the microsoft.graph.termStore.store entity. */
@@ -117,7 +119,7 @@ public class SetItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -125,7 +127,7 @@ public class SetItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +232,7 @@ public class SetItemRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @return a CompletableFuture of set
      */
     public java.util.concurrent.CompletableFuture<Set> get() {
@@ -246,7 +248,7 @@ public class SetItemRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of set
      */
@@ -263,7 +265,7 @@ public class SetItemRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of set
@@ -366,7 +368,7 @@ public class SetItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SetItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -374,7 +376,7 @@ public class SetItemRequestBuilder {
         public SetItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Collection of all sets available in the term store. */
+    /** Collection of all sets available in the term store. This relationship can only be used to load a specific term set. */
     public class SetItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -392,7 +394,7 @@ public class SetItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public SetItemRequestBuilderGetQueryParameters queryParameters = new SetItemRequestBuilderGetQueryParameters();
@@ -410,7 +412,7 @@ public class SetItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new SetItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

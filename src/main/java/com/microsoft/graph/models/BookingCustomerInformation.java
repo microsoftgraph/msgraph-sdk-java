@@ -14,7 +14,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     private java.util.List<BookingQuestionAnswer> _customQuestionAnswers;
     /** The SMTP address of the bookingCustomer who is booking the appointment */
     private String _emailAddress;
-    /** Represents location information for the bookingCustomer who is booking the appointment. */
+    /** Represents location information for thebookingCustomerwho is booking the appointment. */
     private Location _location;
     /** The customer's name. */
     private String _name;
@@ -85,7 +85,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         }};
     }
     /**
-     * Gets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Gets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
      * @return a location
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
         this._emailAddress = value;
     }
     /**
-     * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
+     * Sets the location property value. Represents location information for thebookingCustomerwho is booking the appointment.
      * @param value Value to set for the location property.
      * @return a void
      */

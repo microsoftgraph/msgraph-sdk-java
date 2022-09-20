@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity. */
@@ -80,7 +81,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +89,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +194,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a CompletableFuture of federatedIdentityCredential
      */
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get() {
@@ -209,7 +210,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
      */
@@ -226,7 +227,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of federatedIdentityCredential
@@ -305,7 +306,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -313,7 +314,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
+    /** Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters). */
     public class FederatedIdentityCredentialItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -331,7 +332,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public FederatedIdentityCredentialItemRequestBuilderGetQueryParameters queryParameters = new FederatedIdentityCredentialItemRequestBuilderGetQueryParameters();
@@ -349,7 +350,7 @@ public class FederatedIdentityCredentialItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

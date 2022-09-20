@@ -26,6 +26,8 @@ public class Application extends DirectoryObject implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** Supports $filter (eq when counting empty collections). Read-only. */
     private DirectoryObject _createdOnBehalfOf;
+    /** The defaultRedirectUri property */
+    private String _defaultRedirectUri;
     /** Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
     /** Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not). */
@@ -34,7 +36,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _displayName;
     /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<ExtensionProperty> _extensionProperties;
-    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
+    /** Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters). */
     private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
     private String _groupMembershipClaims;
@@ -173,6 +175,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdOnBehalfOf;
     }
     /**
+     * Gets the defaultRedirectUri property value. The defaultRedirectUri property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDefaultRedirectUri() {
+        return this._defaultRedirectUri;
+    }
+    /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @return a string
      */
@@ -205,7 +215,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._extensionProperties;
     }
     /**
-     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a federatedIdentityCredential
      */
     @javax.annotation.Nullable
@@ -228,6 +238,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("certification", (n) -> { currentObject.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("createdOnBehalfOf", (n) -> { currentObject.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+            this.put("defaultRedirectUri", (n) -> { currentObject.setDefaultRedirectUri(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -494,6 +505,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeObjectValue("certification", this.getCertification());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
+        writer.writeStringValue("defaultRedirectUri", this.getDefaultRedirectUri());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("disabledByMicrosoftStatus", this.getDisabledByMicrosoftStatus());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -592,6 +604,14 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdOnBehalfOf = value;
     }
     /**
+     * Sets the defaultRedirectUri property value. The defaultRedirectUri property
+     * @param value Value to set for the defaultRedirectUri property.
+     * @return a void
+     */
+    public void setDefaultRedirectUri(@javax.annotation.Nullable final String value) {
+        this._defaultRedirectUri = value;
+    }
+    /**
      * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      * @param value Value to set for the description property.
      * @return a void
@@ -624,7 +644,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._extensionProperties = value;
     }
     /**
-     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */

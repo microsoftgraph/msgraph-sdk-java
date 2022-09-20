@@ -3,6 +3,7 @@ package com.microsoft.graph.solutions.bookingbusinesses.item;
 import com.microsoft.graph.models.BookingBusiness;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.AppointmentsRequestBuilder;
+import com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.customers.CustomersRequestBuilder;
 import com.microsoft.graph.solutions.bookingbusinesses.item.customers.item.BookingCustomerBaseItemRequestBuilder;
@@ -27,6 +28,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
@@ -435,7 +437,7 @@ public class BookingBusinessItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new BookingBusinessItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -461,7 +463,7 @@ public class BookingBusinessItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public BookingBusinessItemRequestBuilderGetQueryParameters queryParameters = new BookingBusinessItemRequestBuilderGetQueryParameters();
@@ -479,7 +481,7 @@ public class BookingBusinessItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new BookingBusinessItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -14,7 +14,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     /** Active Hours Start (active hours mean the time window when updates install should not happen) */
     private LocalTime _activeHoursStart;
     /** Days in week for which active hours are configured. This collection can contain a maximum of 7 elements. */
-    private java.util.List<String> _scheduledInstallDays;
+    private java.util.List<DayOfWeek> _scheduledInstallDays;
     /** UTC Time Offset indicated in minutes */
     private Integer _utcTimeOffsetInMinutes;
     /**
@@ -61,16 +61,16 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
             this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
-            this.put("scheduledInstallDays", (n) -> { currentObject.setScheduledInstallDays(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("scheduledInstallDays", (n) -> { currentObject.setScheduledInstallDays(n.getCollectionOfEnumValues(DayOfWeek.class)); });
             this.put("utcTimeOffsetInMinutes", (n) -> { currentObject.setUtcTimeOffsetInMinutes(n.getIntegerValue()); });
         }};
     }
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     * @return a string
+     * @return a dayOfWeek
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getScheduledInstallDays() {
+    public java.util.List<DayOfWeek> getScheduledInstallDays() {
         return this._scheduledInstallDays;
     }
     /**
@@ -91,7 +91,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
         super.serialize(writer);
         writer.writeLocalTimeValue("activeHoursEnd", this.getActiveHoursEnd());
         writer.writeLocalTimeValue("activeHoursStart", this.getActiveHoursStart());
-        writer.writeCollectionOfPrimitiveValues("scheduledInstallDays", this.getScheduledInstallDays());
+        writer.writeCollectionOfEnumValues("scheduledInstallDays", this.getScheduledInstallDays());
         writer.writeIntegerValue("utcTimeOffsetInMinutes", this.getUtcTimeOffsetInMinutes());
     }
     /**
@@ -115,7 +115,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the scheduledInstallDays property.
      * @return a void
      */
-    public void setScheduledInstallDays(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setScheduledInstallDays(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this._scheduledInstallDays = value;
     }
     /**

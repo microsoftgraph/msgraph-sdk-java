@@ -5,6 +5,8 @@ import com.microsoft.graph.communications.calls.item.audioroutinggroups.AudioRou
 import com.microsoft.graph.communications.calls.item.audioroutinggroups.item.AudioRoutingGroupItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.cancelmediaprocessing.CancelMediaProcessingRequestBuilder;
 import com.microsoft.graph.communications.calls.item.changescreensharingrole.ChangeScreenSharingRoleRequestBuilder;
+import com.microsoft.graph.communications.calls.item.contentsharingsessions.ContentSharingSessionsRequestBuilder;
+import com.microsoft.graph.communications.calls.item.contentsharingsessions.item.ContentSharingSessionItemRequestBuilder;
 import com.microsoft.graph.communications.calls.item.keepalive.KeepAliveRequestBuilder;
 import com.microsoft.graph.communications.calls.item.mute.MuteRequestBuilder;
 import com.microsoft.graph.communications.calls.item.operations.item.CommsOperationItemRequestBuilder;
@@ -33,6 +35,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
@@ -56,6 +59,11 @@ public class CallItemRequestBuilder {
     @javax.annotation.Nonnull
     public ChangeScreenSharingRoleRequestBuilder changeScreenSharingRole() {
         return new ChangeScreenSharingRoleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The contentSharingSessions property */
+    @javax.annotation.Nonnull
+    public ContentSharingSessionsRequestBuilder contentSharingSessions() {
+        return new ContentSharingSessionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The keepAlive property */
     @javax.annotation.Nonnull
@@ -161,6 +169,18 @@ public class CallItemRequestBuilder {
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.communications.calls.item.contentSharingSessions.item collection
+     * @param id Unique identifier of the item
+     * @return a ContentSharingSessionItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ContentSharingSessionItemRequestBuilder contentSharingSessions(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("contentSharingSession%2Did", id);
+        return new ContentSharingSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Delete navigation property calls for communications
@@ -440,7 +460,7 @@ public class CallItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CallItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -466,7 +486,7 @@ public class CallItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CallItemRequestBuilderGetQueryParameters queryParameters = new CallItemRequestBuilderGetQueryParameters();
@@ -484,7 +504,7 @@ public class CallItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CallItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

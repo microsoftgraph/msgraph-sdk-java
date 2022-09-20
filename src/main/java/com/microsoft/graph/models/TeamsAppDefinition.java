@@ -20,7 +20,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     private String _displayName;
     /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin. */
+    /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
     private TeamsAppPublishingState _publishingState;
     /** Short description of the application. */
     private String _shortDescription;
@@ -106,7 +106,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @return a teamsAppPublishingState
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
      * @return a void
      */

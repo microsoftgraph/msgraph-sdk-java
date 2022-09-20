@@ -22,7 +22,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     /** Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional. */
     private Boolean _isSearchable;
     /** Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional. */
-    private java.util.List<String> _labels;
+    private java.util.List<Label> _labels;
     /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
     private String _name;
     /** The OdataType property */
@@ -76,7 +76,7 @@ public class Property implements AdditionalDataHolder, Parsable {
             this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
             this.put("isRetrievable", (n) -> { currentObject.setIsRetrievable(n.getBooleanValue()); });
             this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfEnumValues(Label.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PropertyType.class)); });
@@ -116,10 +116,10 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
-     * @return a string
+     * @return a label
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this._labels;
     }
     /**
@@ -158,7 +158,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isRefinable", this.getIsRefinable());
         writer.writeBooleanValue("isRetrievable", this.getIsRetrievable());
         writer.writeBooleanValue("isSearchable", this.getIsSearchable());
-        writer.writeCollectionOfPrimitiveValues("labels", this.getLabels());
+        writer.writeCollectionOfEnumValues("labels", this.getLabels());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
@@ -217,7 +217,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
-    public void setLabels(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setLabels(@javax.annotation.Nullable final java.util.List<Label> value) {
         this._labels = value;
     }
     /**

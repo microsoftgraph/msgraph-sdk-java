@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item.team;
 
 import com.microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
 import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
@@ -33,6 +34,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the team property of the microsoft.graph.group entity. */
@@ -476,7 +478,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -502,7 +504,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TeamRequestBuilderGetQueryParameters queryParameters = new TeamRequestBuilderGetQueryParameters();
@@ -520,7 +522,7 @@ public class TeamRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new teamRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

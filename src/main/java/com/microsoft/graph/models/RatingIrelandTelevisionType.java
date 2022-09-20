@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum RatingIrelandTelevisionType implements ValuedEnum {
     /** Default value, allow all TV shows content */
     AllAllowed("allAllowed"),
@@ -15,7 +15,7 @@ public enum RatingIrelandTelevisionType implements ValuedEnum {
     Children("children"),
     /** The YA classification is suitable for teenage audience */
     YoungAdults("youngAdults"),
-    /** The PS classification invites parents and guardians to consider restriction children’s access */
+    /** The PS classification invites parents and guardians to consider restriction childrens access */
     ParentalSupervision("parentalSupervision"),
     /** The MA classification is suitable for adults */
     Mature("mature");

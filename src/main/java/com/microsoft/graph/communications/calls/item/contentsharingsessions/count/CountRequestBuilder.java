@@ -1,4 +1,4 @@
-package com.microsoft.graph.auditlogs.restrictedsignins.count;
+package com.microsoft.graph.communications.calls.item.contentsharingsessions.count;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
@@ -12,6 +12,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to count the resources in the collection. */
@@ -31,7 +32,7 @@ public class CountRequestBuilder {
     public CountRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/auditLogs/restrictedSignIns/$count";
+        this.urlTemplate = "{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions/$count";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -43,7 +44,7 @@ public class CountRequestBuilder {
      * @return a void
      */
     public CountRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/auditLogs/restrictedSignIns/$count";
+        this.urlTemplate = "{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions/$count";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
@@ -136,7 +137,7 @@ public class CountRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new CountRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

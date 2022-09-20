@@ -16,6 +16,7 @@ import com.microsoft.graph.users.item.calendargroups.item.CalendarGroupItemReque
 import com.microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
 import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.users.item.chats.ChatsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
@@ -26,6 +27,7 @@ import com.microsoft.graph.users.item.contactfolders.item.ContactFolderItemReque
 import com.microsoft.graph.users.item.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
@@ -102,6 +104,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of user entities. */
@@ -1115,7 +1118,7 @@ public class UserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -1141,7 +1144,7 @@ public class UserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UserItemRequestBuilderGetQueryParameters queryParameters = new UserItemRequestBuilderGetQueryParameters();
@@ -1159,7 +1162,7 @@ public class UserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new UserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

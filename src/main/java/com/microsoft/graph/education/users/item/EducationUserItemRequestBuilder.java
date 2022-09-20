@@ -3,6 +3,7 @@ package com.microsoft.graph.education.users.item;
 import com.microsoft.graph.education.users.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.education.users.item.classes.ClassesRequestBuilder;
+import com.microsoft.graph.education.users.item.classes.item.EducationClassItemRequestBuilder;
 import com.microsoft.graph.education.users.item.rubrics.item.EducationRubricItemRequestBuilder;
 import com.microsoft.graph.education.users.item.rubrics.RubricsRequestBuilder;
 import com.microsoft.graph.education.users.item.schools.item.EducationSchoolItemRequestBuilder;
@@ -23,6 +24,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the users property of the microsoft.graph.educationRoot entity. */
@@ -404,7 +406,7 @@ public class EducationUserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EducationUserItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -430,7 +432,7 @@ public class EducationUserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public EducationUserItemRequestBuilderGetQueryParameters queryParameters = new EducationUserItemRequestBuilderGetQueryParameters();
@@ -448,7 +450,7 @@ public class EducationUserItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new EducationUserItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -19,7 +19,7 @@ public class CallRecord extends Entity implements Parsable {
     /** UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _lastModifiedDateTime;
     /** List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
-    private java.util.List<String> _modalities;
+    private java.util.List<Modality> _modalities;
     /** The organizing party's identity. */
     private IdentitySet _organizer;
     /** List of distinct identities involved in the call. */
@@ -69,7 +69,7 @@ public class CallRecord extends Entity implements Parsable {
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
             this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
@@ -96,10 +96,10 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getModalities() {
+    public java.util.List<Modality> getModalities() {
         return this._modalities;
     }
     /**
@@ -161,7 +161,7 @@ public class CallRecord extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeCollectionOfPrimitiveValues("modalities", this.getModalities());
+        writer.writeCollectionOfEnumValues("modalities", this.getModalities());
         writer.writeObjectValue("organizer", this.getOrganizer());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
@@ -198,7 +198,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the modalities property.
      * @return a void
      */
-    public void setModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._modalities = value;
     }
     /**

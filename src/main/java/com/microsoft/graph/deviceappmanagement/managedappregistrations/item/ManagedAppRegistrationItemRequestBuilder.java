@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.managedappregistrations.item;
 
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.AppliedPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.IntendedPoliciesRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.OperationsRequestBuilder;
@@ -18,6 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity. */
@@ -360,7 +362,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -386,7 +388,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ManagedAppRegistrationItemRequestBuilderGetQueryParameters queryParameters = new ManagedAppRegistrationItemRequestBuilderGetQueryParameters();
@@ -404,7 +406,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

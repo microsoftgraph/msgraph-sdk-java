@@ -1,12 +1,14 @@
 package com.microsoft.graph.groups.item;
 
 import com.microsoft.graph.groups.item.acceptedsenders.AcceptedSendersRequestBuilder;
+import com.microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.addfavorite.AddFavoriteRequestBuilder;
 import com.microsoft.graph.groups.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.groups.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
 import com.microsoft.graph.groups.item.assignlicense.AssignLicenseRequestBuilder;
 import com.microsoft.graph.groups.item.calendar.CalendarRequestBuilder;
 import com.microsoft.graph.groups.item.calendarview.CalendarViewRequestBuilder;
+import com.microsoft.graph.groups.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.groups.item.checkgrantedpermissionsforapp.CheckGrantedPermissionsForAppRequestBuilder;
 import com.microsoft.graph.groups.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.groups.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
@@ -65,6 +67,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of group entities. */
@@ -801,7 +804,7 @@ public class GroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new GroupItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -827,7 +830,7 @@ public class GroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public GroupItemRequestBuilderGetQueryParameters queryParameters = new GroupItemRequestBuilderGetQueryParameters();
@@ -845,7 +848,7 @@ public class GroupItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new GroupItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

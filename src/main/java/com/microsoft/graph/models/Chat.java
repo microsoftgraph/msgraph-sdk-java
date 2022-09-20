@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Chat extends Entity implements Parsable {
     /** The chatType property */
     private ChatType _chatType;
@@ -24,6 +24,8 @@ public class Chat extends Entity implements Parsable {
     private java.util.List<ChatMessage> _messages;
     /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
     private TeamworkOnlineMeetingInfo _onlineMeetingInfo;
+    /** The pinnedMessages property */
+    private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
     /** A collection of all the tabs in the chat. Nullable. */
     private java.util.List<TeamsTab> _tabs;
     /** The identifier of the tenant in which the chat was created. Read-only. */
@@ -81,6 +83,7 @@ public class Chat extends Entity implements Parsable {
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
             this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
             this.put("onlineMeetingInfo", (n) -> { currentObject.setOnlineMeetingInfo(n.getObjectValue(TeamworkOnlineMeetingInfo::createFromDiscriminatorValue)); });
+            this.put("pinnedMessages", (n) -> { currentObject.setPinnedMessages(n.getCollectionOfObjectValues(PinnedChatMessageInfo::createFromDiscriminatorValue)); });
             this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
@@ -126,6 +129,14 @@ public class Chat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo getOnlineMeetingInfo() {
         return this._onlineMeetingInfo;
+    }
+    /**
+     * Gets the pinnedMessages property value. The pinnedMessages property
+     * @return a pinnedChatMessageInfo
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
+        return this._pinnedMessages;
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
@@ -174,6 +185,7 @@ public class Chat extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeObjectValue("onlineMeetingInfo", this.getOnlineMeetingInfo());
+        writer.writeCollectionOfObjectValues("pinnedMessages", this.getPinnedMessages());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("topic", this.getTopic());
@@ -234,6 +246,14 @@ public class Chat extends Entity implements Parsable {
      */
     public void setOnlineMeetingInfo(@javax.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
         this._onlineMeetingInfo = value;
+    }
+    /**
+     * Sets the pinnedMessages property value. The pinnedMessages property
+     * @param value Value to set for the pinnedMessages property.
+     * @return a void
+     */
+    public void setPinnedMessages(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
+        this._pinnedMessages = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the chat. Nullable.

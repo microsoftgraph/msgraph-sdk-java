@@ -107,7 +107,7 @@ public class User extends DirectoryObject implements Parsable {
     private OfficeGraphInsights _insights;
     /** A list for the user to describe their interests. Returned only on $select. */
     private java.util.List<String> _interests;
-    /** Do not use – reserved for future use. */
+    /** Do not use  reserved for future use. */
     private Boolean _isResourceAccount;
     /** The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _jobTitle;
@@ -181,7 +181,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _ownedObjects;
     /** Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. Returned only on $select. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, not, and eq on null values). */
     private String _passwordPolicies;
-    /** Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). */
+    /** Specifies the password profile for the user. The profile contains the users password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). */
     private PasswordProfile _passwordProfile;
     /** A list for the user to enumerate their past projects. Returned only on $select. */
     private java.util.List<String> _pastProjects;
@@ -215,6 +215,8 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<String> _schools;
     /** The scopedRoleMemberOf property */
     private java.util.List<ScopedRoleMembership> _scopedRoleMemberOf;
+    /** Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith). */
+    private String _securityIdentifier;
     /** The settings property */
     private UserSettings _settings;
     /** Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue. */
@@ -698,6 +700,7 @@ public class User extends DirectoryObject implements Parsable {
             this.put("responsibilities", (n) -> { currentObject.setResponsibilities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("scopedRoleMemberOf", (n) -> { currentObject.setScopedRoleMemberOf(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
+            this.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(UserSettings::createFromDiscriminatorValue)); });
             this.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
             this.put("signInSessionsValidFromDateTime", (n) -> { currentObject.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
@@ -778,7 +781,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._interests;
     }
     /**
-     * Gets the isResourceAccount property value. Do not use – reserved for future use.
+     * Gets the isResourceAccount property value. Do not use  reserved for future use.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1074,7 +1077,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._passwordPolicies;
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the users password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a passwordProfile
      */
     @javax.annotation.Nullable
@@ -1208,6 +1211,14 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<ScopedRoleMembership> getScopedRoleMemberOf() {
         return this._scopedRoleMemberOf;
+    }
+    /**
+     * Gets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSecurityIdentifier() {
+        return this._securityIdentifier;
     }
     /**
      * Gets the settings property value. The settings property
@@ -1424,6 +1435,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("responsibilities", this.getResponsibilities());
         writer.writeCollectionOfPrimitiveValues("schools", this.getSchools());
         writer.writeCollectionOfObjectValues("scopedRoleMemberOf", this.getScopedRoleMemberOf());
+        writer.writeStringValue("securityIdentifier", this.getSecurityIdentifier());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeBooleanValue("showInAddressList", this.getShowInAddressList());
         writer.writeOffsetDateTimeValue("signInSessionsValidFromDateTime", this.getSignInSessionsValidFromDateTime());
@@ -1831,7 +1843,7 @@ public class User extends DirectoryObject implements Parsable {
         this._interests = value;
     }
     /**
-     * Sets the isResourceAccount property value. Do not use – reserved for future use.
+     * Sets the isResourceAccount property value. Do not use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      * @return a void
      */
@@ -2127,7 +2139,7 @@ public class User extends DirectoryObject implements Parsable {
         this._passwordPolicies = value;
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the users password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
@@ -2261,6 +2273,14 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setScopedRoleMemberOf(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedRoleMemberOf = value;
+    }
+    /**
+     * Sets the securityIdentifier property value. Security identifier (SID) of the user, used in Windows scenarios. Read-only. Returned by default. Supports $select and $filter (eq, not, ge, le, startsWith).
+     * @param value Value to set for the securityIdentifier property.
+     * @return a void
+     */
+    public void setSecurityIdentifier(@javax.annotation.Nullable final String value) {
+        this._securityIdentifier = value;
     }
     /**
      * Sets the settings property value. The settings property
