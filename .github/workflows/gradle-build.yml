@@ -1,8 +1,10 @@
 name: Java CI with Gradle
 
 on:
+  push:
+    branches: [ dev, feature/6.0 ]
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, feature/6.0 ]
     paths-ignore:
       - '.gradle/wrapper'
       - '.gitignore'
@@ -52,7 +54,7 @@ jobs:
             **/gradle/**
             Scripts/**
   
-  compage-packages:
+  compare-packages:
     needs: build
     runs-on: ubuntu-latest
     env: 
@@ -72,7 +74,7 @@ jobs:
           name: drop
           path: artifacts/current/
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v2.19.0
+        uses: dawidd6/action-download-artifact@v2.23.0
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success
@@ -81,9 +83,10 @@ jobs:
           name: drop
           path: artifacts/previous/
       - name: Run PKG Diff 
+        continue-on-error: true
         run: |
             sudo apt install pkgdiff 
-            pkgdiff -hide-unchanged ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+            pkgdiff -hide-unchanged ${{ env.PRIOR_PKG_DIFF }} ${{ env.CURRENT_PKG_DIFF }}
       - name: Upload Diff Artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
