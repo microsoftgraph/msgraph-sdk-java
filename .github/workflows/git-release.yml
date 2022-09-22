@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download Build Artifact
-        uses: dawidd6/action-download-artifact@v2.19.0
+        uses: dawidd6/action-download-artifact@v2.23.0
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
@@ -21,7 +21,7 @@ jobs:
           name: drop
           path: drop
       - name: Github Release
-        uses: anton-yurchenko/git-release@v4.2
+        uses: anton-yurchenko/git-release@v5.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           DRAFT_RELEASE: "false"
