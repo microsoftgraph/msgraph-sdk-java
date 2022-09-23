@@ -19,7 +19,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of directoryRoleTemplate entities. */
@@ -336,7 +335,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -362,7 +361,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DirectoryRoleTemplateItemRequestBuilderGetQueryParameters queryParameters = new DirectoryRoleTemplateItemRequestBuilderGetQueryParameters();
@@ -380,7 +379,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DirectoryRoleTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

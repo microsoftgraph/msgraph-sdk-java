@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the identityContainer singleton. */
 public enum UserFlowType implements ValuedEnum {
     SignUp("signUp"),
     SignIn("signIn"),

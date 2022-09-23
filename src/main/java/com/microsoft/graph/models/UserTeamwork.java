@@ -13,7 +13,7 @@ public class UserTeamwork extends Entity implements Parsable {
     /** The apps installed in the personal scope of this user. */
     private java.util.List<UserScopeTeamsAppInstallation> _installedApps;
     /**
-     * Instantiates a new userTeamwork and sets the default values.
+     * Instantiates a new UserTeamwork and sets the default values.
      * @return a void
      */
     public UserTeamwork() {
@@ -23,7 +23,7 @@ public class UserTeamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userTeamwork
+     * @return a UserTeamwork
      */
     @javax.annotation.Nonnull
     public static UserTeamwork createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

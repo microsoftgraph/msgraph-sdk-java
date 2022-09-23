@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity. */
@@ -306,7 +305,7 @@ public class AppScopeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new appScopeRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -332,7 +331,7 @@ public class AppScopeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AppScopeRequestBuilderGetQueryParameters queryParameters = new AppScopeRequestBuilderGetQueryParameters();
@@ -350,7 +349,7 @@ public class AppScopeRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new appScopeRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

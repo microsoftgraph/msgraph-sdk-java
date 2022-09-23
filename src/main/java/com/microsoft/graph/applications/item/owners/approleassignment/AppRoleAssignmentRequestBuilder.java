@@ -15,7 +15,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Casts the previous resource to appRoleAssignment. */
@@ -181,7 +180,7 @@ public class AppRoleAssignmentRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AppRoleAssignmentRequestBuilderGetQueryParameters queryParameters = new AppRoleAssignmentRequestBuilderGetQueryParameters();

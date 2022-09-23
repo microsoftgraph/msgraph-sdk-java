@@ -18,7 +18,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityGovernance singleton. */
@@ -262,7 +261,7 @@ public class IdentityGovernanceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public IdentityGovernanceRequestBuilderGetQueryParameters queryParameters = new IdentityGovernanceRequestBuilderGetQueryParameters();
@@ -280,7 +279,7 @@ public class IdentityGovernanceRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new identityGovernanceRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
@@ -318,7 +317,7 @@ public class ListItemVersionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ListItemVersionItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -344,7 +343,7 @@ public class ListItemVersionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ListItemVersionItemRequestBuilderGetQueryParameters queryParameters = new ListItemVersionItemRequestBuilderGetQueryParameters();
@@ -362,7 +361,7 @@ public class ListItemVersionItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ListItemVersionItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

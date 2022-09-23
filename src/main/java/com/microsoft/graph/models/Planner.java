@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the planner singleton. */
 public class Planner extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified buckets */
     private java.util.List<PlannerBucket> _buckets;
@@ -15,7 +16,7 @@ public class Planner extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified tasks */
     private java.util.List<PlannerTask> _tasks;
     /**
-     * Instantiates a new Planner and sets the default values.
+     * Instantiates a new planner and sets the default values.
      * @return a void
      */
     public Planner() {
@@ -25,7 +26,7 @@ public class Planner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Planner
+     * @return a planner
      */
     @javax.annotation.Nonnull
     public static Planner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

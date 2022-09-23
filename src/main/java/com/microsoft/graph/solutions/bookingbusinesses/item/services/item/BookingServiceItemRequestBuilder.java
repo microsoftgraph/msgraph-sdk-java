@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity. */
@@ -306,7 +305,7 @@ public class BookingServiceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new BookingServiceItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -332,7 +331,7 @@ public class BookingServiceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public BookingServiceItemRequestBuilderGetQueryParameters queryParameters = new BookingServiceItemRequestBuilderGetQueryParameters();
@@ -350,7 +349,7 @@ public class BookingServiceItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new BookingServiceItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

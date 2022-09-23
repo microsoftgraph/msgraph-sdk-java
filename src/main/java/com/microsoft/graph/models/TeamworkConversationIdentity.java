@@ -11,7 +11,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     /** Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
     private TeamworkConversationIdentityType _conversationIdentityType;
     /**
-     * Instantiates a new TeamworkConversationIdentity and sets the default values.
+     * Instantiates a new teamworkConversationIdentity and sets the default values.
      * @return a void
      */
     public TeamworkConversationIdentity() {
@@ -21,7 +21,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkConversationIdentity
+     * @return a teamworkConversationIdentity
      */
     @javax.annotation.Nonnull
     public static TeamworkConversationIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

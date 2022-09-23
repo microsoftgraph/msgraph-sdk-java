@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity. */
@@ -306,7 +305,7 @@ public class OutlookCategoryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OutlookCategoryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -328,7 +327,7 @@ public class OutlookCategoryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OutlookCategoryItemRequestBuilderGetQueryParameters queryParameters = new OutlookCategoryItemRequestBuilderGetQueryParameters();
@@ -346,7 +345,7 @@ public class OutlookCategoryItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OutlookCategoryItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

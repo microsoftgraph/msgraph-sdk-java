@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity. */
@@ -306,7 +305,7 @@ public class DeviceConfigurationStateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DeviceConfigurationStateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -332,7 +331,7 @@ public class DeviceConfigurationStateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceConfigurationStateItemRequestBuilderGetQueryParameters queryParameters = new DeviceConfigurationStateItemRequestBuilderGetQueryParameters();
@@ -350,7 +349,7 @@ public class DeviceConfigurationStateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DeviceConfigurationStateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

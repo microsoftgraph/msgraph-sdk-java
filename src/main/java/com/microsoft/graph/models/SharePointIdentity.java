@@ -11,7 +11,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     /** The sign in name of the SharePoint identity. */
     private String _loginName;
     /**
-     * Instantiates a new SharePointIdentity and sets the default values.
+     * Instantiates a new sharePointIdentity and sets the default values.
      * @return a void
      */
     public SharePointIdentity() {
@@ -21,7 +21,7 @@ public class SharePointIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharePointIdentity
+     * @return a sharePointIdentity
      */
     @javax.annotation.Nonnull
     public static SharePointIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

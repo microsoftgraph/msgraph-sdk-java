@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
@@ -270,7 +269,7 @@ public class BookingBusinessesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public BookingBusinessesRequestBuilderGetQueryParameters queryParameters = new BookingBusinessesRequestBuilderGetQueryParameters();
@@ -288,7 +287,7 @@ public class BookingBusinessesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new bookingBusinessesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

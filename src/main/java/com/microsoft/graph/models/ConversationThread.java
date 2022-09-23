@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
     private java.util.List<Recipient> _ccRecipients;
