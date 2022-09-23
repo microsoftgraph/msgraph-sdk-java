@@ -4,8 +4,6 @@ import com.microsoft.graph.auditlogs.directoryaudits.DirectoryAuditsRequestBuild
 import com.microsoft.graph.auditlogs.directoryaudits.item.DirectoryAuditItemRequestBuilder;
 import com.microsoft.graph.auditlogs.provisioning.item.ProvisioningObjectSummaryItemRequestBuilder;
 import com.microsoft.graph.auditlogs.provisioning.ProvisioningRequestBuilder;
-import com.microsoft.graph.auditlogs.restrictedsignins.item.RestrictedSignInItemRequestBuilder;
-import com.microsoft.graph.auditlogs.restrictedsignins.RestrictedSignInsRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.auditlogs.signins.SignInsRequestBuilder;
 import com.microsoft.graph.models.AuditLogRoot;
@@ -22,6 +20,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the auditLogRoot singleton. */
@@ -40,11 +39,6 @@ public class AuditLogsRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The restrictedSignIns property */
-    @javax.annotation.Nonnull
-    public RestrictedSignInsRequestBuilder restrictedSignIns() {
-        return new RestrictedSignInsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The signIns property */
     @javax.annotation.Nonnull
     public SignInsRequestBuilder signIns() {
@@ -272,18 +266,6 @@ public class AuditLogsRequestBuilder {
         return new ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.auditLogs.restrictedSignIns.item collection
-     * @param id Unique identifier of the item
-     * @return a RestrictedSignInItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public RestrictedSignInItemRequestBuilder restrictedSignIns(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("restrictedSignIn%2Did", id);
-        return new RestrictedSignInItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
      * Gets an item from the com.Microsoft.Graph.auditLogs.signIns.item collection
      * @param id Unique identifier of the item
      * @return a SignInItemRequestBuilder
@@ -313,7 +295,7 @@ public class AuditLogsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AuditLogsRequestBuilderGetQueryParameters queryParameters = new AuditLogsRequestBuilderGetQueryParameters();
@@ -331,7 +313,7 @@ public class AuditLogsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new auditLogsRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -2,6 +2,7 @@ package com.microsoft.graph.communications.calls.item.answer;
 
 import com.microsoft.graph.models.IncomingCallOptions;
 import com.microsoft.graph.models.MediaConfig;
+import com.microsoft.graph.models.Modality;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -13,7 +14,7 @@ import java.util.Objects;
 /** Provides operations to call the answer method. */
 public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     /** The acceptedModalities property */
-    private java.util.List<String> _acceptedModalities;
+    private java.util.List<Modality> _acceptedModalities;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The callbackUri property */
@@ -43,10 +44,10 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the acceptedModalities property value. The acceptedModalities property
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAcceptedModalities() {
+    public java.util.List<Modality> getAcceptedModalities() {
         return this._acceptedModalities;
     }
     /**
@@ -81,7 +82,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerPostRequestBody currentObject = this;
         return new HashMap<>(5) {{
-            this.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
             this.put("mediaConfig", (n) -> { currentObject.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
@@ -111,7 +112,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("acceptedModalities", this.getAcceptedModalities());
+        writer.writeCollectionOfEnumValues("acceptedModalities", this.getAcceptedModalities());
         writer.writeStringValue("callbackUri", this.getCallbackUri());
         writer.writeObjectValue("callOptions", this.getCallOptions());
         writer.writeObjectValue("mediaConfig", this.getMediaConfig());
@@ -123,7 +124,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acceptedModalities property.
      * @return a void
      */
-    public void setAcceptedModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAcceptedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._acceptedModalities = value;
     }
     /**

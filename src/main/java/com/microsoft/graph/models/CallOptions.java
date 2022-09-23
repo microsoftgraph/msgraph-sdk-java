@@ -15,6 +15,8 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The hideBotAfterEscalation property */
     private Boolean _hideBotAfterEscalation;
+    /** The isContentSharingNotificationEnabled property */
+    private Boolean _isContentSharingNotificationEnabled;
     /** The OdataType property */
     private String _odataType;
     /**
@@ -58,8 +60,9 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallOptions currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("hideBotAfterEscalation", (n) -> { currentObject.setHideBotAfterEscalation(n.getBooleanValue()); });
+            this.put("isContentSharingNotificationEnabled", (n) -> { currentObject.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
@@ -70,6 +73,14 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getHideBotAfterEscalation() {
         return this._hideBotAfterEscalation;
+    }
+    /**
+     * Gets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsContentSharingNotificationEnabled() {
+        return this._isContentSharingNotificationEnabled;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -87,6 +98,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
+        writer.writeBooleanValue("isContentSharingNotificationEnabled", this.getIsContentSharingNotificationEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -105,6 +117,14 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      */
     public void setHideBotAfterEscalation(@javax.annotation.Nullable final Boolean value) {
         this._hideBotAfterEscalation = value;
+    }
+    /**
+     * Sets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * @param value Value to set for the isContentSharingNotificationEnabled property.
+     * @return a void
+     */
+    public void setIsContentSharingNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isContentSharingNotificationEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

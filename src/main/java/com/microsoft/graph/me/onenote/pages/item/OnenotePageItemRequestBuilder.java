@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the pages property of the microsoft.graph.onenote entity. */
@@ -344,7 +345,7 @@ public class OnenotePageItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnenotePageItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -370,7 +371,7 @@ public class OnenotePageItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OnenotePageItemRequestBuilderGetQueryParameters queryParameters = new OnenotePageItemRequestBuilderGetQueryParameters();
@@ -388,7 +389,7 @@ public class OnenotePageItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OnenotePageItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

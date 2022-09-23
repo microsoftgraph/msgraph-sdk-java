@@ -6,6 +6,7 @@ import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.basety
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.ispublished.IsPublishedRequestBuilder;
@@ -25,6 +26,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
@@ -417,7 +419,7 @@ public class ContentTypeItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ContentTypeItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -443,7 +445,7 @@ public class ContentTypeItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ContentTypeItemRequestBuilderGetQueryParameters queryParameters = new ContentTypeItemRequestBuilderGetQueryParameters();
@@ -461,7 +463,7 @@ public class ContentTypeItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new ContentTypeItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item;
 
 import com.microsoft.graph.drives.item.bundles.BundlesRequestBuilder;
+import com.microsoft.graph.drives.item.bundles.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.drives.item.following.FollowingRequestBuilder;
 import com.microsoft.graph.drives.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.drives.item.list.ListRequestBuilder;
@@ -23,6 +24,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of drive entities. */
@@ -418,7 +420,7 @@ public class DriveItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DriveItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -444,7 +446,7 @@ public class DriveItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DriveItemRequestBuilderGetQueryParameters queryParameters = new DriveItemRequestBuilderGetQueryParameters();
@@ -462,7 +464,7 @@ public class DriveItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new DriveItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

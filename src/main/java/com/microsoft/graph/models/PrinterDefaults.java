@@ -22,7 +22,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     /** The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table. */
     private PrintDuplexMode _duplexMode;
     /** The default set of finishings to apply to print jobs. Valid values are described in the following table. */
-    private java.util.List<String> _finishings;
+    private java.util.List<PrintFinishing> _finishings;
     /** The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions. */
     private Boolean _fitPdfToPage;
     /** The inputBin property */
@@ -126,7 +126,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
             this.put("copiesPerJob", (n) -> { currentObject.setCopiesPerJob(n.getIntegerValue()); });
             this.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
             this.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
             this.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
             this.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
             this.put("mediaColor", (n) -> { currentObject.setMediaColor(n.getStringValue()); });
@@ -143,10 +143,10 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return a string
+     * @return a printFinishing
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFinishings() {
+    public java.util.List<PrintFinishing> getFinishings() {
         return this._finishings;
     }
     /**
@@ -257,7 +257,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("copiesPerJob", this.getCopiesPerJob());
         writer.writeIntegerValue("dpi", this.getDpi());
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
-        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
+        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeStringValue("mediaColor", this.getMediaColor());
@@ -325,7 +325,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this._finishings = value;
     }
     /**

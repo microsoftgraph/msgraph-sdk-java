@@ -21,6 +21,8 @@ public class Call extends Entity implements Parsable {
     private java.util.List<CallRoute> _callRoutes;
     /** The chat information. Required information for joining a meeting. */
     private ChatInfo _chatInfo;
+    /** The contentSharingSessions property */
+    private java.util.List<ContentSharingSession> _contentSharingSessions;
     /** The direction of the call. The possible value are incoming or outgoing. Read-only. */
     private CallDirection _direction;
     /** The incomingContext property */
@@ -38,7 +40,7 @@ public class Call extends Entity implements Parsable {
     /** The participants property */
     private java.util.List<Participant> _participants;
     /** The requestedModalities property */
-    private java.util.List<String> _requestedModalities;
+    private java.util.List<Modality> _requestedModalities;
     /** The resultInfo property */
     private ResultInfo _resultInfo;
     /** The source property */
@@ -122,6 +124,14 @@ public class Call extends Entity implements Parsable {
         return this._chatInfo;
     }
     /**
+     * Gets the contentSharingSessions property value. The contentSharingSessions property
+     * @return a contentSharingSession
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ContentSharingSession> getContentSharingSessions() {
+        return this._contentSharingSessions;
+    }
+    /**
      * Gets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
      * @return a callDirection
      */
@@ -143,6 +153,7 @@ public class Call extends Entity implements Parsable {
             this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(CallOptions::createFromDiscriminatorValue)); });
             this.put("callRoutes", (n) -> { currentObject.setCallRoutes(n.getCollectionOfObjectValues(CallRoute::createFromDiscriminatorValue)); });
             this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+            this.put("contentSharingSessions", (n) -> { currentObject.setContentSharingSessions(n.getCollectionOfObjectValues(ContentSharingSession::createFromDiscriminatorValue)); });
             this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(CallDirection.class)); });
             this.put("incomingContext", (n) -> { currentObject.setIncomingContext(n.getObjectValue(IncomingContext::createFromDiscriminatorValue)); });
             this.put("mediaConfig", (n) -> { currentObject.setMediaConfig(n.getObjectValue(MediaConfig::createFromDiscriminatorValue)); });
@@ -151,7 +162,7 @@ public class Call extends Entity implements Parsable {
             this.put("myParticipantId", (n) -> { currentObject.setMyParticipantId(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
             this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallState.class)); });
@@ -220,10 +231,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The requestedModalities property
-     * @return a string
+     * @return a modality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRequestedModalities() {
+    public java.util.List<Modality> getRequestedModalities() {
         return this._requestedModalities;
     }
     /**
@@ -304,6 +315,7 @@ public class Call extends Entity implements Parsable {
         writer.writeObjectValue("callOptions", this.getCallOptions());
         writer.writeCollectionOfObjectValues("callRoutes", this.getCallRoutes());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
+        writer.writeCollectionOfObjectValues("contentSharingSessions", this.getContentSharingSessions());
         writer.writeEnumValue("direction", this.getDirection());
         writer.writeObjectValue("incomingContext", this.getIncomingContext());
         writer.writeObjectValue("mediaConfig", this.getMediaConfig());
@@ -312,7 +324,7 @@ public class Call extends Entity implements Parsable {
         writer.writeStringValue("myParticipantId", this.getMyParticipantId());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
-        writer.writeCollectionOfPrimitiveValues("requestedModalities", this.getRequestedModalities());
+        writer.writeCollectionOfEnumValues("requestedModalities", this.getRequestedModalities());
         writer.writeObjectValue("resultInfo", this.getResultInfo());
         writer.writeObjectValue("source", this.getSource());
         writer.writeEnumValue("state", this.getState());
@@ -369,6 +381,14 @@ public class Call extends Entity implements Parsable {
      */
     public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
         this._chatInfo = value;
+    }
+    /**
+     * Sets the contentSharingSessions property value. The contentSharingSessions property
+     * @param value Value to set for the contentSharingSessions property.
+     * @return a void
+     */
+    public void setContentSharingSessions(@javax.annotation.Nullable final java.util.List<ContentSharingSession> value) {
+        this._contentSharingSessions = value;
     }
     /**
      * Sets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
@@ -439,7 +459,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the requestedModalities property.
      * @return a void
      */
-    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._requestedModalities = value;
     }
     /**

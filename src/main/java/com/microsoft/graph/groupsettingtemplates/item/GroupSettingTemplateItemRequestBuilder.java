@@ -19,6 +19,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of groupSettingTemplate entities. */
@@ -335,7 +336,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -361,7 +362,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public GroupSettingTemplateItemRequestBuilderGetQueryParameters queryParameters = new GroupSettingTemplateItemRequestBuilderGetQueryParameters();
@@ -379,7 +380,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

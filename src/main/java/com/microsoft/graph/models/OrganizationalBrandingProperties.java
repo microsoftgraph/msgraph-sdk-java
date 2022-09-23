@@ -9,14 +9,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the organizationalBranding singleton. */
 public class OrganizationalBrandingProperties extends Entity implements Parsable {
     /** Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF. */
     private String _backgroundColor;
-    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
+    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
     private byte[] _backgroundImage;
     /** A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
     private String _backgroundImageRelativeUrl;
-    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo. */
+    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo. */
     private byte[] _bannerLogo;
     /** A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only. */
     private String _bannerLogoRelativeUrl;
@@ -65,7 +66,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this._backgroundColor;
     }
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -81,7 +82,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this._backgroundImageRelativeUrl;
     }
     /**
-     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -184,7 +185,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this._backgroundColor = value;
     }
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
      * @param value Value to set for the backgroundImage property.
      * @return a void
      */
@@ -200,7 +201,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         this._backgroundImageRelativeUrl = value;
     }
     /**
-     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
      * @param value Value to set for the bannerLogo property.
      * @return a void
      */

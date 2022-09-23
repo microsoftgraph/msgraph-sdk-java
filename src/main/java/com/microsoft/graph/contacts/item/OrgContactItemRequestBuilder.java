@@ -3,6 +3,7 @@ package com.microsoft.graph.contacts.item;
 import com.microsoft.graph.contacts.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.contacts.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.contacts.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.contacts.item.directreports.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.contacts.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.contacts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
@@ -23,6 +24,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of orgContact entities. */
@@ -395,7 +397,7 @@ public class OrgContactItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OrgContactItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -421,7 +423,7 @@ public class OrgContactItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OrgContactItemRequestBuilderGetQueryParameters queryParameters = new OrgContactItemRequestBuilderGetQueryParameters();
@@ -439,7 +441,7 @@ public class OrgContactItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new OrgContactItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

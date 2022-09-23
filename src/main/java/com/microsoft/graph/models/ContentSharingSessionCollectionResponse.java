@@ -1,6 +1,5 @@
-package com.microsoft.graph.serviceprincipals.item.addpassword;
+package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,28 +8,29 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the addPassword method. */
-public class PasswordCredentialPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ContentSharingSessionCollectionResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The passwordCredential property */
-    private PasswordCredential _passwordCredential;
+    /** The OdataNextLink property */
+    private String _odataNextLink;
+    /** The value property */
+    private java.util.List<ContentSharingSession> _value;
     /**
-     * Instantiates a new PasswordCredentialPostRequestBody and sets the default values.
+     * Instantiates a new ContentSharingSessionCollectionResponse and sets the default values.
      * @return a void
      */
-    public PasswordCredentialPostRequestBody() {
+    public ContentSharingSessionCollectionResponse() {
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PasswordCredentialPostRequestBody
+     * @return a ContentSharingSessionCollectionResponse
      */
     @javax.annotation.Nonnull
-    public static PasswordCredentialPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    public static ContentSharingSessionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new PasswordCredentialPostRequestBody();
+        return new ContentSharingSessionCollectionResponse();
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,18 +46,27 @@ public class PasswordCredentialPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordCredentialPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
+        final ContentSharingSessionCollectionResponse currentObject = this;
+        return new HashMap<>(2) {{
+            this.put("@odata.nextLink", (n) -> { currentObject.setOdataNextLink(n.getStringValue()); });
+            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(ContentSharingSession::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the passwordCredential property value. The passwordCredential property
-     * @return a passwordCredential
+     * Gets the @odata.nextLink property value. The OdataNextLink property
+     * @return a string
      */
     @javax.annotation.Nullable
-    public PasswordCredential getPasswordCredential() {
-        return this._passwordCredential;
+    public String getOdataNextLink() {
+        return this._odataNextLink;
+    }
+    /**
+     * Gets the value property value. The value property
+     * @return a contentSharingSession
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ContentSharingSession> getValue() {
+        return this._value;
     }
     /**
      * Serializes information the current object
@@ -66,7 +75,8 @@ public class PasswordCredentialPostRequestBody implements AdditionalDataHolder, 
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeObjectValue("passwordCredential", this.getPasswordCredential());
+        writer.writeStringValue("@odata.nextLink", this.getOdataNextLink());
+        writer.writeCollectionOfObjectValues("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -78,11 +88,19 @@ public class PasswordCredentialPostRequestBody implements AdditionalDataHolder, 
         this._additionalData = value;
     }
     /**
-     * Sets the passwordCredential property value. The passwordCredential property
-     * @param value Value to set for the passwordCredential property.
+     * Sets the @odata.nextLink property value. The OdataNextLink property
+     * @param value Value to set for the OdataNextLink property.
      * @return a void
      */
-    public void setPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
-        this._passwordCredential = value;
+    public void setOdataNextLink(@javax.annotation.Nullable final String value) {
+        this._odataNextLink = value;
+    }
+    /**
+     * Sets the value property value. The value property
+     * @param value Value to set for the value property.
+     * @return a void
+     */
+    public void setValue(@javax.annotation.Nullable final java.util.List<ContentSharingSession> value) {
+        this._value = value;
     }
 }

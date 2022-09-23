@@ -7,10 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
-    private java.util.List<String> _allowedRoles;
+    private java.util.List<CalendarRoleType> _allowedRoles;
     /** Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only. */
     private EmailAddress _emailAddress;
     /** True if the user in context (sharee or delegate) is inside the same organization as the calendar owner. */
@@ -39,10 +39,10 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     * @return a string
+     * @return a calendarRoleType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedRoles() {
+    public java.util.List<CalendarRoleType> getAllowedRoles() {
         return this._allowedRoles;
     }
     /**
@@ -61,7 +61,7 @@ public class CalendarPermission extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarPermission currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
             this.put("isInsideOrganization", (n) -> { currentObject.setIsInsideOrganization(n.getBooleanValue()); });
             this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
@@ -100,7 +100,7 @@ public class CalendarPermission extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedRoles", this.getAllowedRoles());
+        writer.writeCollectionOfEnumValues("allowedRoles", this.getAllowedRoles());
         writer.writeObjectValue("emailAddress", this.getEmailAddress());
         writer.writeBooleanValue("isInsideOrganization", this.getIsInsideOrganization());
         writer.writeBooleanValue("isRemovable", this.getIsRemovable());
@@ -111,7 +111,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the allowedRoles property.
      * @return a void
      */
-    public void setAllowedRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAllowedRoles(@javax.annotation.Nullable final java.util.List<CalendarRoleType> value) {
         this._allowedRoles = value;
     }
     /**

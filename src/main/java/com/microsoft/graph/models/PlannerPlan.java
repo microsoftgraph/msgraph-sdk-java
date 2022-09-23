@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class PlannerPlan extends Entity implements Parsable {
     /** Read-only. Nullable. Collection of buckets in the plan. */
     private java.util.List<PlannerBucket> _buckets;
-    /** Identifies the container of the plan. After it is set, this property can’t be updated. Required. */
+    /** Identifies the container of the plan. After it is set, this property cant be updated. Required. */
     private PlannerPlanContainer _container;
     /** Read-only. The user who created the plan. */
     private IdentitySet _createdBy;
@@ -53,7 +53,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._buckets;
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Gets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @return a plannerPlanContainer
      */
     @javax.annotation.Nullable
@@ -152,7 +152,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._buckets = value;
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @param value Value to set for the container property.
      * @return a void
      */

@@ -4,6 +4,7 @@ import com.microsoft.graph.models.EmailAuthenticationMethodConfiguration;
 import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodConfiguration;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
+import com.microsoft.graph.models.X509CertificateAuthenticationMethodConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -39,6 +40,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
                 case "#microsoft.graph.fido2AuthenticationMethodConfiguration": return new Fido2AuthenticationMethodConfiguration();
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case "#microsoft.graph.x509CertificateAuthenticationMethodConfiguration": return new X509CertificateAuthenticationMethodConfiguration();
             }
         }
         return new AuthenticationMethodConfiguration();

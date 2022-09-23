@@ -1,4 +1,4 @@
-package com.microsoft.graph.serviceprincipals.item.addkey;
+package com.microsoft.graph.applications.item.addkey;
 
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the addKey method. */
-public class KeyCredentialPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The keyCredential property */
@@ -21,21 +21,21 @@ public class KeyCredentialPostRequestBody implements AdditionalDataHolder, Parsa
     /** The proof property */
     private String _proof;
     /**
-     * Instantiates a new KeyCredentialPostRequestBody and sets the default values.
+     * Instantiates a new addKeyPostRequestBody and sets the default values.
      * @return a void
      */
-    public KeyCredentialPostRequestBody() {
+    public AddKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyCredentialPostRequestBody
+     * @return a addKeyPostRequestBody
      */
     @javax.annotation.Nonnull
-    public static KeyCredentialPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    public static AddKeyPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new KeyCredentialPostRequestBody();
+        return new AddKeyPostRequestBody();
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,7 +51,7 @@ public class KeyCredentialPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final KeyCredentialPostRequestBody currentObject = this;
+        final AddKeyPostRequestBody currentObject = this;
         return new HashMap<>(3) {{
             this.put("keyCredential", (n) -> { currentObject.setKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
             this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });

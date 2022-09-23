@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum RiskDetail implements ValuedEnum {
     None("none"),
     AdminGeneratedTemporaryPassword("adminGeneratedTemporaryPassword"),
@@ -16,7 +16,8 @@ public enum RiskDetail implements ValuedEnum {
     AdminConfirmedSigninCompromised("adminConfirmedSigninCompromised"),
     Hidden("hidden"),
     AdminConfirmedUserCompromised("adminConfirmedUserCompromised"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    M365DAdminDismissedDetection("m365DAdminDismissedDetection");
     public final String value;
     RiskDetail(final String value) {
         this.value = value;
@@ -39,6 +40,7 @@ public enum RiskDetail implements ValuedEnum {
             case "hidden": return Hidden;
             case "adminConfirmedUserCompromised": return AdminConfirmedUserCompromised;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "m365DAdminDismissedDetection": return M365DAdminDismissedDetection;
             default: return null;
         }
     }

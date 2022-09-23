@@ -22,7 +22,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     /** The OdataType property */
     private String _odataType;
     /** The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
-    private java.util.List<String> _operations;
+    private java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> _operations;
     /** The targetObjects property */
     private java.util.List<DirectoryObject> _targetObjects;
     /**
@@ -80,7 +80,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
             this.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations.class)); });
             this.put("targetObjects", (n) -> { currentObject.setTargetObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         }};
     }
@@ -110,10 +110,10 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     }
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     * @return a string
+     * @return a unifiedRoleManagementPolicyRuleTargetOperations
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getOperations() {
+    public java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> getOperations() {
         return this._operations;
     }
     /**
@@ -136,7 +136,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         writer.writeCollectionOfPrimitiveValues("inheritableSettings", this.getInheritableSettings());
         writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("operations", this.getOperations());
+        writer.writeCollectionOfEnumValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("targetObjects", this.getTargetObjects());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -193,7 +193,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the operations property.
      * @return a void
      */
-    public void setOperations(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setOperations(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> value) {
         this._operations = value;
     }
     /**

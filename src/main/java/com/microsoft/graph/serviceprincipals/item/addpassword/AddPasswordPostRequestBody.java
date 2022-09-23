@@ -1,38 +1,36 @@
-package com.microsoft.graph.serviceprincipals.item.addtokensigningcertificate;
+package com.microsoft.graph.serviceprincipals.item.addpassword;
 
+import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the addTokenSigningCertificate method. */
-public class SelfSignedCertificatePostRequestBody implements AdditionalDataHolder, Parsable {
+/** Provides operations to call the addPassword method. */
+public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The displayName property */
-    private String _displayName;
-    /** The endDateTime property */
-    private OffsetDateTime _endDateTime;
+    /** The passwordCredential property */
+    private PasswordCredential _passwordCredential;
     /**
-     * Instantiates a new SelfSignedCertificatePostRequestBody and sets the default values.
+     * Instantiates a new addPasswordPostRequestBody and sets the default values.
      * @return a void
      */
-    public SelfSignedCertificatePostRequestBody() {
+    public AddPasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SelfSignedCertificatePostRequestBody
+     * @return a addPasswordPostRequestBody
      */
     @javax.annotation.Nonnull
-    public static SelfSignedCertificatePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    public static AddPasswordPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new SelfSignedCertificatePostRequestBody();
+        return new AddPasswordPostRequestBody();
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -43,32 +41,23 @@ public class SelfSignedCertificatePostRequestBody implements AdditionalDataHolde
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getDisplayName() {
-        return this._displayName;
-    }
-    /**
-     * Gets the endDateTime property value. The endDateTime property
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
-    }
-    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SelfSignedCertificatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        final AddPasswordPostRequestBody currentObject = this;
+        return new HashMap<>(1) {{
+            this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the passwordCredential property value. The passwordCredential property
+     * @return a passwordCredential
+     */
+    @javax.annotation.Nullable
+    public PasswordCredential getPasswordCredential() {
+        return this._passwordCredential;
     }
     /**
      * Serializes information the current object
@@ -77,8 +66,7 @@ public class SelfSignedCertificatePostRequestBody implements AdditionalDataHolde
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeObjectValue("passwordCredential", this.getPasswordCredential());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -90,19 +78,11 @@ public class SelfSignedCertificatePostRequestBody implements AdditionalDataHolde
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
-     * @param value Value to set for the displayName property.
+     * Sets the passwordCredential property value. The passwordCredential property
+     * @param value Value to set for the passwordCredential property.
      * @return a void
      */
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
-    }
-    /**
-     * Sets the endDateTime property value. The endDateTime property
-     * @param value Value to set for the endDateTime property.
-     * @return a void
-     */
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+    public void setPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
+        this._passwordCredential = value;
     }
 }

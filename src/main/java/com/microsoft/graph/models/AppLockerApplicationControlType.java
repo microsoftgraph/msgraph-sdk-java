@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum AppLockerApplicationControlType implements ValuedEnum {
     /** Device default value, no Application Control type selected. */
     NotConfigured("notConfigured"),
@@ -13,7 +13,7 @@ public enum AppLockerApplicationControlType implements ValuedEnum {
     AuditComponentsAndStoreApps("auditComponentsAndStoreApps"),
     /** Enforce Windows components, store apps and smart locker. */
     EnforceComponentsStoreAppsAndSmartlocker("enforceComponentsStoreAppsAndSmartlocker"),
-    /** Audit Windows components, store apps and smart locker​. */
+    /** Audit Windows components, store apps and smart locker. */
     AuditComponentsStoreAppsAndSmartlocker("auditComponentsStoreAppsAndSmartlocker");
     public final String value;
     AppLockerApplicationControlType(final String value) {

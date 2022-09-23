@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class SignIn extends Entity implements Parsable {
     /** App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
     private String _appDisplayName;
@@ -40,7 +39,7 @@ public class SignIn extends Entity implements Parsable {
     /** Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden. */
     private RiskDetail _riskDetail;
     /** Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only). */
-    private java.util.List<String> _riskEventTypes;
+    private java.util.List<RiskEventType> _riskEventTypes;
     /** The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only). */
     private java.util.List<String> _riskEventTypes_v2;
     /** Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden. */
@@ -73,13 +72,6 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
-            }
-        }
         return new SignIn();
     }
     /**
@@ -168,7 +160,7 @@ public class SignIn extends Entity implements Parsable {
             this.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
             this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfEnumValues(RiskEventType.class)); });
             this.put("riskEventTypes_v2", (n) -> { currentObject.setRiskEventTypes_v2(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("riskLevelAggregated", (n) -> { currentObject.setRiskLevelAggregated(n.getEnumValue(RiskLevel.class)); });
             this.put("riskLevelDuringSignIn", (n) -> { currentObject.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel.class)); });
@@ -229,10 +221,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventTypes property value. Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-     * @return a string
+     * @return a riskEventType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRiskEventTypes() {
+    public java.util.List<RiskEventType> getRiskEventTypes() {
         return this._riskEventTypes;
     }
     /**
@@ -321,7 +313,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
-        writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
+        writer.writeCollectionOfEnumValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes_v2", this.getRiskEventTypes_v2());
         writer.writeEnumValue("riskLevelAggregated", this.getRiskLevelAggregated());
         writer.writeEnumValue("riskLevelDuringSignIn", this.getRiskLevelDuringSignIn());
@@ -448,7 +440,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskEventTypes property.
      * @return a void
      */
-    public void setRiskEventTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRiskEventTypes(@javax.annotation.Nullable final java.util.List<RiskEventType> value) {
         this._riskEventTypes = value;
     }
     /**

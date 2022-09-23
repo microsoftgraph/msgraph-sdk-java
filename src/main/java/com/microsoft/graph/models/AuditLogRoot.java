@@ -12,8 +12,6 @@ public class AuditLogRoot extends Entity implements Parsable {
     private java.util.List<DirectoryAudit> _directoryAudits;
     /** The provisioning property */
     private java.util.List<ProvisioningObjectSummary> _provisioning;
-    /** The restrictedSignIns property */
-    private java.util.List<RestrictedSignIn> _restrictedSignIns;
     /** The signIns property */
     private java.util.List<SignIn> _signIns;
     /**
@@ -52,7 +50,6 @@ public class AuditLogRoot extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("directoryAudits", (n) -> { currentObject.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
             this.put("provisioning", (n) -> { currentObject.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
-            this.put("restrictedSignIns", (n) -> { currentObject.setRestrictedSignIns(n.getCollectionOfObjectValues(RestrictedSignIn::createFromDiscriminatorValue)); });
             this.put("signIns", (n) -> { currentObject.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
         }};
     }
@@ -63,14 +60,6 @@ public class AuditLogRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
         return this._provisioning;
-    }
-    /**
-     * Gets the restrictedSignIns property value. The restrictedSignIns property
-     * @return a restrictedSignIn
-     */
-    @javax.annotation.Nullable
-    public java.util.List<RestrictedSignIn> getRestrictedSignIns() {
-        return this._restrictedSignIns;
     }
     /**
      * Gets the signIns property value. The signIns property
@@ -90,7 +79,6 @@ public class AuditLogRoot extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("directoryAudits", this.getDirectoryAudits());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
-        writer.writeCollectionOfObjectValues("restrictedSignIns", this.getRestrictedSignIns());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
     }
     /**
@@ -108,14 +96,6 @@ public class AuditLogRoot extends Entity implements Parsable {
      */
     public void setProvisioning(@javax.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this._provisioning = value;
-    }
-    /**
-     * Sets the restrictedSignIns property value. The restrictedSignIns property
-     * @param value Value to set for the restrictedSignIns property.
-     * @return a void
-     */
-    public void setRestrictedSignIns(@javax.annotation.Nullable final java.util.List<RestrictedSignIn> value) {
-        this._restrictedSignIns = value;
     }
     /**
      * Sets the signIns property value. The signIns property

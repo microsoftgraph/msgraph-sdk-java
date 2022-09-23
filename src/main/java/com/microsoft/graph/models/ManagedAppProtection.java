@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Data storage locations where a user may store managed data. */
-    private java.util.List<String> _allowedDataStorageLocations;
+    private java.util.List<ManagedAppDataStorageLocation> _allowedDataStorageLocations;
     /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedInboundDataTransferSources;
     /** Represents the level to which the device's clipboard may be shared between apps */
@@ -97,10 +97,10 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return a string
+     * @return a managedAppDataStorageLocation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedDataStorageLocations() {
+    public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
         return this._allowedDataStorageLocations;
     }
     /**
@@ -167,7 +167,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppProtection currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
             this.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
             this.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
             this.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
@@ -356,7 +356,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedDataStorageLocations", this.getAllowedDataStorageLocations());
+        writer.writeCollectionOfEnumValues("allowedDataStorageLocations", this.getAllowedDataStorageLocations());
         writer.writeEnumValue("allowedInboundDataTransferSources", this.getAllowedInboundDataTransferSources());
         writer.writeEnumValue("allowedOutboundClipboardSharingLevel", this.getAllowedOutboundClipboardSharingLevel());
         writer.writeEnumValue("allowedOutboundDataTransferDestinations", this.getAllowedOutboundDataTransferDestinations());
@@ -389,7 +389,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedDataStorageLocations property.
      * @return a void
      */
-    public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<ManagedAppDataStorageLocation> value) {
         this._allowedDataStorageLocations = value;
     }
     /**

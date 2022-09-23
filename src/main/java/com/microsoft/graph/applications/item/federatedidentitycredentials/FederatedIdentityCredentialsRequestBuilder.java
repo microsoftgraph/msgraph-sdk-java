@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity. */
@@ -40,7 +41,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
     public FederatedIdentityCredentialsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -52,14 +53,14 @@ public class FederatedIdentityCredentialsRequestBuilder {
      * @return a void
      */
     public FederatedIdentityCredentialsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
         var urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +68,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +123,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get() {
@@ -138,7 +139,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
      */
@@ -155,7 +156,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
@@ -227,7 +228,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
+    /** Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters). */
     public class FederatedIdentityCredentialsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -269,7 +270,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public FederatedIdentityCredentialsRequestBuilderGetQueryParameters queryParameters = new FederatedIdentityCredentialsRequestBuilderGetQueryParameters();
@@ -287,7 +288,7 @@ public class FederatedIdentityCredentialsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new federatedIdentityCredentialsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

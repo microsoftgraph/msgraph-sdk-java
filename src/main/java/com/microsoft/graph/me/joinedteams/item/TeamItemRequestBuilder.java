@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.joinedteams.item;
 
 import com.microsoft.graph.me.joinedteams.item.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.ChannelsRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.clone.CloneRequestBuilder;
@@ -33,6 +34,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
@@ -476,7 +478,7 @@ public class TeamItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TeamItemRequestBuilderDeleteRequestConfiguration and sets the default values.
          * @return a void
@@ -502,7 +504,7 @@ public class TeamItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TeamItemRequestBuilderGetQueryParameters queryParameters = new TeamItemRequestBuilderGetQueryParameters();
@@ -520,7 +522,7 @@ public class TeamItemRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+        public List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new TeamItemRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void

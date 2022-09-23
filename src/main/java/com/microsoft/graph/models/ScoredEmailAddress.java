@@ -17,7 +17,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     private String _itemId;
     /** The OdataType property */
     private String _odataType;
-    /** The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships. */
+    /** The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships. */
     private Double _relevanceScore;
     /** The selectionLikelihood property */
     private SelectionLikelihoodInfo _selectionLikelihood;
@@ -87,7 +87,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
+     * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
      * @return a double
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         this._odataType = value;
     }
     /**
-     * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
+     * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
      * @param value Value to set for the relevanceScore property.
      * @return a void
      */

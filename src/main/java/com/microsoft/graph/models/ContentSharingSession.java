@@ -7,26 +7,25 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class RestrictedSignIn extends SignIn implements Parsable {
-    /** The targetTenantId property */
-    private String _targetTenantId;
+/** Provides operations to manage the cloudCommunications singleton. */
+public class ContentSharingSession extends Entity implements Parsable {
     /**
-     * Instantiates a new RestrictedSignIn and sets the default values.
+     * Instantiates a new contentSharingSession and sets the default values.
      * @return a void
      */
-    public RestrictedSignIn() {
+    public ContentSharingSession() {
         super();
-        this.setOdataType("#microsoft.graph.restrictedSignIn");
+        this.setOdataType("#microsoft.graph.contentSharingSession");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RestrictedSignIn
+     * @return a contentSharingSession
      */
     @javax.annotation.Nonnull
-    public static RestrictedSignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    public static ContentSharingSession createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new RestrictedSignIn();
+        return new ContentSharingSession();
     }
     /**
      * The deserialization information for the current model
@@ -34,18 +33,9 @@ public class RestrictedSignIn extends SignIn implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RestrictedSignIn currentObject = this;
+        final ContentSharingSession currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetTenantId", (n) -> { currentObject.setTargetTenantId(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the targetTenantId property value. The targetTenantId property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getTargetTenantId() {
-        return this._targetTenantId;
     }
     /**
      * Serializes information the current object
@@ -55,14 +45,5 @@ public class RestrictedSignIn extends SignIn implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("targetTenantId", this.getTargetTenantId());
-    }
-    /**
-     * Sets the targetTenantId property value. The targetTenantId property
-     * @param value Value to set for the targetTenantId property.
-     * @return a void
-     */
-    public void setTargetTenantId(@javax.annotation.Nullable final String value) {
-        this._targetTenantId = value;
     }
 }
