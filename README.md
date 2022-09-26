@@ -23,7 +23,7 @@ dependencies {
     implementation 'com.microsoft.graph:microsoft-graph:6.0.0-SNAPSHOT'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
-    // This dependency is only needed if you are using the TokenCrendentialAuthProvider
+    // This dependency is only needed if you are using a TokenCredential object for authentication
     implementation 'com.azure:azure-identity:1.4.0'
 }
 ```
@@ -40,7 +40,7 @@ Add the dependency in `dependencies` in pom.xml
   <version>6.0.0-SNAPSHOT</version>
 </dependency>
 <dependency>
-  <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
+  <!-- This dependency is only needed if you are using a TokenCredential object for authentication -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
   <version>1.4.0</version>
