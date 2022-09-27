@@ -25,6 +25,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage;
+import com.microsoft.graph.requests.TeamworkTagCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -254,6 +255,15 @@ public class Team extends Entity implements IJsonBackedObject {
     public Channel primaryChannel;
 
     /**
+     * The Tags.
+     * 
+     */
+    @SerializedName(value = "tags", alternate = {"Tags"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.TeamworkTagCollectionPage tags;
+
+    /**
      * The Template.
      * The template this team was created from. See available templates.
      */
@@ -303,6 +313,10 @@ public class Team extends Entity implements IJsonBackedObject {
 
         if (json.has("operations")) {
             operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage.class);
+        }
+
+        if (json.has("tags")) {
+            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.requests.TeamworkTagCollectionPage.class);
         }
     }
 }

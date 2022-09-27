@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.InvitationParticipantInfo;
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
 import com.microsoft.graph.models.IncomingCallOptions;

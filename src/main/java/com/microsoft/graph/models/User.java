@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
+import com.microsoft.graph.models.AuthorizationInfo;
 import com.microsoft.graph.models.EmployeeOrgData;
 import com.microsoft.graph.models.ObjectIdentity;
 import com.microsoft.graph.models.LicenseAssignmentState;
@@ -103,6 +104,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AssignedPlan> assignedPlans;
+
+    /**
+     * The Authorization Info.
+     * 
+     */
+    @SerializedName(value = "authorizationInfo", alternate = {"AuthorizationInfo"})
+    @Expose
+	@Nullable
+    public AuthorizationInfo authorizationInfo;
 
     /**
      * The Business Phones.

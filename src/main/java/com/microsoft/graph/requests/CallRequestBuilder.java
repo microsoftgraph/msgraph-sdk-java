@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.InvitationParticipantInfo;
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
 import com.microsoft.graph.models.IncomingCallOptions;
@@ -32,6 +33,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.CallRedirectParameterSet;
+import com.microsoft.graph.models.CallAddLargeGalleryViewParameterSet;
 import com.microsoft.graph.models.CallAnswerParameterSet;
 import com.microsoft.graph.models.CallCancelMediaProcessingParameterSet;
 import com.microsoft.graph.models.CallChangeScreenSharingRoleParameterSet;
@@ -174,6 +176,16 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
     @Nonnull
     public CallRedirectRequestBuilder redirect(@Nonnull final CallRedirectParameterSet parameters) {
         return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CallAddLargeGalleryViewRequestBuilder addLargeGalleryView(@Nonnull final CallAddLargeGalleryViewParameterSet parameters) {
+        return new CallAddLargeGalleryViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addLargeGalleryView"), getClient(), null, parameters);
     }
 
     /**

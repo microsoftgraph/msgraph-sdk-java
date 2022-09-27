@@ -83,7 +83,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Roles.
-     * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      */
     @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose

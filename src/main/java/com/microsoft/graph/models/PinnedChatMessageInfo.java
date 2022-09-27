@@ -28,7 +28,7 @@ public class PinnedChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * Represents details about the chat message that is pinned.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
