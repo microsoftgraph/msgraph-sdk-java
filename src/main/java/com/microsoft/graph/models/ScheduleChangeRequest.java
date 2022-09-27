@@ -72,7 +72,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleChangeRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
             this.put("managerActionDateTime", (n) -> { currentObject.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
             this.put("managerActionMessage", (n) -> { currentObject.setManagerActionMessage(n.getStringValue()); });
@@ -148,12 +148,8 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("assignedTo", this.getAssignedTo());
-        writer.writeOffsetDateTimeValue("managerActionDateTime", this.getManagerActionDateTime());
         writer.writeStringValue("managerActionMessage", this.getManagerActionMessage());
-        writer.writeStringValue("managerUserId", this.getManagerUserId());
-        writer.writeOffsetDateTimeValue("senderDateTime", this.getSenderDateTime());
         writer.writeStringValue("senderMessage", this.getSenderMessage());
-        writer.writeStringValue("senderUserId", this.getSenderUserId());
         writer.writeEnumValue("state", this.getState());
     }
     /**

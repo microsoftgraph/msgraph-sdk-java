@@ -59,7 +59,7 @@ public class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TentativelyAcceptPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
             this.put("proposedNewTime", (n) -> { currentObject.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
             this.put("sendResponse", (n) -> { currentObject.setSendResponse(n.getBooleanValue()); });

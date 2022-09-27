@@ -43,7 +43,7 @@ public class Relation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Relation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fromTerm", (n) -> { currentObject.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
             this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(RelationType.class)); });
             this.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });

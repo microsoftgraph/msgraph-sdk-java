@@ -67,7 +67,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedMobileLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("committedContentVersion", (n) -> { currentObject.setCommittedContentVersion(n.getStringValue()); });
             this.put("contentVersions", (n) -> { currentObject.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });

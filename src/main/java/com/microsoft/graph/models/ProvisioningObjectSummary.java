@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningObjectSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("changeId", (n) -> { currentObject.setChangeId(n.getStringValue()); });
             this.put("cycleId", (n) -> { currentObject.setCycleId(n.getStringValue()); });

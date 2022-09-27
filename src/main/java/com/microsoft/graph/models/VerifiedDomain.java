@@ -64,7 +64,7 @@ public class VerifiedDomain implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifiedDomain currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getStringValue()); });
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("isInitial", (n) -> { currentObject.setIsInitial(n.getBooleanValue()); });

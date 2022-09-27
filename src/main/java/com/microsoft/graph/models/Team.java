@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;
@@ -54,6 +54,8 @@ public class Team extends Entity implements Parsable {
     private TeamSpecialization _specialization;
     /** The summary property */
     private TeamSummary _summary;
+    /** The tags property */
+    private java.util.List<TeamworkTag> _tags;
     /** The template this team was created from. See available templates. */
     private TeamsTemplate _template;
     /** The ID of the Azure Active Directory tenant. */
@@ -135,7 +137,7 @@ public class Team extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Team currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allChannels", (n) -> { currentObject.setAllChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
             this.put("channels", (n) -> { currentObject.setChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
             this.put("classification", (n) -> { currentObject.setClassification(n.getStringValue()); });
@@ -158,6 +160,7 @@ public class Team extends Entity implements Parsable {
             this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(Schedule::createFromDiscriminatorValue)); });
             this.put("specialization", (n) -> { currentObject.setSpecialization(n.getEnumValue(TeamSpecialization.class)); });
             this.put("summary", (n) -> { currentObject.setSummary(n.getObjectValue(TeamSummary::createFromDiscriminatorValue)); });
+            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(TeamworkTag::createFromDiscriminatorValue)); });
             this.put("template", (n) -> { currentObject.setTemplate(n.getObjectValue(TeamsTemplate::createFromDiscriminatorValue)); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
@@ -293,6 +296,14 @@ public class Team extends Entity implements Parsable {
         return this._summary;
     }
     /**
+     * Gets the tags property value. The tags property
+     * @return a teamworkTag
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TeamworkTag> getTags() {
+        return this._tags;
+    }
+    /**
      * Gets the template property value. The template this team was created from. See available templates.
      * @return a teamsTemplate
      */
@@ -354,6 +365,7 @@ public class Team extends Entity implements Parsable {
         writer.writeObjectValue("schedule", this.getSchedule());
         writer.writeEnumValue("specialization", this.getSpecialization());
         writer.writeObjectValue("summary", this.getSummary());
+        writer.writeCollectionOfObjectValues("tags", this.getTags());
         writer.writeObjectValue("template", this.getTemplate());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeEnumValue("visibility", this.getVisibility());
@@ -534,6 +546,14 @@ public class Team extends Entity implements Parsable {
      */
     public void setSummary(@javax.annotation.Nullable final TeamSummary value) {
         this._summary = value;
+    }
+    /**
+     * Sets the tags property value. The tags property
+     * @param value Value to set for the tags property.
+     * @return a void
+     */
+    public void setTags(@javax.annotation.Nullable final java.util.List<TeamworkTag> value) {
+        this._tags = value;
     }
     /**
      * Sets the template property value. The template this team was created from. See available templates.

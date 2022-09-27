@@ -47,7 +47,7 @@ public class GetPresencesByUserIdResponse implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetPresencesByUserIdResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(Presence::createFromDiscriminatorValue)); });
         }};
     }

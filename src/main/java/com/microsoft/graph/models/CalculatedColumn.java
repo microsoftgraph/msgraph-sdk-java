@@ -52,7 +52,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalculatedColumn currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
             this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

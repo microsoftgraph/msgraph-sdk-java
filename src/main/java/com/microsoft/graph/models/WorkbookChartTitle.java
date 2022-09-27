@@ -41,7 +41,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartTitle currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartTitleFormat::createFromDiscriminatorValue)); });
             this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });

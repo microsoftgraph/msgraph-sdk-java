@@ -132,7 +132,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJobConfiguration currentObject = this;
-        return new HashMap<>(20) {{
+        return new HashMap<String, Consumer<ParseNode>>(20) {{
             this.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
             this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
             this.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });

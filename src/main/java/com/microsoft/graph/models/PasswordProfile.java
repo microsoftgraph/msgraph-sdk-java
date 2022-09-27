@@ -52,7 +52,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordProfile currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("forceChangePasswordNextSignIn", (n) -> { currentObject.setForceChangePasswordNextSignIn(n.getBooleanValue()); });
             this.put("forceChangePasswordNextSignInWithMfa", (n) -> { currentObject.setForceChangePasswordNextSignInWithMfa(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

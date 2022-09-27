@@ -96,7 +96,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VisualInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("attribution", (n) -> { currentObject.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
             this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });

@@ -94,7 +94,7 @@ public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFilterCriteria currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("criterion1", (n) -> { currentObject.setCriterion1(n.getStringValue()); });
             this.put("criterion2", (n) -> { currentObject.setCriterion2(n.getStringValue()); });

@@ -73,7 +73,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeView currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cellAddresses", (n) -> { currentObject.setCellAddresses(n.getObjectValue(Json::createFromDiscriminatorValue)); });
             this.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
             this.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });

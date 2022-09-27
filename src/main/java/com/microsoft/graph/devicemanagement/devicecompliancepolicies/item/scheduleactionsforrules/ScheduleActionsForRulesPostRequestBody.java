@@ -55,7 +55,7 @@ public class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleActionsForRulesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("deviceComplianceScheduledActionForRules", (n) -> { currentObject.setDeviceComplianceScheduledActionForRules(n.getCollectionOfObjectValues(DeviceComplianceScheduledActionForRule::createFromDiscriminatorValue)); });
         }};
     }

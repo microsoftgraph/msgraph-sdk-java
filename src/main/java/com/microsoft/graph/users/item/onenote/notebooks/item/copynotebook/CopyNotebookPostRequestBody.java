@@ -54,7 +54,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyNotebookPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
             this.put("notebookFolder", (n) -> { currentObject.setNotebookFolder(n.getStringValue()); });
             this.put("renameAs", (n) -> { currentObject.setRenameAs(n.getStringValue()); });

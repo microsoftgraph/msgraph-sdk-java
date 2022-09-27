@@ -79,7 +79,7 @@ public class Schedule extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("offerShiftRequests", (n) -> { currentObject.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
             this.put("offerShiftRequestsEnabled", (n) -> { currentObject.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
@@ -259,8 +259,6 @@ public class Schedule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("openShiftChangeRequests", this.getOpenShiftChangeRequests());
         writer.writeCollectionOfObjectValues("openShifts", this.getOpenShifts());
         writer.writeBooleanValue("openShiftsEnabled", this.getOpenShiftsEnabled());
-        writer.writeEnumValue("provisionStatus", this.getProvisionStatus());
-        writer.writeStringValue("provisionStatusCode", this.getProvisionStatusCode());
         writer.writeCollectionOfObjectValues("schedulingGroups", this.getSchedulingGroups());
         writer.writeCollectionOfObjectValues("shifts", this.getShifts());
         writer.writeCollectionOfObjectValues("swapShiftsChangeRequests", this.getSwapShiftsChangeRequests());

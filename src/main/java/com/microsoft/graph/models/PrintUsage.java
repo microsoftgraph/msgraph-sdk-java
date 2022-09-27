@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class PrintUsage extends Entity implements Parsable {
     /** The completedBlackAndWhiteJobCount property */
     private Long _completedBlackAndWhiteJobCount;
@@ -69,7 +69,7 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintUsage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completedBlackAndWhiteJobCount", (n) -> { currentObject.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
             this.put("completedColorJobCount", (n) -> { currentObject.setCompletedColorJobCount(n.getLongValue()); });
             this.put("incompleteJobCount", (n) -> { currentObject.setIncompleteJobCount(n.getLongValue()); });

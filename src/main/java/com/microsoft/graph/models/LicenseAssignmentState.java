@@ -83,7 +83,7 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseAssignmentState currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("assignedByGroup", (n) -> { currentObject.setAssignedByGroup(n.getStringValue()); });
             this.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });

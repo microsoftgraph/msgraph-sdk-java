@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChart extends Entity implements Parsable {
     /** Represents chart axes. Read-only. */
     private WorkbookChartAxes _axes;
@@ -74,7 +74,7 @@ public class WorkbookChart extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChart currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("axes", (n) -> { currentObject.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
             this.put("dataLabels", (n) -> { currentObject.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });

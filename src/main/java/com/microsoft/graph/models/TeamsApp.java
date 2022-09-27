@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsApp extends Entity implements Parsable {
     /** The details for each version of the app. */
     private java.util.List<TeamsAppDefinition> _appDefinitions;
@@ -74,7 +73,7 @@ public class TeamsApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDefinitions", (n) -> { currentObject.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("distributionMethod", (n) -> { currentObject.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });

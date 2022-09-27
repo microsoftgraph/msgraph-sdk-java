@@ -56,7 +56,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangePasswordPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("currentPassword", (n) -> { currentObject.setCurrentPassword(n.getStringValue()); });
             this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
         }};

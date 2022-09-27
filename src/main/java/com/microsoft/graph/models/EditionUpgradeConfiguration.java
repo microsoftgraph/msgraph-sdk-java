@@ -41,7 +41,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EditionUpgradeConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("license", (n) -> { currentObject.setLicense(n.getStringValue()); });
             this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
             this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });

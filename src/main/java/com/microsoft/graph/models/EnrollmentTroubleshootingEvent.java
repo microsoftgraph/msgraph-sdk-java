@@ -81,7 +81,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
             this.put("failureCategory", (n) -> { currentObject.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });

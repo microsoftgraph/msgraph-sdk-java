@@ -48,7 +48,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadClientCertificatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("pkcs12Value", (n) -> { currentObject.setPkcs12Value(n.getStringValue()); });
         }};

@@ -86,7 +86,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceVisualization currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
             this.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
             this.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });

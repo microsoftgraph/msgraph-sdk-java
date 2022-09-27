@@ -41,7 +41,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
             this.put("isAttestationEnforced", (n) -> { currentObject.setIsAttestationEnforced(n.getBooleanValue()); });
             this.put("isSelfServiceRegistrationAllowed", (n) -> { currentObject.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });

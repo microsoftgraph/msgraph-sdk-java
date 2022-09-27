@@ -71,7 +71,7 @@ public class SubscribedSku extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubscribedSku currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getStringValue()); });
             this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
             this.put("consumedUnits", (n) -> { currentObject.setConsumedUnits(n.getIntegerValue()); });

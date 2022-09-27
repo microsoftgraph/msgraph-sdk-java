@@ -54,7 +54,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ForceDeletePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("disableUserAccounts", (n) -> { currentObject.setDisableUserAccounts(n.getBooleanValue()); });
         }};
     }

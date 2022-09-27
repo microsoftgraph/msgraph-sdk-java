@@ -43,7 +43,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftStoreForBusinessApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(MicrosoftStoreForBusinessLicenseType.class)); });
             this.put("packageIdentityName", (n) -> { currentObject.setPackageIdentityName(n.getStringValue()); });
             this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });

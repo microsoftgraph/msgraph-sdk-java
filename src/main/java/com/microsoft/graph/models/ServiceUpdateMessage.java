@@ -96,7 +96,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionRequiredByDateTime", (n) -> { currentObject.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
             this.put("attachmentsArchive", (n) -> { currentObject.setAttachmentsArchive(n.getByteArrayValue()); });

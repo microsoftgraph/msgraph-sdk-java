@@ -47,7 +47,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SyncPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("syncType", (n) -> { currentObject.setSyncType(n.getEnumValue(DeviceManagementExchangeConnectorSyncType.class)); });
         }};
     }

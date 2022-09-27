@@ -39,7 +39,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingPolicyUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("meetingChatEnabled", (n) -> { currentObject.setMeetingChatEnabled(n.getBooleanValue()); });
             this.put("meetingChatId", (n) -> { currentObject.setMeetingChatId(n.getStringValue()); });

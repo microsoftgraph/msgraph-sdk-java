@@ -63,7 +63,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecentNotebook currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastAccessedTime", (n) -> { currentObject.setLastAccessedTime(n.getOffsetDateTimeValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });

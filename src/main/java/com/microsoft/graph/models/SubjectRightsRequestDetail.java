@@ -68,7 +68,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestDetail currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("excludedItemCount", (n) -> { currentObject.setExcludedItemCount(n.getLongValue()); });
             this.put("insightCounts", (n) -> { currentObject.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
             this.put("itemCount", (n) -> { currentObject.setItemCount(n.getLongValue()); });

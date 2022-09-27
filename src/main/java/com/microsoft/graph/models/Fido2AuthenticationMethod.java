@@ -86,7 +86,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aaGuid", (n) -> { currentObject.setAaGuid(n.getStringValue()); });
             this.put("attestationCertificates", (n) -> { currentObject.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("attestationLevel", (n) -> { currentObject.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });

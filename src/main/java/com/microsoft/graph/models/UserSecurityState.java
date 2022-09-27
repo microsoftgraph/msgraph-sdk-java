@@ -107,7 +107,7 @@ public class UserSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSecurityState currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("aadUserId", (n) -> { currentObject.setAadUserId(n.getStringValue()); });
             this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });

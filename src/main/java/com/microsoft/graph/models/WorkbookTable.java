@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;
@@ -70,7 +70,7 @@ public class WorkbookTable extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
             this.put("highlightFirstColumn", (n) -> { currentObject.setHighlightFirstColumn(n.getBooleanValue()); });
             this.put("highlightLastColumn", (n) -> { currentObject.setHighlightLastColumn(n.getBooleanValue()); });

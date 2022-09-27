@@ -54,7 +54,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Pkcs12CertificateInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("notAfter", (n) -> { currentObject.setNotAfter(n.getLongValue()); });
             this.put("notBefore", (n) -> { currentObject.setNotBefore(n.getLongValue()); });

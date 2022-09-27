@@ -63,7 +63,7 @@ public class Workbook extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Workbook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
             this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
             this.put("functions", (n) -> { currentObject.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });

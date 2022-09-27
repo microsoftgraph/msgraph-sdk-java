@@ -73,7 +73,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Certification currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
             this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
@@ -121,9 +121,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("certificationDetailsUrl", this.getCertificationDetailsUrl());
         writer.writeOffsetDateTimeValue("certificationExpirationDateTime", this.getCertificationExpirationDateTime());
-        writer.writeBooleanValue("isCertifiedByMicrosoft", this.getIsCertifiedByMicrosoft());
         writer.writeBooleanValue("isPublisherAttested", this.getIsPublisherAttested());
         writer.writeOffsetDateTimeValue("lastCertificationDateTime", this.getLastCertificationDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());

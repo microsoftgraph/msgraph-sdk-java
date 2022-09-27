@@ -55,7 +55,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailFileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
             this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
             this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });

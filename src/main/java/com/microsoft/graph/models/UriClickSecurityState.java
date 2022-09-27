@@ -75,7 +75,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UriClickSecurityState currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("clickAction", (n) -> { currentObject.setClickAction(n.getStringValue()); });
             this.put("clickDateTime", (n) -> { currentObject.setClickDateTime(n.getOffsetDateTimeValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

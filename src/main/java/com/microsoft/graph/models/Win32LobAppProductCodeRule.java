@@ -39,7 +39,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppProductCodeRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
             this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
             this.put("productVersionOperator", (n) -> { currentObject.setProductVersionOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });

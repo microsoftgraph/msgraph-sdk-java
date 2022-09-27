@@ -96,7 +96,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailboxSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("archiveFolder", (n) -> { currentObject.setArchiveFolder(n.getStringValue()); });
             this.put("automaticRepliesSetting", (n) -> { currentObject.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });

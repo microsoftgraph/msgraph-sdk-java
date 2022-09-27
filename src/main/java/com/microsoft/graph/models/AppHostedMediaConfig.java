@@ -43,7 +43,7 @@ public class AppHostedMediaConfig extends MediaConfig implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppHostedMediaConfig currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("blob", (n) -> { currentObject.setBlob(n.getStringValue()); });
         }};
     }

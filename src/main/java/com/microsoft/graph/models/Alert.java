@@ -233,7 +233,7 @@ public class Alert extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Alert currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityGroupName", (n) -> { currentObject.setActivityGroupName(n.getStringValue()); });
             this.put("alertDetections", (n) -> { currentObject.setAlertDetections(n.getCollectionOfObjectValues(AlertDetection::createFromDiscriminatorValue)); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });

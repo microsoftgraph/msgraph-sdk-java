@@ -52,7 +52,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddKeyPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("keyCredential", (n) -> { currentObject.setKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
             this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
             this.put("proof", (n) -> { currentObject.setProof(n.getStringValue()); });

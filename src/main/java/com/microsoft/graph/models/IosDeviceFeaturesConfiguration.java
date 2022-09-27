@@ -51,7 +51,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
             this.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
             this.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });

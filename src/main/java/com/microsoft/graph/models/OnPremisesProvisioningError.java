@@ -63,7 +63,7 @@ public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesProvisioningError currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
             this.put("occurredDateTime", (n) -> { currentObject.setOccurredDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

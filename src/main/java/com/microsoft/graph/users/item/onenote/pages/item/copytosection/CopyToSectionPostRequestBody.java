@@ -52,7 +52,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyToSectionPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("siteCollectionId", (n) -> { currentObject.setSiteCollectionId(n.getStringValue()); });

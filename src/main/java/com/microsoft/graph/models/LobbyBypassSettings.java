@@ -50,7 +50,7 @@ public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LobbyBypassSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("isDialInBypassEnabled", (n) -> { currentObject.setIsDialInBypassEnabled(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getEnumValue(LobbyBypassScope.class)); });

@@ -66,7 +66,7 @@ public class ItemActionStat implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActionStat currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("actionCount", (n) -> { currentObject.setActionCount(n.getIntegerValue()); });
             this.put("actorCount", (n) -> { currentObject.setActorCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

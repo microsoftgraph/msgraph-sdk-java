@@ -17,7 +17,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity. */
@@ -28,11 +27,11 @@ public class AssignmentCategoriesRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new AssignmentCategoriesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -42,8 +41,8 @@ public class AssignmentCategoriesRequestBuilder {
     public AssignmentCategoriesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,14 +53,14 @@ public class AssignmentCategoriesRequestBuilder {
      * @return a void
      */
     public AssignmentCategoriesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -69,7 +68,7 @@ public class AssignmentCategoriesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +90,7 @@ public class AssignmentCategoriesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param body 
      * @return a RequestInformation
      */
@@ -100,7 +99,7 @@ public class AssignmentCategoriesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -132,13 +131,13 @@ public class AssignmentCategoriesRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @return a CompletableFuture of EducationCategoryCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationCategoryCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -148,14 +147,14 @@ public class AssignmentCategoriesRequestBuilder {
         }
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationCategoryCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AssignmentCategoriesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -165,7 +164,7 @@ public class AssignmentCategoriesRequestBuilder {
         }
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve a list of educationCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationCategoryCollectionResponse
@@ -173,7 +172,7 @@ public class AssignmentCategoriesRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AssignmentCategoriesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -183,14 +182,14 @@ public class AssignmentCategoriesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param body 
      * @return a CompletableFuture of educationCategory
      */
     public java.util.concurrent.CompletableFuture<EducationCategory> post(@javax.annotation.Nonnull final EducationCategory body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -200,7 +199,7 @@ public class AssignmentCategoriesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationCategory
@@ -208,7 +207,7 @@ public class AssignmentCategoriesRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationCategory> post(@javax.annotation.Nonnull final EducationCategory body, @javax.annotation.Nullable final java.util.function.Consumer<AssignmentCategoriesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -218,7 +217,7 @@ public class AssignmentCategoriesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignmentCategories for education
+     * Creates a new educationCategory on an educationClass.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -228,7 +227,7 @@ public class AssignmentCategoriesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -237,7 +236,7 @@ public class AssignmentCategoriesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** All categories associated with this class. Nullable. */
+    /** Retrieve a list of educationCategory objects. */
     public class AssignmentCategoriesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -279,7 +278,7 @@ public class AssignmentCategoriesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AssignmentCategoriesRequestBuilderGetQueryParameters queryParameters = new AssignmentCategoriesRequestBuilderGetQueryParameters();
@@ -297,7 +296,7 @@ public class AssignmentCategoriesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new assignmentCategoriesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

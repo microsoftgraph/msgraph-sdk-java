@@ -68,7 +68,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveRecipient currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });

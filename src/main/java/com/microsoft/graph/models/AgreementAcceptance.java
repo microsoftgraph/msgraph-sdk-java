@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
     /** The identifier of the agreement file accepted by the user. */
     private String _agreementFileId;
@@ -117,7 +117,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementAcceptance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agreementFileId", (n) -> { currentObject.setAgreementFileId(n.getStringValue()); });
             this.put("agreementId", (n) -> { currentObject.setAgreementId(n.getStringValue()); });
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });

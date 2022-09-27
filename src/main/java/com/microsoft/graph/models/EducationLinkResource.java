@@ -35,7 +35,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationLinkResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
         }};
     }

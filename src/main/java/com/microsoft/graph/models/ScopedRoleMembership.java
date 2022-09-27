@@ -48,7 +48,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScopedRoleMembership currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("administrativeUnitId", (n) -> { currentObject.setAdministrativeUnitId(n.getStringValue()); });
             this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
             this.put("roleMemberInfo", (n) -> { currentObject.setRoleMemberInfo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });

@@ -68,7 +68,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateDevicePropertiesPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });

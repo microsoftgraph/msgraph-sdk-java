@@ -66,7 +66,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetResource currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("groupType", (n) -> { currentObject.setGroupType(n.getEnumValue(GroupType.class)); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

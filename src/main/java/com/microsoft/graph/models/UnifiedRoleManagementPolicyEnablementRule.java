@@ -43,7 +43,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyEnablementRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabledRules", (n) -> { currentObject.setEnabledRules(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

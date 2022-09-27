@@ -147,7 +147,7 @@ public class BookingBusiness extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingBusiness currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("appointments", (n) -> { currentObject.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
             this.put("businessHours", (n) -> { currentObject.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
@@ -241,9 +241,7 @@ public class BookingBusiness extends Entity implements Parsable {
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
-        writer.writeBooleanValue("isPublished", this.getIsPublished());
         writer.writeStringValue("phone", this.getPhone());
-        writer.writeStringValue("publicUrl", this.getPublicUrl());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeCollectionOfObjectValues("staffMembers", this.getStaffMembers());

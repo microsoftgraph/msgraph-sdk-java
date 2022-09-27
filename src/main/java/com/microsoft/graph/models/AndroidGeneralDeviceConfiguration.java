@@ -265,7 +265,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appsBlockClipboardSharing", (n) -> { currentObject.setAppsBlockClipboardSharing(n.getBooleanValue()); });
             this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
             this.put("appsBlockYouTube", (n) -> { currentObject.setAppsBlockYouTube(n.getBooleanValue()); });

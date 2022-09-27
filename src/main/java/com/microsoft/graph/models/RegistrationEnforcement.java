@@ -56,7 +56,7 @@ public class RegistrationEnforcement implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistrationEnforcement currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("authenticationMethodsRegistrationCampaign", (n) -> { currentObject.setAuthenticationMethodsRegistrationCampaign(n.getObjectValue(AuthenticationMethodsRegistrationCampaign::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

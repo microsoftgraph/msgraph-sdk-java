@@ -39,7 +39,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharePointIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("siteGroup", (n) -> { currentObject.setSiteGroup(n.getObjectValue(SharePointIdentity::createFromDiscriminatorValue)); });
             this.put("siteUser", (n) -> { currentObject.setSiteUser(n.getObjectValue(SharePointIdentity::createFromDiscriminatorValue)); });

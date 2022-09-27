@@ -196,7 +196,7 @@ public class Contact extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Contact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assistantName", (n) -> { currentObject.setAssistantName(n.getStringValue()); });
             this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
             this.put("businessAddress", (n) -> { currentObject.setBusinessAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });

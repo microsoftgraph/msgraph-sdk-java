@@ -72,7 +72,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TextColumn currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowMultipleLines", (n) -> { currentObject.setAllowMultipleLines(n.getBooleanValue()); });
             this.put("appendChangesToExistingText", (n) -> { currentObject.setAppendChangesToExistingText(n.getBooleanValue()); });
             this.put("linesForEditing", (n) -> { currentObject.setLinesForEditing(n.getIntegerValue()); });

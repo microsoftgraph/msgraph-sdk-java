@@ -119,7 +119,7 @@ public class Subscription extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Subscription currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
             this.put("changeType", (n) -> { currentObject.setChangeType(n.getStringValue()); });
             this.put("clientState", (n) -> { currentObject.setClientState(n.getStringValue()); });

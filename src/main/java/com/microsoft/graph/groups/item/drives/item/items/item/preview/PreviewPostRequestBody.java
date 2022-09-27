@@ -48,7 +48,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PreviewPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("page", (n) -> { currentObject.setPage(n.getStringValue()); });
             this.put("zoom", (n) -> { currentObject.setZoom(n.getDoubleValue()); });
         }};

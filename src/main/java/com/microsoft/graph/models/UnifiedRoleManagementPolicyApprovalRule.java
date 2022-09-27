@@ -35,7 +35,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyApprovalRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("setting", (n) -> { currentObject.setSetting(n.getObjectValue(ApprovalSettings::createFromDiscriminatorValue)); });
         }};
     }

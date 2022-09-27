@@ -39,7 +39,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
             this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
             this.put("payloadName", (n) -> { currentObject.setPayloadName(n.getStringValue()); });

@@ -85,7 +85,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectorServerName", (n) -> { currentObject.setConnectorServerName(n.getStringValue()); });
             this.put("exchangeAlias", (n) -> { currentObject.setExchangeAlias(n.getStringValue()); });
             this.put("exchangeConnectorType", (n) -> { currentObject.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });

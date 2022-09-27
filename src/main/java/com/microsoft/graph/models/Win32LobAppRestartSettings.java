@@ -61,7 +61,7 @@ public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRestartSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("countdownDisplayBeforeRestartInMinutes", (n) -> { currentObject.setCountdownDisplayBeforeRestartInMinutes(n.getIntegerValue()); });
             this.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

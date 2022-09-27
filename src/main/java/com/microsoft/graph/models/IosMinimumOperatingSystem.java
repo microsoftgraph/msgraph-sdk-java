@@ -61,7 +61,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
             this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });

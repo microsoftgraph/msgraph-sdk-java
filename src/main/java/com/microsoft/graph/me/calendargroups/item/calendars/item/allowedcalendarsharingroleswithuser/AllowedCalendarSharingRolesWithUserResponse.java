@@ -47,7 +47,7 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllowedCalendarSharingRolesWithUserResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
         }};
     }

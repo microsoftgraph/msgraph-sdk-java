@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;
@@ -106,7 +105,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** Specifies the verified publisher of the application which this service principal represents. */
     private VerifiedPublisher _verifiedPublisher;
     /**
-     * Instantiates a new servicePrincipal and sets the default values.
+     * Instantiates a new ServicePrincipal and sets the default values.
      * @return a void
      */
     public ServicePrincipal() {
@@ -116,7 +115,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipal
+     * @return a ServicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -290,7 +289,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
             this.put("alternativeNames", (n) -> { currentObject.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });

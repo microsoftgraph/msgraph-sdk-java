@@ -43,7 +43,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudAppSecuritySessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudAppSecurityType", (n) -> { currentObject.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType.class)); });
         }};
     }

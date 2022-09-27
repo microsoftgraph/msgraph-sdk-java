@@ -77,7 +77,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppContentFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureStorageUri", (n) -> { currentObject.setAzureStorageUri(n.getStringValue()); });
             this.put("azureStorageUriExpirationDateTime", (n) -> { currentObject.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

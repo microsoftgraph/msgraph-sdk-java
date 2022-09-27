@@ -55,7 +55,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConversationMemberRoleUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conversationMemberRoles", (n) -> { currentObject.setConversationMemberRoles(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("conversationMemberUser", (n) -> { currentObject.setConversationMemberUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

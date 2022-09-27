@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
     /** Retrieve the filter applied to the column. Read-only. */
     private WorkbookFilter _filter;
@@ -42,7 +42,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableColumn currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("filter", (n) -> { currentObject.setFilter(n.getObjectValue(WorkbookFilter::createFromDiscriminatorValue)); });
             this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

@@ -61,7 +61,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRegistryRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
             this.put("keyPath", (n) -> { currentObject.setKeyPath(n.getStringValue()); });

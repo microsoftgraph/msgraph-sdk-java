@@ -47,7 +47,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
             this.put("messageUri", (n) -> { currentObject.setMessageUri(n.getStringValue()); });
             this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });

@@ -63,7 +63,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionDesktopApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("binaryName", (n) -> { currentObject.setBinaryName(n.getStringValue()); });
             this.put("binaryVersionHigh", (n) -> { currentObject.setBinaryVersionHigh(n.getStringValue()); });
             this.put("binaryVersionLow", (n) -> { currentObject.setBinaryVersionLow(n.getStringValue()); });

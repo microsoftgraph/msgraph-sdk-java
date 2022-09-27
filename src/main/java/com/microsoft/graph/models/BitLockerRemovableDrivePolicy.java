@@ -69,7 +69,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerRemovableDrivePolicy currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("blockCrossOrganizationWriteAccess", (n) -> { currentObject.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

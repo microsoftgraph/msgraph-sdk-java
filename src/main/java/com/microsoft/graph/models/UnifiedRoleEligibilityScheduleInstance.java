@@ -50,7 +50,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilityScheduleInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
             this.put("roleEligibilityScheduleId", (n) -> { currentObject.setRoleEligibilityScheduleId(n.getStringValue()); });

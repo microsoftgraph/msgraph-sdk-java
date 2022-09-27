@@ -99,7 +99,7 @@ public class Domain extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Domain currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getStringValue()); });
             this.put("availabilityStatus", (n) -> { currentObject.setAvailabilityStatus(n.getStringValue()); });
             this.put("domainNameReferences", (n) -> { currentObject.setDomainNameReferences(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });

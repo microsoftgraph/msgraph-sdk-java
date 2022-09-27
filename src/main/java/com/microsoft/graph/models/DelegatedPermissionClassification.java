@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to servicePrincipal. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /** The classification value being given. Possible value: low. Does not support $filter. */
     private PermissionClassificationType _classification;
@@ -48,7 +48,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedPermissionClassification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
             this.put("permissionId", (n) -> { currentObject.setPermissionId(n.getStringValue()); });
             this.put("permissionName", (n) -> { currentObject.setPermissionName(n.getStringValue()); });

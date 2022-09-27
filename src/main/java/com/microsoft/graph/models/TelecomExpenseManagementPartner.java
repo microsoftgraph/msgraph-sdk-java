@@ -69,7 +69,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TelecomExpenseManagementPartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appAuthorized", (n) -> { currentObject.setAppAuthorized(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the organizationalBranding singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class OrganizationalBrandingLocalization extends OrganizationalBrandingProperties implements Parsable {
     /**
      * Instantiates a new organizationalBrandingLocalization and sets the default values.
@@ -34,7 +34,7 @@ public class OrganizationalBrandingLocalization extends OrganizationalBrandingPr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBrandingLocalization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

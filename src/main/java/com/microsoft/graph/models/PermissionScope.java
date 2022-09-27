@@ -80,7 +80,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionScope currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("adminConsentDescription", (n) -> { currentObject.setAdminConsentDescription(n.getStringValue()); });
             this.put("adminConsentDisplayName", (n) -> { currentObject.setAdminConsentDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

@@ -78,7 +78,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImageInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
             this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
             this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });

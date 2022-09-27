@@ -70,7 +70,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Property currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
             this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });

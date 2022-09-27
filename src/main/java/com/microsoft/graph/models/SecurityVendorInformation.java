@@ -54,7 +54,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityVendorInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
             this.put("providerVersion", (n) -> { currentObject.setProviderVersion(n.getStringValue()); });

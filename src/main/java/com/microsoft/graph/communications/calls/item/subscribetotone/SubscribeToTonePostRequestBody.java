@@ -54,7 +54,7 @@ public class SubscribeToTonePostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubscribeToTonePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
         }};
     }

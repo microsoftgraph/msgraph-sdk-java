@@ -62,7 +62,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePlanInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });

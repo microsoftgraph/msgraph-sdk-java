@@ -35,7 +35,7 @@ public class Initiator extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Initiator currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiatorType", (n) -> { currentObject.setInitiatorType(n.getEnumValue(InitiatorType.class)); });
         }};
     }

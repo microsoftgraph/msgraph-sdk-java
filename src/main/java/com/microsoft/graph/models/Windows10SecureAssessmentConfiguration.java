@@ -75,7 +75,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10SecureAssessmentConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowPrinting", (n) -> { currentObject.setAllowPrinting(n.getBooleanValue()); });
             this.put("allowScreenCapture", (n) -> { currentObject.setAllowScreenCapture(n.getBooleanValue()); });
             this.put("allowTextSuggestion", (n) -> { currentObject.setAllowTextSuggestion(n.getBooleanValue()); });

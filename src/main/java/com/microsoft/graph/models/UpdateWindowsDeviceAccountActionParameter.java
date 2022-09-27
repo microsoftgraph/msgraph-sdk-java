@@ -90,7 +90,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateWindowsDeviceAccountActionParameter currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("calendarSyncEnabled", (n) -> { currentObject.setCalendarSyncEnabled(n.getBooleanValue()); });
             this.put("deviceAccount", (n) -> { currentObject.setDeviceAccount(n.getObjectValue(WindowsDeviceAccount::createFromDiscriminatorValue)); });
             this.put("deviceAccountEmail", (n) -> { currentObject.setDeviceAccountEmail(n.getStringValue()); });

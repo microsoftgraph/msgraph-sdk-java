@@ -39,7 +39,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableSort currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfObjectValues(WorkbookSortField::createFromDiscriminatorValue)); });
             this.put("matchCase", (n) -> { currentObject.setMatchCase(n.getBooleanValue()); });
             this.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });

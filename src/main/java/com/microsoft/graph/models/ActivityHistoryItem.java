@@ -85,7 +85,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivityHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDurationSeconds", (n) -> { currentObject.setActiveDurationSeconds(n.getIntegerValue()); });
             this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(UserActivity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

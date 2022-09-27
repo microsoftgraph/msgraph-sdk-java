@@ -60,7 +60,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("recordType", (n) -> { currentObject.setRecordType(n.getStringValue()); });

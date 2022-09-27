@@ -60,7 +60,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharepointIds currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
             this.put("listItemId", (n) -> { currentObject.setListItemId(n.getStringValue()); });
             this.put("listItemUniqueId", (n) -> { currentObject.setListItemUniqueId(n.getStringValue()); });

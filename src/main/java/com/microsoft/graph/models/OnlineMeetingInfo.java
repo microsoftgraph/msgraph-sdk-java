@@ -66,7 +66,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeetingInfo currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
             this.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

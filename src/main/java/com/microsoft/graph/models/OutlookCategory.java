@@ -54,7 +54,7 @@ public class OutlookCategory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("color", (n) -> { currentObject.setColor(n.getEnumValue(CategoryColor.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
         }};

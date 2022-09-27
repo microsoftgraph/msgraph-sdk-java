@@ -82,7 +82,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookSortField currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });

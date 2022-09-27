@@ -182,7 +182,7 @@ public class Event extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Event currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowNewTimeProposals", (n) -> { currentObject.setAllowNewTimeProposals(n.getBooleanValue()); });
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
             this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(Attendee::createFromDiscriminatorValue)); });

@@ -37,7 +37,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpNamedLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ipRanges", (n) -> { currentObject.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
             this.put("isTrusted", (n) -> { currentObject.setIsTrusted(n.getBooleanValue()); });
         }};

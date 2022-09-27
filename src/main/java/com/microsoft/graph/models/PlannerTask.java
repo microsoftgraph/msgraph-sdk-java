@@ -205,7 +205,7 @@ public class PlannerTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeChecklistItemCount", (n) -> { currentObject.setActiveChecklistItemCount(n.getIntegerValue()); });
             this.put("appliedCategories", (n) -> { currentObject.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
             this.put("assignedToTaskBoardFormat", (n) -> { currentObject.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });

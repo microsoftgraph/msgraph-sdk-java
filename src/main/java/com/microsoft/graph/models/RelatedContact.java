@@ -80,7 +80,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RelatedContact currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("accessConsent", (n) -> { currentObject.setAccessConsent(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });

@@ -43,7 +43,7 @@ public class TeamworkApplicationIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkApplicationIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationIdentityType", (n) -> { currentObject.setApplicationIdentityType(n.getEnumValue(TeamworkApplicationIdentityType.class)); });
         }};
     }

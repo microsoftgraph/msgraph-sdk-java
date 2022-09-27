@@ -50,7 +50,7 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SizeRange currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("maximumSize", (n) -> { currentObject.setMaximumSize(n.getIntegerValue()); });
             this.put("minimumSize", (n) -> { currentObject.setMinimumSize(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

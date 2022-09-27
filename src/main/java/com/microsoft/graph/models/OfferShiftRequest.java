@@ -50,7 +50,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfferShiftRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recipientActionDateTime", (n) -> { currentObject.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
             this.put("recipientActionMessage", (n) -> { currentObject.setRecipientActionMessage(n.getStringValue()); });
             this.put("recipientUserId", (n) -> { currentObject.setRecipientUserId(n.getStringValue()); });
@@ -97,7 +97,6 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("recipientActionDateTime", this.getRecipientActionDateTime());
         writer.writeStringValue("recipientActionMessage", this.getRecipientActionMessage());
         writer.writeStringValue("recipientUserId", this.getRecipientUserId());
         writer.writeStringValue("senderShiftId", this.getSenderShiftId());

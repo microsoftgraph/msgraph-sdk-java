@@ -160,7 +160,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterCapabilities currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<String, Consumer<ParseNode>>(26) {{
             this.put("bottomMargins", (n) -> { currentObject.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
             this.put("collation", (n) -> { currentObject.setCollation(n.getBooleanValue()); });
             this.put("colorModes", (n) -> { currentObject.setColorModes(n.getCollectionOfEnumValues(PrintColorMode.class)); });

@@ -106,7 +106,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamMemberSettings currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("allowAddRemoveApps", (n) -> { currentObject.setAllowAddRemoveApps(n.getBooleanValue()); });
             this.put("allowCreatePrivateChannels", (n) -> { currentObject.setAllowCreatePrivateChannels(n.getBooleanValue()); });
             this.put("allowCreateUpdateChannels", (n) -> { currentObject.setAllowCreateUpdateChannels(n.getBooleanValue()); });

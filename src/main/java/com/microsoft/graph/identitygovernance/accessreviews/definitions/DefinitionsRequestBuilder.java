@@ -17,7 +17,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity. */
@@ -28,11 +27,11 @@ public class DefinitionsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new DefinitionsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -42,8 +41,8 @@ public class DefinitionsRequestBuilder {
     public DefinitionsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identityGovernance/accessReviews/definitions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/identityGovernance/accessReviews/definitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,14 +53,14 @@ public class DefinitionsRequestBuilder {
      * @return a void
      */
     public DefinitionsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identityGovernance/accessReviews/definitions{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/identityGovernance/accessReviews/definitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -69,7 +68,7 @@ public class DefinitionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +90,7 @@ public class DefinitionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param body 
      * @return a RequestInformation
      */
@@ -100,7 +99,7 @@ public class DefinitionsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -134,13 +133,13 @@ public class DefinitionsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @return a CompletableFuture of AccessReviewScheduleDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinitionCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -150,14 +149,14 @@ public class DefinitionsRequestBuilder {
         }
     }
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessReviewScheduleDefinitionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DefinitionsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -167,7 +166,7 @@ public class DefinitionsRequestBuilder {
         }
     }
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessReviewScheduleDefinitionCollectionResponse
@@ -175,7 +174,7 @@ public class DefinitionsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DefinitionsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -185,14 +184,14 @@ public class DefinitionsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param body 
      * @return a CompletableFuture of accessReviewScheduleDefinition
      */
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> post(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -202,7 +201,7 @@ public class DefinitionsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewScheduleDefinition
@@ -210,7 +209,7 @@ public class DefinitionsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> post(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<DefinitionsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -220,7 +219,7 @@ public class DefinitionsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -230,7 +229,7 @@ public class DefinitionsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -239,7 +238,7 @@ public class DefinitionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents the template and scheduling for an access review. */
+    /** Get a list of the accessReviewScheduleDefinition objects and their properties. */
     public class DefinitionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -281,7 +280,7 @@ public class DefinitionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DefinitionsRequestBuilderGetQueryParameters queryParameters = new DefinitionsRequestBuilderGetQueryParameters();
@@ -299,7 +298,7 @@ public class DefinitionsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new definitionsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

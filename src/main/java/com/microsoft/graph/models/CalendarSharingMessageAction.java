@@ -68,7 +68,7 @@ public class CalendarSharingMessageAction implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarSharingMessageAction currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CalendarSharingAction.class)); });
             this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(CalendarSharingActionType.class)); });
             this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(CalendarSharingActionImportance.class)); });

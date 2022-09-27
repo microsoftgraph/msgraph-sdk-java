@@ -57,7 +57,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
             this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
@@ -124,7 +124,6 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
         writer.writeOffsetDateTimeValue("sharedDateTime", this.getSharedDateTime());
-        writer.writeObjectValue("sharingReference", this.getSharingReference());
         writer.writeStringValue("sharingSubject", this.getSharingSubject());
         writer.writeStringValue("sharingType", this.getSharingType());
         writer.writeAdditionalData(this.getAdditionalData());

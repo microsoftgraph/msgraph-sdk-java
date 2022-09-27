@@ -57,7 +57,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignLicensePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("addLicenses", (n) -> { currentObject.setAddLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
             this.put("removeLicenses", (n) -> { currentObject.setRemoveLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

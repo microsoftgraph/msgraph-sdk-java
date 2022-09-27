@@ -45,7 +45,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdminConsentRequestPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("notifyReviewers", (n) -> { currentObject.setNotifyReviewers(n.getBooleanValue()); });
             this.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });

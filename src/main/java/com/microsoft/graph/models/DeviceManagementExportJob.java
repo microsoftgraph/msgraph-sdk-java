@@ -63,7 +63,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExportJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });

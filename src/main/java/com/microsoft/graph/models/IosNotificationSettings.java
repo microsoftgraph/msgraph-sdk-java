@@ -105,7 +105,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNotificationSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("alertType", (n) -> { currentObject.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
             this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
             this.put("badgesEnabled", (n) -> { currentObject.setBadgesEnabled(n.getBooleanValue()); });

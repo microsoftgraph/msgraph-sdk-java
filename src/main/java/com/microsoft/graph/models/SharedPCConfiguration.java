@@ -122,7 +122,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedPCConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountManagerPolicy", (n) -> { currentObject.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
             this.put("allowedAccounts", (n) -> { currentObject.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
             this.put("allowLocalStorage", (n) -> { currentObject.setAllowLocalStorage(n.getBooleanValue()); });

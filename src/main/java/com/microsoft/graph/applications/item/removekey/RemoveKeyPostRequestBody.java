@@ -48,7 +48,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveKeyPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
             this.put("proof", (n) -> { currentObject.setProof(n.getStringValue()); });
         }};

@@ -47,7 +47,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryEstimateOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
             this.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
             this.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });

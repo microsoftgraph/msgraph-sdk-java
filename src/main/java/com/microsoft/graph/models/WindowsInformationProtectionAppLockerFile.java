@@ -50,7 +50,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionAppLockerFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
             this.put("fileHash", (n) -> { currentObject.setFileHash(n.getStringValue()); });

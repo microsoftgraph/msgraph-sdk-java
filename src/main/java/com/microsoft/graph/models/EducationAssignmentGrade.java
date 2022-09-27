@@ -59,7 +59,7 @@ public class EducationAssignmentGrade implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentGrade currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("gradedBy", (n) -> { currentObject.setGradedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("gradedDateTime", (n) -> { currentObject.setGradedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

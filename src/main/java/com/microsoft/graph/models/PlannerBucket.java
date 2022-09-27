@@ -42,7 +42,7 @@ public class PlannerBucket extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerBucket currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
             this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });

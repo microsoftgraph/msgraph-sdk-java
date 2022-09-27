@@ -69,7 +69,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MainError currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
             this.put("innererror", (n) -> { currentObject.setInnererror(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });

@@ -80,7 +80,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookGeoCoordinates currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("accuracy", (n) -> { currentObject.setAccuracy(n.getDoubleValue()); });
             this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
             this.put("altitudeAccuracy", (n) -> { currentObject.setAltitudeAccuracy(n.getDoubleValue()); });

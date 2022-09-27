@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /** A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all. */
     private java.util.List<String> _clientApplicationIds;
@@ -82,7 +82,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });

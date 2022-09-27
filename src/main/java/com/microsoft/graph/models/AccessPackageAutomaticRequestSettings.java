@@ -53,7 +53,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAutomaticRequestSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("gracePeriodBeforeAccessRemoval", (n) -> { currentObject.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { currentObject.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });

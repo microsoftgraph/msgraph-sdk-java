@@ -35,7 +35,7 @@ public class LocationConstraintItem extends Location implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocationConstraintItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("resolveAvailability", (n) -> { currentObject.setResolveAvailability(n.getBooleanValue()); });
         }};
     }

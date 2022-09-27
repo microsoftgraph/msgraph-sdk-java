@@ -43,7 +43,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserScopeTeamsAppInstallation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chat", (n) -> { currentObject.setChat(n.getObjectValue(Chat::createFromDiscriminatorValue)); });
         }};
     }

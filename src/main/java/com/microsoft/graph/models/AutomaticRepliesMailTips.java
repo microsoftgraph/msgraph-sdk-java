@@ -54,7 +54,7 @@ public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesMailTips currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

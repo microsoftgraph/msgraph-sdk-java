@@ -35,7 +35,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersistentBrowserSessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(PersistentBrowserSessionMode.class)); });
         }};
     }

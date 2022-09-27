@@ -33,7 +33,7 @@ public class DisableAndDeleteUserApplyAction extends AccessReviewApplyAction imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DisableAndDeleteUserApplyAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

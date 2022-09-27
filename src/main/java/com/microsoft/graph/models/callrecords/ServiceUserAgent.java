@@ -35,7 +35,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUserAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(ServiceRole.class)); });
         }};
     }

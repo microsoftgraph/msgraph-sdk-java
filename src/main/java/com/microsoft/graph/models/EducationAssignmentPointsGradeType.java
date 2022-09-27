@@ -35,7 +35,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentPointsGradeType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maxPoints", (n) -> { currentObject.setMaxPoints(n.getFloatValue()); });
         }};
     }

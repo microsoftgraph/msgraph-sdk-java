@@ -46,7 +46,7 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveGroupPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
         }};
     }

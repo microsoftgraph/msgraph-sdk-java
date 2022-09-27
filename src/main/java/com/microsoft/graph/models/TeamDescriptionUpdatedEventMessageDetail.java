@@ -39,7 +39,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamDescriptionUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamDescription", (n) -> { currentObject.setTeamDescription(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });

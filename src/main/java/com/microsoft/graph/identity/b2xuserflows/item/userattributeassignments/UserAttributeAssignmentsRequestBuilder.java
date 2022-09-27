@@ -18,7 +18,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity. */
@@ -29,16 +28,16 @@ public class UserAttributeAssignmentsRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The setOrder property */
     @javax.annotation.Nonnull
     public SetOrderRequestBuilder setOrder() {
         return new SetOrderRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new UserAttributeAssignmentsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -48,8 +47,8 @@ public class UserAttributeAssignmentsRequestBuilder {
     public UserAttributeAssignmentsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -60,14 +59,14 @@ public class UserAttributeAssignmentsRequestBuilder {
      * @return a void
      */
     public UserAttributeAssignmentsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -75,7 +74,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +96,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body 
      * @return a RequestInformation
      */
@@ -106,7 +105,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -130,13 +129,13 @@ public class UserAttributeAssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignmentCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -146,14 +145,14 @@ public class UserAttributeAssignmentsRequestBuilder {
         }
     }
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UserAttributeAssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -163,7 +162,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         }
     }
     /**
-     * The user attribute assignments included in the user flow.
+     * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
@@ -171,7 +170,7 @@ public class UserAttributeAssignmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UserAttributeAssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -189,14 +188,14 @@ public class UserAttributeAssignmentsRequestBuilder {
         return new GetOrderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body 
      * @return a CompletableFuture of identityUserFlowAttributeAssignment
      */
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> post(@javax.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -206,7 +205,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttributeAssignment
@@ -214,7 +213,7 @@ public class UserAttributeAssignmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> post(@javax.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<UserAttributeAssignmentsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -224,7 +223,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userAttributeAssignments for identity
+     * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -234,7 +233,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -243,7 +242,7 @@ public class UserAttributeAssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The user attribute assignments included in the user flow. */
+    /** Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow. */
     public class UserAttributeAssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -285,7 +284,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public UserAttributeAssignmentsRequestBuilderGetQueryParameters queryParameters = new UserAttributeAssignmentsRequestBuilderGetQueryParameters();
@@ -303,7 +302,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new userAttributeAssignmentsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

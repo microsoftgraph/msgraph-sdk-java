@@ -69,7 +69,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetSchedulePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("availabilityViewInterval", (n) -> { currentObject.setAvailabilityViewInterval(n.getIntegerValue()); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("schedules", (n) -> { currentObject.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });

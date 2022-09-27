@@ -63,7 +63,7 @@ public class EducationSubmission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("outcomes", (n) -> { currentObject.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
             this.put("reassignedBy", (n) -> { currentObject.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("reassignedDateTime", (n) -> { currentObject.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -201,19 +201,9 @@ public class EducationSubmission extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("outcomes", this.getOutcomes());
-        writer.writeObjectValue("reassignedBy", this.getReassignedBy());
-        writer.writeOffsetDateTimeValue("reassignedDateTime", this.getReassignedDateTime());
         writer.writeObjectValue("recipient", this.getRecipient());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
-        writer.writeObjectValue("returnedBy", this.getReturnedBy());
-        writer.writeOffsetDateTimeValue("returnedDateTime", this.getReturnedDateTime());
-        writer.writeEnumValue("status", this.getStatus());
-        writer.writeObjectValue("submittedBy", this.getSubmittedBy());
-        writer.writeOffsetDateTimeValue("submittedDateTime", this.getSubmittedDateTime());
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
-        writer.writeObjectValue("unsubmittedBy", this.getUnsubmittedBy());
-        writer.writeOffsetDateTimeValue("unsubmittedDateTime", this.getUnsubmittedDateTime());
     }
     /**
      * Sets the outcomes property value. The outcomes property

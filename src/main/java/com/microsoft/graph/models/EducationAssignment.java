@@ -196,7 +196,7 @@ public class EducationAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
             this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
             this.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
@@ -324,27 +324,18 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeEnumValue("addToCalendarAction", this.getAddToCalendarAction());
         writer.writeBooleanValue("allowLateSubmissions", this.getAllowLateSubmissions());
         writer.writeBooleanValue("allowStudentsToAddResourcesToSubmission", this.getAllowStudentsToAddResourcesToSubmission());
-        writer.writeOffsetDateTimeValue("assignDateTime", this.getAssignDateTime());
-        writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
         writer.writeObjectValue("assignTo", this.getAssignTo());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
         writer.writeStringValue("classId", this.getClassId());
         writer.writeOffsetDateTimeValue("closeDateTime", this.getCloseDateTime());
-        writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("instructions", this.getInstructions());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
         writer.writeObjectValue("rubric", this.getRubric());
-        writer.writeEnumValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("submissions", this.getSubmissions());
-        writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
      * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.

@@ -58,7 +58,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestionsResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("emptySuggestionsReason", (n) -> { currentObject.setEmptySuggestionsReason(n.getStringValue()); });
             this.put("meetingTimeSuggestions", (n) -> { currentObject.setMeetingTimeSuggestions(n.getCollectionOfObjectValues(MeetingTimeSuggestion::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -72,7 +72,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicError currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(PublicInnerError::createFromDiscriminatorValue)); });

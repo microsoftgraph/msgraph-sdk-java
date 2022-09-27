@@ -37,7 +37,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BasicAuthentication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("username", (n) -> { currentObject.setUsername(n.getStringValue()); });
         }};

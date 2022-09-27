@@ -45,7 +45,7 @@ public class UserConsentRequest extends Request implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserConsentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("approval", (n) -> { currentObject.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
         }};

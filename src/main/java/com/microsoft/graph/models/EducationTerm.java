@@ -79,7 +79,7 @@ public class EducationTerm implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTerm currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });

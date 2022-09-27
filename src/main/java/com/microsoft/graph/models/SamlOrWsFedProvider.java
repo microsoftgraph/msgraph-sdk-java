@@ -53,7 +53,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SamlOrWsFedProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("issuerUri", (n) -> { currentObject.setIssuerUri(n.getStringValue()); });
             this.put("metadataExchangeUri", (n) -> { currentObject.setMetadataExchangeUri(n.getStringValue()); });
             this.put("passiveSignInUri", (n) -> { currentObject.setPassiveSignInUri(n.getStringValue()); });

@@ -60,7 +60,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnlineMeetingInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -53,7 +53,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectedOrganizationMembers currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectedOrganizationId", (n) -> { currentObject.setConnectedOrganizationId(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
         }};

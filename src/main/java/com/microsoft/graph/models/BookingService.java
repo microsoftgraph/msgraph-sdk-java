@@ -145,7 +145,7 @@ public class BookingService extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingService currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
             this.put("defaultDuration", (n) -> { currentObject.setDefaultDuration(n.getPeriodValue()); });
@@ -273,7 +273,6 @@ public class BookingService extends Entity implements Parsable {
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeBooleanValue("smsNotificationsEnabled", this.getSmsNotificationsEnabled());
         writer.writeCollectionOfPrimitiveValues("staffMemberIds", this.getStaffMemberIds());
-        writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
      * Sets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.

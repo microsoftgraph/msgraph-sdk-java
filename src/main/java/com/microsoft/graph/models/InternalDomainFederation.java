@@ -63,7 +63,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InternalDomainFederation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeSignInUri", (n) -> { currentObject.setActiveSignInUri(n.getStringValue()); });
             this.put("federatedIdpMfaBehavior", (n) -> { currentObject.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
             this.put("isSignedAuthenticationRequestRequired", (n) -> { currentObject.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });

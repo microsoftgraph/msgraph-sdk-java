@@ -50,7 +50,7 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkforceIntegrationEncryption currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(WorkforceIntegrationEncryptionProtocol.class)); });
             this.put("secret", (n) -> { currentObject.setSecret(n.getStringValue()); });

@@ -37,7 +37,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsMxRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("mailExchange", (n) -> { currentObject.setMailExchange(n.getStringValue()); });
             this.put("preference", (n) -> { currentObject.setPreference(n.getIntegerValue()); });
         }};

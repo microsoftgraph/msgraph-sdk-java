@@ -54,7 +54,7 @@ public class StopHoldMusicPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StopHoldMusicPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
         }};
     }

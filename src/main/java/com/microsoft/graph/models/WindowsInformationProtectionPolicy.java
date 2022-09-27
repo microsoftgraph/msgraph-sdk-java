@@ -65,7 +65,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("daysWithoutContactBeforeUnenroll", (n) -> { currentObject.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
             this.put("mdmEnrollmentUrl", (n) -> { currentObject.setMdmEnrollmentUrl(n.getStringValue()); });
             this.put("minutesOfInactivityBeforeDeviceLock", (n) -> { currentObject.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });

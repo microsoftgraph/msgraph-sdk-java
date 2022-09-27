@@ -52,7 +52,7 @@ public class TeamworkActivityTopic implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkActivityTopic currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(TeamworkActivityTopicSource.class)); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });

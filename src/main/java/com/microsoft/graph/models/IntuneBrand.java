@@ -123,7 +123,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntuneBrand currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
             this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
             this.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });

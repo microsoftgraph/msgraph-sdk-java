@@ -52,7 +52,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyInboundTrust currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isCompliantDeviceAccepted", (n) -> { currentObject.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
             this.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { currentObject.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
             this.put("isMfaAccepted", (n) -> { currentObject.setIsMfaAccepted(n.getBooleanValue()); });

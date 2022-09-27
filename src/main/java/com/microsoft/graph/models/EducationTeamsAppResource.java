@@ -57,7 +57,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTeamsAppResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appIconWebUrl", (n) -> { currentObject.setAppIconWebUrl(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("teamsEmbeddedContentUrl", (n) -> { currentObject.setTeamsEmbeddedContentUrl(n.getStringValue()); });

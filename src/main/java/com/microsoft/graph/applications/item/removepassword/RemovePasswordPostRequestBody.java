@@ -46,7 +46,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemovePasswordPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
         }};
     }

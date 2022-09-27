@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity. */
@@ -27,11 +26,11 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /**
      * Instantiates a new HomeRealmDiscoveryPoliciesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,8 +40,8 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
     public HomeRealmDiscoveryPoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
      * @return a void
      */
     public HomeRealmDiscoveryPoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/policies/homeRealmDiscoveryPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         }
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         }
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
@@ -164,7 +163,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body 
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
      */
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> post(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
@@ -199,7 +198,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> post(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The policy to control Azure AD authentication behavior for federated users. */
+    /** Get a list of homeRealmDiscoveryPolicy objects. */
     public class HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -270,7 +269,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters queryParameters = new HomeRealmDiscoveryPoliciesRequestBuilderGetQueryParameters();
@@ -288,7 +287,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new homeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

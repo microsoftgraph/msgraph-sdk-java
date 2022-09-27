@@ -62,7 +62,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchHitsContainer currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(SearchAggregation::createFromDiscriminatorValue)); });
             this.put("hits", (n) -> { currentObject.setHits(n.getCollectionOfObjectValues(SearchHit::createFromDiscriminatorValue)); });
             this.put("moreResultsAvailable", (n) -> { currentObject.setMoreResultsAvailable(n.getBooleanValue()); });

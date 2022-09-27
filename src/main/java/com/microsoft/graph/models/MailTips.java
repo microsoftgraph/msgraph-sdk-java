@@ -118,7 +118,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailTips currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("automaticReplies", (n) -> { currentObject.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
             this.put("customMailTip", (n) -> { currentObject.setCustomMailTip(n.getStringValue()); });
             this.put("deliveryRestricted", (n) -> { currentObject.setDeliveryRestricted(n.getBooleanValue()); });

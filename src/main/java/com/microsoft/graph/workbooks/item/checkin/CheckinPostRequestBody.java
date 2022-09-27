@@ -64,7 +64,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CheckinPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("checkInAs", (n) -> { currentObject.setCheckInAs(n.getStringValue()); });
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
         }};

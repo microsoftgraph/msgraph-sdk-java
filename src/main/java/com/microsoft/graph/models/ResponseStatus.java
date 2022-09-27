@@ -51,7 +51,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResponseStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("response", (n) -> { currentObject.setResponse(n.getEnumValue(ResponseType.class)); });
             this.put("time", (n) -> { currentObject.setTime(n.getOffsetDateTimeValue()); });

@@ -66,7 +66,7 @@ public class RegistryKeyState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RegistryKeyState currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("hive", (n) -> { currentObject.setHive(n.getEnumValue(RegistryHive.class)); });
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

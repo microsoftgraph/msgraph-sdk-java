@@ -53,7 +53,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageDisplayName", (n) -> { currentObject.setAccessPackageDisplayName(n.getStringValue()); });
             this.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
         }};

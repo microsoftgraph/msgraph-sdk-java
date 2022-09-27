@@ -13,6 +13,8 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     private Map<String, Object> _additionalData;
     /** Defines who can join the Teams live event. Possible values are listed in the following table. */
     private BroadcastMeetingAudience _allowedAudience;
+    /** Caption settings of a Teams live event. */
+    private BroadcastMeetingCaptionSettings _captions;
     /** Indicates whether attendee report is enabled for this Teams live event. Default value is false. */
     private Boolean _isAttendeeReportEnabled;
     /** Indicates whether Q&A is enabled for this Teams live event. Default value is false. */
@@ -58,14 +60,23 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
         return this._allowedAudience;
     }
     /**
+     * Gets the captions property value. Caption settings of a Teams live event.
+     * @return a broadcastMeetingCaptionSettings
+     */
+    @javax.annotation.Nullable
+    public BroadcastMeetingCaptionSettings getCaptions() {
+        return this._captions;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("allowedAudience", (n) -> { currentObject.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
+            this.put("captions", (n) -> { currentObject.setCaptions(n.getObjectValue(BroadcastMeetingCaptionSettings::createFromDiscriminatorValue)); });
             this.put("isAttendeeReportEnabled", (n) -> { currentObject.setIsAttendeeReportEnabled(n.getBooleanValue()); });
             this.put("isQuestionAndAnswerEnabled", (n) -> { currentObject.setIsQuestionAndAnswerEnabled(n.getBooleanValue()); });
             this.put("isRecordingEnabled", (n) -> { currentObject.setIsRecordingEnabled(n.getBooleanValue()); });
@@ -121,6 +132,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("allowedAudience", this.getAllowedAudience());
+        writer.writeObjectValue("captions", this.getCaptions());
         writer.writeBooleanValue("isAttendeeReportEnabled", this.getIsAttendeeReportEnabled());
         writer.writeBooleanValue("isQuestionAndAnswerEnabled", this.getIsQuestionAndAnswerEnabled());
         writer.writeBooleanValue("isRecordingEnabled", this.getIsRecordingEnabled());
@@ -143,6 +155,14 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      */
     public void setAllowedAudience(@javax.annotation.Nullable final BroadcastMeetingAudience value) {
         this._allowedAudience = value;
+    }
+    /**
+     * Sets the captions property value. Caption settings of a Teams live event.
+     * @param value Value to set for the captions property.
+     * @return a void
+     */
+    public void setCaptions(@javax.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
+        this._captions = value;
     }
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.

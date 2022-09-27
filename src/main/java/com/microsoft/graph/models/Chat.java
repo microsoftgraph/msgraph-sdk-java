@@ -24,7 +24,7 @@ public class Chat extends Entity implements Parsable {
     private java.util.List<ChatMessage> _messages;
     /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
     private TeamworkOnlineMeetingInfo _onlineMeetingInfo;
-    /** The pinnedMessages property */
+    /** A collection of all the pinned messages in the chat. Nullable. */
     private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
     /** A collection of all the tabs in the chat. Nullable. */
     private java.util.List<TeamsTab> _tabs;
@@ -75,7 +75,7 @@ public class Chat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Chat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chatType", (n) -> { currentObject.setChatType(n.getEnumValue(ChatType.class)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
@@ -131,7 +131,7 @@ public class Chat extends Entity implements Parsable {
         return this._onlineMeetingInfo;
     }
     /**
-     * Gets the pinnedMessages property value. The pinnedMessages property
+     * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @return a pinnedChatMessageInfo
      */
     @javax.annotation.Nullable
@@ -248,7 +248,7 @@ public class Chat extends Entity implements Parsable {
         this._onlineMeetingInfo = value;
     }
     /**
-     * Sets the pinnedMessages property value. The pinnedMessages property
+     * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @param value Value to set for the pinnedMessages property.
      * @return a void
      */

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class AuthoredNote extends Entity implements Parsable {
     /** Identity information about the note's author. */
     private Identity _author;
@@ -16,7 +17,7 @@ public class AuthoredNote extends Entity implements Parsable {
     /** The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
     /**
-     * Instantiates a new AuthoredNote and sets the default values.
+     * Instantiates a new authoredNote and sets the default values.
      * @return a void
      */
     public AuthoredNote() {
@@ -26,7 +27,7 @@ public class AuthoredNote extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthoredNote
+     * @return a authoredNote
      */
     @javax.annotation.Nonnull
     public static AuthoredNote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +65,7 @@ public class AuthoredNote extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthoredNote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("author", (n) -> { currentObject.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

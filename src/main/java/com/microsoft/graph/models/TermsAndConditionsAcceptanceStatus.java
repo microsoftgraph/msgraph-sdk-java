@@ -61,7 +61,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditionsAcceptanceStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedDateTime", (n) -> { currentObject.setAcceptedDateTime(n.getOffsetDateTimeValue()); });
             this.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getIntegerValue()); });
             this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getObjectValue(TermsAndConditions::createFromDiscriminatorValue)); });

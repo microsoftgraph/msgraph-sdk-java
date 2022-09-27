@@ -154,7 +154,7 @@ public class DriveItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
             this.put("audio", (n) -> { currentObject.setAudio(n.getObjectValue(Audio::createFromDiscriminatorValue)); });
             this.put("bundle", (n) -> { currentObject.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });

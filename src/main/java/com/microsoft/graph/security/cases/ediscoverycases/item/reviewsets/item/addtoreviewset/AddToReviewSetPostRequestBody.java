@@ -58,7 +58,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddToReviewSetPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("additionalDataOptions", (n) -> { currentObject.setAdditionalDataOptions(n.getEnumValue(AdditionalDataOptions.class)); });
             this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         }};

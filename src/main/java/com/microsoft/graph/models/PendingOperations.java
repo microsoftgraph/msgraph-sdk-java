@@ -48,7 +48,7 @@ public class PendingOperations implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PendingOperations currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("pendingContentUpdate", (n) -> { currentObject.setPendingContentUpdate(n.getObjectValue(PendingContentUpdate::createFromDiscriminatorValue)); });
         }};

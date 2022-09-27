@@ -17,6 +17,7 @@ import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.ActivityHistoryItem;
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.Agreement;
@@ -217,7 +218,6 @@ import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.FieldValueSet;
 import com.microsoft.graph.models.FileAssessmentRequest;
 import com.microsoft.graph.models.FileAttachment;
-import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.GroupSetting;
 import com.microsoft.graph.models.GroupSettingTemplate;
@@ -485,6 +485,8 @@ import com.microsoft.graph.models.TeamsTemplate;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.models.TeamworkBot;
 import com.microsoft.graph.models.TeamworkHostedContent;
+import com.microsoft.graph.models.TeamworkTag;
+import com.microsoft.graph.models.TeamworkTagMember;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
@@ -492,6 +494,7 @@ import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.graph.models.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.models.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.TermsOfUseContainer;
+import com.microsoft.graph.models.termstore.Group;
 import com.microsoft.graph.models.termstore.Relation;
 import com.microsoft.graph.models.termstore.Set;
 import com.microsoft.graph.models.termstore.Store;
@@ -667,6 +670,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.accessReviewStage": return new AccessReviewStage();
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.activityHistoryItem": return new ActivityHistoryItem();
+                case "#microsoft.graph.addLargeGalleryViewOperation": return new AddLargeGalleryViewOperation();
                 case "#microsoft.graph.adminConsentRequestPolicy": return new AdminConsentRequestPolicy();
                 case "#microsoft.graph.administrativeUnit": return new AdministrativeUnit();
                 case "#microsoft.graph.agreement": return new Agreement();
@@ -1135,6 +1139,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.teamwork": return new Teamwork();
                 case "#microsoft.graph.teamworkBot": return new TeamworkBot();
                 case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
+                case "#microsoft.graph.teamworkTag": return new TeamworkTag();
+                case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
                 case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
@@ -1285,7 +1291,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Entity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

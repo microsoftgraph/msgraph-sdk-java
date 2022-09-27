@@ -57,7 +57,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
             this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getStringValue()); });
             this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });

@@ -45,7 +45,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsSrvRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("nameTarget", (n) -> { currentObject.setNameTarget(n.getStringValue()); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });

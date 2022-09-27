@@ -163,7 +163,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
             this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
             this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
@@ -363,7 +363,6 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("applyOnlyToWindowsPhone81", this.getApplyOnlyToWindowsPhone81());
         writer.writeBooleanValue("appsBlockCopyPaste", this.getAppsBlockCopyPaste());
         writer.writeBooleanValue("bluetoothBlocked", this.getBluetoothBlocked());
         writer.writeBooleanValue("cameraBlocked", this.getCameraBlocked());

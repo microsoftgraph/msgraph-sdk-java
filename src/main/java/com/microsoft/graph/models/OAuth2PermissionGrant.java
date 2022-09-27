@@ -60,7 +60,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OAuth2PermissionGrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("consentType", (n) -> { currentObject.setConsentType(n.getStringValue()); });
             this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });

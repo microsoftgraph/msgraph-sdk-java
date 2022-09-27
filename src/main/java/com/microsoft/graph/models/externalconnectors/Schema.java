@@ -46,7 +46,7 @@ public class Schema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
         }};

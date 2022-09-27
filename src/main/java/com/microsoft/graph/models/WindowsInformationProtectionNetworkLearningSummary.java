@@ -46,7 +46,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionNetworkLearningSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
         }};

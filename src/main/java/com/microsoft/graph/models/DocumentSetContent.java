@@ -60,7 +60,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSetContent currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });

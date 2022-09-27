@@ -64,7 +64,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });

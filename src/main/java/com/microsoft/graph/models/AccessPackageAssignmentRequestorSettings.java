@@ -118,7 +118,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestorSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToAddAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });

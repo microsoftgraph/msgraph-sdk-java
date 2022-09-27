@@ -58,7 +58,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DateTimeTimeZone currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("dateTime", (n) -> { currentObject.setDateTime(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });

@@ -66,7 +66,7 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Bundle currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("album", (n) -> { currentObject.setAlbum(n.getObjectValue(Album::createFromDiscriminatorValue)); });
             this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

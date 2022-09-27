@@ -60,7 +60,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisionedPlan currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });

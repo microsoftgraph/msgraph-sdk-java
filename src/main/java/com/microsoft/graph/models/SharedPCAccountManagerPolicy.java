@@ -71,7 +71,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedPCAccountManagerPolicy currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("accountDeletionPolicy", (n) -> { currentObject.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
             this.put("cacheAccountsAboveDiskFreePercentage", (n) -> { currentObject.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
             this.put("inactiveThresholdDays", (n) -> { currentObject.setInactiveThresholdDays(n.getIntegerValue()); });

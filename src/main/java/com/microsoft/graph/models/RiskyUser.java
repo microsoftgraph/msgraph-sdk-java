@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class RiskyUser extends Entity implements Parsable {
     /** The activity related to user risk level change */
     private java.util.List<RiskyUserHistoryItem> _history;
@@ -29,7 +30,7 @@ public class RiskyUser extends Entity implements Parsable {
     /** Risky user principal name. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new RiskyUser and sets the default values.
+     * Instantiates a new riskyUser and sets the default values.
      * @return a void
      */
     public RiskyUser() {
@@ -39,7 +40,7 @@ public class RiskyUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyUser
+     * @return a riskyUser
      */
     @javax.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +61,7 @@ public class RiskyUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
             this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
             this.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });

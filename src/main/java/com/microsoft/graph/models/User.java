@@ -27,6 +27,8 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AssignedPlan> _assignedPlans;
     /** The authentication methods that are supported for the user. */
     private Authentication _authentication;
+    /** The authorizationInfo property */
+    private AuthorizationInfo _authorizationInfo;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. */
     private OffsetDateTime _birthday;
     /** The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith). */
@@ -334,6 +336,14 @@ public class User extends DirectoryObject implements Parsable {
         return this._authentication;
     }
     /**
+     * Gets the authorizationInfo property value. The authorizationInfo property
+     * @return a authorizationInfo
+     */
+    @javax.annotation.Nullable
+    public AuthorizationInfo getAuthorizationInfo() {
+        return this._authorizationInfo;
+    }
+    /**
      * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
      * @return a OffsetDateTime
      */
@@ -596,7 +606,7 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final User currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aboutMe", (n) -> { currentObject.setAboutMe(n.getStringValue()); });
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
@@ -606,6 +616,7 @@ public class User extends DirectoryObject implements Parsable {
             this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
             this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
             this.put("authentication", (n) -> { currentObject.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
+            this.put("authorizationInfo", (n) -> { currentObject.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
             this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
             this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
@@ -1341,6 +1352,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("assignedLicenses", this.getAssignedLicenses());
         writer.writeCollectionOfObjectValues("assignedPlans", this.getAssignedPlans());
         writer.writeObjectValue("authentication", this.getAuthentication());
+        writer.writeObjectValue("authorizationInfo", this.getAuthorizationInfo());
         writer.writeOffsetDateTimeValue("birthday", this.getBirthday());
         writer.writeCollectionOfPrimitiveValues("businessPhones", this.getBusinessPhones());
         writer.writeObjectValue("calendar", this.getCalendar());
@@ -1521,6 +1533,14 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setAuthentication(@javax.annotation.Nullable final Authentication value) {
         this._authentication = value;
+    }
+    /**
+     * Sets the authorizationInfo property value. The authorizationInfo property
+     * @param value Value to set for the authorizationInfo property.
+     * @return a void
+     */
+    public void setAuthorizationInfo(@javax.annotation.Nullable final AuthorizationInfo value) {
+        this._authorizationInfo = value;
     }
     /**
      * Sets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.

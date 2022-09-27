@@ -38,7 +38,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyExpirationRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isExpirationRequired", (n) -> { currentObject.setIsExpirationRequired(n.getBooleanValue()); });
             this.put("maximumDuration", (n) -> { currentObject.setMaximumDuration(n.getPeriodValue()); });
         }};

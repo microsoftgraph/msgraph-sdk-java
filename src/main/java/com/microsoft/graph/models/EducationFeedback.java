@@ -69,7 +69,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedback currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("feedbackBy", (n) -> { currentObject.setFeedbackBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("feedbackDateTime", (n) -> { currentObject.setFeedbackDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

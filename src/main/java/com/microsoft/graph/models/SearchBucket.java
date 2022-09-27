@@ -68,7 +68,7 @@ public class SearchBucket implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchBucket currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("aggregationFilterToken", (n) -> { currentObject.setAggregationFilterToken(n.getStringValue()); });
             this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
             this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });

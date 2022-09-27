@@ -60,7 +60,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertDetection currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getStringValue()); });
             this.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
