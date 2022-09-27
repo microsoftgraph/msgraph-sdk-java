@@ -21,7 +21,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
       - name: Easy detect-secrets
@@ -65,7 +65,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
       - name: Download Current Build
