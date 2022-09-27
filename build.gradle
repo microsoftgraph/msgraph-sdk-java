@@ -154,8 +154,8 @@ def fixAscNames = { name ->
 
 compileJava {
   options.compilerArgs << "-parameters"
-  sourceCompatibility = '17'
-  targetCompatibility = '17'
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
 }
 
 def getVersionCode() {

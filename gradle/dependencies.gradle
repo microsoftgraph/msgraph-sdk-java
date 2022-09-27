@@ -8,5 +8,6 @@ dependencies {
     compileOnly 'com.github.spotbugs:spotbugs-annotations:4.7.0'
     
     // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:3.0.0-SNAPSHOT'
+    api 'com.microsoft.graph:microsoft-graph-core:3.0.1-SNAPSHOT'
 }
+
