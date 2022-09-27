@@ -2,9 +2,8 @@ buildscript {
     repositories {
         google()
         gradlePluginPortal()
-		maven {
-			url "https://plugins.gradle.org/m2/"
-		}
+		maven { url 'https://plugins.gradle.org/m2/' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
 
     dependencies {
@@ -17,6 +16,7 @@ buildscript {
 repositories {
     google()
     gradlePluginPortal()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply plugin: "com.android.library"
