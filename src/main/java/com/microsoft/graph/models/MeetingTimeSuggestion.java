@@ -76,7 +76,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestion currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("attendeeAvailability", (n) -> { currentObject.setAttendeeAvailability(n.getCollectionOfObjectValues(AttendeeAvailability::createFromDiscriminatorValue)); });
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getDoubleValue()); });
             this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });

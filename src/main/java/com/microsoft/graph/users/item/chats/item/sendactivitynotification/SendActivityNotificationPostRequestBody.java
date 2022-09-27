@@ -76,7 +76,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SendActivityNotificationPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
             this.put("chainId", (n) -> { currentObject.setChainId(n.getLongValue()); });
             this.put("previewText", (n) -> { currentObject.setPreviewText(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });

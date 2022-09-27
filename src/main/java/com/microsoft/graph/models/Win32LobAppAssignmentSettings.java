@@ -49,7 +49,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deliveryOptimizationPriority", (n) -> { currentObject.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
             this.put("installTimeSettings", (n) -> { currentObject.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
             this.put("notifications", (n) -> { currentObject.setNotifications(n.getEnumValue(Win32LobAppNotification.class)); });

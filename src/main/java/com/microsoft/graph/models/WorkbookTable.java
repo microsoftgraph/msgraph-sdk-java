@@ -70,7 +70,7 @@ public class WorkbookTable extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
             this.put("highlightFirstColumn", (n) -> { currentObject.setHighlightFirstColumn(n.getBooleanValue()); });
             this.put("highlightLastColumn", (n) -> { currentObject.setHighlightLastColumn(n.getBooleanValue()); });

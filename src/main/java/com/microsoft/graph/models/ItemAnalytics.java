@@ -47,7 +47,7 @@ public class ItemAnalytics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemAnalytics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allTime", (n) -> { currentObject.setAllTime(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
             this.put("itemActivityStats", (n) -> { currentObject.setItemActivityStats(n.getCollectionOfObjectValues(ItemActivityStat::createFromDiscriminatorValue)); });
             this.put("lastSevenDays", (n) -> { currentObject.setLastSevenDays(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });

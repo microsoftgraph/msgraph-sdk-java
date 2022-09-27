@@ -76,7 +76,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRolePermission currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
             this.put("excludedResourceActions", (n) -> { currentObject.setExcludedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });

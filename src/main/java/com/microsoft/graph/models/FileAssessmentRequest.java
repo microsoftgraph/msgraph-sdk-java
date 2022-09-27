@@ -45,7 +45,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
         }};

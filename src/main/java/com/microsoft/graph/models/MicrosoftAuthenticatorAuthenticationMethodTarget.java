@@ -43,7 +43,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethodTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMode", (n) -> { currentObject.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
         }};
     }

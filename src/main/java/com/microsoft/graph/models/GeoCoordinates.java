@@ -60,7 +60,7 @@ public class GeoCoordinates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GeoCoordinates currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
             this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
             this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });

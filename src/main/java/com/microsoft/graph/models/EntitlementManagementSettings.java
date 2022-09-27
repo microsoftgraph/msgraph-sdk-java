@@ -54,7 +54,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EntitlementManagementSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { currentObject.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodValue()); });
             this.put("externalUserLifecycleAction", (n) -> { currentObject.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction.class)); });
         }};

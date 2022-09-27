@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the threads property of the microsoft.graph.group entity. */
@@ -41,8 +40,8 @@ public class ThreadsRequestBuilder {
     public ThreadsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/groups/{group%2Did}/threads{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/groups/{group%2Did}/threads{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class ThreadsRequestBuilder {
      * @return a void
      */
     public ThreadsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/groups/{group%2Did}/threads{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/groups/{group%2Did}/threads{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The group's conversation threads. Nullable.
+     * Get all the threads of a group.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class ThreadsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The group's conversation threads. Nullable.
+     * Get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class ThreadsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to threads for groups
+     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class ThreadsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to threads for groups
+     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class ThreadsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's conversation threads. Nullable.
+     * Get all the threads of a group.
      * @return a CompletableFuture of ConversationThreadCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ConversationThreadCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class ThreadsRequestBuilder {
         }
     }
     /**
-     * The group's conversation threads. Nullable.
+     * Get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConversationThreadCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ConversationThreadCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ThreadsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class ThreadsRequestBuilder {
         }
     }
     /**
-     * The group's conversation threads. Nullable.
+     * Get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ConversationThreadCollectionResponse
@@ -164,7 +163,7 @@ public class ThreadsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ConversationThreadCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ThreadsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class ThreadsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to threads for groups
+     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body 
      * @return a CompletableFuture of conversationThread
      */
     public java.util.concurrent.CompletableFuture<ConversationThread> post(@javax.annotation.Nonnull final ConversationThread body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class ThreadsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to threads for groups
+     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationThread
@@ -199,7 +198,7 @@ public class ThreadsRequestBuilder {
     public java.util.concurrent.CompletableFuture<ConversationThread> post(@javax.annotation.Nonnull final ConversationThread body, @javax.annotation.Nullable final java.util.function.Consumer<ThreadsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class ThreadsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to threads for groups
+     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class ThreadsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class ThreadsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The group's conversation threads. Nullable. */
+    /** Get all the threads of a group. */
     public class ThreadsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -262,7 +261,7 @@ public class ThreadsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ThreadsRequestBuilderGetQueryParameters queryParameters = new ThreadsRequestBuilderGetQueryParameters();
@@ -280,7 +279,7 @@ public class ThreadsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new threadsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

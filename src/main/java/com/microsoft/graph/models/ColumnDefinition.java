@@ -186,7 +186,7 @@ public class ColumnDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("boolean", (n) -> { currentObject.setBoolean(n.getObjectValue(BooleanColumn::createFromDiscriminatorValue)); });
             this.put("calculated", (n) -> { currentObject.setCalculated(n.getObjectValue(CalculatedColumn::createFromDiscriminatorValue)); });
             this.put("choice", (n) -> { currentObject.setChoice(n.getObjectValue(ChoiceColumn::createFromDiscriminatorValue)); });

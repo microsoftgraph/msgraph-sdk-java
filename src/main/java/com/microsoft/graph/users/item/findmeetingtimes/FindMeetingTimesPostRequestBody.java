@@ -72,7 +72,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FindMeetingTimesPostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(AttendeeBase::createFromDiscriminatorValue)); });
             this.put("isOrganizerOptional", (n) -> { currentObject.setIsOrganizerOptional(n.getBooleanValue()); });
             this.put("locationConstraint", (n) -> { currentObject.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });

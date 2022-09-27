@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to endpoint. */
+/** Provides operations to call the instantiate method. */
 public class Endpoint extends DirectoryObject implements Parsable {
     /** The capability property */
     private String _capability;
@@ -52,7 +52,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Endpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("capability", (n) -> { currentObject.setCapability(n.getStringValue()); });
             this.put("providerId", (n) -> { currentObject.setProviderId(n.getStringValue()); });
             this.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });

@@ -69,7 +69,7 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintUsage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completedBlackAndWhiteJobCount", (n) -> { currentObject.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
             this.put("completedColorJobCount", (n) -> { currentObject.setCompletedColorJobCount(n.getLongValue()); });
             this.put("incompleteJobCount", (n) -> { currentObject.setIncompleteJobCount(n.getLongValue()); });

@@ -80,7 +80,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessSessionControls currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("applicationEnforcedRestrictions", (n) -> { currentObject.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
             this.put("cloudAppSecurity", (n) -> { currentObject.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
             this.put("disableResilienceDefaults", (n) -> { currentObject.setDisableResilienceDefaults(n.getBooleanValue()); });

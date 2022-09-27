@@ -103,7 +103,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageApprovalStage currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("durationBeforeAutomaticDenial", (n) -> { currentObject.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
             this.put("durationBeforeEscalation", (n) -> { currentObject.setDurationBeforeEscalation(n.getPeriodValue()); });
             this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });

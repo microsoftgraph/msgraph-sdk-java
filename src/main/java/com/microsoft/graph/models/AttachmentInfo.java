@@ -70,7 +70,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttachmentInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("attachmentType", (n) -> { currentObject.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

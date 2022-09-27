@@ -52,7 +52,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserFeedback currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rating", (n) -> { currentObject.setRating(n.getEnumValue(UserFeedbackRating.class)); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });

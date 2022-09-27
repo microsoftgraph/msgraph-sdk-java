@@ -97,7 +97,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Photo currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("cameraMake", (n) -> { currentObject.setCameraMake(n.getStringValue()); });
             this.put("cameraModel", (n) -> { currentObject.setCameraModel(n.getStringValue()); });
             this.put("exposureDenominator", (n) -> { currentObject.setExposureDenominator(n.getDoubleValue()); });

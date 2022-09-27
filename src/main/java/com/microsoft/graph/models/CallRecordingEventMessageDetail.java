@@ -88,7 +88,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRecordingEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
             this.put("callRecordingDisplayName", (n) -> { currentObject.setCallRecordingDisplayName(n.getStringValue()); });
             this.put("callRecordingDuration", (n) -> { currentObject.setCallRecordingDuration(n.getPeriodValue()); });

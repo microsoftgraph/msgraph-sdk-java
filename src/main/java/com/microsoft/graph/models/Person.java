@@ -104,7 +104,7 @@ public class Person extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Person currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("birthday", (n) -> { currentObject.setBirthday(n.getStringValue()); });
             this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
             this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });

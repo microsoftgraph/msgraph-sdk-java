@@ -12,7 +12,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the remove method. */
@@ -33,7 +32,7 @@ public class RemoveRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/sites/microsoft.graph.remove";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +44,13 @@ public class RemoveRequestBuilder {
      */
     public RemoveRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/sites/microsoft.graph.remove";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action remove
+     * Unfollow a user's site or multiple sites.
      * @param body 
      * @return a RequestInformation
      */
@@ -60,7 +59,7 @@ public class RemoveRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action remove
+     * Unfollow a user's site or multiple sites.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -84,14 +83,14 @@ public class RemoveRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action remove
+     * Unfollow a user's site or multiple sites.
      * @param body 
      * @return a CompletableFuture of removeResponse
      */
     public java.util.concurrent.CompletableFuture<RemoveResponse> post(@javax.annotation.Nonnull final RemovePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,7 +100,7 @@ public class RemoveRequestBuilder {
         }
     }
     /**
-     * Invoke action remove
+     * Unfollow a user's site or multiple sites.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of removeResponse
@@ -109,7 +108,7 @@ public class RemoveRequestBuilder {
     public java.util.concurrent.CompletableFuture<RemoveResponse> post(@javax.annotation.Nonnull final RemovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<RemoveRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,7 +118,7 @@ public class RemoveRequestBuilder {
         }
     }
     /**
-     * Invoke action remove
+     * Unfollow a user's site or multiple sites.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -129,7 +128,7 @@ public class RemoveRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +144,7 @@ public class RemoveRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new removeRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

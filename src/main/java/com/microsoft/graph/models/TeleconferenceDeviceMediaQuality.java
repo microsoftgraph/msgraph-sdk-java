@@ -157,7 +157,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<>(22) {{
+        return new HashMap<String, Consumer<ParseNode>>(22) {{
             this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
             this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
             this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });

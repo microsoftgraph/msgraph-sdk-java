@@ -60,7 +60,7 @@ public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BatchRecordDecisionsPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
             this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
             this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });

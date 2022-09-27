@@ -68,7 +68,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnValidation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("defaultLanguage", (n) -> { currentObject.setDefaultLanguage(n.getStringValue()); });
             this.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
             this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });

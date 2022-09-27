@@ -58,7 +58,7 @@ public class RubricQualitySelectedColumnModel implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricQualitySelectedColumnModel currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("columnId", (n) -> { currentObject.setColumnId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });

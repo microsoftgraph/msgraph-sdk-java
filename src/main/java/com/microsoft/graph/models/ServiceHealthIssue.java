@@ -75,7 +75,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceHealthIssue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
             this.put("feature", (n) -> { currentObject.setFeature(n.getStringValue()); });
             this.put("featureGroup", (n) -> { currentObject.setFeatureGroup(n.getStringValue()); });

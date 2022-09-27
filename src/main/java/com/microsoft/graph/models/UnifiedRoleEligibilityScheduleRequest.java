@@ -103,7 +103,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilityScheduleRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(UnifiedRoleScheduleRequestActions.class)); });
             this.put("appScope", (n) -> { currentObject.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
             this.put("appScopeId", (n) -> { currentObject.setAppScopeId(n.getStringValue()); });

@@ -62,7 +62,7 @@ public class SharingInvitation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingInvitation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("invitedBy", (n) -> { currentObject.setInvitedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

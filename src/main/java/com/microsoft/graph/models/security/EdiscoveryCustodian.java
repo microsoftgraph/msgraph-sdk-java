@@ -62,7 +62,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryCustodian currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acknowledgedDateTime", (n) -> { currentObject.setAcknowledgedDateTime(n.getOffsetDateTimeValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("lastIndexOperation", (n) -> { currentObject.setLastIndexOperation(n.getObjectValue(EdiscoveryIndexOperation::createFromDiscriminatorValue)); });

@@ -69,7 +69,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNetworkUsageRule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("cellularDataBlocked", (n) -> { currentObject.setCellularDataBlocked(n.getBooleanValue()); });
             this.put("cellularDataBlockWhenRoaming", (n) -> { currentObject.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
             this.put("managedApps", (n) -> { currentObject.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });

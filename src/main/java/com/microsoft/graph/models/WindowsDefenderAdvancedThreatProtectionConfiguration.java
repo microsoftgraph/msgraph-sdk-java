@@ -53,7 +53,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderAdvancedThreatProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowSampleSharing", (n) -> { currentObject.setAllowSampleSharing(n.getBooleanValue()); });
             this.put("enableExpeditedTelemetryReporting", (n) -> { currentObject.setEnableExpeditedTelemetryReporting(n.getBooleanValue()); });
         }};

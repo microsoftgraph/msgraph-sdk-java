@@ -72,7 +72,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceDeviceOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationVersion", (n) -> { currentObject.setConfigurationVersion(n.getIntegerValue()); });
             this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
             this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });

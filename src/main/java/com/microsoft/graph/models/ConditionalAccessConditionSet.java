@@ -98,7 +98,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessConditionSet currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
             this.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
             this.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });

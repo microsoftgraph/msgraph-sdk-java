@@ -52,7 +52,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessageViewpoint currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
             this.put("isFavorited", (n) -> { currentObject.setIsFavorited(n.getBooleanValue()); });
             this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });

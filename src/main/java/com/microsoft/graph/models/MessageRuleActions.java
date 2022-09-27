@@ -92,7 +92,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRuleActions currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("assignCategories", (n) -> { currentObject.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("copyToFolder", (n) -> { currentObject.setCopyToFolder(n.getStringValue()); });
             this.put("delete", (n) -> { currentObject.setDelete(n.getBooleanValue()); });

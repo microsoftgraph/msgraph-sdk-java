@@ -11,25 +11,25 @@ import java.util.Objects;
 /** Devices that are managed or pre-enrolled through Intune */
 public class ManagedDevice extends Entity implements Parsable {
     /** Code that allows the Activation Lock on a device to be bypassed. This property is read-only. */
-    private String _activationLockBypassCode;
+    private final String _activationLockBypassCode;
     /** Android security patch level. This property is read-only. */
-    private String _androidSecurityPatchLevel;
+    private final String _androidSecurityPatchLevel;
     /** The unique identifier for the Azure Active Directory device. Read only. This property is read-only. */
-    private String _azureADDeviceId;
+    private final String _azureADDeviceId;
     /** Whether the device is Azure Active Directory registered. This property is read-only. */
-    private Boolean _azureADRegistered;
+    private final Boolean _azureADRegistered;
     /** The DateTime when device compliance grace period expires. This property is read-only. */
-    private OffsetDateTime _complianceGracePeriodExpirationDateTime;
+    private final OffsetDateTime _complianceGracePeriodExpirationDateTime;
     /** Compliance state. */
     private ComplianceState _complianceState;
     /** ConfigrMgr client enabled features. This property is read-only. */
-    private ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
+    private final ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
     /** List of ComplexType deviceActionResult objects. This property is read-only. */
-    private java.util.List<DeviceActionResult> _deviceActionResults;
+    private final java.util.List<DeviceActionResult> _deviceActionResults;
     /** Device category */
     private DeviceCategory _deviceCategory;
     /** Device category display name. This property is read-only. */
-    private String _deviceCategoryDisplayName;
+    private final String _deviceCategoryDisplayName;
     /** Device compliance policy states for this device. */
     private java.util.List<DeviceCompliancePolicyState> _deviceCompliancePolicyStates;
     /** Device configuration states for this device. */
@@ -37,43 +37,43 @@ public class ManagedDevice extends Entity implements Parsable {
     /** Possible ways of adding a mobile device to management. */
     private DeviceEnrollmentType _deviceEnrollmentType;
     /** The device health attestation state. This property is read-only. */
-    private DeviceHealthAttestationState _deviceHealthAttestationState;
+    private final DeviceHealthAttestationState _deviceHealthAttestationState;
     /** Name of the device. This property is read-only. */
-    private String _deviceName;
+    private final String _deviceName;
     /** Device registration status. */
     private DeviceRegistrationState _deviceRegistrationState;
     /** Whether the device is Exchange ActiveSync activated. This property is read-only. */
-    private Boolean _easActivated;
+    private final Boolean _easActivated;
     /** Exchange ActivationSync activation time of the device. This property is read-only. */
-    private OffsetDateTime _easActivationDateTime;
+    private final OffsetDateTime _easActivationDateTime;
     /** Exchange ActiveSync Id of the device. This property is read-only. */
-    private String _easDeviceId;
+    private final String _easDeviceId;
     /** Email(s) for the user associated with the device. This property is read-only. */
-    private String _emailAddress;
+    private final String _emailAddress;
     /** Enrollment time of the device. This property is read-only. */
-    private OffsetDateTime _enrolledDateTime;
+    private final OffsetDateTime _enrolledDateTime;
     /** Ethernet MAC. This property is read-only. */
-    private String _ethernetMacAddress;
+    private final String _ethernetMacAddress;
     /** Device Exchange Access State. */
     private DeviceManagementExchangeAccessState _exchangeAccessState;
     /** Device Exchange Access State Reason. */
     private DeviceManagementExchangeAccessStateReason _exchangeAccessStateReason;
     /** Last time the device contacted Exchange. This property is read-only. */
-    private OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
+    private final OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
     /** Free Storage in Bytes. This property is read-only. */
-    private Long _freeStorageSpaceInBytes;
+    private final Long _freeStorageSpaceInBytes;
     /** Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only. */
-    private String _iccid;
+    private final String _iccid;
     /** IMEI. This property is read-only. */
-    private String _imei;
+    private final String _imei;
     /** Device encryption status. This property is read-only. */
-    private Boolean _isEncrypted;
+    private final Boolean _isEncrypted;
     /** Device supervised status. This property is read-only. */
-    private Boolean _isSupervised;
+    private final Boolean _isSupervised;
     /** whether the device is jail broken or rooted. This property is read-only. */
-    private String _jailBroken;
+    private final String _jailBroken;
     /** The date and time that the device last completed a successful sync with Intune. This property is read-only. */
-    private OffsetDateTime _lastSyncDateTime;
+    private final OffsetDateTime _lastSyncDateTime;
     /** Automatically generated name to identify a device. Can be overwritten to a user friendly name. */
     private String _managedDeviceName;
     /** Owner type of device. */
@@ -81,43 +81,43 @@ public class ManagedDevice extends Entity implements Parsable {
     /** The managementAgent property */
     private ManagementAgentType _managementAgent;
     /** Manufacturer of the device. This property is read-only. */
-    private String _manufacturer;
+    private final String _manufacturer;
     /** MEID. This property is read-only. */
-    private String _meid;
+    private final String _meid;
     /** Model of the device. This property is read-only. */
-    private String _model;
+    private final String _model;
     /** Notes on the device created by IT Admin */
     private String _notes;
     /** Operating system of the device. Windows, iOS, etc. This property is read-only. */
-    private String _operatingSystem;
+    private final String _operatingSystem;
     /** Operating system version of the device. This property is read-only. */
-    private String _osVersion;
+    private final String _osVersion;
     /** Available health states for the Device Health API */
     private ManagedDevicePartnerReportedHealthState _partnerReportedThreatState;
     /** Phone number of the device. This property is read-only. */
-    private String _phoneNumber;
+    private final String _phoneNumber;
     /** Total Memory in Bytes. This property is read-only. */
-    private Long _physicalMemoryInBytes;
+    private final Long _physicalMemoryInBytes;
     /** An error string that identifies issues when creating Remote Assistance session objects. This property is read-only. */
-    private String _remoteAssistanceSessionErrorDetails;
+    private final String _remoteAssistanceSessionErrorDetails;
     /** Url that allows a Remote Assistance session to be established with the device. This property is read-only. */
-    private String _remoteAssistanceSessionUrl;
+    private final String _remoteAssistanceSessionUrl;
     /** SerialNumber. This property is read-only. */
-    private String _serialNumber;
+    private final String _serialNumber;
     /** Subscriber Carrier. This property is read-only. */
-    private String _subscriberCarrier;
+    private final String _subscriberCarrier;
     /** Total Storage in Bytes. This property is read-only. */
-    private Long _totalStorageSpaceInBytes;
+    private final Long _totalStorageSpaceInBytes;
     /** Unique Device Identifier for iOS and macOS devices. This property is read-only. */
-    private String _udid;
+    private final String _udid;
     /** User display name. This property is read-only. */
-    private String _userDisplayName;
+    private final String _userDisplayName;
     /** Unique Identifier for the user associated with the device. This property is read-only. */
-    private String _userId;
+    private final String _userId;
     /** Device user principal name. This property is read-only. */
-    private String _userPrincipalName;
+    private final String _userPrincipalName;
     /** Wi-Fi MAC. This property is read-only. */
-    private String _wiFiMacAddress;
+    private final String _wiFiMacAddress;
     /**
      * Instantiates a new managedDevice and sets the default values.
      * @return a void
@@ -343,7 +343,7 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activationLockBypassCode", (n) -> { currentObject.setActivationLockBypassCode(n.getStringValue()); });
             this.put("androidSecurityPatchLevel", (n) -> { currentObject.setAndroidSecurityPatchLevel(n.getStringValue()); });
             this.put("azureADDeviceId", (n) -> { currentObject.setAzureADDeviceId(n.getStringValue()); });
@@ -640,60 +640,19 @@ public class ManagedDevice extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("activationLockBypassCode", this.getActivationLockBypassCode());
-        writer.writeStringValue("androidSecurityPatchLevel", this.getAndroidSecurityPatchLevel());
-        writer.writeStringValue("azureADDeviceId", this.getAzureADDeviceId());
-        writer.writeBooleanValue("azureADRegistered", this.getAzureADRegistered());
-        writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
         writer.writeEnumValue("complianceState", this.getComplianceState());
-        writer.writeObjectValue("configurationManagerClientEnabledFeatures", this.getConfigurationManagerClientEnabledFeatures());
-        writer.writeCollectionOfObjectValues("deviceActionResults", this.getDeviceActionResults());
         writer.writeObjectValue("deviceCategory", this.getDeviceCategory());
-        writer.writeStringValue("deviceCategoryDisplayName", this.getDeviceCategoryDisplayName());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
-        writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
-        writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
-        writer.writeBooleanValue("easActivated", this.getEasActivated());
-        writer.writeOffsetDateTimeValue("easActivationDateTime", this.getEasActivationDateTime());
-        writer.writeStringValue("easDeviceId", this.getEasDeviceId());
-        writer.writeStringValue("emailAddress", this.getEmailAddress());
-        writer.writeOffsetDateTimeValue("enrolledDateTime", this.getEnrolledDateTime());
-        writer.writeStringValue("ethernetMacAddress", this.getEthernetMacAddress());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
-        writer.writeOffsetDateTimeValue("exchangeLastSuccessfulSyncDateTime", this.getExchangeLastSuccessfulSyncDateTime());
-        writer.writeLongValue("freeStorageSpaceInBytes", this.getFreeStorageSpaceInBytes());
-        writer.writeStringValue("iccid", this.getIccid());
-        writer.writeStringValue("imei", this.getImei());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
-        writer.writeBooleanValue("isSupervised", this.getIsSupervised());
-        writer.writeStringValue("jailBroken", this.getJailBroken());
-        writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
-        writer.writeStringValue("manufacturer", this.getManufacturer());
-        writer.writeStringValue("meid", this.getMeid());
-        writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writeStringValue("operatingSystem", this.getOperatingSystem());
-        writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
-        writer.writeStringValue("phoneNumber", this.getPhoneNumber());
-        writer.writeLongValue("physicalMemoryInBytes", this.getPhysicalMemoryInBytes());
-        writer.writeStringValue("remoteAssistanceSessionErrorDetails", this.getRemoteAssistanceSessionErrorDetails());
-        writer.writeStringValue("remoteAssistanceSessionUrl", this.getRemoteAssistanceSessionUrl());
-        writer.writeStringValue("serialNumber", this.getSerialNumber());
-        writer.writeStringValue("subscriberCarrier", this.getSubscriberCarrier());
-        writer.writeLongValue("totalStorageSpaceInBytes", this.getTotalStorageSpaceInBytes());
-        writer.writeStringValue("udid", this.getUdid());
-        writer.writeStringValue("userDisplayName", this.getUserDisplayName());
-        writer.writeStringValue("userId", this.getUserId());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
-        writer.writeStringValue("wiFiMacAddress", this.getWiFiMacAddress());
     }
     /**
      * Sets the activationLockBypassCode property value. Code that allows the Activation Lock on a device to be bypassed. This property is read-only.

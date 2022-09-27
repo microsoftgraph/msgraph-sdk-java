@@ -16,11 +16,11 @@ public class BookingAppointment extends Entity implements Parsable {
     /** The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
     private String _customerTimeZone;
     /** The length of the appointment, denoted in ISO8601 format. */
-    private Period _duration;
+    private final Period _duration;
     /** The endDateTime property */
     private DateTimeTimeZone _endDateTime;
     /** The current number of customers in the appointment */
-    private Integer _filledAttendeesCount;
+    private final Integer _filledAttendeesCount;
     /** If true, indicates that the appointment will be held online. Default value is false. */
     private Boolean _isLocationOnline;
     /** The URL of the online meeting for the appointment. */
@@ -120,7 +120,7 @@ public class BookingAppointment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("customers", (n) -> { currentObject.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
             this.put("customerTimeZone", (n) -> { currentObject.setCustomerTimeZone(n.getStringValue()); });
@@ -301,9 +301,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
         writer.writeCollectionOfObjectValues("customers", this.getCustomers());
         writer.writeStringValue("customerTimeZone", this.getCustomerTimeZone());
-        writer.writePeriodValue("duration", this.getDuration());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
-        writer.writeIntegerValue("filledAttendeesCount", this.getFilledAttendeesCount());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());

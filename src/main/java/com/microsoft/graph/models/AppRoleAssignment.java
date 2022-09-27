@@ -65,7 +65,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appRoleId", (n) -> { currentObject.setAppRoleId(n.getStringValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("principalDisplayName", (n) -> { currentObject.setPrincipalDisplayName(n.getStringValue()); });

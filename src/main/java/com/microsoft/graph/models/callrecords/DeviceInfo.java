@@ -136,7 +136,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceInfo currentObject = this;
-        return new HashMap<>(22) {{
+        return new HashMap<String, Consumer<ParseNode>>(22) {{
             this.put("captureDeviceDriver", (n) -> { currentObject.setCaptureDeviceDriver(n.getStringValue()); });
             this.put("captureDeviceName", (n) -> { currentObject.setCaptureDeviceName(n.getStringValue()); });
             this.put("captureNotFunctioningEventRatio", (n) -> { currentObject.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });

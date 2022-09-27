@@ -77,7 +77,7 @@ public class RecordResponsePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordResponsePostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("bargeInAllowed", (n) -> { currentObject.setBargeInAllowed(n.getBooleanValue()); });
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("initialSilenceTimeoutInSeconds", (n) -> { currentObject.setInitialSilenceTimeoutInSeconds(n.getIntegerValue()); });

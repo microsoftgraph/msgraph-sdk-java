@@ -78,7 +78,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultUserRolePermissions currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowedToCreateApps", (n) -> { currentObject.setAllowedToCreateApps(n.getBooleanValue()); });
             this.put("allowedToCreateSecurityGroups", (n) -> { currentObject.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
             this.put("allowedToReadOtherUsers", (n) -> { currentObject.setAllowedToReadOtherUsers(n.getBooleanValue()); });

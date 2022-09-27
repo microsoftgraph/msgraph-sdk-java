@@ -45,7 +45,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocalizedNotificationMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });

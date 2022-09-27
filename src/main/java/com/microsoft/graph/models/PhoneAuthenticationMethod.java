@@ -39,7 +39,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PhoneAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
             this.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
             this.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });

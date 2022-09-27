@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AccessPackage extends Entity implements Parsable {
+    /** The accessPackagesIncompatibleWith property */
+    private java.util.List<AccessPackage> _accessPackagesIncompatibleWith;
     /** The assignmentPolicies property */
     private java.util.List<AccessPackageAssignmentPolicy> _assignmentPolicies;
     /** The catalog property */
@@ -20,6 +22,10 @@ public class AccessPackage extends Entity implements Parsable {
     private String _description;
     /** The display name of the access package. Supports $filter (eq, contains). */
     private String _displayName;
+    /** The incompatibleAccessPackages property */
+    private java.util.List<AccessPackage> _incompatibleAccessPackages;
+    /** The incompatibleGroups property */
+    private java.util.List<Group> _incompatibleGroups;
     /** Whether the access package is hidden from the requestor. */
     private Boolean _isHidden;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
@@ -41,6 +47,14 @@ public class AccessPackage extends Entity implements Parsable {
     public static AccessPackage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackage();
+    }
+    /**
+     * Gets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     * @return a accessPackage
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
+        return this._accessPackagesIncompatibleWith;
     }
     /**
      * Gets the assignmentPolicies property value. The assignmentPolicies property
@@ -89,15 +103,34 @@ public class AccessPackage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("accessPackagesIncompatibleWith", (n) -> { currentObject.setAccessPackagesIncompatibleWith(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
             this.put("assignmentPolicies", (n) -> { currentObject.setAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
             this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("incompatibleAccessPackages", (n) -> { currentObject.setIncompatibleAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+            this.put("incompatibleGroups", (n) -> { currentObject.setIncompatibleGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
             this.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
             this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         }};
+    }
+    /**
+     * Gets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     * @return a accessPackage
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
+        return this._incompatibleAccessPackages;
+    }
+    /**
+     * Gets the incompatibleGroups property value. The incompatibleGroups property
+     * @return a group
+     */
+    @javax.annotation.Nullable
+    public java.util.List<Group> getIncompatibleGroups() {
+        return this._incompatibleGroups;
     }
     /**
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
@@ -123,13 +156,24 @@ public class AccessPackage extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("accessPackagesIncompatibleWith", this.getAccessPackagesIncompatibleWith());
         writer.writeCollectionOfObjectValues("assignmentPolicies", this.getAssignmentPolicies());
         writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("incompatibleAccessPackages", this.getIncompatibleAccessPackages());
+        writer.writeCollectionOfObjectValues("incompatibleGroups", this.getIncompatibleGroups());
         writer.writeBooleanValue("isHidden", this.getIsHidden());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+    }
+    /**
+     * Sets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     * @param value Value to set for the accessPackagesIncompatibleWith property.
+     * @return a void
+     */
+    public void setAccessPackagesIncompatibleWith(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
+        this._accessPackagesIncompatibleWith = value;
     }
     /**
      * Sets the assignmentPolicies property value. The assignmentPolicies property
@@ -170,6 +214,22 @@ public class AccessPackage extends Entity implements Parsable {
      */
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     * @param value Value to set for the incompatibleAccessPackages property.
+     * @return a void
+     */
+    public void setIncompatibleAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
+        this._incompatibleAccessPackages = value;
+    }
+    /**
+     * Sets the incompatibleGroups property value. The incompatibleGroups property
+     * @param value Value to set for the incompatibleGroups property.
+     * @return a void
+     */
+    public void setIncompatibleGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
+        this._incompatibleGroups = value;
     }
     /**
      * Sets the isHidden property value. Whether the access package is hidden from the requestor.

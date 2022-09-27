@@ -77,7 +77,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterShare currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAllUsers", (n) -> { currentObject.setAllowAllUsers(n.getBooleanValue()); });
             this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
             this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });

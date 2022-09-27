@@ -11,7 +11,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     /** The display name for the schedulingGroup. Required. */
     private String _displayName;
     /** Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required. */
-    private Boolean _isActive;
+    private final Boolean _isActive;
     /** The list of user IDs that are a member of the schedulingGroup. Required. */
     private java.util.List<String> _userIds;
     /**
@@ -47,7 +47,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SchedulingGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("userIds", (n) -> { currentObject.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -78,7 +78,6 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isActive", this.getIsActive());
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
     }
     /**

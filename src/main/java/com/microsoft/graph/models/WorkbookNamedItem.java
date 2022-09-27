@@ -56,7 +56,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookNamedItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });

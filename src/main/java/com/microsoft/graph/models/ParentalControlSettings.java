@@ -58,7 +58,7 @@ public class ParentalControlSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParentalControlSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("countriesBlockedForMinors", (n) -> { currentObject.setCountriesBlockedForMinors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("legalAgeGroupRule", (n) -> { currentObject.setLegalAgeGroupRule(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

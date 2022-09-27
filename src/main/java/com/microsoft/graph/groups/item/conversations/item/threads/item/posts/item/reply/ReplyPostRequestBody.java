@@ -47,7 +47,7 @@ public class ReplyPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReplyPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("post", (n) -> { currentObject.setPost(n.getObjectValue(Post::createFromDiscriminatorValue)); });
         }};
     }

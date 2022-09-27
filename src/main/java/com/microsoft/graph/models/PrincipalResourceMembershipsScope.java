@@ -37,7 +37,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrincipalResourceMembershipsScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("principalScopes", (n) -> { currentObject.setPrincipalScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
             this.put("resourceScopes", (n) -> { currentObject.setResourceScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
         }};

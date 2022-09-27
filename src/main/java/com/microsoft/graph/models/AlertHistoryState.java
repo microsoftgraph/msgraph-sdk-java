@@ -93,7 +93,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertHistoryState currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
             this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfPrimitiveValues(String.class)); });

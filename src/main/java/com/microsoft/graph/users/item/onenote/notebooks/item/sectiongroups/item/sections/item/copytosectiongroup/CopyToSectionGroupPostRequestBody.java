@@ -54,7 +54,7 @@ public class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyToSectionGroupPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("renameAs", (n) -> { currentObject.setRenameAs(n.getStringValue()); });

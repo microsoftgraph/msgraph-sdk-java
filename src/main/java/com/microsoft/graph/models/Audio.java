@@ -150,7 +150,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Audio currentObject = this;
-        return new HashMap<>(17) {{
+        return new HashMap<String, Consumer<ParseNode>>(17) {{
             this.put("album", (n) -> { currentObject.setAlbum(n.getStringValue()); });
             this.put("albumArtist", (n) -> { currentObject.setAlbumArtist(n.getStringValue()); });
             this.put("artist", (n) -> { currentObject.setArtist(n.getStringValue()); });

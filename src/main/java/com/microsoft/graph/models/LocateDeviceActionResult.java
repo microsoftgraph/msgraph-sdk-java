@@ -43,7 +43,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocateDeviceActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceLocation", (n) -> { currentObject.setDeviceLocation(n.getObjectValue(DeviceGeoLocation::createFromDiscriminatorValue)); });
         }};
     }

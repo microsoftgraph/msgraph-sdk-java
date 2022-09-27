@@ -101,7 +101,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessReviewId", (n) -> { currentObject.setAccessReviewId(n.getStringValue()); });
             this.put("appliedBy", (n) -> { currentObject.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("appliedDateTime", (n) -> { currentObject.setAppliedDateTime(n.getOffsetDateTimeValue()); });

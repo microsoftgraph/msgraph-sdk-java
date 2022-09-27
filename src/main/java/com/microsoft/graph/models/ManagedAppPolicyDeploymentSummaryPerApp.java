@@ -59,7 +59,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppPolicyDeploymentSummaryPerApp currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("configurationAppliedUserCount", (n) -> { currentObject.setConfigurationAppliedUserCount(n.getIntegerValue()); });
             this.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

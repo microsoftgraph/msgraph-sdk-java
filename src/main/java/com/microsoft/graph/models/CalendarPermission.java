@@ -60,7 +60,7 @@ public class CalendarPermission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarPermission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
             this.put("isInsideOrganization", (n) -> { currentObject.setIsInsideOrganization(n.getBooleanValue()); });

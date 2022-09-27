@@ -64,7 +64,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApiApplication currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("acceptMappedClaims", (n) -> { currentObject.setAcceptMappedClaims(n.getBooleanValue()); });
             this.put("knownClientApplications", (n) -> { currentObject.setKnownClientApplications(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("oauth2PermissionScopes", (n) -> { currentObject.setOauth2PermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });

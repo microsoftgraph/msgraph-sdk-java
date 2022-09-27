@@ -61,7 +61,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TemporaryAccessPassAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultLength", (n) -> { currentObject.setDefaultLength(n.getIntegerValue()); });
             this.put("defaultLifetimeInMinutes", (n) -> { currentObject.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });

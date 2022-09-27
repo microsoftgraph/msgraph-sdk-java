@@ -58,7 +58,7 @@ public class PrintCertificateSigningRequest implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintCertificateSigningRequest currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("transportKey", (n) -> { currentObject.setTransportKey(n.getStringValue()); });

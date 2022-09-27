@@ -43,7 +43,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningSystem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         }};
     }

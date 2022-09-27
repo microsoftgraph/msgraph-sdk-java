@@ -77,7 +77,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppConfigurationSettingItem currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("appConfigKey", (n) -> { currentObject.setAppConfigKey(n.getStringValue()); });
             this.put("appConfigKeyType", (n) -> { currentObject.setAppConfigKeyType(n.getEnumValue(MdmAppConfigKeyType.class)); });
             this.put("appConfigKeyValue", (n) -> { currentObject.setAppConfigKeyValue(n.getStringValue()); });

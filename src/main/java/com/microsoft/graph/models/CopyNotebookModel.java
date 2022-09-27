@@ -101,7 +101,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyNotebookModel currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
             this.put("createdByIdentity", (n) -> { currentObject.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdTime", (n) -> { currentObject.setCreatedTime(n.getOffsetDateTimeValue()); });

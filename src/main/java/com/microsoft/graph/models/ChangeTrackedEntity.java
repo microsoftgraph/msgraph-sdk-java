@@ -22,11 +22,11 @@ import java.util.Map;
 import java.util.Objects;
 public class ChangeTrackedEntity extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _createdDateTime;
+    private final OffsetDateTime _createdDateTime;
     /** Identity of the person who last modified the entity. */
-    private IdentitySet _lastModifiedBy;
+    private final IdentitySet _lastModifiedBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastModifiedDateTime;
+    private final OffsetDateTime _lastModifiedDateTime;
     /**
      * Instantiates a new changeTrackedEntity and sets the default values.
      * @return a void
@@ -78,7 +78,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeTrackedEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -108,9 +108,6 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z

@@ -47,7 +47,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LogTeleconferenceDeviceQualityPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("quality", (n) -> { currentObject.setQuality(n.getObjectValue(TeleconferenceDeviceQuality::createFromDiscriminatorValue)); });
         }};
     }

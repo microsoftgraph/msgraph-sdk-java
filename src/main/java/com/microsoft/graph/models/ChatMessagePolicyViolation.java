@@ -64,7 +64,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessagePolicyViolation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dlpAction", (n) -> { currentObject.setDlpAction(n.getEnumValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
             this.put("justificationText", (n) -> { currentObject.setJustificationText(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

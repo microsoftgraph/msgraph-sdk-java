@@ -80,7 +80,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements Addi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionDataRecoveryCertificate currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });

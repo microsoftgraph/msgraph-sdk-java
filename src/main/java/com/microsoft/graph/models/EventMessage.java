@@ -79,7 +79,7 @@ public class EventMessage extends Message implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("event", (n) -> { currentObject.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
             this.put("isAllDay", (n) -> { currentObject.setIsAllDay(n.getBooleanValue()); });

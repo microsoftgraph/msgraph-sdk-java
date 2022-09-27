@@ -49,7 +49,7 @@ public class ThreatAssessmentResult extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThreatAssessmentResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("resultType", (n) -> { currentObject.setResultType(n.getEnumValue(ThreatAssessmentResultType.class)); });

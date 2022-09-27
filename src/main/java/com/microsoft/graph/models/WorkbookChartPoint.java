@@ -38,7 +38,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartPoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartPointFormat::createFromDiscriminatorValue)); });
             this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
         }};

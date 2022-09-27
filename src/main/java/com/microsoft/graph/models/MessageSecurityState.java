@@ -97,7 +97,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageSecurityState currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("connectingIP", (n) -> { currentObject.setConnectingIP(n.getStringValue()); });
             this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
             this.put("deliveryLocation", (n) -> { currentObject.setDeliveryLocation(n.getStringValue()); });

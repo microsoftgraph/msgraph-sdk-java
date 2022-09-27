@@ -37,7 +37,7 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamArchivedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
         }};

@@ -74,7 +74,7 @@ public class TeamsApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDefinitions", (n) -> { currentObject.setAppDefinitions(n.getCollectionOfObjectValues(TeamsAppDefinition::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("distributionMethod", (n) -> { currentObject.setDistributionMethod(n.getEnumValue(TeamsAppDistributionMethod.class)); });

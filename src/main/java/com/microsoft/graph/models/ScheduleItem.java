@@ -66,7 +66,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleItem currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("isPrivate", (n) -> { currentObject.setIsPrivate(n.getBooleanValue()); });
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });

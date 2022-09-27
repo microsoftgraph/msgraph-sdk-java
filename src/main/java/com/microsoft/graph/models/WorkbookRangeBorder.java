@@ -50,7 +50,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeBorder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("sideIndex", (n) -> { currentObject.setSideIndex(n.getStringValue()); });
             this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });

@@ -16,9 +16,9 @@ public class SharedInsight extends Entity implements Parsable {
     /** Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
     private Entity _resource;
     /** Reference properties of the shared document, such as the url and type of the document. Read-only */
-    private ResourceReference _resourceReference;
+    private final ResourceReference _resourceReference;
     /** Properties that you can use to visualize the document in your experience. Read-only */
-    private ResourceVisualization _resourceVisualization;
+    private final ResourceVisualization _resourceVisualization;
     /** The sharingHistory property */
     private java.util.List<SharingDetail> _sharingHistory;
     /**
@@ -46,7 +46,7 @@ public class SharedInsight extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastShared", (n) -> { currentObject.setLastShared(n.getObjectValue(SharingDetail::createFromDiscriminatorValue)); });
             this.put("lastSharedMethod", (n) -> { currentObject.setLastSharedMethod(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
@@ -114,8 +114,6 @@ public class SharedInsight extends Entity implements Parsable {
         writer.writeObjectValue("lastShared", this.getLastShared());
         writer.writeObjectValue("lastSharedMethod", this.getLastSharedMethod());
         writer.writeObjectValue("resource", this.getResource());
-        writer.writeObjectValue("resourceReference", this.getResourceReference());
-        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
         writer.writeCollectionOfObjectValues("sharingHistory", this.getSharingHistory());
     }
     /**

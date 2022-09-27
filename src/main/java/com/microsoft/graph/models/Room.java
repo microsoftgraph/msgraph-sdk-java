@@ -107,7 +107,7 @@ public class Room extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Room currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audioDeviceName", (n) -> { currentObject.setAudioDeviceName(n.getStringValue()); });
             this.put("bookingType", (n) -> { currentObject.setBookingType(n.getEnumValue(BookingType.class)); });
             this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });

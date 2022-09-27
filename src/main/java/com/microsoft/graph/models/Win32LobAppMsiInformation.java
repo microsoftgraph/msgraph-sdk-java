@@ -61,7 +61,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppMsiInformation currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("packageType", (n) -> { currentObject.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });

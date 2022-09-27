@@ -58,7 +58,7 @@ public class RiskUserActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskUserActivity currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(RiskDetail.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("riskEventTypes", (n) -> { currentObject.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });

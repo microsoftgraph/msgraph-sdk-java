@@ -196,7 +196,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesExtensionAttributes currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("extensionAttribute1", (n) -> { currentObject.setExtensionAttribute1(n.getStringValue()); });
             this.put("extensionAttribute10", (n) -> { currentObject.setExtensionAttribute10(n.getStringValue()); });
             this.put("extensionAttribute11", (n) -> { currentObject.setExtensionAttribute11(n.getStringValue()); });

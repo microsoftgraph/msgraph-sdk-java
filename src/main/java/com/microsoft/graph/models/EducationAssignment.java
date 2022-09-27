@@ -18,9 +18,9 @@ public class EducationAssignment extends Entity implements Parsable {
     /** Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher. */
     private Boolean _allowStudentsToAddResourcesToSubmission;
     /** The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _assignDateTime;
+    private final OffsetDateTime _assignDateTime;
     /** The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _assignedDateTime;
+    private final OffsetDateTime _assignedDateTime;
     /** Which users, or whole class should receive a submission object once the assignment is published. */
     private EducationAssignmentRecipient _assignTo;
     /** When set, enables users to easily find assignments of a given type.  Read-only. Nullable. */
@@ -30,9 +30,9 @@ public class EducationAssignment extends Entity implements Parsable {
     /** Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _closeDateTime;
     /** Who created the assignment. */
-    private IdentitySet _createdBy;
+    private final IdentitySet _createdBy;
     /** Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _createdDateTime;
+    private final OffsetDateTime _createdDateTime;
     /** Name of the assignment. */
     private String _displayName;
     /** Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
@@ -42,23 +42,23 @@ public class EducationAssignment extends Entity implements Parsable {
     /** Instructions for the assignment.  This along with the display name tell the student what to do. */
     private EducationItemBody _instructions;
     /** Who last modified the assignment. */
-    private IdentitySet _lastModifiedBy;
+    private final IdentitySet _lastModifiedBy;
     /** Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastModifiedDateTime;
+    private final OffsetDateTime _lastModifiedDateTime;
     /** Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published. */
     private String _notificationChannelUrl;
     /** Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable. */
     private java.util.List<EducationAssignmentResource> _resources;
     /** Folder URL where all the file resources for this assignment are stored. */
-    private String _resourcesFolderUrl;
+    private final String _resourcesFolderUrl;
     /** When set, the grading rubric attached to this assignment. */
     private EducationRubric _rubric;
     /** Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned. */
-    private EducationAssignmentStatus _status;
+    private final EducationAssignmentStatus _status;
     /** Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable. */
     private java.util.List<EducationSubmission> _submissions;
     /** The deep link URL for the given assignment. */
-    private String _webUrl;
+    private final String _webUrl;
     /**
      * Instantiates a new EducationAssignment and sets the default values.
      * @return a void
@@ -196,7 +196,7 @@ public class EducationAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
             this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
             this.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
@@ -324,27 +324,18 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeEnumValue("addToCalendarAction", this.getAddToCalendarAction());
         writer.writeBooleanValue("allowLateSubmissions", this.getAllowLateSubmissions());
         writer.writeBooleanValue("allowStudentsToAddResourcesToSubmission", this.getAllowStudentsToAddResourcesToSubmission());
-        writer.writeOffsetDateTimeValue("assignDateTime", this.getAssignDateTime());
-        writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
         writer.writeObjectValue("assignTo", this.getAssignTo());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
         writer.writeStringValue("classId", this.getClassId());
         writer.writeOffsetDateTimeValue("closeDateTime", this.getCloseDateTime());
-        writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("instructions", this.getInstructions());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
         writer.writeObjectValue("rubric", this.getRubric());
-        writer.writeEnumValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("submissions", this.getSubmissions());
-        writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
      * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.

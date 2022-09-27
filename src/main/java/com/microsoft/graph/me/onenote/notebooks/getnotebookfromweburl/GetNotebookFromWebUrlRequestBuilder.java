@@ -13,7 +13,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the getNotebookFromWebUrl method. */
@@ -34,7 +33,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/onenote/notebooks/microsoft.graph.getNotebookFromWebUrl";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -46,13 +45,13 @@ public class GetNotebookFromWebUrlRequestBuilder {
      */
     public GetNotebookFromWebUrlRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/onenote/notebooks/microsoft.graph.getNotebookFromWebUrl";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body 
      * @return a RequestInformation
      */
@@ -61,7 +60,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -85,14 +84,14 @@ public class GetNotebookFromWebUrlRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body 
      * @return a CompletableFuture of CopyNotebookModel
      */
     public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -102,7 +101,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         }
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CopyNotebookModel
@@ -110,7 +109,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
     public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -120,7 +119,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         }
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -130,7 +129,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -146,7 +145,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new getNotebookFromWebUrlRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -56,7 +56,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedUserPrincipalName", (n) -> { currentObject.setAssignedUserPrincipalName(n.getStringValue()); });
             this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
             this.put("hardwareIdentifier", (n) -> { currentObject.setHardwareIdentifier(n.getByteArrayValue()); });

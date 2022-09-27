@@ -68,7 +68,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAgent currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
             this.put("headerValue", (n) -> { currentObject.setHeaderValue(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

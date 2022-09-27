@@ -49,7 +49,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxis currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
             this.put("majorGridlines", (n) -> { currentObject.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
             this.put("majorUnit", (n) -> { currentObject.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });

@@ -85,7 +85,7 @@ public class PrinterBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
             this.put("defaults", (n) -> { currentObject.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

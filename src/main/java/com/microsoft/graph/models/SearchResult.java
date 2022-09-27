@@ -48,7 +48,7 @@ public class SearchResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchResult currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onClickTelemetryUrl", (n) -> { currentObject.setOnClickTelemetryUrl(n.getStringValue()); });
         }};

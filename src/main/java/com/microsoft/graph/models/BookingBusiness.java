@@ -29,11 +29,11 @@ public class BookingBusiness extends Entity implements Parsable {
     /** The email address for the business. */
     private String _email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
-    private Boolean _isPublished;
+    private final Boolean _isPublished;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
     private String _phone;
     /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
-    private String _publicUrl;
+    private final String _publicUrl;
     /** Specifies how bookings can be created for this business. */
     private BookingSchedulingPolicy _schedulingPolicy;
     /** All the services offered by this business. Read-only. Nullable. */
@@ -147,7 +147,7 @@ public class BookingBusiness extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingBusiness currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("appointments", (n) -> { currentObject.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
             this.put("businessHours", (n) -> { currentObject.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
@@ -241,9 +241,7 @@ public class BookingBusiness extends Entity implements Parsable {
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
-        writer.writeBooleanValue("isPublished", this.getIsPublished());
         writer.writeStringValue("phone", this.getPhone());
-        writer.writeStringValue("publicUrl", this.getPublicUrl());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeCollectionOfObjectValues("staffMembers", this.getStaffMembers());

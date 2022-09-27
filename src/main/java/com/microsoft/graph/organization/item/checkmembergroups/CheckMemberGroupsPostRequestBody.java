@@ -46,7 +46,7 @@ public class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CheckMemberGroupsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("groupIds", (n) -> { currentObject.setGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

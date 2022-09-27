@@ -12,7 +12,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the add method. */
@@ -33,7 +32,7 @@ public class AddRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/joinedTeams/{team%2Did}/members/microsoft.graph.add";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -45,13 +44,13 @@ public class AddRequestBuilder {
      */
     public AddRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/me/joinedTeams/{team%2Did}/members/microsoft.graph.add";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body 
      * @return a RequestInformation
      */
@@ -60,7 +59,7 @@ public class AddRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -84,14 +83,14 @@ public class AddRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body 
      * @return a CompletableFuture of addResponse
      */
     public java.util.concurrent.CompletableFuture<AddResponse> post(@javax.annotation.Nonnull final AddPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -101,7 +100,7 @@ public class AddRequestBuilder {
         }
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of addResponse
@@ -109,7 +108,7 @@ public class AddRequestBuilder {
     public java.util.concurrent.CompletableFuture<AddResponse> post(@javax.annotation.Nonnull final AddPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -119,7 +118,7 @@ public class AddRequestBuilder {
         }
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -129,7 +128,7 @@ public class AddRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,7 +144,7 @@ public class AddRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new addRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

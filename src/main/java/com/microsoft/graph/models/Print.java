@@ -68,7 +68,7 @@ public class Print implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Print currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });

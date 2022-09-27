@@ -2,6 +2,7 @@ package com.microsoft.graph.me.outlook.supportedlanguages;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -12,7 +13,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the supportedLanguages method. */
@@ -32,8 +32,8 @@ public class SupportedLanguagesRequestBuilder {
     public SupportedLanguagesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/me/outlook/microsoft.graph.supportedLanguages()";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/me/outlook/microsoft.graph.supportedLanguages(){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -44,14 +44,14 @@ public class SupportedLanguagesRequestBuilder {
      * @return a void
      */
     public SupportedLanguagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/me/outlook/microsoft.graph.supportedLanguages()";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/me/outlook/microsoft.graph.supportedLanguages(){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class SupportedLanguagesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -74,19 +74,20 @@ public class SupportedLanguagesRequestBuilder {
         if (requestConfiguration != null) {
             final SupportedLanguagesRequestBuilderGetRequestConfiguration requestConfig = new SupportedLanguagesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @return a CompletableFuture of supportedLanguagesResponse
      */
     public java.util.concurrent.CompletableFuture<SupportedLanguagesResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -96,14 +97,14 @@ public class SupportedLanguagesRequestBuilder {
         }
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of supportedLanguagesResponse
      */
     public java.util.concurrent.CompletableFuture<SupportedLanguagesResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SupportedLanguagesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -113,7 +114,7 @@ public class SupportedLanguagesRequestBuilder {
         }
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of supportedLanguagesResponse
@@ -121,7 +122,7 @@ public class SupportedLanguagesRequestBuilder {
     public java.util.concurrent.CompletableFuture<SupportedLanguagesResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<SupportedLanguagesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -130,6 +131,29 @@ public class SupportedLanguagesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /** Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings. */
+    public class SupportedLanguagesRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class SupportedLanguagesRequestBuilderGetRequestConfiguration {
         /** Request headers */
@@ -137,7 +161,10 @@ public class SupportedLanguagesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public SupportedLanguagesRequestBuilderGetQueryParameters queryParameters = new SupportedLanguagesRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new supportedLanguagesRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

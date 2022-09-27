@@ -52,7 +52,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WipePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
             this.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
             this.put("macOsUnlockCode", (n) -> { currentObject.setMacOsUnlockCode(n.getStringValue()); });

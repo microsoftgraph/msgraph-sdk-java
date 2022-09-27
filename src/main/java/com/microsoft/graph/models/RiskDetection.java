@@ -120,7 +120,7 @@ public class RiskDetection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(ActivityType.class)); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("additionalInfo", (n) -> { currentObject.setAdditionalInfo(n.getStringValue()); });

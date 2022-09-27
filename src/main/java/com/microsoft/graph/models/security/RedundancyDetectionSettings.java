@@ -54,7 +54,7 @@ public class RedundancyDetectionSettings implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RedundancyDetectionSettings currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
             this.put("maxWords", (n) -> { currentObject.setMaxWords(n.getIntegerValue()); });
             this.put("minWords", (n) -> { currentObject.setMinWords(n.getIntegerValue()); });

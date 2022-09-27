@@ -72,7 +72,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleInformation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("availabilityView", (n) -> { currentObject.setAvailabilityView(n.getStringValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(FreeBusyError::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

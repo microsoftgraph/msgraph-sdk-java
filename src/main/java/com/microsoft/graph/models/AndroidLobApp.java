@@ -41,7 +41,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
             this.put("versionCode", (n) -> { currentObject.setVersionCode(n.getStringValue()); });

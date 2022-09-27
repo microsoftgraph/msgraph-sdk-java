@@ -36,7 +36,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSettingDateTime currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getOffsetDateTimeValue()); });
         }};
     }

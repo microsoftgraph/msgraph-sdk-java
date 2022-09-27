@@ -46,7 +46,7 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameResponse implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getBooleanValue()); });
         }};
     }

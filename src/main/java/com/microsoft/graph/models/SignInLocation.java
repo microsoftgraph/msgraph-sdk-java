@@ -70,7 +70,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInLocation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
             this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });

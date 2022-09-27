@@ -70,7 +70,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NumberColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("decimalPlaces", (n) -> { currentObject.setDecimalPlaces(n.getStringValue()); });
             this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
             this.put("maximum", (n) -> { currentObject.setMaximum(n.getDoubleValue()); });

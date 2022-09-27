@@ -48,7 +48,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetByIdsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("types", (n) -> { currentObject.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         }};

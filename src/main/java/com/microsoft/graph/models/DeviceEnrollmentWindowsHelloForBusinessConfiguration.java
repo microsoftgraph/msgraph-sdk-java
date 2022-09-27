@@ -65,7 +65,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentWindowsHelloForBusinessConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enhancedBiometricsState", (n) -> { currentObject.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
             this.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
             this.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });

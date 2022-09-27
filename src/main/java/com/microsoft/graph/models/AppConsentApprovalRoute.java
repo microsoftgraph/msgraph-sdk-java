@@ -43,7 +43,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppConsentApprovalRoute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appConsentRequests", (n) -> { currentObject.setAppConsentRequests(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
         }};
     }

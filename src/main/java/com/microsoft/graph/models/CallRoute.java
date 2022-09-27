@@ -52,7 +52,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRoute currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("final", (n) -> { currentObject.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("original", (n) -> { currentObject.setOriginal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

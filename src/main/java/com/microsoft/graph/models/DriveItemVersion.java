@@ -45,7 +45,7 @@ public class DriveItemVersion extends BaseItemVersion implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveItemVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
         }};

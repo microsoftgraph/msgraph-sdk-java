@@ -47,7 +47,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeScreenSharingRolePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(ScreenSharingRole.class)); });
         }};
     }

@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the extensionProperties property of the microsoft.graph.application entity. */
@@ -41,8 +40,8 @@ public class ExtensionPropertiesRequestBuilder {
     public ExtensionPropertiesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class ExtensionPropertiesRequestBuilder {
      * @return a void
      */
     public ExtensionPropertiesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/applications/{application%2Did}/extensionProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class ExtensionPropertiesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class ExtensionPropertiesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class ExtensionPropertiesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class ExtensionPropertiesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ExtensionPropertiesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
@@ -164,7 +163,7 @@ public class ExtensionPropertiesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<ExtensionPropertiesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body 
      * @return a CompletableFuture of extensionProperty
      */
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
@@ -199,7 +198,7 @@ public class ExtensionPropertiesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body, @javax.annotation.Nullable final java.util.function.Consumer<ExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to extensionProperties for applications
+     * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class ExtensionPropertiesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class ExtensionPropertiesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters). */
+    /** Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application. */
     public class ExtensionPropertiesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -270,7 +269,7 @@ public class ExtensionPropertiesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public ExtensionPropertiesRequestBuilderGetQueryParameters queryParameters = new ExtensionPropertiesRequestBuilderGetQueryParameters();
@@ -288,7 +287,7 @@ public class ExtensionPropertiesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new extensionPropertiesRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

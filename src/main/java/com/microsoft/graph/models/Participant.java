@@ -46,7 +46,7 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Participant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
             this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });

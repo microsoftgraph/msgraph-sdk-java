@@ -82,7 +82,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });

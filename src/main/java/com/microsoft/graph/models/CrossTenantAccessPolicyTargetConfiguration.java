@@ -58,7 +58,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyTargetConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("targets", (n) -> { currentObject.setTargets(n.getCollectionOfObjectValues(CrossTenantAccessPolicyTarget::createFromDiscriminatorValue)); });

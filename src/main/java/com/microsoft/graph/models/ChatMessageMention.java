@@ -52,7 +52,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMention currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("id", (n) -> { currentObject.setId(n.getIntegerValue()); });
             this.put("mentioned", (n) -> { currentObject.setMentioned(n.getObjectValue(ChatMessageMentionedIdentitySet::createFromDiscriminatorValue)); });
             this.put("mentionText", (n) -> { currentObject.setMentionText(n.getStringValue()); });

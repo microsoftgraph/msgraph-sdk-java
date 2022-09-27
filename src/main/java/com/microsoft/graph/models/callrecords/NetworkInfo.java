@@ -138,7 +138,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkInfo currentObject = this;
-        return new HashMap<>(27) {{
+        return new HashMap<String, Consumer<ParseNode>>(27) {{
             this.put("bandwidthLowEventRatio", (n) -> { currentObject.setBandwidthLowEventRatio(n.getFloatValue()); });
             this.put("basicServiceSetIdentifier", (n) -> { currentObject.setBasicServiceSetIdentifier(n.getStringValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });

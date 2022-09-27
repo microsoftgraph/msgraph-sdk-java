@@ -50,7 +50,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaContentRatingGermany currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingGermanyMoviesType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingGermanyTelevisionType.class)); });

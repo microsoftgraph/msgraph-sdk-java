@@ -49,7 +49,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInFrequencySessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
             this.put("frequencyInterval", (n) -> { currentObject.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SigninFrequencyType.class)); });

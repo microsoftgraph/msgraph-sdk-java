@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity. */
@@ -41,8 +40,8 @@ public class PartnersRequestBuilder {
     public PartnersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class PartnersRequestBuilder {
      * @return a void
      */
     public PartnersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/policies/crossTenantAccessPolicy/partners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class PartnersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class PartnersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class PartnersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class PartnersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartnerCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class PartnersRequestBuilder {
         }
     }
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartnerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<PartnersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class PartnersRequestBuilder {
         }
     }
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Get a list of all partner configurations within a cross-tenant access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
@@ -164,7 +163,7 @@ public class PartnersRequestBuilder {
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartnerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<PartnersRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class PartnersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body 
      * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
      */
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> post(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class PartnersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
@@ -199,7 +198,7 @@ public class PartnersRequestBuilder {
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> post(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PartnersRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class PartnersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to partners for policies
+     * Create a new partner configuration in a cross-tenant access policy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class PartnersRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class PartnersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Defines partner-specific configurations for external Azure Active Directory organizations. */
+    /** Get a list of all partner configurations within a cross-tenant access policy. */
     public class PartnersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -270,7 +269,7 @@ public class PartnersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public PartnersRequestBuilderGetQueryParameters queryParameters = new PartnersRequestBuilderGetQueryParameters();
@@ -288,7 +287,7 @@ public class PartnersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new partnersRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

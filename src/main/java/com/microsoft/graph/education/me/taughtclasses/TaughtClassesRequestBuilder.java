@@ -15,7 +15,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity. */
@@ -40,8 +39,8 @@ public class TaughtClassesRequestBuilder {
     public TaughtClassesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/education/me/taughtClasses{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/education/me/taughtClasses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -52,14 +51,14 @@ public class TaughtClassesRequestBuilder {
      * @return a void
      */
     public TaughtClassesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/education/me/taughtClasses{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/education/me/taughtClasses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +66,7 @@ public class TaughtClassesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,13 +88,13 @@ public class TaughtClassesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @return a CompletableFuture of EducationClassCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -105,14 +104,14 @@ public class TaughtClassesRequestBuilder {
         }
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationClassCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaughtClassesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -122,7 +121,7 @@ public class TaughtClassesRequestBuilder {
         }
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationClassCollectionResponse
@@ -130,7 +129,7 @@ public class TaughtClassesRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TaughtClassesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,7 +138,7 @@ public class TaughtClassesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Classes for which the user is a teacher. */
+    /** Get the educationClass resources owned by an educationUser. */
     public class TaughtClassesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -181,7 +180,7 @@ public class TaughtClassesRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public TaughtClassesRequestBuilderGetQueryParameters queryParameters = new TaughtClassesRequestBuilderGetQueryParameters();

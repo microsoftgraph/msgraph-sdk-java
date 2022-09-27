@@ -62,7 +62,7 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DriveItemUploadableProperties currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
             this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });

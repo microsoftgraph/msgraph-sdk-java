@@ -47,7 +47,7 @@ public class Conversation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Conversation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
             this.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
             this.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });

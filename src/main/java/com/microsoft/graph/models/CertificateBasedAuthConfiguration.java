@@ -44,7 +44,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateBasedAuthConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateAuthorities", (n) -> { currentObject.setCertificateAuthorities(n.getCollectionOfObjectValues(CertificateAuthority::createFromDiscriminatorValue)); });
         }};
     }

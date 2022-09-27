@@ -37,7 +37,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSettingStringXml currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getByteArrayValue()); });
         }};

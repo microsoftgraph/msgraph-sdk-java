@@ -62,7 +62,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintMargin currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("bottom", (n) -> { currentObject.setBottom(n.getIntegerValue()); });
             this.put("left", (n) -> { currentObject.setLeft(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

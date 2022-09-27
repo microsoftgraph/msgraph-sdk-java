@@ -17,7 +17,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the assignments property of the microsoft.graph.educationClass entity. */
@@ -42,8 +41,8 @@ public class AssignmentsRequestBuilder {
     public AssignmentsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -54,14 +53,14 @@ public class AssignmentsRequestBuilder {
      * @return a void
      */
     public AssignmentsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/education/classes/{educationClass%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -69,7 +68,7 @@ public class AssignmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -91,7 +90,7 @@ public class AssignmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body 
      * @return a RequestInformation
      */
@@ -100,7 +99,7 @@ public class AssignmentsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -132,13 +131,13 @@ public class AssignmentsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -148,14 +147,14 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -165,7 +164,7 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationAssignmentCollectionResponse
@@ -173,7 +172,7 @@ public class AssignmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AssignmentsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -183,14 +182,14 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body 
      * @return a CompletableFuture of educationAssignment
      */
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nonnull final EducationAssignment body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -200,7 +199,7 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
@@ -208,7 +207,7 @@ public class AssignmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nonnull final EducationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<AssignmentsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -218,7 +217,7 @@ public class AssignmentsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for education
+     * Create a new assignment.  Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -228,7 +227,7 @@ public class AssignmentsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -237,7 +236,7 @@ public class AssignmentsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** All assignments associated with this class. Nullable. */
+    /** Retrieve a list of assignment objects.  A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them. */
     public class AssignmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -279,7 +278,7 @@ public class AssignmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public AssignmentsRequestBuilderGetQueryParameters queryParameters = new AssignmentsRequestBuilderGetQueryParameters();
@@ -297,7 +296,7 @@ public class AssignmentsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new assignmentsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

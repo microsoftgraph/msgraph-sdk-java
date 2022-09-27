@@ -35,7 +35,7 @@ public class BookingCurrency extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingCurrency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("symbol", (n) -> { currentObject.setSymbol(n.getStringValue()); });
         }};
     }

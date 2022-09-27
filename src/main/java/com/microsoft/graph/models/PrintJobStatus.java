@@ -70,7 +70,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintJobStatus currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
             this.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });

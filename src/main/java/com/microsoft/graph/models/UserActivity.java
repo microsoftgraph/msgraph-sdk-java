@@ -135,7 +135,7 @@ public class UserActivity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activationUrl", (n) -> { currentObject.setActivationUrl(n.getStringValue()); });
             this.put("activitySourceHost", (n) -> { currentObject.setActivitySourceHost(n.getStringValue()); });
             this.put("appActivityId", (n) -> { currentObject.setAppActivityId(n.getStringValue()); });

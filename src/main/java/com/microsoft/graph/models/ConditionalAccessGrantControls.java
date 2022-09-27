@@ -70,7 +70,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
             this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -16,17 +16,17 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /** The assignedTo property */
     private ScheduleChangeRequestActor _assignedTo;
     /** The managerActionDateTime property */
-    private OffsetDateTime _managerActionDateTime;
+    private final OffsetDateTime _managerActionDateTime;
     /** The managerActionMessage property */
     private String _managerActionMessage;
     /** The managerUserId property */
-    private String _managerUserId;
+    private final String _managerUserId;
     /** The senderDateTime property */
-    private OffsetDateTime _senderDateTime;
+    private final OffsetDateTime _senderDateTime;
     /** The senderMessage property */
     private String _senderMessage;
     /** The senderUserId property */
-    private String _senderUserId;
+    private final String _senderUserId;
     /** The state property */
     private ScheduleChangeState _state;
     /**
@@ -72,7 +72,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleChangeRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getEnumValue(ScheduleChangeRequestActor.class)); });
             this.put("managerActionDateTime", (n) -> { currentObject.setManagerActionDateTime(n.getOffsetDateTimeValue()); });
             this.put("managerActionMessage", (n) -> { currentObject.setManagerActionMessage(n.getStringValue()); });
@@ -148,12 +148,8 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("assignedTo", this.getAssignedTo());
-        writer.writeOffsetDateTimeValue("managerActionDateTime", this.getManagerActionDateTime());
         writer.writeStringValue("managerActionMessage", this.getManagerActionMessage());
-        writer.writeStringValue("managerUserId", this.getManagerUserId());
-        writer.writeOffsetDateTimeValue("senderDateTime", this.getSenderDateTime());
         writer.writeStringValue("senderMessage", this.getSenderMessage());
-        writer.writeStringValue("senderUserId", this.getSenderUserId());
         writer.writeEnumValue("state", this.getState());
     }
     /**

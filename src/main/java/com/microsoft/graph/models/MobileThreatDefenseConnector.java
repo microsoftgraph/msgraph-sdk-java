@@ -67,7 +67,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileThreatDefenseConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
             this.put("androidEnabled", (n) -> { currentObject.setAndroidEnabled(n.getBooleanValue()); });
             this.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });

@@ -81,7 +81,7 @@ public class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StandardTimeZoneOffset currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dayOccurrence", (n) -> { currentObject.setDayOccurrence(n.getIntegerValue()); });
             this.put("dayOfWeek", (n) -> { currentObject.setDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });

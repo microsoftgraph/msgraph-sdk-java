@@ -80,7 +80,7 @@ public class LookupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LookupColumn currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
             this.put("allowUnlimitedLength", (n) -> { currentObject.setAllowUnlimitedLength(n.getBooleanValue()); });
             this.put("columnName", (n) -> { currentObject.setColumnName(n.getStringValue()); });

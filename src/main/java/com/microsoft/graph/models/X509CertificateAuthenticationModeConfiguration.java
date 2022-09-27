@@ -50,7 +50,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final X509CertificateAuthenticationModeConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
             this.put("x509CertificateAuthenticationDefaultMode", (n) -> { currentObject.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });

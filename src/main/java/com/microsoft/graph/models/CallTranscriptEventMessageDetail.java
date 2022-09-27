@@ -55,7 +55,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallTranscriptEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
             this.put("callTranscriptICalUid", (n) -> { currentObject.setCallTranscriptICalUid(n.getStringValue()); });
             this.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

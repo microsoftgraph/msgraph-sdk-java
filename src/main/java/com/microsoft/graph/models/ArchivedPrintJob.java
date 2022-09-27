@@ -113,7 +113,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivedPrintJob currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
             this.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
             this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });

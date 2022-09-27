@@ -45,7 +45,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeRuleMembers currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
         }};

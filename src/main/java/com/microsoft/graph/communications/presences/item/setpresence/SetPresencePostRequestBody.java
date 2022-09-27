@@ -77,7 +77,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetPresencePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
             this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
             this.put("expirationDuration", (n) -> { currentObject.setExpirationDuration(n.getPeriodValue()); });

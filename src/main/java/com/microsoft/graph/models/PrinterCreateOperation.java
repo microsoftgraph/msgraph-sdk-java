@@ -45,7 +45,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterCreateOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
             this.put("printer", (n) -> { currentObject.setPrinter(n.getObjectValue(Printer::createFromDiscriminatorValue)); });
         }};

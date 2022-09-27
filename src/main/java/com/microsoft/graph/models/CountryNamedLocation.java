@@ -55,7 +55,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CountryNamedLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("countriesAndRegions", (n) -> { currentObject.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("countryLookupMethod", (n) -> { currentObject.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType.class)); });
             this.put("includeUnknownCountriesAndRegions", (n) -> { currentObject.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });

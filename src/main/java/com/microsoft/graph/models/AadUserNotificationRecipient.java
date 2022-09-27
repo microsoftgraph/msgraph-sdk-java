@@ -35,7 +35,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AadUserNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
     }

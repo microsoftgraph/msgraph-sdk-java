@@ -62,7 +62,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataSubject currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });
             this.put("lastName", (n) -> { currentObject.setLastName(n.getStringValue()); });

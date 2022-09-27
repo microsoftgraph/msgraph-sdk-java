@@ -54,7 +54,7 @@ public class MutePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MutePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
         }};
     }

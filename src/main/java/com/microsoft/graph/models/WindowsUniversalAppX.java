@@ -65,7 +65,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUniversalAppX currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableArchitectures", (n) -> { currentObject.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
             this.put("applicableDeviceTypes", (n) -> { currentObject.setApplicableDeviceTypes(n.getEnumValue(WindowsDeviceType.class)); });
             this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });

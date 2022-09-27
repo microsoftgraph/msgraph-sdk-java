@@ -78,7 +78,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemReference currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
             this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });

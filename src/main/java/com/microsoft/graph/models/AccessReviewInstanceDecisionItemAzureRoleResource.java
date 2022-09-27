@@ -35,7 +35,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemAzureRoleResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
         }};
     }

@@ -33,7 +33,7 @@ public class AllDevicesAssignmentTarget extends DeviceAndAppManagementAssignment
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllDevicesAssignmentTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

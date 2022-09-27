@@ -21,9 +21,9 @@ public class Schedule extends Entity implements Parsable {
     /** Indicates whether open shifts are enabled for the schedule. */
     private Boolean _openShiftsEnabled;
     /** The status of the schedule provisioning. The possible values are notStarted, running, completed, failed. */
-    private OperationStatus _provisionStatus;
+    private final OperationStatus _provisionStatus;
     /** Additional information about why schedule provisioning failed. */
-    private String _provisionStatusCode;
+    private final String _provisionStatusCode;
     /** The logical grouping of users in the schedule (usually by role). */
     private java.util.List<SchedulingGroup> _schedulingGroups;
     /** The shifts in the schedule. */
@@ -79,7 +79,7 @@ public class Schedule extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("offerShiftRequests", (n) -> { currentObject.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
             this.put("offerShiftRequestsEnabled", (n) -> { currentObject.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
@@ -259,8 +259,6 @@ public class Schedule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("openShiftChangeRequests", this.getOpenShiftChangeRequests());
         writer.writeCollectionOfObjectValues("openShifts", this.getOpenShifts());
         writer.writeBooleanValue("openShiftsEnabled", this.getOpenShiftsEnabled());
-        writer.writeEnumValue("provisionStatus", this.getProvisionStatus());
-        writer.writeStringValue("provisionStatusCode", this.getProvisionStatusCode());
         writer.writeCollectionOfObjectValues("schedulingGroups", this.getSchedulingGroups());
         writer.writeCollectionOfObjectValues("shifts", this.getShifts());
         writer.writeCollectionOfObjectValues("swapShiftsChangeRequests", this.getSwapShiftsChangeRequests());

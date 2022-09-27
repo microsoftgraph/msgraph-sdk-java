@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the lastEstimateStatisticsOperation property of the microsoft.graph.security.ediscoverySearch entity. */
@@ -35,7 +34,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -47,13 +46,13 @@ public class LastEstimateStatisticsOperationRequestBuilder {
      */
     public LastEstimateStatisticsOperationRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +60,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -83,13 +82,13 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         return requestInfo;
     }
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @return a CompletableFuture of ediscoveryEstimateOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -99,14 +98,14 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         }
     }
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryEstimateOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -116,7 +115,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         }
     }
     /**
-     * The last estimate operation associated with the eDiscovery search.
+     * Get the last  ediscoveryEstimateOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryEstimateOperation
@@ -124,7 +123,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
     public java.util.concurrent.CompletableFuture<EdiscoveryEstimateOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -133,7 +132,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The last estimate operation associated with the eDiscovery search. */
+    /** Get the last  ediscoveryEstimateOperation objects and their properties. */
     public class LastEstimateStatisticsOperationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -151,7 +150,7 @@ public class LastEstimateStatisticsOperationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public LastEstimateStatisticsOperationRequestBuilderGetQueryParameters queryParameters = new LastEstimateStatisticsOperationRequestBuilderGetQueryParameters();

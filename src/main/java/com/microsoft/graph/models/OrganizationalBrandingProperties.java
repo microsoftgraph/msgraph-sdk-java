@@ -112,7 +112,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBrandingProperties currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
             this.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
             this.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });

@@ -60,7 +60,7 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookOperationError currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

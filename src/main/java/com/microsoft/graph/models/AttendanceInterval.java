@@ -61,7 +61,7 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendanceInterval currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("durationInSeconds", (n) -> { currentObject.setDurationInSeconds(n.getIntegerValue()); });
             this.put("joinDateTime", (n) -> { currentObject.setJoinDateTime(n.getOffsetDateTimeValue()); });
             this.put("leaveDateTime", (n) -> { currentObject.setLeaveDateTime(n.getOffsetDateTimeValue()); });

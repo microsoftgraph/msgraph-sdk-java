@@ -66,7 +66,7 @@ public class SharingLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingLink currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("preventsDownload", (n) -> { currentObject.setPreventsDownload(n.getBooleanValue()); });

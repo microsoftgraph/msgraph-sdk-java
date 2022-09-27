@@ -46,7 +46,7 @@ public class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CleanWindowsDevicePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
         }};
     }

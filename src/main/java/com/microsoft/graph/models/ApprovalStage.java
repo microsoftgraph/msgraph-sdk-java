@@ -65,7 +65,7 @@ public class ApprovalStage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalStage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedToMe", (n) -> { currentObject.setAssignedToMe(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });

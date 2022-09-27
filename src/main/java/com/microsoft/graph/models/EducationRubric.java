@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Objects;
 public class EducationRubric extends Entity implements Parsable {
     /** The user who created this resource. */
-    private IdentitySet _createdBy;
+    private final IdentitySet _createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _createdDateTime;
+    private final OffsetDateTime _createdDateTime;
     /** The description of this rubric. */
     private EducationItemBody _description;
     /** The name of this rubric. */
@@ -20,9 +20,9 @@ public class EducationRubric extends Entity implements Parsable {
     /** The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric. */
     private EducationAssignmentGradeType _grading;
     /** The last user to modify the resource. */
-    private IdentitySet _lastModifiedBy;
+    private final IdentitySet _lastModifiedBy;
     /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _lastModifiedDateTime;
+    private final OffsetDateTime _lastModifiedDateTime;
     /** The collection of levels making up this rubric. */
     private java.util.List<RubricLevel> _levels;
     /** The collection of qualities making up this rubric. */
@@ -84,7 +84,7 @@ public class EducationRubric extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRubric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
@@ -144,13 +144,9 @@ public class EducationRubric extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("grading", this.getGrading());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("levels", this.getLevels());
         writer.writeCollectionOfObjectValues("qualities", this.getQualities());
     }

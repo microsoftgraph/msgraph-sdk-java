@@ -47,7 +47,7 @@ public class SupportedTimeZonesResponse implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SupportedTimeZonesResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(TimeZoneInformation::createFromDiscriminatorValue)); });
         }};
     }

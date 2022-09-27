@@ -49,7 +49,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
             this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });

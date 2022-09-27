@@ -33,7 +33,7 @@ public class IdentityCustomUserFlowAttribute extends IdentityUserFlowAttribute i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityCustomUserFlowAttribute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

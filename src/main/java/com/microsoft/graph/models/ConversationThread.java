@@ -61,7 +61,7 @@ public class ConversationThread extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConversationThread currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
             this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
             this.put("isLocked", (n) -> { currentObject.setIsLocked(n.getBooleanValue()); });

@@ -78,7 +78,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedIOSLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
             this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });

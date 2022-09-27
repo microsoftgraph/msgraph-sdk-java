@@ -213,7 +213,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("azureRightsManagementServicesAllowed", (n) -> { currentObject.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
             this.put("dataRecoveryCertificate", (n) -> { currentObject.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });

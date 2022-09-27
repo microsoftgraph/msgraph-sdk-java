@@ -58,7 +58,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPlatforms currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
             this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

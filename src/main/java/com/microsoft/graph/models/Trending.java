@@ -15,9 +15,9 @@ public class Trending extends Entity implements Parsable {
     /** Used for navigating to the trending document. */
     private Entity _resource;
     /** Reference properties of the trending document, such as the url and type of the document. */
-    private ResourceReference _resourceReference;
+    private final ResourceReference _resourceReference;
     /** Properties that you can use to visualize the document in your experience. */
-    private ResourceVisualization _resourceVisualization;
+    private final ResourceVisualization _resourceVisualization;
     /** Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value. */
     private Double _weight;
     /**
@@ -45,7 +45,7 @@ public class Trending extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Trending currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("resourceReference", (n) -> { currentObject.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
@@ -103,8 +103,6 @@ public class Trending extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("resource", this.getResource());
-        writer.writeObjectValue("resourceReference", this.getResourceReference());
-        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
         writer.writeDoubleValue("weight", this.getWeight());
     }
     /**

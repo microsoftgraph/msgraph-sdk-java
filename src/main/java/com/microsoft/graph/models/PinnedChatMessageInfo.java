@@ -7,9 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of chat entities. */
 public class PinnedChatMessageInfo extends Entity implements Parsable {
-    /** The message property */
+    /** Represents details about the chat message that is pinned. */
     private ChatMessage _message;
     /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.
@@ -36,12 +36,12 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PinnedChatMessageInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. Represents details about the chat message that is pinned.
      * @return a chatMessage
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
         writer.writeObjectValue("message", this.getMessage());
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. Represents details about the chat message that is pinned.
      * @param value Value to set for the message property.
      * @return a void
      */

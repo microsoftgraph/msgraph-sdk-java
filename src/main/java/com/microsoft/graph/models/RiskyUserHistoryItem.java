@@ -48,7 +48,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUserHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
             this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });

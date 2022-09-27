@@ -54,7 +54,7 @@ public class ODataError extends ApiException implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ODataError currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(MainError::createFromDiscriminatorValue)); });
         }};
     }

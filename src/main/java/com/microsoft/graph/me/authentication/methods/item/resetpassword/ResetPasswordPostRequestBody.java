@@ -48,7 +48,7 @@ public class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResetPasswordPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
             this.put("requireChangeOnNextSignIn", (n) -> { currentObject.setRequireChangeOnNextSignIn(n.getBooleanValue()); });
         }};

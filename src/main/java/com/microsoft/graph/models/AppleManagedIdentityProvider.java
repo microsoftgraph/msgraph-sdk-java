@@ -57,7 +57,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleManagedIdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateData", (n) -> { currentObject.setCertificateData(n.getStringValue()); });
             this.put("developerId", (n) -> { currentObject.setDeveloperId(n.getStringValue()); });
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });

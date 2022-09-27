@@ -63,7 +63,7 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRule currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(Win32LobAppRuleType.class)); });
         }};

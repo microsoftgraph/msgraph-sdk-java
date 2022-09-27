@@ -121,7 +121,7 @@ public class WorkbookRange extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRange currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("addressLocal", (n) -> { currentObject.setAddressLocal(n.getStringValue()); });
             this.put("cellCount", (n) -> { currentObject.setCellCount(n.getIntegerValue()); });

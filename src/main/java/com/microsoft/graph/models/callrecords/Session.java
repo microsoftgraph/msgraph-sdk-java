@@ -82,7 +82,7 @@ public class Session extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Session currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callee", (n) -> { currentObject.setCallee(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
             this.put("caller", (n) -> { currentObject.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });

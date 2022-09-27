@@ -60,7 +60,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExtensionProperty currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("dataType", (n) -> { currentObject.setDataType(n.getStringValue()); });
             this.put("isSyncedFromOnPremises", (n) -> { currentObject.setIsSyncedFromOnPremises(n.getBooleanValue()); });

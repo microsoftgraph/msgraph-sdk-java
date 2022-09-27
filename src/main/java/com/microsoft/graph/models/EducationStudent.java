@@ -75,7 +75,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationStudent currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
             this.put("gender", (n) -> { currentObject.setGender(n.getEnumValue(EducationGender.class)); });

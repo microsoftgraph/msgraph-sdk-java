@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity. */
@@ -35,7 +34,7 @@ public class LastIndexOperationRequestBuilder {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/lastIndexOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -47,13 +46,13 @@ public class LastIndexOperationRequestBuilder {
      */
     public LastIndexOperationRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/lastIndexOperation{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -61,7 +60,7 @@ public class LastIndexOperationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -83,13 +82,13 @@ public class LastIndexOperationRequestBuilder {
         return requestInfo;
     }
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @return a CompletableFuture of ediscoveryIndexOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -99,14 +98,14 @@ public class LastIndexOperationRequestBuilder {
         }
     }
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryIndexOperation
      */
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<LastIndexOperationRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -116,7 +115,7 @@ public class LastIndexOperationRequestBuilder {
         }
     }
     /**
-     * Operation entity that represents the latest indexing for the custodian.
+     * Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ediscoveryIndexOperation
@@ -124,7 +123,7 @@ public class LastIndexOperationRequestBuilder {
     public java.util.concurrent.CompletableFuture<EdiscoveryIndexOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<LastIndexOperationRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -133,7 +132,7 @@ public class LastIndexOperationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Operation entity that represents the latest indexing for the custodian. */
+    /** Get a list of the ediscoveryIndexOperations associated with an ediscoveryCustodian. */
     public class LastIndexOperationRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
@@ -151,7 +150,7 @@ public class LastIndexOperationRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public LastIndexOperationRequestBuilderGetQueryParameters queryParameters = new LastIndexOperationRequestBuilderGetQueryParameters();

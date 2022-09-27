@@ -74,7 +74,7 @@ public class PhysicalOfficeAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PhysicalOfficeAddress currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
             this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

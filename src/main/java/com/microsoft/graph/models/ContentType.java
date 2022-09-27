@@ -144,7 +144,7 @@ public class ContentType extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("associatedHubsUrls", (n) -> { currentObject.setAssociatedHubsUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("base", (n) -> { currentObject.setBase(n.getObjectValue(ContentType::createFromDiscriminatorValue)); });
             this.put("baseTypes", (n) -> { currentObject.setBaseTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });

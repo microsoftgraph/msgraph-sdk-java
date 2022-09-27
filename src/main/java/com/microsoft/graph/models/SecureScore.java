@@ -111,7 +111,7 @@ public class SecureScore extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecureScore currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeUserCount", (n) -> { currentObject.setActiveUserCount(n.getIntegerValue()); });
             this.put("averageComparativeScores", (n) -> { currentObject.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
             this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });

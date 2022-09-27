@@ -48,7 +48,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssociateWithHubSitesPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("hubSiteUrls", (n) -> { currentObject.setHubSiteUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("propagateToExistingLists", (n) -> { currentObject.setPropagateToExistingLists(n.getBooleanValue()); });
         }};

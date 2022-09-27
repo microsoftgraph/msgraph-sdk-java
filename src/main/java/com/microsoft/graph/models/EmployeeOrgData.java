@@ -66,7 +66,7 @@ public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmployeeOrgData currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("costCenter", (n) -> { currentObject.setCostCenter(n.getStringValue()); });
             this.put("division", (n) -> { currentObject.setDivision(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

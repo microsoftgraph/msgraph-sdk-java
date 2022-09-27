@@ -53,7 +53,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
         }};

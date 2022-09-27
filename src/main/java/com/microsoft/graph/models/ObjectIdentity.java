@@ -52,7 +52,7 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectIdentity currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
             this.put("issuerAssignedId", (n) -> { currentObject.setIssuerAssignedId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

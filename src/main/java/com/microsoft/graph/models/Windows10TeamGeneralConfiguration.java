@@ -106,7 +106,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10TeamGeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureOperationalInsightsBlockTelemetry", (n) -> { currentObject.setAzureOperationalInsightsBlockTelemetry(n.getBooleanValue()); });
             this.put("azureOperationalInsightsWorkspaceId", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceId(n.getStringValue()); });
             this.put("azureOperationalInsightsWorkspaceKey", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceKey(n.getStringValue()); });

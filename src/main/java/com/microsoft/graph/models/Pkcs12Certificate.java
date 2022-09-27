@@ -37,7 +37,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Pkcs12Certificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("pkcs12Value", (n) -> { currentObject.setPkcs12Value(n.getStringValue()); });
         }};

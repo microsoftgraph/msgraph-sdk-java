@@ -69,7 +69,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitePostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });

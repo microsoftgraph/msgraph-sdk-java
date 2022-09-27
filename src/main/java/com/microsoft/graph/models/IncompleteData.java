@@ -51,7 +51,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncompleteData currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });

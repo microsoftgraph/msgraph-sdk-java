@@ -46,7 +46,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryNoncustodialDataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataSource", (n) -> { currentObject.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
             this.put("lastIndexOperation", (n) -> { currentObject.setLastIndexOperation(n.getObjectValue(EdiscoveryIndexOperation::createFromDiscriminatorValue)); });
         }};

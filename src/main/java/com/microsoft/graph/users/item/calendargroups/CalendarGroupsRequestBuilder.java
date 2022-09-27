@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the calendarGroups property of the microsoft.graph.user entity. */
@@ -41,8 +40,8 @@ public class CalendarGroupsRequestBuilder {
     public CalendarGroupsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/users/{user%2Did}/calendarGroups{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/users/{user%2Did}/calendarGroups{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class CalendarGroupsRequestBuilder {
      * @return a void
      */
     public CalendarGroupsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/users/{user%2Did}/calendarGroups{?%24top*,%24skip*,%24filter*,%24count*,%24orderby,%24select}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/users/{user%2Did}/calendarGroups{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class CalendarGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class CalendarGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class CalendarGroupsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class CalendarGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @return a CompletableFuture of CalendarGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CalendarGroupCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class CalendarGroupsRequestBuilder {
         }
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CalendarGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<CalendarGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<CalendarGroupsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class CalendarGroupsRequestBuilder {
         }
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CalendarGroupCollectionResponse
@@ -164,7 +163,7 @@ public class CalendarGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<CalendarGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<CalendarGroupsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class CalendarGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param body 
      * @return a CompletableFuture of calendarGroup
      */
     public java.util.concurrent.CompletableFuture<CalendarGroup> post(@javax.annotation.Nonnull final CalendarGroup body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class CalendarGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarGroup
@@ -199,7 +198,7 @@ public class CalendarGroupsRequestBuilder {
     public java.util.concurrent.CompletableFuture<CalendarGroup> post(@javax.annotation.Nonnull final CalendarGroup body, @javax.annotation.Nullable final java.util.function.Consumer<CalendarGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class CalendarGroupsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class CalendarGroupsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class CalendarGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The user's calendar groups. Read-only. Nullable. */
+    /** Get the user's calendar groups. */
     public class CalendarGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -262,7 +261,7 @@ public class CalendarGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public CalendarGroupsRequestBuilderGetQueryParameters queryParameters = new CalendarGroupsRequestBuilderGetQueryParameters();
@@ -280,7 +279,7 @@ public class CalendarGroupsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new calendarGroupsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

@@ -117,7 +117,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementAcceptance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agreementFileId", (n) -> { currentObject.setAgreementFileId(n.getStringValue()); });
             this.put("agreementId", (n) -> { currentObject.setAgreementId(n.getStringValue()); });
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });

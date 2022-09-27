@@ -41,7 +41,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRubricOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("publishedRubricQualityFeedback", (n) -> { currentObject.setPublishedRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
             this.put("publishedRubricQualitySelectedLevels", (n) -> { currentObject.setPublishedRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
             this.put("rubricQualityFeedback", (n) -> { currentObject.setRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });

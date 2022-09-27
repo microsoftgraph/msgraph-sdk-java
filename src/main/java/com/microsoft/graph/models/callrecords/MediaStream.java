@@ -206,7 +206,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(28) {{
+        return new HashMap<String, Consumer<ParseNode>>(28) {{
             this.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
             this.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
             this.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });

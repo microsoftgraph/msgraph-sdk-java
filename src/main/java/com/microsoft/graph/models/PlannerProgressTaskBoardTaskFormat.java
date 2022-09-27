@@ -35,7 +35,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerProgressTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
         }};
     }

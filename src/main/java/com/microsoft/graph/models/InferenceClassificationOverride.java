@@ -46,7 +46,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InferenceClassificationOverride currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classifyAs", (n) -> { currentObject.setClassifyAs(n.getEnumValue(InferenceClassificationType.class)); });
             this.put("senderEmailAddress", (n) -> { currentObject.setSenderEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
         }};

@@ -47,7 +47,7 @@ public class UserSource extends DataSource implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("includedSources", (n) -> { currentObject.setIncludedSources(n.getEnumValue(SourceType.class)); });
             this.put("siteWebUrl", (n) -> { currentObject.setSiteWebUrl(n.getStringValue()); });

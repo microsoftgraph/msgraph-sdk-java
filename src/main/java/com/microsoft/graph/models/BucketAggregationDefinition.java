@@ -56,7 +56,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BucketAggregationDefinition currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("isDescending", (n) -> { currentObject.setIsDescending(n.getBooleanValue()); });
             this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

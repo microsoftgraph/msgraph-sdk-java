@@ -51,7 +51,7 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Invitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
             this.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
             this.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });

@@ -70,7 +70,7 @@ public class ContactFolder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContactFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
             this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

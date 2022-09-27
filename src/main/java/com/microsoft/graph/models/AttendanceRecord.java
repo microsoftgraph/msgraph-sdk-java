@@ -60,7 +60,7 @@ public class AttendanceRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendanceRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attendanceIntervals", (n) -> { currentObject.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });

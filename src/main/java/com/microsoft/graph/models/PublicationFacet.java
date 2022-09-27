@@ -50,7 +50,7 @@ public class PublicationFacet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicationFacet currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("level", (n) -> { currentObject.setLevel(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("versionId", (n) -> { currentObject.setVersionId(n.getStringValue()); });

@@ -18,7 +18,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _appId;
     /** Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne). */
     private String _applicationTemplateId;
-    /** The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
+    /** The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
     private java.util.List<AppRole> _appRoles;
     /** Specifies the certification status of the application. */
     private Certification _certification;
@@ -143,7 +143,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._applicationTemplateId;
     }
     /**
-     * Gets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @return a appRole
      */
     @javax.annotation.Nullable
@@ -229,7 +229,7 @@ public class Application extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Application currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
             this.put("api", (n) -> { currentObject.setApi(n.getObjectValue(ApiApplication::createFromDiscriminatorValue)); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
@@ -572,7 +572,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._applicationTemplateId = value;
     }
     /**
-     * Sets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @param value Value to set for the appRoles property.
      * @return a void
      */

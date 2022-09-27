@@ -156,7 +156,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookWorksheetProtectionOptions currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("allowAutoFilter", (n) -> { currentObject.setAllowAutoFilter(n.getBooleanValue()); });
             this.put("allowDeleteColumns", (n) -> { currentObject.setAllowDeleteColumns(n.getBooleanValue()); });
             this.put("allowDeleteRows", (n) -> { currentObject.setAllowDeleteRows(n.getBooleanValue()); });

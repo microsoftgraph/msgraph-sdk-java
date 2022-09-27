@@ -47,7 +47,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         }};
     }

@@ -37,7 +37,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilitySchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
             this.put("scheduleInfo", (n) -> { currentObject.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
         }};

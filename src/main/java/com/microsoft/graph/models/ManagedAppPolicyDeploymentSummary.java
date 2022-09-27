@@ -68,7 +68,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppPolicyDeploymentSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationDeployedUserCount", (n) -> { currentObject.setConfigurationDeployedUserCount(n.getIntegerValue()); });
             this.put("configurationDeploymentSummaryPerApp", (n) -> { currentObject.setConfigurationDeploymentSummaryPerApp(n.getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });

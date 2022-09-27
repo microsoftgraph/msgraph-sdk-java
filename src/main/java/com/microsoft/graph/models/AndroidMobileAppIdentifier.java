@@ -35,7 +35,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidMobileAppIdentifier currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
         }};
     }

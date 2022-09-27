@@ -33,7 +33,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**

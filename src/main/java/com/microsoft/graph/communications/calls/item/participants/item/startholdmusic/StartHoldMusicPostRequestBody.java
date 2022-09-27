@@ -65,7 +65,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StartHoldMusicPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("customPrompt", (n) -> { currentObject.setCustomPrompt(n.getObjectValue(Prompt::createFromDiscriminatorValue)); });
         }};

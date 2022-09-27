@@ -55,7 +55,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelDescriptionUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelDescription", (n) -> { currentObject.setChannelDescription(n.getStringValue()); });
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

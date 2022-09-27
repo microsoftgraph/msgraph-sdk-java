@@ -43,7 +43,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsCnameRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("canonicalName", (n) -> { currentObject.setCanonicalName(n.getStringValue()); });
         }};
     }

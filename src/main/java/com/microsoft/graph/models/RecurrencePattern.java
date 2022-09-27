@@ -76,7 +76,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecurrencePattern currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("dayOfMonth", (n) -> { currentObject.setDayOfMonth(n.getIntegerValue()); });
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });

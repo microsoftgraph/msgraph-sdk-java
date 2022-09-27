@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _recipientActionDateTime;
+    private final OffsetDateTime _recipientActionDateTime;
     /** Custom message sent by recipient of the offer shift request. */
     private String _recipientActionMessage;
     /** User ID of the recipient of the offer shift request. */
@@ -50,7 +50,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfferShiftRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recipientActionDateTime", (n) -> { currentObject.setRecipientActionDateTime(n.getOffsetDateTimeValue()); });
             this.put("recipientActionMessage", (n) -> { currentObject.setRecipientActionMessage(n.getStringValue()); });
             this.put("recipientUserId", (n) -> { currentObject.setRecipientUserId(n.getStringValue()); });
@@ -97,7 +97,6 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("recipientActionDateTime", this.getRecipientActionDateTime());
         writer.writeStringValue("recipientActionMessage", this.getRecipientActionMessage());
         writer.writeStringValue("recipientUserId", this.getRecipientUserId());
         writer.writeStringValue("senderShiftId", this.getSenderShiftId());

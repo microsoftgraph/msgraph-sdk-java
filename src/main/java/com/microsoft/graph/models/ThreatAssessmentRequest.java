@@ -105,7 +105,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThreatAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ThreatCategory.class)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(ThreatAssessmentContentType.class)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

@@ -42,7 +42,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThumbnailSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("large", (n) -> { currentObject.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
             this.put("medium", (n) -> { currentObject.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
             this.put("small", (n) -> { currentObject.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });

@@ -45,7 +45,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeviceADAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
         }};

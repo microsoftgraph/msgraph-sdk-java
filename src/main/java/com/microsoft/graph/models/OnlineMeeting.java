@@ -185,7 +185,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeeting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
             this.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
             this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });

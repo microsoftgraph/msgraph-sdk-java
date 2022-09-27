@@ -50,7 +50,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RequiredResourceAccess currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getCollectionOfObjectValues(ResourceAccess::createFromDiscriminatorValue)); });
             this.put("resourceAppId", (n) -> { currentObject.setResourceAppId(n.getStringValue()); });

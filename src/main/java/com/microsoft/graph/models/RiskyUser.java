@@ -60,7 +60,7 @@ public class RiskyUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
             this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
             this.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });

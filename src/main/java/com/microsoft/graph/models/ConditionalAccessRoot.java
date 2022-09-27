@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessRoot extends Entity implements Parsable {
+    /** The authenticationContextClassReferences property */
+    private java.util.List<AuthenticationContextClassReference> _authenticationContextClassReferences;
     /** Read-only. Nullable. Returns a collection of the specified named locations. */
     private java.util.List<NamedLocation> _namedLocations;
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
@@ -31,13 +33,22 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return new ConditionalAccessRoot();
     }
     /**
+     * Gets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     * @return a authenticationContextClassReference
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationContextClassReference> getAuthenticationContextClassReferences() {
+        return this._authenticationContextClassReferences;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContextClassReference::createFromDiscriminatorValue)); });
             this.put("namedLocations", (n) -> { currentObject.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
             this.put("policies", (n) -> { currentObject.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         }};
@@ -66,8 +77,17 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
         writer.writeCollectionOfObjectValues("namedLocations", this.getNamedLocations());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
+    }
+    /**
+     * Sets the authenticationContextClassReferences property value. The authenticationContextClassReferences property
+     * @param value Value to set for the authenticationContextClassReferences property.
+     * @return a void
+     */
+    public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContextClassReference> value) {
+        this._authenticationContextClassReferences = value;
     }
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.

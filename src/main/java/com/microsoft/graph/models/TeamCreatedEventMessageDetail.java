@@ -41,7 +41,7 @@ public class TeamCreatedEventMessageDetail extends EventMessageDetail implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamCreatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamDescription", (n) -> { currentObject.setTeamDescription(n.getStringValue()); });
             this.put("teamDisplayName", (n) -> { currentObject.setTeamDisplayName(n.getStringValue()); });

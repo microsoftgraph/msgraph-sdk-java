@@ -43,7 +43,7 @@ public class IPv6CidrRange extends IpRange implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IPv6CidrRange currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cidrAddress", (n) -> { currentObject.setCidrAddress(n.getStringValue()); });
         }};
     }

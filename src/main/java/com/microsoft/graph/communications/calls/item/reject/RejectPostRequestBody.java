@@ -57,7 +57,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RejectPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(RejectReason.class)); });
         }};

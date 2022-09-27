@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity. */
@@ -41,8 +40,8 @@ public class StaffMembersRequestBuilder {
     public StaffMembersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -53,14 +52,14 @@ public class StaffMembersRequestBuilder {
      * @return a void
      */
     public StaffMembersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +67,7 @@ public class StaffMembersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -90,7 +89,7 @@ public class StaffMembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body 
      * @return a RequestInformation
      */
@@ -99,7 +98,7 @@ public class StaffMembersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -123,13 +122,13 @@ public class StaffMembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @return a CompletableFuture of BookingStaffMemberBaseCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -139,14 +138,14 @@ public class StaffMembersRequestBuilder {
         }
     }
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingStaffMemberBaseCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<StaffMembersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -156,7 +155,7 @@ public class StaffMembersRequestBuilder {
         }
     }
     /**
-     * All the staff members that provide services in this business. Read-only. Nullable.
+     * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of BookingStaffMemberBaseCollectionResponse
@@ -164,7 +163,7 @@ public class StaffMembersRequestBuilder {
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<StaffMembersRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -174,14 +173,14 @@ public class StaffMembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body 
      * @return a CompletableFuture of bookingStaffMemberBase
      */
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -191,7 +190,7 @@ public class StaffMembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBase
@@ -199,7 +198,7 @@ public class StaffMembersRequestBuilder {
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body, @javax.annotation.Nullable final java.util.function.Consumer<StaffMembersRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -209,7 +208,7 @@ public class StaffMembersRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to staffMembers for solutions
+     * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -219,7 +218,7 @@ public class StaffMembersRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -228,7 +227,7 @@ public class StaffMembersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** All the staff members that provide services in this business. Read-only. Nullable. */
+    /** Get a list of bookingStaffMember objects in the specified bookingBusiness. */
     public class StaffMembersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -270,7 +269,7 @@ public class StaffMembersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public StaffMembersRequestBuilderGetQueryParameters queryParameters = new StaffMembersRequestBuilderGetQueryParameters();
@@ -288,7 +287,7 @@ public class StaffMembersRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new staffMembersRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

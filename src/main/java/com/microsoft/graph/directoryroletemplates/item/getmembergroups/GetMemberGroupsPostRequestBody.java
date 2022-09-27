@@ -46,7 +46,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetMemberGroupsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("securityEnabledOnly", (n) -> { currentObject.setSecurityEnabledOnly(n.getBooleanValue()); });
         }};
     }

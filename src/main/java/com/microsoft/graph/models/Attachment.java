@@ -65,7 +65,7 @@ public class Attachment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Attachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("isInline", (n) -> { currentObject.setIsInline(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });

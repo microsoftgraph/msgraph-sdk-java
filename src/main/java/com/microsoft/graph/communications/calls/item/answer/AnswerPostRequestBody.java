@@ -81,7 +81,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });

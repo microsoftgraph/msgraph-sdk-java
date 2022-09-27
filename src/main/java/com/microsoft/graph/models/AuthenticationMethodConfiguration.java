@@ -52,7 +52,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AuthenticationMethodState.class)); });
         }};
     }

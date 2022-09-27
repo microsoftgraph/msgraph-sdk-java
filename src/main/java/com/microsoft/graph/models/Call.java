@@ -146,7 +146,7 @@ public class Call extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Call currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audioRoutingGroups", (n) -> { currentObject.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });

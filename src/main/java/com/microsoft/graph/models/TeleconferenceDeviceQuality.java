@@ -122,7 +122,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceQuality currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
             this.put("cloudServiceDeploymentEnvironment", (n) -> { currentObject.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
             this.put("cloudServiceDeploymentId", (n) -> { currentObject.setCloudServiceDeploymentId(n.getStringValue()); });

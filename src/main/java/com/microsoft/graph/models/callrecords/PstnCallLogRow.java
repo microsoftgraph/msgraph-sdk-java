@@ -198,7 +198,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PstnCallLogRow currentObject = this;
-        return new HashMap<>(24) {{
+        return new HashMap<String, Consumer<ParseNode>>(24) {{
             this.put("callDurationSource", (n) -> { currentObject.setCallDurationSource(n.getEnumValue(PstnCallDurationSource.class)); });
             this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
             this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });

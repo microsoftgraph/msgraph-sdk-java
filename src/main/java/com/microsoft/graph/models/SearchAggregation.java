@@ -66,7 +66,7 @@ public class SearchAggregation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAggregation currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("buckets", (n) -> { currentObject.setBuckets(n.getCollectionOfObjectValues(SearchBucket::createFromDiscriminatorValue)); });
             this.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

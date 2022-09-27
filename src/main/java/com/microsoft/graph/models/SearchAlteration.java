@@ -76,7 +76,7 @@ public class SearchAlteration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAlteration currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("alteredHighlightedQueryString", (n) -> { currentObject.setAlteredHighlightedQueryString(n.getStringValue()); });
             this.put("alteredQueryString", (n) -> { currentObject.setAlteredQueryString(n.getStringValue()); });
             this.put("alteredQueryTokens", (n) -> { currentObject.setAlteredQueryTokens(n.getCollectionOfObjectValues(AlteredQueryToken::createFromDiscriminatorValue)); });

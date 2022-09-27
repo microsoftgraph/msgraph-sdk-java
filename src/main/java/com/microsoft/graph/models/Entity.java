@@ -17,6 +17,7 @@ import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.ActivityHistoryItem;
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.Agreement;
@@ -52,10 +53,12 @@ import com.microsoft.graph.models.AssociatedTeamInfo;
 import com.microsoft.graph.models.Attachment;
 import com.microsoft.graph.models.AttachmentBase;
 import com.microsoft.graph.models.AttachmentSession;
+import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.AudioRoutingGroup;
 import com.microsoft.graph.models.AuditLogRoot;
 import com.microsoft.graph.models.Authentication;
+import com.microsoft.graph.models.AuthenticationContextClassReference;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
@@ -442,6 +445,7 @@ import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.Tag;
 import com.microsoft.graph.models.security.UnifiedGroupSource;
 import com.microsoft.graph.models.security.UserSource;
+import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.ServiceAnnouncementAttachment;
 import com.microsoft.graph.models.ServiceAnnouncementBase;
@@ -457,6 +461,9 @@ import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.graph.models.Shift;
 import com.microsoft.graph.models.ShiftPreferences;
 import com.microsoft.graph.models.SignIn;
+import com.microsoft.graph.models.Simulation;
+import com.microsoft.graph.models.SimulationAutomation;
+import com.microsoft.graph.models.SimulationAutomationRun;
 import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.SocialIdentityProvider;
@@ -485,6 +492,8 @@ import com.microsoft.graph.models.TeamsTemplate;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.models.TeamworkBot;
 import com.microsoft.graph.models.TeamworkHostedContent;
+import com.microsoft.graph.models.TeamworkTag;
+import com.microsoft.graph.models.TeamworkTagMember;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
@@ -667,6 +676,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.accessReviewStage": return new AccessReviewStage();
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.activityHistoryItem": return new ActivityHistoryItem();
+                case "#microsoft.graph.addLargeGalleryViewOperation": return new AddLargeGalleryViewOperation();
                 case "#microsoft.graph.adminConsentRequestPolicy": return new AdminConsentRequestPolicy();
                 case "#microsoft.graph.administrativeUnit": return new AdministrativeUnit();
                 case "#microsoft.graph.agreement": return new Agreement();
@@ -702,10 +712,12 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.attachment": return new Attachment();
                 case "#microsoft.graph.attachmentBase": return new AttachmentBase();
                 case "#microsoft.graph.attachmentSession": return new AttachmentSession();
+                case "#microsoft.graph.attackSimulationRoot": return new AttackSimulationRoot();
                 case "#microsoft.graph.attendanceRecord": return new AttendanceRecord();
                 case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
                 case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
                 case "#microsoft.graph.authentication": return new Authentication();
+                case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
                 case "#microsoft.graph.authenticationFlowsPolicy": return new AuthenticationFlowsPolicy();
                 case "#microsoft.graph.authenticationMethod": return new AuthenticationMethod();
                 case "#microsoft.graph.authenticationMethodConfiguration": return new AuthenticationMethodConfiguration();
@@ -1092,6 +1104,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.security.tag": return new Tag();
                 case "#microsoft.graph.security.unifiedGroupSource": return new UnifiedGroupSource();
                 case "#microsoft.graph.security.userSource": return new UserSource();
+                case "#microsoft.graph.securityReportsRoot": return new SecurityReportsRoot();
                 case "#microsoft.graph.serviceAnnouncement": return new ServiceAnnouncement();
                 case "#microsoft.graph.serviceAnnouncementAttachment": return new ServiceAnnouncementAttachment();
                 case "#microsoft.graph.serviceAnnouncementBase": return new ServiceAnnouncementBase();
@@ -1107,6 +1120,9 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.shift": return new Shift();
                 case "#microsoft.graph.shiftPreferences": return new ShiftPreferences();
                 case "#microsoft.graph.signIn": return new SignIn();
+                case "#microsoft.graph.simulation": return new Simulation();
+                case "#microsoft.graph.simulationAutomation": return new SimulationAutomation();
+                case "#microsoft.graph.simulationAutomationRun": return new SimulationAutomationRun();
                 case "#microsoft.graph.singleValueLegacyExtendedProperty": return new SingleValueLegacyExtendedProperty();
                 case "#microsoft.graph.site": return new Site();
                 case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
@@ -1135,6 +1151,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.teamwork": return new Teamwork();
                 case "#microsoft.graph.teamworkBot": return new TeamworkBot();
                 case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
+                case "#microsoft.graph.teamworkTag": return new TeamworkTag();
+                case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
                 case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
@@ -1285,7 +1303,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Entity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};

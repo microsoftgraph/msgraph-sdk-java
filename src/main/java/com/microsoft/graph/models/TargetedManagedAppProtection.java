@@ -55,7 +55,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetedManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
             this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
         }};

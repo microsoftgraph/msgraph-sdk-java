@@ -39,7 +39,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeGraphInsights currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("shared", (n) -> { currentObject.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
             this.put("trending", (n) -> { currentObject.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
             this.put("used", (n) -> { currentObject.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });

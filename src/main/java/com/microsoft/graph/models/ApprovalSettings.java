@@ -72,7 +72,7 @@ public class ApprovalSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("approvalMode", (n) -> { currentObject.setApprovalMode(n.getStringValue()); });
             this.put("approvalStages", (n) -> { currentObject.setApprovalStages(n.getCollectionOfObjectValues(UnifiedApprovalStage::createFromDiscriminatorValue)); });
             this.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });

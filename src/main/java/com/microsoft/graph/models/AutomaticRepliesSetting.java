@@ -74,7 +74,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesSetting currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("externalAudience", (n) -> { currentObject.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
             this.put("externalReplyMessage", (n) -> { currentObject.setExternalReplyMessage(n.getStringValue()); });
             this.put("internalReplyMessage", (n) -> { currentObject.setInternalReplyMessage(n.getStringValue()); });

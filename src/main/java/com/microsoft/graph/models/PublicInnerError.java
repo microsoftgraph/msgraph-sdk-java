@@ -70,7 +70,7 @@ public class PublicInnerError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicInnerError currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });

@@ -45,7 +45,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
             this.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
         }};

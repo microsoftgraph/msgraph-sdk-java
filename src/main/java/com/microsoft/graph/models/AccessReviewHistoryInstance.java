@@ -65,7 +65,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewHistoryInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("downloadUri", (n) -> { currentObject.setDownloadUri(n.getStringValue()); });
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("fulfilledDateTime", (n) -> { currentObject.setFulfilledDateTime(n.getOffsetDateTimeValue()); });

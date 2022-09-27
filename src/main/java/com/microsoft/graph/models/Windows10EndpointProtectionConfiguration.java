@@ -273,7 +273,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationGuardAllowPersistence", (n) -> { currentObject.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
             this.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
             this.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });

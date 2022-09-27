@@ -81,7 +81,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenotePage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
             this.put("createdByAppId", (n) -> { currentObject.setCreatedByAppId(n.getStringValue()); });

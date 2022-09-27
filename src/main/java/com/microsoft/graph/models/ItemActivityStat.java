@@ -102,7 +102,7 @@ public class ItemActivityStat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivityStat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("access", (n) -> { currentObject.setAccess(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivity::createFromDiscriminatorValue)); });
             this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(ItemActionStat::createFromDiscriminatorValue)); });

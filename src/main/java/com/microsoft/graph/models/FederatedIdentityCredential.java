@@ -60,7 +60,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FederatedIdentityCredential currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audiences", (n) -> { currentObject.setAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });

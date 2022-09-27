@@ -52,7 +52,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentApprovalSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
             this.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

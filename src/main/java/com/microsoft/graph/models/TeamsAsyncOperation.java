@@ -75,7 +75,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAsyncOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attemptsCount", (n) -> { currentObject.setAttemptsCount(n.getIntegerValue()); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OperationError::createFromDiscriminatorValue)); });

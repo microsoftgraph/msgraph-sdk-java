@@ -52,7 +52,7 @@ public class ShiftAvailability implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ShiftAvailability currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("timeSlots", (n) -> { currentObject.setTimeSlots(n.getCollectionOfObjectValues(TimeRange::createFromDiscriminatorValue)); });

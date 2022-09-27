@@ -35,7 +35,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentLimitConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("limit", (n) -> { currentObject.setLimit(n.getIntegerValue()); });
         }};
     }

@@ -35,7 +35,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBranding currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
         }};
     }

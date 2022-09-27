@@ -41,7 +41,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartLegend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
             this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });

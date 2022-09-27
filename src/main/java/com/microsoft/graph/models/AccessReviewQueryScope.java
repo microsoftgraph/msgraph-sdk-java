@@ -47,7 +47,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewQueryScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
             this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });

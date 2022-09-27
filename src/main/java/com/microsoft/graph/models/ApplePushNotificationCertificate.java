@@ -14,7 +14,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     /** Not yet documented */
     private String _certificate;
     /** Certificate serial number. This property is read-only. */
-    private String _certificateSerialNumber;
+    private final String _certificateSerialNumber;
     /** The expiration date and time for Apple push notification certificate. */
     private OffsetDateTime _expirationDateTime;
     /** Last modified date and time for Apple push notification certificate. */
@@ -78,7 +78,7 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplePushNotificationCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleIdentifier", (n) -> { currentObject.setAppleIdentifier(n.getStringValue()); });
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
             this.put("certificateSerialNumber", (n) -> { currentObject.setCertificateSerialNumber(n.getStringValue()); });
@@ -113,7 +113,6 @@ public class ApplePushNotificationCertificate extends Entity implements Parsable
         super.serialize(writer);
         writer.writeStringValue("appleIdentifier", this.getAppleIdentifier());
         writer.writeStringValue("certificate", this.getCertificate());
-        writer.writeStringValue("certificateSerialNumber", this.getCertificateSerialNumber());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("topicIdentifier", this.getTopicIdentifier());

@@ -46,7 +46,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
         }};

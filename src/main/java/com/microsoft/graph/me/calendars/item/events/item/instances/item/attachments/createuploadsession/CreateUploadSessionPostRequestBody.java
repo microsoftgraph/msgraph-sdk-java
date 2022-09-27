@@ -55,7 +55,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateUploadSessionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("attachmentItem", (n) -> { currentObject.setAttachmentItem(n.getObjectValue(AttachmentItem::createFromDiscriminatorValue)); });
         }};
     }

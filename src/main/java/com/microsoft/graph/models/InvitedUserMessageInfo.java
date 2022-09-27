@@ -68,7 +68,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitedUserMessageInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
             this.put("customizedMessageBody", (n) -> { currentObject.setCustomizedMessageBody(n.getStringValue()); });
             this.put("messageLanguage", (n) -> { currentObject.setMessageLanguage(n.getStringValue()); });

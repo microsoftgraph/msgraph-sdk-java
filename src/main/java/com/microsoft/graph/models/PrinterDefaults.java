@@ -120,7 +120,7 @@ public class PrinterDefaults implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterDefaults currentObject = this;
-        return new HashMap<>(18) {{
+        return new HashMap<String, Consumer<ParseNode>>(18) {{
             this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("copiesPerJob", (n) -> { currentObject.setCopiesPerJob(n.getIntegerValue()); });

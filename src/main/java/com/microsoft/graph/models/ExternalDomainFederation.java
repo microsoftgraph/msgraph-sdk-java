@@ -55,7 +55,7 @@ public class ExternalDomainFederation extends IdentitySource implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalDomainFederation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("issuerUri", (n) -> { currentObject.setIssuerUri(n.getStringValue()); });

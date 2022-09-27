@@ -45,7 +45,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMobileAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("encodedSettingXml", (n) -> { currentObject.setEncodedSettingXml(n.getByteArrayValue()); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(AppConfigurationSettingItem::createFromDiscriminatorValue)); });
         }};

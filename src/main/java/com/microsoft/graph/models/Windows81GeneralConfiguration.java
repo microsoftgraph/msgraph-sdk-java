@@ -11,7 +11,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /** Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account. */
     private Boolean _accountsBlockAddingNonMicrosoftAccountEmail;
     /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
-    private Boolean _applyOnlyToWindows81;
+    private final Boolean _applyOnlyToWindows81;
     /** Indicates whether or not to block auto fill. */
     private Boolean _browserBlockAutofill;
     /** Indicates whether or not to block automatic detection of Intranet sites. */
@@ -267,7 +267,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
             this.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
             this.put("browserBlockAutofill", (n) -> { currentObject.setBrowserBlockAutofill(n.getBooleanValue()); });
@@ -408,7 +408,6 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountsBlockAddingNonMicrosoftAccountEmail", this.getAccountsBlockAddingNonMicrosoftAccountEmail());
-        writer.writeBooleanValue("applyOnlyToWindows81", this.getApplyOnlyToWindows81());
         writer.writeBooleanValue("browserBlockAutofill", this.getBrowserBlockAutofill());
         writer.writeBooleanValue("browserBlockAutomaticDetectionOfIntranetSites", this.getBrowserBlockAutomaticDetectionOfIntranetSites());
         writer.writeBooleanValue("browserBlockEnterpriseModeAccess", this.getBrowserBlockEnterpriseModeAccess());

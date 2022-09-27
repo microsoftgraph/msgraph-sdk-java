@@ -151,7 +151,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkConnection currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<String, Consumer<ParseNode>>(21) {{
             this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
             this.put("destinationAddress", (n) -> { currentObject.setDestinationAddress(n.getStringValue()); });
             this.put("destinationDomain", (n) -> { currentObject.setDestinationDomain(n.getStringValue()); });

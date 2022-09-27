@@ -66,7 +66,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComplianceInformation currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("certificationControls", (n) -> { currentObject.setCertificationControls(n.getCollectionOfObjectValues(CertificationControl::createFromDiscriminatorValue)); });
             this.put("certificationName", (n) -> { currentObject.setCertificationName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

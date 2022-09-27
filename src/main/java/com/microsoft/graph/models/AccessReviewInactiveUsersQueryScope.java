@@ -36,7 +36,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInactiveUsersQueryScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("inactiveDuration", (n) -> { currentObject.setInactiveDuration(n.getPeriodValue()); });
         }};
     }

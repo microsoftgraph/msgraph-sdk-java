@@ -48,7 +48,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupLifecyclePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
             this.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
             this.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });

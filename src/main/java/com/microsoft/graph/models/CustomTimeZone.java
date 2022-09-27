@@ -55,7 +55,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTimeZone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bias", (n) -> { currentObject.setBias(n.getIntegerValue()); });
             this.put("daylightOffset", (n) -> { currentObject.setDaylightOffset(n.getObjectValue(DaylightTimeZoneOffset::createFromDiscriminatorValue)); });
             this.put("standardOffset", (n) -> { currentObject.setStandardOffset(n.getObjectValue(StandardTimeZoneOffset::createFromDiscriminatorValue)); });

@@ -17,7 +17,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity. */
@@ -47,8 +46,8 @@ public class OnlineMeetingsRequestBuilder {
     public OnlineMeetingsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/me/onlineMeetings{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/me/onlineMeetings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -59,14 +58,14 @@ public class OnlineMeetingsRequestBuilder {
      * @return a void
      */
     public OnlineMeetingsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/me/onlineMeetings{?%24top*,%24skip*,%24search*,%24filter*,%24count*,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/me/onlineMeetings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get onlineMeetings from me
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -74,7 +73,7 @@ public class OnlineMeetingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get onlineMeetings from me
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -96,7 +95,7 @@ public class OnlineMeetingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to onlineMeetings for me
+     * Create an online meeting on behalf of a user.
      * @param body 
      * @return a RequestInformation
      */
@@ -105,7 +104,7 @@ public class OnlineMeetingsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to onlineMeetings for me
+     * Create an online meeting on behalf of a user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -129,13 +128,13 @@ public class OnlineMeetingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get onlineMeetings from me
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @return a CompletableFuture of OnlineMeetingCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -145,14 +144,14 @@ public class OnlineMeetingsRequestBuilder {
         }
     }
     /**
-     * Get onlineMeetings from me
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnlineMeetingCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<OnlineMeetingsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -162,7 +161,7 @@ public class OnlineMeetingsRequestBuilder {
         }
     }
     /**
-     * Get onlineMeetings from me
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of OnlineMeetingCollectionResponse
@@ -170,7 +169,7 @@ public class OnlineMeetingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<OnlineMeetingsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -180,14 +179,14 @@ public class OnlineMeetingsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to onlineMeetings for me
+     * Create an online meeting on behalf of a user.
      * @param body 
      * @return a CompletableFuture of onlineMeeting
      */
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final OnlineMeeting body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -197,7 +196,7 @@ public class OnlineMeetingsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to onlineMeetings for me
+     * Create an online meeting on behalf of a user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
@@ -205,7 +204,7 @@ public class OnlineMeetingsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final OnlineMeeting body, @javax.annotation.Nullable final java.util.function.Consumer<OnlineMeetingsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -215,7 +214,7 @@ public class OnlineMeetingsRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to onlineMeetings for me
+     * Create an online meeting on behalf of a user.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +224,7 @@ public class OnlineMeetingsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -234,7 +233,7 @@ public class OnlineMeetingsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get onlineMeetings from me */
+    /** Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions. */
     public class OnlineMeetingsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
@@ -276,7 +275,7 @@ public class OnlineMeetingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public OnlineMeetingsRequestBuilderGetQueryParameters queryParameters = new OnlineMeetingsRequestBuilderGetQueryParameters();
@@ -294,7 +293,7 @@ public class OnlineMeetingsRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new onlineMeetingsRequestBuilderPostRequestConfiguration and sets the default values.
          * @return a void

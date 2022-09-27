@@ -50,7 +50,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewNotificationRecipientItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("notificationRecipientScope", (n) -> { currentObject.setNotificationRecipientScope(n.getObjectValue(AccessReviewNotificationRecipientScope::createFromDiscriminatorValue)); });
             this.put("notificationTemplateType", (n) -> { currentObject.setNotificationTemplateType(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

@@ -51,7 +51,7 @@ public class IosDeviceType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDeviceType currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("iPad", (n) -> { currentObject.setIPad(n.getBooleanValue()); });
             this.put("iPhoneAndIPod", (n) -> { currentObject.setIPhoneAndIPod(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

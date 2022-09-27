@@ -87,7 +87,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryCase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("closedBy", (n) -> { currentObject.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
             this.put("custodians", (n) -> { currentObject.setCustodians(n.getCollectionOfObjectValues(EdiscoveryCustodian::createFromDiscriminatorValue)); });

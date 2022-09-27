@@ -58,7 +58,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidatePropertiesPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
             this.put("onBehalfOfUserId", (n) -> { currentObject.setOnBehalfOfUserId(n.getStringValue()); });

@@ -46,7 +46,7 @@ public class UnarchivePostRequestBody implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnarchivePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("messageIds", (n) -> { currentObject.setMessageIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }

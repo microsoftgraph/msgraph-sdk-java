@@ -75,7 +75,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceExchangeAccessStateSummary", (n) -> { currentObject.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
             this.put("deviceOperatingSystemSummary", (n) -> { currentObject.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
             this.put("dualEnrolledDeviceCount", (n) -> { currentObject.setDualEnrolledDeviceCount(n.getIntegerValue()); });

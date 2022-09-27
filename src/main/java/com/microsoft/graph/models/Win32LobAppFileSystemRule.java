@@ -61,7 +61,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppFileSystemRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
             this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });

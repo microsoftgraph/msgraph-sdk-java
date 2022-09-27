@@ -57,7 +57,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClientUserAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
             this.put("communicationServiceId", (n) -> { currentObject.setCommunicationServiceId(n.getStringValue()); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(ClientPlatform.class)); });

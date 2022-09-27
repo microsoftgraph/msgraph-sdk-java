@@ -38,7 +38,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateScheduledInstall currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("scheduledInstallDay", (n) -> { currentObject.setScheduledInstallDay(n.getEnumValue(WeeklySchedule.class)); });
             this.put("scheduledInstallTime", (n) -> { currentObject.setScheduledInstallTime(n.getLocalTimeValue()); });
         }};

@@ -76,7 +76,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonOrGroupColumn currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowMultipleSelection", (n) -> { currentObject.setAllowMultipleSelection(n.getBooleanValue()); });
             this.put("chooseFromType", (n) -> { currentObject.setChooseFromType(n.getStringValue()); });
             this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });

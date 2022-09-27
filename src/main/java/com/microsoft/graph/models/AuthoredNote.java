@@ -64,7 +64,7 @@ public class AuthoredNote extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthoredNote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("author", (n) -> { currentObject.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });

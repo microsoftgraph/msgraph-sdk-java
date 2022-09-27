@@ -73,7 +73,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingCustomerInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
             this.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(BookingQuestionAnswer::createFromDiscriminatorValue)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });

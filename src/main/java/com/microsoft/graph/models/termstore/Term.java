@@ -76,7 +76,7 @@ public class Term extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Term currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(LocalizedDescription::createFromDiscriminatorValue)); });

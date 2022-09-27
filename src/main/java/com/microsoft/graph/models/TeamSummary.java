@@ -52,7 +52,7 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamSummary currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("guestsCount", (n) -> { currentObject.setGuestsCount(n.getIntegerValue()); });
             this.put("membersCount", (n) -> { currentObject.setMembersCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

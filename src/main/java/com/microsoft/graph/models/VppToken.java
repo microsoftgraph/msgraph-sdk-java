@@ -89,7 +89,7 @@ public class VppToken extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppToken currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("automaticallyUpdateApps", (n) -> { currentObject.setAutomaticallyUpdateApps(n.getBooleanValue()); });
             this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });

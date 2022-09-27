@@ -66,7 +66,7 @@ public class SearchAlterationOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchAlterationOptions currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("enableModification", (n) -> { currentObject.setEnableModification(n.getBooleanValue()); });
             this.put("enableSuggestion", (n) -> { currentObject.setEnableSuggestion(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

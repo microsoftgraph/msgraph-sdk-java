@@ -96,7 +96,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamMessagingSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowChannelMentions", (n) -> { currentObject.setAllowChannelMentions(n.getBooleanValue()); });
             this.put("allowOwnerDeleteMessages", (n) -> { currentObject.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
             this.put("allowTeamMentions", (n) -> { currentObject.setAllowTeamMentions(n.getBooleanValue()); });

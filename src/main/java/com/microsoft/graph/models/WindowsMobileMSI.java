@@ -49,7 +49,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsMobileMSI currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
             this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });

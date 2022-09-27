@@ -16,6 +16,8 @@ public class ReportRoot extends Entity implements Parsable {
     private java.util.List<PrintUsageByPrinter> _monthlyPrintUsageByPrinter;
     /** The monthlyPrintUsageByUser property */
     private java.util.List<PrintUsageByUser> _monthlyPrintUsageByUser;
+    /** The security property */
+    private SecurityReportsRoot _security;
     /**
      * Instantiates a new ReportRoot and sets the default values.
      * @return a void
@@ -57,11 +59,12 @@ public class ReportRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReportRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dailyPrintUsageByPrinter", (n) -> { currentObject.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
             this.put("dailyPrintUsageByUser", (n) -> { currentObject.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
             this.put("monthlyPrintUsageByPrinter", (n) -> { currentObject.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
             this.put("monthlyPrintUsageByUser", (n) -> { currentObject.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+            this.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
         }};
     }
     /**
@@ -81,6 +84,14 @@ public class ReportRoot extends Entity implements Parsable {
         return this._monthlyPrintUsageByUser;
     }
     /**
+     * Gets the security property value. The security property
+     * @return a securityReportsRoot
+     */
+    @javax.annotation.Nullable
+    public SecurityReportsRoot getSecurity() {
+        return this._security;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -92,6 +103,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("dailyPrintUsageByUser", this.getDailyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
+        writer.writeObjectValue("security", this.getSecurity());
     }
     /**
      * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
@@ -124,5 +136,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setMonthlyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageByUser = value;
+    }
+    /**
+     * Sets the security property value. The security property
+     * @param value Value to set for the security property.
+     * @return a void
+     */
+    public void setSecurity(@javax.annotation.Nullable final SecurityReportsRoot value) {
+        this._security = value;
     }
 }

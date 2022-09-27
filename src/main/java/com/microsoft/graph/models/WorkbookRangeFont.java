@@ -61,7 +61,7 @@ public class WorkbookRangeFont extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeFont currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bold", (n) -> { currentObject.setBold(n.getBooleanValue()); });
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("italic", (n) -> { currentObject.setItalic(n.getBooleanValue()); });

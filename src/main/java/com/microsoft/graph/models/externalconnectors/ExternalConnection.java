@@ -25,7 +25,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /** The schema property */
     private Schema _schema;
     /** Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue. */
-    private ConnectionState _state;
+    private final ConnectionState _state;
     /**
      * Instantiates a new externalConnection and sets the default values.
      * @return a void
@@ -67,7 +67,7 @@ public class ExternalConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
@@ -141,7 +141,6 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeObjectValue("schema", this.getSchema());
-        writer.writeEnumValue("state", this.getState());
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.

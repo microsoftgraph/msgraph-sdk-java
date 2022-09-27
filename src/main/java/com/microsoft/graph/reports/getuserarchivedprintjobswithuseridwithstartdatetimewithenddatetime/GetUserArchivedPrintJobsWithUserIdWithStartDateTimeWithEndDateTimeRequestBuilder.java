@@ -2,6 +2,7 @@ package com.microsoft.graph.reports.getuserarchivedprintjobswithuseridwithstartd
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -13,7 +14,6 @@ import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the getUserArchivedPrintJobs method. */
@@ -36,8 +36,8 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
     public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final OffsetDateTime endDateTime, @javax.annotation.Nullable final OffsetDateTime startDateTime, @javax.annotation.Nullable final String userId) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}')";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}'){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         urlTplParams.put("endDateTime", endDateTime);
         urlTplParams.put("startDateTime", startDateTime);
         urlTplParams.put("userId", userId);
@@ -51,8 +51,8 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
      * @return a void
      */
     public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}')";
-        var urlTplParams = new HashMap<String, Object>();
+        this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}'){?%24top,%24skip,%24search,%24filter,%24count}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -81,6 +81,7 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
         if (requestConfiguration != null) {
             final GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration requestConfig = new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
@@ -93,7 +94,7 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
     public java.util.concurrent.CompletableFuture<GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -110,7 +111,7 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
     public java.util.concurrent.CompletableFuture<GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -128,7 +129,7 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
     public java.util.concurrent.CompletableFuture<GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
@@ -137,6 +138,29 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
+    /** Invoke function getUserArchivedPrintJobs */
+    public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
+    }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration {
         /** Request headers */
@@ -144,7 +168,10 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters queryParameters = new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters();
         /**
          * Instantiates a new getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void

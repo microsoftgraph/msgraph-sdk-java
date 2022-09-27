@@ -45,7 +45,7 @@ public class RoomList extends Place implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoomList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
             this.put("rooms", (n) -> { currentObject.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
         }};

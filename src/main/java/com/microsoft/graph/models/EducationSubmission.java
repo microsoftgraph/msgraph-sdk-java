@@ -13,31 +13,31 @@ public class EducationSubmission extends Entity implements Parsable {
     /** The outcomes property */
     private java.util.List<EducationOutcome> _outcomes;
     /** User who moved the status of this submission to reassigned. */
-    private IdentitySet _reassignedBy;
+    private final IdentitySet _reassignedBy;
     /** Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _reassignedDateTime;
+    private final OffsetDateTime _reassignedDateTime;
     /** Who this submission is assigned to. */
     private EducationSubmissionRecipient _recipient;
     /** The resources property */
     private java.util.List<EducationSubmissionResource> _resources;
     /** Folder where all file resources for this submission need to be stored. */
-    private String _resourcesFolderUrl;
+    private final String _resourcesFolderUrl;
     /** User who moved the status of this submission to returned. */
-    private IdentitySet _returnedBy;
+    private final IdentitySet _returnedBy;
     /** Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _returnedDateTime;
+    private final OffsetDateTime _returnedDateTime;
     /** Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned. */
-    private EducationSubmissionStatus _status;
+    private final EducationSubmissionStatus _status;
     /** User who moved the resource into the submitted state. */
-    private IdentitySet _submittedBy;
+    private final IdentitySet _submittedBy;
     /** Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _submittedDateTime;
+    private final OffsetDateTime _submittedDateTime;
     /** The submittedResources property */
     private java.util.List<EducationSubmissionResource> _submittedResources;
     /** User who moved the resource from submitted into the working state. */
-    private IdentitySet _unsubmittedBy;
+    private final IdentitySet _unsubmittedBy;
     /** Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _unsubmittedDateTime;
+    private final OffsetDateTime _unsubmittedDateTime;
     /**
      * Instantiates a new educationSubmission and sets the default values.
      * @return a void
@@ -63,7 +63,7 @@ public class EducationSubmission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("outcomes", (n) -> { currentObject.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
             this.put("reassignedBy", (n) -> { currentObject.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("reassignedDateTime", (n) -> { currentObject.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -201,19 +201,9 @@ public class EducationSubmission extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("outcomes", this.getOutcomes());
-        writer.writeObjectValue("reassignedBy", this.getReassignedBy());
-        writer.writeOffsetDateTimeValue("reassignedDateTime", this.getReassignedDateTime());
         writer.writeObjectValue("recipient", this.getRecipient());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
-        writer.writeObjectValue("returnedBy", this.getReturnedBy());
-        writer.writeOffsetDateTimeValue("returnedDateTime", this.getReturnedDateTime());
-        writer.writeEnumValue("status", this.getStatus());
-        writer.writeObjectValue("submittedBy", this.getSubmittedBy());
-        writer.writeOffsetDateTimeValue("submittedDateTime", this.getSubmittedDateTime());
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
-        writer.writeObjectValue("unsubmittedBy", this.getUnsubmittedBy());
-        writer.writeOffsetDateTimeValue("unsubmittedDateTime", this.getUnsubmittedDateTime());
     }
     /**
      * Sets the outcomes property value. The outcomes property

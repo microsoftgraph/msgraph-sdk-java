@@ -53,7 +53,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppDiagnosticStatus currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("mitigationInstruction", (n) -> { currentObject.setMitigationInstruction(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });

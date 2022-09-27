@@ -60,7 +60,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceSpecificPermissionGrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });

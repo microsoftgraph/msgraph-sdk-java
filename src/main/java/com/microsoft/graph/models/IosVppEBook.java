@@ -57,7 +57,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppEBook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
             this.put("genres", (n) -> { currentObject.setGenres(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("language", (n) -> { currentObject.setLanguage(n.getStringValue()); });

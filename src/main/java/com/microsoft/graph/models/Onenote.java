@@ -45,7 +45,7 @@ public class Onenote extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Onenote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("notebooks", (n) -> { currentObject.setNotebooks(n.getCollectionOfObjectValues(Notebook::createFromDiscriminatorValue)); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(OnenoteOperation::createFromDiscriminatorValue)); });
             this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });

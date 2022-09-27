@@ -43,7 +43,7 @@ public class WorkbookFilter extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("criteria", (n) -> { currentObject.setCriteria(n.getObjectValue(WorkbookFilterCriteria::createFromDiscriminatorValue)); });
         }};
     }

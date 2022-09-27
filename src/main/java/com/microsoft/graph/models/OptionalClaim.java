@@ -70,7 +70,7 @@ public class OptionalClaim implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OptionalClaim currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("additionalProperties", (n) -> { currentObject.setAdditionalProperties(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("essential", (n) -> { currentObject.setEssential(n.getBooleanValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

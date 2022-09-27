@@ -45,7 +45,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedbackOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
             this.put("publishedFeedback", (n) -> { currentObject.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
         }};

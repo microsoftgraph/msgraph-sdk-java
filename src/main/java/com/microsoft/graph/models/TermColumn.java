@@ -64,7 +64,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentTerm", (n) -> { currentObject.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });

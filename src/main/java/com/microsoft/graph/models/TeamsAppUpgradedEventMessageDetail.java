@@ -39,7 +39,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppUpgradedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamsAppDisplayName", (n) -> { currentObject.setTeamsAppDisplayName(n.getStringValue()); });
             this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });

@@ -41,7 +41,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     /** The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. */
     private OffsetDateTime _featureUpdatesPauseExpiryDateTime;
     /** The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only. */
-    private LocalDate _featureUpdatesPauseStartDate;
+    private final LocalDate _featureUpdatesPauseStartDate;
     /** The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported. */
     private OffsetDateTime _featureUpdatesRollbackStartDateTime;
     /** The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported. */
@@ -63,7 +63,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     /** The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. */
     private OffsetDateTime _qualityUpdatesPauseExpiryDateTime;
     /** The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only. */
-    private LocalDate _qualityUpdatesPauseStartDate;
+    private final LocalDate _qualityUpdatesPauseStartDate;
     /** The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported. */
     private OffsetDateTime _qualityUpdatesRollbackStartDateTime;
     /** When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported. */
@@ -259,7 +259,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateForBusinessConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowWindows11Upgrade", (n) -> { currentObject.setAllowWindows11Upgrade(n.getBooleanValue()); });
             this.put("automaticUpdateMode", (n) -> { currentObject.setAutomaticUpdateMode(n.getEnumValue(AutomaticUpdateMode.class)); });
             this.put("autoRestartNotificationDismissal", (n) -> { currentObject.setAutoRestartNotificationDismissal(n.getEnumValue(AutoRestartNotificationDismissalMethod.class)); });
@@ -457,7 +457,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeIntegerValue("featureUpdatesDeferralPeriodInDays", this.getFeatureUpdatesDeferralPeriodInDays());
         writer.writeBooleanValue("featureUpdatesPaused", this.getFeatureUpdatesPaused());
         writer.writeOffsetDateTimeValue("featureUpdatesPauseExpiryDateTime", this.getFeatureUpdatesPauseExpiryDateTime());
-        writer.writeLocalDateValue("featureUpdatesPauseStartDate", this.getFeatureUpdatesPauseStartDate());
         writer.writeOffsetDateTimeValue("featureUpdatesRollbackStartDateTime", this.getFeatureUpdatesRollbackStartDateTime());
         writer.writeIntegerValue("featureUpdatesRollbackWindowInDays", this.getFeatureUpdatesRollbackWindowInDays());
         writer.writeBooleanValue("featureUpdatesWillBeRolledBack", this.getFeatureUpdatesWillBeRolledBack());
@@ -468,7 +467,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeIntegerValue("qualityUpdatesDeferralPeriodInDays", this.getQualityUpdatesDeferralPeriodInDays());
         writer.writeBooleanValue("qualityUpdatesPaused", this.getQualityUpdatesPaused());
         writer.writeOffsetDateTimeValue("qualityUpdatesPauseExpiryDateTime", this.getQualityUpdatesPauseExpiryDateTime());
-        writer.writeLocalDateValue("qualityUpdatesPauseStartDate", this.getQualityUpdatesPauseStartDate());
         writer.writeOffsetDateTimeValue("qualityUpdatesRollbackStartDateTime", this.getQualityUpdatesRollbackStartDateTime());
         writer.writeBooleanValue("qualityUpdatesWillBeRolledBack", this.getQualityUpdatesWillBeRolledBack());
         writer.writeIntegerValue("scheduleImminentRestartWarningInMinutes", this.getScheduleImminentRestartWarningInMinutes());

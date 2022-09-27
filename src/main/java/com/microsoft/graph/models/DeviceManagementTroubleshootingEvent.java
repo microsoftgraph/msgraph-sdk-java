@@ -63,7 +63,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
         }};

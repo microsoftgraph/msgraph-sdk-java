@@ -49,7 +49,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarSharingMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("canAccept", (n) -> { currentObject.setCanAccept(n.getBooleanValue()); });
             this.put("sharingMessageAction", (n) -> { currentObject.setSharingMessageAction(n.getObjectValue(CalendarSharingMessageAction::createFromDiscriminatorValue)); });
             this.put("sharingMessageActions", (n) -> { currentObject.setSharingMessageActions(n.getCollectionOfObjectValues(CalendarSharingMessageAction::createFromDiscriminatorValue)); });

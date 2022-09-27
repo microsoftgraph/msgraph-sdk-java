@@ -49,7 +49,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Notebook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });

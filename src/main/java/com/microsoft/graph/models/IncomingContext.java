@@ -54,7 +54,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncomingContext currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("observedParticipantId", (n) -> { currentObject.setObservedParticipantId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onBehalfOf", (n) -> { currentObject.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });

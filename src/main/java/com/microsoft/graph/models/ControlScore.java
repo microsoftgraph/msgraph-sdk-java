@@ -78,7 +78,7 @@ public class ControlScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ControlScore currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("controlCategory", (n) -> { currentObject.setControlCategory(n.getStringValue()); });
             this.put("controlName", (n) -> { currentObject.setControlName(n.getStringValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });

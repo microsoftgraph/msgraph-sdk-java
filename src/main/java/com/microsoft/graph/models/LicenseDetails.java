@@ -40,7 +40,7 @@ public class LicenseDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
             this.put("skuPartNumber", (n) -> { currentObject.setSkuPartNumber(n.getStringValue()); });

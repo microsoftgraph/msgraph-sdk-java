@@ -154,7 +154,7 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Device currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("alternativeSecurityIds", (n) -> { currentObject.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
             this.put("approximateLastSignInDateTime", (n) -> { currentObject.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });

@@ -13,11 +13,11 @@ public class Certification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** URL that shows certification details for the application. */
-    private String _certificationDetailsUrl;
+    private final String _certificationDetailsUrl;
     /** The timestamp when the current certification for the application will expire. */
     private OffsetDateTime _certificationExpirationDateTime;
     /** Indicates whether the application is certified by Microsoft. */
-    private Boolean _isCertifiedByMicrosoft;
+    private final Boolean _isCertifiedByMicrosoft;
     /** Indicates whether the application has been self-attested by the application developer or the publisher. */
     private Boolean _isPublisherAttested;
     /** The timestamp when the certification for the application was most recently added or updated. */
@@ -73,7 +73,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Certification currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
             this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
@@ -121,9 +121,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("certificationDetailsUrl", this.getCertificationDetailsUrl());
         writer.writeOffsetDateTimeValue("certificationExpirationDateTime", this.getCertificationExpirationDateTime());
-        writer.writeBooleanValue("isCertifiedByMicrosoft", this.getIsCertifiedByMicrosoft());
         writer.writeBooleanValue("isPublisherAttested", this.getIsPublisherAttested());
         writer.writeOffsetDateTimeValue("lastCertificationDateTime", this.getLastCertificationDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());

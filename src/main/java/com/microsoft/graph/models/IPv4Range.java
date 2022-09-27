@@ -37,7 +37,7 @@ public class IPv4Range extends IpRange implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IPv4Range currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lowerAddress", (n) -> { currentObject.setLowerAddress(n.getStringValue()); });
             this.put("upperAddress", (n) -> { currentObject.setUpperAddress(n.getStringValue()); });
         }};

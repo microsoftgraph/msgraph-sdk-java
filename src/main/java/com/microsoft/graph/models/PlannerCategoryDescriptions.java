@@ -296,7 +296,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerCategoryDescriptions currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<String, Consumer<ParseNode>>(26) {{
             this.put("category1", (n) -> { currentObject.setCategory1(n.getStringValue()); });
             this.put("category10", (n) -> { currentObject.setCategory10(n.getStringValue()); });
             this.put("category11", (n) -> { currentObject.setCategory11(n.getStringValue()); });

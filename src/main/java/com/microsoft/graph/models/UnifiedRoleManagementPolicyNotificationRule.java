@@ -43,7 +43,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyNotificationRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefaultRecipientsEnabled", (n) -> { currentObject.setIsDefaultRecipientsEnabled(n.getBooleanValue()); });
             this.put("notificationLevel", (n) -> { currentObject.setNotificationLevel(n.getStringValue()); });
             this.put("notificationRecipients", (n) -> { currentObject.setNotificationRecipients(n.getCollectionOfPrimitiveValues(String.class)); });

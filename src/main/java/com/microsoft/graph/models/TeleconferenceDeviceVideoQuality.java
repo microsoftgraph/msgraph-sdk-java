@@ -81,7 +81,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceVideoQuality currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("averageInboundBitRate", (n) -> { currentObject.setAverageInboundBitRate(n.getDoubleValue()); });
             this.put("averageInboundFrameRate", (n) -> { currentObject.setAverageInboundFrameRate(n.getDoubleValue()); });
             this.put("averageOutboundBitRate", (n) -> { currentObject.setAverageOutboundBitRate(n.getDoubleValue()); });

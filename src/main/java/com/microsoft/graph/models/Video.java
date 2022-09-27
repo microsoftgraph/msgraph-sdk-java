@@ -114,7 +114,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Video currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("audioBitsPerSample", (n) -> { currentObject.setAudioBitsPerSample(n.getIntegerValue()); });
             this.put("audioChannels", (n) -> { currentObject.setAudioChannels(n.getIntegerValue()); });
             this.put("audioFormat", (n) -> { currentObject.setAudioFormat(n.getStringValue()); });

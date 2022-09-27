@@ -153,7 +153,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectRoutingLogRow currentObject = this;
-        return new HashMap<>(22) {{
+        return new HashMap<String, Consumer<ParseNode>>(22) {{
             this.put("calleeNumber", (n) -> { currentObject.setCalleeNumber(n.getStringValue()); });
             this.put("callEndSubReason", (n) -> { currentObject.setCallEndSubReason(n.getIntegerValue()); });
             this.put("callerNumber", (n) -> { currentObject.setCallerNumber(n.getStringValue()); });

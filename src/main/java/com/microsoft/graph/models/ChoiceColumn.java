@@ -76,7 +76,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChoiceColumn currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowTextEntry", (n) -> { currentObject.setAllowTextEntry(n.getBooleanValue()); });
             this.put("choices", (n) -> { currentObject.setChoices(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });

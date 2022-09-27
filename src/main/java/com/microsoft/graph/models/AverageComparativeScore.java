@@ -66,7 +66,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AverageComparativeScore currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("averageScore", (n) -> { currentObject.setAverageScore(n.getDoubleValue()); });
             this.put("basis", (n) -> { currentObject.setBasis(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

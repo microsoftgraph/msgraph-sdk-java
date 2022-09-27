@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.EmailIdentity;
 import com.microsoft.graph.models.Initiator;
 import com.microsoft.graph.models.ProvisionedIdentity;
 import com.microsoft.graph.models.ProvisioningServicePrincipal;
@@ -48,6 +49,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.emailIdentity": return new EmailIdentity();
                 case "#microsoft.graph.initiator": return new Initiator();
                 case "#microsoft.graph.provisionedIdentity": return new ProvisionedIdentity();
                 case "#microsoft.graph.provisioningServicePrincipal": return new ProvisioningServicePrincipal();
@@ -86,7 +88,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

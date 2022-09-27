@@ -145,7 +145,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDevicePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("averageBlueScreens", (n) -> { currentObject.setAverageBlueScreens(n.getDoubleValue()); });
             this.put("averageRestarts", (n) -> { currentObject.setAverageRestarts(n.getDoubleValue()); });
             this.put("blueScreenCount", (n) -> { currentObject.setBlueScreenCount(n.getIntegerValue()); });

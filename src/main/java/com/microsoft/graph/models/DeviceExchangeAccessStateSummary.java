@@ -73,7 +73,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceExchangeAccessStateSummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowedDeviceCount", (n) -> { currentObject.setAllowedDeviceCount(n.getIntegerValue()); });
             this.put("blockedDeviceCount", (n) -> { currentObject.setBlockedDeviceCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });

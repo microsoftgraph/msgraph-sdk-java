@@ -50,7 +50,7 @@ public class PrintTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(PrintTaskDefinition::createFromDiscriminatorValue)); });
             this.put("parentUrl", (n) -> { currentObject.setParentUrl(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintTaskStatus::createFromDiscriminatorValue)); });

@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.AddLargeGalleryViewOperation;
 import com.microsoft.graph.models.CancelMediaProcessingOperation;
 import com.microsoft.graph.models.InviteParticipantsOperation;
 import com.microsoft.graph.models.MuteParticipantOperation;
@@ -45,6 +46,7 @@ public class CommsOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.addLargeGalleryViewOperation": return new AddLargeGalleryViewOperation();
                 case "#microsoft.graph.cancelMediaProcessingOperation": return new CancelMediaProcessingOperation();
                 case "#microsoft.graph.inviteParticipantsOperation": return new InviteParticipantsOperation();
                 case "#microsoft.graph.muteParticipantOperation": return new MuteParticipantOperation();
@@ -74,7 +76,7 @@ public class CommsOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });

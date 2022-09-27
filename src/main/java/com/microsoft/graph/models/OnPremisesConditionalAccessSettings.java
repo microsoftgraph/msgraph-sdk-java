@@ -57,7 +57,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesConditionalAccessSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("excludedGroups", (n) -> { currentObject.setExcludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includedGroups", (n) -> { currentObject.setIncludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });

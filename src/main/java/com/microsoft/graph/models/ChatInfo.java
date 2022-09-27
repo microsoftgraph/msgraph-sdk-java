@@ -52,7 +52,7 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("replyChainMessageId", (n) -> { currentObject.setReplyChainMessageId(n.getStringValue()); });

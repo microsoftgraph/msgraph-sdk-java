@@ -45,7 +45,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelUnsetAsFavoriteByDefaultEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};

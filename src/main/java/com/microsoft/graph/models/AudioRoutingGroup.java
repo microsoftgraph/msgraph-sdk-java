@@ -40,7 +40,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AudioRoutingGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("receivers", (n) -> { currentObject.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("routingMode", (n) -> { currentObject.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
             this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });

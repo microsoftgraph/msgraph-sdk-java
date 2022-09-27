@@ -35,7 +35,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UrlAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
         }};
     }

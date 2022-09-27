@@ -231,7 +231,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthAttestationState currentObject = this;
-        return new HashMap<>(33) {{
+        return new HashMap<String, Consumer<ParseNode>>(33) {{
             this.put("attestationIdentityKey", (n) -> { currentObject.setAttestationIdentityKey(n.getStringValue()); });
             this.put("bitLockerStatus", (n) -> { currentObject.setBitLockerStatus(n.getStringValue()); });
             this.put("bootAppSecurityVersion", (n) -> { currentObject.setBootAppSecurityVersion(n.getStringValue()); });

@@ -71,7 +71,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppListItem currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });

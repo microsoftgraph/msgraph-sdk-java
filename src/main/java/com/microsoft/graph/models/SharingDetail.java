@@ -19,7 +19,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     /** The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _sharedDateTime;
     /** The sharingReference property */
-    private ResourceReference _sharingReference;
+    private final ResourceReference _sharingReference;
     /** The subject with which the document was shared. */
     private String _sharingSubject;
     /** Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'. */
@@ -57,7 +57,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
             this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
@@ -124,7 +124,6 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
         writer.writeOffsetDateTimeValue("sharedDateTime", this.getSharedDateTime());
-        writer.writeObjectValue("sharingReference", this.getSharingReference());
         writer.writeStringValue("sharingSubject", this.getSharingSubject());
         writer.writeStringValue("sharingType", this.getSharingType());
         writer.writeAdditionalData(this.getAdditionalData());

@@ -35,7 +35,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftStoreForBusinessAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
         }};
     }
