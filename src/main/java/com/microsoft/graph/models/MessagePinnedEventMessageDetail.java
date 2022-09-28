@@ -28,7 +28,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Event Date Time.
-     * 
+     * Date and time when the event occurred.
      */
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

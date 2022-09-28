@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.BroadcastMeetingAudience;
+import com.microsoft.graph.models.BroadcastMeetingCaptionSettings;
 
 
 import com.google.gson.JsonObject;
@@ -46,6 +47,15 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public BroadcastMeetingAudience allowedAudience;
+
+    /**
+     * The Captions.
+     * Caption settings of a Teams live event.
+     */
+    @SerializedName(value = "captions", alternate = {"Captions"})
+    @Expose
+	@Nullable
+    public BroadcastMeetingCaptionSettings captions;
 
     /**
      * The Is Attendee Report Enabled.

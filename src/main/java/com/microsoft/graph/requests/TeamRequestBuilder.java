@@ -217,6 +217,26 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     public com.microsoft.graph.requests.ChannelRequestBuilder primaryChannel() {
         return new com.microsoft.graph.requests.ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("primaryChannel"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the TeamworkTag collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamworkTagCollectionRequestBuilder tags() {
+        return new com.microsoft.graph.requests.TeamworkTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamworkTag item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamworkTagRequestBuilder tags(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.TeamworkTagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for TeamsTemplate

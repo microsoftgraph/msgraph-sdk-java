@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.37.0] - 2022-09-28
+
+### Added
+
+- AuthorizationInfo model. 
+- BroadcastMeetingCaptionSettings model. 
+- AddLargeGalleryViewOperation model and related requests. 
+- CallAddLargeGalleryView models and related requests. 
+- TeamworkTag models and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
 ## [5.36.0] - 2022-09-22
 
 ### Added

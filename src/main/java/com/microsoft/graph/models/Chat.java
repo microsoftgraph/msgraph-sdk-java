@@ -125,7 +125,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Pinned Messages.
-     * 
+     * A collection of all the pinned messages in the chat. Nullable.
      */
     @SerializedName(value = "pinnedMessages", alternate = {"PinnedMessages"})
     @Expose
