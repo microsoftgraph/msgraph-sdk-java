@@ -63,4 +63,30 @@ public class AccessPackageReferenceRequest extends BaseReferenceRequest<AccessPa
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the AccessPackage
+     *
+     * @param srcAccessPackage the AccessPackage reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AccessPackage> putAsync(@Nonnull final AccessPackage srcAccessPackage) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identityGovernance/entitlementManagement/{id}/accessPackages/" + srcAccessPackage.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the AccessPackage
+     *
+     * @param srcAccessPackage the AccessPackage reference to PUT
+     * @return the AccessPackage
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public AccessPackage put(@Nonnull final AccessPackage srcAccessPackage) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/identityGovernance/entitlementManagement/{id}/accessPackages/" + srcAccessPackage.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

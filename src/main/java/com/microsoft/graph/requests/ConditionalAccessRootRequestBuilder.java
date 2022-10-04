@@ -57,6 +57,26 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
 
 
     /**
+     *  Gets a request builder for the AuthenticationContextClassReference collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences() {
+        return new com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthenticationContextClassReference item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthenticationContextClassReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the NamedLocation collection
      *
      * @return the collection request builder

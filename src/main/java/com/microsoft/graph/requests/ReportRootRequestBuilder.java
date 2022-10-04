@@ -210,6 +210,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
     /**
+     * Gets the request builder for SecurityReportsRoot
+     *
+     * @return the SecurityReportsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SecurityReportsRootRequestBuilder security() {
+        return new com.microsoft.graph.requests.SecurityReportsRootRequestBuilder(getRequestUrlWithAdditionalSegment("security"), getClient(), null);
+    }
+
+    /**
      * Metadata for the device configuration device activity report
      * @return the request builder
      */
