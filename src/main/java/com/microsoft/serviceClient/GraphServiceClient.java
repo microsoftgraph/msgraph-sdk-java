@@ -9,7 +9,6 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import okhttp3.OkHttpClient;
 
