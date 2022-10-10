@@ -46,6 +46,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * @param tokenCredential The TokenCredential for this GraphServiceClient.
      * @param scopes The Scopes for this GraphServiceClient.
      */
+    @SuppressWarnings("LambdaLast")
     public GraphServiceClient(TokenCredential tokenCredential, String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
     }
