@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.CasesRoot;
+import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
@@ -38,6 +39,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CasesRoot cases;
+
+    /**
+     * The Attack Simulation.
+     * 
+     */
+    @SerializedName(value = "attackSimulation", alternate = {"AttackSimulation"})
+    @Expose
+	@Nullable
+    public AttackSimulationRoot attackSimulation;
 
     /**
      * The Alerts.

@@ -127,6 +127,60 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
 	@Nullable
     public Boolean v5_1;
 
+    /**
+     * The V6_0.
+     * Version 6.0 or later.
+     */
+    @SerializedName(value = "v6_0", alternate = {"V6_0"})
+    @Expose
+	@Nullable
+    public Boolean v6_0;
+
+    /**
+     * The V7_0.
+     * Version 7.0 or later.
+     */
+    @SerializedName(value = "v7_0", alternate = {"V7_0"})
+    @Expose
+	@Nullable
+    public Boolean v7_0;
+
+    /**
+     * The V7_1.
+     * Version 7.1 or later.
+     */
+    @SerializedName(value = "v7_1", alternate = {"V7_1"})
+    @Expose
+	@Nullable
+    public Boolean v7_1;
+
+    /**
+     * The V8_0.
+     * Version 8.0 or later.
+     */
+    @SerializedName(value = "v8_0", alternate = {"V8_0"})
+    @Expose
+	@Nullable
+    public Boolean v8_0;
+
+    /**
+     * The V8_1.
+     * Version 8.1 or later.
+     */
+    @SerializedName(value = "v8_1", alternate = {"V8_1"})
+    @Expose
+	@Nullable
+    public Boolean v8_1;
+
+    /**
+     * The V9_0.
+     * Version 9.0 or later.
+     */
+    @SerializedName(value = "v9_0", alternate = {"V9_0"})
+    @Expose
+	@Nullable
+    public Boolean v9_0;
+
 
     /**
      * Sets the raw JSON object

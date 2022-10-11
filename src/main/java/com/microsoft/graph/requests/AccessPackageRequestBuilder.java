@@ -59,6 +59,26 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
 
 
     /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder accessPackagesIncompatibleWith() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackagesIncompatibleWith"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackagesIncompatibleWith(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackagesIncompatibleWith") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AccessPackageAssignmentPolicy collection
      *
      * @return the collection request builder
@@ -87,6 +107,46 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
     @Nonnull
     public com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder catalog() {
         return new com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder incompatibleAccessPackages() {
+        return new com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleAccessPackages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder incompatibleAccessPackages(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleAccessPackages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.GroupCollectionRequestBuilder incompatibleGroups() {
+        return new com.microsoft.graph.requests.GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleGroups"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.GroupRequestBuilder incompatibleGroups(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GroupRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleGroups") + "/" + id, getClient(), null);
     }
 
     /**

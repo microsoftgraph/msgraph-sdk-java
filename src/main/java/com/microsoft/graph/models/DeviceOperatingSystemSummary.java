@@ -38,6 +38,15 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     }
 
     /**
+     * The Android Corporate Work Profile Count.
+     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     */
+    @SerializedName(value = "androidCorporateWorkProfileCount", alternate = {"AndroidCorporateWorkProfileCount"})
+    @Expose
+	@Nullable
+    public Integer androidCorporateWorkProfileCount;
+
+    /**
      * The Android Count.
      * Number of android device count.
      */
@@ -45,6 +54,51 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer androidCount;
+
+    /**
+     * The Android Dedicated Count.
+     * Number of dedicated Android devices.
+     */
+    @SerializedName(value = "androidDedicatedCount", alternate = {"AndroidDedicatedCount"})
+    @Expose
+	@Nullable
+    public Integer androidDedicatedCount;
+
+    /**
+     * The Android Device Admin Count.
+     * Number of device admin Android devices.
+     */
+    @SerializedName(value = "androidDeviceAdminCount", alternate = {"AndroidDeviceAdminCount"})
+    @Expose
+	@Nullable
+    public Integer androidDeviceAdminCount;
+
+    /**
+     * The Android Fully Managed Count.
+     * Number of fully managed Android devices.
+     */
+    @SerializedName(value = "androidFullyManagedCount", alternate = {"AndroidFullyManagedCount"})
+    @Expose
+	@Nullable
+    public Integer androidFullyManagedCount;
+
+    /**
+     * The Android Work Profile Count.
+     * Number of work profile Android devices.
+     */
+    @SerializedName(value = "androidWorkProfileCount", alternate = {"AndroidWorkProfileCount"})
+    @Expose
+	@Nullable
+    public Integer androidWorkProfileCount;
+
+    /**
+     * The Config Mgr Device Count.
+     * Number of ConfigMgr managed devices.
+     */
+    @SerializedName(value = "configMgrDeviceCount", alternate = {"ConfigMgrDeviceCount"})
+    @Expose
+	@Nullable
+    public Integer configMgrDeviceCount;
 
     /**
      * The Ios Count.

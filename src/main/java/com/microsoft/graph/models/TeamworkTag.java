@@ -30,7 +30,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the tag as it will appear to the user in Microsoft Teams.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -39,7 +39,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the tag as it will appear to the user in Microsoft Teams.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Member Count.
-     * 
+     * The number of users assigned to the tag.
      */
     @SerializedName(value = "memberCount", alternate = {"MemberCount"})
     @Expose
@@ -57,7 +57,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Tag Type.
-     * 
+     * The type of the tag. Default is standard.
      */
     @SerializedName(value = "tagType", alternate = {"TagType"})
     @Expose
@@ -66,7 +66,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Team Id.
-     * 
+     * ID of the team in which the tag is defined.
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * Users assigned to the tag.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

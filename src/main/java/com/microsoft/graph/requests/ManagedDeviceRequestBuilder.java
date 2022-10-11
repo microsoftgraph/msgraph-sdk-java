@@ -112,6 +112,26 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     public com.microsoft.graph.requests.DeviceCategoryRequestBuilder deviceCategory() {
         return new com.microsoft.graph.requests.DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder users() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder users(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    }
 
     /**
      * Bypass activation lock

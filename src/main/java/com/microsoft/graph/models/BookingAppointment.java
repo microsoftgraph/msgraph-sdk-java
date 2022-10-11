@@ -41,6 +41,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String additionalInformation;
 
     /**
+     * The Anonymous Join Web Url.
+     * 
+     */
+    @SerializedName(value = "anonymousJoinWebUrl", alternate = {"AnonymousJoinWebUrl"})
+    @Expose
+	@Nullable
+    public String anonymousJoinWebUrl;
+
+    /**
      * The Customers.
      * It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      */

@@ -65,7 +65,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Options.
-     * 
+     * Contains the optional features for the call.
      */
     @SerializedName(value = "callOptions", alternate = {"CallOptions"})
     @Expose
@@ -101,7 +101,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Context.
-     * 
+     * Call context associated with an incoming call.
      */
     @SerializedName(value = "incomingContext", alternate = {"IncomingContext"})
     @Expose
@@ -146,7 +146,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Requested Modalities.
-     * 
+     * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      */
     @SerializedName(value = "requestedModalities", alternate = {"RequestedModalities"})
     @Expose
@@ -155,7 +155,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * 
+     * The result information. For example can hold termination reason. Read-only.
      */
     @SerializedName(value = "resultInfo", alternate = {"ResultInfo"})
     @Expose
@@ -164,7 +164,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The originator of the call.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -173,7 +173,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -182,7 +182,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the conversation.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -191,7 +191,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Targets.
-     * 
+     * The targets of the call. Required information for creating peer to peer call.
      */
     @SerializedName(value = "targets", alternate = {"Targets"})
     @Expose
@@ -218,7 +218,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcription.
-     * 
+     * The transcription information for the call. Read-only.
      */
     @SerializedName(value = "transcription", alternate = {"Transcription"})
     @Expose
