@@ -2,9 +2,7 @@ buildscript {
     repositories {
         google()
         gradlePluginPortal()
-		maven {
-			url "https://plugins.gradle.org/m2/"
-		}
+		maven { url 'https://plugins.gradle.org/m2/' }
     }
 
     dependencies {
@@ -17,12 +15,15 @@ buildscript {
 repositories {
     google()
     gradlePluginPortal()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 apply plugin: "com.android.library"
 apply plugin: "com.github.ben-manes.versions"
 
 android {
+    namespace 'com.microsoft.graph'
+
     compileSdkVersion 33
 
     defaultConfig {
