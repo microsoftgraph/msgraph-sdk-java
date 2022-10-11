@@ -13,6 +13,7 @@ import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
 import okhttp3.OkHttpClient;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClient {
 
@@ -20,7 +21,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * Sets a few basic values for the GraphClientOptions to pass to the client.
      * @return the GraphClientOptions instance for the GraphServiceClient.
      */
-    @Nonull
+    @Nonnull
     public static GraphClientOption getGraphClientOptions() {
         GraphClientOption graphClientOptions = new GraphClientOption();
         graphClientOptions.setGraphServiceTargetVersion("v1.0");
