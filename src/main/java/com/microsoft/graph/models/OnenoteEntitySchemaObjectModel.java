@@ -20,6 +20,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      * Instantiates a new OnenoteEntitySchemaObjectModel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenoteEntitySchemaObjectModel() {
         super();
         this.setOdataType("#microsoft.graph.onenoteEntitySchemaObjectModel");
@@ -60,7 +61,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteEntitySchemaObjectModel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
@@ -69,6 +70,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,6 +81,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }

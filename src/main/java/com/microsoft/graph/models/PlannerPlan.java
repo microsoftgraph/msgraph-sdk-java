@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class PlannerPlan extends Entity implements Parsable {
     /** Read-only. Nullable. Collection of buckets in the plan. */
     private java.util.List<PlannerBucket> _buckets;
@@ -30,6 +30,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * Instantiates a new plannerPlan and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerPlan() {
         super();
         this.setOdataType("#microsoft.graph.plannerPlan");
@@ -91,7 +92,7 @@ public class PlannerPlan extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerPlan currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("buckets", (n) -> { currentObject.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
             this.put("container", (n) -> { currentObject.setContainer(n.getObjectValue(PlannerPlanContainer::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -131,6 +132,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the buckets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerBucket> value) {
         this._buckets = value;
     }
@@ -156,6 +159,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the container property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainer(@javax.annotation.Nullable final PlannerPlanContainer value) {
         this._container = value;
     }
@@ -164,6 +168,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -172,6 +177,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -180,6 +186,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final PlannerPlanDetails value) {
         this._details = value;
     }
@@ -188,6 +195,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -196,6 +204,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
         this._tasks = value;
     }
@@ -204,6 +213,7 @@ public class PlannerPlan extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

@@ -18,6 +18,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * Instantiates a new IdentityApiConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityApiConnector() {
         super();
         this.setOdataType("#microsoft.graph.identityApiConnector");
@@ -55,7 +56,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityApiConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * @param value Value to set for the authenticationConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationConfiguration(@javax.annotation.Nullable final ApiAuthenticationConfigurationBase value) {
         this._authenticationConfiguration = value;
     }
@@ -94,6 +97,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
      * @param value Value to set for the targetUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetUrl(@javax.annotation.Nullable final String value) {
         this._targetUrl = value;
     }

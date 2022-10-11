@@ -21,6 +21,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
      * Instantiates a new addTokenSigningCertificatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddTokenSigningCertificatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,7 +66,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddTokenSigningCertificatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
         }};
@@ -75,6 +76,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -86,6 +88,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class AddTokenSigningCertificatePostRequestBody implements AdditionalData
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }

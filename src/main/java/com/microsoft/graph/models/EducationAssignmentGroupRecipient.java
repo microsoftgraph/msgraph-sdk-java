@@ -12,6 +12,7 @@ public class EducationAssignmentGroupRecipient extends EducationAssignmentRecipi
      * Instantiates a new EducationAssignmentGroupRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentGroupRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentGroupRecipient");
@@ -33,7 +34,7 @@ public class EducationAssignmentGroupRecipient extends EducationAssignmentRecipi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentGroupRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class EducationAssignmentGroupRecipient extends EducationAssignmentRecipi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

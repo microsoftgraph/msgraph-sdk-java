@@ -23,6 +23,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceUpdateMessageViewpoint() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.serviceUpdateMessageViewpoint");
@@ -52,7 +53,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessageViewpoint currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isArchived", (n) -> { currentObject.setIsArchived(n.getBooleanValue()); });
             this.put("isFavorited", (n) -> { currentObject.setIsFavorited(n.getBooleanValue()); });
             this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
@@ -96,6 +97,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isArchived", this.getIsArchived());
@@ -109,6 +111,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param value Value to set for the isArchived property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsArchived(@javax.annotation.Nullable final Boolean value) {
         this._isArchived = value;
     }
@@ -125,6 +129,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param value Value to set for the isFavorited property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFavorited(@javax.annotation.Nullable final Boolean value) {
         this._isFavorited = value;
     }
@@ -133,6 +138,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param value Value to set for the isRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRead(@javax.annotation.Nullable final Boolean value) {
         this._isRead = value;
     }
@@ -141,6 +147,7 @@ public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

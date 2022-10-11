@@ -18,6 +18,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.chatRenamedEventMessageDetail");
@@ -55,7 +56,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatRenamedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chatDisplayName", (n) -> { currentObject.setChatDisplayName(n.getStringValue()); });
             this.put("chatId", (n) -> { currentObject.setChatId(n.getStringValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatDisplayName(@javax.annotation.Nullable final String value) {
         this._chatDisplayName = value;
     }
@@ -94,6 +97,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the chatId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
         this._chatId = value;
     }
@@ -102,6 +106,7 @@ public class ChatRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

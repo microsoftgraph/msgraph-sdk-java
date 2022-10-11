@@ -19,6 +19,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
      * Instantiates a new changeScreenSharingRolePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChangeScreenSharingRolePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,7 +48,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeScreenSharingRolePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(ScreenSharingRole.class)); });
         }};
     }
@@ -64,6 +65,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("role", this.getRole());
@@ -74,6 +76,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final ScreenSharingRole value) {
         this._role = value;
     }

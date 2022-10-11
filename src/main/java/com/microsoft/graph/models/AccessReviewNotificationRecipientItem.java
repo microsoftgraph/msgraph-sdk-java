@@ -21,6 +21,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * Instantiates a new accessReviewNotificationRecipientItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewNotificationRecipientItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientItem");
@@ -50,7 +51,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewNotificationRecipientItem currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("notificationRecipientScope", (n) -> { currentObject.setNotificationRecipientScope(n.getObjectValue(AccessReviewNotificationRecipientScope::createFromDiscriminatorValue)); });
             this.put("notificationTemplateType", (n) -> { currentObject.setNotificationTemplateType(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("notificationRecipientScope", this.getNotificationRecipientScope());
@@ -97,6 +99,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param value Value to set for the notificationRecipientScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationRecipientScope(@javax.annotation.Nullable final AccessReviewNotificationRecipientScope value) {
         this._notificationRecipientScope = value;
     }
@@ -113,6 +117,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param value Value to set for the notificationTemplateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplateType(@javax.annotation.Nullable final String value) {
         this._notificationTemplateType = value;
     }
@@ -121,6 +126,7 @@ public class AccessReviewNotificationRecipientItem implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

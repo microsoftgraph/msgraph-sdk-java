@@ -33,6 +33,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Instantiates a new resourceVisualization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.resourceVisualization");
@@ -86,7 +87,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceVisualization currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
             this.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
             this.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });
@@ -151,6 +152,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("containerDisplayName", this.getContainerDisplayName());
@@ -169,6 +171,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerDisplayName(@javax.annotation.Nullable final String value) {
         this._containerDisplayName = value;
     }
@@ -185,6 +189,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerType(@javax.annotation.Nullable final String value) {
         this._containerType = value;
     }
@@ -193,6 +198,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerWebUrl(@javax.annotation.Nullable final String value) {
         this._containerWebUrl = value;
     }
@@ -201,6 +207,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
         this._mediaType = value;
     }
@@ -209,6 +216,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -217,6 +225,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the previewImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewImageUrl(@javax.annotation.Nullable final String value) {
         this._previewImageUrl = value;
     }
@@ -225,6 +234,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the previewText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewText(@javax.annotation.Nullable final String value) {
         this._previewText = value;
     }
@@ -233,6 +243,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -241,6 +252,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

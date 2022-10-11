@@ -23,6 +23,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * Instantiates a new unifiedRolePermission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRolePermission() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.unifiedRolePermission");
@@ -76,7 +77,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRolePermission currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
             this.put("excludedResourceActions", (n) -> { currentObject.setExcludedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -96,6 +97,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedResourceActions", this.getAllowedResourceActions());
@@ -109,6 +111,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedResourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedResourceActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedResourceActions = value;
     }
@@ -125,6 +129,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the condition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCondition(@javax.annotation.Nullable final String value) {
         this._condition = value;
     }
@@ -133,6 +138,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the excludedResourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedResourceActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludedResourceActions = value;
     }
@@ -141,6 +147,7 @@ public class UnifiedRolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

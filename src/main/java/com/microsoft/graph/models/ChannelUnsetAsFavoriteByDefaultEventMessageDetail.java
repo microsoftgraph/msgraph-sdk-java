@@ -16,6 +16,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      * Instantiates a new ChannelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChannelUnsetAsFavoriteByDefaultEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.channelUnsetAsFavoriteByDefaultEventMessageDetail");
@@ -45,7 +46,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelUnsetAsFavoriteByDefaultEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      * @param value Value to set for the channelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
         this._channelId = value;
     }
@@ -82,6 +85,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

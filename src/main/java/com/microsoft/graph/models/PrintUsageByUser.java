@@ -14,6 +14,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * Instantiates a new PrintUsageByUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintUsageByUser() {
         super();
         this.setOdataType("#microsoft.graph.printUsageByUser");
@@ -35,7 +36,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintUsageByUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -22,6 +22,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
@@ -51,7 +52,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
             this.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
             this.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
@@ -96,6 +97,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the assetTagTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssetTagTemplate(@javax.annotation.Nullable final String value) {
         this._assetTagTemplate = value;
     }
@@ -118,6 +121,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenDockIcons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenDockIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
         this._homeScreenDockIcons = value;
     }
@@ -126,6 +130,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenPages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
         this._homeScreenPages = value;
     }
@@ -134,6 +139,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the lockScreenFootnote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenFootnote(@javax.annotation.Nullable final String value) {
         this._lockScreenFootnote = value;
     }
@@ -142,6 +148,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the notificationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationSettings(@javax.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
         this._notificationSettings = value;
     }

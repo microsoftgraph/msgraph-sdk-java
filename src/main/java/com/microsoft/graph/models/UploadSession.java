@@ -24,6 +24,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * Instantiates a new uploadSession and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UploadSession() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.uploadSession");
@@ -61,7 +62,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadSession currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("nextExpectedRanges", (n) -> { currentObject.setNextExpectedRanges(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -110,6 +112,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -126,6 +130,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the nextExpectedRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNextExpectedRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._nextExpectedRanges = value;
     }
@@ -134,6 +139,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +148,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the uploadUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadUrl(@javax.annotation.Nullable final String value) {
         this._uploadUrl = value;
     }

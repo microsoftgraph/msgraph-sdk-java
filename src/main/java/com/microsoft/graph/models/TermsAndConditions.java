@@ -34,6 +34,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Instantiates a new termsAndConditions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermsAndConditions() {
         super();
         this.setOdataType("#microsoft.graph.termsAndConditions");
@@ -111,7 +112,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsAndConditions currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptanceStatement", (n) -> { currentObject.setAcceptanceStatement(n.getStringValue()); });
             this.put("acceptanceStatuses", (n) -> { currentObject.setAcceptanceStatuses(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TermsAndConditionsAssignment::createFromDiscriminatorValue)); });
@@ -153,6 +154,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the acceptanceStatement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptanceStatement(@javax.annotation.Nullable final String value) {
         this._acceptanceStatement = value;
     }
@@ -180,6 +183,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the acceptanceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptanceStatuses(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this._acceptanceStatuses = value;
     }
@@ -188,6 +192,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
         this._assignments = value;
     }
@@ -196,6 +201,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the bodyText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyText(@javax.annotation.Nullable final String value) {
         this._bodyText = value;
     }
@@ -204,6 +210,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -212,6 +219,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -220,6 +228,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -228,6 +237,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -236,6 +246,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -244,6 +255,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

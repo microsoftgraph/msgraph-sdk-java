@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class LicenseDetails extends Entity implements Parsable {
     /** Information about the service plans assigned with the license. Read-only, Not nullable */
     private java.util.List<ServicePlanInfo> _servicePlans;
@@ -19,6 +19,7 @@ public class LicenseDetails extends Entity implements Parsable {
      * Instantiates a new licenseDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LicenseDetails() {
         super();
         this.setOdataType("#microsoft.graph.licenseDetails");
@@ -40,7 +41,7 @@ public class LicenseDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("servicePlans", (n) -> { currentObject.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
             this.put("skuPartNumber", (n) -> { currentObject.setSkuPartNumber(n.getStringValue()); });
@@ -75,6 +76,7 @@ public class LicenseDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class LicenseDetails extends Entity implements Parsable {
      * @param value Value to set for the servicePlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlans(@javax.annotation.Nullable final java.util.List<ServicePlanInfo> value) {
         this._servicePlans = value;
     }
@@ -95,6 +98,7 @@ public class LicenseDetails extends Entity implements Parsable {
      * @param value Value to set for the skuId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkuId(@javax.annotation.Nullable final String value) {
         this._skuId = value;
     }
@@ -103,6 +107,7 @@ public class LicenseDetails extends Entity implements Parsable {
      * @param value Value to set for the skuPartNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkuPartNumber(@javax.annotation.Nullable final String value) {
         this._skuPartNumber = value;
     }

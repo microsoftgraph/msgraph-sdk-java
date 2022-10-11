@@ -14,6 +14,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
      * Instantiates a new AndroidMobileAppIdentifier and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidMobileAppIdentifier() {
         super();
         this.setOdataType("#microsoft.graph.androidMobileAppIdentifier");
@@ -35,7 +36,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidMobileAppIdentifier currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements P
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this._packageId = value;
     }

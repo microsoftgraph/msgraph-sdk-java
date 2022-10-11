@@ -14,6 +14,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      * Instantiates a new ServicePrincipalIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipalIdentity() {
         super();
         this.setOdataType("#microsoft.graph.servicePrincipalIdentity");
@@ -43,7 +44,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipalIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ServicePrincipalIdentity extends Identity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }

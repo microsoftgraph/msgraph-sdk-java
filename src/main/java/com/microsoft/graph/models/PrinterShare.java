@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class PrinterShare extends PrinterBase implements Parsable {
     /** If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties. */
     private Boolean _allowAllUsers;
@@ -24,6 +24,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * Instantiates a new printerShare and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterShare() {
         super();
         this.setOdataType("#microsoft.graph.printerShare");
@@ -77,7 +78,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterShare currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAllUsers", (n) -> { currentObject.setAllowAllUsers(n.getBooleanValue()); });
             this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
             this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
@@ -98,6 +99,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the allowAllUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAllUsers(@javax.annotation.Nullable final Boolean value) {
         this._allowAllUsers = value;
     }
@@ -120,6 +123,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the allowedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
         this._allowedGroups = value;
     }
@@ -128,6 +132,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the allowedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUsers(@javax.annotation.Nullable final java.util.List<User> value) {
         this._allowedUsers = value;
     }
@@ -136,6 +141,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -144,6 +150,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
      * @param value Value to set for the printer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinter(@javax.annotation.Nullable final Printer value) {
         this._printer = value;
     }

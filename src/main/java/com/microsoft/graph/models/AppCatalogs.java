@@ -15,6 +15,7 @@ public class AppCatalogs extends Entity implements Parsable {
      * Instantiates a new appCatalogs and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppCatalogs() {
         super();
         this.setOdataType("#microsoft.graph.appCatalogs");
@@ -36,7 +37,7 @@ public class AppCatalogs extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppCatalogs currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("teamsApps", (n) -> { currentObject.setTeamsApps(n.getCollectionOfObjectValues(TeamsApp::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class AppCatalogs extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class AppCatalogs extends Entity implements Parsable {
      * @param value Value to set for the teamsApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsApps(@javax.annotation.Nullable final java.util.List<TeamsApp> value) {
         this._teamsApps = value;
     }

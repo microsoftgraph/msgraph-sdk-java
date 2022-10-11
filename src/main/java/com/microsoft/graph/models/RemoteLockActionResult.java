@@ -14,6 +14,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      * Instantiates a new RemoteLockActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoteLockActionResult() {
         super();
         this.setOdataType("#microsoft.graph.remoteLockActionResult");
@@ -35,7 +36,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoteLockActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("unlockPin", (n) -> { currentObject.setUnlockPin(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
      * @param value Value to set for the unlockPin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnlockPin(@javax.annotation.Nullable final String value) {
         this._unlockPin = value;
     }

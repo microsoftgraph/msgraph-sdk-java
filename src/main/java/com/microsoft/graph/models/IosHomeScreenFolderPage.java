@@ -22,6 +22,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * Instantiates a new iosHomeScreenFolderPage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosHomeScreenFolderPage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.iosHomeScreenFolderPage");
@@ -67,7 +68,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosHomeScreenFolderPage currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(IosHomeScreenApp::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("apps", this.getApps());
@@ -98,6 +100,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<IosHomeScreenApp> value) {
         this._apps = value;
     }
@@ -114,6 +118,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -122,6 +127,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

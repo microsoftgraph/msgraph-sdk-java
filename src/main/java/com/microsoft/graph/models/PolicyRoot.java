@@ -44,6 +44,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * Instantiates a new PolicyRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PolicyRoot() {
         super();
         this.setOdataType("#microsoft.graph.policyRoot");
@@ -137,7 +138,7 @@ public class PolicyRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PolicyRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityBasedTimeoutPolicies", (n) -> { currentObject.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
             this.put("adminConsentRequestPolicy", (n) -> { currentObject.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
             this.put("authenticationFlowsPolicy", (n) -> { currentObject.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
@@ -217,6 +218,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -242,6 +244,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the activityBasedTimeoutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityBasedTimeoutPolicies(@javax.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
         this._activityBasedTimeoutPolicies = value;
     }
@@ -250,6 +253,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the adminConsentRequestPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminConsentRequestPolicy(@javax.annotation.Nullable final AdminConsentRequestPolicy value) {
         this._adminConsentRequestPolicy = value;
     }
@@ -258,6 +262,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationFlowsPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationFlowsPolicy(@javax.annotation.Nullable final AuthenticationFlowsPolicy value) {
         this._authenticationFlowsPolicy = value;
     }
@@ -266,6 +271,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodsPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodsPolicy(@javax.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this._authenticationMethodsPolicy = value;
     }
@@ -274,6 +280,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the authorizationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizationPolicy(@javax.annotation.Nullable final AuthorizationPolicy value) {
         this._authorizationPolicy = value;
     }
@@ -282,6 +289,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the claimsMappingPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this._claimsMappingPolicies = value;
     }
@@ -290,6 +298,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccessPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this._conditionalAccessPolicies = value;
     }
@@ -298,6 +307,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the crossTenantAccessPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossTenantAccessPolicy(@javax.annotation.Nullable final CrossTenantAccessPolicy value) {
         this._crossTenantAccessPolicy = value;
     }
@@ -306,6 +316,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the featureRolloutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this._featureRolloutPolicies = value;
     }
@@ -314,6 +325,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this._homeRealmDiscoveryPolicies = value;
     }
@@ -322,6 +334,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentitySecurityDefaultsEnforcementPolicy(@javax.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
         this._identitySecurityDefaultsEnforcementPolicy = value;
     }
@@ -330,6 +343,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the permissionGrantPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionGrantPolicies(@javax.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
         this._permissionGrantPolicies = value;
     }
@@ -338,6 +352,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the roleManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleManagementPolicies(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
         this._roleManagementPolicies = value;
     }
@@ -346,6 +361,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the roleManagementPolicyAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleManagementPolicyAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
         this._roleManagementPolicyAssignments = value;
     }
@@ -354,6 +370,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this._tokenIssuancePolicies = value;
     }
@@ -362,6 +379,7 @@ public class PolicyRoot extends Entity implements Parsable {
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this._tokenLifetimePolicies = value;
     }

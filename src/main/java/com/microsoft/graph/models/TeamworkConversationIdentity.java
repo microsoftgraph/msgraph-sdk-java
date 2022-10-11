@@ -14,6 +14,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * Instantiates a new TeamworkConversationIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkConversationIdentity() {
         super();
         this.setOdataType("#microsoft.graph.teamworkConversationIdentity");
@@ -43,7 +44,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkConversationIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conversationIdentityType", (n) -> { currentObject.setConversationIdentityType(n.getEnumValue(TeamworkConversationIdentityType.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * @param value Value to set for the conversationIdentityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationIdentityType(@javax.annotation.Nullable final TeamworkConversationIdentityType value) {
         this._conversationIdentityType = value;
     }

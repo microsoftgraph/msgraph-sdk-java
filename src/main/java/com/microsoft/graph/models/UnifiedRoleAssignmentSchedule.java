@@ -20,6 +20,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * Instantiates a new UnifiedRoleAssignmentSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignmentSchedule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleAssignmentSchedule");
@@ -57,7 +58,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
             this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getStringValue()); });
             this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivatedUsing(@javax.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this._activatedUsing = value;
     }
@@ -106,6 +109,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentType(@javax.annotation.Nullable final String value) {
         this._assignmentType = value;
     }
@@ -114,6 +118,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
         this._memberType = value;
     }
@@ -122,6 +127,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
         this._scheduleInfo = value;
     }

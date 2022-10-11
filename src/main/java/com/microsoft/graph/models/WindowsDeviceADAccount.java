@@ -16,6 +16,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      * Instantiates a new WindowsDeviceADAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDeviceADAccount() {
         super();
         this.setOdataType("#microsoft.graph.windowsDeviceADAccount");
@@ -45,7 +46,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDeviceADAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
             this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      * @param value Value to set for the domainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
     }
@@ -82,6 +85,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Pars
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }

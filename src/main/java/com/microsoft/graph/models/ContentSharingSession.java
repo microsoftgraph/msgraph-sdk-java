@@ -13,6 +13,7 @@ public class ContentSharingSession extends Entity implements Parsable {
      * Instantiates a new contentSharingSession and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContentSharingSession() {
         super();
         this.setOdataType("#microsoft.graph.contentSharingSession");
@@ -34,7 +35,7 @@ public class ContentSharingSession extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentSharingSession currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -42,6 +43,7 @@ public class ContentSharingSession extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

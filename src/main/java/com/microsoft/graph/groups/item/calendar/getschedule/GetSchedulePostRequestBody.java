@@ -25,6 +25,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new getSchedulePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetSchedulePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,7 +70,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetSchedulePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("availabilityViewInterval", (n) -> { currentObject.setAvailabilityViewInterval(n.getIntegerValue()); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("schedules", (n) -> { currentObject.setSchedules(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -97,6 +98,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("availabilityViewInterval", this.getAvailabilityViewInterval());
@@ -110,6 +112,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AvailabilityViewInterval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityViewInterval(@javax.annotation.Nullable final Integer value) {
         this._availabilityViewInterval = value;
     }
@@ -126,6 +130,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the EndTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._endTime = value;
     }
@@ -134,6 +139,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the Schedules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedules(@javax.annotation.Nullable final java.util.List<String> value) {
         this._schedules = value;
     }
@@ -142,6 +148,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the StartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startTime = value;
     }

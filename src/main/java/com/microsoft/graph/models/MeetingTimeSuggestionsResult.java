@@ -21,6 +21,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingTimeSuggestionsResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.meetingTimeSuggestionsResult");
@@ -58,7 +59,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestionsResult currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("emptySuggestionsReason", (n) -> { currentObject.setEmptySuggestionsReason(n.getStringValue()); });
             this.put("meetingTimeSuggestions", (n) -> { currentObject.setMeetingTimeSuggestions(n.getCollectionOfObjectValues(MeetingTimeSuggestion::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("emptySuggestionsReason", this.getEmptySuggestionsReason());
@@ -97,6 +99,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param value Value to set for the emptySuggestionsReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmptySuggestionsReason(@javax.annotation.Nullable final String value) {
         this._emptySuggestionsReason = value;
     }
@@ -113,6 +117,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param value Value to set for the meetingTimeSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingTimeSuggestions(@javax.annotation.Nullable final java.util.List<MeetingTimeSuggestion> value) {
         this._meetingTimeSuggestions = value;
     }
@@ -121,6 +126,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

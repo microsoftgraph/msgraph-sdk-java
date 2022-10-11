@@ -32,6 +32,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * Instantiates a new complianceManagementPartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComplianceManagementPartner() {
         super();
         this.setOdataType("#microsoft.graph.complianceManagementPartner");
@@ -77,7 +78,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComplianceManagementPartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidEnrollmentAssignments", (n) -> { currentObject.setAndroidEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
             this.put("androidOnboarded", (n) -> { currentObject.setAndroidOnboarded(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -142,6 +143,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the androidEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this._androidEnrollmentAssignments = value;
     }
@@ -168,6 +171,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the androidOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidOnboarded(@javax.annotation.Nullable final Boolean value) {
         this._androidOnboarded = value;
     }
@@ -176,6 +180,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -184,6 +189,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the iosEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this._iosEnrollmentAssignments = value;
     }
@@ -192,6 +198,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the iosOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosOnboarded(@javax.annotation.Nullable final Boolean value) {
         this._iosOnboarded = value;
     }
@@ -200,6 +207,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastHeartbeatDateTime = value;
     }
@@ -208,6 +216,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the macOsEnrollmentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOsEnrollmentAssignments(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
         this._macOsEnrollmentAssignments = value;
     }
@@ -216,6 +225,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the macOsOnboarded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOsOnboarded(@javax.annotation.Nullable final Boolean value) {
         this._macOsOnboarded = value;
     }
@@ -224,6 +234,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final DeviceManagementPartnerTenantState value) {
         this._partnerState = value;
     }

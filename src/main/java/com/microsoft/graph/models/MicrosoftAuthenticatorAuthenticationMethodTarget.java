@@ -14,6 +14,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget");
@@ -43,7 +44,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethodTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationMode", (n) -> { currentObject.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * @param value Value to set for the authenticationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMode(@javax.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
         this._authenticationMode = value;
     }

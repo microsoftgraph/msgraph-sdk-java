@@ -14,6 +14,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * Instantiates a new workbookChartGridlinesFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartGridlinesFormat() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartGridlinesFormat");
@@ -35,7 +36,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartGridlinesFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
      * @param value Value to set for the line property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
         this._line = value;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
@@ -60,6 +60,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * Instantiates a new onlineMeeting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnlineMeeting() {
         super();
         this.setOdataType("#microsoft.graph.onlineMeeting");
@@ -185,7 +186,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeeting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
             this.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
             this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
@@ -296,6 +297,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -328,6 +330,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowAttendeeToEnableCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAttendeeToEnableCamera(@javax.annotation.Nullable final Boolean value) {
         this._allowAttendeeToEnableCamera = value;
     }
@@ -336,6 +339,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowAttendeeToEnableMic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAttendeeToEnableMic(@javax.annotation.Nullable final Boolean value) {
         this._allowAttendeeToEnableMic = value;
     }
@@ -344,6 +348,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowedPresenters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedPresenters(@javax.annotation.Nullable final OnlineMeetingPresenters value) {
         this._allowedPresenters = value;
     }
@@ -352,6 +357,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowMeetingChat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowMeetingChat(@javax.annotation.Nullable final MeetingChatMode value) {
         this._allowMeetingChat = value;
     }
@@ -360,6 +366,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowTeamworkReactions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTeamworkReactions(@javax.annotation.Nullable final Boolean value) {
         this._allowTeamworkReactions = value;
     }
@@ -368,6 +375,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the attendanceReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendanceReports(@javax.annotation.Nullable final java.util.List<MeetingAttendanceReport> value) {
         this._attendanceReports = value;
     }
@@ -376,6 +384,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the attendeeReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendeeReport(@javax.annotation.Nullable final byte[] value) {
         this._attendeeReport = value;
     }
@@ -384,6 +393,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the audioConferencing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioConferencing(@javax.annotation.Nullable final AudioConferencing value) {
         this._audioConferencing = value;
     }
@@ -392,6 +402,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the broadcastSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBroadcastSettings(@javax.annotation.Nullable final BroadcastMeetingSettings value) {
         this._broadcastSettings = value;
     }
@@ -400,6 +411,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
         this._chatInfo = value;
     }
@@ -408,6 +420,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -416,6 +429,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -424,6 +438,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -432,6 +447,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the isBroadcast property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBroadcast(@javax.annotation.Nullable final Boolean value) {
         this._isBroadcast = value;
     }
@@ -440,6 +456,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the isEntryExitAnnounced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEntryExitAnnounced(@javax.annotation.Nullable final Boolean value) {
         this._isEntryExitAnnounced = value;
     }
@@ -448,6 +465,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinInformation(@javax.annotation.Nullable final ItemBody value) {
         this._joinInformation = value;
     }
@@ -456,6 +474,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._joinWebUrl = value;
     }
@@ -464,6 +483,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the lobbyBypassSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLobbyBypassSettings(@javax.annotation.Nullable final LobbyBypassSettings value) {
         this._lobbyBypassSettings = value;
     }
@@ -472,6 +492,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final MeetingParticipants value) {
         this._participants = value;
     }
@@ -480,6 +501,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the recordAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._recordAutomatically = value;
     }
@@ -488,6 +510,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -496,6 +519,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -504,6 +528,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the videoTeleconferenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVideoTeleconferenceId(@javax.annotation.Nullable final String value) {
         this._videoTeleconferenceId = value;
     }

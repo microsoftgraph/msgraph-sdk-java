@@ -71,6 +71,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * Instantiates a new ManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.managedAppProtection");
@@ -166,7 +167,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
             this.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
             this.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
@@ -353,6 +354,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -389,6 +391,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedDataStorageLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<ManagedAppDataStorageLocation> value) {
         this._allowedDataStorageLocations = value;
     }
@@ -397,6 +400,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedInboundDataTransferSources(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this._allowedInboundDataTransferSources = value;
     }
@@ -405,6 +409,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingLevel(@javax.annotation.Nullable final ManagedAppClipboardSharingLevel value) {
         this._allowedOutboundClipboardSharingLevel = value;
     }
@@ -413,6 +418,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundDataTransferDestinations(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this._allowedOutboundDataTransferDestinations = value;
     }
@@ -421,6 +427,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the contactSyncBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactSyncBlocked(@javax.annotation.Nullable final Boolean value) {
         this._contactSyncBlocked = value;
     }
@@ -429,6 +436,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the dataBackupBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataBackupBlocked(@javax.annotation.Nullable final Boolean value) {
         this._dataBackupBlocked = value;
     }
@@ -437,6 +445,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the deviceComplianceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceRequired(@javax.annotation.Nullable final Boolean value) {
         this._deviceComplianceRequired = value;
     }
@@ -445,6 +454,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the disableAppPinIfDevicePinIsSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppPinIfDevicePinIsSet(@javax.annotation.Nullable final Boolean value) {
         this._disableAppPinIfDevicePinIsSet = value;
     }
@@ -453,6 +463,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the fingerprintBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._fingerprintBlocked = value;
     }
@@ -461,6 +472,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the managedBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBrowser(@javax.annotation.Nullable final ManagedBrowserType value) {
         this._managedBrowser = value;
     }
@@ -469,6 +481,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the managedBrowserToOpenLinksRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBrowserToOpenLinksRequired(@javax.annotation.Nullable final Boolean value) {
         this._managedBrowserToOpenLinksRequired = value;
     }
@@ -477,6 +490,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumPinRetries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumPinRetries(@javax.annotation.Nullable final Integer value) {
         this._maximumPinRetries = value;
     }
@@ -485,6 +499,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumPinLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
         this._minimumPinLength = value;
     }
@@ -493,6 +508,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumRequiredAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredAppVersion = value;
     }
@@ -501,6 +517,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumRequiredOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredOsVersion = value;
     }
@@ -509,6 +526,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWarningAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningAppVersion = value;
     }
@@ -517,6 +535,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWarningOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningOsVersion = value;
     }
@@ -525,6 +544,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the organizationalCredentialsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalCredentialsRequired(@javax.annotation.Nullable final Boolean value) {
         this._organizationalCredentialsRequired = value;
     }
@@ -533,6 +553,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodBeforePinReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodBeforePinReset(@javax.annotation.Nullable final Period value) {
         this._periodBeforePinReset = value;
     }
@@ -541,6 +562,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOfflineBeforeAccessCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeAccessCheck = value;
     }
@@ -549,6 +571,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOfflineBeforeWipeIsEnforced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeWipeIsEnforced = value;
     }
@@ -557,6 +580,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOnlineBeforeAccessCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOnlineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
         this._periodOnlineBeforeAccessCheck = value;
     }
@@ -565,6 +589,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the pinCharacterSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinCharacterSet(@javax.annotation.Nullable final ManagedAppPinCharacterSet value) {
         this._pinCharacterSet = value;
     }
@@ -573,6 +598,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the pinRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinRequired(@javax.annotation.Nullable final Boolean value) {
         this._pinRequired = value;
     }
@@ -581,6 +607,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the printBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._printBlocked = value;
     }
@@ -589,6 +616,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the saveAsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSaveAsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._saveAsBlocked = value;
     }
@@ -597,6 +625,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the simplePinBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimplePinBlocked(@javax.annotation.Nullable final Boolean value) {
         this._simplePinBlocked = value;
     }

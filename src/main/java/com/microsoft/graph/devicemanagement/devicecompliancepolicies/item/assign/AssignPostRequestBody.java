@@ -19,6 +19,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new assignPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,7 +56,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceCompliancePolicyAssignment::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -74,6 +76,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicyAssignment> value) {
         this._assignments = value;
     }

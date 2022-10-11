@@ -14,6 +14,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
      * Instantiates a new EducationLinkResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationLinkResource() {
         super();
         this.setOdataType("#microsoft.graph.educationLinkResource");
@@ -35,7 +36,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationLinkResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationLinkResource extends EducationResource implements Parsable
      * @param value Value to set for the link property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLink(@javax.annotation.Nullable final String value) {
         this._link = value;
     }

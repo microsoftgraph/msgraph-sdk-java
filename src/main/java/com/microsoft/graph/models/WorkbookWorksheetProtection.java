@@ -16,6 +16,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * Instantiates a new workbookWorksheetProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
         this.setOdataType("#microsoft.graph.workbookWorksheetProtection");
@@ -37,7 +38,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookWorksheetProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("options", (n) -> { currentObject.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
             this.put("protected", (n) -> { currentObject.setProtected(n.getBooleanValue()); });
         }};
@@ -63,6 +64,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param value Value to set for the options property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptions(@javax.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
         this._options = value;
     }
@@ -82,6 +85,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param value Value to set for the protected property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtected(@javax.annotation.Nullable final Boolean value) {
         this._protected_escaped = value;
     }

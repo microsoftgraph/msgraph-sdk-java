@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class Chat extends Entity implements Parsable {
     /** The chatType property */
     private ChatType _chatType;
@@ -24,7 +24,7 @@ public class Chat extends Entity implements Parsable {
     private java.util.List<ChatMessage> _messages;
     /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
     private TeamworkOnlineMeetingInfo _onlineMeetingInfo;
-    /** The pinnedMessages property */
+    /** A collection of all the pinned messages in the chat. Nullable. */
     private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
     /** A collection of all the tabs in the chat. Nullable. */
     private java.util.List<TeamsTab> _tabs;
@@ -38,6 +38,7 @@ public class Chat extends Entity implements Parsable {
      * Instantiates a new chat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Chat() {
         super();
         this.setOdataType("#microsoft.graph.chat");
@@ -75,7 +76,7 @@ public class Chat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Chat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("chatType", (n) -> { currentObject.setChatType(n.getEnumValue(ChatType.class)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
@@ -131,7 +132,7 @@ public class Chat extends Entity implements Parsable {
         return this._onlineMeetingInfo;
     }
     /**
-     * Gets the pinnedMessages property value. The pinnedMessages property
+     * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @return a pinnedChatMessageInfo
      */
     @javax.annotation.Nullable
@@ -175,6 +176,7 @@ public class Chat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,6 +198,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the chatType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatType(@javax.annotation.Nullable final ChatType value) {
         this._chatType = value;
     }
@@ -204,6 +207,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -212,6 +216,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the installedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledApps(@javax.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this._installedApps = value;
     }
@@ -220,6 +225,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -228,6 +234,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
         this._members = value;
     }
@@ -236,6 +243,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
         this._messages = value;
     }
@@ -244,14 +252,16 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the onlineMeetingInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetingInfo(@javax.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
         this._onlineMeetingInfo = value;
     }
     /**
-     * Sets the pinnedMessages property value. The pinnedMessages property
+     * Sets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @param value Value to set for the pinnedMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinnedMessages(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
         this._pinnedMessages = value;
     }
@@ -260,6 +270,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the tabs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
         this._tabs = value;
     }
@@ -268,6 +279,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -276,6 +288,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the topic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final String value) {
         this._topic = value;
     }
@@ -284,6 +297,7 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

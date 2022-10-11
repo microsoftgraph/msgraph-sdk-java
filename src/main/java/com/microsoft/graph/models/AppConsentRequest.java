@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AppConsentRequest extends Entity implements Parsable {
     /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
     private String _appDisplayName;
@@ -21,6 +21,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Instantiates a new appConsentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppConsentRequest() {
         super();
         this.setOdataType("#microsoft.graph.appConsentRequest");
@@ -58,7 +59,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppConsentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("pendingScopes", (n) -> { currentObject.setPendingScopes(n.getCollectionOfObjectValues(AppConsentRequestScope::createFromDiscriminatorValue)); });
@@ -86,6 +87,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -107,6 +110,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -115,6 +119,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the pendingScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingScopes(@javax.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
         this._pendingScopes = value;
     }
@@ -123,6 +128,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the userConsentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserConsentRequests(@javax.annotation.Nullable final java.util.List<UserConsentRequest> value) {
         this._userConsentRequests = value;
     }

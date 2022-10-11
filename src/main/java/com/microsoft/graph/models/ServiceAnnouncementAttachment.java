@@ -24,6 +24,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * Instantiates a new serviceAnnouncementAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceAnnouncementAttachment() {
         super();
         this.setOdataType("#microsoft.graph.serviceAnnouncementAttachment");
@@ -61,7 +62,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceAnnouncementAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -98,6 +99,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -120,6 +123,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
         this._contentType = value;
     }
@@ -128,6 +132,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -136,6 +141,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -144,6 +150,7 @@ public class ServiceAnnouncementAttachment extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
         this._size = value;
     }

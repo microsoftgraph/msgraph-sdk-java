@@ -34,6 +34,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * Instantiates a new EdiscoveryCase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryCase() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryCase");
@@ -87,7 +88,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryCase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("closedBy", (n) -> { currentObject.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
             this.put("custodians", (n) -> { currentObject.setCustodians(n.getCollectionOfObjectValues(EdiscoveryCustodian::createFromDiscriminatorValue)); });
@@ -153,6 +154,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the closedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._closedBy = value;
     }
@@ -180,6 +183,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -188,6 +192,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the custodians property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodians(@javax.annotation.Nullable final java.util.List<EdiscoveryCustodian> value) {
         this._custodians = value;
     }
@@ -196,6 +201,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -204,6 +210,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the noncustodialDataSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialDataSources(@javax.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
         this._noncustodialDataSources = value;
     }
@@ -212,6 +219,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<CaseOperation> value) {
         this._operations = value;
     }
@@ -220,6 +228,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the reviewSets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSets(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewSet> value) {
         this._reviewSets = value;
     }
@@ -228,6 +237,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the searches property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearches(@javax.annotation.Nullable final java.util.List<EdiscoverySearch> value) {
         this._searches = value;
     }
@@ -236,6 +246,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final EdiscoveryCaseSettings value) {
         this._settings = value;
     }
@@ -244,6 +255,7 @@ public class EdiscoveryCase extends Case_escaped implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this._tags = value;
     }

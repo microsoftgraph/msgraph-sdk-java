@@ -23,6 +23,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * Instantiates a new passwordProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.passwordProfile");
@@ -52,7 +53,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordProfile currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("forceChangePasswordNextSignIn", (n) -> { currentObject.setForceChangePasswordNextSignIn(n.getBooleanValue()); });
             this.put("forceChangePasswordNextSignInWithMfa", (n) -> { currentObject.setForceChangePasswordNextSignInWithMfa(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceChangePasswordNextSignIn", this.getForceChangePasswordNextSignIn());
@@ -109,6 +111,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forceChangePasswordNextSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceChangePasswordNextSignIn(@javax.annotation.Nullable final Boolean value) {
         this._forceChangePasswordNextSignIn = value;
     }
@@ -125,6 +129,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forceChangePasswordNextSignInWithMfa property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceChangePasswordNextSignInWithMfa(@javax.annotation.Nullable final Boolean value) {
         this._forceChangePasswordNextSignInWithMfa = value;
     }
@@ -133,6 +138,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }

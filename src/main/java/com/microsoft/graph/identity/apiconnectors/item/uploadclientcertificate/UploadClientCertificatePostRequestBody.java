@@ -20,6 +20,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * Instantiates a new uploadClientCertificatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UploadClientCertificatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,7 +49,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadClientCertificatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("pkcs12Value", (n) -> { currentObject.setPkcs12Value(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("password", this.getPassword());
@@ -85,6 +87,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }
@@ -101,6 +105,7 @@ public class UploadClientCertificatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the pkcs12Value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPkcs12Value(@javax.annotation.Nullable final String value) {
         this._pkcs12Value = value;
     }

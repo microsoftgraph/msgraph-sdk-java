@@ -18,6 +18,7 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
      * Instantiates a new wipeManagedAppRegistrationsByDeviceTagPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WipeManagedAppRegistrationsByDeviceTagPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,7 +55,7 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WipeManagedAppRegistrationsByDeviceTagPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceTag", this.getDeviceTag());
@@ -73,6 +75,7 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Ad
      * @param value Value to set for the deviceTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceTag(@javax.annotation.Nullable final String value) {
         this._deviceTag = value;
     }

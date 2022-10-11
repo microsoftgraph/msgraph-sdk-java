@@ -51,6 +51,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Instantiates a new SubjectRightsRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequest() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequest");
@@ -136,7 +137,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -251,6 +252,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +281,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
         this._assignedTo = value;
     }
@@ -287,6 +290,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -295,6 +299,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -303,6 +308,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -311,6 +317,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
         this._dataSubject = value;
     }
@@ -319,6 +326,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubjectType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
         this._dataSubjectType = value;
     }
@@ -327,6 +335,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -335,6 +344,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -343,6 +353,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
         this._history = value;
     }
@@ -351,6 +362,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the insight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
         this._insight = value;
     }
@@ -359,6 +371,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the internalDueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._internalDueDateTime = value;
     }
@@ -367,6 +380,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -375,6 +389,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -383,6 +398,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
         this._notes = value;
     }
@@ -391,6 +407,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the regulations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
         this._regulations = value;
     }
@@ -399,6 +416,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
         this._stages = value;
     }
@@ -407,6 +425,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
         this._status = value;
     }
@@ -415,6 +434,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
         this._team = value;
     }
@@ -423,6 +443,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
         this._type = value;
     }

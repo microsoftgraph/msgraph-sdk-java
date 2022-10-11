@@ -14,6 +14,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAndAppManagementRoleAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceAndAppManagementRoleAssignment");
@@ -35,7 +36,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._members = value;
     }

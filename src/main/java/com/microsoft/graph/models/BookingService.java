@@ -28,10 +28,14 @@ public class BookingService extends Entity implements Parsable {
     private String _description;
     /** A service name. */
     private String _displayName;
+    /** The isAnonymousJoinEnabled property */
+    private Boolean _isAnonymousJoinEnabled;
     /** True means this service is not available to customers for booking. */
     private Boolean _isHiddenFromCustomers;
     /** True indicates that the appointments for the service will be held online. Default value is false. */
     private Boolean _isLocationOnline;
+    /** The languageTag property */
+    private String _languageTag;
     /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
     private Integer _maximumAttendeesCount;
     /** Additional information about this service. */
@@ -52,6 +56,7 @@ public class BookingService extends Entity implements Parsable {
      * Instantiates a new bookingService and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingService() {
         super();
         this.setOdataType("#microsoft.graph.bookingService");
@@ -145,7 +150,7 @@ public class BookingService extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingService currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
             this.put("customQuestions", (n) -> { currentObject.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
             this.put("defaultDuration", (n) -> { currentObject.setDefaultDuration(n.getPeriodValue()); });
@@ -155,8 +160,10 @@ public class BookingService extends Entity implements Parsable {
             this.put("defaultReminders", (n) -> { currentObject.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+            this.put("isAnonymousJoinEnabled", (n) -> { currentObject.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
             this.put("isHiddenFromCustomers", (n) -> { currentObject.setIsHiddenFromCustomers(n.getBooleanValue()); });
             this.put("isLocationOnline", (n) -> { currentObject.setIsLocationOnline(n.getBooleanValue()); });
+            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("maximumAttendeesCount", (n) -> { currentObject.setMaximumAttendeesCount(n.getIntegerValue()); });
             this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
             this.put("postBuffer", (n) -> { currentObject.setPostBuffer(n.getPeriodValue()); });
@@ -166,6 +173,14 @@ public class BookingService extends Entity implements Parsable {
             this.put("staffMemberIds", (n) -> { currentObject.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAnonymousJoinEnabled() {
+        return this._isAnonymousJoinEnabled;
     }
     /**
      * Gets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
@@ -182,6 +197,14 @@ public class BookingService extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getIsLocationOnline() {
         return this._isLocationOnline;
+    }
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLanguageTag() {
+        return this._languageTag;
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -252,6 +275,7 @@ public class BookingService extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -264,8 +288,10 @@ public class BookingService extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("defaultReminders", this.getDefaultReminders());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isAnonymousJoinEnabled", this.getIsAnonymousJoinEnabled());
         writer.writeBooleanValue("isHiddenFromCustomers", this.getIsHiddenFromCustomers());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("notes", this.getNotes());
         writer.writePeriodValue("postBuffer", this.getPostBuffer());
@@ -273,13 +299,13 @@ public class BookingService extends Entity implements Parsable {
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeBooleanValue("smsNotificationsEnabled", this.getSmsNotificationsEnabled());
         writer.writeCollectionOfPrimitiveValues("staffMemberIds", this.getStaffMemberIds());
-        writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
      * Sets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
         this._additionalInformation = value;
     }
@@ -288,6 +314,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<BookingQuestionAssignment> value) {
         this._customQuestions = value;
     }
@@ -296,6 +323,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDuration(@javax.annotation.Nullable final Period value) {
         this._defaultDuration = value;
     }
@@ -304,6 +332,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLocation(@javax.annotation.Nullable final Location value) {
         this._defaultLocation = value;
     }
@@ -312,6 +341,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultPrice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultPrice(@javax.annotation.Nullable final Double value) {
         this._defaultPrice = value;
     }
@@ -320,6 +350,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultPriceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultPriceType(@javax.annotation.Nullable final BookingPriceType value) {
         this._defaultPriceType = value;
     }
@@ -328,6 +359,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the defaultReminders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultReminders(@javax.annotation.Nullable final java.util.List<BookingReminder> value) {
         this._defaultReminders = value;
     }
@@ -336,6 +368,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -344,14 +377,25 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * @param value Value to set for the isAnonymousJoinEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsAnonymousJoinEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isAnonymousJoinEnabled = value;
     }
     /**
      * Sets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
      * @param value Value to set for the isHiddenFromCustomers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHiddenFromCustomers(@javax.annotation.Nullable final Boolean value) {
         this._isHiddenFromCustomers = value;
     }
@@ -360,14 +404,25 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the isLocationOnline property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLocationOnline(@javax.annotation.Nullable final Boolean value) {
         this._isLocationOnline = value;
+    }
+    /**
+     * Sets the languageTag property value. The languageTag property
+     * @param value Value to set for the languageTag property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+        this._languageTag = value;
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
      * @param value Value to set for the maximumAttendeesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAttendeesCount(@javax.annotation.Nullable final Integer value) {
         this._maximumAttendeesCount = value;
     }
@@ -376,6 +431,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -384,6 +440,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the postBuffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostBuffer(@javax.annotation.Nullable final Period value) {
         this._postBuffer = value;
     }
@@ -392,6 +449,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the preBuffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreBuffer(@javax.annotation.Nullable final Period value) {
         this._preBuffer = value;
     }
@@ -400,6 +458,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the schedulingPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedulingPolicy(@javax.annotation.Nullable final BookingSchedulingPolicy value) {
         this._schedulingPolicy = value;
     }
@@ -408,6 +467,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the smsNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmsNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smsNotificationsEnabled = value;
     }
@@ -416,6 +476,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the staffMemberIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStaffMemberIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._staffMemberIds = value;
     }
@@ -424,6 +485,7 @@ public class BookingService extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

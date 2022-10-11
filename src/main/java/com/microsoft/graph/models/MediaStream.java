@@ -27,6 +27,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Instantiates a new mediaStream and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.mediaStream");
@@ -64,7 +65,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(MediaDirection.class)); });
             this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getEnumValue(Modality.class)); });
@@ -118,6 +119,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("direction", this.getDirection());
@@ -133,6 +135,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the direction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirection(@javax.annotation.Nullable final MediaDirection value) {
         this._direction = value;
     }
@@ -149,6 +153,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
     }
@@ -157,6 +162,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final Modality value) {
         this._mediaType = value;
     }
@@ -165,6 +171,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +180,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serverMuted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerMuted(@javax.annotation.Nullable final Boolean value) {
         this._serverMuted = value;
     }
@@ -181,6 +189,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
         this._sourceId = value;
     }

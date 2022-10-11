@@ -24,6 +24,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * Instantiates a new notificationMessageTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NotificationMessageTemplate() {
         super();
         this.setOdataType("#microsoft.graph.notificationMessageTemplate");
@@ -69,7 +70,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NotificationMessageTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("brandingOptions", (n) -> { currentObject.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
             this.put("defaultLocale", (n) -> { currentObject.setDefaultLocale(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -98,6 +99,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the brandingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrandingOptions(@javax.annotation.Nullable final NotificationTemplateBrandingOptions value) {
         this._brandingOptions = value;
     }
@@ -120,6 +123,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the defaultLocale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLocale(@javax.annotation.Nullable final String value) {
         this._defaultLocale = value;
     }
@@ -128,6 +132,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -136,6 +141,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -144,6 +150,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the localizedNotificationMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizedNotificationMessages(@javax.annotation.Nullable final java.util.List<LocalizedNotificationMessage> value) {
         this._localizedNotificationMessages = value;
     }

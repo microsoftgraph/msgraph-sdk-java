@@ -40,6 +40,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * Instantiates a new IosCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.iosCompliancePolicy");
@@ -77,7 +78,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
             this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
             this.put("managedEmailProfileRequired", (n) -> { currentObject.setManagedEmailProfileRequired(n.getBooleanValue()); });
@@ -195,6 +196,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -218,6 +220,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -226,6 +229,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -234,6 +238,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the managedEmailProfileRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedEmailProfileRequired(@javax.annotation.Nullable final Boolean value) {
         this._managedEmailProfileRequired = value;
     }
@@ -242,6 +247,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -250,6 +256,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -258,6 +265,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passcodeBlockSimple = value;
     }
@@ -266,6 +274,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passcodeExpirationDays = value;
     }
@@ -274,6 +283,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinimumCharacterSetCount = value;
     }
@@ -282,6 +292,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinimumLength = value;
     }
@@ -290,6 +301,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinutesOfInactivityBeforeLock = value;
     }
@@ -298,6 +310,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodePreviousPasscodeBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passcodePreviousPasscodeBlockCount = value;
     }
@@ -306,6 +319,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
         this._passcodeRequired = value;
     }
@@ -314,6 +328,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passcodeRequiredType = value;
     }
@@ -322,6 +337,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
         this._securityBlockJailbrokenDevices = value;
     }

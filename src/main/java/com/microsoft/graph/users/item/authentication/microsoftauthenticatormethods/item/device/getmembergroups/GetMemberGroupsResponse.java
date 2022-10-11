@@ -1,6 +1,6 @@
 package com.microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.getmembergroups;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.graph.models.BaseCollectionPaginationCountResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,17 +9,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the getMemberGroups method. */
-public class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+public class GetMemberGroupsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<String> _value;
     /**
      * Instantiates a new getMemberGroupsResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetMemberGroupsResponse() {
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,21 +31,13 @@ public class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable {
         return new GetMemberGroupsResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetMemberGroupsResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -63,24 +54,18 @@ public class GetMemberGroupsResponse implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("value", this.getValue());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<String> value) {
         this._value = value;
     }

@@ -64,14 +64,12 @@ import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceManagement singleton. */
@@ -172,7 +170,7 @@ public class DeviceManagementRequestBuilder {
         return new NotificationMessageTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
+    private HashMap<String, Object> pathParameters;
     /** The remoteAssistancePartners property */
     @javax.annotation.Nonnull
     public RemoteAssistancePartnersRequestBuilder remoteAssistancePartners() {
@@ -184,7 +182,7 @@ public class DeviceManagementRequestBuilder {
         return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
+    private RequestAdapter requestAdapter;
     /** The resourceOperations property */
     @javax.annotation.Nonnull
     public ResourceOperationsRequestBuilder resourceOperations() {
@@ -221,7 +219,7 @@ public class DeviceManagementRequestBuilder {
         return new TroubleshootingEventsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+    private String urlTemplate;
     /** The windowsAutopilotDeviceIdentities property */
     @javax.annotation.Nonnull
     public WindowsAutopilotDeviceIdentitiesRequestBuilder windowsAutopilotDeviceIdentities() {
@@ -245,7 +243,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public ComplianceManagementPartnerItemRequestBuilder complianceManagementPartners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("complianceManagementPartner%2Did", id);
         return new ComplianceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -255,11 +253,12 @@ public class DeviceManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -269,9 +268,10 @@ public class DeviceManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/deviceManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
@@ -329,6 +329,7 @@ public class DeviceManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DeviceManagementRequestBuilderPatchRequestConfiguration requestConfig = new DeviceManagementRequestBuilderPatchRequestConfiguration();
@@ -346,7 +347,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DetectedAppItemRequestBuilder detectedApps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("detectedApp%2Did", id);
         return new DetectedAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -358,7 +359,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceCategoryItemRequestBuilder deviceCategories(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCategory%2Did", id);
         return new DeviceCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -370,7 +371,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyItemRequestBuilder deviceCompliancePolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicy%2Did", id);
         return new DeviceCompliancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -382,7 +383,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummaryItemRequestBuilder deviceCompliancePolicySettingStateSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicySettingStateSummary%2Did", id);
         return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -394,7 +395,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceConfigurationItemRequestBuilder deviceConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceConfiguration%2Did", id);
         return new DeviceConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -406,7 +407,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceEnrollmentConfigurationItemRequestBuilder deviceEnrollmentConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceEnrollmentConfiguration%2Did", id);
         return new DeviceEnrollmentConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -418,7 +419,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceManagementPartnerItemRequestBuilder deviceManagementPartners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementPartner%2Did", id);
         return new DeviceManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -430,7 +431,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceManagementExchangeConnectorItemRequestBuilder exchangeConnectors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementExchangeConnector%2Did", id);
         return new DeviceManagementExchangeConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -438,16 +439,19 @@ public class DeviceManagementRequestBuilder {
      * Get deviceManagement
      * @return a CompletableFuture of deviceManagement
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagement>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -455,34 +459,19 @@ public class DeviceManagementRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagement
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Get deviceManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceManagement
-     */
-    public java.util.concurrent.CompletableFuture<DeviceManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
+            return new java.util.concurrent.CompletableFuture<DeviceManagement>() {{
+                this.completeExceptionally(ex);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
     /**
@@ -503,7 +492,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder importedWindowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("importedWindowsAutopilotDeviceIdentity%2Did", id);
         return new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -515,7 +504,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public IosUpdateDeviceStatusItemRequestBuilder iosUpdateStatuses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("iosUpdateDeviceStatus%2Did", id);
         return new IosUpdateDeviceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -527,7 +516,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedDeviceItemRequestBuilder managedDevices(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDevice%2Did", id);
         return new ManagedDeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -539,7 +528,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public MobileThreatDefenseConnectorItemRequestBuilder mobileThreatDefenseConnectors(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobileThreatDefenseConnector%2Did", id);
         return new MobileThreatDefenseConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -551,63 +540,50 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public NotificationMessageTemplateItemRequestBuilder notificationMessageTemplates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("notificationMessageTemplate%2Did", id);
         return new NotificationMessageTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update deviceManagement
      * @param body 
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of deviceManagement
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagement body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagement>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
      * Update deviceManagement
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of deviceManagement
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update deviceManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            return new java.util.concurrent.CompletableFuture<DeviceManagement>() {{
+                this.completeExceptionally(ex);
+            }};
         }
     }
     /**
@@ -618,7 +594,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public RemoteAssistancePartnerItemRequestBuilder remoteAssistancePartners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("remoteAssistancePartner%2Did", id);
         return new RemoteAssistancePartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -630,7 +606,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public ResourceOperationItemRequestBuilder resourceOperations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("resourceOperation%2Did", id);
         return new ResourceOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -642,7 +618,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceAndAppManagementRoleAssignmentItemRequestBuilder roleAssignments(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceAndAppManagementRoleAssignment%2Did", id);
         return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -654,7 +630,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public RoleDefinitionItemRequestBuilder roleDefinitions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("roleDefinition%2Did", id);
         return new RoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -666,7 +642,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public TelecomExpenseManagementPartnerItemRequestBuilder telecomExpenseManagementPartners(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("telecomExpenseManagementPartner%2Did", id);
         return new TelecomExpenseManagementPartnerItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -678,7 +654,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public TermsAndConditionsItemRequestBuilder termsAndConditions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("termsAndConditions%2Did", id);
         return new TermsAndConditionsItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -690,7 +666,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventItemRequestBuilder troubleshootingEvents(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementTroubleshootingEvent%2Did", id);
         return new DeviceManagementTroubleshootingEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -712,7 +688,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsAutopilotDeviceIdentityItemRequestBuilder windowsAutopilotDeviceIdentities(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsAutopilotDeviceIdentity%2Did", id);
         return new WindowsAutopilotDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -724,7 +700,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsInformationProtectionAppLearningSummaryItemRequestBuilder windowsInformationProtectionAppLearningSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionAppLearningSummary%2Did", id);
         return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -736,7 +712,7 @@ public class DeviceManagementRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder windowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionNetworkLearningSummary%2Did", id);
         return new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -758,7 +734,7 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
         public DeviceManagementRequestBuilderGetQueryParameters queryParameters = new DeviceManagementRequestBuilderGetQueryParameters();
@@ -766,6 +742,7 @@ public class DeviceManagementRequestBuilder {
          * Instantiates a new deviceManagementRequestBuilderGetRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DeviceManagementRequestBuilderGetRequestConfiguration() {
         }
     }
@@ -776,11 +753,12 @@ public class DeviceManagementRequestBuilder {
         public HashMap<String, String> headers = new HashMap<>();
         /** Request options */
         @javax.annotation.Nullable
-        public List<RequestOption> options = Collections.emptyList();
+        public java.util.List<RequestOption> options = Collections.emptyList();
         /**
          * Instantiates a new deviceManagementRequestBuilderPatchRequestConfiguration and sets the default values.
          * @return a void
          */
+        @javax.annotation.Nullable
         public DeviceManagementRequestBuilderPatchRequestConfiguration() {
         }
     }

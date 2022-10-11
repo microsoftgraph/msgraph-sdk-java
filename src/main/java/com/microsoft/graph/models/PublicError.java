@@ -27,6 +27,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Instantiates a new publicError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PublicError() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.publicError");
@@ -72,7 +73,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicError currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(PublicErrorDetail::createFromDiscriminatorValue)); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(PublicInnerError::createFromDiscriminatorValue)); });
@@ -118,6 +119,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
@@ -133,6 +135,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -149,6 +153,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<PublicErrorDetail> value) {
         this._details = value;
     }
@@ -157,6 +162,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the innerError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerError(@javax.annotation.Nullable final PublicInnerError value) {
         this._innerError = value;
     }
@@ -165,6 +171,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -173,6 +180,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +189,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
         this._target = value;
     }

@@ -26,6 +26,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new copyToNotebookPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CopyToNotebookPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,7 +55,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyToNotebookPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("renameAs", (n) -> { currentObject.setRenameAs(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -121,6 +123,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }
@@ -137,6 +141,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -145,6 +150,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the renameAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenameAs(@javax.annotation.Nullable final String value) {
         this._renameAs = value;
     }
@@ -153,6 +159,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the siteCollectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCollectionId(@javax.annotation.Nullable final String value) {
         this._siteCollectionId = value;
     }
@@ -161,6 +168,7 @@ public class CopyToNotebookPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the siteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteId(@javax.annotation.Nullable final String value) {
         this._siteId = value;
     }

@@ -37,6 +37,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessConditionSet");
@@ -98,7 +99,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessConditionSet currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("applications", (n) -> { currentObject.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
             this.put("clientApplications", (n) -> { currentObject.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
             this.put("clientAppTypes", (n) -> { currentObject.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp.class)); });
@@ -173,6 +174,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
@@ -193,6 +195,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +204,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the applications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplications(@javax.annotation.Nullable final ConditionalAccessApplications value) {
         this._applications = value;
     }
@@ -209,6 +213,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the clientApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplications(@javax.annotation.Nullable final ConditionalAccessClientApplications value) {
         this._clientApplications = value;
     }
@@ -217,6 +222,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the clientAppTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppTypes(@javax.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
         this._clientAppTypes = value;
     }
@@ -225,6 +231,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevices(@javax.annotation.Nullable final ConditionalAccessDevices value) {
         this._devices = value;
     }
@@ -233,6 +240,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the locations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocations(@javax.annotation.Nullable final ConditionalAccessLocations value) {
         this._locations = value;
     }
@@ -241,6 +249,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -249,6 +258,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the platforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatforms(@javax.annotation.Nullable final ConditionalAccessPlatforms value) {
         this._platforms = value;
     }
@@ -257,6 +267,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the servicePrincipalRiskLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
         this._servicePrincipalRiskLevels = value;
     }
@@ -265,6 +276,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the signInRiskLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
         this._signInRiskLevels = value;
     }
@@ -273,6 +285,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the userRiskLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
         this._userRiskLevels = value;
     }
@@ -281,6 +294,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param value Value to set for the users property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsers(@javax.annotation.Nullable final ConditionalAccessUsers value) {
         this._users = value;
     }

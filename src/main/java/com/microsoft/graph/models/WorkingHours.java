@@ -26,6 +26,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Instantiates a new workingHours and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkingHours() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.workingHours");
@@ -71,7 +72,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkingHours currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
@@ -122,6 +124,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the daysOfWeek property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this._daysOfWeek = value;
     }
@@ -138,6 +142,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._endTime = value;
     }
@@ -146,6 +151,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -154,6 +160,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._startTime = value;
     }
@@ -162,6 +169,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final TimeZoneBase value) {
         this._timeZone = value;
     }

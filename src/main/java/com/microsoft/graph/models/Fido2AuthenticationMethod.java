@@ -25,6 +25,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * Instantiates a new Fido2AuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Fido2AuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.fido2AuthenticationMethod");
@@ -86,7 +87,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aaGuid", (n) -> { currentObject.setAaGuid(n.getStringValue()); });
             this.put("attestationCertificates", (n) -> { currentObject.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("attestationLevel", (n) -> { currentObject.setAttestationLevel(n.getEnumValue(AttestationLevel.class)); });
@@ -108,6 +109,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the aaGuid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAaGuid(@javax.annotation.Nullable final String value) {
         this._aaGuid = value;
     }
@@ -131,6 +134,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the attestationCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttestationCertificates(@javax.annotation.Nullable final java.util.List<String> value) {
         this._attestationCertificates = value;
     }
@@ -139,6 +143,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the attestationLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttestationLevel(@javax.annotation.Nullable final AttestationLevel value) {
         this._attestationLevel = value;
     }
@@ -147,6 +152,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -155,6 +161,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -163,6 +170,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }

@@ -14,6 +14,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration");
@@ -35,7 +36,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }

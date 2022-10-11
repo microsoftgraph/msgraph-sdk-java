@@ -21,6 +21,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * Instantiates a new crossTenantAccessPolicyTargetConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.crossTenantAccessPolicyTargetConfiguration");
@@ -58,7 +59,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyTargetConfiguration currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("targets", (n) -> { currentObject.setTargets(n.getCollectionOfObjectValues(CrossTenantAccessPolicyTarget::createFromDiscriminatorValue)); });
@@ -85,6 +86,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessType", this.getAccessType());
@@ -97,6 +99,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * @param value Value to set for the accessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessType(@javax.annotation.Nullable final CrossTenantAccessPolicyTargetConfigurationAccessType value) {
         this._accessType = value;
     }
@@ -105,6 +108,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -113,6 +117,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDat
      * @param value Value to set for the targets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargets(@javax.annotation.Nullable final java.util.List<CrossTenantAccessPolicyTarget> value) {
         this._targets = value;
     }

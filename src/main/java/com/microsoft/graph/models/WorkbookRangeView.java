@@ -36,6 +36,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * Instantiates a new WorkbookRangeView and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookRangeView() {
         super();
         this.setOdataType("#microsoft.graph.workbookRangeView");
@@ -73,7 +74,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeView currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cellAddresses", (n) -> { currentObject.setCellAddresses(n.getObjectValue(Json::createFromDiscriminatorValue)); });
             this.put("columnCount", (n) -> { currentObject.setColumnCount(n.getIntegerValue()); });
             this.put("formulas", (n) -> { currentObject.setFormulas(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -173,6 +174,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +196,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the cellAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellAddresses(@javax.annotation.Nullable final Json value) {
         this._cellAddresses = value;
     }
@@ -202,6 +205,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the columnCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumnCount(@javax.annotation.Nullable final Integer value) {
         this._columnCount = value;
     }
@@ -210,6 +214,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the formulas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormulas(@javax.annotation.Nullable final Json value) {
         this._formulas = value;
     }
@@ -218,6 +223,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the formulasLocal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormulasLocal(@javax.annotation.Nullable final Json value) {
         this._formulasLocal = value;
     }
@@ -226,6 +232,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the formulasR1C1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormulasR1C1(@javax.annotation.Nullable final Json value) {
         this._formulasR1C1 = value;
     }
@@ -234,6 +241,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the index property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
         this._index = value;
     }
@@ -242,6 +250,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the numberFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberFormat(@javax.annotation.Nullable final Json value) {
         this._numberFormat = value;
     }
@@ -250,6 +259,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the rowCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRowCount(@javax.annotation.Nullable final Integer value) {
         this._rowCount = value;
     }
@@ -258,6 +268,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the rows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRows(@javax.annotation.Nullable final java.util.List<WorkbookRangeView> value) {
         this._rows = value;
     }
@@ -266,6 +277,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final Json value) {
         this._text = value;
     }
@@ -274,6 +286,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
         this._values = value;
     }
@@ -282,6 +295,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
      * @param value Value to set for the valueTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueTypes(@javax.annotation.Nullable final Json value) {
         this._valueTypes = value;
     }

@@ -27,6 +27,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * Instantiates a new apiApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApiApplication() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.apiApplication");
@@ -64,7 +65,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApiApplication currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("acceptMappedClaims", (n) -> { currentObject.setAcceptMappedClaims(n.getBooleanValue()); });
             this.put("knownClientApplications", (n) -> { currentObject.setKnownClientApplications(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("oauth2PermissionScopes", (n) -> { currentObject.setOauth2PermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
@@ -118,6 +119,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acceptMappedClaims", this.getAcceptMappedClaims());
@@ -133,6 +135,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acceptMappedClaims property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptMappedClaims(@javax.annotation.Nullable final Boolean value) {
         this._acceptMappedClaims = value;
     }
@@ -141,6 +144,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -149,6 +153,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the knownClientApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKnownClientApplications(@javax.annotation.Nullable final java.util.List<String> value) {
         this._knownClientApplications = value;
     }
@@ -157,6 +162,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oauth2PermissionScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
         this._oauth2PermissionScopes = value;
     }
@@ -165,6 +171,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +180,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the preAuthorizedApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreAuthorizedApplications(@javax.annotation.Nullable final java.util.List<PreAuthorizedApplication> value) {
         this._preAuthorizedApplications = value;
     }
@@ -181,6 +189,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the requestedAccessTokenVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedAccessTokenVersion(@javax.annotation.Nullable final Integer value) {
         this._requestedAccessTokenVersion = value;
     }

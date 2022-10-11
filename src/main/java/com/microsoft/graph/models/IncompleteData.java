@@ -22,6 +22,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * Instantiates a new incompleteData and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IncompleteData() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.incompleteData");
@@ -51,7 +52,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncompleteData currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });
@@ -86,6 +87,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("missingDataBeforeDateTime", this.getMissingDataBeforeDateTime());
@@ -98,6 +100,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the missingDataBeforeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMissingDataBeforeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._missingDataBeforeDateTime = value;
     }
@@ -114,6 +118,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +127,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wasThrottled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWasThrottled(@javax.annotation.Nullable final Boolean value) {
         this._wasThrottled = value;
     }

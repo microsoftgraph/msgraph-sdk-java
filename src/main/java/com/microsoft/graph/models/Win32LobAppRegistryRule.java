@@ -24,6 +24,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * Instantiates a new Win32LobAppRegistryRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppRegistryRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppRegistryRule");
@@ -61,7 +62,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppRegistryRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
             this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
             this.put("keyPath", (n) -> { currentObject.setKeyPath(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the check32BitOn64System property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
         this._check32BitOn64System = value;
     }
@@ -130,6 +133,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the comparisonValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComparisonValue(@javax.annotation.Nullable final String value) {
         this._comparisonValue = value;
     }
@@ -138,6 +142,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the keyPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyPath(@javax.annotation.Nullable final String value) {
         this._keyPath = value;
     }
@@ -146,6 +151,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final Win32LobAppRegistryRuleOperationType value) {
         this._operationType = value;
     }
@@ -154,6 +160,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
         this._operator = value;
     }
@@ -162,6 +169,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
      * @param value Value to set for the valueName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueName(@javax.annotation.Nullable final String value) {
         this._valueName = value;
     }

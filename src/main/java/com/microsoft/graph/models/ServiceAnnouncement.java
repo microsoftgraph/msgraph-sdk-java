@@ -18,6 +18,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * Instantiates a new serviceAnnouncement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceAnnouncement() {
         super();
         this.setOdataType("#microsoft.graph.serviceAnnouncement");
@@ -39,7 +40,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceAnnouncement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("healthOverviews", (n) -> { currentObject.setHealthOverviews(n.getCollectionOfObjectValues(ServiceHealth::createFromDiscriminatorValue)); });
             this.put("issues", (n) -> { currentObject.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
             this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ServiceUpdateMessage::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the healthOverviews property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthOverviews(@javax.annotation.Nullable final java.util.List<ServiceHealth> value) {
         this._healthOverviews = value;
     }
@@ -94,6 +97,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the issues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssues(@javax.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this._issues = value;
     }
@@ -102,6 +106,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
         this._messages = value;
     }

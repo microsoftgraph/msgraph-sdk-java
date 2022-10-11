@@ -16,6 +16,7 @@ public class IPv4Range extends IpRange implements Parsable {
      * Instantiates a new IPv4Range and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IPv4Range() {
         super();
         this.setOdataType("#microsoft.graph.iPv4Range");
@@ -37,7 +38,7 @@ public class IPv4Range extends IpRange implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IPv4Range currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lowerAddress", (n) -> { currentObject.setLowerAddress(n.getStringValue()); });
             this.put("upperAddress", (n) -> { currentObject.setUpperAddress(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class IPv4Range extends IpRange implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class IPv4Range extends IpRange implements Parsable {
      * @param value Value to set for the lowerAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowerAddress(@javax.annotation.Nullable final String value) {
         this._lowerAddress = value;
     }
@@ -82,6 +85,7 @@ public class IPv4Range extends IpRange implements Parsable {
      * @param value Value to set for the upperAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpperAddress(@javax.annotation.Nullable final String value) {
         this._upperAddress = value;
     }

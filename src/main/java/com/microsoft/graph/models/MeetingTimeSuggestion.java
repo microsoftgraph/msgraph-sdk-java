@@ -31,6 +31,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * Instantiates a new meetingTimeSuggestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingTimeSuggestion() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.meetingTimeSuggestion");
@@ -76,7 +77,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingTimeSuggestion currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("attendeeAvailability", (n) -> { currentObject.setAttendeeAvailability(n.getCollectionOfObjectValues(AttendeeAvailability::createFromDiscriminatorValue)); });
             this.put("confidence", (n) -> { currentObject.setConfidence(n.getDoubleValue()); });
             this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
@@ -140,6 +141,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendeeAvailability", this.getAttendeeAvailability());
@@ -157,6 +159,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +168,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attendeeAvailability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendeeAvailability(@javax.annotation.Nullable final java.util.List<AttendeeAvailability> value) {
         this._attendeeAvailability = value;
     }
@@ -173,6 +177,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Double value) {
         this._confidence = value;
     }
@@ -181,6 +186,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the locations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocations(@javax.annotation.Nullable final java.util.List<Location> value) {
         this._locations = value;
     }
@@ -189,6 +195,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the meetingTimeSlot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingTimeSlot(@javax.annotation.Nullable final TimeSlot value) {
         this._meetingTimeSlot = value;
     }
@@ -197,6 +204,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -205,6 +213,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the order property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrder(@javax.annotation.Nullable final Integer value) {
         this._order = value;
     }
@@ -213,6 +222,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the organizerAvailability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizerAvailability(@javax.annotation.Nullable final FreeBusyStatus value) {
         this._organizerAvailability = value;
     }
@@ -221,6 +231,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the suggestionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuggestionReason(@javax.annotation.Nullable final String value) {
         this._suggestionReason = value;
     }

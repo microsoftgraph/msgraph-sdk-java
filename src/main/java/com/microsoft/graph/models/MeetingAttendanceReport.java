@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class MeetingAttendanceReport extends Entity implements Parsable {
     /** List of attendance records of an attendance report. Read-only. */
     private java.util.List<AttendanceRecord> _attendanceRecords;
@@ -22,6 +22,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * Instantiates a new meetingAttendanceReport and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingAttendanceReport() {
         super();
         this.setOdataType("#microsoft.graph.meetingAttendanceReport");
@@ -51,7 +52,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingAttendanceReport currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attendanceRecords", (n) -> { currentObject.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
             this.put("meetingEndDateTime", (n) -> { currentObject.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("meetingStartDateTime", (n) -> { currentObject.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
@@ -87,6 +88,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the attendanceRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendanceRecords(@javax.annotation.Nullable final java.util.List<AttendanceRecord> value) {
         this._attendanceRecords = value;
     }
@@ -108,6 +111,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the meetingEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._meetingEndDateTime = value;
     }
@@ -116,6 +120,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the meetingStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._meetingStartDateTime = value;
     }
@@ -124,6 +129,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the totalParticipantCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalParticipantCount(@javax.annotation.Nullable final Integer value) {
         this._totalParticipantCount = value;
     }

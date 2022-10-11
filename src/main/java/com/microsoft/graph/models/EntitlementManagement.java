@@ -28,6 +28,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Instantiates a new EntitlementManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagement() {
         super();
         this.setOdataType("#microsoft.graph.entitlementManagement");
@@ -105,7 +106,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EntitlementManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageAssignmentApprovals", (n) -> { currentObject.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
             this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
             this.put("assignmentPolicies", (n) -> { currentObject.setAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentApprovals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
         this._accessPackageAssignmentApprovals = value;
     }
@@ -154,6 +157,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._accessPackages = value;
     }
@@ -162,6 +166,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the assignmentPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this._assignmentPolicies = value;
     }
@@ -170,6 +175,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the assignmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this._assignmentRequests = value;
     }
@@ -178,6 +184,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this._assignments = value;
     }
@@ -186,6 +193,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the catalogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogs(@javax.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
         this._catalogs = value;
     }
@@ -194,6 +202,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedOrganizations(@javax.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this._connectedOrganizations = value;
     }
@@ -202,6 +211,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final EntitlementManagementSettings value) {
         this._settings = value;
     }

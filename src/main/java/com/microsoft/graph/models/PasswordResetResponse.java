@@ -19,6 +19,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      * Instantiates a new passwordResetResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordResetResponse() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.passwordResetResponse");
@@ -48,7 +49,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordResetResponse currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("newPassword", this.getNewPassword());
@@ -85,6 +87,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the newPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewPassword(@javax.annotation.Nullable final String value) {
         this._newPassword = value;
     }
@@ -101,6 +105,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

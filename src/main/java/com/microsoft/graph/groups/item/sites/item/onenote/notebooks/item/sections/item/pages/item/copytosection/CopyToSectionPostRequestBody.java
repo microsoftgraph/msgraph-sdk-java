@@ -24,6 +24,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new copyToSectionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CopyToSectionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,7 +53,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyToSectionPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("siteCollectionId", (n) -> { currentObject.setSiteCollectionId(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -109,6 +111,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }
@@ -125,6 +129,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -133,6 +138,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the siteCollectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCollectionId(@javax.annotation.Nullable final String value) {
         this._siteCollectionId = value;
     }
@@ -141,6 +147,7 @@ public class CopyToSectionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the siteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteId(@javax.annotation.Nullable final String value) {
         this._siteId = value;
     }

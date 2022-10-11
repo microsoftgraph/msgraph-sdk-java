@@ -23,6 +23,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new listInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ListInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.listInfo");
@@ -60,7 +61,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ListInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("contentTypesEnabled", (n) -> { currentObject.setContentTypesEnabled(n.getBooleanValue()); });
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("contentTypesEnabled", this.getContentTypesEnabled());
@@ -109,6 +111,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentTypesEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentTypesEnabled(@javax.annotation.Nullable final Boolean value) {
         this._contentTypesEnabled = value;
     }
@@ -125,6 +129,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }
@@ -133,6 +138,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the template property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplate(@javax.annotation.Nullable final String value) {
         this._template = value;
     }

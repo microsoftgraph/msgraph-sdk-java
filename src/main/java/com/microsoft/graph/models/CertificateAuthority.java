@@ -29,6 +29,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Instantiates a new certificateAuthority and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CertificateAuthority() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.certificateAuthority");
@@ -82,7 +83,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateAuthority currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("certificate", (n) -> { currentObject.setCertificate(n.getByteArrayValue()); });
             this.put("certificateRevocationListUrl", (n) -> { currentObject.setCertificateRevocationListUrl(n.getStringValue()); });
             this.put("deltaCertificateRevocationListUrl", (n) -> { currentObject.setDeltaCertificateRevocationListUrl(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("certificate", this.getCertificate());
@@ -145,6 +147,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificate(@javax.annotation.Nullable final byte[] value) {
         this._certificate = value;
     }
@@ -161,6 +165,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificateRevocationListUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateRevocationListUrl(@javax.annotation.Nullable final String value) {
         this._certificateRevocationListUrl = value;
     }
@@ -169,6 +174,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deltaCertificateRevocationListUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeltaCertificateRevocationListUrl(@javax.annotation.Nullable final String value) {
         this._deltaCertificateRevocationListUrl = value;
     }
@@ -177,6 +183,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRootAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRootAuthority(@javax.annotation.Nullable final Boolean value) {
         this._isRootAuthority = value;
     }
@@ -185,6 +192,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
         this._issuer = value;
     }
@@ -193,6 +201,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issuerSki property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuerSki(@javax.annotation.Nullable final String value) {
         this._issuerSki = value;
     }
@@ -201,6 +210,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

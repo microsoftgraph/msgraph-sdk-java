@@ -15,6 +15,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      * Instantiates a new certificateBasedAuthConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CertificateBasedAuthConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.certificateBasedAuthConfiguration");
@@ -44,7 +45,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CertificateBasedAuthConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateAuthorities", (n) -> { currentObject.setCertificateAuthorities(n.getCollectionOfObjectValues(CertificateAuthority::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
      * @param value Value to set for the certificateAuthorities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateAuthorities(@javax.annotation.Nullable final java.util.List<CertificateAuthority> value) {
         this._certificateAuthorities = value;
     }

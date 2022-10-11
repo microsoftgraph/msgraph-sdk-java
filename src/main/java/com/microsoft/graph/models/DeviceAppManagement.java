@@ -50,6 +50,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * Instantiates a new deviceAppManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagement() {
         super();
         this.setOdataType("#microsoft.graph.deviceAppManagement");
@@ -87,7 +88,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAppManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidManagedAppProtections", (n) -> { currentObject.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
             this.put("defaultManagedAppProtections", (n) -> { currentObject.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
             this.put("iosManagedAppProtections", (n) -> { currentObject.setIosManagedAppProtections(n.getCollectionOfObjectValues(IosManagedAppProtection::createFromDiscriminatorValue)); });
@@ -241,6 +242,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -268,6 +270,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the androidManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedAppProtections(@javax.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
         this._androidManagedAppProtections = value;
     }
@@ -276,6 +279,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the defaultManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultManagedAppProtections(@javax.annotation.Nullable final java.util.List<DefaultManagedAppProtection> value) {
         this._defaultManagedAppProtections = value;
     }
@@ -284,6 +288,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the iosManagedAppProtections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosManagedAppProtections(@javax.annotation.Nullable final java.util.List<IosManagedAppProtection> value) {
         this._iosManagedAppProtections = value;
     }
@@ -292,6 +297,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledForMicrosoftStoreForBusiness(@javax.annotation.Nullable final Boolean value) {
         this._isEnabledForMicrosoftStoreForBusiness = value;
     }
@@ -300,6 +306,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the managedAppPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
         this._managedAppPolicies = value;
     }
@@ -308,6 +315,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the managedAppRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
         this._managedAppRegistrations = value;
     }
@@ -316,6 +324,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the managedAppStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppStatuses(@javax.annotation.Nullable final java.util.List<ManagedAppStatus> value) {
         this._managedAppStatuses = value;
     }
@@ -324,6 +333,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the managedEBooks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedEBooks(@javax.annotation.Nullable final java.util.List<ManagedEBook> value) {
         this._managedEBooks = value;
     }
@@ -332,6 +342,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the mdmWindowsInformationProtectionPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<MdmWindowsInformationProtectionPolicy> value) {
         this._mdmWindowsInformationProtectionPolicies = value;
     }
@@ -340,6 +351,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftStoreForBusinessLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLanguage(@javax.annotation.Nullable final String value) {
         this._microsoftStoreForBusinessLanguage = value;
     }
@@ -348,6 +360,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._microsoftStoreForBusinessLastCompletedApplicationSyncTime = value;
     }
@@ -356,6 +369,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._microsoftStoreForBusinessLastSuccessfulSyncDateTime = value;
     }
@@ -364,6 +378,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileAppCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
         this._mobileAppCategories = value;
     }
@@ -372,6 +387,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileAppConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppConfigurations(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfiguration> value) {
         this._mobileAppConfigurations = value;
     }
@@ -380,6 +396,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileApps(@javax.annotation.Nullable final java.util.List<MobileApp> value) {
         this._mobileApps = value;
     }
@@ -388,6 +405,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the targetedManagedAppConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedManagedAppConfigurations(@javax.annotation.Nullable final java.util.List<TargetedManagedAppConfiguration> value) {
         this._targetedManagedAppConfigurations = value;
     }
@@ -396,6 +414,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the vppTokens property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokens(@javax.annotation.Nullable final java.util.List<VppToken> value) {
         this._vppTokens = value;
     }
@@ -404,6 +423,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsInformationProtectionPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionPolicies(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionPolicy> value) {
         this._windowsInformationProtectionPolicies = value;
     }

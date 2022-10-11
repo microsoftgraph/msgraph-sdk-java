@@ -28,6 +28,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * Instantiates a new SharedDriveItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedDriveItem() {
         super();
         this.setOdataType("#microsoft.graph.sharedDriveItem");
@@ -57,7 +58,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedDriveItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
             this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
             this.put("list", (n) -> { currentObject.setList(n.getObjectValue(List::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
         this._driveItem = value;
     }
@@ -154,6 +157,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._items = value;
     }
@@ -162,6 +166,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the list property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setList(@javax.annotation.Nullable final List value) {
         this._list = value;
     }
@@ -170,6 +175,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the listItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItem(@javax.annotation.Nullable final ListItem value) {
         this._listItem = value;
     }
@@ -178,6 +184,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
         this._owner = value;
     }
@@ -186,6 +193,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the permission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermission(@javax.annotation.Nullable final Permission value) {
         this._permission = value;
     }
@@ -194,6 +202,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the root property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final DriveItem value) {
         this._root = value;
     }
@@ -202,6 +211,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the site property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSite(@javax.annotation.Nullable final Site value) {
         this._site = value;
     }

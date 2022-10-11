@@ -19,6 +19,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * Instantiates a new AccessReviewQueryScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewQueryScope() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewQueryScope");
@@ -47,7 +48,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewQueryScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
             this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
@@ -82,6 +83,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -94,6 +96,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
         this._query = value;
     }
@@ -102,6 +105,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * @param value Value to set for the queryRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
         this._queryRoot = value;
     }
@@ -110,6 +114,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements Parsabl
      * @param value Value to set for the queryType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
         this._queryType = value;
     }

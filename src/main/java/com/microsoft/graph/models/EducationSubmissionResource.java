@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class EducationSubmissionResource extends Entity implements Parsable {
     /** Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource. */
     private String _assignmentResourceUrl;
@@ -17,6 +17,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * Instantiates a new educationSubmissionResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSubmissionResource() {
         super();
         this.setOdataType("#microsoft.graph.educationSubmissionResource");
@@ -46,7 +47,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSubmissionResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignmentResourceUrl", (n) -> { currentObject.setAssignmentResourceUrl(n.getStringValue()); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param value Value to set for the assignmentResourceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentResourceUrl(@javax.annotation.Nullable final String value) {
         this._assignmentResourceUrl = value;
     }
@@ -83,6 +86,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final EducationResource value) {
         this._resource = value;
     }

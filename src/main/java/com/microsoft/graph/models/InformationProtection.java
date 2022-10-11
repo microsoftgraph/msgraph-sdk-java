@@ -16,6 +16,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Instantiates a new InformationProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationProtection() {
         super();
         this.setOdataType("#microsoft.graph.informationProtection");
@@ -45,7 +46,7 @@ public class InformationProtection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bitlocker", (n) -> { currentObject.setBitlocker(n.getObjectValue(Bitlocker::createFromDiscriminatorValue)); });
             this.put("threatAssessmentRequests", (n) -> { currentObject.setThreatAssessmentRequests(n.getCollectionOfObjectValues(ThreatAssessmentRequest::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class InformationProtection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the bitlocker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitlocker(@javax.annotation.Nullable final Bitlocker value) {
         this._bitlocker = value;
     }
@@ -82,6 +85,7 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the threatAssessmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreatAssessmentRequests(@javax.annotation.Nullable final java.util.List<ThreatAssessmentRequest> value) {
         this._threatAssessmentRequests = value;
     }

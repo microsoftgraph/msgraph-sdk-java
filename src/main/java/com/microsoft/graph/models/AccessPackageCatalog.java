@@ -29,6 +29,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * Instantiates a new accessPackageCatalog and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageCatalog() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageCatalog");
@@ -90,7 +91,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageCatalog currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
             this.put("catalogType", (n) -> { currentObject.setCatalogType(n.getEnumValue(AccessPackageCatalogType.class)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -130,6 +131,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._accessPackages = value;
     }
@@ -155,6 +158,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the catalogType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogType(@javax.annotation.Nullable final AccessPackageCatalogType value) {
         this._catalogType = value;
     }
@@ -163,6 +167,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -171,6 +176,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -179,6 +185,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -187,6 +194,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the isExternallyVisible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExternallyVisible(@javax.annotation.Nullable final Boolean value) {
         this._isExternallyVisible = value;
     }
@@ -195,6 +203,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -203,6 +212,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AccessPackageCatalogState value) {
         this._state = value;
     }

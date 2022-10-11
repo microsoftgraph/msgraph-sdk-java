@@ -16,6 +16,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * Instantiates a new OmaSettingBase64 and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OmaSettingBase64() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingBase64");
@@ -37,7 +38,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSettingBase64 currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -82,6 +85,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

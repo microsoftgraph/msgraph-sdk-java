@@ -24,6 +24,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * Instantiates a new AdministrativeUnit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdministrativeUnit() {
         super();
         this.setOdataType("#microsoft.graph.administrativeUnit");
@@ -69,7 +70,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdministrativeUnit currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -130,6 +133,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -138,6 +142,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -146,6 +151,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._members = value;
     }
@@ -154,6 +160,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the scopedRoleMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedRoleMembers(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedRoleMembers = value;
     }
@@ -162,6 +169,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
         this._visibility = value;
     }

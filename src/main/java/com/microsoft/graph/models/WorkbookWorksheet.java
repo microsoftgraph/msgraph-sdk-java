@@ -28,6 +28,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * Instantiates a new workbookWorksheet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookWorksheet() {
         super();
         this.setOdataType("#microsoft.graph.workbookWorksheet");
@@ -57,7 +58,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookWorksheet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("charts", (n) -> { currentObject.setCharts(n.getCollectionOfObjectValues(WorkbookChart::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the charts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCharts(@javax.annotation.Nullable final java.util.List<WorkbookChart> value) {
         this._charts = value;
     }
@@ -154,6 +157,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -162,6 +166,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
         this._names = value;
     }
@@ -170,6 +175,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the pivotTables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPivotTables(@javax.annotation.Nullable final java.util.List<WorkbookPivotTable> value) {
         this._pivotTables = value;
     }
@@ -178,6 +184,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the position property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final Integer value) {
         this._position = value;
     }
@@ -186,6 +193,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the protection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtection(@javax.annotation.Nullable final WorkbookWorksheetProtection value) {
         this._protection = value;
     }
@@ -194,6 +202,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the tables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this._tables = value;
     }
@@ -202,6 +211,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
         this._visibility = value;
     }

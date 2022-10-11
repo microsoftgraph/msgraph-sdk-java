@@ -14,6 +14,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      * Instantiates a new DeviceEnrollmentLimitConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentLimitConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentLimitConfiguration");
@@ -35,7 +36,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentLimitConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("limit", (n) -> { currentObject.setLimit(n.getIntegerValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      * @param value Value to set for the limit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLimit(@javax.annotation.Nullable final Integer value) {
         this._limit = value;
     }

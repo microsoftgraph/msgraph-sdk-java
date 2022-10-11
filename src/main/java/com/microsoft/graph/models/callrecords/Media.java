@@ -29,6 +29,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Instantiates a new media and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.callRecords.media");
@@ -90,7 +91,7 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Media currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("calleeDevice", (n) -> { currentObject.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
             this.put("calleeNetwork", (n) -> { currentObject.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
             this.put("callerDevice", (n) -> { currentObject.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("calleeDevice", this.getCalleeDevice());
@@ -145,6 +147,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalleeDevice(@javax.annotation.Nullable final DeviceInfo value) {
         this._calleeDevice = value;
     }
@@ -161,6 +165,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalleeNetwork(@javax.annotation.Nullable final NetworkInfo value) {
         this._calleeNetwork = value;
     }
@@ -169,6 +174,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallerDevice(@javax.annotation.Nullable final DeviceInfo value) {
         this._callerDevice = value;
     }
@@ -177,6 +183,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallerNetwork(@javax.annotation.Nullable final NetworkInfo value) {
         this._callerNetwork = value;
     }
@@ -185,6 +192,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
     }
@@ -193,6 +201,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +210,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
         this._streams = value;
     }

@@ -23,6 +23,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * Instantiates a new translateExchangeIdsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TranslateExchangeIdsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -51,7 +52,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TranslateExchangeIdsPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("inputIds", (n) -> { currentObject.setInputIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("sourceIdType", (n) -> { currentObject.setSourceIdType(n.getEnumValue(ExchangeIdFormat.class)); });
             this.put("targetIdType", (n) -> { currentObject.setTargetIdType(n.getEnumValue(ExchangeIdFormat.class)); });
@@ -86,6 +87,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("inputIds", this.getInputIds());
@@ -98,6 +100,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the InputIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInputIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._inputIds = value;
     }
@@ -114,6 +118,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the SourceIdType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceIdType(@javax.annotation.Nullable final ExchangeIdFormat value) {
         this._sourceIdType = value;
     }
@@ -122,6 +127,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the TargetIdType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetIdType(@javax.annotation.Nullable final ExchangeIdFormat value) {
         this._targetIdType = value;
     }

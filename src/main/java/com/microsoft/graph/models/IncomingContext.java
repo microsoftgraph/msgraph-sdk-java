@@ -25,6 +25,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * Instantiates a new incomingContext and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IncomingContext() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.incomingContext");
@@ -54,7 +55,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IncomingContext currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("observedParticipantId", (n) -> { currentObject.setObservedParticipantId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("onBehalfOf", (n) -> { currentObject.setOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("observedParticipantId", this.getObservedParticipantId());
@@ -121,6 +123,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the observedParticipantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObservedParticipantId(@javax.annotation.Nullable final String value) {
         this._observedParticipantId = value;
     }
@@ -137,6 +141,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +150,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onBehalfOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnBehalfOf(@javax.annotation.Nullable final IdentitySet value) {
         this._onBehalfOf = value;
     }
@@ -153,6 +159,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceParticipantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceParticipantId(@javax.annotation.Nullable final String value) {
         this._sourceParticipantId = value;
     }
@@ -161,6 +168,7 @@ public class IncomingContext implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the transferor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransferor(@javax.annotation.Nullable final IdentitySet value) {
         this._transferor = value;
     }

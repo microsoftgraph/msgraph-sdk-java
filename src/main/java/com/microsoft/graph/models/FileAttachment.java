@@ -18,6 +18,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * Instantiates a new FileAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileAttachment() {
         super();
         this.setOdataType("#microsoft.graph.fileAttachment");
@@ -63,7 +64,7 @@ public class FileAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentBytes", (n) -> { currentObject.setContentBytes(n.getByteArrayValue()); });
             this.put("contentId", (n) -> { currentObject.setContentId(n.getStringValue()); });
             this.put("contentLocation", (n) -> { currentObject.setContentLocation(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * @param value Value to set for the contentBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
         this._contentBytes = value;
     }
@@ -94,6 +97,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * @param value Value to set for the contentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentId(@javax.annotation.Nullable final String value) {
         this._contentId = value;
     }
@@ -102,6 +106,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * @param value Value to set for the contentLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentLocation(@javax.annotation.Nullable final String value) {
         this._contentLocation = value;
     }

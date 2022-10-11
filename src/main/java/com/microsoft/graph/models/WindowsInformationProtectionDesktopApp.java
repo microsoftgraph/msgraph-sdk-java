@@ -18,6 +18,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionDesktopApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionDesktopApp");
@@ -63,7 +64,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionDesktopApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("binaryName", (n) -> { currentObject.setBinaryName(n.getStringValue()); });
             this.put("binaryVersionHigh", (n) -> { currentObject.setBinaryVersionHigh(n.getStringValue()); });
             this.put("binaryVersionLow", (n) -> { currentObject.setBinaryVersionLow(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param value Value to set for the binaryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryName(@javax.annotation.Nullable final String value) {
         this._binaryName = value;
     }
@@ -94,6 +97,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param value Value to set for the binaryVersionHigh property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryVersionHigh(@javax.annotation.Nullable final String value) {
         this._binaryVersionHigh = value;
     }
@@ -102,6 +106,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * @param value Value to set for the binaryVersionLow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryVersionLow(@javax.annotation.Nullable final String value) {
         this._binaryVersionLow = value;
     }

@@ -19,6 +19,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      * Instantiates a new resultTemplateOption and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResultTemplateOption() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.resultTemplateOption");
@@ -56,7 +57,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResultTemplateOption currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("enableResultTemplate", (n) -> { currentObject.setEnableResultTemplate(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enableResultTemplate", this.getEnableResultTemplate());
@@ -85,6 +87,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enableResultTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableResultTemplate(@javax.annotation.Nullable final Boolean value) {
         this._enableResultTemplate = value;
     }
@@ -101,6 +105,7 @@ public class ResultTemplateOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

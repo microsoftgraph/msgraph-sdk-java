@@ -21,6 +21,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new recordingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.recordingInfo");
@@ -50,7 +51,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecordingInfo currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recordingStatus", (n) -> { currentObject.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
@@ -85,6 +86,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -97,6 +99,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -113,6 +117,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recordingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingStatus(@javax.annotation.Nullable final RecordingStatus value) {
         this._recordingStatus = value;
     }

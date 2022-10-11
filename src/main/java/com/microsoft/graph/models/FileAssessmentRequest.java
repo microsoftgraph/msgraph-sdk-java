@@ -16,6 +16,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Instantiates a new FileAssessmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.fileAssessmentRequest");
@@ -45,7 +46,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the contentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentData(@javax.annotation.Nullable final String value) {
         this._contentData = value;
     }
@@ -82,6 +85,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }

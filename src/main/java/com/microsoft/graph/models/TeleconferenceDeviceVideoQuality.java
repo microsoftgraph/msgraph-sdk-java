@@ -21,6 +21,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeleconferenceDeviceVideoQuality() {
         super();
         this.setOdataType("#microsoft.graph.teleconferenceDeviceVideoQuality");
@@ -81,7 +82,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceVideoQuality currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("averageInboundBitRate", (n) -> { currentObject.setAverageInboundBitRate(n.getDoubleValue()); });
             this.put("averageInboundFrameRate", (n) -> { currentObject.setAverageInboundFrameRate(n.getDoubleValue()); });
             this.put("averageOutboundBitRate", (n) -> { currentObject.setAverageOutboundBitRate(n.getDoubleValue()); });
@@ -93,6 +94,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,6 +108,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param value Value to set for the averageInboundBitRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageInboundBitRate(@javax.annotation.Nullable final Double value) {
         this._averageInboundBitRate = value;
     }
@@ -114,6 +117,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param value Value to set for the averageInboundFrameRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageInboundFrameRate(@javax.annotation.Nullable final Double value) {
         this._averageInboundFrameRate = value;
     }
@@ -122,6 +126,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param value Value to set for the averageOutboundBitRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageOutboundBitRate(@javax.annotation.Nullable final Double value) {
         this._averageOutboundBitRate = value;
     }
@@ -130,6 +135,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param value Value to set for the averageOutboundFrameRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageOutboundFrameRate(@javax.annotation.Nullable final Double value) {
         this._averageOutboundFrameRate = value;
     }

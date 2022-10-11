@@ -53,6 +53,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10TeamGeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10TeamGeneralConfiguration");
@@ -106,7 +107,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10TeamGeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureOperationalInsightsBlockTelemetry", (n) -> { currentObject.setAzureOperationalInsightsBlockTelemetry(n.getBooleanValue()); });
             this.put("azureOperationalInsightsWorkspaceId", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceId(n.getStringValue()); });
             this.put("azureOperationalInsightsWorkspaceKey", (n) -> { currentObject.setAzureOperationalInsightsWorkspaceKey(n.getStringValue()); });
@@ -262,6 +263,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -291,6 +293,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the azureOperationalInsightsBlockTelemetry property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureOperationalInsightsBlockTelemetry(@javax.annotation.Nullable final Boolean value) {
         this._azureOperationalInsightsBlockTelemetry = value;
     }
@@ -299,6 +302,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the azureOperationalInsightsWorkspaceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureOperationalInsightsWorkspaceId(@javax.annotation.Nullable final String value) {
         this._azureOperationalInsightsWorkspaceId = value;
     }
@@ -307,6 +311,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the azureOperationalInsightsWorkspaceKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureOperationalInsightsWorkspaceKey(@javax.annotation.Nullable final String value) {
         this._azureOperationalInsightsWorkspaceKey = value;
     }
@@ -315,6 +320,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the connectAppBlockAutoLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAppBlockAutoLaunch(@javax.annotation.Nullable final Boolean value) {
         this._connectAppBlockAutoLaunch = value;
     }
@@ -323,6 +329,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the maintenanceWindowBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaintenanceWindowBlocked(@javax.annotation.Nullable final Boolean value) {
         this._maintenanceWindowBlocked = value;
     }
@@ -331,6 +338,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the maintenanceWindowDurationInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaintenanceWindowDurationInHours(@javax.annotation.Nullable final Integer value) {
         this._maintenanceWindowDurationInHours = value;
     }
@@ -339,6 +347,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the maintenanceWindowStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaintenanceWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._maintenanceWindowStartTime = value;
     }
@@ -347,6 +356,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the miracastBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiracastBlocked(@javax.annotation.Nullable final Boolean value) {
         this._miracastBlocked = value;
     }
@@ -355,6 +365,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the miracastChannel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiracastChannel(@javax.annotation.Nullable final MiracastChannel value) {
         this._miracastChannel = value;
     }
@@ -363,6 +374,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the miracastRequirePin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiracastRequirePin(@javax.annotation.Nullable final Boolean value) {
         this._miracastRequirePin = value;
     }
@@ -371,6 +383,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsBlockMyMeetingsAndFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockMyMeetingsAndFiles(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockMyMeetingsAndFiles = value;
     }
@@ -379,6 +392,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsBlockSessionResume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockSessionResume(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockSessionResume = value;
     }
@@ -387,6 +401,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsBlockSigninSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockSigninSuggestions(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockSigninSuggestions = value;
     }
@@ -395,6 +410,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsDefaultVolume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsDefaultVolume(@javax.annotation.Nullable final Integer value) {
         this._settingsDefaultVolume = value;
     }
@@ -403,6 +419,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsScreenTimeoutInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsScreenTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._settingsScreenTimeoutInMinutes = value;
     }
@@ -411,6 +428,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsSessionTimeoutInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsSessionTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._settingsSessionTimeoutInMinutes = value;
     }
@@ -419,6 +437,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the settingsSleepTimeoutInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsSleepTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._settingsSleepTimeoutInMinutes = value;
     }
@@ -427,6 +446,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the welcomeScreenBackgroundImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWelcomeScreenBackgroundImageUrl(@javax.annotation.Nullable final String value) {
         this._welcomeScreenBackgroundImageUrl = value;
     }
@@ -435,6 +455,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the welcomeScreenBlockAutomaticWakeUp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWelcomeScreenBlockAutomaticWakeUp(@javax.annotation.Nullable final Boolean value) {
         this._welcomeScreenBlockAutomaticWakeUp = value;
     }
@@ -443,6 +464,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the welcomeScreenMeetingInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWelcomeScreenMeetingInformation(@javax.annotation.Nullable final WelcomeScreenMeetingInformation value) {
         this._welcomeScreenMeetingInformation = value;
     }

@@ -16,6 +16,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * Instantiates a new TermsOfUseContainer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermsOfUseContainer() {
         super();
         this.setOdataType("#microsoft.graph.termsOfUseContainer");
@@ -53,7 +54,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermsOfUseContainer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agreementAcceptances", (n) -> { currentObject.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
             this.put("agreements", (n) -> { currentObject.setAgreements(n.getCollectionOfObjectValues(Agreement::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this._agreementAcceptances = value;
     }
@@ -82,6 +85,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreements property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreements(@javax.annotation.Nullable final java.util.List<Agreement> value) {
         this._agreements = value;
     }
