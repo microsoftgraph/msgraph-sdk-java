@@ -19,7 +19,6 @@ public class ProfilePhoto extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ProfilePhoto() {
         super();
-        this.setOdataType("#microsoft.graph.profilePhoto");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

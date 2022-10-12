@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
-    /** The notebook that contains the section group. Read-only. */
+    /** The parentNotebook property */
     private Notebook _parentNotebook;
-    /** The section group that contains the section group. Read-only. */
+    /** The parentSectionGroup property */
     private SectionGroup _parentSectionGroup;
     /** The section groups in the section. Read-only. Nullable. */
     private java.util.List<SectionGroup> _sectionGroups;
@@ -28,7 +27,6 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
     @javax.annotation.Nullable
     public SectionGroup() {
         super();
-        this.setOdataType("#microsoft.graph.sectionGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +55,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
         }};
     }
     /**
-     * Gets the parentNotebook property value. The notebook that contains the section group. Read-only.
+     * Gets the parentNotebook property value. The parentNotebook property
      * @return a notebook
      */
     @javax.annotation.Nullable
@@ -65,7 +63,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
         return this._parentNotebook;
     }
     /**
-     * Gets the parentSectionGroup property value. The section group that contains the section group. Read-only.
+     * Gets the parentSectionGroup property value. The parentSectionGroup property
      * @return a sectionGroup
      */
     @javax.annotation.Nullable
@@ -121,7 +119,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
         writer.writeStringValue("sectionsUrl", this.getSectionsUrl());
     }
     /**
-     * Sets the parentNotebook property value. The notebook that contains the section group. Read-only.
+     * Sets the parentNotebook property value. The parentNotebook property
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
@@ -130,7 +128,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
         this._parentNotebook = value;
     }
     /**
-     * Sets the parentSectionGroup property value. The section group that contains the section group. Read-only.
+     * Sets the parentSectionGroup property value. The parentSectionGroup property
      * @param value Value to set for the parentSectionGroup property.
      * @return a void
      */

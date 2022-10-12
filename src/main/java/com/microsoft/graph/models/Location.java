@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.LocationConstraintItem;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -12,23 +11,21 @@ import java.util.Objects;
 public class Location implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The street address of the location. */
+    /** The address property */
     private PhysicalAddress _address;
-    /** The geographic coordinates and elevation of the location. */
+    /** The coordinates property */
     private OutlookGeoCoordinates _coordinates;
     /** The name associated with the location. */
     private String _displayName;
     /** Optional email address of the location. */
     private String _locationEmailAddress;
-    /** The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
+    /** The locationType property */
     private LocationType _locationType;
     /** Optional URI representing the location. */
     private String _locationUri;
-    /** The OdataType property */
-    private String _odataType;
     /** For internal use only. */
     private String _uniqueId;
-    /** For internal use only. */
+    /** The uniqueIdType property */
     private LocationUniqueIdType _uniqueIdType;
     /**
      * Instantiates a new location and sets the default values.
@@ -37,7 +34,6 @@ public class Location implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Location() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.location");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,13 +43,6 @@ public class Location implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Location createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.locationConstraintItem": return new LocationConstraintItem();
-            }
-        }
         return new Location();
     }
     /**
@@ -65,7 +54,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the address property value. The street address of the location.
+     * Gets the address property value. The address property
      * @return a physicalAddress
      */
     @javax.annotation.Nullable
@@ -73,7 +62,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._address;
     }
     /**
-     * Gets the coordinates property value. The geographic coordinates and elevation of the location.
+     * Gets the coordinates property value. The coordinates property
      * @return a outlookGeoCoordinates
      */
     @javax.annotation.Nullable
@@ -95,14 +84,13 @@ public class Location implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Location currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("coordinates", (n) -> { currentObject.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("locationEmailAddress", (n) -> { currentObject.setLocationEmailAddress(n.getStringValue()); });
             this.put("locationType", (n) -> { currentObject.setLocationType(n.getEnumValue(LocationType.class)); });
             this.put("locationUri", (n) -> { currentObject.setLocationUri(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
             this.put("uniqueIdType", (n) -> { currentObject.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
         }};
@@ -116,7 +104,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._locationEmailAddress;
     }
     /**
-     * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Gets the locationType property value. The locationType property
      * @return a locationType
      */
     @javax.annotation.Nullable
@@ -132,14 +120,6 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._locationUri;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the uniqueId property value. For internal use only.
      * @return a string
      */
@@ -148,7 +128,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         return this._uniqueId;
     }
     /**
-     * Gets the uniqueIdType property value. For internal use only.
+     * Gets the uniqueIdType property value. The uniqueIdType property
      * @return a locationUniqueIdType
      */
     @javax.annotation.Nullable
@@ -169,7 +149,6 @@ public class Location implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("locationEmailAddress", this.getLocationEmailAddress());
         writer.writeEnumValue("locationType", this.getLocationType());
         writer.writeStringValue("locationUri", this.getLocationUri());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("uniqueId", this.getUniqueId());
         writer.writeEnumValue("uniqueIdType", this.getUniqueIdType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -184,7 +163,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the address property value. The street address of the location.
+     * Sets the address property value. The address property
      * @param value Value to set for the address property.
      * @return a void
      */
@@ -193,7 +172,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._address = value;
     }
     /**
-     * Sets the coordinates property value. The geographic coordinates and elevation of the location.
+     * Sets the coordinates property value. The coordinates property
      * @param value Value to set for the coordinates property.
      * @return a void
      */
@@ -220,7 +199,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._locationEmailAddress = value;
     }
     /**
-     * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Sets the locationType property value. The locationType property
      * @param value Value to set for the locationType property.
      * @return a void
      */
@@ -238,15 +217,6 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._locationUri = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
      * Sets the uniqueId property value. For internal use only.
      * @param value Value to set for the uniqueId property.
      * @return a void
@@ -256,7 +226,7 @@ public class Location implements AdditionalDataHolder, Parsable {
         this._uniqueId = value;
     }
     /**
-     * Sets the uniqueIdType property value. For internal use only.
+     * Sets the uniqueIdType property value. The uniqueIdType property
      * @param value Value to set for the uniqueIdType property.
      * @return a void
      */

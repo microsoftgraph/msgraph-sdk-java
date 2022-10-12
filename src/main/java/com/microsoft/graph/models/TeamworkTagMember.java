@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class TeamworkTagMember extends Entity implements Parsable {
     /** The member's display name. */
     private String _displayName;
@@ -22,7 +21,6 @@ public class TeamworkTagMember extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkTagMember() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTagMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ActivityHistoryItem extends Entity implements Parsable {
     /** Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime. */
     private Integer _activeDurationSeconds;
@@ -24,23 +23,22 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history. */
     private OffsetDateTime _startedDateTime;
-    /** Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored. */
+    /** The status property */
     private Status _status;
     /** Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation. */
     private String _userTimezone;
     /**
-     * Instantiates a new activityHistoryItem and sets the default values.
+     * Instantiates a new ActivityHistoryItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public ActivityHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.activityHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a activityHistoryItem
+     * @return a ActivityHistoryItem
      */
     @javax.annotation.Nonnull
     public static ActivityHistoryItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,7 +121,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this._startedDateTime;
     }
     /**
-     * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     * Gets the status property value. The status property
      * @return a status
      */
     @javax.annotation.Nullable
@@ -221,7 +219,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         this._startedDateTime = value;
     }
     /**
-     * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

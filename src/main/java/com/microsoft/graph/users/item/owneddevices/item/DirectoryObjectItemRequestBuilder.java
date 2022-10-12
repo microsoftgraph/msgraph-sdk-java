@@ -1,10 +1,6 @@
 package com.microsoft.graph.users.item.owneddevices.item;
 
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.owneddevices.item.approleassignment.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.users.item.owneddevices.item.device.DeviceRequestBuilder;
-import com.microsoft.graph.users.item.owneddevices.item.endpoint.EndpointRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -18,23 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/ownedDevices/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
-    /** The appRoleAssignment property */
-    @javax.annotation.Nonnull
-    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
-        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The device property */
-    @javax.annotation.Nonnull
-    public DeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The endpoint property */
-    @javax.annotation.Nonnull
-    public EndpointRequestBuilder endpoint() {
-        return new EndpointRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -108,11 +89,7 @@ public class DirectoryObjectItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObject>() {{
                 this.completeExceptionally(ex);
@@ -128,11 +105,7 @@ public class DirectoryObjectItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectoryObjectItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObject::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObject>() {{
                 this.completeExceptionally(ex);

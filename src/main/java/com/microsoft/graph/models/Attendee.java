@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Attendee extends AttendeeBase implements Parsable {
-    /** An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event. */
+    /** The proposedNewTime property */
     private TimeSlot _proposedNewTime;
-    /** The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent. */
+    /** The status property */
     private ResponseStatus _status;
     /**
      * Instantiates a new Attendee and sets the default values.
@@ -19,7 +19,6 @@ public class Attendee extends AttendeeBase implements Parsable {
     @javax.annotation.Nullable
     public Attendee() {
         super();
-        this.setOdataType("#microsoft.graph.attendee");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         }};
     }
     /**
-     * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Gets the proposedNewTime property value. The proposedNewTime property
      * @return a timeSlot
      */
     @javax.annotation.Nullable
@@ -52,7 +51,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         return this._proposedNewTime;
     }
     /**
-     * Gets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
+     * Gets the status property value. The status property
      * @return a responseStatus
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         writer.writeObjectValue("status", this.getStatus());
     }
     /**
-     * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Sets the proposedNewTime property value. The proposedNewTime property
      * @param value Value to set for the proposedNewTime property.
      * @return a void
      */
@@ -81,7 +80,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         this._proposedNewTime = value;
     }
     /**
-     * Sets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

@@ -8,15 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
     /** Indicates whether attendees can turn on their microphone. */
     private Boolean _allowAttendeeToEnableMic;
-    /** Specifies who can be a presenter in a meeting. Possible values are listed in the following table. */
+    /** The allowedPresenters property */
     private OnlineMeetingPresenters _allowedPresenters;
-    /** Specifies the mode of meeting chat. */
+    /** The allowMeetingChat property */
     private MeetingChatMode _allowMeetingChat;
     /** Indicates whether Teams reactions are enabled for the meeting. */
     private Boolean _allowTeamworkReactions;
@@ -24,11 +23,11 @@ public class OnlineMeeting extends Entity implements Parsable {
     private java.util.List<MeetingAttendanceReport> _attendanceReports;
     /** The content stream of the attendee report of a Microsoft Teams live event. Read-only. */
     private byte[] _attendeeReport;
-    /** The phone access (dial-in) information for an online meeting. Read-only. */
+    /** The audioConferencing property */
     private AudioConferencing _audioConferencing;
-    /** Settings related to a live event. */
+    /** The broadcastSettings property */
     private BroadcastMeetingSettings _broadcastSettings;
-    /** The chat information associated with this online meeting. */
+    /** The chatInfo property */
     private ChatInfo _chatInfo;
     /** The meeting creation time in UTC. Read-only. */
     private OffsetDateTime _creationDateTime;
@@ -40,13 +39,13 @@ public class OnlineMeeting extends Entity implements Parsable {
     private Boolean _isBroadcast;
     /** Indicates whether to announce when callers join or leave. */
     private Boolean _isEntryExitAnnounced;
-    /** The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only. */
+    /** The joinInformation property */
     private ItemBody _joinInformation;
     /** The join URL of the online meeting. Read-only. */
     private String _joinWebUrl;
-    /** Specifies which participants can bypass the meeting   lobby. */
+    /** The lobbyBypassSettings property */
     private LobbyBypassSettings _lobbyBypassSettings;
-    /** The participants associated with the online meeting.  This includes the organizer and the attendees. */
+    /** The participants property */
     private MeetingParticipants _participants;
     /** Indicates whether to record the meeting automatically. */
     private Boolean _recordAutomatically;
@@ -63,7 +62,6 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OnlineMeeting() {
         super();
-        this.setOdataType("#microsoft.graph.onlineMeeting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +90,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._allowAttendeeToEnableMic;
     }
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     * Gets the allowedPresenters property value. The allowedPresenters property
      * @return a onlineMeetingPresenters
      */
     @javax.annotation.Nullable
@@ -100,7 +98,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._allowedPresenters;
     }
     /**
-     * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
+     * Gets the allowMeetingChat property value. The allowMeetingChat property
      * @return a meetingChatMode
      */
     @javax.annotation.Nullable
@@ -132,7 +130,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._attendeeReport;
     }
     /**
-     * Gets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
+     * Gets the audioConferencing property value. The audioConferencing property
      * @return a audioConferencing
      */
     @javax.annotation.Nullable
@@ -140,7 +138,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._audioConferencing;
     }
     /**
-     * Gets the broadcastSettings property value. Settings related to a live event.
+     * Gets the broadcastSettings property value. The broadcastSettings property
      * @return a broadcastMeetingSettings
      */
     @javax.annotation.Nullable
@@ -148,7 +146,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._broadcastSettings;
     }
     /**
-     * Gets the chatInfo property value. The chat information associated with this online meeting.
+     * Gets the chatInfo property value. The chatInfo property
      * @return a chatInfo
      */
     @javax.annotation.Nullable
@@ -229,7 +227,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._isEntryExitAnnounced;
     }
     /**
-     * Gets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     * Gets the joinInformation property value. The joinInformation property
      * @return a itemBody
      */
     @javax.annotation.Nullable
@@ -245,7 +243,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._joinWebUrl;
     }
     /**
-     * Gets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
+     * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
      * @return a lobbyBypassSettings
      */
     @javax.annotation.Nullable
@@ -253,7 +251,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._lobbyBypassSettings;
     }
     /**
-     * Gets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Gets the participants property value. The participants property
      * @return a meetingParticipants
      */
     @javax.annotation.Nullable
@@ -344,7 +342,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._allowAttendeeToEnableMic = value;
     }
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     * Sets the allowedPresenters property value. The allowedPresenters property
      * @param value Value to set for the allowedPresenters property.
      * @return a void
      */
@@ -353,7 +351,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._allowedPresenters = value;
     }
     /**
-     * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
+     * Sets the allowMeetingChat property value. The allowMeetingChat property
      * @param value Value to set for the allowMeetingChat property.
      * @return a void
      */
@@ -389,7 +387,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._attendeeReport = value;
     }
     /**
-     * Sets the audioConferencing property value. The phone access (dial-in) information for an online meeting. Read-only.
+     * Sets the audioConferencing property value. The audioConferencing property
      * @param value Value to set for the audioConferencing property.
      * @return a void
      */
@@ -398,7 +396,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._audioConferencing = value;
     }
     /**
-     * Sets the broadcastSettings property value. Settings related to a live event.
+     * Sets the broadcastSettings property value. The broadcastSettings property
      * @param value Value to set for the broadcastSettings property.
      * @return a void
      */
@@ -407,7 +405,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._broadcastSettings = value;
     }
     /**
-     * Sets the chatInfo property value. The chat information associated with this online meeting.
+     * Sets the chatInfo property value. The chatInfo property
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
@@ -461,7 +459,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._isEntryExitAnnounced = value;
     }
     /**
-     * Sets the joinInformation property value. The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     * Sets the joinInformation property value. The joinInformation property
      * @param value Value to set for the joinInformation property.
      * @return a void
      */
@@ -479,7 +477,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._joinWebUrl = value;
     }
     /**
-     * Sets the lobbyBypassSettings property value. Specifies which participants can bypass the meeting   lobby.
+     * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
      * @param value Value to set for the lobbyBypassSettings property.
      * @return a void
      */
@@ -488,7 +486,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         this._lobbyBypassSettings = value;
     }
     /**
-     * Sets the participants property value. The participants associated with the online meeting.  This includes the organizer and the attendees.
+     * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
      * @return a void
      */

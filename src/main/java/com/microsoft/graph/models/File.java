@@ -11,12 +11,10 @@ import java.util.Objects;
 public class File implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Hashes of the file's binary content, if available. Read-only. */
+    /** The hashes property */
     private Hashes _hashes;
     /** The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only. */
     private String _mimeType;
-    /** The OdataType property */
-    private String _odataType;
     /** The processingMetadata property */
     private Boolean _processingMetadata;
     /**
@@ -26,7 +24,6 @@ public class File implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public File() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.file");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,15 +50,14 @@ public class File implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final File currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("hashes", (n) -> { currentObject.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
             this.put("mimeType", (n) -> { currentObject.setMimeType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("processingMetadata", (n) -> { currentObject.setProcessingMetadata(n.getBooleanValue()); });
         }};
     }
     /**
-     * Gets the hashes property value. Hashes of the file's binary content, if available. Read-only.
+     * Gets the hashes property value. The hashes property
      * @return a hashes
      */
     @javax.annotation.Nullable
@@ -75,14 +71,6 @@ public class File implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMimeType() {
         return this._mimeType;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the processingMetadata property value. The processingMetadata property
@@ -102,7 +90,6 @@ public class File implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("hashes", this.getHashes());
         writer.writeStringValue("mimeType", this.getMimeType());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("processingMetadata", this.getProcessingMetadata());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -116,7 +103,7 @@ public class File implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the hashes property value. Hashes of the file's binary content, if available. Read-only.
+     * Sets the hashes property value. The hashes property
      * @param value Value to set for the hashes property.
      * @return a void
      */
@@ -132,15 +119,6 @@ public class File implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMimeType(@javax.annotation.Nullable final String value) {
         this._mimeType = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the processingMetadata property value. The processingMetadata property

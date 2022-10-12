@@ -14,19 +14,19 @@ public class List extends BaseItem implements Parsable {
     private java.util.List<ContentType> _contentTypes;
     /** The displayable title of the list. */
     private String _displayName;
-    /** Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem]. */
+    /** The drive property */
     private Drive _drive;
     /** All items contained in the list. */
     private java.util.List<ListItem> _items;
-    /** Provides additional details about the list. */
+    /** The list property */
     private ListInfo _list;
     /** The collection of long-running operations on the list. */
     private java.util.List<RichLongRunningOperation> _operations;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
     /** The set of subscriptions on the list. */
     private java.util.List<Subscription> _subscriptions;
-    /** If present, indicates that this is a system-managed list. Read-only. */
+    /** The system property */
     private SystemFacet _system;
     /**
      * Instantiates a new list and sets the default values.
@@ -35,7 +35,6 @@ public class List extends BaseItem implements Parsable {
     @javax.annotation.Nullable
     public List() {
         super();
-        this.setOdataType("#microsoft.graph.list");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,7 +71,7 @@ public class List extends BaseItem implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Gets the drive property value. The drive property
      * @return a drive
      */
     @javax.annotation.Nullable
@@ -108,7 +107,7 @@ public class List extends BaseItem implements Parsable {
         return this._items;
     }
     /**
-     * Gets the list property value. Provides additional details about the list.
+     * Gets the list property value. The list property
      * @return a listInfo
      */
     @javax.annotation.Nullable
@@ -124,7 +123,7 @@ public class List extends BaseItem implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -140,7 +139,7 @@ public class List extends BaseItem implements Parsable {
         return this._subscriptions;
     }
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed list. Read-only.
+     * Gets the system property value. The system property
      * @return a systemFacet
      */
     @javax.annotation.Nullable
@@ -195,7 +194,7 @@ public class List extends BaseItem implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Sets the drive property value. The drive property
      * @param value Value to set for the drive property.
      * @return a void
      */
@@ -213,7 +212,7 @@ public class List extends BaseItem implements Parsable {
         this._items = value;
     }
     /**
-     * Sets the list property value. Provides additional details about the list.
+     * Sets the list property value. The list property
      * @param value Value to set for the list property.
      * @return a void
      */
@@ -231,7 +230,7 @@ public class List extends BaseItem implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
@@ -249,7 +248,7 @@ public class List extends BaseItem implements Parsable {
         this._subscriptions = value;
     }
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed list. Read-only.
+     * Sets the system property value. The system property
      * @param value Value to set for the system property.
      * @return a void
      */

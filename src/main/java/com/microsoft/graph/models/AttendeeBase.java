@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Attendee;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendeeBase extends Recipient implements Parsable {
-    /** The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type. */
+    /** The type property */
     private AttendeeType _type;
     /**
      * Instantiates a new AttendeeBase and sets the default values.
@@ -18,7 +17,6 @@ public class AttendeeBase extends Recipient implements Parsable {
     @javax.annotation.Nullable
     public AttendeeBase() {
         super();
-        this.setOdataType("#microsoft.graph.attendeeBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,13 +26,6 @@ public class AttendeeBase extends Recipient implements Parsable {
     @javax.annotation.Nonnull
     public static AttendeeBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.attendee": return new Attendee();
-            }
-        }
         return new AttendeeBase();
     }
     /**
@@ -49,7 +40,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Gets the type property value. The type property
      * @return a attendeeType
      */
     @javax.annotation.Nullable
@@ -68,7 +59,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

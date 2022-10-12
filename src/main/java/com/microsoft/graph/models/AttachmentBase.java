@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.TaskFileAttachment;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AttachmentBase extends Entity implements Parsable {
     /** The contentType property */
     private String _contentType;
@@ -26,7 +24,6 @@ public class AttachmentBase extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AttachmentBase() {
         super();
-        this.setOdataType("#microsoft.graph.attachmentBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,13 +33,6 @@ public class AttachmentBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static AttachmentBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.taskFileAttachment": return new TaskFileAttachment();
-            }
-        }
         return new AttachmentBase();
     }
     /**

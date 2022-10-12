@@ -8,27 +8,26 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Shift extends ChangeTrackedEntity implements Parsable {
-    /** The draft version of this shift that is viewable by managers. Required. */
+    /** The draftShift property */
     private ShiftItem _draftShift;
     /** ID of the scheduling group the shift is part of. Required. */
     private String _schedulingGroupId;
-    /** The shared version of this shift that is viewable by both employees and managers. Required. */
+    /** The sharedShift property */
     private ShiftItem _sharedShift;
     /** ID of the user assigned to the shift. Required. */
     private String _userId;
     /**
-     * Instantiates a new Shift and sets the default values.
+     * Instantiates a new shift and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Shift() {
         super();
-        this.setOdataType("#microsoft.graph.shift");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Shift
+     * @return a shift
      */
     @javax.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +35,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Gets the draftShift property value. The draftShift property
      * @return a shiftItem
      */
     @javax.annotation.Nullable
@@ -66,7 +65,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this._schedulingGroupId;
     }
     /**
-     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Gets the sharedShift property value. The sharedShift property
      * @return a shiftItem
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Sets the draftShift property value. The draftShift property
      * @param value Value to set for the draftShift property.
      * @return a void
      */
@@ -114,7 +113,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this._schedulingGroupId = value;
     }
     /**
-     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Sets the sharedShift property value. The sharedShift property
      * @param value Value to set for the sharedShift property.
      * @return a void
      */

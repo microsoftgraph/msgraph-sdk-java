@@ -7,13 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsApp extends Entity implements Parsable {
     /** The details for each version of the app. */
     private java.util.List<TeamsAppDefinition> _appDefinitions;
     /** The name of the catalog app provided by the app developer in the Microsoft Teams zip app package. */
     private String _displayName;
-    /** The method of distribution for the app. Read-only. */
+    /** The distributionMethod property */
     private TeamsAppDistributionMethod _distributionMethod;
     /** The ID of the catalog provided by the app developer in the Microsoft Teams zip app package. */
     private String _externalId;
@@ -24,7 +23,6 @@ public class TeamsApp extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsApp() {
         super();
-        this.setOdataType("#microsoft.graph.teamsApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +51,7 @@ public class TeamsApp extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the distributionMethod property value. The method of distribution for the app. Read-only.
+     * Gets the distributionMethod property value. The distributionMethod property
      * @return a teamsAppDistributionMethod
      */
     @javax.annotation.Nullable
@@ -115,7 +113,7 @@ public class TeamsApp extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
+     * Sets the distributionMethod property value. The distributionMethod property
      * @param value Value to set for the distributionMethod property.
      * @return a void
      */

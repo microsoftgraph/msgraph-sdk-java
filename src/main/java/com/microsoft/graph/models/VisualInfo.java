@@ -11,18 +11,16 @@ import java.util.Objects;
 public class VisualInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Optional. JSON object used to represent an icon which represents the application used to generate the activity */
+    /** The attribution property */
     private ImageInfo _attribution;
     /** Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color */
     private String _backgroundColor;
-    /** Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI */
+    /** The content property */
     private Json _content;
     /** Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata) */
     private String _description;
     /** Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation) */
     private String _displayText;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new visualInfo and sets the default values.
      * @return a void
@@ -30,7 +28,6 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public VisualInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.visualInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +48,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
+     * Gets the attribution property value. The attribution property
      * @return a imageInfo
      */
     @javax.annotation.Nullable
@@ -67,7 +64,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         return this._backgroundColor;
     }
     /**
-     * Gets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+     * Gets the content property value. The content property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -97,22 +94,13 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VisualInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("attribution", (n) -> { currentObject.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
             this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayText", (n) -> { currentObject.setDisplayText(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -127,7 +115,6 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("content", this.getContent());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayText", this.getDisplayText());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -140,7 +127,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
+     * Sets the attribution property value. The attribution property
      * @param value Value to set for the attribution property.
      * @return a void
      */
@@ -158,7 +145,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
         this._backgroundColor = value;
     }
     /**
-     * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+     * Sets the content property value. The content property
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -183,14 +170,5 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setDisplayText(@javax.annotation.Nullable final String value) {
         this._displayText = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

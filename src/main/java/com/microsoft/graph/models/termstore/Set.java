@@ -28,18 +28,17 @@ public class Set extends Entity implements Parsable {
     /** All the terms under the set. */
     private java.util.List<Term> _terms;
     /**
-     * Instantiates a new set and sets the default values.
+     * Instantiates a new Set and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Set() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.set");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a set
+     * @return a Set
      */
     @javax.annotation.Nonnull
     public static Set createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

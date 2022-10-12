@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
-    /** Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only. */
+    /** The font property */
     private WorkbookChartFont _font;
     /**
      * Instantiates a new workbookChartAxisTitleFormat and sets the default values.
@@ -17,7 +17,6 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxisTitleFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxisTitleFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
+     * Gets the font property value. The font property
      * @return a workbookChartFont
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
         writer.writeObjectValue("font", this.getFont());
     }
     /**
-     * Sets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
+     * Sets the font property value. The font property
      * @param value Value to set for the font property.
      * @return a void
      */

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OAuth2PermissionGrant extends Entity implements Parsable {
     /** The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only). */
     private String _clientId;
@@ -26,7 +25,6 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OAuth2PermissionGrant() {
         super();
-        this.setOdataType("#microsoft.graph.oAuth2PermissionGrant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

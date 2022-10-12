@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanDetails extends Entity implements Parsable {
-    /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan. */
+    /** The categoryDescriptions property */
     private PlannerCategoryDescriptions _categoryDescriptions;
-    /** Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group. */
+    /** The sharedWith property */
     private PlannerUserIds _sharedWith;
     /**
      * Instantiates a new plannerPlanDetails and sets the default values.
@@ -19,7 +19,6 @@ public class PlannerPlanDetails extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerPlanDetails() {
         super();
-        this.setOdataType("#microsoft.graph.plannerPlanDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,7 +31,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         return new PlannerPlanDetails();
     }
     /**
-     * Gets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
+     * Gets the categoryDescriptions property value. The categoryDescriptions property
      * @return a plannerCategoryDescriptions
      */
     @javax.annotation.Nullable
@@ -52,7 +51,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Gets the sharedWith property value. The sharedWith property
      * @return a plannerUserIds
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         writer.writeObjectValue("sharedWith", this.getSharedWith());
     }
     /**
-     * Sets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
+     * Sets the categoryDescriptions property value. The categoryDescriptions property
      * @param value Value to set for the categoryDescriptions property.
      * @return a void
      */
@@ -81,7 +80,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         this._categoryDescriptions = value;
     }
     /**
-     * Sets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Sets the sharedWith property value. The sharedWith property
      * @param value Value to set for the sharedWith property.
      * @return a void
      */

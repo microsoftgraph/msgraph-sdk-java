@@ -8,17 +8,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class PlannerPlan extends Entity implements Parsable {
     /** Read-only. Nullable. Collection of buckets in the plan. */
     private java.util.List<PlannerBucket> _buckets;
-    /** Identifies the container of the plan. After it is set, this property cant be updated. Required. */
+    /** The container property */
     private PlannerPlanContainer _container;
-    /** Read-only. The user who created the plan. */
+    /** The createdBy property */
     private IdentitySet _createdBy;
     /** Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. Nullable. Additional details about the plan. */
+    /** The details property */
     private PlannerPlanDetails _details;
     /** The owner property */
     private String _owner;
@@ -33,7 +32,6 @@ public class PlannerPlan extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerPlan() {
         super();
-        this.setOdataType("#microsoft.graph.plannerPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +52,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._buckets;
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
+     * Gets the container property value. The container property
      * @return a plannerPlanContainer
      */
     @javax.annotation.Nullable
@@ -62,7 +60,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._container;
     }
     /**
-     * Gets the createdBy property value. Read-only. The user who created the plan.
+     * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -78,7 +76,7 @@ public class PlannerPlan extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the details property value. Read-only. Nullable. Additional details about the plan.
+     * Gets the details property value. The details property
      * @return a plannerPlanDetails
      */
     @javax.annotation.Nullable
@@ -155,7 +153,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._buckets = value;
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
+     * Sets the container property value. The container property
      * @param value Value to set for the container property.
      * @return a void
      */
@@ -164,7 +162,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._container = value;
     }
     /**
-     * Sets the createdBy property value. Read-only. The user who created the plan.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -182,7 +180,7 @@ public class PlannerPlan extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the details property value. Read-only. Nullable. Additional details about the plan.
+     * Sets the details property value. The details property
      * @param value Value to set for the details property.
      * @return a void
      */

@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChartPoint extends Entity implements Parsable {
-    /** Encapsulates the format properties chart point. Read-only. */
+    /** The format property */
     private WorkbookChartPointFormat _format;
-    /** Returns the value of a chart point. Read-only. */
+    /** The value property */
     private Json _value;
     /**
      * Instantiates a new workbookChartPoint and sets the default values.
@@ -20,7 +19,6 @@ public class WorkbookChartPoint extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartPoint() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartPoint");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +43,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartPointFormat
      */
     @javax.annotation.Nullable
@@ -53,7 +51,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         return this._format;
     }
     /**
-     * Gets the value property value. Returns the value of a chart point. Read-only.
+     * Gets the value property value. The value property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -73,7 +71,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         writer.writeObjectValue("value", this.getValue());
     }
     /**
-     * Sets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -82,7 +80,7 @@ public class WorkbookChartPoint extends Entity implements Parsable {
         this._format = value;
     }
     /**
-     * Sets the value property value. Returns the value of a chart point. Read-only.
+     * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */

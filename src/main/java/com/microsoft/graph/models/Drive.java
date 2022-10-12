@@ -16,33 +16,32 @@ public class Drive extends BaseItem implements Parsable {
     private java.util.List<DriveItem> _following;
     /** All items contained in the drive. Read-only. Nullable. */
     private java.util.List<DriveItem> _items;
-    /** For drives in SharePoint, the underlying document library list. Read-only. Nullable. */
+    /** The list property */
     private List _list;
-    /** Optional. The user account that owns the drive. Read-only. */
+    /** The owner property */
     private IdentitySet _owner;
-    /** Optional. Information about the drive's storage space quota. Read-only. */
+    /** The quota property */
     private Quota _quota;
-    /** The root folder of the drive. Read-only. */
+    /** The root property */
     private DriveItem _root;
     /** The sharePointIds property */
     private SharepointIds _sharePointIds;
     /** Collection of common folders available in OneDrive. Read-only. Nullable. */
     private java.util.List<DriveItem> _special;
-    /** If present, indicates that this is a system-managed drive. Read-only. */
+    /** The system property */
     private SystemFacet _system;
     /**
-     * Instantiates a new Drive and sets the default values.
+     * Instantiates a new drive and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Drive() {
         super();
-        this.setOdataType("#microsoft.graph.drive");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Drive
+     * @return a drive
      */
     @javax.annotation.Nonnull
     public static Drive createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -103,7 +102,7 @@ public class Drive extends BaseItem implements Parsable {
         return this._items;
     }
     /**
-     * Gets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
+     * Gets the list property value. The list property
      * @return a list
      */
     @javax.annotation.Nullable
@@ -111,7 +110,7 @@ public class Drive extends BaseItem implements Parsable {
         return this._list;
     }
     /**
-     * Gets the owner property value. Optional. The user account that owns the drive. Read-only.
+     * Gets the owner property value. The owner property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -119,7 +118,7 @@ public class Drive extends BaseItem implements Parsable {
         return this._owner;
     }
     /**
-     * Gets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
+     * Gets the quota property value. The quota property
      * @return a quota
      */
     @javax.annotation.Nullable
@@ -127,7 +126,7 @@ public class Drive extends BaseItem implements Parsable {
         return this._quota;
     }
     /**
-     * Gets the root property value. The root folder of the drive. Read-only.
+     * Gets the root property value. The root property
      * @return a driveItem
      */
     @javax.annotation.Nullable
@@ -151,7 +150,7 @@ public class Drive extends BaseItem implements Parsable {
         return this._special;
     }
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Gets the system property value. The system property
      * @return a systemFacet
      */
     @javax.annotation.Nullable
@@ -216,7 +215,7 @@ public class Drive extends BaseItem implements Parsable {
         this._items = value;
     }
     /**
-     * Sets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
+     * Sets the list property value. The list property
      * @param value Value to set for the list property.
      * @return a void
      */
@@ -225,7 +224,7 @@ public class Drive extends BaseItem implements Parsable {
         this._list = value;
     }
     /**
-     * Sets the owner property value. Optional. The user account that owns the drive. Read-only.
+     * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
      * @return a void
      */
@@ -234,7 +233,7 @@ public class Drive extends BaseItem implements Parsable {
         this._owner = value;
     }
     /**
-     * Sets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
+     * Sets the quota property value. The quota property
      * @param value Value to set for the quota property.
      * @return a void
      */
@@ -243,7 +242,7 @@ public class Drive extends BaseItem implements Parsable {
         this._quota = value;
     }
     /**
-     * Sets the root property value. The root folder of the drive. Read-only.
+     * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */
@@ -270,7 +269,7 @@ public class Drive extends BaseItem implements Parsable {
         this._special = value;
     }
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Sets the system property value. The system property
      * @param value Value to set for the system property.
      * @return a void
      */

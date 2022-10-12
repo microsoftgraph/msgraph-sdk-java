@@ -1,10 +1,6 @@
 package com.microsoft.graph.users.item.directreports;
 
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.directreports.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.directreports.orgcontact.OrgContactRequestBuilder;
-import com.microsoft.graph.users.item.directreports.user.UserRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -18,29 +14,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/directReports */
 public class DirectReportsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The orgContact property */
-    @javax.annotation.Nonnull
-    public OrgContactRequestBuilder orgContact() {
-        return new OrgContactRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
-    @javax.annotation.Nonnull
-    public UserRequestBuilder user() {
-        return new UserRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new DirectReportsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -108,11 +89,7 @@ public class DirectReportsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -128,11 +105,7 @@ public class DirectReportsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<DirectReportsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);

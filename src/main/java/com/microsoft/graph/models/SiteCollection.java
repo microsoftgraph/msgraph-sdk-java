@@ -15,9 +15,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     private String _dataLocationCode;
     /** The hostname for the site collection. Read-only. */
     private String _hostname;
-    /** The OdataType property */
-    private String _odataType;
-    /** If present, indicates that this is a root site collection in SharePoint. Read-only. */
+    /** The root property */
     private Root _root;
     /**
      * Instantiates a new siteCollection and sets the default values.
@@ -26,7 +24,6 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SiteCollection() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.siteCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +58,9 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SiteCollection currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("dataLocationCode", (n) -> { currentObject.setDataLocationCode(n.getStringValue()); });
             this.put("hostname", (n) -> { currentObject.setHostname(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         }};
     }
@@ -77,15 +73,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
         return this._hostname;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
+     * Gets the root property value. The root property
      * @return a root
      */
     @javax.annotation.Nullable
@@ -102,7 +90,6 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dataLocationCode", this.getDataLocationCode());
         writer.writeStringValue("hostname", this.getHostname());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("root", this.getRoot());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,16 +121,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
         this._hostname = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
+     * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */

@@ -11,12 +11,10 @@ import java.util.Objects;
 public class Bundle implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** If the bundle is an [album][], then the album property is included */
+    /** The album property */
     private Album _album;
     /** Number of children contained immediately within this container. */
     private Integer _childCount;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new bundle and sets the default values.
      * @return a void
@@ -24,7 +22,6 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Bundle() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bundle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +42,7 @@ public class Bundle implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the album property value. If the bundle is an [album][], then the album property is included
+     * Gets the album property value. The album property
      * @return a album
      */
     @javax.annotation.Nullable
@@ -67,19 +64,10 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Bundle currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("album", (n) -> { currentObject.setAlbum(n.getObjectValue(Album::createFromDiscriminatorValue)); });
             this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -91,7 +79,6 @@ public class Bundle implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("album", this.getAlbum());
         writer.writeIntegerValue("childCount", this.getChildCount());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -104,7 +91,7 @@ public class Bundle implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the album property value. If the bundle is an [album][], then the album property is included
+     * Sets the album property value. The album property
      * @param value Value to set for the album property.
      * @return a void
      */
@@ -120,14 +107,5 @@ public class Bundle implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setChildCount(@javax.annotation.Nullable final Integer value) {
         this._childCount = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

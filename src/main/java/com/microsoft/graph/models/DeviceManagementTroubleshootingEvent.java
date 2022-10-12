@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EnrollmentTroubleshootingEvent;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -22,7 +21,6 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nullable
     public DeviceManagementTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,13 +30,6 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.enrollmentTroubleshootingEvent": return new EnrollmentTroubleshootingEvent();
-            }
-        }
         return new DeviceManagementTroubleshootingEvent();
     }
     /**

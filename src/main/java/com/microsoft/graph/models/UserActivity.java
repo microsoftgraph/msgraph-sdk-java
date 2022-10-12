@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class UserActivity extends Entity implements Parsable {
     /** Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists. */
     private String _activationUrl;
@@ -18,7 +17,7 @@ public class UserActivity extends Entity implements Parsable {
     private String _appActivityId;
     /** Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device. */
     private String _appDisplayName;
-    /** Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax. */
+    /** The contentInfo property */
     private Json _contentInfo;
     /** Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed). */
     private String _contentUrl;
@@ -32,7 +31,7 @@ public class UserActivity extends Entity implements Parsable {
     private java.util.List<ActivityHistoryItem> _historyItems;
     /** Set by the server. DateTime in UTC when the object was modified on the server. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored. */
+    /** The status property */
     private Status _status;
     /** Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation. */
     private String _userTimezone;
@@ -45,7 +44,6 @@ public class UserActivity extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UserActivity() {
         super();
-        this.setOdataType("#microsoft.graph.userActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,7 +88,7 @@ public class UserActivity extends Entity implements Parsable {
         return this._appDisplayName;
     }
     /**
-     * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
+     * Gets the contentInfo property value. The contentInfo property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -170,7 +168,7 @@ public class UserActivity extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     * Gets the status property value. The status property
      * @return a status
      */
     @javax.annotation.Nullable
@@ -254,7 +252,7 @@ public class UserActivity extends Entity implements Parsable {
         this._appDisplayName = value;
     }
     /**
-     * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
+     * Sets the contentInfo property value. The contentInfo property
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
@@ -317,7 +315,7 @@ public class UserActivity extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

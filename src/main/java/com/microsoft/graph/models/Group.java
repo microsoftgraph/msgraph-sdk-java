@@ -21,7 +21,7 @@ public class Group extends DirectoryObject implements Parsable {
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). */
     private Boolean _autoSubscribeNewMembers;
-    /** The group's calendar. Read-only. */
+    /** The calendar property */
     private Calendar _calendar;
     /** The calendar view for the calendar. Read-only. */
     private java.util.List<Event> _calendarView;
@@ -31,13 +31,13 @@ public class Group extends DirectoryObject implements Parsable {
     private java.util.List<Conversation> _conversations;
     /** Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only. */
     private OffsetDateTime _createdDateTime;
-    /** The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only. */
+    /** The createdOnBehalfOf property */
     private DirectoryObject _createdOnBehalfOf;
     /** An optional description for the group. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
     /** The display name for the group. This property is required when a group is created and cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
-    /** The group's default drive. Read-only. */
+    /** The drive property */
     private Drive _drive;
     /** The group's drives. Read-only. */
     private java.util.List<Drive> _drives;
@@ -63,7 +63,7 @@ public class Group extends DirectoryObject implements Parsable {
     private Boolean _isAssignableToRole;
     /** Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). */
     private Boolean _isSubscribedByMail;
-    /** Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only. */
+    /** The licenseProcessingState property */
     private LicenseProcessingState _licenseProcessingState;
     /** The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _mail;
@@ -101,11 +101,11 @@ public class Group extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _owners;
     /** The permission that has been granted for a group to a specific application. Supports $expand. */
     private java.util.List<ResourceSpecificPermissionGrant> _permissionGrants;
-    /** The group's profile photo */
+    /** The photo property */
     private ProfilePhoto _photo;
     /** The profile photos owned by the group. Read-only. Nullable. */
     private java.util.List<ProfilePhoto> _photos;
-    /** Entry-point to Planner resource that might exist for a Unified Group. */
+    /** The planner property */
     private PlannerGroup _planner;
     /** The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see OneDrive Online Multi-Geo. Nullable. Returned by default. */
     private String _preferredDataLocation;
@@ -125,7 +125,7 @@ public class Group extends DirectoryObject implements Parsable {
     private java.util.List<GroupSetting> _settings;
     /** The list of SharePoint sites in this group. Access the default site with /sites/root. */
     private java.util.List<Site> _sites;
-    /** The team associated with this group. */
+    /** The team property */
     private Team _team;
     /** Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default. */
     private String _theme;
@@ -146,7 +146,6 @@ public class Group extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public Group() {
         super();
-        this.setOdataType("#microsoft.graph.group");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -207,7 +206,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._autoSubscribeNewMembers;
     }
     /**
-     * Gets the calendar property value. The group's calendar. Read-only.
+     * Gets the calendar property value. The calendar property
      * @return a calendar
      */
     @javax.annotation.Nullable
@@ -247,7 +246,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -271,7 +270,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the drive property value. The group's default drive. Read-only.
+     * Gets the drive property value. The drive property
      * @return a drive
      */
     @javax.annotation.Nullable
@@ -450,7 +449,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._isSubscribedByMail;
     }
     /**
-     * Gets the licenseProcessingState property value. Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     * Gets the licenseProcessingState property value. The licenseProcessingState property
      * @return a licenseProcessingState
      */
     @javax.annotation.Nullable
@@ -602,7 +601,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._permissionGrants;
     }
     /**
-     * Gets the photo property value. The group's profile photo
+     * Gets the photo property value. The photo property
      * @return a profilePhoto
      */
     @javax.annotation.Nullable
@@ -618,7 +617,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._photos;
     }
     /**
-     * Gets the planner property value. Entry-point to Planner resource that might exist for a Unified Group.
+     * Gets the planner property value. The planner property
      * @return a plannerGroup
      */
     @javax.annotation.Nullable
@@ -698,7 +697,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._sites;
     }
     /**
-     * Gets the team property value. The team associated with this group.
+     * Gets the team property value. The team property
      * @return a team
      */
     @javax.annotation.Nullable
@@ -883,7 +882,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._autoSubscribeNewMembers = value;
     }
     /**
-     * Sets the calendar property value. The group's calendar. Read-only.
+     * Sets the calendar property value. The calendar property
      * @param value Value to set for the calendar property.
      * @return a void
      */
@@ -928,7 +927,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
@@ -955,7 +954,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the drive property value. The group's default drive. Read-only.
+     * Sets the drive property value. The drive property
      * @param value Value to set for the drive property.
      * @return a void
      */
@@ -1072,7 +1071,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._isSubscribedByMail = value;
     }
     /**
-     * Sets the licenseProcessingState property value. Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     * Sets the licenseProcessingState property value. The licenseProcessingState property
      * @param value Value to set for the licenseProcessingState property.
      * @return a void
      */
@@ -1243,7 +1242,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._permissionGrants = value;
     }
     /**
-     * Sets the photo property value. The group's profile photo
+     * Sets the photo property value. The photo property
      * @param value Value to set for the photo property.
      * @return a void
      */
@@ -1261,7 +1260,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._photos = value;
     }
     /**
-     * Sets the planner property value. Entry-point to Planner resource that might exist for a Unified Group.
+     * Sets the planner property value. The planner property
      * @param value Value to set for the planner property.
      * @return a void
      */
@@ -1351,7 +1350,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._sites = value;
     }
     /**
-     * Sets the team property value. The team associated with this group.
+     * Sets the team property value. The team property
      * @param value Value to set for the team property.
      * @return a void
      */

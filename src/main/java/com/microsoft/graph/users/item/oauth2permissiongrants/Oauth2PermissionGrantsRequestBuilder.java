@@ -1,8 +1,6 @@
 package com.microsoft.graph.users.item.oauth2permissiongrants;
 
 import com.microsoft.graph.models.OAuth2PermissionGrantCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.oauth2permissiongrants.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -16,13 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/oauth2PermissionGrants */
 public class Oauth2PermissionGrantsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -96,11 +89,7 @@ public class Oauth2PermissionGrantsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OAuth2PermissionGrantCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OAuth2PermissionGrantCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -116,11 +105,7 @@ public class Oauth2PermissionGrantsRequestBuilder {
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OAuth2PermissionGrantCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OAuth2PermissionGrantCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse>() {{
                 this.completeExceptionally(ex);

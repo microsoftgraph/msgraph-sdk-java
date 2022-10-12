@@ -20,8 +20,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     private String _error;
     /** The lastUpdatedDateTime property */
     private OffsetDateTime _lastUpdatedDateTime;
-    /** The OdataType property */
-    private String _odataType;
     /** The skuId property */
     private String _skuId;
     /** The state property */
@@ -33,7 +31,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public LicenseAssignmentState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.licenseAssignmentState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,12 +81,11 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseAssignmentState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("assignedByGroup", (n) -> { currentObject.setAssignedByGroup(n.getStringValue()); });
             this.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
         }};
@@ -101,14 +97,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this._lastUpdatedDateTime;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the skuId property value. The skuId property
@@ -138,7 +126,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("disabledPlans", this.getDisabledPlans());
         writer.writeStringValue("error", this.getError());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("skuId", this.getSkuId());
         writer.writeStringValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -187,15 +174,6 @@ public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the skuId property value. The skuId property

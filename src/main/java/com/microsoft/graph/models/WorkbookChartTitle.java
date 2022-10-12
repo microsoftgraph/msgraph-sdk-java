@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartTitle extends Entity implements Parsable {
-    /** Represents the formatting of a chart title, which includes fill and font formatting. Read-only. */
+    /** The format property */
     private WorkbookChartTitleFormat _format;
     /** Boolean value representing if the chart title will overlay the chart or not. */
     private Boolean _overlay;
@@ -23,7 +23,6 @@ public class WorkbookChartTitle extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartTitle() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartTitle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +49,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartTitleFormat
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class WorkbookChartTitle extends Entity implements Parsable {
         writer.writeBooleanValue("visible", this.getVisible());
     }
     /**
-     * Sets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */

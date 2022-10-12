@@ -18,8 +18,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _joinDateTime;
     /** The time the attendee left in UTC. */
     private OffsetDateTime _leaveDateTime;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new attendanceInterval and sets the default values.
      * @return a void
@@ -27,7 +25,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AttendanceInterval() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attendanceInterval");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,11 +59,10 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttendanceInterval currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("durationInSeconds", (n) -> { currentObject.setDurationInSeconds(n.getIntegerValue()); });
             this.put("joinDateTime", (n) -> { currentObject.setJoinDateTime(n.getOffsetDateTimeValue()); });
             this.put("leaveDateTime", (n) -> { currentObject.setLeaveDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -86,14 +82,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         return this._leaveDateTime;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -104,7 +92,6 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("durationInSeconds", this.getDurationInSeconds());
         writer.writeOffsetDateTimeValue("joinDateTime", this.getJoinDateTime());
         writer.writeOffsetDateTimeValue("leaveDateTime", this.getLeaveDateTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -142,14 +129,5 @@ public class AttendanceInterval implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setLeaveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._leaveDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

@@ -1,17 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EmailIdentity;
-import com.microsoft.graph.models.Initiator;
-import com.microsoft.graph.models.ProvisionedIdentity;
-import com.microsoft.graph.models.ProvisioningServicePrincipal;
-import com.microsoft.graph.models.ProvisioningSystem;
-import com.microsoft.graph.models.ServicePrincipalIdentity;
-import com.microsoft.graph.models.SharePointIdentity;
-import com.microsoft.graph.models.TeamworkApplicationIdentity;
-import com.microsoft.graph.models.TeamworkConversationIdentity;
-import com.microsoft.graph.models.TeamworkTagIdentity;
-import com.microsoft.graph.models.TeamworkUserIdentity;
-import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -27,8 +15,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Unique identifier for the identity. */
     private String _id;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new identity and sets the default values.
      * @return a void
@@ -36,7 +22,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Identity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,24 +31,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Identity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.emailIdentity": return new EmailIdentity();
-                case "#microsoft.graph.initiator": return new Initiator();
-                case "#microsoft.graph.provisionedIdentity": return new ProvisionedIdentity();
-                case "#microsoft.graph.provisioningServicePrincipal": return new ProvisioningServicePrincipal();
-                case "#microsoft.graph.provisioningSystem": return new ProvisioningSystem();
-                case "#microsoft.graph.servicePrincipalIdentity": return new ServicePrincipalIdentity();
-                case "#microsoft.graph.sharePointIdentity": return new SharePointIdentity();
-                case "#microsoft.graph.teamworkApplicationIdentity": return new TeamworkApplicationIdentity();
-                case "#microsoft.graph.teamworkConversationIdentity": return new TeamworkConversationIdentity();
-                case "#microsoft.graph.teamworkTagIdentity": return new TeamworkTagIdentity();
-                case "#microsoft.graph.teamworkUserIdentity": return new TeamworkUserIdentity();
-                case "#microsoft.graph.userIdentity": return new UserIdentity();
-            }
-        }
         return new Identity();
     }
     /**
@@ -89,10 +56,9 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -104,14 +70,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -121,7 +79,6 @@ public class Identity implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -150,14 +107,5 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

@@ -15,17 +15,15 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     private Integer _dayOfMonth;
     /** A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly. */
     private java.util.List<DayOfWeek> _daysOfWeek;
-    /** The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly. */
+    /** The firstDayOfWeek property */
     private DayOfWeek _firstDayOfWeek;
-    /** Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly. */
+    /** The index property */
     private WeekIndex _index;
     /** The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required. */
     private Integer _interval;
     /** The month in which the event occurs.  This is a number from 1 to 12. */
     private Integer _month;
-    /** The OdataType property */
-    private String _odataType;
-    /** The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property. */
+    /** The type property */
     private RecurrencePatternType _type;
     /**
      * Instantiates a new recurrencePattern and sets the default values.
@@ -34,7 +32,6 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public RecurrencePattern() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recurrencePattern");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,19 +74,18 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RecurrencePattern currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("dayOfMonth", (n) -> { currentObject.setDayOfMonth(n.getIntegerValue()); });
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("index", (n) -> { currentObject.setIndex(n.getEnumValue(WeekIndex.class)); });
             this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
             this.put("month", (n) -> { currentObject.setMonth(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(RecurrencePatternType.class)); });
         }};
     }
     /**
-     * Gets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
+     * Gets the firstDayOfWeek property value. The firstDayOfWeek property
      * @return a dayOfWeek
      */
     @javax.annotation.Nullable
@@ -97,7 +93,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         return this._firstDayOfWeek;
     }
     /**
-     * Gets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
+     * Gets the index property value. The index property
      * @return a weekIndex
      */
     @javax.annotation.Nullable
@@ -121,15 +117,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         return this._month;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
+     * Gets the type property value. The type property
      * @return a recurrencePatternType
      */
     @javax.annotation.Nullable
@@ -150,7 +138,6 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         writer.writeEnumValue("index", this.getIndex());
         writer.writeIntegerValue("interval", this.getInterval());
         writer.writeIntegerValue("month", this.getMonth());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -182,7 +169,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         this._daysOfWeek = value;
     }
     /**
-     * Sets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
+     * Sets the firstDayOfWeek property value. The firstDayOfWeek property
      * @param value Value to set for the firstDayOfWeek property.
      * @return a void
      */
@@ -191,7 +178,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         this._firstDayOfWeek = value;
     }
     /**
-     * Sets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
+     * Sets the index property value. The index property
      * @param value Value to set for the index property.
      * @return a void
      */
@@ -218,16 +205,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         this._month = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

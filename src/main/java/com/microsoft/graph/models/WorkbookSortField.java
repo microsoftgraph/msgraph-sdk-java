@@ -17,12 +17,10 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     private String _color;
     /** Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber. */
     private String _dataOption;
-    /** Represents the icon that is the target of the condition if the sorting is on the cell's icon. */
+    /** The icon property */
     private WorkbookIcon _icon;
     /** Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row). */
     private Integer _key;
-    /** The OdataType property */
-    private String _odataType;
     /** Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon. */
     private String _sortOn;
     /**
@@ -32,7 +30,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookSortField");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,18 +80,17 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookSortField currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
             this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
             this.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+     * Gets the icon property value. The icon property
      * @return a workbookIcon
      */
     @javax.annotation.Nullable
@@ -108,14 +104,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getKey() {
         return this._key;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
@@ -138,7 +126,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("dataOption", this.getDataOption());
         writer.writeObjectValue("icon", this.getIcon());
         writer.writeIntegerValue("key", this.getKey());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sortOn", this.getSortOn());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -179,7 +166,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
         this._dataOption = value;
     }
     /**
-     * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+     * Sets the icon property value. The icon property
      * @param value Value to set for the icon property.
      * @return a void
      */
@@ -195,15 +182,6 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final Integer value) {
         this._key = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.

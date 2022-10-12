@@ -22,11 +22,11 @@ public class ManagedDevice extends Entity implements Parsable {
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;
     /** Compliance state. */
     private ComplianceState _complianceState;
-    /** ConfigrMgr client enabled features. This property is read-only. */
+    /** configuration Manager client enabled features */
     private ConfigurationManagerClientEnabledFeatures _configurationManagerClientEnabledFeatures;
     /** List of ComplexType deviceActionResult objects. This property is read-only. */
     private java.util.List<DeviceActionResult> _deviceActionResults;
-    /** Device category */
+    /** The deviceCategory property */
     private DeviceCategory _deviceCategory;
     /** Device category display name. This property is read-only. */
     private String _deviceCategoryDisplayName;
@@ -36,7 +36,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private java.util.List<DeviceConfigurationState> _deviceConfigurationStates;
     /** Possible ways of adding a mobile device to management. */
     private DeviceEnrollmentType _deviceEnrollmentType;
-    /** The device health attestation state. This property is read-only. */
+    /** The deviceHealthAttestationState property */
     private DeviceHealthAttestationState _deviceHealthAttestationState;
     /** Name of the device. This property is read-only. */
     private String _deviceName;
@@ -131,7 +131,6 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedDevice() {
         super();
-        this.setOdataType("#microsoft.graph.managedDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -192,7 +191,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._complianceState;
     }
     /**
-     * Gets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
+     * Gets the configurationManagerClientEnabledFeatures property value. configuration Manager client enabled features
      * @return a configurationManagerClientEnabledFeatures
      */
     @javax.annotation.Nullable
@@ -208,7 +207,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._deviceActionResults;
     }
     /**
-     * Gets the deviceCategory property value. Device category
+     * Gets the deviceCategory property value. The deviceCategory property
      * @return a deviceCategory
      */
     @javax.annotation.Nullable
@@ -248,7 +247,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._deviceEnrollmentType;
     }
     /**
-     * Gets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
+     * Gets the deviceHealthAttestationState property value. The deviceHealthAttestationState property
      * @return a deviceHealthAttestationState
      */
     @javax.annotation.Nullable
@@ -676,10 +675,12 @@ public class ManagedDevice extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("complianceState", this.getComplianceState());
+        writer.writeObjectValue("configurationManagerClientEnabledFeatures", this.getConfigurationManagerClientEnabledFeatures());
         writer.writeObjectValue("deviceCategory", this.getDeviceCategory());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
+        writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
@@ -745,7 +746,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._complianceState = value;
     }
     /**
-     * Sets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
+     * Sets the configurationManagerClientEnabledFeatures property value. configuration Manager client enabled features
      * @param value Value to set for the configurationManagerClientEnabledFeatures property.
      * @return a void
      */
@@ -763,7 +764,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._deviceActionResults = value;
     }
     /**
-     * Sets the deviceCategory property value. Device category
+     * Sets the deviceCategory property value. The deviceCategory property
      * @param value Value to set for the deviceCategory property.
      * @return a void
      */
@@ -808,7 +809,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._deviceEnrollmentType = value;
     }
     /**
-     * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
+     * Sets the deviceHealthAttestationState property value. The deviceHealthAttestationState property
      * @param value Value to set for the deviceHealthAttestationState property.
      * @return a void
      */

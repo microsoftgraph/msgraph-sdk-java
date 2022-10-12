@@ -7,23 +7,22 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ColumnDefinition extends Entity implements Parsable {
-    /** This column stores boolean values. */
+    /** The boolean property */
     private BooleanColumn _boolean_escaped;
-    /** This column's data is calculated based on other columns. */
+    /** The calculated property */
     private CalculatedColumn _calculated;
-    /** This column stores data from a list of choices. */
+    /** The choice property */
     private ChoiceColumn _choice;
     /** For site columns, the name of the group this column belongs to. Helps organize related columns. */
     private String _columnGroup;
-    /** This column stores content approval status. */
+    /** The contentApprovalStatus property */
     private ContentApprovalStatusColumn _contentApprovalStatus;
-    /** This column stores currency values. */
+    /** The currency property */
     private CurrencyColumn _currency;
-    /** This column stores DateTime values. */
+    /** The dateTime property */
     private DateTimeColumn _dateTime;
-    /** The default value for this column. */
+    /** The defaultValue property */
     private DefaultColumnValue _defaultValue;
     /** The user-facing description of the column. */
     private String _description;
@@ -31,11 +30,11 @@ public class ColumnDefinition extends Entity implements Parsable {
     private String _displayName;
     /** If true, no two list items may have the same value for this column. */
     private Boolean _enforceUniqueValues;
-    /** This column stores a geolocation. */
+    /** The geolocation property */
     private GeolocationColumn _geolocation;
     /** Specifies whether the column is displayed in the user interface. */
     private Boolean _hidden;
-    /** This column stores hyperlink or picture values. */
+    /** The hyperlinkOrPicture property */
     private HyperlinkOrPictureColumn _hyperlinkOrPicture;
     /** Specifies whether the column values can be used for sorting and searching. */
     private Boolean _indexed;
@@ -45,13 +44,13 @@ public class ColumnDefinition extends Entity implements Parsable {
     private Boolean _isReorderable;
     /** Specifies whether the column can be changed. */
     private Boolean _isSealed;
-    /** This column's data is looked up from another source in the site. */
+    /** The lookup property */
     private LookupColumn _lookup;
     /** The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName. */
     private String _name;
-    /** This column stores number values. */
+    /** The number property */
     private NumberColumn _number;
-    /** This column stores Person or Group values. */
+    /** The personOrGroup property */
     private PersonOrGroupColumn _personOrGroup;
     /** If 'true', changes to this column will be propagated to lists that implement the column. */
     private Boolean _propagateChanges;
@@ -59,19 +58,19 @@ public class ColumnDefinition extends Entity implements Parsable {
     private Boolean _readOnly;
     /** Specifies whether the column value isn't optional. */
     private Boolean _required;
-    /** The source column for the content type column. */
+    /** The sourceColumn property */
     private ColumnDefinition _sourceColumn;
-    /** ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only. */
+    /** The sourceContentType property */
     private ContentTypeInfo _sourceContentType;
-    /** This column stores taxonomy terms. */
+    /** The term property */
     private TermColumn _term;
-    /** This column stores text values. */
+    /** The text property */
     private TextColumn _text;
-    /** This column stores thumbnail values. */
+    /** The thumbnail property */
     private ThumbnailColumn _thumbnail;
-    /** For site columns, the type of column. Read-only. */
+    /** The type property */
     private ColumnTypes _type;
-    /** This column stores validation formula and message for the column. */
+    /** The validation property */
     private ColumnValidation _validation;
     /**
      * Instantiates a new columnDefinition and sets the default values.
@@ -80,7 +79,6 @@ public class ColumnDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ColumnDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.columnDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,7 +91,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return new ColumnDefinition();
     }
     /**
-     * Gets the boolean property value. This column stores boolean values.
+     * Gets the boolean property value. The boolean property
      * @return a booleanColumn
      */
     @javax.annotation.Nullable
@@ -101,7 +99,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._boolean_escaped;
     }
     /**
-     * Gets the calculated property value. This column's data is calculated based on other columns.
+     * Gets the calculated property value. The calculated property
      * @return a calculatedColumn
      */
     @javax.annotation.Nullable
@@ -109,7 +107,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._calculated;
     }
     /**
-     * Gets the choice property value. This column stores data from a list of choices.
+     * Gets the choice property value. The choice property
      * @return a choiceColumn
      */
     @javax.annotation.Nullable
@@ -125,7 +123,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._columnGroup;
     }
     /**
-     * Gets the contentApprovalStatus property value. This column stores content approval status.
+     * Gets the contentApprovalStatus property value. The contentApprovalStatus property
      * @return a contentApprovalStatusColumn
      */
     @javax.annotation.Nullable
@@ -133,7 +131,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._contentApprovalStatus;
     }
     /**
-     * Gets the currency property value. This column stores currency values.
+     * Gets the currency property value. The currency property
      * @return a currencyColumn
      */
     @javax.annotation.Nullable
@@ -141,7 +139,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._currency;
     }
     /**
-     * Gets the dateTime property value. This column stores DateTime values.
+     * Gets the dateTime property value. The dateTime property
      * @return a dateTimeColumn
      */
     @javax.annotation.Nullable
@@ -149,7 +147,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._dateTime;
     }
     /**
-     * Gets the defaultValue property value. The default value for this column.
+     * Gets the defaultValue property value. The defaultValue property
      * @return a defaultColumnValue
      */
     @javax.annotation.Nullable
@@ -223,7 +221,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the geolocation property value. This column stores a geolocation.
+     * Gets the geolocation property value. The geolocation property
      * @return a geolocationColumn
      */
     @javax.annotation.Nullable
@@ -239,7 +237,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._hidden;
     }
     /**
-     * Gets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
+     * Gets the hyperlinkOrPicture property value. The hyperlinkOrPicture property
      * @return a hyperlinkOrPictureColumn
      */
     @javax.annotation.Nullable
@@ -279,7 +277,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._isSealed;
     }
     /**
-     * Gets the lookup property value. This column's data is looked up from another source in the site.
+     * Gets the lookup property value. The lookup property
      * @return a lookupColumn
      */
     @javax.annotation.Nullable
@@ -295,7 +293,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the number property value. This column stores number values.
+     * Gets the number property value. The number property
      * @return a numberColumn
      */
     @javax.annotation.Nullable
@@ -303,7 +301,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._number;
     }
     /**
-     * Gets the personOrGroup property value. This column stores Person or Group values.
+     * Gets the personOrGroup property value. The personOrGroup property
      * @return a personOrGroupColumn
      */
     @javax.annotation.Nullable
@@ -335,7 +333,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._required;
     }
     /**
-     * Gets the sourceColumn property value. The source column for the content type column.
+     * Gets the sourceColumn property value. The sourceColumn property
      * @return a columnDefinition
      */
     @javax.annotation.Nullable
@@ -343,7 +341,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._sourceColumn;
     }
     /**
-     * Gets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * Gets the sourceContentType property value. The sourceContentType property
      * @return a contentTypeInfo
      */
     @javax.annotation.Nullable
@@ -351,7 +349,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._sourceContentType;
     }
     /**
-     * Gets the term property value. This column stores taxonomy terms.
+     * Gets the term property value. The term property
      * @return a termColumn
      */
     @javax.annotation.Nullable
@@ -359,7 +357,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._term;
     }
     /**
-     * Gets the text property value. This column stores text values.
+     * Gets the text property value. The text property
      * @return a textColumn
      */
     @javax.annotation.Nullable
@@ -367,7 +365,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._text;
     }
     /**
-     * Gets the thumbnail property value. This column stores thumbnail values.
+     * Gets the thumbnail property value. The thumbnail property
      * @return a thumbnailColumn
      */
     @javax.annotation.Nullable
@@ -375,7 +373,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._thumbnail;
     }
     /**
-     * Gets the type property value. For site columns, the type of column. Read-only.
+     * Gets the type property value. The type property
      * @return a columnTypes
      */
     @javax.annotation.Nullable
@@ -383,7 +381,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._type;
     }
     /**
-     * Gets the validation property value. This column stores validation formula and message for the column.
+     * Gets the validation property value. The validation property
      * @return a columnValidation
      */
     @javax.annotation.Nullable
@@ -433,7 +431,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         writer.writeObjectValue("validation", this.getValidation());
     }
     /**
-     * Sets the boolean property value. This column stores boolean values.
+     * Sets the boolean property value. The boolean property
      * @param value Value to set for the boolean property.
      * @return a void
      */
@@ -442,7 +440,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._boolean_escaped = value;
     }
     /**
-     * Sets the calculated property value. This column's data is calculated based on other columns.
+     * Sets the calculated property value. The calculated property
      * @param value Value to set for the calculated property.
      * @return a void
      */
@@ -451,7 +449,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._calculated = value;
     }
     /**
-     * Sets the choice property value. This column stores data from a list of choices.
+     * Sets the choice property value. The choice property
      * @param value Value to set for the choice property.
      * @return a void
      */
@@ -469,7 +467,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._columnGroup = value;
     }
     /**
-     * Sets the contentApprovalStatus property value. This column stores content approval status.
+     * Sets the contentApprovalStatus property value. The contentApprovalStatus property
      * @param value Value to set for the contentApprovalStatus property.
      * @return a void
      */
@@ -478,7 +476,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._contentApprovalStatus = value;
     }
     /**
-     * Sets the currency property value. This column stores currency values.
+     * Sets the currency property value. The currency property
      * @param value Value to set for the currency property.
      * @return a void
      */
@@ -487,7 +485,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._currency = value;
     }
     /**
-     * Sets the dateTime property value. This column stores DateTime values.
+     * Sets the dateTime property value. The dateTime property
      * @param value Value to set for the dateTime property.
      * @return a void
      */
@@ -496,7 +494,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._dateTime = value;
     }
     /**
-     * Sets the defaultValue property value. The default value for this column.
+     * Sets the defaultValue property value. The defaultValue property
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
@@ -532,7 +530,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._enforceUniqueValues = value;
     }
     /**
-     * Sets the geolocation property value. This column stores a geolocation.
+     * Sets the geolocation property value. The geolocation property
      * @param value Value to set for the geolocation property.
      * @return a void
      */
@@ -550,7 +548,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._hidden = value;
     }
     /**
-     * Sets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
+     * Sets the hyperlinkOrPicture property value. The hyperlinkOrPicture property
      * @param value Value to set for the hyperlinkOrPicture property.
      * @return a void
      */
@@ -595,7 +593,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._isSealed = value;
     }
     /**
-     * Sets the lookup property value. This column's data is looked up from another source in the site.
+     * Sets the lookup property value. The lookup property
      * @param value Value to set for the lookup property.
      * @return a void
      */
@@ -613,7 +611,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the number property value. This column stores number values.
+     * Sets the number property value. The number property
      * @param value Value to set for the number property.
      * @return a void
      */
@@ -622,7 +620,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._number = value;
     }
     /**
-     * Sets the personOrGroup property value. This column stores Person or Group values.
+     * Sets the personOrGroup property value. The personOrGroup property
      * @param value Value to set for the personOrGroup property.
      * @return a void
      */
@@ -658,7 +656,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._required = value;
     }
     /**
-     * Sets the sourceColumn property value. The source column for the content type column.
+     * Sets the sourceColumn property value. The sourceColumn property
      * @param value Value to set for the sourceColumn property.
      * @return a void
      */
@@ -667,7 +665,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._sourceColumn = value;
     }
     /**
-     * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * Sets the sourceContentType property value. The sourceContentType property
      * @param value Value to set for the sourceContentType property.
      * @return a void
      */
@@ -676,7 +674,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._sourceContentType = value;
     }
     /**
-     * Sets the term property value. This column stores taxonomy terms.
+     * Sets the term property value. The term property
      * @param value Value to set for the term property.
      * @return a void
      */
@@ -685,7 +683,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._term = value;
     }
     /**
-     * Sets the text property value. This column stores text values.
+     * Sets the text property value. The text property
      * @param value Value to set for the text property.
      * @return a void
      */
@@ -694,7 +692,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._text = value;
     }
     /**
-     * Sets the thumbnail property value. This column stores thumbnail values.
+     * Sets the thumbnail property value. The thumbnail property
      * @param value Value to set for the thumbnail property.
      * @return a void
      */
@@ -703,7 +701,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._thumbnail = value;
     }
     /**
-     * Sets the type property value. For site columns, the type of column. Read-only.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
@@ -712,7 +710,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this._type = value;
     }
     /**
-     * Sets the validation property value. This column stores validation formula and message for the column.
+     * Sets the validation property value. The validation property
      * @param value Value to set for the validation property.
      * @return a void
      */

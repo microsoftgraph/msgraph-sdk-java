@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlines extends Entity implements Parsable {
-    /** Represents the formatting of chart gridlines. Read-only. */
+    /** The format property */
     private WorkbookChartGridlinesFormat _format;
     /** Boolean value representing if the axis gridlines are visible or not. */
     private Boolean _visible;
@@ -19,7 +19,6 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartGridlines() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartGridlines");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the formatting of chart gridlines. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartGridlinesFormat
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class WorkbookChartGridlines extends Entity implements Parsable {
         writer.writeBooleanValue("visible", this.getVisible());
     }
     /**
-     * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */

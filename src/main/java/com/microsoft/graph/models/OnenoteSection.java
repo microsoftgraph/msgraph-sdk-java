@@ -7,19 +7,18 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default section. Read-only. */
     private Boolean _isDefault;
-    /** Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web. */
+    /** The links property */
     private SectionLinks _links;
     /** The collection of pages in the section.  Read-only. Nullable. */
     private java.util.List<OnenotePage> _pages;
     /** The pages endpoint where you can get details for all the pages in the section. Read-only. */
     private String _pagesUrl;
-    /** The notebook that contains the section.  Read-only. */
+    /** The parentNotebook property */
     private Notebook _parentNotebook;
-    /** The section group that contains the section.  Read-only. */
+    /** The parentSectionGroup property */
     private SectionGroup _parentSectionGroup;
     /**
      * Instantiates a new onenoteSection and sets the default values.
@@ -28,7 +27,6 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
     @javax.annotation.Nullable
     public OnenoteSection() {
         super();
-        this.setOdataType("#microsoft.graph.onenoteSection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +63,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         return this._isDefault;
     }
     /**
-     * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
+     * Gets the links property value. The links property
      * @return a sectionLinks
      */
     @javax.annotation.Nullable
@@ -89,7 +87,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         return this._pagesUrl;
     }
     /**
-     * Gets the parentNotebook property value. The notebook that contains the section.  Read-only.
+     * Gets the parentNotebook property value. The parentNotebook property
      * @return a notebook
      */
     @javax.annotation.Nullable
@@ -97,7 +95,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         return this._parentNotebook;
     }
     /**
-     * Gets the parentSectionGroup property value. The section group that contains the section.  Read-only.
+     * Gets the parentSectionGroup property value. The parentSectionGroup property
      * @return a sectionGroup
      */
     @javax.annotation.Nullable
@@ -130,7 +128,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         this._isDefault = value;
     }
     /**
-     * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
+     * Sets the links property value. The links property
      * @param value Value to set for the links property.
      * @return a void
      */
@@ -157,7 +155,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         this._pagesUrl = value;
     }
     /**
-     * Sets the parentNotebook property value. The notebook that contains the section.  Read-only.
+     * Sets the parentNotebook property value. The parentNotebook property
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
@@ -166,7 +164,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
         this._parentNotebook = value;
     }
     /**
-     * Sets the parentSectionGroup property value. The section group that contains the section.  Read-only.
+     * Sets the parentSectionGroup property value. The parentSectionGroup property
      * @param value Value to set for the parentSectionGroup property.
      * @return a void
      */

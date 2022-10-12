@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class GroupSetting extends Entity implements Parsable {
     /** Display name of this group of settings, which comes from the associated template. */
     private String _displayName;
@@ -22,7 +21,6 @@ public class GroupSetting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public GroupSetting() {
         super();
-        this.setOdataType("#microsoft.graph.groupSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

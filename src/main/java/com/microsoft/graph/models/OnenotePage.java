@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
     /** The page's HTML content. */
     private byte[] _content;
@@ -20,13 +19,13 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     private OffsetDateTime _lastModifiedDateTime;
     /** The indentation level of the page. Read-only. */
     private Integer _level;
-    /** Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only. */
+    /** The links property */
     private PageLinks _links;
     /** The order of the page within its parent section. Read-only. */
     private Integer _order;
-    /** The notebook that contains the page.  Read-only. */
+    /** The parentNotebook property */
     private Notebook _parentNotebook;
-    /** The section that contains the page. Read-only. */
+    /** The parentSection property */
     private OnenoteSection _parentSection;
     /** The title of the page. */
     private String _title;
@@ -39,7 +38,6 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
     @javax.annotation.Nullable
     public OnenotePage() {
         super();
-        this.setOdataType("#microsoft.graph.onenotePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -113,7 +111,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return this._level;
     }
     /**
-     * Gets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     * Gets the links property value. The links property
      * @return a pageLinks
      */
     @javax.annotation.Nullable
@@ -129,7 +127,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return this._order;
     }
     /**
-     * Gets the parentNotebook property value. The notebook that contains the page.  Read-only.
+     * Gets the parentNotebook property value. The parentNotebook property
      * @return a notebook
      */
     @javax.annotation.Nullable
@@ -137,7 +135,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         return this._parentNotebook;
     }
     /**
-     * Gets the parentSection property value. The section that contains the page. Read-only.
+     * Gets the parentSection property value. The parentSection property
      * @return a onenoteSection
      */
     @javax.annotation.Nullable
@@ -227,7 +225,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         this._level = value;
     }
     /**
-     * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     * Sets the links property value. The links property
      * @param value Value to set for the links property.
      * @return a void
      */
@@ -245,7 +243,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         this._order = value;
     }
     /**
-     * Sets the parentNotebook property value. The notebook that contains the page.  Read-only.
+     * Sets the parentNotebook property value. The parentNotebook property
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
@@ -254,7 +252,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
         this._parentNotebook = value;
     }
     /**
-     * Sets the parentSection property value. The section that contains the page. Read-only.
+     * Sets the parentSection property value. The parentSection property
      * @param value Value to set for the parentSection property.
      * @return a void
      */

@@ -1,7 +1,6 @@
 package com.microsoft.graph.users.item.todo.lists.item.tasks.item.checklistitems.item;
 
 import com.microsoft.graph.models.ChecklistItem;
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -15,7 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity. */
+/** Builds and executes requests for operations under /users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/checklistItems/{checklistItem-id} */
 public class ChecklistItemItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -133,7 +132,6 @@ public class ChecklistItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChecklistItemItemRequestBuilderPatchRequestConfiguration requestConfig = new ChecklistItemItemRequestBuilderPatchRequestConfiguration();
@@ -151,11 +149,7 @@ public class ChecklistItemItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -171,11 +165,7 @@ public class ChecklistItemItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ChecklistItemItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -190,11 +180,7 @@ public class ChecklistItemItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ChecklistItem> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ChecklistItem>() {{
                 this.completeExceptionally(ex);
@@ -210,11 +196,7 @@ public class ChecklistItemItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ChecklistItem> get(@javax.annotation.Nullable final java.util.function.Consumer<ChecklistItemItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ChecklistItem>() {{
                 this.completeExceptionally(ex);
@@ -224,19 +206,15 @@ public class ChecklistItemItemRequestBuilder {
     /**
      * Update the navigation property checklistItems in users
      * @param body 
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChecklistItem> patch(@javax.annotation.Nonnull final ChecklistItem body) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ChecklistItem body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ChecklistItem>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -245,20 +223,16 @@ public class ChecklistItemItemRequestBuilder {
      * Update the navigation property checklistItems in users
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of checklistItem
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ChecklistItem> patch(@javax.annotation.Nonnull final ChecklistItem body, @javax.annotation.Nullable final java.util.function.Consumer<ChecklistItemItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ChecklistItem body, @javax.annotation.Nullable final java.util.function.Consumer<ChecklistItemItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ChecklistItem::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ChecklistItem>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }

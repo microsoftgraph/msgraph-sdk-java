@@ -1,15 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppProtection;
-import com.microsoft.graph.models.DefaultManagedAppProtection;
-import com.microsoft.graph.models.IosManagedAppProtection;
-import com.microsoft.graph.models.ManagedAppConfiguration;
-import com.microsoft.graph.models.ManagedAppProtection;
-import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.TargetedManagedAppProtection;
-import com.microsoft.graph.models.WindowsInformationProtection;
-import com.microsoft.graph.models.WindowsInformationProtectionPolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -37,7 +27,6 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedAppPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,22 +36,6 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedAppPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.androidManagedAppProtection": return new AndroidManagedAppProtection();
-                case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
-                case "#microsoft.graph.iosManagedAppProtection": return new IosManagedAppProtection();
-                case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
-                case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
-                case "#microsoft.graph.mdmWindowsInformationProtectionPolicy": return new MdmWindowsInformationProtectionPolicy();
-                case "#microsoft.graph.targetedManagedAppConfiguration": return new TargetedManagedAppConfiguration();
-                case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
-                case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
-                case "#microsoft.graph.windowsInformationProtectionPolicy": return new WindowsInformationProtectionPolicy();
-            }
-        }
         return new ManagedAppPolicy();
     }
     /**

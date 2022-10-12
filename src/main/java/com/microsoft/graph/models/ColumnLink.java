@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ColumnLink extends Entity implements Parsable {
     /** The name of the column  in this content type. */
     private String _name;
@@ -18,7 +17,6 @@ public class ColumnLink extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ColumnLink() {
         super();
-        this.setOdataType("#microsoft.graph.columnLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

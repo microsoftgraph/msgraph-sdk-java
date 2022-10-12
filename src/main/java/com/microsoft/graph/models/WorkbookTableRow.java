@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableRow extends Entity implements Parsable {
     /** Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only. */
     private Integer _index;
-    /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /** The values property */
     private Json _values;
     /**
      * Instantiates a new workbookTableRow and sets the default values.
@@ -20,7 +19,6 @@ public class WorkbookTableRow extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTableRow() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTableRow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +51,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
         return this._index;
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. The values property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -82,7 +80,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
         this._index = value;
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. The values property
      * @param value Value to set for the values property.
      * @return a void
      */

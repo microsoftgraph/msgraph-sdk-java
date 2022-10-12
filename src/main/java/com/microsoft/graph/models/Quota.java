@@ -13,13 +13,11 @@ public class Quota implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Total space consumed by files in the recycle bin, in bytes. Read-only. */
     private Long _deleted;
-    /** The OdataType property */
-    private String _odataType;
     /** Total space remaining before reaching the quota limit, in bytes. Read-only. */
     private Long _remaining;
     /** Enumeration value that indicates the state of the storage space. Read-only. */
     private String _state;
-    /** Information about the drive's storage quota plans. Only in Personal OneDrive. */
+    /** The storagePlanInformation property */
     private StoragePlanInformation _storagePlanInformation;
     /** Total allowed storage space, in bytes. Read-only. */
     private Long _total;
@@ -32,7 +30,6 @@ public class Quota implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Quota() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.quota");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,23 +64,14 @@ public class Quota implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Quota currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("deleted", (n) -> { currentObject.setDeleted(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remaining", (n) -> { currentObject.setRemaining(n.getLongValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
             this.put("storagePlanInformation", (n) -> { currentObject.setStoragePlanInformation(n.getObjectValue(StoragePlanInformation::createFromDiscriminatorValue)); });
             this.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
             this.put("used", (n) -> { currentObject.setUsed(n.getLongValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
@@ -102,7 +90,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
         return this._state;
     }
     /**
-     * Gets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
+     * Gets the storagePlanInformation property value. The storagePlanInformation property
      * @return a storagePlanInformation
      */
     @javax.annotation.Nullable
@@ -134,7 +122,6 @@ public class Quota implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("deleted", this.getDeleted());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("remaining", this.getRemaining());
         writer.writeStringValue("state", this.getState());
         writer.writeObjectValue("storagePlanInformation", this.getStoragePlanInformation());
@@ -161,15 +148,6 @@ public class Quota implements AdditionalDataHolder, Parsable {
         this._deleted = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
      * @param value Value to set for the remaining property.
      * @return a void
@@ -188,7 +166,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
         this._state = value;
     }
     /**
-     * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
+     * Sets the storagePlanInformation property value. The storagePlanInformation property
      * @param value Value to set for the storagePlanInformation property.
      * @return a void
      */

@@ -20,8 +20,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     private String _errorDescription;
     /** Name of setting instance that is being reported. */
     private String _instanceDisplayName;
-    /** The OdataType property */
-    private String _odataType;
     /** The setting that is being reported */
     private String _setting;
     /** Localized/user friendly setting name that is being reported */
@@ -45,7 +43,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public DeviceCompliancePolicySettingState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicySettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,12 +93,11 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicySettingState currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("currentValue", (n) -> { currentObject.setCurrentValue(n.getStringValue()); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
             this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
             this.put("instanceDisplayName", (n) -> { currentObject.setInstanceDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
             this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
             this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
@@ -119,14 +115,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public String getInstanceDisplayName() {
         return this._instanceDisplayName;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the setting property value. The setting that is being reported
@@ -204,7 +192,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         writer.writeLongValue("errorCode", this.getErrorCode());
         writer.writeStringValue("errorDescription", this.getErrorDescription());
         writer.writeStringValue("instanceDisplayName", this.getInstanceDisplayName());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("setting", this.getSetting());
         writer.writeStringValue("settingName", this.getSettingName());
         writer.writeCollectionOfObjectValues("sources", this.getSources());
@@ -259,15 +246,6 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
         this._instanceDisplayName = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the setting property value. The setting that is being reported

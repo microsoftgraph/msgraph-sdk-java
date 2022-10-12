@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Chat extends Entity implements Parsable {
     /** The chatType property */
     private ChatType _chatType;
@@ -22,7 +21,7 @@ public class Chat extends Entity implements Parsable {
     private java.util.List<ConversationMember> _members;
     /** A collection of all the messages in the chat. Nullable. */
     private java.util.List<ChatMessage> _messages;
-    /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
+    /** The onlineMeetingInfo property */
     private TeamworkOnlineMeetingInfo _onlineMeetingInfo;
     /** A collection of all the pinned messages in the chat. Nullable. */
     private java.util.List<PinnedChatMessageInfo> _pinnedMessages;
@@ -41,7 +40,6 @@ public class Chat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Chat() {
         super();
-        this.setOdataType("#microsoft.graph.chat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -124,7 +122,7 @@ public class Chat extends Entity implements Parsable {
         return this._messages;
     }
     /**
-     * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     * Gets the onlineMeetingInfo property value. The onlineMeetingInfo property
      * @return a teamworkOnlineMeetingInfo
      */
     @javax.annotation.Nullable
@@ -248,7 +246,7 @@ public class Chat extends Entity implements Parsable {
         this._messages = value;
     }
     /**
-     * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     * Sets the onlineMeetingInfo property value. The onlineMeetingInfo property
      * @param value Value to set for the onlineMeetingInfo property.
      * @return a void
      */

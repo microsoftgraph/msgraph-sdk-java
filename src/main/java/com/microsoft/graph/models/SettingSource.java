@@ -15,8 +15,6 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Not yet documented */
     private String _id;
-    /** The OdataType property */
-    private String _odataType;
     /** The sourceType property */
     private SettingSourceType _sourceType;
     /**
@@ -26,7 +24,6 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SettingSource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.settingSource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +58,9 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SettingSource currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceType", (n) -> { currentObject.setSourceType(n.getEnumValue(SettingSourceType.class)); });
         }};
     }
@@ -75,14 +71,6 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the sourceType property value. The sourceType property
@@ -102,7 +90,6 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("sourceType", this.getSourceType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the sourceType property value. The sourceType property

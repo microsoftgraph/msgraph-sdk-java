@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFilter extends Entity implements Parsable {
-    /** The currently applied filter on the given column. Read-only. */
+    /** The criteria property */
     private WorkbookFilterCriteria _criteria;
     /**
      * Instantiates a new workbookFilter and sets the default values.
@@ -17,7 +17,6 @@ public class WorkbookFilter extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookFilter() {
         super();
-        this.setOdataType("#microsoft.graph.workbookFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,7 +29,7 @@ public class WorkbookFilter extends Entity implements Parsable {
         return new WorkbookFilter();
     }
     /**
-     * Gets the criteria property value. The currently applied filter on the given column. Read-only.
+     * Gets the criteria property value. The criteria property
      * @return a workbookFilterCriteria
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class WorkbookFilter extends Entity implements Parsable {
         writer.writeObjectValue("criteria", this.getCriteria());
     }
     /**
-     * Sets the criteria property value. The currently applied filter on the given column. Read-only.
+     * Sets the criteria property value. The criteria property
      * @param value Value to set for the criteria property.
      * @return a void
      */

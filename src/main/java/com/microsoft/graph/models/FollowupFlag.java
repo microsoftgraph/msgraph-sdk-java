@@ -11,15 +11,13 @@ import java.util.Objects;
 public class FollowupFlag implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The date and time that the follow-up was finished. */
+    /** The completedDateTime property */
     private DateTimeTimeZone _completedDateTime;
-    /** The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response. */
+    /** The dueDateTime property */
     private DateTimeTimeZone _dueDateTime;
-    /** The status for follow-up for an item. Possible values are notFlagged, complete, and flagged. */
+    /** The flagStatus property */
     private FollowupFlagStatus _flagStatus;
-    /** The OdataType property */
-    private String _odataType;
-    /** The date and time that the follow-up is to begin. */
+    /** The startDateTime property */
     private DateTimeTimeZone _startDateTime;
     /**
      * Instantiates a new followupFlag and sets the default values.
@@ -28,7 +26,6 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FollowupFlag() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.followupFlag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +46,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the completedDateTime property value. The date and time that the follow-up was finished.
+     * Gets the completedDateTime property value. The completedDateTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -57,7 +54,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Gets the dueDateTime property value. The dueDateTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -71,16 +68,15 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FollowupFlag currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("flagStatus", (n) -> { currentObject.setFlagStatus(n.getEnumValue(FollowupFlagStatus.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
+     * Gets the flagStatus property value. The flagStatus property
      * @return a followupFlagStatus
      */
     @javax.annotation.Nullable
@@ -88,15 +84,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         return this._flagStatus;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the startDateTime property value. The date and time that the follow-up is to begin.
+     * Gets the startDateTime property value. The startDateTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -114,7 +102,6 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("completedDateTime", this.getCompletedDateTime());
         writer.writeObjectValue("dueDateTime", this.getDueDateTime());
         writer.writeEnumValue("flagStatus", this.getFlagStatus());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -128,7 +115,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the completedDateTime property value. The date and time that the follow-up was finished.
+     * Sets the completedDateTime property value. The completedDateTime property
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
@@ -137,7 +124,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this._completedDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Sets the dueDateTime property value. The dueDateTime property
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
@@ -146,7 +133,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this._dueDateTime = value;
     }
     /**
-     * Sets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
+     * Sets the flagStatus property value. The flagStatus property
      * @param value Value to set for the flagStatus property.
      * @return a void
      */
@@ -155,16 +142,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this._flagStatus = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the startDateTime property value. The date and time that the follow-up is to begin.
+     * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

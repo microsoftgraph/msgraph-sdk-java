@@ -1,11 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Drive;
-import com.microsoft.graph.models.DriveItem;
-import com.microsoft.graph.models.List;
-import com.microsoft.graph.models.ListItem;
-import com.microsoft.graph.models.SharedDriveItem;
-import com.microsoft.graph.models.Site;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -15,9 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BaseItem extends Entity implements Parsable {
-    /** Identity of the user, device, or application which created the item. Read-only. */
+    /** The createdBy property */
     private IdentitySet _createdBy;
-    /** Identity of the user who created the item. Read-only. */
+    /** The createdByUser property */
     private User _createdByUser;
     /** Date and time of item creation. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -25,15 +19,15 @@ public class BaseItem extends Entity implements Parsable {
     private String _description;
     /** ETag for the item. Read-only. */
     private String _eTag;
-    /** Identity of the user, device, and application which last modified the item. Read-only. */
+    /** The lastModifiedBy property */
     private IdentitySet _lastModifiedBy;
-    /** Identity of the user who last modified the item. Read-only. */
+    /** The lastModifiedByUser property */
     private User _lastModifiedByUser;
     /** Date and time the item was last modified. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
     /** The name of the item. Read-write. */
     private String _name;
-    /** Parent information, if the item has a parent. Read-write. */
+    /** The parentReference property */
     private ItemReference _parentReference;
     /** URL that displays the resource in the browser. Read-only. */
     private String _webUrl;
@@ -44,7 +38,6 @@ public class BaseItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItem() {
         super();
-        this.setOdataType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,22 +47,10 @@ public class BaseItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static BaseItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.drive": return new Drive();
-                case "#microsoft.graph.driveItem": return new DriveItem();
-                case "#microsoft.graph.list": return new List();
-                case "#microsoft.graph.listItem": return new ListItem();
-                case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
-                case "#microsoft.graph.site": return new Site();
-            }
-        }
         return new BaseItem();
     }
     /**
-     * Gets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
+     * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -77,7 +58,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._createdBy;
     }
     /**
-     * Gets the createdByUser property value. Identity of the user who created the item. Read-only.
+     * Gets the createdByUser property value. The createdByUser property
      * @return a user
      */
     @javax.annotation.Nullable
@@ -130,7 +111,7 @@ public class BaseItem extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -138,7 +119,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
+     * Gets the lastModifiedByUser property value. The lastModifiedByUser property
      * @return a user
      */
     @javax.annotation.Nullable
@@ -162,7 +143,7 @@ public class BaseItem extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the parentReference property value. Parent information, if the item has a parent. Read-write.
+     * Gets the parentReference property value. The parentReference property
      * @return a itemReference
      */
     @javax.annotation.Nullable
@@ -199,7 +180,7 @@ public class BaseItem extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -208,7 +189,7 @@ public class BaseItem extends Entity implements Parsable {
         this._createdBy = value;
     }
     /**
-     * Sets the createdByUser property value. Identity of the user who created the item. Read-only.
+     * Sets the createdByUser property value. The createdByUser property
      * @param value Value to set for the createdByUser property.
      * @return a void
      */
@@ -244,7 +225,7 @@ public class BaseItem extends Entity implements Parsable {
         this._eTag = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -253,7 +234,7 @@ public class BaseItem extends Entity implements Parsable {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
+     * Sets the lastModifiedByUser property value. The lastModifiedByUser property
      * @param value Value to set for the lastModifiedByUser property.
      * @return a void
      */
@@ -280,7 +261,7 @@ public class BaseItem extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the parentReference property value. Parent information, if the item has a parent. Read-write.
+     * Sets the parentReference property value. The parentReference property
      * @param value Value to set for the parentReference property.
      * @return a void
      */

@@ -1,6 +1,5 @@
 package com.microsoft.graph.users.item.photos.item;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.users.item.photos.item.value.ContentRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
@@ -16,7 +15,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the photos property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/photos/{profilePhoto-id} */
 public class ProfilePhotoItemRequestBuilder {
     /** The Content property */
     @javax.annotation.Nonnull
@@ -96,11 +95,7 @@ public class ProfilePhotoItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ProfilePhoto>() {{
                 this.completeExceptionally(ex);
@@ -116,11 +111,7 @@ public class ProfilePhotoItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get(@javax.annotation.Nullable final java.util.function.Consumer<ProfilePhotoItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ProfilePhoto>() {{
                 this.completeExceptionally(ex);

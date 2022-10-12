@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Channel extends Entity implements Parsable {
     /** Read only. Timestamp at which the channel was created. */
     private OffsetDateTime _createdDateTime;
@@ -18,13 +17,13 @@ public class Channel extends Entity implements Parsable {
     private String _displayName;
     /** The email address for sending messages to the channel. Read-only. */
     private String _email;
-    /** Metadata for the location where the channel's files are stored. */
+    /** The filesFolder property */
     private DriveItem _filesFolder;
     /** Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false. */
     private Boolean _isFavoriteByDefault;
     /** A collection of membership records associated with the channel. */
     private java.util.List<ConversationMember> _members;
-    /** The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared. */
+    /** The membershipType property */
     private ChannelMembershipType _membershipType;
     /** A collection of all the messages in the channel. A navigation property. Nullable. */
     private java.util.List<ChatMessage> _messages;
@@ -43,7 +42,6 @@ public class Channel extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Channel() {
         super();
-        this.setOdataType("#microsoft.graph.channel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -111,7 +109,7 @@ public class Channel extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.
+     * Gets the filesFolder property value. The filesFolder property
      * @return a driveItem
      */
     @javax.annotation.Nullable
@@ -135,7 +133,7 @@ public class Channel extends Entity implements Parsable {
         return this._members;
     }
     /**
-     * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
+     * Gets the membershipType property value. The membershipType property
      * @return a channelMembershipType
      */
     @javax.annotation.Nullable
@@ -242,7 +240,7 @@ public class Channel extends Entity implements Parsable {
         this._email = value;
     }
     /**
-     * Sets the filesFolder property value. Metadata for the location where the channel's files are stored.
+     * Sets the filesFolder property value. The filesFolder property
      * @param value Value to set for the filesFolder property.
      * @return a void
      */
@@ -269,7 +267,7 @@ public class Channel extends Entity implements Parsable {
         this._members = value;
     }
     /**
-     * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
+     * Sets the membershipType property value. The membershipType property
      * @param value Value to set for the membershipType property.
      * @return a void
      */

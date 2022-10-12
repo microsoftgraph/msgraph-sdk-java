@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
-    /** Represents the fill format of a chart series, which includes background formating information. Read-only. */
+    /** The fill property */
     private WorkbookChartFill _fill;
-    /** Represents line formatting. Read-only. */
+    /** The line property */
     private WorkbookChartLineFormat _line;
     /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
@@ -19,7 +19,6 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartSeriesFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartSeriesFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Gets the fill property value. The fill property
      * @return a workbookChartFill
      */
     @javax.annotation.Nullable
@@ -52,7 +51,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
         return this._fill;
     }
     /**
-     * Gets the line property value. Represents line formatting. Read-only.
+     * Gets the line property value. The line property
      * @return a workbookChartLineFormat
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
         writer.writeObjectValue("line", this.getLine());
     }
     /**
-     * Sets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
+     * Sets the fill property value. The fill property
      * @param value Value to set for the fill property.
      * @return a void
      */
@@ -81,7 +80,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
         this._fill = value;
     }
     /**
-     * Sets the line property value. Represents line formatting. Read-only.
+     * Sets the line property value. The line property
      * @param value Value to set for the line property.
      * @return a void
      */

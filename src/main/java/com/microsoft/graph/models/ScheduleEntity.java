@@ -1,8 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OpenShiftItem;
-import com.microsoft.graph.models.ShiftItem;
-import com.microsoft.graph.models.TimeOffItem;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -17,8 +14,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The endDateTime property */
     private OffsetDateTime _endDateTime;
-    /** The OdataType property */
-    private String _odataType;
     /** The startDateTime property */
     private OffsetDateTime _startDateTime;
     /** The theme property */
@@ -30,7 +25,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScheduleEntity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scheduleEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,15 +34,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static ScheduleEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.openShiftItem": return new OpenShiftItem();
-                case "#microsoft.graph.shiftItem": return new ShiftItem();
-                case "#microsoft.graph.timeOffItem": return new TimeOffItem();
-            }
-        }
         return new ScheduleEntity();
     }
     /**
@@ -74,20 +59,11 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleEntity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -114,7 +90,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("theme", this.getTheme());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -136,15 +111,6 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property

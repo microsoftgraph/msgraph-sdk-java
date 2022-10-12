@@ -22,9 +22,9 @@ public class Calendar extends Entity implements Parsable {
     private Boolean _canViewPrivateItems;
     /** Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
     private String _changeKey;
-    /** Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor. */
+    /** The color property */
     private CalendarColor _color;
-    /** The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness. */
+    /** The defaultOnlineMeetingProvider property */
     private OnlineMeetingProviderType _defaultOnlineMeetingProvider;
     /** The events in the calendar. Navigation property. Read-only. */
     private java.util.List<Event> _events;
@@ -40,7 +40,7 @@ public class Calendar extends Entity implements Parsable {
     private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
     /** The calendar name. */
     private String _name;
-    /** If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. */
+    /** The owner property */
     private EmailAddress _owner;
     /** The collection of single-value extended properties defined for the calendar. Read-only. Nullable. */
     private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
@@ -51,7 +51,6 @@ public class Calendar extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Calendar() {
         super();
-        this.setOdataType("#microsoft.graph.calendar");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -120,7 +119,7 @@ public class Calendar extends Entity implements Parsable {
         return this._changeKey;
     }
     /**
-     * Gets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+     * Gets the color property value. The color property
      * @return a calendarColor
      */
     @javax.annotation.Nullable
@@ -128,7 +127,7 @@ public class Calendar extends Entity implements Parsable {
         return this._color;
     }
     /**
-     * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Gets the defaultOnlineMeetingProvider property value. The defaultOnlineMeetingProvider property
      * @return a onlineMeetingProviderType
      */
     @javax.annotation.Nullable
@@ -220,7 +219,7 @@ public class Calendar extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * Gets the owner property value. The owner property
      * @return a emailAddress
      */
     @javax.annotation.Nullable
@@ -327,7 +326,7 @@ public class Calendar extends Entity implements Parsable {
         this._changeKey = value;
     }
     /**
-     * Sets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+     * Sets the color property value. The color property
      * @param value Value to set for the color property.
      * @return a void
      */
@@ -336,7 +335,7 @@ public class Calendar extends Entity implements Parsable {
         this._color = value;
     }
     /**
-     * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Sets the defaultOnlineMeetingProvider property value. The defaultOnlineMeetingProvider property
      * @param value Value to set for the defaultOnlineMeetingProvider property.
      * @return a void
      */
@@ -408,7 +407,7 @@ public class Calendar extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
      * @return a void
      */

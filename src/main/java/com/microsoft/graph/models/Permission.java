@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Permission extends Entity implements Parsable {
     /** A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional. */
     private OffsetDateTime _expirationDateTime;
@@ -18,15 +17,15 @@ public class Permission extends Entity implements Parsable {
     private java.util.List<IdentitySet> _grantedToIdentities;
     /** For link type permissions, the details of the users to whom permission was granted. Read-only. */
     private java.util.List<SharePointIdentitySet> _grantedToIdentitiesV2;
-    /** For user type permissions, the details of the users and applications for this permission. Read-only. */
+    /** The grantedToV2 property */
     private SharePointIdentitySet _grantedToV2;
     /** Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.. */
     private Boolean _hasPassword;
-    /** Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only. */
+    /** The inheritedFrom property */
     private ItemReference _inheritedFrom;
-    /** Details of any associated sharing invitation for this permission. Read-only. */
+    /** The invitation property */
     private SharingInvitation _invitation;
-    /** Provides the link details of the current permission, if it is a link type permissions. Read-only. */
+    /** The link property */
     private SharingLink _link;
     /** The type of permission, for example, read. See below for the full list of roles. Read-only. */
     private java.util.List<String> _roles;
@@ -39,7 +38,6 @@ public class Permission extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Permission() {
         super();
-        this.setOdataType("#microsoft.graph.permission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -105,7 +103,7 @@ public class Permission extends Entity implements Parsable {
         return this._grantedToIdentitiesV2;
     }
     /**
-     * Gets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
+     * Gets the grantedToV2 property value. The grantedToV2 property
      * @return a sharePointIdentitySet
      */
     @javax.annotation.Nullable
@@ -121,7 +119,7 @@ public class Permission extends Entity implements Parsable {
         return this._hasPassword;
     }
     /**
-     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Gets the inheritedFrom property value. The inheritedFrom property
      * @return a itemReference
      */
     @javax.annotation.Nullable
@@ -129,7 +127,7 @@ public class Permission extends Entity implements Parsable {
         return this._inheritedFrom;
     }
     /**
-     * Gets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
+     * Gets the invitation property value. The invitation property
      * @return a sharingInvitation
      */
     @javax.annotation.Nullable
@@ -137,7 +135,7 @@ public class Permission extends Entity implements Parsable {
         return this._invitation;
     }
     /**
-     * Gets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Gets the link property value. The link property
      * @return a sharingLink
      */
     @javax.annotation.Nullable
@@ -218,7 +216,7 @@ public class Permission extends Entity implements Parsable {
         this._grantedToIdentitiesV2 = value;
     }
     /**
-     * Sets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
+     * Sets the grantedToV2 property value. The grantedToV2 property
      * @param value Value to set for the grantedToV2 property.
      * @return a void
      */
@@ -236,7 +234,7 @@ public class Permission extends Entity implements Parsable {
         this._hasPassword = value;
     }
     /**
-     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Sets the inheritedFrom property value. The inheritedFrom property
      * @param value Value to set for the inheritedFrom property.
      * @return a void
      */
@@ -245,7 +243,7 @@ public class Permission extends Entity implements Parsable {
         this._inheritedFrom = value;
     }
     /**
-     * Sets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
+     * Sets the invitation property value. The invitation property
      * @param value Value to set for the invitation property.
      * @return a void
      */
@@ -254,7 +252,7 @@ public class Permission extends Entity implements Parsable {
         this._invitation = value;
     }
     /**
-     * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Sets the link property value. The link property
      * @param value Value to set for the link property.
      * @return a void
      */

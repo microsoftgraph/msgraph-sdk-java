@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ChecklistItem extends Entity implements Parsable {
     /** The date and time when the checklistItem was finished. */
     private OffsetDateTime _checkedDateTime;
@@ -19,18 +18,17 @@ public class ChecklistItem extends Entity implements Parsable {
     /** State indicating whether the item is checked off or not. */
     private Boolean _isChecked;
     /**
-     * Instantiates a new checklistItem and sets the default values.
+     * Instantiates a new ChecklistItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public ChecklistItem() {
         super();
-        this.setOdataType("#microsoft.graph.checklistItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a checklistItem
+     * @return a ChecklistItem
      */
     @javax.annotation.Nonnull
     public static ChecklistItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

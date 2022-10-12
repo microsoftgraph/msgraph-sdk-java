@@ -13,8 +13,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The type of data source, such as Person. */
     private String _class_escaped;
-    /** The OdataType property */
-    private String _odataType;
     /** The secondary type of data source, such as OrganizationUser. */
     private String _subclass;
     /**
@@ -24,7 +22,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PersonType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.personType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,19 +56,10 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonType currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("class", (n) -> { currentObject.setClass(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("subclass", (n) -> { currentObject.setSubclass(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the subclass property value. The secondary type of data source, such as OrganizationUser.
@@ -90,7 +78,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("class", this.getClass_escaped());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("subclass", this.getSubclass());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -111,15 +98,6 @@ public class PersonType implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setClass(@javax.annotation.Nullable final String value) {
         this._class_escaped = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the subclass property value. The secondary type of data source, such as OrganizationUser.

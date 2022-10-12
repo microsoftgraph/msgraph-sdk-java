@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class TodoTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -28,7 +27,6 @@ public class TodoTaskList extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TodoTaskList() {
         super();
-        this.setOdataType("#microsoft.graph.todoTaskList");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

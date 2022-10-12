@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
-    /** Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only. */
+    /** The font property */
     private WorkbookChartFont _font;
-    /** Represents chart line formatting. Read-only. */
+    /** The line property */
     private WorkbookChartLineFormat _line;
     /**
      * Instantiates a new workbookChartAxisFormat and sets the default values.
@@ -19,7 +19,6 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxisFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxisFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
+     * Gets the font property value. The font property
      * @return a workbookChartFont
      */
     @javax.annotation.Nullable
@@ -52,7 +51,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
         return this._font;
     }
     /**
-     * Gets the line property value. Represents chart line formatting. Read-only.
+     * Gets the line property value. The line property
      * @return a workbookChartLineFormat
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
         writer.writeObjectValue("line", this.getLine());
     }
     /**
-     * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
+     * Sets the font property value. The font property
      * @param value Value to set for the font property.
      * @return a void
      */
@@ -81,7 +80,7 @@ public class WorkbookChartAxisFormat extends Entity implements Parsable {
         this._font = value;
     }
     /**
-     * Sets the line property value. Represents chart line formatting. Read-only.
+     * Sets the line property value. The line property
      * @param value Value to set for the line property.
      * @return a void
      */

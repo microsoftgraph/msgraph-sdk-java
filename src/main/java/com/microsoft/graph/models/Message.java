@@ -1,9 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.CalendarSharingMessage;
-import com.microsoft.graph.models.EventMessage;
-import com.microsoft.graph.models.EventMessageRequest;
-import com.microsoft.graph.models.EventMessageResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -17,7 +13,7 @@ public class Message extends OutlookItem implements Parsable {
     private java.util.List<Attachment> _attachments;
     /** The Bcc: recipients for the message. */
     private java.util.List<Recipient> _bccRecipients;
-    /** The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body. */
+    /** The body property */
     private ItemBody _body;
     /** The first 255 characters of the message body. It is in text format. */
     private String _bodyPreview;
@@ -29,9 +25,9 @@ public class Message extends OutlookItem implements Parsable {
     private byte[] _conversationIndex;
     /** The collection of open extensions defined for the message. Nullable. */
     private java.util.List<Extension> _extensions;
-    /** The flag value that indicates the status, start date, due date, or completion date for the message. */
+    /** The flag property */
     private FollowupFlag _flag;
-    /** The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message. */
+    /** The from property */
     private Recipient _from;
     /** Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>. */
     private Boolean _hasAttachments;
@@ -74,32 +70,21 @@ public class Message extends OutlookItem implements Parsable {
     /** The webLink property */
     private String _webLink;
     /**
-     * Instantiates a new Message and sets the default values.
+     * Instantiates a new message and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Message() {
         super();
-        this.setOdataType("#microsoft.graph.message");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Message
+     * @return a message
      */
     @javax.annotation.Nonnull
     public static Message createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
-                case "#microsoft.graph.eventMessage": return new EventMessage();
-                case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
-                case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
-            }
-        }
         return new Message();
     }
     /**
@@ -119,7 +104,7 @@ public class Message extends OutlookItem implements Parsable {
         return this._bccRecipients;
     }
     /**
-     * Gets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
+     * Gets the body property value. The body property
      * @return a itemBody
      */
     @javax.annotation.Nullable
@@ -207,7 +192,7 @@ public class Message extends OutlookItem implements Parsable {
         }};
     }
     /**
-     * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
+     * Gets the flag property value. The flag property
      * @return a followupFlag
      */
     @javax.annotation.Nullable
@@ -215,7 +200,7 @@ public class Message extends OutlookItem implements Parsable {
         return this._flag;
     }
     /**
-     * Gets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * Gets the from property value. The from property
      * @return a recipient
      */
     @javax.annotation.Nullable
@@ -441,7 +426,7 @@ public class Message extends OutlookItem implements Parsable {
         this._bccRecipients = value;
     }
     /**
-     * Sets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
+     * Sets the body property value. The body property
      * @param value Value to set for the body property.
      * @return a void
      */
@@ -495,7 +480,7 @@ public class Message extends OutlookItem implements Parsable {
         this._extensions = value;
     }
     /**
-     * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
+     * Sets the flag property value. The flag property
      * @param value Value to set for the flag property.
      * @return a void
      */
@@ -504,7 +489,7 @@ public class Message extends OutlookItem implements Parsable {
         this._flag = value;
     }
     /**
-     * Sets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * Sets the from property value. The from property
      * @param value Value to set for the from property.
      * @return a void
      */

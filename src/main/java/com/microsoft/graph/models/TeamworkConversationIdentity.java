@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkConversationIdentity extends Identity implements Parsable {
-    /** Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
+    /** The conversationIdentityType property */
     private TeamworkConversationIdentityType _conversationIdentityType;
     /**
      * Instantiates a new TeamworkConversationIdentity and sets the default values.
@@ -17,7 +17,6 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkConversationIdentity() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkConversationIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,7 +29,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         return new TeamworkConversationIdentity();
     }
     /**
-     * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Gets the conversationIdentityType property value. The conversationIdentityType property
      * @return a teamworkConversationIdentityType
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
         writer.writeEnumValue("conversationIdentityType", this.getConversationIdentityType());
     }
     /**
-     * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     * Sets the conversationIdentityType property value. The conversationIdentityType property
      * @param value Value to set for the conversationIdentityType property.
      * @return a void
      */

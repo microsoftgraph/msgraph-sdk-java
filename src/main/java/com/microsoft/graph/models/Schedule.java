@@ -20,7 +20,7 @@ public class Schedule extends Entity implements Parsable {
     private java.util.List<OpenShift> _openShifts;
     /** Indicates whether open shifts are enabled for the schedule. */
     private Boolean _openShiftsEnabled;
-    /** The status of the schedule provisioning. The possible values are notStarted, running, completed, failed. */
+    /** The provisionStatus property */
     private OperationStatus _provisionStatus;
     /** Additional information about why schedule provisioning failed. */
     private String _provisionStatusCode;
@@ -53,7 +53,6 @@ public class Schedule extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Schedule() {
         super();
-        this.setOdataType("#microsoft.graph.schedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -143,7 +142,7 @@ public class Schedule extends Entity implements Parsable {
         return this._openShiftsEnabled;
     }
     /**
-     * Gets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
+     * Gets the provisionStatus property value. The provisionStatus property
      * @return a operationStatus
      */
     @javax.annotation.Nullable
@@ -261,6 +260,7 @@ public class Schedule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("openShiftChangeRequests", this.getOpenShiftChangeRequests());
         writer.writeCollectionOfObjectValues("openShifts", this.getOpenShifts());
         writer.writeBooleanValue("openShiftsEnabled", this.getOpenShiftsEnabled());
+        writer.writeEnumValue("provisionStatus", this.getProvisionStatus());
         writer.writeCollectionOfObjectValues("schedulingGroups", this.getSchedulingGroups());
         writer.writeCollectionOfObjectValues("shifts", this.getShifts());
         writer.writeCollectionOfObjectValues("swapShiftsChangeRequests", this.getSwapShiftsChangeRequests());
@@ -328,7 +328,7 @@ public class Schedule extends Entity implements Parsable {
         this._openShiftsEnabled = value;
     }
     /**
-     * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
+     * Sets the provisionStatus property value. The provisionStatus property
      * @param value Value to set for the provisionStatus property.
      * @return a void
      */

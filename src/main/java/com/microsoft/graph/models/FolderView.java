@@ -11,8 +11,6 @@ import java.util.Objects;
 public class FolderView implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
     /** The method by which the folder should be sorted. */
     private String _sortBy;
     /** If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending. */
@@ -26,7 +24,6 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public FolderView() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.folderView");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,20 +50,11 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FolderView currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("sortBy", (n) -> { currentObject.setSortBy(n.getStringValue()); });
             this.put("sortOrder", (n) -> { currentObject.setSortOrder(n.getStringValue()); });
             this.put("viewType", (n) -> { currentObject.setViewType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the sortBy property value. The method by which the folder should be sorted.
@@ -100,7 +88,6 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sortBy", this.getSortBy());
         writer.writeStringValue("sortOrder", this.getSortOrder());
         writer.writeStringValue("viewType", this.getViewType());
@@ -114,15 +101,6 @@ public class FolderView implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the sortBy property value. The method by which the folder should be sorted.

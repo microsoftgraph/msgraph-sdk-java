@@ -11,11 +11,9 @@ import java.util.Objects;
 public class SectionLinks implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** Opens the section in the OneNote native client if it's installed. */
+    /** The oneNoteClientUrl property */
     private ExternalLink _oneNoteClientUrl;
-    /** Opens the section in OneNote on the web. */
+    /** The oneNoteWebUrl property */
     private ExternalLink _oneNoteWebUrl;
     /**
      * Instantiates a new sectionLinks and sets the default values.
@@ -24,7 +22,6 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SectionLinks() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sectionLinks");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,22 +48,13 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SectionLinks currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("oneNoteClientUrl", (n) -> { currentObject.setOneNoteClientUrl(n.getObjectValue(ExternalLink::createFromDiscriminatorValue)); });
             this.put("oneNoteWebUrl", (n) -> { currentObject.setOneNoteWebUrl(n.getObjectValue(ExternalLink::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the oneNoteClientUrl property value. Opens the section in the OneNote native client if it's installed.
+     * Gets the oneNoteClientUrl property value. The oneNoteClientUrl property
      * @return a externalLink
      */
     @javax.annotation.Nullable
@@ -74,7 +62,7 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
         return this._oneNoteClientUrl;
     }
     /**
-     * Gets the oneNoteWebUrl property value. Opens the section in OneNote on the web.
+     * Gets the oneNoteWebUrl property value. The oneNoteWebUrl property
      * @return a externalLink
      */
     @javax.annotation.Nullable
@@ -89,7 +77,6 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("oneNoteClientUrl", this.getOneNoteClientUrl());
         writer.writeObjectValue("oneNoteWebUrl", this.getOneNoteWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -104,16 +91,7 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the oneNoteClientUrl property value. Opens the section in the OneNote native client if it's installed.
+     * Sets the oneNoteClientUrl property value. The oneNoteClientUrl property
      * @param value Value to set for the oneNoteClientUrl property.
      * @return a void
      */
@@ -122,7 +100,7 @@ public class SectionLinks implements AdditionalDataHolder, Parsable {
         this._oneNoteClientUrl = value;
     }
     /**
-     * Sets the oneNoteWebUrl property value. Opens the section in OneNote on the web.
+     * Sets the oneNoteWebUrl property value. The oneNoteWebUrl property
      * @param value Value to set for the oneNoteWebUrl property.
      * @return a void
      */

@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharePointIdentitySet extends IdentitySet implements Parsable {
-    /** The group associated with this action. Optional. */
+    /** The group property */
     private Identity _group;
-    /** The SharePoint group associated with this action. Optional. */
+    /** The siteGroup property */
     private SharePointIdentity _siteGroup;
-    /** The SharePoint user associated with this action. Optional. */
+    /** The siteUser property */
     private SharePointIdentity _siteUser;
     /**
      * Instantiates a new SharePointIdentitySet and sets the default values.
@@ -21,7 +21,6 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
     @javax.annotation.Nullable
     public SharePointIdentitySet() {
         super();
-        this.setOdataType("#microsoft.graph.sharePointIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +46,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         }};
     }
     /**
-     * Gets the group property value. The group associated with this action. Optional.
+     * Gets the group property value. The group property
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -55,7 +54,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         return this._group;
     }
     /**
-     * Gets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Gets the siteGroup property value. The siteGroup property
      * @return a sharePointIdentity
      */
     @javax.annotation.Nullable
@@ -63,7 +62,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         return this._siteGroup;
     }
     /**
-     * Gets the siteUser property value. The SharePoint user associated with this action. Optional.
+     * Gets the siteUser property value. The siteUser property
      * @return a sharePointIdentity
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         writer.writeObjectValue("siteUser", this.getSiteUser());
     }
     /**
-     * Sets the group property value. The group associated with this action. Optional.
+     * Sets the group property value. The group property
      * @param value Value to set for the group property.
      * @return a void
      */
@@ -93,7 +92,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         this._group = value;
     }
     /**
-     * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Sets the siteGroup property value. The siteGroup property
      * @param value Value to set for the siteGroup property.
      * @return a void
      */
@@ -102,7 +101,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         this._siteGroup = value;
     }
     /**
-     * Sets the siteUser property value. The SharePoint user associated with this action. Optional.
+     * Sets the siteUser property value. The siteUser property
      * @param value Value to set for the siteUser property.
      * @return a void
      */

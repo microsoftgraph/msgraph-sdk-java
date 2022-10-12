@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class PlannerBucket extends Entity implements Parsable {
     /** Name of the bucket. */
     private String _name;
@@ -24,7 +23,6 @@ public class PlannerBucket extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerBucket() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

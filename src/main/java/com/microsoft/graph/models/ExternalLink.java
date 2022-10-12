@@ -13,8 +13,6 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The url of the link. */
     private String _href;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new externalLink and sets the default values.
      * @return a void
@@ -22,7 +20,6 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ExternalLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,9 +46,8 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalLink currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("href", (n) -> { currentObject.setHref(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -63,14 +59,6 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
         return this._href;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -79,7 +67,6 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("href", this.getHref());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -99,14 +86,5 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setHref(@javax.annotation.Nullable final String value) {
         this._href = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

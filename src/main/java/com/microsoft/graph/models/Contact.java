@@ -13,7 +13,7 @@ public class Contact extends OutlookItem implements Parsable {
     private String _assistantName;
     /** The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _birthday;
-    /** The contact's business address. */
+    /** The businessAddress property */
     private PhysicalAddress _businessAddress;
     /** The business home page of the contact. */
     private String _businessHomePage;
@@ -37,7 +37,7 @@ public class Contact extends OutlookItem implements Parsable {
     private String _generation;
     /** The contact's given name. */
     private String _givenName;
-    /** The contact's home address. */
+    /** The homeAddress property */
     private PhysicalAddress _homeAddress;
     /** The contact's home phone numbers. */
     private java.util.List<String> _homePhones;
@@ -65,7 +65,7 @@ public class Contact extends OutlookItem implements Parsable {
     private String _parentFolderId;
     /** The personalNotes property */
     private String _personalNotes;
-    /** Optional contact picture. You can get or set a photo for a contact. */
+    /** The photo property */
     private ProfilePhoto _photo;
     /** The profession property */
     private String _profession;
@@ -84,18 +84,17 @@ public class Contact extends OutlookItem implements Parsable {
     /** The yomiSurname property */
     private String _yomiSurname;
     /**
-     * Instantiates a new Contact and sets the default values.
+     * Instantiates a new contact and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Contact() {
         super();
-        this.setOdataType("#microsoft.graph.contact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Contact
+     * @return a contact
      */
     @javax.annotation.Nonnull
     public static Contact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -119,7 +118,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this._birthday;
     }
     /**
-     * Gets the businessAddress property value. The contact's business address.
+     * Gets the businessAddress property value. The businessAddress property
      * @return a physicalAddress
      */
     @javax.annotation.Nullable
@@ -262,7 +261,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this._givenName;
     }
     /**
-     * Gets the homeAddress property value. The contact's home address.
+     * Gets the homeAddress property value. The homeAddress property
      * @return a physicalAddress
      */
     @javax.annotation.Nullable
@@ -374,7 +373,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this._personalNotes;
     }
     /**
-     * Gets the photo property value. Optional contact picture. You can get or set a photo for a contact.
+     * Gets the photo property value. The photo property
      * @return a profilePhoto
      */
     @javax.annotation.Nullable
@@ -511,7 +510,7 @@ public class Contact extends OutlookItem implements Parsable {
         this._birthday = value;
     }
     /**
-     * Sets the businessAddress property value. The contact's business address.
+     * Sets the businessAddress property value. The businessAddress property
      * @param value Value to set for the businessAddress property.
      * @return a void
      */
@@ -619,7 +618,7 @@ public class Contact extends OutlookItem implements Parsable {
         this._givenName = value;
     }
     /**
-     * Sets the homeAddress property value. The contact's home address.
+     * Sets the homeAddress property value. The homeAddress property
      * @param value Value to set for the homeAddress property.
      * @return a void
      */
@@ -745,7 +744,7 @@ public class Contact extends OutlookItem implements Parsable {
         this._personalNotes = value;
     }
     /**
-     * Sets the photo property value. Optional contact picture. You can get or set a photo for a contact.
+     * Sets the photo property value. The photo property
      * @param value Value to set for the photo property.
      * @return a void
      */

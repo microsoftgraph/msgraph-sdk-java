@@ -9,23 +9,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActivityStat extends Entity implements Parsable {
-    /** Statistics about the access actions in this interval. Read-only. */
+    /** The access property */
     private ItemActionStat _access;
     /** Exposes the itemActivities represented in this itemActivityStat resource. */
     private java.util.List<ItemActivity> _activities;
-    /** Statistics about the create actions in this interval. Read-only. */
+    /** The create property */
     private ItemActionStat _create;
-    /** Statistics about the delete actions in this interval. Read-only. */
+    /** The delete property */
     private ItemActionStat _delete;
-    /** Statistics about the edit actions in this interval. Read-only. */
+    /** The edit property */
     private ItemActionStat _edit;
     /** When the interval ends. Read-only. */
     private OffsetDateTime _endDateTime;
-    /** Indicates that the statistics in this interval are based on incomplete data. Read-only. */
+    /** The incompleteData property */
     private IncompleteData _incompleteData;
     /** Indicates whether the item is 'trending.' Read-only. */
     private Boolean _isTrending;
-    /** Statistics about the move actions in this interval. Read-only. */
+    /** The move property */
     private ItemActionStat _move;
     /** When the interval starts. Read-only. */
     private OffsetDateTime _startDateTime;
@@ -36,7 +36,6 @@ public class ItemActivityStat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ItemActivityStat() {
         super();
-        this.setOdataType("#microsoft.graph.itemActivityStat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +48,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return new ItemActivityStat();
     }
     /**
-     * Gets the access property value. Statistics about the access actions in this interval. Read-only.
+     * Gets the access property value. The access property
      * @return a itemActionStat
      */
     @javax.annotation.Nullable
@@ -65,7 +64,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return this._activities;
     }
     /**
-     * Gets the create property value. Statistics about the create actions in this interval. Read-only.
+     * Gets the create property value. The create property
      * @return a itemActionStat
      */
     @javax.annotation.Nullable
@@ -73,7 +72,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return this._create;
     }
     /**
-     * Gets the delete property value. Statistics about the delete actions in this interval. Read-only.
+     * Gets the delete property value. The delete property
      * @return a itemActionStat
      */
     @javax.annotation.Nullable
@@ -81,7 +80,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return this._delete;
     }
     /**
-     * Gets the edit property value. Statistics about the edit actions in this interval. Read-only.
+     * Gets the edit property value. The edit property
      * @return a itemActionStat
      */
     @javax.annotation.Nullable
@@ -117,7 +116,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
+     * Gets the incompleteData property value. The incompleteData property
      * @return a incompleteData
      */
     @javax.annotation.Nullable
@@ -133,7 +132,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         return this._isTrending;
     }
     /**
-     * Gets the move property value. Statistics about the move actions in this interval. Read-only.
+     * Gets the move property value. The move property
      * @return a itemActionStat
      */
     @javax.annotation.Nullable
@@ -169,7 +168,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
     }
     /**
-     * Sets the access property value. Statistics about the access actions in this interval. Read-only.
+     * Sets the access property value. The access property
      * @param value Value to set for the access property.
      * @return a void
      */
@@ -187,7 +186,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this._activities = value;
     }
     /**
-     * Sets the create property value. Statistics about the create actions in this interval. Read-only.
+     * Sets the create property value. The create property
      * @param value Value to set for the create property.
      * @return a void
      */
@@ -196,7 +195,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this._create = value;
     }
     /**
-     * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
+     * Sets the delete property value. The delete property
      * @param value Value to set for the delete property.
      * @return a void
      */
@@ -205,7 +204,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this._delete = value;
     }
     /**
-     * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
+     * Sets the edit property value. The edit property
      * @param value Value to set for the edit property.
      * @return a void
      */
@@ -223,7 +222,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this._endDateTime = value;
     }
     /**
-     * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
+     * Sets the incompleteData property value. The incompleteData property
      * @param value Value to set for the incompleteData property.
      * @return a void
      */
@@ -241,7 +240,7 @@ public class ItemActivityStat extends Entity implements Parsable {
         this._isTrending = value;
     }
     /**
-     * Sets the move property value. Statistics about the move actions in this interval. Read-only.
+     * Sets the move property value. The move property
      * @param value Value to set for the move property.
      * @return a void
      */

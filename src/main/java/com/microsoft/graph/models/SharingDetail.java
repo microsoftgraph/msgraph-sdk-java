@@ -12,9 +12,7 @@ import java.util.Objects;
 public class SharingDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** The user who shared the document. */
+    /** The sharedBy property */
     private InsightIdentity _sharedBy;
     /** The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _sharedDateTime;
@@ -31,7 +29,6 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharingDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,8 +55,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
             this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
             this.put("sharingReference", (n) -> { currentObject.setSharingReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
@@ -68,15 +64,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the sharedBy property value. The user who shared the document.
+     * Gets the sharedBy property value. The sharedBy property
      * @return a insightIdentity
      */
     @javax.annotation.Nullable
@@ -123,9 +111,9 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
         writer.writeOffsetDateTimeValue("sharedDateTime", this.getSharedDateTime());
+        writer.writeObjectValue("sharingReference", this.getSharingReference());
         writer.writeStringValue("sharingSubject", this.getSharingSubject());
         writer.writeStringValue("sharingType", this.getSharingType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,16 +128,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the sharedBy property value. The user who shared the document.
+     * Sets the sharedBy property value. The sharedBy property
      * @param value Value to set for the sharedBy property.
      * @return a void
      */

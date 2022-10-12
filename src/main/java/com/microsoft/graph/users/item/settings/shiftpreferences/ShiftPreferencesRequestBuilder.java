@@ -1,6 +1,5 @@
 package com.microsoft.graph.users.item.settings.shiftpreferences;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ShiftPreferences;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -15,7 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity. */
+/** Builds and executes requests for operations under /users/{user-id}/settings/shiftPreferences */
 public class ShiftPreferencesRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -133,7 +132,6 @@ public class ShiftPreferencesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ShiftPreferencesRequestBuilderPatchRequestConfiguration requestConfig = new ShiftPreferencesRequestBuilderPatchRequestConfiguration();
@@ -151,11 +149,7 @@ public class ShiftPreferencesRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -171,11 +165,7 @@ public class ShiftPreferencesRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ShiftPreferencesRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -190,11 +180,7 @@ public class ShiftPreferencesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ShiftPreferences> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ShiftPreferences>() {{
                 this.completeExceptionally(ex);
@@ -210,11 +196,7 @@ public class ShiftPreferencesRequestBuilder {
     public java.util.concurrent.CompletableFuture<ShiftPreferences> get(@javax.annotation.Nullable final java.util.function.Consumer<ShiftPreferencesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ShiftPreferences>() {{
                 this.completeExceptionally(ex);
@@ -224,19 +206,15 @@ public class ShiftPreferencesRequestBuilder {
     /**
      * Update the properties and relationships of a shiftPreferences object.
      * @param body 
-     * @return a CompletableFuture of shiftPreferences
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> patch(@javax.annotation.Nonnull final ShiftPreferences body) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ShiftPreferences body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ShiftPreferences>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -245,20 +223,16 @@ public class ShiftPreferencesRequestBuilder {
      * Update the properties and relationships of a shiftPreferences object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shiftPreferences
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> patch(@javax.annotation.Nonnull final ShiftPreferences body, @javax.annotation.Nullable final java.util.function.Consumer<ShiftPreferencesRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final ShiftPreferences body, @javax.annotation.Nullable final java.util.function.Consumer<ShiftPreferencesRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ShiftPreferences::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ShiftPreferences>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }

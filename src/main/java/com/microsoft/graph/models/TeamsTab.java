@@ -7,13 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class TeamsTab extends Entity implements Parsable {
-    /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
+    /** The configuration property */
     private TeamsTabConfiguration _configuration;
     /** Name of the tab. */
     private String _displayName;
-    /** The application that is linked to the tab. This cannot be changed after tab creation. */
+    /** The teamsApp property */
     private TeamsApp _teamsApp;
     /** Deep link URL of the tab instance. Read only. */
     private String _webUrl;
@@ -24,7 +23,6 @@ public class TeamsTab extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsTab() {
         super();
-        this.setOdataType("#microsoft.graph.teamsTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +35,7 @@ public class TeamsTab extends Entity implements Parsable {
         return new TeamsTab();
     }
     /**
-     * Gets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     * Gets the configuration property value. The configuration property
      * @return a teamsTabConfiguration
      */
     @javax.annotation.Nullable
@@ -67,7 +65,7 @@ public class TeamsTab extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
+     * Gets the teamsApp property value. The teamsApp property
      * @return a teamsApp
      */
     @javax.annotation.Nullable
@@ -97,7 +95,7 @@ public class TeamsTab extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     * Sets the configuration property value. The configuration property
      * @param value Value to set for the configuration property.
      * @return a void
      */
@@ -115,7 +113,7 @@ public class TeamsTab extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
+     * Sets the teamsApp property value. The teamsApp property
      * @param value Value to set for the teamsApp property.
      * @return a void
      */

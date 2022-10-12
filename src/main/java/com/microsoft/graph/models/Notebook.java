@@ -12,7 +12,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     private Boolean _isDefault;
     /** Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only. */
     private Boolean _isShared;
-    /** Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
+    /** The links property */
     private NotebookLinks _links;
     /** The section groups in the notebook. Read-only. Nullable. */
     private java.util.List<SectionGroup> _sectionGroups;
@@ -22,21 +22,20 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     private java.util.List<OnenoteSection> _sections;
     /** The URL for the sections navigation property, which returns all the sections in the notebook. Read-only. */
     private String _sectionsUrl;
-    /** Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only. */
+    /** The userRole property */
     private OnenoteUserRole _userRole;
     /**
-     * Instantiates a new Notebook and sets the default values.
+     * Instantiates a new notebook and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Notebook() {
         super();
-        this.setOdataType("#microsoft.graph.notebook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Notebook
+     * @return a notebook
      */
     @javax.annotation.Nonnull
     public static Notebook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +77,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         return this._isShared;
     }
     /**
-     * Gets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Gets the links property value. The links property
      * @return a notebookLinks
      */
     @javax.annotation.Nullable
@@ -118,7 +117,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         return this._sectionsUrl;
     }
     /**
-     * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     * Gets the userRole property value. The userRole property
      * @return a onenoteUserRole
      */
     @javax.annotation.Nullable
@@ -162,7 +161,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         this._isShared = value;
     }
     /**
-     * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     * Sets the links property value. The links property
      * @param value Value to set for the links property.
      * @return a void
      */
@@ -207,7 +206,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
         this._sectionsUrl = value;
     }
     /**
-     * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     * Sets the userRole property value. The userRole property
      * @param value Value to set for the userRole property.
      * @return a void
      */

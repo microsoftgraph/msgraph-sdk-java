@@ -8,25 +8,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxes extends Entity implements Parsable {
-    /** Represents the category axis in a chart. Read-only. */
+    /** The categoryAxis property */
     private WorkbookChartAxis _categoryAxis;
-    /** Represents the series axis of a 3-dimensional chart. Read-only. */
+    /** The seriesAxis property */
     private WorkbookChartAxis _seriesAxis;
-    /** Represents the value axis in an axis. Read-only. */
+    /** The valueAxis property */
     private WorkbookChartAxis _valueAxis;
     /**
-     * Instantiates a new workbookChartAxes and sets the default values.
+     * Instantiates a new WorkbookChartAxes and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public WorkbookChartAxes() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookChartAxes
+     * @return a WorkbookChartAxes
      */
     @javax.annotation.Nonnull
     public static WorkbookChartAxes createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +33,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         return new WorkbookChartAxes();
     }
     /**
-     * Gets the categoryAxis property value. Represents the category axis in a chart. Read-only.
+     * Gets the categoryAxis property value. The categoryAxis property
      * @return a workbookChartAxis
      */
     @javax.annotation.Nullable
@@ -55,7 +54,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
+     * Gets the seriesAxis property value. The seriesAxis property
      * @return a workbookChartAxis
      */
     @javax.annotation.Nullable
@@ -63,7 +62,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         return this._seriesAxis;
     }
     /**
-     * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
+     * Gets the valueAxis property value. The valueAxis property
      * @return a workbookChartAxis
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         writer.writeObjectValue("valueAxis", this.getValueAxis());
     }
     /**
-     * Sets the categoryAxis property value. Represents the category axis in a chart. Read-only.
+     * Sets the categoryAxis property value. The categoryAxis property
      * @param value Value to set for the categoryAxis property.
      * @return a void
      */
@@ -93,7 +92,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         this._categoryAxis = value;
     }
     /**
-     * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
+     * Sets the seriesAxis property value. The seriesAxis property
      * @param value Value to set for the seriesAxis property.
      * @return a void
      */
@@ -102,7 +101,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
         this._seriesAxis = value;
     }
     /**
-     * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
+     * Sets the valueAxis property value. The valueAxis property
      * @param value Value to set for the valueAxis property.
      * @return a void
      */

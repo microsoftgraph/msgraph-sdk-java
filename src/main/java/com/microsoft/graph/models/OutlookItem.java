@@ -1,13 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.CalendarSharingMessage;
-import com.microsoft.graph.models.Contact;
-import com.microsoft.graph.models.Event;
-import com.microsoft.graph.models.EventMessage;
-import com.microsoft.graph.models.EventMessageRequest;
-import com.microsoft.graph.models.EventMessageResponse;
-import com.microsoft.graph.models.Message;
-import com.microsoft.graph.models.Post;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -16,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class OutlookItem extends Entity implements Parsable {
     /** The categories associated with the item */
     private java.util.List<String> _categories;
@@ -33,7 +24,6 @@ public class OutlookItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OutlookItem() {
         super();
-        this.setOdataType("#microsoft.graph.outlookItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,20 +33,6 @@ public class OutlookItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static OutlookItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
-                case "#microsoft.graph.contact": return new Contact();
-                case "#microsoft.graph.event": return new Event();
-                case "#microsoft.graph.eventMessage": return new EventMessage();
-                case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
-                case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
-                case "#microsoft.graph.message": return new Message();
-                case "#microsoft.graph.post": return new Post();
-            }
-        }
         return new OutlookItem();
     }
     /**

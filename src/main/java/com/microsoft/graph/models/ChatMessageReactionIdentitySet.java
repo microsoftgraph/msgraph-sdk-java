@@ -15,7 +15,6 @@ public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsa
     @javax.annotation.Nullable
     public ChatMessageReactionIdentitySet() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageReactionIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

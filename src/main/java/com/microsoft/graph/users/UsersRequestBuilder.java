@@ -1,13 +1,7 @@
 package com.microsoft.graph.users;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.UserCollectionResponse;
-import com.microsoft.graph.users.count.CountRequestBuilder;
-import com.microsoft.graph.users.delta.DeltaRequestBuilder;
-import com.microsoft.graph.users.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
-import com.microsoft.graph.users.getbyids.GetByIdsRequestBuilder;
-import com.microsoft.graph.users.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -21,34 +15,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of user entities. */
+/** Builds and executes requests for operations under /users */
 public class UsersRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getAvailableExtensionProperties property */
-    @javax.annotation.Nonnull
-    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
-        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getByIds property */
-    @javax.annotation.Nonnull
-    public GetByIdsRequestBuilder getByIds() {
-        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The validateProperties property */
-    @javax.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new UsersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -142,14 +116,6 @@ public class UsersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Provides operations to call the delta method.
-     * @return a deltaRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeltaRequestBuilder delta() {
-        return new DeltaRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Retrieve a list of user objects.
      * @return a CompletableFuture of UserCollectionResponse
      */
@@ -157,11 +123,7 @@ public class UsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<UserCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -177,11 +139,7 @@ public class UsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UsersRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, UserCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<UserCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -197,11 +155,7 @@ public class UsersRequestBuilder {
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final User body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<User>() {{
                 this.completeExceptionally(ex);
@@ -219,11 +173,7 @@ public class UsersRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<User>() {{
                 this.completeExceptionally(ex);

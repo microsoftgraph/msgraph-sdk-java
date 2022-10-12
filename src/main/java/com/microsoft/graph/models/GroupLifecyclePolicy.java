@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
     private String _alternateNotificationEmails;
@@ -22,7 +21,6 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nullable
     public GroupLifecyclePolicy() {
         super();
-        this.setOdataType("#microsoft.graph.groupLifecyclePolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

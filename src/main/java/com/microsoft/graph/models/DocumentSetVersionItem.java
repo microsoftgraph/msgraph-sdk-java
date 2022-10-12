@@ -13,8 +13,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The unique identifier for the item. */
     private String _itemId;
-    /** The OdataType property */
-    private String _odataType;
     /** The title of the item. */
     private String _title;
     /** The version ID of the item. */
@@ -26,7 +24,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DocumentSetVersionItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.documentSetVersionItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +50,8 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSetVersionItem currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
             this.put("versionId", (n) -> { currentObject.setVersionId(n.getStringValue()); });
         }};
@@ -67,14 +63,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getItemId() {
         return this._itemId;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the title property value. The title of the item.
@@ -101,7 +89,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("itemId", this.getItemId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("title", this.getTitle());
         writer.writeStringValue("versionId", this.getVersionId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,15 +110,6 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the title property value. The title of the item.

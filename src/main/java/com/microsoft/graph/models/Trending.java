@@ -8,31 +8,29 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Trending extends Entity implements Parsable {
     /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Used for navigating to the trending document. */
+    /** The resource property */
     private Entity _resource;
-    /** Reference properties of the trending document, such as the url and type of the document. */
+    /** The resourceReference property */
     private ResourceReference _resourceReference;
-    /** Properties that you can use to visualize the document in your experience. */
+    /** The resourceVisualization property */
     private ResourceVisualization _resourceVisualization;
     /** Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value. */
     private Double _weight;
     /**
-     * Instantiates a new trending and sets the default values.
+     * Instantiates a new Trending and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Trending() {
         super();
-        this.setOdataType("#microsoft.graph.trending");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trending
+     * @return a Trending
      */
     @javax.annotation.Nonnull
     public static Trending createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +61,7 @@ public class Trending extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the resource property value. Used for navigating to the trending document.
+     * Gets the resource property value. The resource property
      * @return a entity
      */
     @javax.annotation.Nullable
@@ -71,7 +69,7 @@ public class Trending extends Entity implements Parsable {
         return this._resource;
     }
     /**
-     * Gets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
+     * Gets the resourceReference property value. The resourceReference property
      * @return a resourceReference
      */
     @javax.annotation.Nullable
@@ -79,7 +77,7 @@ public class Trending extends Entity implements Parsable {
         return this._resourceReference;
     }
     /**
-     * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
+     * Gets the resourceVisualization property value. The resourceVisualization property
      * @return a resourceVisualization
      */
     @javax.annotation.Nullable
@@ -105,6 +103,8 @@ public class Trending extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("resource", this.getResource());
+        writer.writeObjectValue("resourceReference", this.getResourceReference());
+        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
         writer.writeDoubleValue("weight", this.getWeight());
     }
     /**
@@ -117,7 +117,7 @@ public class Trending extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the resource property value. Used for navigating to the trending document.
+     * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class Trending extends Entity implements Parsable {
         this._resource = value;
     }
     /**
-     * Sets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
+     * Sets the resourceReference property value. The resourceReference property
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
@@ -135,7 +135,7 @@ public class Trending extends Entity implements Parsable {
         this._resourceReference = value;
     }
     /**
-     * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
+     * Sets the resourceVisualization property value. The resourceVisualization property
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */

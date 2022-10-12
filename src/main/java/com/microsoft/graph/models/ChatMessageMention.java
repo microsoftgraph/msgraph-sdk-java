@@ -13,12 +13,10 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body. */
     private Integer _id;
-    /** The entity (user, application, team, or channel) that was @mentioned. */
+    /** The mentioned property */
     private ChatMessageMentionedIdentitySet _mentioned;
     /** String used to represent the mention. For example, a user's display name, a team name. */
     private String _mentionText;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new chatMessageMention and sets the default values.
      * @return a void
@@ -26,7 +24,6 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChatMessageMention() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatMessageMention");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,11 +50,10 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMention currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("id", (n) -> { currentObject.setId(n.getIntegerValue()); });
             this.put("mentioned", (n) -> { currentObject.setMentioned(n.getObjectValue(ChatMessageMentionedIdentitySet::createFromDiscriminatorValue)); });
             this.put("mentionText", (n) -> { currentObject.setMentionText(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,7 +65,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
-     * Gets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Gets the mentioned property value. The mentioned property
      * @return a chatMessageMentionedIdentitySet
      */
     @javax.annotation.Nullable
@@ -85,14 +81,6 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         return this._mentionText;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -103,7 +91,6 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("id", this.getId());
         writer.writeObjectValue("mentioned", this.getMentioned());
         writer.writeStringValue("mentionText", this.getMentionText());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -125,7 +112,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
         this._id = value;
     }
     /**
-     * Sets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Sets the mentioned property value. The mentioned property
      * @param value Value to set for the mentioned property.
      * @return a void
      */
@@ -141,14 +128,5 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMentionText(@javax.annotation.Nullable final String value) {
         this._mentionText = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

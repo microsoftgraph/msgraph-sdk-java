@@ -8,21 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxis extends Entity implements Parsable {
-    /** Represents the formatting of a chart object, which includes line and font formatting. Read-only. */
+    /** The format property */
     private WorkbookChartAxisFormat _format;
-    /** Returns a gridlines object that represents the major gridlines for the specified axis. Read-only. */
+    /** The majorGridlines property */
     private WorkbookChartGridlines _majorGridlines;
-    /** Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number. */
+    /** The majorUnit property */
     private Json _majorUnit;
-    /** Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /** The maximum property */
     private Json _maximum;
-    /** Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /** The minimum property */
     private Json _minimum;
-    /** Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only. */
+    /** The minorGridlines property */
     private WorkbookChartGridlines _minorGridlines;
-    /** Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number. */
+    /** The minorUnit property */
     private Json _minorUnit;
-    /** Represents the axis title. Read-only. */
+    /** The title property */
     private WorkbookChartAxisTitle _title;
     /**
      * Instantiates a new workbookChartAxis and sets the default values.
@@ -31,7 +31,6 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxis() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxis");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +61,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartAxisFormat
      */
     @javax.annotation.Nullable
@@ -70,7 +69,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._format;
     }
     /**
-     * Gets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
+     * Gets the majorGridlines property value. The majorGridlines property
      * @return a workbookChartGridlines
      */
     @javax.annotation.Nullable
@@ -78,7 +77,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._majorGridlines;
     }
     /**
-     * Gets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
+     * Gets the majorUnit property value. The majorUnit property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -86,7 +85,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._majorUnit;
     }
     /**
-     * Gets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     * Gets the maximum property value. The maximum property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -94,7 +93,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._maximum;
     }
     /**
-     * Gets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     * Gets the minimum property value. The minimum property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -102,7 +101,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._minimum;
     }
     /**
-     * Gets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+     * Gets the minorGridlines property value. The minorGridlines property
      * @return a workbookChartGridlines
      */
     @javax.annotation.Nullable
@@ -110,7 +109,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._minorGridlines;
     }
     /**
-     * Gets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+     * Gets the minorUnit property value. The minorUnit property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -118,7 +117,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         return this._minorUnit;
     }
     /**
-     * Gets the title property value. Represents the axis title. Read-only.
+     * Gets the title property value. The title property
      * @return a workbookChartAxisTitle
      */
     @javax.annotation.Nullable
@@ -144,7 +143,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         writer.writeObjectValue("title", this.getTitle());
     }
     /**
-     * Sets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -153,7 +152,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._format = value;
     }
     /**
-     * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
+     * Sets the majorGridlines property value. The majorGridlines property
      * @param value Value to set for the majorGridlines property.
      * @return a void
      */
@@ -162,7 +161,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._majorGridlines = value;
     }
     /**
-     * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
+     * Sets the majorUnit property value. The majorUnit property
      * @param value Value to set for the majorUnit property.
      * @return a void
      */
@@ -171,7 +170,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._majorUnit = value;
     }
     /**
-     * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     * Sets the maximum property value. The maximum property
      * @param value Value to set for the maximum property.
      * @return a void
      */
@@ -180,7 +179,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._maximum = value;
     }
     /**
-     * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     * Sets the minimum property value. The minimum property
      * @param value Value to set for the minimum property.
      * @return a void
      */
@@ -189,7 +188,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._minimum = value;
     }
     /**
-     * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+     * Sets the minorGridlines property value. The minorGridlines property
      * @param value Value to set for the minorGridlines property.
      * @return a void
      */
@@ -198,7 +197,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._minorGridlines = value;
     }
     /**
-     * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+     * Sets the minorUnit property value. The minorUnit property
      * @param value Value to set for the minorUnit property.
      * @return a void
      */
@@ -207,7 +206,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
         this._minorUnit = value;
     }
     /**
-     * Sets the title property value. Represents the axis title. Read-only.
+     * Sets the title property value. The title property
      * @param value Value to set for the title property.
      * @return a void
      */

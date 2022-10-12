@@ -11,18 +11,17 @@ public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
     /** Availability of the user to be scheduled for work and its recurrence pattern. */
     private java.util.List<ShiftAvailability> _availability;
     /**
-     * Instantiates a new ShiftPreferences and sets the default values.
+     * Instantiates a new shiftPreferences and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public ShiftPreferences() {
         super();
-        this.setOdataType("#microsoft.graph.shiftPreferences");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ShiftPreferences
+     * @return a shiftPreferences
      */
     @javax.annotation.Nonnull
     public static ShiftPreferences createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

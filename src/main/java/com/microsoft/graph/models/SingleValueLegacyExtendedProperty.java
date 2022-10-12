@@ -7,23 +7,21 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class SingleValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A property value. */
     private String _value;
     /**
-     * Instantiates a new singleValueLegacyExtendedProperty and sets the default values.
+     * Instantiates a new SingleValueLegacyExtendedProperty and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public SingleValueLegacyExtendedProperty() {
         super();
-        this.setOdataType("#microsoft.graph.singleValueLegacyExtendedProperty");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a singleValueLegacyExtendedProperty
+     * @return a SingleValueLegacyExtendedProperty
      */
     @javax.annotation.Nonnull
     public static SingleValueLegacyExtendedProperty createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

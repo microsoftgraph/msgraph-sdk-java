@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
     /** The identifier of the agreement file accepted by the user. */
     private String _agreementFileId;
@@ -26,7 +25,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private OffsetDateTime _expirationDateTime;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _recordedDateTime;
-    /** The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq). */
+    /** The state property */
     private AgreementAcceptanceState _state;
     /** Display name of the user when the acceptance was recorded. */
     private String _userDisplayName;
@@ -43,7 +42,6 @@ public class AgreementAcceptance extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AgreementAcceptance() {
         super();
-        this.setOdataType("#microsoft.graph.agreementAcceptance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -143,7 +141,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._recordedDateTime;
     }
     /**
-     * Gets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+     * Gets the state property value. The state property
      * @return a agreementAcceptanceState
      */
     @javax.annotation.Nullable
@@ -278,7 +276,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._recordedDateTime = value;
     }
     /**
-     * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

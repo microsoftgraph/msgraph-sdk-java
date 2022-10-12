@@ -11,9 +11,7 @@ import java.util.Objects;
 public class PendingOperations implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** A property that indicates that an operation that might update the binary content of a file is pending completion. */
+    /** The pendingContentUpdate property */
     private PendingContentUpdate _pendingContentUpdate;
     /**
      * Instantiates a new pendingOperations and sets the default values.
@@ -22,7 +20,6 @@ public class PendingOperations implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PendingOperations() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.pendingOperations");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,21 +46,12 @@ public class PendingOperations implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PendingOperations currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("pendingContentUpdate", (n) -> { currentObject.setPendingContentUpdate(n.getObjectValue(PendingContentUpdate::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the pendingContentUpdate property value. A property that indicates that an operation that might update the binary content of a file is pending completion.
+     * Gets the pendingContentUpdate property value. The pendingContentUpdate property
      * @return a pendingContentUpdate
      */
     @javax.annotation.Nullable
@@ -78,7 +66,6 @@ public class PendingOperations implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("pendingContentUpdate", this.getPendingContentUpdate());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -92,16 +79,7 @@ public class PendingOperations implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the pendingContentUpdate property value. A property that indicates that an operation that might update the binary content of a file is pending completion.
+     * Sets the pendingContentUpdate property value. The pendingContentUpdate property
      * @param value Value to set for the pendingContentUpdate property.
      * @return a void
      */

@@ -23,7 +23,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     private Boolean _hasAttachments;
     /** Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply. */
     private java.util.List<String> _headerContains;
-    /** The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high. */
+    /** The importance property */
     private Importance _importance;
     /** Indicates whether an incoming message must be an approval request in order for the condition or exception to apply. */
     private Boolean _isApprovalRequest;
@@ -47,17 +47,15 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     private Boolean _isSigned;
     /** Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply. */
     private Boolean _isVoicemail;
-    /** Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review. */
+    /** The messageActionFlag property */
     private MessageActionFlag _messageActionFlag;
     /** Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply. */
     private Boolean _notSentToMe;
-    /** The OdataType property */
-    private String _odataType;
     /** Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply. */
     private java.util.List<String> _recipientContains;
     /** Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply. */
     private java.util.List<String> _senderContains;
-    /** Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential. */
+    /** The sensitivity property */
     private Sensitivity _sensitivity;
     /** Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply. */
     private Boolean _sentCcMe;
@@ -71,7 +69,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     private Boolean _sentToOrCcMe;
     /** Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply. */
     private java.util.List<String> _subjectContains;
-    /** Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply. */
+    /** The withinSizeRange property */
     private SizeRange _withinSizeRange;
     /**
      * Instantiates a new messageRulePredicates and sets the default values.
@@ -80,7 +78,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRulePredicates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -131,7 +128,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRulePredicates currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(31) {{
+        return new HashMap<String, Consumer<ParseNode>>(30) {{
             this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -152,7 +149,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
             this.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
             this.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
             this.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
@@ -190,7 +186,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return this._headerContains;
     }
     /**
-     * Gets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
+     * Gets the importance property value. The importance property
      * @return a importance
      */
     @javax.annotation.Nullable
@@ -286,7 +282,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return this._isVoicemail;
     }
     /**
-     * Gets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+     * Gets the messageActionFlag property value. The messageActionFlag property
      * @return a messageActionFlag
      */
     @javax.annotation.Nullable
@@ -300,14 +296,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getNotSentToMe() {
         return this._notSentToMe;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
@@ -326,7 +314,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return this._senderContains;
     }
     /**
-     * Gets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
+     * Gets the sensitivity property value. The sensitivity property
      * @return a sensitivity
      */
     @javax.annotation.Nullable
@@ -382,7 +370,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         return this._subjectContains;
     }
     /**
-     * Gets the withinSizeRange property value. Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
+     * Gets the withinSizeRange property value. The withinSizeRange property
      * @return a sizeRange
      */
     @javax.annotation.Nullable
@@ -417,7 +405,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isVoicemail", this.getIsVoicemail());
         writer.writeEnumValue("messageActionFlag", this.getMessageActionFlag());
         writer.writeBooleanValue("notSentToMe", this.getNotSentToMe());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("recipientContains", this.getRecipientContains());
         writer.writeCollectionOfPrimitiveValues("senderContains", this.getSenderContains());
         writer.writeEnumValue("sensitivity", this.getSensitivity());
@@ -494,7 +481,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         this._headerContains = value;
     }
     /**
-     * Sets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
+     * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
@@ -602,7 +589,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         this._isVoicemail = value;
     }
     /**
-     * Sets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+     * Sets the messageActionFlag property value. The messageActionFlag property
      * @param value Value to set for the messageActionFlag property.
      * @return a void
      */
@@ -618,15 +605,6 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setNotSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._notSentToMe = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
@@ -647,7 +625,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         this._senderContains = value;
     }
     /**
-     * Sets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
+     * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
@@ -710,7 +688,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
         this._subjectContains = value;
     }
     /**
-     * Sets the withinSizeRange property value. Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
+     * Sets the withinSizeRange property value. The withinSizeRange property
      * @param value Value to set for the withinSizeRange property.
      * @return a void
      */

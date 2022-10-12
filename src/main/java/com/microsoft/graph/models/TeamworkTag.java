@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class TeamworkTag extends Entity implements Parsable {
     /** The description of the tag as it will appear to the user in Microsoft Teams. */
     private String _description;
@@ -17,7 +16,7 @@ public class TeamworkTag extends Entity implements Parsable {
     private Integer _memberCount;
     /** Users assigned to the tag. */
     private java.util.List<TeamworkTagMember> _members;
-    /** The type of the tag. Default is standard. */
+    /** The tagType property */
     private TeamworkTagType _tagType;
     /** ID of the team in which the tag is defined. */
     private String _teamId;
@@ -28,7 +27,6 @@ public class TeamworkTag extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamworkTag() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,7 +87,7 @@ public class TeamworkTag extends Entity implements Parsable {
         return this._members;
     }
     /**
-     * Gets the tagType property value. The type of the tag. Default is standard.
+     * Gets the tagType property value. The tagType property
      * @return a teamworkTagType
      */
     @javax.annotation.Nullable
@@ -157,7 +155,7 @@ public class TeamworkTag extends Entity implements Parsable {
         this._members = value;
     }
     /**
-     * Sets the tagType property value. The type of the tag. Default is standard.
+     * Sets the tagType property value. The tagType property
      * @param value Value to set for the tagType property.
      * @return a void
      */

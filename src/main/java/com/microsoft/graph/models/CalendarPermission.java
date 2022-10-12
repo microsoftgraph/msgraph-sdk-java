@@ -7,17 +7,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
     private java.util.List<CalendarRoleType> _allowedRoles;
-    /** Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only. */
+    /** The emailAddress property */
     private EmailAddress _emailAddress;
     /** True if the user in context (sharee or delegate) is inside the same organization as the calendar owner. */
     private Boolean _isInsideOrganization;
     /** True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar. */
     private Boolean _isRemovable;
-    /** Current permission level of the calendar sharee or delegate. */
+    /** The role property */
     private CalendarRoleType _role;
     /**
      * Instantiates a new calendarPermission and sets the default values.
@@ -26,7 +25,6 @@ public class CalendarPermission extends Entity implements Parsable {
     @javax.annotation.Nullable
     public CalendarPermission() {
         super();
-        this.setOdataType("#microsoft.graph.calendarPermission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +45,7 @@ public class CalendarPermission extends Entity implements Parsable {
         return this._allowedRoles;
     }
     /**
-     * Gets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+     * Gets the emailAddress property value. The emailAddress property
      * @return a emailAddress
      */
     @javax.annotation.Nullable
@@ -86,7 +84,7 @@ public class CalendarPermission extends Entity implements Parsable {
         return this._isRemovable;
     }
     /**
-     * Gets the role property value. Current permission level of the calendar sharee or delegate.
+     * Gets the role property value. The role property
      * @return a calendarRoleType
      */
     @javax.annotation.Nullable
@@ -118,7 +116,7 @@ public class CalendarPermission extends Entity implements Parsable {
         this._allowedRoles = value;
     }
     /**
-     * Sets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+     * Sets the emailAddress property value. The emailAddress property
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
@@ -145,7 +143,7 @@ public class CalendarPermission extends Entity implements Parsable {
         this._isRemovable = value;
     }
     /**
-     * Sets the role property value. Current permission level of the calendar sharee or delegate.
+     * Sets the role property value. The role property
      * @param value Value to set for the role property.
      * @return a void
      */

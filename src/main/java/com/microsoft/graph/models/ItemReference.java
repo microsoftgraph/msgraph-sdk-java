@@ -19,13 +19,11 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     private String _id;
     /** The name of the item being referenced. Read-only. */
     private String _name;
-    /** The OdataType property */
-    private String _odataType;
     /** Path that can be used to navigate to the item. Read-only. */
     private String _path;
     /** A unique identifier for a shared resource that can be accessed via the [Shares][] API. */
     private String _shareId;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
     /** For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated. */
     private String _siteId;
@@ -36,7 +34,6 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ItemReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.itemReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,12 +76,11 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemReference currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
             this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
             this.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
             this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
@@ -108,14 +104,6 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the path property value. Path that can be used to navigate to the item. Read-only.
      * @return a string
      */
@@ -132,7 +120,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
         return this._shareId;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -159,7 +147,6 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("driveType", this.getDriveType());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("name", this.getName());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("path", this.getPath());
         writer.writeStringValue("shareId", this.getShareId());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
@@ -212,15 +199,6 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
      * Sets the path property value. Path that can be used to navigate to the item. Read-only.
      * @param value Value to set for the path property.
      * @return a void
@@ -239,7 +217,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
         this._shareId = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */

@@ -1,17 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OfferShiftRequest;
-import com.microsoft.graph.models.OpenShift;
-import com.microsoft.graph.models.OpenShiftChangeRequest;
-import com.microsoft.graph.models.ScheduleChangeRequest;
-import com.microsoft.graph.models.SchedulingGroup;
-import com.microsoft.graph.models.Shift;
-import com.microsoft.graph.models.ShiftPreferences;
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
-import com.microsoft.graph.models.TimeOff;
-import com.microsoft.graph.models.TimeOffReason;
-import com.microsoft.graph.models.TimeOffRequest;
-import com.microsoft.graph.models.WorkforceIntegration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -23,7 +11,7 @@ import java.util.Objects;
 public class ChangeTrackedEntity extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
-    /** Identity of the person who last modified the entity. */
+    /** The lastModifiedBy property */
     private IdentitySet _lastModifiedBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _lastModifiedDateTime;
@@ -34,7 +22,6 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChangeTrackedEntity() {
         super();
-        this.setOdataType("#microsoft.graph.changeTrackedEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,24 +31,6 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ChangeTrackedEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
-                case "#microsoft.graph.openShift": return new OpenShift();
-                case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
-                case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
-                case "#microsoft.graph.schedulingGroup": return new SchedulingGroup();
-                case "#microsoft.graph.shift": return new Shift();
-                case "#microsoft.graph.shiftPreferences": return new ShiftPreferences();
-                case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
-                case "#microsoft.graph.timeOff": return new TimeOff();
-                case "#microsoft.graph.timeOffReason": return new TimeOffReason();
-                case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
-                case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
-            }
-        }
         return new ChangeTrackedEntity();
     }
     /**
@@ -86,7 +55,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -110,6 +79,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -121,7 +91,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */

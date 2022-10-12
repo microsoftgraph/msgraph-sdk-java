@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerTaskDetails extends Entity implements Parsable {
-    /** The collection of checklist items on the task. */
+    /** The checklist property */
     private PlannerChecklistItems _checklist;
     /** Description of the task. */
     private String _description;
-    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
+    /** The previewType property */
     private PlannerPreviewType _previewType;
-    /** The collection of references on the task. */
+    /** The references property */
     private PlannerExternalReferences _references;
     /**
      * Instantiates a new plannerTaskDetails and sets the default values.
@@ -23,7 +23,6 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerTaskDetails() {
         super();
-        this.setOdataType("#microsoft.graph.plannerTaskDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +35,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         return new PlannerTaskDetails();
     }
     /**
-     * Gets the checklist property value. The collection of checklist items on the task.
+     * Gets the checklist property value. The checklist property
      * @return a plannerChecklistItems
      */
     @javax.annotation.Nullable
@@ -66,7 +65,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Gets the previewType property value. The previewType property
      * @return a plannerPreviewType
      */
     @javax.annotation.Nullable
@@ -74,7 +73,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         return this._previewType;
     }
     /**
-     * Gets the references property value. The collection of references on the task.
+     * Gets the references property value. The references property
      * @return a plannerExternalReferences
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         writer.writeObjectValue("references", this.getReferences());
     }
     /**
-     * Sets the checklist property value. The collection of checklist items on the task.
+     * Sets the checklist property value. The checklist property
      * @param value Value to set for the checklist property.
      * @return a void
      */
@@ -114,7 +113,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Sets the previewType property value. The previewType property
      * @param value Value to set for the previewType property.
      * @return a void
      */
@@ -123,7 +122,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
         this._previewType = value;
     }
     /**
-     * Sets the references property value. The collection of references on the task.
+     * Sets the references property value. The references property
      * @param value Value to set for the references property.
      * @return a void
      */

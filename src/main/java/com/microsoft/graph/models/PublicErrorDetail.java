@@ -15,8 +15,6 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
     private String _code;
     /** The error message. */
     private String _message;
-    /** The OdataType property */
-    private String _odataType;
     /** The target of the error. */
     private String _target;
     /**
@@ -26,7 +24,6 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PublicErrorDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.publicErrorDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +58,9 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PublicErrorDetail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
         }};
     }
@@ -75,14 +71,6 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMessage() {
         return this._message;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the target property value. The target of the error.
@@ -102,7 +90,6 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeStringValue("message", this.getMessage());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the target property value. The target of the error.

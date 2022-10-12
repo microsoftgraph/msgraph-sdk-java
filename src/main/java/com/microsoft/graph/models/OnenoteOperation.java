@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteOperation extends Operation implements Parsable {
-    /** The error returned by the operation. */
+    /** The error property */
     private OnenoteOperationError _error;
     /** The operation percent complete if the operation is still in running status. */
     private String _percentComplete;
@@ -17,18 +17,17 @@ public class OnenoteOperation extends Operation implements Parsable {
     /** The resource URI for the object. For example, the resource URI for a copied page or section. */
     private String _resourceLocation;
     /**
-     * Instantiates a new OnenoteOperation and sets the default values.
+     * Instantiates a new onenoteOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public OnenoteOperation() {
         super();
-        this.setOdataType("#microsoft.graph.onenoteOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnenoteOperation
+     * @return a onenoteOperation
      */
     @javax.annotation.Nonnull
     public static OnenoteOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +35,7 @@ public class OnenoteOperation extends Operation implements Parsable {
         return new OnenoteOperation();
     }
     /**
-     * Gets the error property value. The error returned by the operation.
+     * Gets the error property value. The error property
      * @return a onenoteOperationError
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class OnenoteOperation extends Operation implements Parsable {
         writer.writeStringValue("resourceLocation", this.getResourceLocation());
     }
     /**
-     * Sets the error property value. The error returned by the operation.
+     * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */

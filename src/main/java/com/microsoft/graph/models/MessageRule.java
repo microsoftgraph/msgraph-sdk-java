@@ -7,15 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class MessageRule extends Entity implements Parsable {
-    /** Actions to be taken on a message when the corresponding conditions are fulfilled. */
+    /** The actions property */
     private MessageRuleActions _actions;
-    /** Conditions that when fulfilled, will trigger the corresponding actions for that rule. */
+    /** The conditions property */
     private MessageRulePredicates _conditions;
     /** The display name of the rule. */
     private String _displayName;
-    /** Exception conditions for the rule. */
+    /** The exceptions property */
     private MessageRulePredicates _exceptions;
     /** Indicates whether the rule is in an error condition. Read-only. */
     private Boolean _hasError;
@@ -32,7 +31,6 @@ public class MessageRule extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MessageRule() {
         super();
-        this.setOdataType("#microsoft.graph.messageRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +43,7 @@ public class MessageRule extends Entity implements Parsable {
         return new MessageRule();
     }
     /**
-     * Gets the actions property value. Actions to be taken on a message when the corresponding conditions are fulfilled.
+     * Gets the actions property value. The actions property
      * @return a messageRuleActions
      */
     @javax.annotation.Nullable
@@ -53,7 +51,7 @@ public class MessageRule extends Entity implements Parsable {
         return this._actions;
     }
     /**
-     * Gets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Gets the conditions property value. The conditions property
      * @return a messageRulePredicates
      */
     @javax.annotation.Nullable
@@ -69,7 +67,7 @@ public class MessageRule extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the exceptions property value. Exception conditions for the rule.
+     * Gets the exceptions property value. The exceptions property
      * @return a messageRulePredicates
      */
     @javax.annotation.Nullable
@@ -145,7 +143,7 @@ public class MessageRule extends Entity implements Parsable {
         writer.writeIntegerValue("sequence", this.getSequence());
     }
     /**
-     * Sets the actions property value. Actions to be taken on a message when the corresponding conditions are fulfilled.
+     * Sets the actions property value. The actions property
      * @param value Value to set for the actions property.
      * @return a void
      */
@@ -154,7 +152,7 @@ public class MessageRule extends Entity implements Parsable {
         this._actions = value;
     }
     /**
-     * Sets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Sets the conditions property value. The conditions property
      * @param value Value to set for the conditions property.
      * @return a void
      */
@@ -172,7 +170,7 @@ public class MessageRule extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the exceptions property value. Exception conditions for the rule.
+     * Sets the exceptions property value. The exceptions property
      * @param value Value to set for the exceptions property.
      * @return a void
      */

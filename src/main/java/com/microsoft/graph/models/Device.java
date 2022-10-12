@@ -64,7 +64,6 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public Device() {
         super();
-        this.setOdataType("#microsoft.graph.device");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

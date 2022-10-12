@@ -7,31 +7,30 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChart extends Entity implements Parsable {
-    /** Represents chart axes. Read-only. */
+    /** The axes property */
     private WorkbookChartAxes _axes;
-    /** Represents the datalabels on the chart. Read-only. */
+    /** The dataLabels property */
     private WorkbookChartDataLabels _dataLabels;
-    /** Encapsulates the format properties for the chart area. Read-only. */
+    /** The format property */
     private WorkbookChartAreaFormat _format;
     /** Represents the height, in points, of the chart object. */
     private Double _height;
     /** The distance, in points, from the left side of the chart to the worksheet origin. */
     private Double _left;
-    /** Represents the legend for the chart. Read-only. */
+    /** The legend property */
     private WorkbookChartLegend _legend;
     /** Represents the name of a chart object. */
     private String _name;
     /** Represents either a single series or collection of series in the chart. Read-only. */
     private java.util.List<WorkbookChartSeries> _series;
-    /** Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only. */
+    /** The title property */
     private WorkbookChartTitle _title;
     /** Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart). */
     private Double _top;
     /** Represents the width, in points, of the chart object. */
     private Double _width;
-    /** The worksheet containing the current chart. Read-only. */
+    /** The worksheet property */
     private WorkbookWorksheet _worksheet;
     /**
      * Instantiates a new workbookChart and sets the default values.
@@ -40,7 +39,6 @@ public class WorkbookChart extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChart() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChart");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +51,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return new WorkbookChart();
     }
     /**
-     * Gets the axes property value. Represents chart axes. Read-only.
+     * Gets the axes property value. The axes property
      * @return a workbookChartAxes
      */
     @javax.annotation.Nullable
@@ -61,7 +59,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this._axes;
     }
     /**
-     * Gets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Gets the dataLabels property value. The dataLabels property
      * @return a workbookChartDataLabels
      */
     @javax.annotation.Nullable
@@ -91,7 +89,7 @@ public class WorkbookChart extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Encapsulates the format properties for the chart area. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartAreaFormat
      */
     @javax.annotation.Nullable
@@ -115,7 +113,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this._left;
     }
     /**
-     * Gets the legend property value. Represents the legend for the chart. Read-only.
+     * Gets the legend property value. The legend property
      * @return a workbookChartLegend
      */
     @javax.annotation.Nullable
@@ -139,7 +137,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this._series;
     }
     /**
-     * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Gets the title property value. The title property
      * @return a workbookChartTitle
      */
     @javax.annotation.Nullable
@@ -163,7 +161,7 @@ public class WorkbookChart extends Entity implements Parsable {
         return this._width;
     }
     /**
-     * Gets the worksheet property value. The worksheet containing the current chart. Read-only.
+     * Gets the worksheet property value. The worksheet property
      * @return a workbookWorksheet
      */
     @javax.annotation.Nullable
@@ -193,7 +191,7 @@ public class WorkbookChart extends Entity implements Parsable {
         writer.writeObjectValue("worksheet", this.getWorksheet());
     }
     /**
-     * Sets the axes property value. Represents chart axes. Read-only.
+     * Sets the axes property value. The axes property
      * @param value Value to set for the axes property.
      * @return a void
      */
@@ -202,7 +200,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this._axes = value;
     }
     /**
-     * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Sets the dataLabels property value. The dataLabels property
      * @param value Value to set for the dataLabels property.
      * @return a void
      */
@@ -211,7 +209,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this._dataLabels = value;
     }
     /**
-     * Sets the format property value. Encapsulates the format properties for the chart area. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -238,7 +236,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this._left = value;
     }
     /**
-     * Sets the legend property value. Represents the legend for the chart. Read-only.
+     * Sets the legend property value. The legend property
      * @param value Value to set for the legend property.
      * @return a void
      */
@@ -265,7 +263,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this._series = value;
     }
     /**
-     * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Sets the title property value. The title property
      * @param value Value to set for the title property.
      * @return a void
      */
@@ -292,7 +290,7 @@ public class WorkbookChart extends Entity implements Parsable {
         this._width = value;
     }
     /**
-     * Sets the worksheet property value. The worksheet containing the current chart. Read-only.
+     * Sets the worksheet property value. The worksheet property
      * @param value Value to set for the worksheet property.
      * @return a void
      */

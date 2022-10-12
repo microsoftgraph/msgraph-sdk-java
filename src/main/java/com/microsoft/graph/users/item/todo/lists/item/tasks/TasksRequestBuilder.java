@@ -1,10 +1,7 @@
 package com.microsoft.graph.users.item.todo.lists.item.tasks;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TodoTask;
 import com.microsoft.graph.models.TodoTaskCollectionResponse;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.delta.DeltaRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -18,13 +15,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity. */
+/** Builds and executes requests for operations under /users/{user-id}/todo/lists/{todoTaskList-id}/tasks */
 public class TasksRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -124,14 +116,6 @@ public class TasksRequestBuilder {
         return requestInfo;
     }
     /**
-     * Provides operations to call the delta method.
-     * @return a deltaRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public DeltaRequestBuilder delta() {
-        return new DeltaRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
      * @return a CompletableFuture of TodoTaskCollectionResponse
      */
@@ -139,11 +123,7 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, TodoTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TodoTaskCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -159,11 +139,7 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<TasksRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, TodoTaskCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TodoTaskCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<TodoTaskCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -179,11 +155,7 @@ public class TasksRequestBuilder {
     public java.util.concurrent.CompletableFuture<TodoTask> post(@javax.annotation.Nonnull final TodoTask body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, TodoTask::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TodoTask::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<TodoTask>() {{
                 this.completeExceptionally(ex);
@@ -201,11 +173,7 @@ public class TasksRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, TodoTask::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, TodoTask::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<TodoTask>() {{
                 this.completeExceptionally(ex);

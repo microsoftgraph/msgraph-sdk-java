@@ -15,7 +15,6 @@ public class ChatMessageFromIdentitySet extends IdentitySet implements Parsable 
     @javax.annotation.Nullable
     public ChatMessageFromIdentitySet() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageFromIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

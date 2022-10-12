@@ -15,8 +15,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     private Integer _guestsCount;
     /** The membersCount property */
     private Integer _membersCount;
-    /** The OdataType property */
-    private String _odataType;
     /** The ownersCount property */
     private Integer _ownersCount;
     /**
@@ -26,7 +24,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +50,9 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamSummary currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("guestsCount", (n) -> { currentObject.setGuestsCount(n.getIntegerValue()); });
             this.put("membersCount", (n) -> { currentObject.setMembersCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("ownersCount", (n) -> { currentObject.setOwnersCount(n.getIntegerValue()); });
         }};
     }
@@ -77,14 +73,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         return this._membersCount;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the ownersCount property value. The ownersCount property
      * @return a integer
      */
@@ -102,7 +90,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("guestsCount", this.getGuestsCount());
         writer.writeIntegerValue("membersCount", this.getMembersCount());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("ownersCount", this.getOwnersCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class TeamSummary implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMembersCount(@javax.annotation.Nullable final Integer value) {
         this._membersCount = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the ownersCount property value. The ownersCount property

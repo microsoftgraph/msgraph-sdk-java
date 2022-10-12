@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
-    /** Represents chart line formatting. Read-only. */
+    /** The line property */
     private WorkbookChartLineFormat _line;
     /**
      * Instantiates a new workbookChartGridlinesFormat and sets the default values.
@@ -17,7 +17,6 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartGridlinesFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartGridlinesFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the line property value. Represents chart line formatting. Read-only.
+     * Gets the line property value. The line property
      * @return a workbookChartLineFormat
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
         writer.writeObjectValue("line", this.getLine());
     }
     /**
-     * Sets the line property value. Represents chart line formatting. Read-only.
+     * Sets the line property value. The line property
      * @param value Value to set for the line property.
      * @return a void
      */

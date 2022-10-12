@@ -1,7 +1,6 @@
 package com.microsoft.graph.users.item.todo.lists.item.extensions.item;
 
 import com.microsoft.graph.models.Extension;
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -15,7 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity. */
+/** Builds and executes requests for operations under /users/{user-id}/todo/lists/{todoTaskList-id}/extensions/{extension-id} */
 public class ExtensionItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -133,7 +132,6 @@ public class ExtensionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ExtensionItemRequestBuilderPatchRequestConfiguration requestConfig = new ExtensionItemRequestBuilderPatchRequestConfiguration();
@@ -151,11 +149,7 @@ public class ExtensionItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -171,11 +165,7 @@ public class ExtensionItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ExtensionItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -190,11 +180,7 @@ public class ExtensionItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Extension> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Extension>() {{
                 this.completeExceptionally(ex);
@@ -210,11 +196,7 @@ public class ExtensionItemRequestBuilder {
     public java.util.concurrent.CompletableFuture<Extension> get(@javax.annotation.Nullable final java.util.function.Consumer<ExtensionItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Extension>() {{
                 this.completeExceptionally(ex);
@@ -224,19 +206,15 @@ public class ExtensionItemRequestBuilder {
     /**
      * Update the navigation property extensions in users
      * @param body 
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> patch(@javax.annotation.Nonnull final Extension body) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Extension body) {
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Extension>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -245,20 +223,16 @@ public class ExtensionItemRequestBuilder {
      * Update the navigation property extensions in users
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of extension
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> patch(@javax.annotation.Nonnull final Extension body, @javax.annotation.Nullable final java.util.function.Consumer<ExtensionItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final Extension body, @javax.annotation.Nullable final java.util.function.Consumer<ExtensionItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, Extension::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Extension>() {{
+            return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
             }};
         }

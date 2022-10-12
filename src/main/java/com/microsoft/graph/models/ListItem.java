@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItem extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place on this item. */
+    /** The analytics property */
     private ItemAnalytics _analytics;
-    /** The content type of this list item */
+    /** The contentType property */
     private ContentTypeInfo _contentType;
     /** Version information for a document set version created by a user. */
     private java.util.List<DocumentSetVersion> _documentSetVersions;
-    /** For document libraries, the driveItem relationship exposes the listItem as a [driveItem][] */
+    /** The driveItem property */
     private DriveItem _driveItem;
-    /** The values of the columns set on this list item. */
+    /** The fields property */
     private FieldValueSet _fields;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
     /** The list of previous versions of the list item. */
     private java.util.List<ListItemVersion> _versions;
@@ -29,7 +29,6 @@ public class ListItem extends BaseItem implements Parsable {
     @javax.annotation.Nullable
     public ListItem() {
         super();
-        this.setOdataType("#microsoft.graph.listItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +41,7 @@ public class ListItem extends BaseItem implements Parsable {
         return new ListItem();
     }
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place on this item.
+     * Gets the analytics property value. The analytics property
      * @return a itemAnalytics
      */
     @javax.annotation.Nullable
@@ -50,7 +49,7 @@ public class ListItem extends BaseItem implements Parsable {
         return this._analytics;
     }
     /**
-     * Gets the contentType property value. The content type of this list item
+     * Gets the contentType property value. The contentType property
      * @return a contentTypeInfo
      */
     @javax.annotation.Nullable
@@ -66,7 +65,7 @@ public class ListItem extends BaseItem implements Parsable {
         return this._documentSetVersions;
     }
     /**
-     * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Gets the driveItem property value. The driveItem property
      * @return a driveItem
      */
     @javax.annotation.Nullable
@@ -91,7 +90,7 @@ public class ListItem extends BaseItem implements Parsable {
         }};
     }
     /**
-     * Gets the fields property value. The values of the columns set on this list item.
+     * Gets the fields property value. The fields property
      * @return a fieldValueSet
      */
     @javax.annotation.Nullable
@@ -99,7 +98,7 @@ public class ListItem extends BaseItem implements Parsable {
         return this._fields;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -132,7 +131,7 @@ public class ListItem extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place on this item.
+     * Sets the analytics property value. The analytics property
      * @param value Value to set for the analytics property.
      * @return a void
      */
@@ -141,7 +140,7 @@ public class ListItem extends BaseItem implements Parsable {
         this._analytics = value;
     }
     /**
-     * Sets the contentType property value. The content type of this list item
+     * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      * @return a void
      */
@@ -159,7 +158,7 @@ public class ListItem extends BaseItem implements Parsable {
         this._documentSetVersions = value;
     }
     /**
-     * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Sets the driveItem property value. The driveItem property
      * @param value Value to set for the driveItem property.
      * @return a void
      */
@@ -168,7 +167,7 @@ public class ListItem extends BaseItem implements Parsable {
         this._driveItem = value;
     }
     /**
-     * Sets the fields property value. The values of the columns set on this list item.
+     * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
      * @return a void
      */
@@ -177,7 +176,7 @@ public class ListItem extends BaseItem implements Parsable {
         this._fields = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */

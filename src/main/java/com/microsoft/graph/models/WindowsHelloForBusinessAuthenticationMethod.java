@@ -11,25 +11,24 @@ import java.util.Objects;
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this Windows Hello for Business key was registered. */
     private OffsetDateTime _createdDateTime;
-    /** The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device. */
+    /** The device property */
     private Device _device;
     /** The name of the device on which Windows Hello for Business is registered */
     private String _displayName;
-    /** Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown. */
+    /** The keyStrength property */
     private AuthenticationMethodKeyStrength _keyStrength;
     /**
-     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
-        this.setOdataType("#microsoft.graph.windowsHelloForBusinessAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsHelloForBusinessAuthenticationMethod
+     * @return a windowsHelloForBusinessAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +44,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         return this._createdDateTime;
     }
     /**
-     * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Gets the device property value. The device property
      * @return a device
      */
     @javax.annotation.Nullable
@@ -75,7 +74,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         }};
     }
     /**
-     * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Gets the keyStrength property value. The keyStrength property
      * @return a authenticationMethodKeyStrength
      */
     @javax.annotation.Nullable
@@ -106,7 +105,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         this._createdDateTime = value;
     }
     /**
-     * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Sets the device property value. The device property
      * @param value Value to set for the device property.
      * @return a void
      */
@@ -124,7 +123,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
         this._displayName = value;
     }
     /**
-     * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Sets the keyStrength property value. The keyStrength property
      * @param value Value to set for the keyStrength property.
      * @return a void
      */

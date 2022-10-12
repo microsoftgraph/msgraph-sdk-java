@@ -15,8 +15,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     private String _identityProvider;
     /** For internal use only */
     private byte[] _key;
-    /** The OdataType property */
-    private String _odataType;
     /** For internal use only */
     private Integer _type;
     /**
@@ -26,7 +24,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AlternativeSecurityId() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alternativeSecurityId");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +50,9 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlternativeSecurityId currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("identityProvider", (n) -> { currentObject.setIdentityProvider(n.getStringValue()); });
             this.put("key", (n) -> { currentObject.setKey(n.getByteArrayValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("type", (n) -> { currentObject.setType(n.getIntegerValue()); });
         }};
     }
@@ -77,14 +73,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         return this._key;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the type property value. For internal use only
      * @return a integer
      */
@@ -102,7 +90,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("identityProvider", this.getIdentityProvider());
         writer.writeByteArrayValue("key", this.getKey());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final byte[] value) {
         this._key = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the type property value. For internal use only

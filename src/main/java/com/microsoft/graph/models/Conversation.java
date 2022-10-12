@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Conversation extends Entity implements Parsable {
     /** Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search. */
     private Boolean _hasAttachments;
@@ -29,7 +28,6 @@ public class Conversation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Conversation() {
         super();
-        this.setOdataType("#microsoft.graph.conversation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

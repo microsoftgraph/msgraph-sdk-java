@@ -1,8 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DocumentSetVersion;
-import com.microsoft.graph.models.DriveItemVersion;
-import com.microsoft.graph.models.ListItemVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -11,13 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class BaseItemVersion extends Entity implements Parsable {
-    /** Identity of the user which last modified the version. Read-only. */
+    /** The lastModifiedBy property */
     private IdentitySet _lastModifiedBy;
     /** Date and time the version was last modified. Read-only. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Indicates the publication status of this particular version. Read-only. */
+    /** The publication property */
     private PublicationFacet _publication;
     /**
      * Instantiates a new baseItemVersion and sets the default values.
@@ -26,7 +22,6 @@ public class BaseItemVersion extends Entity implements Parsable {
     @javax.annotation.Nullable
     public BaseItemVersion() {
         super();
-        this.setOdataType("#microsoft.graph.baseItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,15 +31,6 @@ public class BaseItemVersion extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static BaseItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
-                case "#microsoft.graph.driveItemVersion": return new DriveItemVersion();
-                case "#microsoft.graph.listItemVersion": return new ListItemVersion();
-            }
-        }
         return new BaseItemVersion();
     }
     /**
@@ -61,7 +47,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -77,7 +63,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the publication property value. Indicates the publication status of this particular version. Read-only.
+     * Gets the publication property value. The publication property
      * @return a publicationFacet
      */
     @javax.annotation.Nullable
@@ -98,7 +84,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         writer.writeObjectValue("publication", this.getPublication());
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -116,7 +102,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the publication property value. Indicates the publication status of this particular version. Read-only.
+     * Sets the publication property value. The publication property
      * @param value Value to set for the publication property.
      * @return a void
      */

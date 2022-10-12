@@ -13,8 +13,6 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** A collection of the unique identifiers for plans that have been disabled. */
     private java.util.List<String> _disabledPlans;
-    /** The OdataType property */
-    private String _odataType;
     /** The unique identifier for the SKU. */
     private String _skuId;
     /**
@@ -24,7 +22,6 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedLicense() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedLicense");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,19 +56,10 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedLicense currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("disabledPlans", (n) -> { currentObject.setDisabledPlans(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the skuId property value. The unique identifier for the SKU.
@@ -90,7 +78,6 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("disabledPlans", this.getDisabledPlans());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("skuId", this.getSkuId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -111,15 +98,6 @@ public class AssignedLicense implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setDisabledPlans(@javax.annotation.Nullable final java.util.List<String> value) {
         this._disabledPlans = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the skuId property value. The unique identifier for the SKU.

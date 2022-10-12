@@ -18,7 +18,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     private java.util.List<WorkbookPivotTable> _pivotTables;
     /** The zero-based position of the worksheet within the workbook. */
     private Integer _position;
-    /** Returns sheet protection object for a worksheet. Read-only. */
+    /** The protection property */
     private WorkbookWorksheetProtection _protection;
     /** Collection of tables that are part of the worksheet. Read-only. */
     private java.util.List<WorkbookTable> _tables;
@@ -31,7 +31,6 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookWorksheet() {
         super();
-        this.setOdataType("#microsoft.graph.workbookWorksheet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -102,7 +101,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         return this._position;
     }
     /**
-     * Gets the protection property value. Returns sheet protection object for a worksheet. Read-only.
+     * Gets the protection property value. The protection property
      * @return a workbookWorksheetProtection
      */
     @javax.annotation.Nullable
@@ -189,7 +188,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         this._position = value;
     }
     /**
-     * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
+     * Sets the protection property value. The protection property
      * @param value Value to set for the protection property.
      * @return a void
      */

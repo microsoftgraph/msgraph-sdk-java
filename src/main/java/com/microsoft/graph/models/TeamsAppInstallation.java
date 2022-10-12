@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class TeamsAppInstallation extends Entity implements Parsable {
-    /** The app that is installed. */
+    /** The teamsApp property */
     private TeamsApp _teamsApp;
-    /** The details of this version of the app. */
+    /** The teamsAppDefinition property */
     private TeamsAppDefinition _teamsAppDefinition;
     /**
      * Instantiates a new teamsAppInstallation and sets the default values.
@@ -21,7 +19,6 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsAppInstallation() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppInstallation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,13 +28,6 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static TeamsAppInstallation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
-            }
-        }
         return new TeamsAppInstallation();
     }
     /**
@@ -53,7 +43,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the teamsApp property value. The app that is installed.
+     * Gets the teamsApp property value. The teamsApp property
      * @return a teamsApp
      */
     @javax.annotation.Nullable
@@ -61,7 +51,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         return this._teamsApp;
     }
     /**
-     * Gets the teamsAppDefinition property value. The details of this version of the app.
+     * Gets the teamsAppDefinition property value. The teamsAppDefinition property
      * @return a teamsAppDefinition
      */
     @javax.annotation.Nullable
@@ -81,7 +71,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         writer.writeObjectValue("teamsAppDefinition", this.getTeamsAppDefinition());
     }
     /**
-     * Sets the teamsApp property value. The app that is installed.
+     * Sets the teamsApp property value. The teamsApp property
      * @param value Value to set for the teamsApp property.
      * @return a void
      */
@@ -90,7 +80,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         this._teamsApp = value;
     }
     /**
-     * Sets the teamsAppDefinition property value. The details of this version of the app.
+     * Sets the teamsAppDefinition property value. The teamsAppDefinition property
      * @param value Value to set for the teamsAppDefinition property.
      * @return a void
      */

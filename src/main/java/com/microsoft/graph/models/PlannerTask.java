@@ -8,35 +8,34 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class PlannerTask extends Entity implements Parsable {
     /** Number of checklist items with value set to false, representing incomplete items. */
     private Integer _activeChecklistItemCount;
-    /** The categories to which the task has been applied. See applied Categories for possible values. */
+    /** The appliedCategories property */
     private PlannerAppliedCategories _appliedCategories;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo. */
+    /** The assignedToTaskBoardFormat property */
     private PlannerAssignedToTaskBoardTaskFormat _assignedToTaskBoardFormat;
     /** Hint used to order items of this type in a list view. The format is defined as outlined here. */
     private String _assigneePriority;
-    /** The set of assignees the task is assigned to. */
+    /** The assignments property */
     private PlannerAssignments _assignments;
     /** Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service. */
     private String _bucketId;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket. */
+    /** The bucketTaskBoardFormat property */
     private PlannerBucketTaskBoardTaskFormat _bucketTaskBoardFormat;
     /** Number of checklist items that are present on the task. */
     private Integer _checklistItemCount;
-    /** Identity of the user that completed the task. */
+    /** The completedBy property */
     private IdentitySet _completedBy;
     /** Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _completedDateTime;
     /** Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. */
     private String _conversationThreadId;
-    /** Identity of the user that created the task. */
+    /** The createdBy property */
     private IdentitySet _createdBy;
     /** Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. Nullable. Additional details about the task. */
+    /** The details property */
     private PlannerTaskDetails _details;
     /** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _dueDateTime;
@@ -48,11 +47,11 @@ public class PlannerTask extends Entity implements Parsable {
     private Integer _percentComplete;
     /** Plan ID to which the task belongs. */
     private String _planId;
-    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. */
+    /** The previewType property */
     private PlannerPreviewType _previewType;
     /** Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'. */
     private Integer _priority;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress. */
+    /** The progressTaskBoardFormat property */
     private PlannerProgressTaskBoardTaskFormat _progressTaskBoardFormat;
     /** Number of external references that exist on the task. */
     private Integer _referenceCount;
@@ -67,7 +66,6 @@ public class PlannerTask extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PlannerTask() {
         super();
-        this.setOdataType("#microsoft.graph.plannerTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,7 +86,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._activeChecklistItemCount;
     }
     /**
-     * Gets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
+     * Gets the appliedCategories property value. The appliedCategories property
      * @return a plannerAppliedCategories
      */
     @javax.annotation.Nullable
@@ -96,7 +94,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._appliedCategories;
     }
     /**
-     * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Gets the assignedToTaskBoardFormat property value. The assignedToTaskBoardFormat property
      * @return a plannerAssignedToTaskBoardTaskFormat
      */
     @javax.annotation.Nullable
@@ -112,7 +110,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._assigneePriority;
     }
     /**
-     * Gets the assignments property value. The set of assignees the task is assigned to.
+     * Gets the assignments property value. The assignments property
      * @return a plannerAssignments
      */
     @javax.annotation.Nullable
@@ -128,7 +126,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._bucketId;
     }
     /**
-     * Gets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Gets the bucketTaskBoardFormat property value. The bucketTaskBoardFormat property
      * @return a plannerBucketTaskBoardTaskFormat
      */
     @javax.annotation.Nullable
@@ -144,7 +142,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._checklistItemCount;
     }
     /**
-     * Gets the completedBy property value. Identity of the user that completed the task.
+     * Gets the completedBy property value. The completedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -168,7 +166,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._conversationThreadId;
     }
     /**
-     * Gets the createdBy property value. Identity of the user that created the task.
+     * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -184,7 +182,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the details property value. Read-only. Nullable. Additional details about the task.
+     * Gets the details property value. The details property
      * @return a plannerTaskDetails
      */
     @javax.annotation.Nullable
@@ -267,7 +265,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._planId;
     }
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+     * Gets the previewType property value. The previewType property
      * @return a plannerPreviewType
      */
     @javax.annotation.Nullable
@@ -283,7 +281,7 @@ public class PlannerTask extends Entity implements Parsable {
         return this._priority;
     }
     /**
-     * Gets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Gets the progressTaskBoardFormat property value. The progressTaskBoardFormat property
      * @return a plannerProgressTaskBoardTaskFormat
      */
     @javax.annotation.Nullable
@@ -359,7 +357,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._activeChecklistItemCount = value;
     }
     /**
-     * Sets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
+     * Sets the appliedCategories property value. The appliedCategories property
      * @param value Value to set for the appliedCategories property.
      * @return a void
      */
@@ -368,7 +366,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._appliedCategories = value;
     }
     /**
-     * Sets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Sets the assignedToTaskBoardFormat property value. The assignedToTaskBoardFormat property
      * @param value Value to set for the assignedToTaskBoardFormat property.
      * @return a void
      */
@@ -386,7 +384,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._assigneePriority = value;
     }
     /**
-     * Sets the assignments property value. The set of assignees the task is assigned to.
+     * Sets the assignments property value. The assignments property
      * @param value Value to set for the assignments property.
      * @return a void
      */
@@ -404,7 +402,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._bucketId = value;
     }
     /**
-     * Sets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     * Sets the bucketTaskBoardFormat property value. The bucketTaskBoardFormat property
      * @param value Value to set for the bucketTaskBoardFormat property.
      * @return a void
      */
@@ -422,7 +420,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._checklistItemCount = value;
     }
     /**
-     * Sets the completedBy property value. Identity of the user that completed the task.
+     * Sets the completedBy property value. The completedBy property
      * @param value Value to set for the completedBy property.
      * @return a void
      */
@@ -449,7 +447,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._conversationThreadId = value;
     }
     /**
-     * Sets the createdBy property value. Identity of the user that created the task.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -467,7 +465,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the details property value. Read-only. Nullable. Additional details about the task.
+     * Sets the details property value. The details property
      * @param value Value to set for the details property.
      * @return a void
      */
@@ -521,7 +519,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._planId = value;
     }
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+     * Sets the previewType property value. The previewType property
      * @param value Value to set for the previewType property.
      * @return a void
      */
@@ -539,7 +537,7 @@ public class PlannerTask extends Entity implements Parsable {
         this._priority = value;
     }
     /**
-     * Sets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Sets the progressTaskBoardFormat property value. The progressTaskBoardFormat property
      * @param value Value to set for the progressTaskBoardFormat property.
      * @return a void
      */

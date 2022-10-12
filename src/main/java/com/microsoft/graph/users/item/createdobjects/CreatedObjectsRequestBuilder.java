@@ -1,9 +1,6 @@
 package com.microsoft.graph.users.item.createdobjects;
 
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.createdobjects.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.createdobjects.serviceprincipal.ServicePrincipalRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -17,22 +14,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the createdObjects property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/createdObjects */
 public class CreatedObjectsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
-    @javax.annotation.Nonnull
-    public ServicePrincipalRequestBuilder servicePrincipal() {
-        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
@@ -102,11 +89,7 @@ public class CreatedObjectsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -122,11 +105,7 @@ public class CreatedObjectsRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<CreatedObjectsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);

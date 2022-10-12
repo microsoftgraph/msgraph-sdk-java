@@ -13,8 +13,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The identity of the channel in which the message was posted. */
     private String _channelId;
-    /** The OdataType property */
-    private String _odataType;
     /** The identity of the team in which the message was posted. */
     private String _teamId;
     /**
@@ -24,7 +22,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChannelIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.channelIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,19 +56,10 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the teamId property value. The identity of the team in which the message was posted.
@@ -90,7 +78,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("channelId", this.getChannelId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("teamId", this.getTeamId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -111,15 +98,6 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
         this._channelId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the teamId property value. The identity of the team in which the message was posted.

@@ -1,8 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.FileAttachment;
-import com.microsoft.graph.models.ItemAttachment;
-import com.microsoft.graph.models.ReferenceAttachment;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -11,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Attachment extends Entity implements Parsable {
     /** The MIME type. */
     private String _contentType;
@@ -30,7 +26,6 @@ public class Attachment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Attachment() {
         super();
-        this.setOdataType("#microsoft.graph.attachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,15 +35,6 @@ public class Attachment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Attachment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.fileAttachment": return new FileAttachment();
-                case "#microsoft.graph.itemAttachment": return new ItemAttachment();
-                case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
-            }
-        }
         return new Attachment();
     }
     /**

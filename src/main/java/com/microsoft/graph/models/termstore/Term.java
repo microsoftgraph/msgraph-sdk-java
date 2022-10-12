@@ -25,7 +25,7 @@ public class Term extends Entity implements Parsable {
     private java.util.List<KeyValue> _properties;
     /** To indicate which terms are related to the current term as either pinned or reused. */
     private java.util.List<Relation> _relations;
-    /** The [set] in which the term is created. */
+    /** The set property */
     private Set _set;
     /**
      * Instantiates a new term and sets the default values.
@@ -34,7 +34,6 @@ public class Term extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Term() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.term");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -121,7 +120,7 @@ public class Term extends Entity implements Parsable {
         return this._relations;
     }
     /**
-     * Gets the set property value. The [set] in which the term is created.
+     * Gets the set property value. The set property
      * @return a set
      */
     @javax.annotation.Nullable
@@ -210,7 +209,7 @@ public class Term extends Entity implements Parsable {
         this._relations = value;
     }
     /**
-     * Sets the set property value. The [set] in which the term is created.
+     * Sets the set property value. The set property
      * @param value Value to set for the set property.
      * @return a void
      */

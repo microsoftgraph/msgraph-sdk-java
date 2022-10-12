@@ -19,8 +19,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     private String _containerWebUrl;
     /** The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported. */
     private String _mediaType;
-    /** The OdataType property */
-    private String _odataType;
     /** A URL leading to the preview image for the item. */
     private String _previewImageUrl;
     /** A preview text for the item. */
@@ -36,7 +34,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceVisualization");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,12 +84,11 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceVisualization currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("containerDisplayName", (n) -> { currentObject.setContainerDisplayName(n.getStringValue()); });
             this.put("containerType", (n) -> { currentObject.setContainerType(n.getStringValue()); });
             this.put("containerWebUrl", (n) -> { currentObject.setContainerWebUrl(n.getStringValue()); });
             this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("previewImageUrl", (n) -> { currentObject.setPreviewImageUrl(n.getStringValue()); });
             this.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
             this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
@@ -106,14 +102,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMediaType() {
         return this._mediaType;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the previewImageUrl property value. A URL leading to the preview image for the item.
@@ -159,7 +147,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("containerType", this.getContainerType());
         writer.writeStringValue("containerWebUrl", this.getContainerWebUrl());
         writer.writeStringValue("mediaType", this.getMediaType());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("previewImageUrl", this.getPreviewImageUrl());
         writer.writeStringValue("previewText", this.getPreviewText());
         writer.writeStringValue("title", this.getTitle());
@@ -210,15 +197,6 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
         this._mediaType = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.

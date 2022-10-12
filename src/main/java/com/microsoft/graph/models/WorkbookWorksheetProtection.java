@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
-    /** Sheet protection options. Read-only. */
+    /** The options property */
     private WorkbookWorksheetProtectionOptions _options;
     /** Indicates if the worksheet is protected.  Read-only. */
     private Boolean _protected_escaped;
@@ -19,7 +19,6 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the options property value. Sheet protection options. Read-only.
+     * Gets the options property value. The options property
      * @return a workbookWorksheetProtectionOptions
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
         writer.writeBooleanValue("protected", this.getProtected());
     }
     /**
-     * Sets the options property value. Sheet protection options. Read-only.
+     * Sets the options property value. The options property
      * @param value Value to set for the options property.
      * @return a void
      */

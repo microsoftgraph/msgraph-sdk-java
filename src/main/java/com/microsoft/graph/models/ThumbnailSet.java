@@ -7,15 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ThumbnailSet extends Entity implements Parsable {
-    /** A 1920x1920 scaled thumbnail. */
+    /** The large property */
     private Thumbnail _large;
-    /** A 176x176 scaled thumbnail. */
+    /** The medium property */
     private Thumbnail _medium;
-    /** A 48x48 cropped thumbnail. */
+    /** The small property */
     private Thumbnail _small;
-    /** A custom thumbnail image or the original image used to generate other thumbnails. */
+    /** The source property */
     private Thumbnail _source;
     /**
      * Instantiates a new thumbnailSet and sets the default values.
@@ -24,7 +23,6 @@ public class ThumbnailSet extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ThumbnailSet() {
         super();
-        this.setOdataType("#microsoft.graph.thumbnailSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +49,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the large property value. A 1920x1920 scaled thumbnail.
+     * Gets the large property value. The large property
      * @return a thumbnail
      */
     @javax.annotation.Nullable
@@ -59,7 +57,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         return this._large;
     }
     /**
-     * Gets the medium property value. A 176x176 scaled thumbnail.
+     * Gets the medium property value. The medium property
      * @return a thumbnail
      */
     @javax.annotation.Nullable
@@ -67,7 +65,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         return this._medium;
     }
     /**
-     * Gets the small property value. A 48x48 cropped thumbnail.
+     * Gets the small property value. The small property
      * @return a thumbnail
      */
     @javax.annotation.Nullable
@@ -75,7 +73,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         return this._small;
     }
     /**
-     * Gets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
+     * Gets the source property value. The source property
      * @return a thumbnail
      */
     @javax.annotation.Nullable
@@ -97,7 +95,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         writer.writeObjectValue("source", this.getSource());
     }
     /**
-     * Sets the large property value. A 1920x1920 scaled thumbnail.
+     * Sets the large property value. The large property
      * @param value Value to set for the large property.
      * @return a void
      */
@@ -106,7 +104,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         this._large = value;
     }
     /**
-     * Sets the medium property value. A 176x176 scaled thumbnail.
+     * Sets the medium property value. The medium property
      * @param value Value to set for the medium property.
      * @return a void
      */
@@ -115,7 +113,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         this._medium = value;
     }
     /**
-     * Sets the small property value. A 48x48 cropped thumbnail.
+     * Sets the small property value. The small property
      * @param value Value to set for the small property.
      * @return a void
      */
@@ -124,7 +122,7 @@ public class ThumbnailSet extends Entity implements Parsable {
         this._small = value;
     }
     /**
-     * Sets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
+     * Sets the source property value. The source property
      * @param value Value to set for the source property.
      * @return a void
      */

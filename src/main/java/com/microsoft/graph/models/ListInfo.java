@@ -15,8 +15,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     private Boolean _contentTypesEnabled;
     /** If true, indicates that the list is not normally visible in the SharePoint user experience. */
     private Boolean _hidden;
-    /** The OdataType property */
-    private String _odataType;
     /** An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more. */
     private String _template;
     /**
@@ -26,7 +24,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ListInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.listInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +58,9 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ListInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("contentTypesEnabled", (n) -> { currentObject.setContentTypesEnabled(n.getBooleanValue()); });
             this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("template", (n) -> { currentObject.setTemplate(n.getStringValue()); });
         }};
     }
@@ -75,14 +71,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getHidden() {
         return this._hidden;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
@@ -102,7 +90,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("contentTypesEnabled", this.getContentTypesEnabled());
         writer.writeBooleanValue("hidden", this.getHidden());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("template", this.getTemplate());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class ListInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.

@@ -1,6 +1,5 @@
 package com.microsoft.graph.users.item.manager.ref;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReferenceUpdate;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
@@ -14,7 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of user entities. */
+/** Builds and executes requests for operations under /users/{user-id}/manager/$ref */
 public class RefRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
@@ -148,11 +147,7 @@ public class RefRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -168,11 +163,7 @@ public class RefRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -187,11 +178,7 @@ public class RefRequestBuilder {
     public java.util.concurrent.CompletableFuture<String> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, String.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, String.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<String>() {{
                 this.completeExceptionally(ex);
@@ -207,11 +194,7 @@ public class RefRequestBuilder {
     public java.util.concurrent.CompletableFuture<String> get(@javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, String.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, String.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<String>() {{
                 this.completeExceptionally(ex);
@@ -227,11 +210,7 @@ public class RefRequestBuilder {
     public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body) {
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);
@@ -249,11 +228,7 @@ public class RefRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<Void>() {{
                 this.completeExceptionally(ex);

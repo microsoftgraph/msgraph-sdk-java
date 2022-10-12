@@ -15,8 +15,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     private Boolean _forceChangePasswordNextSignIn;
     /** If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false. */
     private Boolean _forceChangePasswordNextSignInWithMfa;
-    /** The OdataType property */
-    private String _odataType;
     /** The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required. */
     private String _password;
     /**
@@ -26,7 +24,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +50,9 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordProfile currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("forceChangePasswordNextSignIn", (n) -> { currentObject.setForceChangePasswordNextSignIn(n.getBooleanValue()); });
             this.put("forceChangePasswordNextSignInWithMfa", (n) -> { currentObject.setForceChangePasswordNextSignInWithMfa(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
         }};
     }
@@ -77,14 +73,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
         return this._forceChangePasswordNextSignInWithMfa;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
      * @return a string
      */
@@ -102,7 +90,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceChangePasswordNextSignIn", this.getForceChangePasswordNextSignIn());
         writer.writeBooleanValue("forceChangePasswordNextSignInWithMfa", this.getForceChangePasswordNextSignInWithMfa());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("password", this.getPassword());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setForceChangePasswordNextSignInWithMfa(@javax.annotation.Nullable final Boolean value) {
         this._forceChangePasswordNextSignInWithMfa = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.

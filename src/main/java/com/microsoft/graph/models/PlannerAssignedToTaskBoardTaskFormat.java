@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable {
-    /** Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here. */
+    /** The orderHintsByAssignee property */
     private PlannerOrderHintsByAssignee _orderHintsByAssignee;
     /** Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here. */
     private String _unassignedOrderHint;
@@ -19,7 +19,6 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     @javax.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerAssignedToTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
         }};
     }
     /**
-     * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * Gets the orderHintsByAssignee property value. The orderHintsByAssignee property
      * @return a plannerOrderHintsByAssignee
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
         writer.writeStringValue("unassignedOrderHint", this.getUnassignedOrderHint());
     }
     /**
-     * Sets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * Sets the orderHintsByAssignee property value. The orderHintsByAssignee property
      * @param value Value to set for the orderHintsByAssignee property.
      * @return a void
      */

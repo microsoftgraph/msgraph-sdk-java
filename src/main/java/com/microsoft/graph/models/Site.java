@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Site extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place in this site. */
+    /** The analytics property */
     private ItemAnalytics _analytics;
     /** The collection of column definitions reusable across lists under this site. */
     private java.util.List<ColumnDefinition> _columns;
@@ -17,7 +17,7 @@ public class Site extends BaseItem implements Parsable {
     private java.util.List<ContentType> _contentTypes;
     /** The full title for the site. Read-only. */
     private String _displayName;
-    /** The default drive (document library) for this site. */
+    /** The drive property */
     private Drive _drive;
     /** The collection of drives (document libraries) under this site. */
     private java.util.List<Drive> _drives;
@@ -29,37 +29,36 @@ public class Site extends BaseItem implements Parsable {
     private java.util.List<BaseItem> _items;
     /** The collection of lists under this site. */
     private java.util.List<List> _lists;
-    /** Calls the OneNote service for notebook related operations. */
+    /** The onenote property */
     private Onenote _onenote;
     /** The collection of long-running operations on the site. */
     private java.util.List<RichLongRunningOperation> _operations;
     /** The permissions associated with the site. Nullable. */
     private java.util.List<Permission> _permissions;
-    /** If present, indicates that this is the root site in the site collection. Read-only. */
+    /** The root property */
     private Root _root;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
-    /** Provides details about the site's site collection. Available only on the root site. Read-only. */
+    /** The siteCollection property */
     private SiteCollection _siteCollection;
     /** The collection of the sub-sites under this site. */
     private java.util.List<Site> _sites;
-    /** The default termStore under this site. */
+    /** The termStore property */
     private Store _termStore;
     /** The collection of termStores under this site. */
     private java.util.List<Store> _termStores;
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Site() {
         super();
-        this.setOdataType("#microsoft.graph.site");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Site
+     * @return a site
      */
     @javax.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +66,7 @@ public class Site extends BaseItem implements Parsable {
         return new Site();
     }
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place in this site.
+     * Gets the analytics property value. The analytics property
      * @return a itemAnalytics
      */
     @javax.annotation.Nullable
@@ -99,7 +98,7 @@ public class Site extends BaseItem implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the drive property value. The default drive (document library) for this site.
+     * Gets the drive property value. The drive property
      * @return a drive
      */
     @javax.annotation.Nullable
@@ -176,7 +175,7 @@ public class Site extends BaseItem implements Parsable {
         return this._lists;
     }
     /**
-     * Gets the onenote property value. Calls the OneNote service for notebook related operations.
+     * Gets the onenote property value. The onenote property
      * @return a onenote
      */
     @javax.annotation.Nullable
@@ -200,7 +199,7 @@ public class Site extends BaseItem implements Parsable {
         return this._permissions;
     }
     /**
-     * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Gets the root property value. The root property
      * @return a root
      */
     @javax.annotation.Nullable
@@ -208,7 +207,7 @@ public class Site extends BaseItem implements Parsable {
         return this._root;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -216,7 +215,7 @@ public class Site extends BaseItem implements Parsable {
         return this._sharepointIds;
     }
     /**
-     * Gets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
+     * Gets the siteCollection property value. The siteCollection property
      * @return a siteCollection
      */
     @javax.annotation.Nullable
@@ -232,7 +231,7 @@ public class Site extends BaseItem implements Parsable {
         return this._sites;
     }
     /**
-     * Gets the termStore property value. The default termStore under this site.
+     * Gets the termStore property value. The termStore property
      * @return a store
      */
     @javax.annotation.Nullable
@@ -277,7 +276,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("termStores", this.getTermStores());
     }
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place in this site.
+     * Sets the analytics property value. The analytics property
      * @param value Value to set for the analytics property.
      * @return a void
      */
@@ -313,7 +312,7 @@ public class Site extends BaseItem implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the drive property value. The default drive (document library) for this site.
+     * Sets the drive property value. The drive property
      * @param value Value to set for the drive property.
      * @return a void
      */
@@ -367,7 +366,7 @@ public class Site extends BaseItem implements Parsable {
         this._lists = value;
     }
     /**
-     * Sets the onenote property value. Calls the OneNote service for notebook related operations.
+     * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      * @return a void
      */
@@ -394,7 +393,7 @@ public class Site extends BaseItem implements Parsable {
         this._permissions = value;
     }
     /**
-     * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */
@@ -403,7 +402,7 @@ public class Site extends BaseItem implements Parsable {
         this._root = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
@@ -412,7 +411,7 @@ public class Site extends BaseItem implements Parsable {
         this._sharepointIds = value;
     }
     /**
-     * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
+     * Sets the siteCollection property value. The siteCollection property
      * @param value Value to set for the siteCollection property.
      * @return a void
      */
@@ -430,7 +429,7 @@ public class Site extends BaseItem implements Parsable {
         this._sites = value;
     }
     /**
-     * Sets the termStore property value. The default termStore under this site.
+     * Sets the termStore property value. The termStore property
      * @param value Value to set for the termStore property.
      * @return a void
      */

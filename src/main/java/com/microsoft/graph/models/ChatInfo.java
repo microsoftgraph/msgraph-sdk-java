@@ -13,8 +13,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The unique identifier of a message in a Microsoft Teams channel. */
     private String _messageId;
-    /** The OdataType property */
-    private String _odataType;
     /** The ID of the reply message. */
     private String _replyChainMessageId;
     /** The unique identifier for a thread in Microsoft Teams. */
@@ -26,7 +24,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ChatInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.chatInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,9 +50,8 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("replyChainMessageId", (n) -> { currentObject.setReplyChainMessageId(n.getStringValue()); });
             this.put("threadId", (n) -> { currentObject.setThreadId(n.getStringValue()); });
         }};
@@ -67,14 +63,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMessageId() {
         return this._messageId;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the replyChainMessageId property value. The ID of the reply message.
@@ -101,7 +89,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("messageId", this.getMessageId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("replyChainMessageId", this.getReplyChainMessageId());
         writer.writeStringValue("threadId", this.getThreadId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,15 +110,6 @@ public class ChatInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMessageId(@javax.annotation.Nullable final String value) {
         this._messageId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the replyChainMessageId property value. The ID of the reply message.

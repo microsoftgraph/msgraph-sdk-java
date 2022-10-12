@@ -13,9 +13,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Number of children contained immediately within this container. */
     private Integer _childCount;
-    /** The OdataType property */
-    private String _odataType;
-    /** A collection of properties defining the recommended view for the folder. */
+    /** The view property */
     private FolderView _view;
     /**
      * Instantiates a new folder and sets the default values.
@@ -24,7 +22,6 @@ public class Folder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Folder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.folder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,22 +56,13 @@ public class Folder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Folder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("childCount", (n) -> { currentObject.setChildCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("view", (n) -> { currentObject.setView(n.getObjectValue(FolderView::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the view property value. A collection of properties defining the recommended view for the folder.
+     * Gets the view property value. The view property
      * @return a folderView
      */
     @javax.annotation.Nullable
@@ -90,7 +78,6 @@ public class Folder implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("childCount", this.getChildCount());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("view", this.getView());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -113,16 +100,7 @@ public class Folder implements AdditionalDataHolder, Parsable {
         this._childCount = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the view property value. A collection of properties defining the recommended view for the folder.
+     * Sets the view property value. The view property
      * @param value Value to set for the view property.
      * @return a void
      */

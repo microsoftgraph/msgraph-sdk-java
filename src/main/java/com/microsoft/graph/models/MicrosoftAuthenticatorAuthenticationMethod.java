@@ -11,7 +11,7 @@ import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
     private OffsetDateTime _createdDateTime;
-    /** The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In. */
+    /** The device property */
     private Device _device;
     /** Tags containing app metadata. */
     private String _deviceTag;
@@ -20,18 +20,17 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /** Numerical version of this instance of the Authenticator app. */
     private String _phoneAppVersion;
     /**
-     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
-        this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftAuthenticatorAuthenticationMethod
+     * @return a microsoftAuthenticatorAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +46,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         return this._createdDateTime;
     }
     /**
-     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Gets the device property value. The device property
      * @return a device
      */
     @javax.annotation.Nullable
@@ -118,7 +117,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         this._createdDateTime = value;
     }
     /**
-     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Sets the device property value. The device property
      * @param value Value to set for the device property.
      * @return a void
      */

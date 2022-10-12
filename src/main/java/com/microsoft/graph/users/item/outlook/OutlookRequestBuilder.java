@@ -1,12 +1,8 @@
 package com.microsoft.graph.users.item.outlook;
 
-import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.graph.users.item.outlook.mastercategories.item.OutlookCategoryItemRequestBuilder;
 import com.microsoft.graph.users.item.outlook.mastercategories.MasterCategoriesRequestBuilder;
-import com.microsoft.graph.users.item.outlook.supportedlanguages.SupportedLanguagesRequestBuilder;
-import com.microsoft.graph.users.item.outlook.supportedtimezones.SupportedTimeZonesRequestBuilder;
-import com.microsoft.graph.users.item.outlook.supportedtimezoneswithtimezonestandard.SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -20,7 +16,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the outlook property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/outlook */
 public class OutlookRequestBuilder {
     /** The masterCategories property */
     @javax.annotation.Nonnull
@@ -93,6 +89,38 @@ public class OutlookRequestBuilder {
         return requestInfo;
     }
     /**
+     * Update the navigation property outlook in users
+     * @param body 
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final OutlookUser body) throws URISyntaxException {
+        return createPatchRequestInformation(body, null);
+    }
+    /**
+     * Update the navigation property outlook in users
+     * @param body 
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final OutlookUser body, @javax.annotation.Nullable final java.util.function.Consumer<OutlookRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation() {{
+            httpMethod = HttpMethod.PATCH;
+        }};
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final OutlookRequestBuilderPatchRequestConfiguration requestConfig = new OutlookRequestBuilderPatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addRequestHeaders(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
      * Get outlook from users
      * @return a CompletableFuture of outlookUser
      */
@@ -100,11 +128,7 @@ public class OutlookRequestBuilder {
     public java.util.concurrent.CompletableFuture<OutlookUser> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookUser::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookUser::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<OutlookUser>() {{
                 this.completeExceptionally(ex);
@@ -120,11 +144,7 @@ public class OutlookRequestBuilder {
     public java.util.concurrent.CompletableFuture<OutlookUser> get(@javax.annotation.Nullable final java.util.function.Consumer<OutlookRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, OutlookUser::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, OutlookUser::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<OutlookUser>() {{
                 this.completeExceptionally(ex);
@@ -144,30 +164,38 @@ public class OutlookRequestBuilder {
         return new OutlookCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Provides operations to call the supportedLanguages method.
-     * @return a supportedLanguagesRequestBuilder
+     * Update the navigation property outlook in users
+     * @param body 
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public SupportedLanguagesRequestBuilder supportedLanguages() {
-        return new SupportedLanguagesRequestBuilder(pathParameters, requestAdapter);
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final OutlookUser body) {
+        try {
+            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
+        } catch (URISyntaxException ex) {
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
+        }
     }
     /**
-     * Provides operations to call the supportedTimeZones method.
-     * @return a supportedTimeZonesRequestBuilder
+     * Update the navigation property outlook in users
+     * @param body 
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public SupportedTimeZonesRequestBuilder supportedTimeZones() {
-        return new SupportedTimeZonesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the supportedTimeZones method.
-     * @param TimeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
-     * @return a supportedTimeZonesWithTimeZoneStandardRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SupportedTimeZonesWithTimeZoneStandardRequestBuilder supportedTimeZonesWithTimeZoneStandard(@javax.annotation.Nonnull final String timeZoneStandard) {
-        Objects.requireNonNull(timeZoneStandard);
-        return new SupportedTimeZonesWithTimeZoneStandardRequestBuilder(pathParameters, requestAdapter, timeZoneStandard);
+    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final OutlookUser body, @javax.annotation.Nullable final java.util.function.Consumer<OutlookRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null);
+        } catch (URISyntaxException ex) {
+            return new java.util.concurrent.CompletableFuture<Void>() {{
+                this.completeExceptionally(ex);
+            }};
+        }
     }
     /** Get outlook from users */
     public class OutlookRequestBuilderGetQueryParameters {
@@ -193,6 +221,22 @@ public class OutlookRequestBuilder {
          */
         @javax.annotation.Nullable
         public OutlookRequestBuilderGetRequestConfiguration() {
+        }
+    }
+    /** Configuration for the request such as headers, query parameters, and middleware options. */
+    public class OutlookRequestBuilderPatchRequestConfiguration {
+        /** Request headers */
+        @javax.annotation.Nullable
+        public HashMap<String, String> headers = new HashMap<>();
+        /** Request options */
+        @javax.annotation.Nullable
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /**
+         * Instantiates a new outlookRequestBuilderPatchRequestConfiguration and sets the default values.
+         * @return a void
+         */
+        @javax.annotation.Nullable
+        public OutlookRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

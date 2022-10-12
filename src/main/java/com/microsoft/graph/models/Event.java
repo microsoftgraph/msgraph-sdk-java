@@ -15,13 +15,13 @@ public class Event extends OutlookItem implements Parsable {
     private java.util.List<Attachment> _attachments;
     /** The collection of attendees for the event. */
     private java.util.List<Attendee> _attendees;
-    /** The body of the message associated with the event. It can be in HTML or text format. */
+    /** The body property */
     private ItemBody _body;
     /** The preview of the message associated with the event. It is in text format. */
     private String _bodyPreview;
-    /** The calendar that contains the event. Navigation property. Read-only. */
+    /** The calendar property */
     private Calendar _calendar;
-    /** The date, time, and time zone that the event ends. By default, the end time is in UTC. */
+    /** The end property */
     private DateTimeTimeZone _end;
     /** The collection of open extensions defined for the event. Nullable. */
     private java.util.List<Extension> _extensions;
@@ -94,18 +94,17 @@ public class Event extends OutlookItem implements Parsable {
     /** The webLink property */
     private String _webLink;
     /**
-     * Instantiates a new Event and sets the default values.
+     * Instantiates a new event and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Event() {
         super();
-        this.setOdataType("#microsoft.graph.event");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Event
+     * @return a event
      */
     @javax.annotation.Nonnull
     public static Event createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -137,7 +136,7 @@ public class Event extends OutlookItem implements Parsable {
         return this._attendees;
     }
     /**
-     * Gets the body property value. The body of the message associated with the event. It can be in HTML or text format.
+     * Gets the body property value. The body property
      * @return a itemBody
      */
     @javax.annotation.Nullable
@@ -153,7 +152,7 @@ public class Event extends OutlookItem implements Parsable {
         return this._bodyPreview;
     }
     /**
-     * Gets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
+     * Gets the calendar property value. The calendar property
      * @return a calendar
      */
     @javax.annotation.Nullable
@@ -161,7 +160,7 @@ public class Event extends OutlookItem implements Parsable {
         return this._calendar;
     }
     /**
-     * Gets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
+     * Gets the end property value. The end property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -580,7 +579,7 @@ public class Event extends OutlookItem implements Parsable {
         this._attendees = value;
     }
     /**
-     * Sets the body property value. The body of the message associated with the event. It can be in HTML or text format.
+     * Sets the body property value. The body property
      * @param value Value to set for the body property.
      * @return a void
      */
@@ -598,7 +597,7 @@ public class Event extends OutlookItem implements Parsable {
         this._bodyPreview = value;
     }
     /**
-     * Sets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
+     * Sets the calendar property value. The calendar property
      * @param value Value to set for the calendar property.
      * @return a void
      */
@@ -607,7 +606,7 @@ public class Event extends OutlookItem implements Parsable {
         this._calendar = value;
     }
     /**
-     * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
+     * Sets the end property value. The end property
      * @param value Value to set for the end property.
      * @return a void
      */

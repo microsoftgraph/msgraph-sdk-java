@@ -15,8 +15,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     private byte[] _content;
     /** The height of the thumbnail, in pixels. */
     private Integer _height;
-    /** The OdataType property */
-    private String _odataType;
     /** The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested. */
     private String _sourceItemId;
     /** The URL used to fetch the thumbnail content. */
@@ -30,7 +28,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.thumbnail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,10 +62,9 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Thumbnail currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
             this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceItemId", (n) -> { currentObject.setSourceItemId(n.getStringValue()); });
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
             this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
@@ -81,14 +77,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Integer getHeight() {
         return this._height;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
@@ -124,7 +112,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
         writer.writeIntegerValue("height", this.getHeight());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourceItemId", this.getSourceItemId());
         writer.writeStringValue("url", this.getUrl());
         writer.writeIntegerValue("width", this.getWidth());
@@ -156,15 +143,6 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.

@@ -1,10 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeleteUserFromSharedAppleDeviceActionResult;
-import com.microsoft.graph.models.LocateDeviceActionResult;
-import com.microsoft.graph.models.RemoteLockActionResult;
-import com.microsoft.graph.models.ResetPasscodeActionResult;
-import com.microsoft.graph.models.WindowsDefenderScanActionResult;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -24,8 +19,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Time the action state was last updated */
     private OffsetDateTime _lastUpdatedDateTime;
-    /** The OdataType property */
-    private String _odataType;
     /** Time the action was initiated */
     private OffsetDateTime _startDateTime;
     /**
@@ -35,7 +28,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,17 +37,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static DeviceActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.deleteUserFromSharedAppleDeviceActionResult": return new DeleteUserFromSharedAppleDeviceActionResult();
-                case "#microsoft.graph.locateDeviceActionResult": return new LocateDeviceActionResult();
-                case "#microsoft.graph.remoteLockActionResult": return new RemoteLockActionResult();
-                case "#microsoft.graph.resetPasscodeActionResult": return new ResetPasscodeActionResult();
-                case "#microsoft.graph.windowsDefenderScanActionResult": return new WindowsDefenderScanActionResult();
-            }
-        }
         return new DeviceActionResult();
     }
     /**
@@ -89,11 +70,10 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceActionResult currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
             this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
             this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
@@ -104,14 +84,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this._lastUpdatedDateTime;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
@@ -132,7 +104,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("actionName", this.getActionName());
         writer.writeEnumValue("actionState", this.getActionState());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -171,15 +142,6 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the startDateTime property value. Time the action was initiated

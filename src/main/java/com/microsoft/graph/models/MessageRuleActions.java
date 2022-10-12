@@ -23,12 +23,10 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     private java.util.List<Recipient> _forwardTo;
     /** Indicates whether a message should be marked as read. */
     private Boolean _markAsRead;
-    /** Sets the importance of the message, which can be: low, normal, high. */
+    /** The markImportance property */
     private Importance _markImportance;
     /** The ID of the folder that a message will be moved to. */
     private String _moveToFolder;
-    /** The OdataType property */
-    private String _odataType;
     /** Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder. */
     private Boolean _permanentDelete;
     /** The email addresses to which a message should be redirected. */
@@ -42,7 +40,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRuleActions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,7 +90,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRuleActions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("assignCategories", (n) -> { currentObject.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("copyToFolder", (n) -> { currentObject.setCopyToFolder(n.getStringValue()); });
             this.put("delete", (n) -> { currentObject.setDelete(n.getBooleanValue()); });
@@ -102,7 +99,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
             this.put("markAsRead", (n) -> { currentObject.setMarkAsRead(n.getBooleanValue()); });
             this.put("markImportance", (n) -> { currentObject.setMarkImportance(n.getEnumValue(Importance.class)); });
             this.put("moveToFolder", (n) -> { currentObject.setMoveToFolder(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("permanentDelete", (n) -> { currentObject.setPermanentDelete(n.getBooleanValue()); });
             this.put("redirectTo", (n) -> { currentObject.setRedirectTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
             this.put("stopProcessingRules", (n) -> { currentObject.setStopProcessingRules(n.getBooleanValue()); });
@@ -133,7 +129,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
         return this._markAsRead;
     }
     /**
-     * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
+     * Gets the markImportance property value. The markImportance property
      * @return a importance
      */
     @javax.annotation.Nullable
@@ -147,14 +143,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMoveToFolder() {
         return this._moveToFolder;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
@@ -196,7 +184,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("markAsRead", this.getMarkAsRead());
         writer.writeEnumValue("markImportance", this.getMarkImportance());
         writer.writeStringValue("moveToFolder", this.getMoveToFolder());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("permanentDelete", this.getPermanentDelete());
         writer.writeCollectionOfObjectValues("redirectTo", this.getRedirectTo());
         writer.writeBooleanValue("stopProcessingRules", this.getStopProcessingRules());
@@ -266,7 +253,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
         this._markAsRead = value;
     }
     /**
-     * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
+     * Sets the markImportance property value. The markImportance property
      * @param value Value to set for the markImportance property.
      * @return a void
      */
@@ -282,15 +269,6 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMoveToFolder(@javax.annotation.Nullable final String value) {
         this._moveToFolder = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.

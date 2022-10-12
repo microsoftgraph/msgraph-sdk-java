@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;
@@ -31,25 +30,24 @@ public class WorkbookTable extends Entity implements Parsable {
     private Boolean _showHeaders;
     /** Indicates whether the total row is visible or not. This value can be set to show or remove the total row. */
     private Boolean _showTotals;
-    /** Represents the sorting for the table. Read-only. */
+    /** The sort property */
     private WorkbookTableSort _sort;
     /** Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified. */
     private String _style;
-    /** The worksheet containing the current table. Read-only. */
+    /** The worksheet property */
     private WorkbookWorksheet _worksheet;
     /**
-     * Instantiates a new workbookTable and sets the default values.
+     * Instantiates a new WorkbookTable and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public WorkbookTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookTable
+     * @return a WorkbookTable
      */
     @javax.annotation.Nonnull
     public static WorkbookTable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -169,7 +167,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this._showTotals;
     }
     /**
-     * Gets the sort property value. Represents the sorting for the table. Read-only.
+     * Gets the sort property value. The sort property
      * @return a workbookTableSort
      */
     @javax.annotation.Nullable
@@ -185,7 +183,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this._style;
     }
     /**
-     * Gets the worksheet property value. The worksheet containing the current table. Read-only.
+     * Gets the worksheet property value. The worksheet property
      * @return a workbookWorksheet
      */
     @javax.annotation.Nullable
@@ -316,7 +314,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this._showTotals = value;
     }
     /**
-     * Sets the sort property value. Represents the sorting for the table. Read-only.
+     * Sets the sort property value. The sort property
      * @param value Value to set for the sort property.
      * @return a void
      */
@@ -334,7 +332,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this._style = value;
     }
     /**
-     * Sets the worksheet property value. The worksheet containing the current table. Read-only.
+     * Sets the worksheet property value. The worksheet property
      * @param value Value to set for the worksheet property.
      * @return a void
      */

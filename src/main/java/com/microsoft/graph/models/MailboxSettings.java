@@ -13,23 +13,21 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Folder ID of an archive folder for the user. */
     private String _archiveFolder;
-    /** Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user. */
+    /** The automaticRepliesSetting property */
     private AutomaticRepliesSetting _automaticRepliesSetting;
     /** The date format for the user's mailbox. */
     private String _dateFormat;
-    /** If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. */
+    /** The delegateMeetingMessageDeliveryOptions property */
     private DelegateMeetingMessageDeliveryOptions _delegateMeetingMessageDeliveryOptions;
-    /** The locale information for the user, including the preferred language and country/region. */
+    /** The language property */
     private LocaleInfo _language;
-    /** The OdataType property */
-    private String _odataType;
     /** The time format for the user's mailbox. */
     private String _timeFormat;
     /** The default time zone for the user's mailbox. */
     private String _timeZone;
     /** The userPurpose property */
     private UserPurpose _userPurpose;
-    /** The days of the week and hours in a specific time zone that the user works. */
+    /** The workingHours property */
     private WorkingHours _workingHours;
     /**
      * Instantiates a new mailboxSettings and sets the default values.
@@ -38,7 +36,6 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mailboxSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +64,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._archiveFolder;
     }
     /**
-     * Gets the automaticRepliesSetting property value. Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
+     * Gets the automaticRepliesSetting property value. The automaticRepliesSetting property
      * @return a automaticRepliesSetting
      */
     @javax.annotation.Nullable
@@ -83,7 +80,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._dateFormat;
     }
     /**
-     * Gets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     * Gets the delegateMeetingMessageDeliveryOptions property value. The delegateMeetingMessageDeliveryOptions property
      * @return a delegateMeetingMessageDeliveryOptions
      */
     @javax.annotation.Nullable
@@ -97,13 +94,12 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailboxSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("archiveFolder", (n) -> { currentObject.setArchiveFolder(n.getStringValue()); });
             this.put("automaticRepliesSetting", (n) -> { currentObject.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
             this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
             this.put("delegateMeetingMessageDeliveryOptions", (n) -> { currentObject.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
             this.put("language", (n) -> { currentObject.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("timeFormat", (n) -> { currentObject.setTimeFormat(n.getStringValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
             this.put("userPurpose", (n) -> { currentObject.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
@@ -111,20 +107,12 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the language property value. The locale information for the user, including the preferred language and country/region.
+     * Gets the language property value. The language property
      * @return a localeInfo
      */
     @javax.annotation.Nullable
     public LocaleInfo getLanguage() {
         return this._language;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the timeFormat property value. The time format for the user's mailbox.
@@ -151,7 +139,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         return this._userPurpose;
     }
     /**
-     * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works.
+     * Gets the workingHours property value. The workingHours property
      * @return a workingHours
      */
     @javax.annotation.Nullable
@@ -171,7 +159,6 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("dateFormat", this.getDateFormat());
         writer.writeEnumValue("delegateMeetingMessageDeliveryOptions", this.getDelegateMeetingMessageDeliveryOptions());
         writer.writeObjectValue("language", this.getLanguage());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("timeFormat", this.getTimeFormat());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeEnumValue("userPurpose", this.getUserPurpose());
@@ -197,7 +184,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._archiveFolder = value;
     }
     /**
-     * Sets the automaticRepliesSetting property value. Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
+     * Sets the automaticRepliesSetting property value. The automaticRepliesSetting property
      * @param value Value to set for the automaticRepliesSetting property.
      * @return a void
      */
@@ -215,7 +202,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._dateFormat = value;
     }
     /**
-     * Sets the delegateMeetingMessageDeliveryOptions property value. If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     * Sets the delegateMeetingMessageDeliveryOptions property value. The delegateMeetingMessageDeliveryOptions property
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
      * @return a void
      */
@@ -224,22 +211,13 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._delegateMeetingMessageDeliveryOptions = value;
     }
     /**
-     * Sets the language property value. The locale information for the user, including the preferred language and country/region.
+     * Sets the language property value. The language property
      * @param value Value to set for the language property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._language = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the timeFormat property value. The time format for the user's mailbox.
@@ -269,7 +247,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
         this._userPurpose = value;
     }
     /**
-     * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works.
+     * Sets the workingHours property value. The workingHours property
      * @param value Value to set for the workingHours property.
      * @return a void
      */

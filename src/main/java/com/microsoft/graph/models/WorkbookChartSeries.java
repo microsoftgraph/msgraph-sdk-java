@@ -7,9 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookChartSeries extends Entity implements Parsable {
-    /** Represents the formatting of a chart series, which includes fill and line formatting. Read-only. */
+    /** The format property */
     private WorkbookChartSeriesFormat _format;
     /** Represents the name of a series in a chart. */
     private String _name;
@@ -22,7 +21,6 @@ public class WorkbookChartSeries extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartSeries() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartSeries");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +46,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartSeriesFormat
      */
     @javax.annotation.Nullable
@@ -85,7 +83,7 @@ public class WorkbookChartSeries extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("points", this.getPoints());
     }
     /**
-     * Sets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */

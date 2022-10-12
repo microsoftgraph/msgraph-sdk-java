@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
-    /** Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other. */
+    /** The classifyAs property */
     private InferenceClassificationType _classifyAs;
-    /** The email address information of the sender for whom the override is created. */
+    /** The senderEmailAddress property */
     private EmailAddress _senderEmailAddress;
     /**
      * Instantiates a new inferenceClassificationOverride and sets the default values.
@@ -20,7 +19,6 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
     @javax.annotation.Nullable
     public InferenceClassificationOverride() {
         super();
-        this.setOdataType("#microsoft.graph.inferenceClassificationOverride");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,7 +31,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         return new InferenceClassificationOverride();
     }
     /**
-     * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
+     * Gets the classifyAs property value. The classifyAs property
      * @return a inferenceClassificationType
      */
     @javax.annotation.Nullable
@@ -53,7 +51,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         }};
     }
     /**
-     * Gets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
+     * Gets the senderEmailAddress property value. The senderEmailAddress property
      * @return a emailAddress
      */
     @javax.annotation.Nullable
@@ -73,7 +71,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         writer.writeObjectValue("senderEmailAddress", this.getSenderEmailAddress());
     }
     /**
-     * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
+     * Sets the classifyAs property value. The classifyAs property
      * @param value Value to set for the classifyAs property.
      * @return a void
      */
@@ -82,7 +80,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         this._classifyAs = value;
     }
     /**
-     * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
+     * Sets the senderEmailAddress property value. The senderEmailAddress property
      * @param value Value to set for the senderEmailAddress property.
      * @return a void
      */

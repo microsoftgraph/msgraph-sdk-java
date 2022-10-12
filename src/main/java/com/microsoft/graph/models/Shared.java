@@ -12,13 +12,11 @@ import java.util.Objects;
 public class Shared implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** The identity of the owner of the shared item. Read-only. */
+    /** The owner property */
     private IdentitySet _owner;
     /** Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only. */
     private String _scope;
-    /** The identity of the user who shared the item. Read-only. */
+    /** The sharedBy property */
     private IdentitySet _sharedBy;
     /** The UTC date and time when the item was shared. Read-only. */
     private OffsetDateTime _sharedDateTime;
@@ -29,7 +27,6 @@ public class Shared implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Shared() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.shared");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,8 +53,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Shared currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -65,15 +61,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the owner property value. The identity of the owner of the shared item. Read-only.
+     * Gets the owner property value. The owner property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -89,7 +77,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
         return this._scope;
     }
     /**
-     * Gets the sharedBy property value. The identity of the user who shared the item. Read-only.
+     * Gets the sharedBy property value. The sharedBy property
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -112,7 +100,6 @@ public class Shared implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("owner", this.getOwner());
         writer.writeStringValue("scope", this.getScope());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
@@ -129,16 +116,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the owner property value. The identity of the owner of the shared item. Read-only.
+     * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
      * @return a void
      */
@@ -156,7 +134,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
         this._scope = value;
     }
     /**
-     * Sets the sharedBy property value. The identity of the user who shared the item. Read-only.
+     * Sets the sharedBy property value. The sharedBy property
      * @param value Value to set for the sharedBy property.
      * @return a void
      */

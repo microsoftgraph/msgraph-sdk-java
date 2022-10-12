@@ -17,10 +17,8 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowGiphy;
     /** If set to true, enables users to include stickers and memes. */
     private Boolean _allowStickersAndMemes;
-    /** Giphy content rating. Possible values are: moderate, strict. */
+    /** The giphyContentRating property */
     private GiphyRatingType _giphyContentRating;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new teamFunSettings and sets the default values.
      * @return a void
@@ -28,7 +26,6 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamFunSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamFunSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,29 +76,20 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamFunSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowCustomMemes", (n) -> { currentObject.setAllowCustomMemes(n.getBooleanValue()); });
             this.put("allowGiphy", (n) -> { currentObject.setAllowGiphy(n.getBooleanValue()); });
             this.put("allowStickersAndMemes", (n) -> { currentObject.setAllowStickersAndMemes(n.getBooleanValue()); });
             this.put("giphyContentRating", (n) -> { currentObject.setGiphyContentRating(n.getEnumValue(GiphyRatingType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Gets the giphyContentRating property value. The giphyContentRating property
      * @return a giphyRatingType
      */
     @javax.annotation.Nullable
     public GiphyRatingType getGiphyContentRating() {
         return this._giphyContentRating;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -115,7 +103,6 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowGiphy", this.getAllowGiphy());
         writer.writeBooleanValue("allowStickersAndMemes", this.getAllowStickersAndMemes());
         writer.writeEnumValue("giphyContentRating", this.getGiphyContentRating());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -155,21 +142,12 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
         this._allowStickersAndMemes = value;
     }
     /**
-     * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Sets the giphyContentRating property value. The giphyContentRating property
      * @param value Value to set for the giphyContentRating property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setGiphyContentRating(@javax.annotation.Nullable final GiphyRatingType value) {
         this._giphyContentRating = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

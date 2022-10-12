@@ -2,8 +2,6 @@ package com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresource
 
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.LinkedResourceCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.linkedresources.count.CountRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -17,13 +15,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity. */
+/** Builds and executes requests for operations under /users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/linkedResources */
 public class LinkedResourcesRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -130,11 +123,7 @@ public class LinkedResourcesRequestBuilder {
     public java.util.concurrent.CompletableFuture<LinkedResourceCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, LinkedResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, LinkedResourceCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<LinkedResourceCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -150,11 +139,7 @@ public class LinkedResourcesRequestBuilder {
     public java.util.concurrent.CompletableFuture<LinkedResourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<LinkedResourcesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, LinkedResourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, LinkedResourceCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<LinkedResourceCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -170,11 +155,7 @@ public class LinkedResourcesRequestBuilder {
     public java.util.concurrent.CompletableFuture<LinkedResource> post(@javax.annotation.Nonnull final LinkedResource body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, LinkedResource::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, LinkedResource::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<LinkedResource>() {{
                 this.completeExceptionally(ex);
@@ -192,11 +173,7 @@ public class LinkedResourcesRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, LinkedResource::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, LinkedResource::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<LinkedResource>() {{
                 this.completeExceptionally(ex);

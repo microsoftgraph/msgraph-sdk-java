@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,32 +8,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItemVersion extends BaseItemVersion implements Parsable {
-    /** A collection of the fields and values for this version of the list item. */
+    /** The fields property */
     private FieldValueSet _fields;
     /**
-     * Instantiates a new ListItemVersion and sets the default values.
+     * Instantiates a new listItemVersion and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public ListItemVersion() {
         super();
-        this.setOdataType("#microsoft.graph.listItemVersion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ListItemVersion
+     * @return a listItemVersion
      */
     @javax.annotation.Nonnull
     public static ListItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.documentSetVersion": return new DocumentSetVersion();
-            }
-        }
         return new ListItemVersion();
     }
     /**
@@ -49,7 +40,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
         }};
     }
     /**
-     * Gets the fields property value. A collection of the fields and values for this version of the list item.
+     * Gets the fields property value. The fields property
      * @return a fieldValueSet
      */
     @javax.annotation.Nullable
@@ -68,7 +59,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
         writer.writeObjectValue("fields", this.getFields());
     }
     /**
-     * Sets the fields property value. A collection of the fields and values for this version of the list item.
+     * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
      * @return a void
      */

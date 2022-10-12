@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OpenShiftItem;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -22,7 +21,6 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     @javax.annotation.Nullable
     public ShiftItem() {
         super();
-        this.setOdataType("#microsoft.graph.shiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,13 +30,6 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     @javax.annotation.Nonnull
     public static ShiftItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.openShiftItem": return new OpenShiftItem();
-            }
-        }
         return new ShiftItem();
     }
     /**

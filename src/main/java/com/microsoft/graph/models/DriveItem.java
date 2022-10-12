@@ -7,13 +7,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class DriveItem extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place on this item. */
+    /** The analytics property */
     private ItemAnalytics _analytics;
-    /** Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal. */
+    /** The audio property */
     private Audio _audio;
-    /** Bundle metadata, if the item is a bundle. Read-only. */
+    /** The bundle property */
     private Bundle _bundle;
     /** Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable. */
     private java.util.List<DriveItem> _children;
@@ -21,45 +20,45 @@ public class DriveItem extends BaseItem implements Parsable {
     private byte[] _content;
     /** An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only. */
     private String _cTag;
-    /** Information about the deleted state of the item. Read-only. */
+    /** The deleted property */
     private Deleted _deleted;
-    /** File metadata, if the item is a file. Read-only. */
+    /** The file property */
     private File _file;
-    /** File system information on client. Read-write. */
+    /** The fileSystemInfo property */
     private FileSystemInfo _fileSystemInfo;
-    /** Folder metadata, if the item is a folder. Read-only. */
+    /** The folder property */
     private Folder _folder;
-    /** Image metadata, if the item is an image. Read-only. */
+    /** The image property */
     private Image _image;
-    /** For drives in SharePoint, the associated document library list item. Read-only. Nullable. */
+    /** The listItem property */
     private ListItem _listItem;
-    /** Location metadata, if the item has location data. Read-only. */
+    /** The location property */
     private GeoCoordinates _location;
-    /** Malware metadata, if the item was detected to contain malware. Read-only. */
+    /** The malware property */
     private Malware _malware;
-    /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
+    /** The package property */
     private Package_escaped _package_escaped;
-    /** If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. */
+    /** The pendingOperations property */
     private PendingOperations _pendingOperations;
     /** The set of permissions for the item. Read-only. Nullable. */
     private java.util.List<Permission> _permissions;
-    /** Photo metadata, if the item is a photo. Read-only. */
+    /** The photo property */
     private Photo _photo;
-    /** Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only. */
+    /** The publication property */
     private PublicationFacet _publication;
-    /** Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. */
+    /** The remoteItem property */
     private RemoteItem _remoteItem;
-    /** If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. */
+    /** The root property */
     private Root _root;
-    /** Search metadata, if the item is from a search result. Read-only. */
+    /** The searchResult property */
     private SearchResult _searchResult;
-    /** Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
+    /** The shared property */
     private Shared _shared;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /** The sharepointIds property */
     private SharepointIds _sharepointIds;
     /** Size of the item in bytes. Read-only. */
     private Long _size;
-    /** If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /** The specialFolder property */
     private SpecialFolder _specialFolder;
     /** The set of subscriptions on the item. Only supported on the root of a drive. */
     private java.util.List<Subscription> _subscriptions;
@@ -67,11 +66,11 @@ public class DriveItem extends BaseItem implements Parsable {
     private java.util.List<ThumbnailSet> _thumbnails;
     /** The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable. */
     private java.util.List<DriveItemVersion> _versions;
-    /** Video metadata, if the item is a video. Read-only. */
+    /** The video property */
     private Video _video;
     /** WebDAV compatible URL for the item. */
     private String _webDavUrl;
-    /** For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable. */
+    /** The workbook property */
     private Workbook _workbook;
     /**
      * Instantiates a new driveItem and sets the default values.
@@ -80,7 +79,6 @@ public class DriveItem extends BaseItem implements Parsable {
     @javax.annotation.Nullable
     public DriveItem() {
         super();
-        this.setOdataType("#microsoft.graph.driveItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,7 +91,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return new DriveItem();
     }
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place on this item.
+     * Gets the analytics property value. The analytics property
      * @return a itemAnalytics
      */
     @javax.annotation.Nullable
@@ -101,7 +99,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._analytics;
     }
     /**
-     * Gets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     * Gets the audio property value. The audio property
      * @return a audio
      */
     @javax.annotation.Nullable
@@ -109,7 +107,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._audio;
     }
     /**
-     * Gets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
+     * Gets the bundle property value. The bundle property
      * @return a bundle
      */
     @javax.annotation.Nullable
@@ -141,7 +139,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._cTag;
     }
     /**
-     * Gets the deleted property value. Information about the deleted state of the item. Read-only.
+     * Gets the deleted property value. The deleted property
      * @return a deleted
      */
     @javax.annotation.Nullable
@@ -191,7 +189,7 @@ public class DriveItem extends BaseItem implements Parsable {
         }};
     }
     /**
-     * Gets the file property value. File metadata, if the item is a file. Read-only.
+     * Gets the file property value. The file property
      * @return a file
      */
     @javax.annotation.Nullable
@@ -199,7 +197,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._file;
     }
     /**
-     * Gets the fileSystemInfo property value. File system information on client. Read-write.
+     * Gets the fileSystemInfo property value. The fileSystemInfo property
      * @return a fileSystemInfo
      */
     @javax.annotation.Nullable
@@ -207,7 +205,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._fileSystemInfo;
     }
     /**
-     * Gets the folder property value. Folder metadata, if the item is a folder. Read-only.
+     * Gets the folder property value. The folder property
      * @return a folder
      */
     @javax.annotation.Nullable
@@ -215,7 +213,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._folder;
     }
     /**
-     * Gets the image property value. Image metadata, if the item is an image. Read-only.
+     * Gets the image property value. The image property
      * @return a image
      */
     @javax.annotation.Nullable
@@ -223,7 +221,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._image;
     }
     /**
-     * Gets the listItem property value. For drives in SharePoint, the associated document library list item. Read-only. Nullable.
+     * Gets the listItem property value. The listItem property
      * @return a listItem
      */
     @javax.annotation.Nullable
@@ -231,7 +229,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._listItem;
     }
     /**
-     * Gets the location property value. Location metadata, if the item has location data. Read-only.
+     * Gets the location property value. The location property
      * @return a geoCoordinates
      */
     @javax.annotation.Nullable
@@ -239,7 +237,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._location;
     }
     /**
-     * Gets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
+     * Gets the malware property value. The malware property
      * @return a malware
      */
     @javax.annotation.Nullable
@@ -247,7 +245,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._malware;
     }
     /**
-     * Gets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     * Gets the package property value. The package property
      * @return a package_escaped
      */
     @javax.annotation.Nullable
@@ -255,7 +253,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._package_escaped;
     }
     /**
-     * Gets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * Gets the pendingOperations property value. The pendingOperations property
      * @return a pendingOperations
      */
     @javax.annotation.Nullable
@@ -271,7 +269,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._permissions;
     }
     /**
-     * Gets the photo property value. Photo metadata, if the item is a photo. Read-only.
+     * Gets the photo property value. The photo property
      * @return a photo
      */
     @javax.annotation.Nullable
@@ -279,7 +277,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._photo;
     }
     /**
-     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Gets the publication property value. The publication property
      * @return a publicationFacet
      */
     @javax.annotation.Nullable
@@ -287,7 +285,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._publication;
     }
     /**
-     * Gets the remoteItem property value. Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
+     * Gets the remoteItem property value. The remoteItem property
      * @return a remoteItem
      */
     @javax.annotation.Nullable
@@ -295,7 +293,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._remoteItem;
     }
     /**
-     * Gets the root property value. If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
+     * Gets the root property value. The root property
      * @return a root
      */
     @javax.annotation.Nullable
@@ -303,7 +301,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._root;
     }
     /**
-     * Gets the searchResult property value. Search metadata, if the item is from a search result. Read-only.
+     * Gets the searchResult property value. The searchResult property
      * @return a searchResult
      */
     @javax.annotation.Nullable
@@ -311,7 +309,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._searchResult;
     }
     /**
-     * Gets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Gets the shared property value. The shared property
      * @return a shared
      */
     @javax.annotation.Nullable
@@ -319,7 +317,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._shared;
     }
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
     @javax.annotation.Nullable
@@ -335,7 +333,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._size;
     }
     /**
-     * Gets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
+     * Gets the specialFolder property value. The specialFolder property
      * @return a specialFolder
      */
     @javax.annotation.Nullable
@@ -367,7 +365,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._versions;
     }
     /**
-     * Gets the video property value. Video metadata, if the item is a video. Read-only.
+     * Gets the video property value. The video property
      * @return a video
      */
     @javax.annotation.Nullable
@@ -383,7 +381,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this._webDavUrl;
     }
     /**
-     * Gets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Gets the workbook property value. The workbook property
      * @return a workbook
      */
     @javax.annotation.Nullable
@@ -433,7 +431,7 @@ public class DriveItem extends BaseItem implements Parsable {
         writer.writeObjectValue("workbook", this.getWorkbook());
     }
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place on this item.
+     * Sets the analytics property value. The analytics property
      * @param value Value to set for the analytics property.
      * @return a void
      */
@@ -442,7 +440,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._analytics = value;
     }
     /**
-     * Sets the audio property value. Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     * Sets the audio property value. The audio property
      * @param value Value to set for the audio property.
      * @return a void
      */
@@ -451,7 +449,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._audio = value;
     }
     /**
-     * Sets the bundle property value. Bundle metadata, if the item is a bundle. Read-only.
+     * Sets the bundle property value. The bundle property
      * @param value Value to set for the bundle property.
      * @return a void
      */
@@ -487,7 +485,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._cTag = value;
     }
     /**
-     * Sets the deleted property value. Information about the deleted state of the item. Read-only.
+     * Sets the deleted property value. The deleted property
      * @param value Value to set for the deleted property.
      * @return a void
      */
@@ -496,7 +494,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._deleted = value;
     }
     /**
-     * Sets the file property value. File metadata, if the item is a file. Read-only.
+     * Sets the file property value. The file property
      * @param value Value to set for the file property.
      * @return a void
      */
@@ -505,7 +503,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._file = value;
     }
     /**
-     * Sets the fileSystemInfo property value. File system information on client. Read-write.
+     * Sets the fileSystemInfo property value. The fileSystemInfo property
      * @param value Value to set for the fileSystemInfo property.
      * @return a void
      */
@@ -514,7 +512,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._fileSystemInfo = value;
     }
     /**
-     * Sets the folder property value. Folder metadata, if the item is a folder. Read-only.
+     * Sets the folder property value. The folder property
      * @param value Value to set for the folder property.
      * @return a void
      */
@@ -523,7 +521,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._folder = value;
     }
     /**
-     * Sets the image property value. Image metadata, if the item is an image. Read-only.
+     * Sets the image property value. The image property
      * @param value Value to set for the image property.
      * @return a void
      */
@@ -532,7 +530,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._image = value;
     }
     /**
-     * Sets the listItem property value. For drives in SharePoint, the associated document library list item. Read-only. Nullable.
+     * Sets the listItem property value. The listItem property
      * @param value Value to set for the listItem property.
      * @return a void
      */
@@ -541,7 +539,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._listItem = value;
     }
     /**
-     * Sets the location property value. Location metadata, if the item has location data. Read-only.
+     * Sets the location property value. The location property
      * @param value Value to set for the location property.
      * @return a void
      */
@@ -550,7 +548,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._location = value;
     }
     /**
-     * Sets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
+     * Sets the malware property value. The malware property
      * @param value Value to set for the malware property.
      * @return a void
      */
@@ -559,7 +557,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._malware = value;
     }
     /**
-     * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     * Sets the package property value. The package property
      * @param value Value to set for the package property.
      * @return a void
      */
@@ -568,7 +566,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._package_escaped = value;
     }
     /**
-     * Sets the pendingOperations property value. If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * Sets the pendingOperations property value. The pendingOperations property
      * @param value Value to set for the pendingOperations property.
      * @return a void
      */
@@ -586,7 +584,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._permissions = value;
     }
     /**
-     * Sets the photo property value. Photo metadata, if the item is a photo. Read-only.
+     * Sets the photo property value. The photo property
      * @param value Value to set for the photo property.
      * @return a void
      */
@@ -595,7 +593,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._photo = value;
     }
     /**
-     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Sets the publication property value. The publication property
      * @param value Value to set for the publication property.
      * @return a void
      */
@@ -604,7 +602,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._publication = value;
     }
     /**
-     * Sets the remoteItem property value. Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
+     * Sets the remoteItem property value. The remoteItem property
      * @param value Value to set for the remoteItem property.
      * @return a void
      */
@@ -613,7 +611,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._remoteItem = value;
     }
     /**
-     * Sets the root property value. If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
+     * Sets the root property value. The root property
      * @param value Value to set for the root property.
      * @return a void
      */
@@ -622,7 +620,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._root = value;
     }
     /**
-     * Sets the searchResult property value. Search metadata, if the item is from a search result. Read-only.
+     * Sets the searchResult property value. The searchResult property
      * @param value Value to set for the searchResult property.
      * @return a void
      */
@@ -631,7 +629,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._searchResult = value;
     }
     /**
-     * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Sets the shared property value. The shared property
      * @param value Value to set for the shared property.
      * @return a void
      */
@@ -640,7 +638,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._shared = value;
     }
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
@@ -658,7 +656,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._size = value;
     }
     /**
-     * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
+     * Sets the specialFolder property value. The specialFolder property
      * @param value Value to set for the specialFolder property.
      * @return a void
      */
@@ -694,7 +692,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._versions = value;
     }
     /**
-     * Sets the video property value. Video metadata, if the item is a video. Read-only.
+     * Sets the video property value. The video property
      * @param value Value to set for the video property.
      * @return a void
      */
@@ -712,7 +710,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this._webDavUrl = value;
     }
     /**
-     * Sets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Sets the workbook property value. The workbook property
      * @param value Value to set for the workbook property.
      * @return a void
      */

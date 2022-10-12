@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartDataLabels extends Entity implements Parsable {
-    /** Represents the format of chart data labels, which includes fill and font formatting. Read-only. */
+    /** The format property */
     private WorkbookChartDataLabelFormat _format;
     /** DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout. */
     private String _position;
@@ -33,7 +33,6 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartDataLabels() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartDataLabels");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +64,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartDataLabelFormat
      */
     @javax.annotation.Nullable
@@ -156,7 +155,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
         writer.writeBooleanValue("showValue", this.getShowValue());
     }
     /**
-     * Sets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */

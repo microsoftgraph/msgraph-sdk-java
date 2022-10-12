@@ -33,8 +33,6 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     private Boolean _allowPivotTables;
     /** Represents the worksheet protection option of allowing using sort feature. */
     private Boolean _allowSort;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
      * @return a void
@@ -42,7 +40,6 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nullable
     public WorkbookWorksheetProtectionOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtectionOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -157,7 +154,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookWorksheetProtectionOptions currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("allowAutoFilter", (n) -> { currentObject.setAllowAutoFilter(n.getBooleanValue()); });
             this.put("allowDeleteColumns", (n) -> { currentObject.setAllowDeleteColumns(n.getBooleanValue()); });
             this.put("allowDeleteRows", (n) -> { currentObject.setAllowDeleteRows(n.getBooleanValue()); });
@@ -169,16 +166,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
             this.put("allowInsertRows", (n) -> { currentObject.setAllowInsertRows(n.getBooleanValue()); });
             this.put("allowPivotTables", (n) -> { currentObject.setAllowPivotTables(n.getBooleanValue()); });
             this.put("allowSort", (n) -> { currentObject.setAllowSort(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -199,7 +187,6 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
         writer.writeBooleanValue("allowInsertRows", this.getAllowInsertRows());
         writer.writeBooleanValue("allowPivotTables", this.getAllowPivotTables());
         writer.writeBooleanValue("allowSort", this.getAllowSort());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -309,14 +296,5 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public void setAllowSort(@javax.annotation.Nullable final Boolean value) {
         this._allowSort = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

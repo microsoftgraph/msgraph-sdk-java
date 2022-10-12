@@ -7,17 +7,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class SharedInsight extends Entity implements Parsable {
-    /** Details about the shared item. Read only. */
+    /** The lastShared property */
     private SharingDetail _lastShared;
     /** The lastSharedMethod property */
     private Entity _lastSharedMethod;
-    /** Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
+    /** The resource property */
     private Entity _resource;
-    /** Reference properties of the shared document, such as the url and type of the document. Read-only */
+    /** The resourceReference property */
     private ResourceReference _resourceReference;
-    /** Properties that you can use to visualize the document in your experience. Read-only */
+    /** The resourceVisualization property */
     private ResourceVisualization _resourceVisualization;
     /** The sharingHistory property */
     private java.util.List<SharingDetail> _sharingHistory;
@@ -28,7 +27,6 @@ public class SharedInsight extends Entity implements Parsable {
     @javax.annotation.Nullable
     public SharedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.sharedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +55,7 @@ public class SharedInsight extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastShared property value. Details about the shared item. Read only.
+     * Gets the lastShared property value. The lastShared property
      * @return a sharingDetail
      */
     @javax.annotation.Nullable
@@ -73,7 +71,7 @@ public class SharedInsight extends Entity implements Parsable {
         return this._lastSharedMethod;
     }
     /**
-     * Gets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     * Gets the resource property value. The resource property
      * @return a entity
      */
     @javax.annotation.Nullable
@@ -81,7 +79,7 @@ public class SharedInsight extends Entity implements Parsable {
         return this._resource;
     }
     /**
-     * Gets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
+     * Gets the resourceReference property value. The resourceReference property
      * @return a resourceReference
      */
     @javax.annotation.Nullable
@@ -89,7 +87,7 @@ public class SharedInsight extends Entity implements Parsable {
         return this._resourceReference;
     }
     /**
-     * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
+     * Gets the resourceVisualization property value. The resourceVisualization property
      * @return a resourceVisualization
      */
     @javax.annotation.Nullable
@@ -116,10 +114,12 @@ public class SharedInsight extends Entity implements Parsable {
         writer.writeObjectValue("lastShared", this.getLastShared());
         writer.writeObjectValue("lastSharedMethod", this.getLastSharedMethod());
         writer.writeObjectValue("resource", this.getResource());
+        writer.writeObjectValue("resourceReference", this.getResourceReference());
+        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
         writer.writeCollectionOfObjectValues("sharingHistory", this.getSharingHistory());
     }
     /**
-     * Sets the lastShared property value. Details about the shared item. Read only.
+     * Sets the lastShared property value. The lastShared property
      * @param value Value to set for the lastShared property.
      * @return a void
      */
@@ -137,7 +137,7 @@ public class SharedInsight extends Entity implements Parsable {
         this._lastSharedMethod = value;
     }
     /**
-     * Sets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class SharedInsight extends Entity implements Parsable {
         this._resource = value;
     }
     /**
-     * Sets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
+     * Sets the resourceReference property value. The resourceReference property
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
@@ -155,7 +155,7 @@ public class SharedInsight extends Entity implements Parsable {
         this._resourceReference = value;
     }
     /**
-     * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
+     * Sets the resourceVisualization property value. The resourceVisualization property
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */

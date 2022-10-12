@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -19,29 +18,21 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /** User ID of the sender of the offer shift request. */
     private String _senderShiftId;
     /**
-     * Instantiates a new OfferShiftRequest and sets the default values.
+     * Instantiates a new offerShiftRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public OfferShiftRequest() {
         super();
-        this.setOdataType("#microsoft.graph.offerShiftRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OfferShiftRequest
+     * @return a offerShiftRequest
      */
     @javax.annotation.Nonnull
     public static OfferShiftRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
-            }
-        }
         return new OfferShiftRequest();
     }
     /**

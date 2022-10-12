@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Post extends OutlookItem implements Parsable {
     /** Read-only. Nullable. Supports $expand. */
     private java.util.List<Attachment> _attachments;
-    /** The contents of the post. This is a default property. This property can be null. */
+    /** The body property */
     private ItemBody _body;
     /** Unique ID of the conversation. Read-only. */
     private String _conversationId;
@@ -23,7 +23,7 @@ public class Post extends OutlookItem implements Parsable {
     private Recipient _from;
     /** Indicates whether the post has at least one attachment. This is a default property. */
     private Boolean _hasAttachments;
-    /** Read-only. Supports $expand. */
+    /** The inReplyTo property */
     private Post _inReplyTo;
     /** The collection of multi-value extended properties defined for the post. Read-only. Nullable. */
     private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
@@ -31,23 +31,22 @@ public class Post extends OutlookItem implements Parsable {
     private java.util.List<Recipient> _newParticipants;
     /** Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _receivedDateTime;
-    /** Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property. */
+    /** The sender property */
     private Recipient _sender;
     /** The collection of single-value extended properties defined for the post. Read-only. Nullable. */
     private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
     /**
-     * Instantiates a new Post and sets the default values.
+     * Instantiates a new post and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Post() {
         super();
-        this.setOdataType("#microsoft.graph.post");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Post
+     * @return a post
      */
     @javax.annotation.Nonnull
     public static Post createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +62,7 @@ public class Post extends OutlookItem implements Parsable {
         return this._attachments;
     }
     /**
-     * Gets the body property value. The contents of the post. This is a default property. This property can be null.
+     * Gets the body property value. The body property
      * @return a itemBody
      */
     @javax.annotation.Nullable
@@ -134,7 +133,7 @@ public class Post extends OutlookItem implements Parsable {
         return this._hasAttachments;
     }
     /**
-     * Gets the inReplyTo property value. Read-only. Supports $expand.
+     * Gets the inReplyTo property value. The inReplyTo property
      * @return a post
      */
     @javax.annotation.Nullable
@@ -166,7 +165,7 @@ public class Post extends OutlookItem implements Parsable {
         return this._receivedDateTime;
     }
     /**
-     * Gets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+     * Gets the sender property value. The sender property
      * @return a recipient
      */
     @javax.annotation.Nullable
@@ -214,7 +213,7 @@ public class Post extends OutlookItem implements Parsable {
         this._attachments = value;
     }
     /**
-     * Sets the body property value. The contents of the post. This is a default property. This property can be null.
+     * Sets the body property value. The body property
      * @param value Value to set for the body property.
      * @return a void
      */
@@ -268,7 +267,7 @@ public class Post extends OutlookItem implements Parsable {
         this._hasAttachments = value;
     }
     /**
-     * Sets the inReplyTo property value. Read-only. Supports $expand.
+     * Sets the inReplyTo property value. The inReplyTo property
      * @param value Value to set for the inReplyTo property.
      * @return a void
      */
@@ -304,7 +303,7 @@ public class Post extends OutlookItem implements Parsable {
         this._receivedDateTime = value;
     }
     /**
-     * Sets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+     * Sets the sender property value. The sender property
      * @param value Value to set for the sender property.
      * @return a void
      */

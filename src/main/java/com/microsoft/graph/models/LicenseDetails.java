@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class LicenseDetails extends Entity implements Parsable {
     /** Information about the service plans assigned with the license. Read-only, Not nullable */
     private java.util.List<ServicePlanInfo> _servicePlans;
@@ -22,7 +21,6 @@ public class LicenseDetails extends Entity implements Parsable {
     @javax.annotation.Nullable
     public LicenseDetails() {
         super();
-        this.setOdataType("#microsoft.graph.licenseDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,15 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class UsedInsight extends Entity implements Parsable {
-    /** Information about when the item was last viewed or modified by the user. Read only. */
+    /** The lastUsed property */
     private UsageDetails _lastUsed;
-    /** Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
+    /** The resource property */
     private Entity _resource;
-    /** Reference properties of the used document, such as the url and type of the document. Read-only */
+    /** The resourceReference property */
     private ResourceReference _resourceReference;
-    /** Properties that you can use to visualize the document in your experience. Read-only */
+    /** The resourceVisualization property */
     private ResourceVisualization _resourceVisualization;
     /**
      * Instantiates a new usedInsight and sets the default values.
@@ -24,7 +23,6 @@ public class UsedInsight extends Entity implements Parsable {
     @javax.annotation.Nullable
     public UsedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.usedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +49,7 @@ public class UsedInsight extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Gets the lastUsed property value. The lastUsed property
      * @return a usageDetails
      */
     @javax.annotation.Nullable
@@ -59,7 +57,7 @@ public class UsedInsight extends Entity implements Parsable {
         return this._lastUsed;
     }
     /**
-     * Gets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     * Gets the resource property value. The resource property
      * @return a entity
      */
     @javax.annotation.Nullable
@@ -67,7 +65,7 @@ public class UsedInsight extends Entity implements Parsable {
         return this._resource;
     }
     /**
-     * Gets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Gets the resourceReference property value. The resourceReference property
      * @return a resourceReference
      */
     @javax.annotation.Nullable
@@ -75,7 +73,7 @@ public class UsedInsight extends Entity implements Parsable {
         return this._resourceReference;
     }
     /**
-     * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
+     * Gets the resourceVisualization property value. The resourceVisualization property
      * @return a resourceVisualization
      */
     @javax.annotation.Nullable
@@ -93,9 +91,11 @@ public class UsedInsight extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("lastUsed", this.getLastUsed());
         writer.writeObjectValue("resource", this.getResource());
+        writer.writeObjectValue("resourceReference", this.getResourceReference());
+        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
     }
     /**
-     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Sets the lastUsed property value. The lastUsed property
      * @param value Value to set for the lastUsed property.
      * @return a void
      */
@@ -104,7 +104,7 @@ public class UsedInsight extends Entity implements Parsable {
         this._lastUsed = value;
     }
     /**
-     * Sets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     * Sets the resource property value. The resource property
      * @param value Value to set for the resource property.
      * @return a void
      */
@@ -113,7 +113,7 @@ public class UsedInsight extends Entity implements Parsable {
         this._resource = value;
     }
     /**
-     * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Sets the resourceReference property value. The resourceReference property
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class UsedInsight extends Entity implements Parsable {
         this._resourceReference = value;
     }
     /**
-     * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
+     * Sets the resourceVisualization property value. The resourceVisualization property
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */

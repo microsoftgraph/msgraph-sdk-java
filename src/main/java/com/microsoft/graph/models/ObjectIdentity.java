@@ -15,8 +15,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     private String _issuer;
     /** Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit. */
     private String _issuerAssignedId;
-    /** The OdataType property */
-    private String _odataType;
     /** Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string. */
     private String _signInType;
     /**
@@ -26,7 +24,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ObjectIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.objectIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,10 +50,9 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ObjectIdentity currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
             this.put("issuerAssignedId", (n) -> { currentObject.setIssuerAssignedId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("signInType", (n) -> { currentObject.setSignInType(n.getStringValue()); });
         }};
     }
@@ -77,14 +73,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
         return this._issuerAssignedId;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Gets the signInType property value. Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
      * @return a string
      */
@@ -102,7 +90,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("issuer", this.getIssuer());
         writer.writeStringValue("issuerAssignedId", this.getIssuerAssignedId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("signInType", this.getSignInType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -132,15 +119,6 @@ public class ObjectIdentity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setIssuerAssignedId(@javax.annotation.Nullable final String value) {
         this._issuerAssignedId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the signInType property value. Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.

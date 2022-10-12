@@ -7,15 +7,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookTableColumn extends Entity implements Parsable {
-    /** Retrieve the filter applied to the column. Read-only. */
+    /** The filter property */
     private WorkbookFilter _filter;
     /** Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only. */
     private Integer _index;
     /** Returns the name of the table column. */
     private String _name;
-    /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /** The values property */
     private Json _values;
     /**
      * Instantiates a new workbookTableColumn and sets the default values.
@@ -24,7 +23,6 @@ public class WorkbookTableColumn extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookTableColumn() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTableColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +49,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Gets the filter property value. The filter property
      * @return a workbookFilter
      */
     @javax.annotation.Nullable
@@ -75,7 +73,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Gets the values property value. The values property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -97,7 +95,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         writer.writeObjectValue("values", this.getValues());
     }
     /**
-     * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Sets the filter property value. The filter property
      * @param value Value to set for the filter property.
      * @return a void
      */
@@ -124,7 +122,7 @@ public class WorkbookTableColumn extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Sets the values property value. The values property
      * @param value Value to set for the values property.
      * @return a void
      */

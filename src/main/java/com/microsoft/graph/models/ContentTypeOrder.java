@@ -13,8 +13,6 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Whether this is the default Content Type */
     private Boolean _default_escaped;
-    /** The OdataType property */
-    private String _odataType;
     /** Specifies the position in which the Content Type appears in the selection UI. */
     private Integer _position;
     /**
@@ -24,7 +22,6 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ContentTypeOrder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.contentTypeOrder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,19 +56,10 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentTypeOrder currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getIntegerValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the position property value. Specifies the position in which the Content Type appears in the selection UI.
@@ -90,7 +78,6 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("default", this.getDefault());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("position", this.getPosition());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -111,15 +98,6 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final Boolean value) {
         this._default_escaped = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the position property value. Specifies the position in which the Content Type appears in the selection UI.

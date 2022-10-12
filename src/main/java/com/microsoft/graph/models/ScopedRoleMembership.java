@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ScopedRoleMembership extends Entity implements Parsable {
     /** Unique identifier for the administrative unit that the directory role is scoped to */
     private String _administrativeUnitId;
@@ -22,7 +21,6 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ScopedRoleMembership() {
         super();
-        this.setOdataType("#microsoft.graph.scopedRoleMembership");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

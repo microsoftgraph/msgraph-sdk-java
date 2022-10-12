@@ -8,13 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ChatMessage extends Entity implements Parsable {
     /** References to attached objects like files, tabs, meetings etc. */
     private java.util.List<ChatMessageAttachment> _attachments;
     /** The body property */
     private ItemBody _body;
-    /** If the message was sent in a channel, represents identity of the channel. */
+    /** The channelIdentity property */
     private ChannelIdentity _channelIdentity;
     /** If the message was sent in a chat, represents the identity of the chat. */
     private String _chatId;
@@ -24,9 +23,9 @@ public class ChatMessage extends Entity implements Parsable {
     private OffsetDateTime _deletedDateTime;
     /** Read-only. Version number of the chat message. */
     private String _etag;
-    /** Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage. */
+    /** The eventDetail property */
     private EventMessageDetail _eventDetail;
-    /** Details of the sender of the chat message. Can only be set during migration. */
+    /** The from property */
     private ChatMessageFromIdentitySet _from;
     /** Content in a message hosted by Microsoft Teams - for example, images or code snippets. */
     private java.util.List<ChatMessageHostedContent> _hostedContents;
@@ -42,7 +41,7 @@ public class ChatMessage extends Entity implements Parsable {
     private java.util.List<ChatMessageMention> _mentions;
     /** The messageType property */
     private ChatMessageType _messageType;
-    /** Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
+    /** The policyViolation property */
     private ChatMessagePolicyViolation _policyViolation;
     /** Reactions for this chat message (for example, Like). */
     private java.util.List<ChatMessageReaction> _reactions;
@@ -63,7 +62,6 @@ public class ChatMessage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ChatMessage() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +90,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this._body;
     }
     /**
-     * Gets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
+     * Gets the channelIdentity property value. The channelIdentity property
      * @return a channelIdentity
      */
     @javax.annotation.Nullable
@@ -132,7 +130,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this._etag;
     }
     /**
-     * Gets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Gets the eventDetail property value. The eventDetail property
      * @return a eventMessageDetail
      */
     @javax.annotation.Nullable
@@ -173,7 +171,7 @@ public class ChatMessage extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the from property value. Details of the sender of the chat message. Can only be set during migration.
+     * Gets the from property value. The from property
      * @return a chatMessageFromIdentitySet
      */
     @javax.annotation.Nullable
@@ -237,7 +235,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this._messageType;
     }
     /**
-     * Gets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
+     * Gets the policyViolation property value. The policyViolation property
      * @return a chatMessagePolicyViolation
      */
     @javax.annotation.Nullable
@@ -344,7 +342,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._body = value;
     }
     /**
-     * Sets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
+     * Sets the channelIdentity property value. The channelIdentity property
      * @param value Value to set for the channelIdentity property.
      * @return a void
      */
@@ -389,7 +387,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._etag = value;
     }
     /**
-     * Sets the eventDetail property value. Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     * Sets the eventDetail property value. The eventDetail property
      * @param value Value to set for the eventDetail property.
      * @return a void
      */
@@ -398,7 +396,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._eventDetail = value;
     }
     /**
-     * Sets the from property value. Details of the sender of the chat message. Can only be set during migration.
+     * Sets the from property value. The from property
      * @param value Value to set for the from property.
      * @return a void
      */
@@ -470,7 +468,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._messageType = value;
     }
     /**
-     * Sets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
+     * Sets the policyViolation property value. The policyViolation property
      * @param value Value to set for the policyViolation property.
      * @return a void
      */

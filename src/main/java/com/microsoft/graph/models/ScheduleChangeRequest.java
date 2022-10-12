@@ -1,9 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OfferShiftRequest;
-import com.microsoft.graph.models.OpenShiftChangeRequest;
-import com.microsoft.graph.models.SwapShiftsChangeRequest;
-import com.microsoft.graph.models.TimeOffRequest;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -30,32 +26,21 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /** The state property */
     private ScheduleChangeState _state;
     /**
-     * Instantiates a new ScheduleChangeRequest and sets the default values.
+     * Instantiates a new scheduleChangeRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public ScheduleChangeRequest() {
         super();
-        this.setOdataType("#microsoft.graph.scheduleChangeRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScheduleChangeRequest
+     * @return a scheduleChangeRequest
      */
     @javax.annotation.Nonnull
     public static ScheduleChangeRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
-                case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
-                case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
-                case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
-            }
-        }
         return new ScheduleChangeRequest();
     }
     /**

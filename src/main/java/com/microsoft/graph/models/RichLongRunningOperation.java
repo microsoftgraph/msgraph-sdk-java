@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RichLongRunningOperation extends LongRunningOperation implements Parsable {
-    /** Error that caused the operation to fail. */
+    /** The error property */
     private PublicError _error;
     /** A value between 0 and 100 that indicates the progress of the operation. */
     private Integer _percentageComplete;
@@ -17,18 +17,17 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     /** The type of the operation. */
     private String _type;
     /**
-     * Instantiates a new RichLongRunningOperation and sets the default values.
+     * Instantiates a new richLongRunningOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public RichLongRunningOperation() {
         super();
-        this.setOdataType("#microsoft.graph.richLongRunningOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RichLongRunningOperation
+     * @return a richLongRunningOperation
      */
     @javax.annotation.Nonnull
     public static RichLongRunningOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +35,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         return new RichLongRunningOperation();
     }
     /**
-     * Gets the error property value. Error that caused the operation to fail.
+     * Gets the error property value. The error property
      * @return a publicError
      */
     @javax.annotation.Nullable
@@ -96,7 +95,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the error property value. Error that caused the operation to fail.
+     * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */

@@ -1,11 +1,6 @@
 package com.microsoft.graph.users.item.owneddevices;
 
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.owneddevices.approleassignment.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.users.item.owneddevices.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.owneddevices.device.DeviceRequestBuilder;
-import com.microsoft.graph.users.item.owneddevices.endpoint.EndpointRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -19,28 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
+/** Builds and executes requests for operations under /users/{user-id}/ownedDevices */
 public class OwnedDevicesRequestBuilder {
-    /** The appRoleAssignment property */
-    @javax.annotation.Nonnull
-    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
-        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The device property */
-    @javax.annotation.Nonnull
-    public DeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The endpoint property */
-    @javax.annotation.Nonnull
-    public EndpointRequestBuilder endpoint() {
-        return new EndpointRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -114,11 +89,7 @@ public class OwnedDevicesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -134,11 +105,7 @@ public class OwnedDevicesRequestBuilder {
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<OwnedDevicesRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, DirectoryObjectCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse>() {{
                 this.completeExceptionally(ex);

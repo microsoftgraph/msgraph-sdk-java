@@ -13,7 +13,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     private String _aaGuid;
     /** The attestation certificate(s) attached to this security key. */
     private java.util.List<String> _attestationCertificates;
-    /** The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested. */
+    /** The attestationLevel property */
     private AttestationLevel _attestationLevel;
     /** The timestamp when this key was registered to the user. */
     private OffsetDateTime _createdDateTime;
@@ -22,18 +22,17 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     /** The manufacturer-assigned model of the FIDO2 security key. */
     private String _model;
     /**
-     * Instantiates a new Fido2AuthenticationMethod and sets the default values.
+     * Instantiates a new fido2AuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Fido2AuthenticationMethod() {
         super();
-        this.setOdataType("#microsoft.graph.fido2AuthenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2AuthenticationMethod
+     * @return a fido2AuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static Fido2AuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +56,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this._attestationCertificates;
     }
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+     * Gets the attestationLevel property value. The attestationLevel property
      * @return a attestationLevel
      */
     @javax.annotation.Nullable
@@ -139,7 +138,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         this._attestationCertificates = value;
     }
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+     * Sets the attestationLevel property value. The attestationLevel property
      * @param value Value to set for the attestationLevel property.
      * @return a void
      */

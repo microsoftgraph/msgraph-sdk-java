@@ -8,25 +8,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
-    /** An unpublished open shift. */
+    /** The draftOpenShift property */
     private OpenShiftItem _draftOpenShift;
     /** ID for the scheduling group that the open shift belongs to. */
     private String _schedulingGroupId;
-    /** A published open shift. */
+    /** The sharedOpenShift property */
     private OpenShiftItem _sharedOpenShift;
     /**
-     * Instantiates a new OpenShift and sets the default values.
+     * Instantiates a new openShift and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public OpenShift() {
         super();
-        this.setOdataType("#microsoft.graph.openShift");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenShift
+     * @return a openShift
      */
     @javax.annotation.Nonnull
     public static OpenShift createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +33,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return new OpenShift();
     }
     /**
-     * Gets the draftOpenShift property value. An unpublished open shift.
+     * Gets the draftOpenShift property value. The draftOpenShift property
      * @return a openShiftItem
      */
     @javax.annotation.Nullable
@@ -63,7 +62,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this._schedulingGroupId;
     }
     /**
-     * Gets the sharedOpenShift property value. A published open shift.
+     * Gets the sharedOpenShift property value. The sharedOpenShift property
      * @return a openShiftItem
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
     /**
-     * Sets the draftOpenShift property value. An unpublished open shift.
+     * Sets the draftOpenShift property value. The draftOpenShift property
      * @param value Value to set for the draftOpenShift property.
      * @return a void
      */
@@ -102,7 +101,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         this._schedulingGroupId = value;
     }
     /**
-     * Sets the sharedOpenShift property value. A published open shift.
+     * Sets the sharedOpenShift property value. The sharedOpenShift property
      * @param value Value to set for the sharedOpenShift property.
      * @return a void
      */

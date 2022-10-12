@@ -13,8 +13,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** For example, 'Enabled'. */
     private String _capabilityStatus;
-    /** The OdataType property */
-    private String _odataType;
     /** For example, 'Success'. */
     private String _provisioningStatus;
     /** The name of the service; for example, 'AccessControlS2S' */
@@ -26,7 +24,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.provisionedPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,20 +58,11 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisionedPlan currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });
             this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the provisioningStatus property value. For example, 'Success'.
@@ -101,7 +89,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("provisioningStatus", this.getProvisioningStatus());
         writer.writeStringValue("service", this.getService());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,15 +110,6 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
         this._capabilityStatus = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the provisioningStatus property value. For example, 'Success'.

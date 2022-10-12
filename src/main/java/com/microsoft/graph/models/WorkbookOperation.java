@@ -7,27 +7,25 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookOperation extends Entity implements Parsable {
-    /** The error returned by the operation. */
+    /** The error property */
     private WorkbookOperationError _error;
     /** The resource URI for the result. */
     private String _resourceLocation;
     /** The status property */
     private WorkbookOperationStatus _status;
     /**
-     * Instantiates a new workbookOperation and sets the default values.
+     * Instantiates a new WorkbookOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public WorkbookOperation() {
         super();
-        this.setOdataType("#microsoft.graph.workbookOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookOperation
+     * @return a WorkbookOperation
      */
     @javax.annotation.Nonnull
     public static WorkbookOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +33,7 @@ public class WorkbookOperation extends Entity implements Parsable {
         return new WorkbookOperation();
     }
     /**
-     * Gets the error property value. The error returned by the operation.
+     * Gets the error property value. The error property
      * @return a workbookOperationError
      */
     @javax.annotation.Nullable
@@ -85,7 +83,7 @@ public class WorkbookOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the error property value. The error returned by the operation.
+     * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */

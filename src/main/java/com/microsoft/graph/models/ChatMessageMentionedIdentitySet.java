@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
-    /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
+    /** The conversation property */
     private TeamworkConversationIdentity _conversation;
     /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
@@ -17,7 +17,6 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     @javax.annotation.Nullable
     public ChatMessageMentionedIdentitySet() {
         super();
-        this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,7 +29,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
         return new ChatMessageMentionedIdentitySet();
     }
     /**
-     * Gets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Gets the conversation property value. The conversation property
      * @return a teamworkConversationIdentity
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
         writer.writeObjectValue("conversation", this.getConversation());
     }
     /**
-     * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Sets the conversation property value. The conversation property
      * @param value Value to set for the conversation property.
      * @return a void
      */

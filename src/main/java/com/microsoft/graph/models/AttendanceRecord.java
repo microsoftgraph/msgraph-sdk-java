@@ -7,31 +7,29 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AttendanceRecord extends Entity implements Parsable {
     /** List of time periods between joining and leaving a meeting. */
     private java.util.List<AttendanceInterval> _attendanceIntervals;
     /** Email address of the user associated with this atttendance record. */
     private String _emailAddress;
-    /** Identity of the user associated with this atttendance record. */
+    /** The identity property */
     private Identity _identity;
     /** Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
     private String _role;
     /** Total duration of the attendances in seconds. */
     private Integer _totalAttendanceInSeconds;
     /**
-     * Instantiates a new attendanceRecord and sets the default values.
+     * Instantiates a new AttendanceRecord and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public AttendanceRecord() {
         super();
-        this.setOdataType("#microsoft.graph.attendanceRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendanceRecord
+     * @return a AttendanceRecord
      */
     @javax.annotation.Nonnull
     public static AttendanceRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +68,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the identity property value. Identity of the user associated with this atttendance record.
+     * Gets the identity property value. The identity property
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -127,7 +125,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this._emailAddress = value;
     }
     /**
-     * Sets the identity property value. Identity of the user associated with this atttendance record.
+     * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
      * @return a void
      */

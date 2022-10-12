@@ -15,8 +15,6 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     private Integer _maximumSize;
     /** The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply. */
     private Integer _minimumSize;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new sizeRange and sets the default values.
      * @return a void
@@ -24,7 +22,6 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public SizeRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sizeRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,10 +48,9 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SizeRange currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("maximumSize", (n) -> { currentObject.setMaximumSize(n.getIntegerValue()); });
             this.put("minimumSize", (n) -> { currentObject.setMinimumSize(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -74,14 +70,6 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
         return this._minimumSize;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -91,7 +79,6 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maximumSize", this.getMaximumSize());
         writer.writeIntegerValue("minimumSize", this.getMinimumSize());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,14 +107,5 @@ public class SizeRange implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMinimumSize(@javax.annotation.Nullable final Integer value) {
         this._minimumSize = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

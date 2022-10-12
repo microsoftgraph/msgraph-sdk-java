@@ -11,14 +11,12 @@ import java.util.Objects;
 public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Content type information of the file. */
+    /** The contentType property */
     private ContentTypeInfo _contentType;
     /** Name of the file in resource folder that should be added as a default content or a template in the document set. */
     private String _fileName;
     /** Folder name in which the file will be placed when a new document set is created in the library. */
     private String _folderName;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new documentSetContent and sets the default values.
      * @return a void
@@ -26,7 +24,6 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public DocumentSetContent() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.documentSetContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +44,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the contentType property value. Content type information of the file.
+     * Gets the contentType property value. The contentType property
      * @return a contentTypeInfo
      */
     @javax.annotation.Nullable
@@ -61,11 +58,10 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DocumentSetContent currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("contentType", (n) -> { currentObject.setContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
             this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
             this.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -85,14 +81,6 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         return this._folderName;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -103,7 +91,6 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("contentType", this.getContentType());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeStringValue("folderName", this.getFolderName());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -116,7 +103,7 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the contentType property value. Content type information of the file.
+     * Sets the contentType property value. The contentType property
      * @param value Value to set for the contentType property.
      * @return a void
      */
@@ -141,14 +128,5 @@ public class DocumentSetContent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setFolderName(@javax.annotation.Nullable final String value) {
         this._folderName = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

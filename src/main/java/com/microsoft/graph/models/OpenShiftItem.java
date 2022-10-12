@@ -17,7 +17,6 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
     @javax.annotation.Nullable
     public OpenShiftItem() {
         super();
-        this.setOdataType("#microsoft.graph.openShiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

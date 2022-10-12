@@ -19,8 +19,6 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     private String _alternativeText;
     /** Optional; URI that points to an icon which represents the application used to generate the activity */
     private String _iconUrl;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new imageInfo and sets the default values.
      * @return a void
@@ -28,7 +26,6 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.imageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,12 +76,11 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImageInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
             this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
             this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
             this.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -94,14 +90,6 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getIconUrl() {
         return this._iconUrl;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -115,7 +103,6 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("alternateText", this.getAlternateText());
         writer.writeStringValue("alternativeText", this.getAlternativeText());
         writer.writeStringValue("iconUrl", this.getIconUrl());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -162,14 +149,5 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setIconUrl(@javax.annotation.Nullable final String value) {
         this._iconUrl = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

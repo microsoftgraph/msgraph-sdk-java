@@ -15,8 +15,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     private String _address;
     /** The itemId property */
     private String _itemId;
-    /** The OdataType property */
-    private String _odataType;
     /** The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships. */
     private Double _relevanceScore;
     /** The selectionLikelihood property */
@@ -28,7 +26,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.scoredEmailAddress");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +60,9 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScoredEmailAddress currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("relevanceScore", (n) -> { currentObject.setRelevanceScore(n.getDoubleValue()); });
             this.put("selectionLikelihood", (n) -> { currentObject.setSelectionLikelihood(n.getEnumValue(SelectionLikelihoodInfo.class)); });
         }};
@@ -78,14 +74,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getItemId() {
         return this._itemId;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
@@ -113,7 +101,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeStringValue("itemId", this.getItemId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeDoubleValue("relevanceScore", this.getRelevanceScore());
         writer.writeEnumValue("selectionLikelihood", this.getSelectionLikelihood());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -144,15 +131,6 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.

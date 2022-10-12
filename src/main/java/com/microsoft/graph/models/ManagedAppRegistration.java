@@ -1,7 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedAppRegistration;
-import com.microsoft.graph.models.IosManagedAppRegistration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -12,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** The ManagedAppEntity is the base entity type for all other entity types under app management workflow. */
 public class ManagedAppRegistration extends Entity implements Parsable {
-    /** The app package Identifier */
+    /** The identifier for a mobile app. */
     private MobileAppIdentifier _appIdentifier;
     /** App version */
     private String _applicationVersion;
@@ -49,7 +47,6 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagedAppRegistration() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppRegistration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,18 +56,10 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedAppRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.androidManagedAppRegistration": return new AndroidManagedAppRegistration();
-                case "#microsoft.graph.iosManagedAppRegistration": return new IosManagedAppRegistration();
-            }
-        }
         return new ManagedAppRegistration();
     }
     /**
-     * Gets the appIdentifier property value. The app package Identifier
+     * Gets the appIdentifier property value. The identifier for a mobile app.
      * @return a mobileAppIdentifier
      */
     @javax.annotation.Nullable
@@ -240,7 +229,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the appIdentifier property value. The app package Identifier
+     * Sets the appIdentifier property value. The identifier for a mobile app.
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */

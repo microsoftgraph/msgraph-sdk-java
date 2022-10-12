@@ -1,9 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ChatMessageFromIdentitySet;
-import com.microsoft.graph.models.ChatMessageMentionedIdentitySet;
-import com.microsoft.graph.models.ChatMessageReactionIdentitySet;
-import com.microsoft.graph.models.SharePointIdentitySet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -15,13 +11,11 @@ import java.util.Objects;
 public class IdentitySet implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Optional. The application associated with this action. */
+    /** The application property */
     private Identity _application;
-    /** Optional. The device associated with this action. */
+    /** The device property */
     private Identity _device;
-    /** The OdataType property */
-    private String _odataType;
-    /** Optional. The user associated with this action. */
+    /** The user property */
     private Identity _user;
     /**
      * Instantiates a new identitySet and sets the default values.
@@ -30,7 +24,6 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public IdentitySet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identitySet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,16 +33,6 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static IdentitySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.chatMessageFromIdentitySet": return new ChatMessageFromIdentitySet();
-                case "#microsoft.graph.chatMessageMentionedIdentitySet": return new ChatMessageMentionedIdentitySet();
-                case "#microsoft.graph.chatMessageReactionIdentitySet": return new ChatMessageReactionIdentitySet();
-                case "#microsoft.graph.sharePointIdentitySet": return new SharePointIdentitySet();
-            }
-        }
         return new IdentitySet();
     }
     /**
@@ -61,7 +44,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the application property value. Optional. The application associated with this action.
+     * Gets the application property value. The application property
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -69,7 +52,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this._application;
     }
     /**
-     * Gets the device property value. Optional. The device associated with this action.
+     * Gets the device property value. The device property
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -83,23 +66,14 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentitySet currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
             this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the user property value. Optional. The user associated with this action.
+     * Gets the user property value. The user property
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -116,7 +90,6 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("application", this.getApplication());
         writer.writeObjectValue("device", this.getDevice());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -130,7 +103,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the application property value. Optional. The application associated with this action.
+     * Sets the application property value. The application property
      * @param value Value to set for the application property.
      * @return a void
      */
@@ -139,7 +112,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._application = value;
     }
     /**
-     * Sets the device property value. Optional. The device associated with this action.
+     * Sets the device property value. The device property
      * @param value Value to set for the device property.
      * @return a void
      */
@@ -148,16 +121,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._device = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the user property value. Optional. The user associated with this action.
+     * Sets the user property value. The user property
      * @param value Value to set for the user property.
      * @return a void
      */

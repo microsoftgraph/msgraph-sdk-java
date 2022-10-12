@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartTitleFormat extends Entity implements Parsable {
-    /** Represents the fill format of an object, which includes background formatting information. Read-only. */
+    /** The fill property */
     private WorkbookChartFill _fill;
-    /** Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only. */
+    /** The font property */
     private WorkbookChartFont _font;
     /**
      * Instantiates a new workbookChartTitleFormat and sets the default values.
@@ -19,7 +19,6 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartTitleFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartTitleFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
+     * Gets the fill property value. The fill property
      * @return a workbookChartFill
      */
     @javax.annotation.Nullable
@@ -52,7 +51,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
         return this._fill;
     }
     /**
-     * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     * Gets the font property value. The font property
      * @return a workbookChartFont
      */
     @javax.annotation.Nullable
@@ -72,7 +71,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
         writer.writeObjectValue("font", this.getFont());
     }
     /**
-     * Sets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
+     * Sets the fill property value. The fill property
      * @param value Value to set for the fill property.
      * @return a void
      */
@@ -81,7 +80,7 @@ public class WorkbookChartTitleFormat extends Entity implements Parsable {
         this._fill = value;
     }
     /**
-     * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     * Sets the font property value. The font property
      * @param value Value to set for the font property.
      * @return a void
      */

@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookPivotTable extends Entity implements Parsable {
     /** Name of the PivotTable. */
     private String _name;
-    /** The worksheet containing the current PivotTable. Read-only. */
+    /** The worksheet property */
     private WorkbookWorksheet _worksheet;
     /**
      * Instantiates a new workbookPivotTable and sets the default values.
@@ -20,7 +19,6 @@ public class WorkbookPivotTable extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookPivotTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookPivotTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +51,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Gets the worksheet property value. The worksheet property
      * @return a workbookWorksheet
      */
     @javax.annotation.Nullable
@@ -82,7 +80,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Sets the worksheet property value. The worksheet property
      * @param value Value to set for the worksheet property.
      * @return a void
      */

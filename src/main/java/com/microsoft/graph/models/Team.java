@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Team extends Entity implements Parsable {
     /** List of channels either hosted in or shared with the team (incoming channels). */
     private java.util.List<Channel> _allChannels;
@@ -22,11 +21,11 @@ public class Team extends Entity implements Parsable {
     private String _description;
     /** The name of the team. */
     private String _displayName;
-    /** Settings to configure use of Giphy, memes, and stickers in the team. */
+    /** The funSettings property */
     private TeamFunSettings _funSettings;
     /** The group property */
     private Group _group;
-    /** Settings to configure whether guests can create, update, or delete channels in the team. */
+    /** The guestSettings property */
     private TeamGuestSettings _guestSettings;
     /** List of channels shared with the team. */
     private java.util.List<Channel> _incomingChannels;
@@ -38,45 +37,44 @@ public class Team extends Entity implements Parsable {
     private Boolean _isArchived;
     /** Members and owners of the team. */
     private java.util.List<ConversationMember> _members;
-    /** Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team. */
+    /** The memberSettings property */
     private TeamMemberSettings _memberSettings;
-    /** Settings to configure messaging and mentions in the team. */
+    /** The messagingSettings property */
     private TeamMessagingSettings _messagingSettings;
     /** The async operations that ran or are running on this team. */
     private java.util.List<TeamsAsyncOperation> _operations;
-    /** The profile photo for the team. */
+    /** The photo property */
     private ProfilePhoto _photo;
-    /** The general channel for the team. */
+    /** The primaryChannel property */
     private Channel _primaryChannel;
-    /** The schedule of shifts for this team. */
+    /** The schedule property */
     private Schedule _schedule;
-    /** Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case. */
+    /** The specialization property */
     private TeamSpecialization _specialization;
     /** The summary property */
     private TeamSummary _summary;
     /** The tags associated with the team. */
     private java.util.List<TeamworkTag> _tags;
-    /** The template this team was created from. See available templates. */
+    /** The template property */
     private TeamsTemplate _template;
     /** The ID of the Azure Active Directory tenant. */
     private String _tenantId;
-    /** The visibility of the group and team. Defaults to Public. */
+    /** The visibility property */
     private TeamVisibilityType _visibility;
     /** A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed. */
     private String _webUrl;
     /**
-     * Instantiates a new team and sets the default values.
+     * Instantiates a new Team and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
     public Team() {
         super();
-        this.setOdataType("#microsoft.graph.team");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a team
+     * @return a Team
      */
     @javax.annotation.Nonnull
     public static Team createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -169,7 +167,7 @@ public class Team extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
+     * Gets the funSettings property value. The funSettings property
      * @return a teamFunSettings
      */
     @javax.annotation.Nullable
@@ -185,7 +183,7 @@ public class Team extends Entity implements Parsable {
         return this._group;
     }
     /**
-     * Gets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
+     * Gets the guestSettings property value. The guestSettings property
      * @return a teamGuestSettings
      */
     @javax.annotation.Nullable
@@ -233,7 +231,7 @@ public class Team extends Entity implements Parsable {
         return this._members;
     }
     /**
-     * Gets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
+     * Gets the memberSettings property value. The memberSettings property
      * @return a teamMemberSettings
      */
     @javax.annotation.Nullable
@@ -241,7 +239,7 @@ public class Team extends Entity implements Parsable {
         return this._memberSettings;
     }
     /**
-     * Gets the messagingSettings property value. Settings to configure messaging and mentions in the team.
+     * Gets the messagingSettings property value. The messagingSettings property
      * @return a teamMessagingSettings
      */
     @javax.annotation.Nullable
@@ -257,7 +255,7 @@ public class Team extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the photo property value. The profile photo for the team.
+     * Gets the photo property value. The photo property
      * @return a profilePhoto
      */
     @javax.annotation.Nullable
@@ -265,7 +263,7 @@ public class Team extends Entity implements Parsable {
         return this._photo;
     }
     /**
-     * Gets the primaryChannel property value. The general channel for the team.
+     * Gets the primaryChannel property value. The primaryChannel property
      * @return a channel
      */
     @javax.annotation.Nullable
@@ -273,7 +271,7 @@ public class Team extends Entity implements Parsable {
         return this._primaryChannel;
     }
     /**
-     * Gets the schedule property value. The schedule of shifts for this team.
+     * Gets the schedule property value. The schedule property
      * @return a schedule
      */
     @javax.annotation.Nullable
@@ -281,7 +279,7 @@ public class Team extends Entity implements Parsable {
         return this._schedule;
     }
     /**
-     * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Gets the specialization property value. The specialization property
      * @return a teamSpecialization
      */
     @javax.annotation.Nullable
@@ -305,7 +303,7 @@ public class Team extends Entity implements Parsable {
         return this._tags;
     }
     /**
-     * Gets the template property value. The template this team was created from. See available templates.
+     * Gets the template property value. The template property
      * @return a teamsTemplate
      */
     @javax.annotation.Nullable
@@ -321,7 +319,7 @@ public class Team extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
+     * Gets the visibility property value. The visibility property
      * @return a teamVisibilityType
      */
     @javax.annotation.Nullable
@@ -428,7 +426,7 @@ public class Team extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
+     * Sets the funSettings property value. The funSettings property
      * @param value Value to set for the funSettings property.
      * @return a void
      */
@@ -446,7 +444,7 @@ public class Team extends Entity implements Parsable {
         this._group = value;
     }
     /**
-     * Sets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
+     * Sets the guestSettings property value. The guestSettings property
      * @param value Value to set for the guestSettings property.
      * @return a void
      */
@@ -500,7 +498,7 @@ public class Team extends Entity implements Parsable {
         this._members = value;
     }
     /**
-     * Sets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
+     * Sets the memberSettings property value. The memberSettings property
      * @param value Value to set for the memberSettings property.
      * @return a void
      */
@@ -509,7 +507,7 @@ public class Team extends Entity implements Parsable {
         this._memberSettings = value;
     }
     /**
-     * Sets the messagingSettings property value. Settings to configure messaging and mentions in the team.
+     * Sets the messagingSettings property value. The messagingSettings property
      * @param value Value to set for the messagingSettings property.
      * @return a void
      */
@@ -527,7 +525,7 @@ public class Team extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the photo property value. The profile photo for the team.
+     * Sets the photo property value. The photo property
      * @param value Value to set for the photo property.
      * @return a void
      */
@@ -536,7 +534,7 @@ public class Team extends Entity implements Parsable {
         this._photo = value;
     }
     /**
-     * Sets the primaryChannel property value. The general channel for the team.
+     * Sets the primaryChannel property value. The primaryChannel property
      * @param value Value to set for the primaryChannel property.
      * @return a void
      */
@@ -545,7 +543,7 @@ public class Team extends Entity implements Parsable {
         this._primaryChannel = value;
     }
     /**
-     * Sets the schedule property value. The schedule of shifts for this team.
+     * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      * @return a void
      */
@@ -554,7 +552,7 @@ public class Team extends Entity implements Parsable {
         this._schedule = value;
     }
     /**
-     * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Sets the specialization property value. The specialization property
      * @param value Value to set for the specialization property.
      * @return a void
      */
@@ -581,7 +579,7 @@ public class Team extends Entity implements Parsable {
         this._tags = value;
     }
     /**
-     * Sets the template property value. The template this team was created from. See available templates.
+     * Sets the template property value. The template property
      * @param value Value to set for the template property.
      * @return a void
      */
@@ -599,7 +597,7 @@ public class Team extends Entity implements Parsable {
         this._tenantId = value;
     }
     /**
-     * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
+     * Sets the visibility property value. The visibility property
      * @param value Value to set for the visibility property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisTitle extends Entity implements Parsable {
-    /** Represents the formatting of chart axis title. Read-only. */
+    /** The format property */
     private WorkbookChartAxisTitleFormat _format;
     /** Represents the axis title. */
     private String _text;
@@ -21,7 +21,6 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartAxisTitle() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxisTitle");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +46,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the format property value. Represents the formatting of chart axis title. Read-only.
+     * Gets the format property value. The format property
      * @return a workbookChartAxisTitleFormat
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
         writer.writeBooleanValue("visible", this.getVisible());
     }
     /**
-     * Sets the format property value. Represents the formatting of chart axis title. Read-only.
+     * Sets the format property value. The format property
      * @param value Value to set for the format property.
      * @return a void
      */

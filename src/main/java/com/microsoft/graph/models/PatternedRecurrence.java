@@ -11,11 +11,9 @@ import java.util.Objects;
 public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The OdataType property */
-    private String _odataType;
-    /** The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported. */
+    /** The pattern property */
     private RecurrencePattern _pattern;
-    /** The duration of an event. */
+    /** The range property */
     private RecurrenceRange _range;
     /**
      * Instantiates a new patternedRecurrence and sets the default values.
@@ -24,7 +22,6 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public PatternedRecurrence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.patternedRecurrence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,22 +48,13 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PatternedRecurrence currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("pattern", (n) -> { currentObject.setPattern(n.getObjectValue(RecurrencePattern::createFromDiscriminatorValue)); });
             this.put("range", (n) -> { currentObject.setRange(n.getObjectValue(RecurrenceRange::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Gets the pattern property value. The pattern property
      * @return a recurrencePattern
      */
     @javax.annotation.Nullable
@@ -74,7 +62,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         return this._pattern;
     }
     /**
-     * Gets the range property value. The duration of an event.
+     * Gets the range property value. The range property
      * @return a recurrenceRange
      */
     @javax.annotation.Nullable
@@ -89,7 +77,6 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("pattern", this.getPattern());
         writer.writeObjectValue("range", this.getRange());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -104,16 +91,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
+     * Sets the pattern property value. The pattern property
      * @param value Value to set for the pattern property.
      * @return a void
      */
@@ -122,7 +100,7 @@ public class PatternedRecurrence implements AdditionalDataHolder, Parsable {
         this._pattern = value;
     }
     /**
-     * Sets the range property value. The duration of an event.
+     * Sets the range property value. The range property
      * @param value Value to set for the range property.
      * @return a void
      */

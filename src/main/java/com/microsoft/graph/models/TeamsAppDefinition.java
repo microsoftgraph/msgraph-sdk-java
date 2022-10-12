@@ -8,9 +8,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsAppDefinition extends Entity implements Parsable {
-    /** The details of the bot specified in the Teams app manifest. */
+    /** The bot property */
     private TeamworkBot _bot;
     /** The createdBy property */
     private IdentitySet _createdBy;
@@ -20,7 +19,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     private String _displayName;
     /** The lastModifiedDateTime property */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
+    /** The publishingState property */
     private TeamsAppPublishingState _publishingState;
     /** Short description of the application. */
     private String _shortDescription;
@@ -35,7 +34,6 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @javax.annotation.Nullable
     public TeamsAppDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +46,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
-     * Gets the bot property value. The details of the bot specified in the Teams app manifest.
+     * Gets the bot property value. The bot property
      * @return a teamworkBot
      */
     @javax.annotation.Nullable
@@ -107,7 +105,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
+     * Gets the publishingState property value. The publishingState property
      * @return a teamsAppPublishingState
      */
     @javax.annotation.Nullable
@@ -158,7 +156,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the bot property value. The details of the bot specified in the Teams app manifest.
+     * Sets the bot property value. The bot property
      * @param value Value to set for the bot property.
      * @return a void
      */
@@ -203,7 +201,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The publishingState property
      * @param value Value to set for the publishingState property.
      * @return a void
      */

@@ -7,9 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class PinnedChatMessageInfo extends Entity implements Parsable {
-    /** Represents details about the chat message that is pinned. */
+    /** The message property */
     private ChatMessage _message;
     /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.
@@ -18,7 +17,6 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     @javax.annotation.Nullable
     public PinnedChatMessageInfo() {
         super();
-        this.setOdataType("#microsoft.graph.pinnedChatMessageInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +40,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the message property value. Represents details about the chat message that is pinned.
+     * Gets the message property value. The message property
      * @return a chatMessage
      */
     @javax.annotation.Nullable
@@ -61,7 +59,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
         writer.writeObjectValue("message", this.getMessage());
     }
     /**
-     * Sets the message property value. Represents details about the chat message that is pinned.
+     * Sets the message property value. The message property
      * @param value Value to set for the message property.
      * @return a void
      */

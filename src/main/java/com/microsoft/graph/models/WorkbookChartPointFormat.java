@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartPointFormat extends Entity implements Parsable {
-    /** Represents the fill format of a chart, which includes background formating information. Read-only. */
+    /** The fill property */
     private WorkbookChartFill _fill;
     /**
      * Instantiates a new workbookChartPointFormat and sets the default values.
@@ -17,7 +17,6 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookChartPointFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartPointFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.
+     * Gets the fill property value. The fill property
      * @return a workbookChartFill
      */
     @javax.annotation.Nullable
@@ -60,7 +59,7 @@ public class WorkbookChartPointFormat extends Entity implements Parsable {
         writer.writeObjectValue("fill", this.getFill());
     }
     /**
-     * Sets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.
+     * Sets the fill property value. The fill property
      * @param value Value to set for the fill property.
      * @return a void
      */

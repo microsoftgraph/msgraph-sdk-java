@@ -8,15 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Relation extends Entity implements Parsable {
-    /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
+    /** The fromTerm property */
     private Term _fromTerm;
-    /** The type of relation. Possible values are: pin, reuse. */
+    /** The relationship property */
     private RelationType _relationship;
-    /** The [set] in which the relation is relevant. */
+    /** The set property */
     private Set _set;
-    /** The to [term] of the relation. The term to which the relationship is defined. */
+    /** The toTerm property */
     private Term _toTerm;
     /**
      * Instantiates a new relation and sets the default values.
@@ -25,7 +24,6 @@ public class Relation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Relation() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.relation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +50,7 @@ public class Relation extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
+     * Gets the fromTerm property value. The fromTerm property
      * @return a term
      */
     @javax.annotation.Nullable
@@ -60,7 +58,7 @@ public class Relation extends Entity implements Parsable {
         return this._fromTerm;
     }
     /**
-     * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Gets the relationship property value. The relationship property
      * @return a relationType
      */
     @javax.annotation.Nullable
@@ -68,7 +66,7 @@ public class Relation extends Entity implements Parsable {
         return this._relationship;
     }
     /**
-     * Gets the set property value. The [set] in which the relation is relevant.
+     * Gets the set property value. The set property
      * @return a set
      */
     @javax.annotation.Nullable
@@ -76,7 +74,7 @@ public class Relation extends Entity implements Parsable {
         return this._set;
     }
     /**
-     * Gets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
+     * Gets the toTerm property value. The toTerm property
      * @return a term
      */
     @javax.annotation.Nullable
@@ -98,7 +96,7 @@ public class Relation extends Entity implements Parsable {
         writer.writeObjectValue("toTerm", this.getToTerm());
     }
     /**
-     * Sets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
+     * Sets the fromTerm property value. The fromTerm property
      * @param value Value to set for the fromTerm property.
      * @return a void
      */
@@ -107,7 +105,7 @@ public class Relation extends Entity implements Parsable {
         this._fromTerm = value;
     }
     /**
-     * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Sets the relationship property value. The relationship property
      * @param value Value to set for the relationship property.
      * @return a void
      */
@@ -116,7 +114,7 @@ public class Relation extends Entity implements Parsable {
         this._relationship = value;
     }
     /**
-     * Sets the set property value. The [set] in which the relation is relevant.
+     * Sets the set property value. The set property
      * @param value Value to set for the set property.
      * @return a void
      */
@@ -125,7 +123,7 @@ public class Relation extends Entity implements Parsable {
         this._set = value;
     }
     /**
-     * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
+     * Sets the toTerm property value. The toTerm property
      * @param value Value to set for the toTerm property.
      * @return a void
      */

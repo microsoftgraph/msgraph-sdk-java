@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OnenoteOperation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,13 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class Operation extends Entity implements Parsable {
     /** The start time of the operation. */
     private OffsetDateTime _createdDateTime;
     /** The time of the last action of the operation. */
     private OffsetDateTime _lastActionDateTime;
-    /** The current status of the operation: notStarted, running, completed, failed */
+    /** The status property */
     private OperationStatus _status;
     /**
      * Instantiates a new operation and sets the default values.
@@ -24,7 +22,6 @@ public class Operation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Operation() {
         super();
-        this.setOdataType("#microsoft.graph.operation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,13 +31,6 @@ public class Operation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Operation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.onenoteOperation": return new OnenoteOperation();
-            }
-        }
         return new Operation();
     }
     /**
@@ -73,7 +63,7 @@ public class Operation extends Entity implements Parsable {
         return this._lastActionDateTime;
     }
     /**
-     * Gets the status property value. The current status of the operation: notStarted, running, completed, failed
+     * Gets the status property value. The status property
      * @return a operationStatus
      */
     @javax.annotation.Nullable
@@ -112,7 +102,7 @@ public class Operation extends Entity implements Parsable {
         this._lastActionDateTime = value;
     }
     /**
-     * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

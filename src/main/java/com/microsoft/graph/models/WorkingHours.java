@@ -16,11 +16,9 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     private java.util.List<DayOfWeek> _daysOfWeek;
     /** The time of the day that the user stops working. */
     private LocalTime _endTime;
-    /** The OdataType property */
-    private String _odataType;
     /** The time of the day that the user starts working. */
     private LocalTime _startTime;
-    /** The time zone to which the working hours apply. */
+    /** The timeZone property */
     private TimeZoneBase _timeZone;
     /**
      * Instantiates a new workingHours and sets the default values.
@@ -29,7 +27,6 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkingHours() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workingHours");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,21 +69,12 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkingHours currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getObjectValue(TimeZoneBase::createFromDiscriminatorValue)); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the startTime property value. The time of the day that the user starts working.
@@ -97,7 +85,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
         return this._startTime;
     }
     /**
-     * Gets the timeZone property value. The time zone to which the working hours apply.
+     * Gets the timeZone property value. The timeZone property
      * @return a timeZoneBase
      */
     @javax.annotation.Nullable
@@ -114,7 +102,6 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
         writer.writeObjectValue("timeZone", this.getTimeZone());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -147,15 +134,6 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
         this._endTime = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
      * Sets the startTime property value. The time of the day that the user starts working.
      * @param value Value to set for the startTime property.
      * @return a void
@@ -165,7 +143,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
         this._startTime = value;
     }
     /**
-     * Sets the timeZone property value. The time zone to which the working hours apply.
+     * Sets the timeZone property value. The timeZone property
      * @param value Value to set for the timeZone property.
      * @return a void
      */

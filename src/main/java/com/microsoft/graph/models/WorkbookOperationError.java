@@ -17,8 +17,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     private WorkbookOperationError _innerError;
     /** The error message. */
     private String _message;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new workbookOperationError and sets the default values.
      * @return a void
@@ -26,7 +24,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public WorkbookOperationError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookOperationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,11 +58,10 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookOperationError currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("innerError", (n) -> { currentObject.setInnerError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
@@ -85,14 +81,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
         return this._message;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -103,7 +91,6 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("code", this.getCode());
         writer.writeObjectValue("innerError", this.getInnerError());
         writer.writeStringValue("message", this.getMessage());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -141,14 +128,5 @@ public class WorkbookOperationError implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

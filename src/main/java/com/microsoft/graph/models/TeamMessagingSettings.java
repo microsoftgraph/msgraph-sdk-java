@@ -21,8 +21,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     private Boolean _allowUserDeleteMessages;
     /** If set to true, users can edit their messages. */
     private Boolean _allowUserEditMessages;
-    /** The OdataType property */
-    private String _odataType;
     /**
      * Instantiates a new teamMessagingSettings and sets the default values.
      * @return a void
@@ -30,7 +28,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamMessagingSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,22 +94,13 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamMessagingSettings currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowChannelMentions", (n) -> { currentObject.setAllowChannelMentions(n.getBooleanValue()); });
             this.put("allowOwnerDeleteMessages", (n) -> { currentObject.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
             this.put("allowTeamMentions", (n) -> { currentObject.setAllowTeamMentions(n.getBooleanValue()); });
             this.put("allowUserDeleteMessages", (n) -> { currentObject.setAllowUserDeleteMessages(n.getBooleanValue()); });
             this.put("allowUserEditMessages", (n) -> { currentObject.setAllowUserEditMessages(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Serializes information the current object
@@ -127,7 +115,6 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("allowTeamMentions", this.getAllowTeamMentions());
         writer.writeBooleanValue("allowUserDeleteMessages", this.getAllowUserDeleteMessages());
         writer.writeBooleanValue("allowUserEditMessages", this.getAllowUserEditMessages());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -183,14 +170,5 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setAllowUserEditMessages(@javax.annotation.Nullable final Boolean value) {
         this._allowUserEditMessages = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AadUserConversationMember;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ConversationMember extends Entity implements Parsable {
     /** The display name of the user. */
     private String _displayName;
@@ -24,7 +22,6 @@ public class ConversationMember extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ConversationMember() {
         super();
-        this.setOdataType("#microsoft.graph.conversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,13 +31,6 @@ public class ConversationMember extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.aadUserConversationMember": return new AadUserConversationMember();
-            }
-        }
         return new ConversationMember();
     }
     /**

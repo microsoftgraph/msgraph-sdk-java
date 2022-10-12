@@ -2,9 +2,6 @@ package com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachments;
 
 import com.microsoft.graph.models.AttachmentBase;
 import com.microsoft.graph.models.AttachmentBaseCollectionResponse;
-import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.count.CountRequestBuilder;
-import com.microsoft.graph.users.item.todo.lists.item.tasks.item.attachments.createuploadsession.CreateUploadSessionRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
@@ -18,18 +15,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the attachments property of the microsoft.graph.todoTask entity. */
+/** Builds and executes requests for operations under /users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}/attachments */
 public class AttachmentsRequestBuilder {
-    /** The Count property */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The createUploadSession property */
-    @javax.annotation.Nonnull
-    public CreateUploadSessionRequestBuilder createUploadSession() {
-        return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -136,11 +123,7 @@ public class AttachmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AttachmentBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AttachmentBaseCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -156,11 +139,7 @@ public class AttachmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AttachmentsRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AttachmentBaseCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AttachmentBaseCollectionResponse::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<AttachmentBaseCollectionResponse>() {{
                 this.completeExceptionally(ex);
@@ -176,11 +155,7 @@ public class AttachmentsRequestBuilder {
     public java.util.concurrent.CompletableFuture<AttachmentBase> post(@javax.annotation.Nonnull final AttachmentBase body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AttachmentBase::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AttachmentBase::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<AttachmentBase>() {{
                 this.completeExceptionally(ex);
@@ -198,11 +173,7 @@ public class AttachmentsRequestBuilder {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AttachmentBase::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, AttachmentBase::createFromDiscriminatorValue, null);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<AttachmentBase>() {{
                 this.completeExceptionally(ex);

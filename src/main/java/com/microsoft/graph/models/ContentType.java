@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class ContentType extends Entity implements Parsable {
     /** List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites. */
     private java.util.List<String> _associatedHubsUrls;
-    /** Parent contentType from which this content type is derived. */
+    /** The base property */
     private ContentType _base;
     /** The collection of content types that are ancestors of this content type. */
     private java.util.List<ContentType> _baseTypes;
@@ -23,21 +22,21 @@ public class ContentType extends Entity implements Parsable {
     private java.util.List<ColumnDefinition> _columns;
     /** The descriptive text for the item. */
     private String _description;
-    /** Document Set metadata. */
+    /** The documentSet property */
     private DocumentSet _documentSet;
-    /** Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type. */
+    /** The documentTemplate property */
     private DocumentSetContent _documentTemplate;
     /** The name of the group this content type belongs to. Helps organize related content types. */
     private String _group;
     /** Indicates whether the content type is hidden in the list's 'New' menu. */
     private Boolean _hidden;
-    /** If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined. */
+    /** The inheritedFrom property */
     private ItemReference _inheritedFrom;
     /** Specifies if a content type is a built-in content type. */
     private Boolean _isBuiltIn;
     /** The name of the content type. */
     private String _name;
-    /** Specifies the order in which the content type appears in the selection UI. */
+    /** The order property */
     private ContentTypeOrder _order;
     /** The unique identifier of the content type. */
     private String _parentId;
@@ -54,7 +53,6 @@ public class ContentType extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ContentType() {
         super();
-        this.setOdataType("#microsoft.graph.contentType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,7 +73,7 @@ public class ContentType extends Entity implements Parsable {
         return this._associatedHubsUrls;
     }
     /**
-     * Gets the base property value. Parent contentType from which this content type is derived.
+     * Gets the base property value. The base property
      * @return a contentType
      */
     @javax.annotation.Nullable
@@ -123,7 +121,7 @@ public class ContentType extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the documentSet property value. Document Set metadata.
+     * Gets the documentSet property value. The documentSet property
      * @return a documentSet
      */
     @javax.annotation.Nullable
@@ -131,7 +129,7 @@ public class ContentType extends Entity implements Parsable {
         return this._documentSet;
     }
     /**
-     * Gets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
+     * Gets the documentTemplate property value. The documentTemplate property
      * @return a documentSetContent
      */
     @javax.annotation.Nullable
@@ -184,7 +182,7 @@ public class ContentType extends Entity implements Parsable {
         return this._hidden;
     }
     /**
-     * Gets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
+     * Gets the inheritedFrom property value. The inheritedFrom property
      * @return a itemReference
      */
     @javax.annotation.Nullable
@@ -208,7 +206,7 @@ public class ContentType extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the order property value. Specifies the order in which the content type appears in the selection UI.
+     * Gets the order property value. The order property
      * @return a contentTypeOrder
      */
     @javax.annotation.Nullable
@@ -286,7 +284,7 @@ public class ContentType extends Entity implements Parsable {
         this._associatedHubsUrls = value;
     }
     /**
-     * Sets the base property value. Parent contentType from which this content type is derived.
+     * Sets the base property value. The base property
      * @param value Value to set for the base property.
      * @return a void
      */
@@ -340,7 +338,7 @@ public class ContentType extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the documentSet property value. Document Set metadata.
+     * Sets the documentSet property value. The documentSet property
      * @param value Value to set for the documentSet property.
      * @return a void
      */
@@ -349,7 +347,7 @@ public class ContentType extends Entity implements Parsable {
         this._documentSet = value;
     }
     /**
-     * Sets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
+     * Sets the documentTemplate property value. The documentTemplate property
      * @param value Value to set for the documentTemplate property.
      * @return a void
      */
@@ -376,7 +374,7 @@ public class ContentType extends Entity implements Parsable {
         this._hidden = value;
     }
     /**
-     * Sets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
+     * Sets the inheritedFrom property value. The inheritedFrom property
      * @param value Value to set for the inheritedFrom property.
      * @return a void
      */
@@ -403,7 +401,7 @@ public class ContentType extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the order property value. Specifies the order in which the content type appears in the selection UI.
+     * Sets the order property value. The order property
      * @param value Value to set for the order property.
      * @return a void
      */

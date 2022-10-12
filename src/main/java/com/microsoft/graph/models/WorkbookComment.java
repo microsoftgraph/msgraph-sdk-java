@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookComment extends Entity implements Parsable {
     /** The content of comment. */
     private String _content;
@@ -22,7 +21,6 @@ public class WorkbookComment extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookComment() {
         super();
-        this.setOdataType("#microsoft.graph.workbookComment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class WorkbookNamedItem extends Entity implements Parsable {
     /** Represents the comment associated with this name. */
     private String _comment;
@@ -17,11 +16,11 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     private String _scope;
     /** Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only. */
     private String _type;
-    /** Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
+    /** The value property */
     private Json _value;
     /** Specifies whether the object is visible or not. */
     private Boolean _visible;
-    /** Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only. */
+    /** The worksheet property */
     private WorkbookWorksheet _worksheet;
     /**
      * Instantiates a new workbookNamedItem and sets the default values.
@@ -30,7 +29,6 @@ public class WorkbookNamedItem extends Entity implements Parsable {
     @javax.annotation.Nullable
     public WorkbookNamedItem() {
         super();
-        this.setOdataType("#microsoft.graph.workbookNamedItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +90,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         return this._type;
     }
     /**
-     * Gets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     * Gets the value property value. The value property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -108,7 +106,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         return this._visible;
     }
     /**
-     * Gets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Gets the worksheet property value. The worksheet property
      * @return a workbookWorksheet
      */
     @javax.annotation.Nullable
@@ -169,7 +167,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         this._type = value;
     }
     /**
-     * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */
@@ -187,7 +185,7 @@ public class WorkbookNamedItem extends Entity implements Parsable {
         this._visible = value;
     }
     /**
-     * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Sets the worksheet property value. The worksheet property
      * @param value Value to set for the worksheet property.
      * @return a void
      */

@@ -16,8 +16,6 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _assignedDateTime;
     /** Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value. */
     private String _capabilityStatus;
-    /** The OdataType property */
-    private String _odataType;
     /** The name of the service; for example, exchange. */
     private String _service;
     /** A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing. */
@@ -29,7 +27,6 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AssignedPlan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignedPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,21 +69,12 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedPlan currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
             this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
             this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
         }};
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
     }
     /**
      * Gets the service property value. The name of the service; for example, exchange.
@@ -114,7 +102,6 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("service", this.getService());
         writer.writeStringValue("servicePlanId", this.getServicePlanId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -145,15 +132,6 @@ public class AssignedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
         this._capabilityStatus = value;
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
     }
     /**
      * Sets the service property value. The name of the service; for example, exchange.

@@ -15,9 +15,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     private String _calendarEventId;
     /** The URL that users click to join or uniquely identify the meeting. */
     private String _joinWebUrl;
-    /** The OdataType property */
-    private String _odataType;
-    /** The organizer of the meeting. */
+    /** The organizer property */
     private TeamworkUserIdentity _organizer;
     /**
      * Instantiates a new teamworkOnlineMeetingInfo and sets the default values.
@@ -26,7 +24,6 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkOnlineMeetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,10 +58,9 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnlineMeetingInfo currentObject = this;
-        return new HashMap<String, Consumer<ParseNode>>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
         }};
     }
@@ -77,15 +73,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         return this._joinWebUrl;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getOdataType() {
-        return this._odataType;
-    }
-    /**
-     * Gets the organizer property value. The organizer of the meeting.
+     * Gets the organizer property value. The organizer property
      * @return a teamworkUserIdentity
      */
     @javax.annotation.Nullable
@@ -102,7 +90,6 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         Objects.requireNonNull(writer);
         writer.writeStringValue("calendarEventId", this.getCalendarEventId());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("organizer", this.getOrganizer());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -134,16 +121,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
         this._joinWebUrl = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
-    }
-    /**
-     * Sets the organizer property value. The organizer of the meeting.
+     * Sets the organizer property value. The organizer property
      * @param value Value to set for the organizer property.
      * @return a void
      */
