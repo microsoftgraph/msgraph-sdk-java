@@ -24,6 +24,7 @@ import com.microsoft.graph.models.DeviceCategory;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage;
+import com.microsoft.graph.requests.UserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -329,6 +330,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public ManagementAgentType managementAgent;
 
     /**
+     * The Management Certificate Expiration Date.
+     * Reports device management certificate expiration date. This property is read-only.
+     */
+    @SerializedName(value = "managementCertificateExpirationDate", alternate = {"ManagementCertificateExpirationDate"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime managementCertificateExpirationDate;
+
+    /**
      * The Manufacturer.
      * Manufacturer of the device. This property is read-only.
      */
@@ -426,6 +436,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String remoteAssistanceSessionUrl;
+
+    /**
+     * The Require User Enrollment Approval.
+     * Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     */
+    @SerializedName(value = "requireUserEnrollmentApproval", alternate = {"RequireUserEnrollmentApproval"})
+    @Expose
+	@Nullable
+    public Boolean requireUserEnrollmentApproval;
 
     /**
      * The Serial Number.
@@ -526,6 +545,13 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 	@Nullable
     public DeviceCategory deviceCategory;
 
+    /**
+     * The Users.
+     * The primary users associated with the managed device.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage users;
+
 
     /**
      * Sets the raw JSON object
@@ -542,6 +568,10 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceConfigurationStates")) {
             deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage.class);
+        }
+
+        if (json.has("users")) {
+            users = serializer.deserializeObject(json.get("users"), com.microsoft.graph.requests.UserCollectionPage.class);
         }
     }
 }

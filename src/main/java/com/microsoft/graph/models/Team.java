@@ -256,7 +256,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * The tags associated with the team.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

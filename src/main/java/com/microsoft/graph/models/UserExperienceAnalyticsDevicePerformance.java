@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Average Blue Screens.
-     * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
+     * Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
      */
     @SerializedName(value = "averageBlueScreens", alternate = {"AverageBlueScreens"})
     @Expose
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Average Restarts.
-     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
+     * Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
      */
     @SerializedName(value = "averageRestarts", alternate = {"AverageRestarts"})
     @Expose
@@ -47,7 +47,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Blue Screen Count.
-     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
+     * Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
      */
     @SerializedName(value = "blueScreenCount", alternate = {"BlueScreenCount"})
     @Expose
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 
     /**
      * The Restart Count.
-     * Number of Restarts in the last 14 days. Valid values 0 to 9999999
+     * Number of Restarts in the last 30 days. Valid values 0 to 9999999
      */
     @SerializedName(value = "restartCount", alternate = {"RestartCount"})
     @Expose

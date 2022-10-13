@@ -39,7 +39,7 @@ public class CallOptions implements IJsonBackedObject {
 
     /**
      * The Hide Bot After Escalation.
-     * 
+     * Indicates whether to hide the app after the call is escalated.
      */
     @SerializedName(value = "hideBotAfterEscalation", alternate = {"HideBotAfterEscalation"})
     @Expose
@@ -48,7 +48,7 @@ public class CallOptions implements IJsonBackedObject {
 
     /**
      * The Is Content Sharing Notification Enabled.
-     * 
+     * Indicates whether content sharing notifications should be enabled for the call.
      */
     @SerializedName(value = "isContentSharingNotificationEnabled", alternate = {"IsContentSharingNotificationEnabled"})
     @Expose

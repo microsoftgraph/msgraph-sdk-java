@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionPage;
 import com.microsoft.graph.requests.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
 
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Authentication Context Class References.
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     */
+    @SerializedName(value = "authenticationContextClassReferences", alternate = {"AuthenticationContextClassReferences"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionPage authenticationContextClassReferences;
 
     /**
      * The Named Locations.
@@ -55,6 +65,10 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("authenticationContextClassReferences")) {
+            authenticationContextClassReferences = serializer.deserializeObject(json.get("authenticationContextClassReferences"), com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionPage.class);
+        }
 
         if (json.has("namedLocations")) {
             namedLocations = serializer.deserializeObject(json.get("namedLocations"), com.microsoft.graph.requests.NamedLocationCollectionPage.class);

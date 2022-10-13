@@ -59,7 +59,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose

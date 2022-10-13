@@ -25,6 +25,9 @@ import com.microsoft.graph.models.ReportRootGetEmailAppUsageAppsUserCountsParame
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageUserDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageVersionsUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetM365AppPlatformUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetM365AppUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetM365AppUserDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetMailboxUsageDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetMailboxUsageMailboxCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetMailboxUsageQuotaStatusMailboxCountsParameterSet;
@@ -210,6 +213,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
     /**
+     * Gets the request builder for SecurityReportsRoot
+     *
+     * @return the SecurityReportsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SecurityReportsRootRequestBuilder security() {
+        return new com.microsoft.graph.requests.SecurityReportsRootRequestBuilder(getRequestUrlWithAdditionalSegment("security"), getClient(), null);
+    }
+
+    /**
      * Metadata for the device configuration device activity report
      * @return the request builder
      */
@@ -333,6 +346,36 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(@Nonnull final ReportRootGetEmailAppUsageVersionsUserCountsParameterSet parameters) {
         return new ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageVersionsUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetM365AppPlatformUserCountsRequestBuilder getM365AppPlatformUserCounts(@Nonnull final ReportRootGetM365AppPlatformUserCountsParameterSet parameters) {
+        return new ReportRootGetM365AppPlatformUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getM365AppPlatformUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetM365AppUserCountsRequestBuilder getM365AppUserCounts(@Nonnull final ReportRootGetM365AppUserCountsParameterSet parameters) {
+        return new ReportRootGetM365AppUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getM365AppUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetM365AppUserDetailRequestBuilder getM365AppUserDetail(@Nonnull final ReportRootGetM365AppUserDetailParameterSet parameters) {
+        return new ReportRootGetM365AppUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getM365AppUserDetail"), getClient(), null, parameters);
     }
 
     /**

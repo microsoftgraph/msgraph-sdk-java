@@ -27,7 +27,7 @@ public class TeamworkTagMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The member's display name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class TeamworkTagMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The ID of the tenant that the tag member is a part of.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamworkTagMember extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The user ID of the member.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

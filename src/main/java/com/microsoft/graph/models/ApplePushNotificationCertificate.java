@@ -53,6 +53,24 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public String certificateSerialNumber;
 
     /**
+     * The Certificate Upload Failure Reason.
+     * The reason the certificate upload failed.
+     */
+    @SerializedName(value = "certificateUploadFailureReason", alternate = {"CertificateUploadFailureReason"})
+    @Expose
+	@Nullable
+    public String certificateUploadFailureReason;
+
+    /**
+     * The Certificate Upload Status.
+     * The certificate upload status.
+     */
+    @SerializedName(value = "certificateUploadStatus", alternate = {"CertificateUploadStatus"})
+    @Expose
+	@Nullable
+    public String certificateUploadStatus;
+
+    /**
      * The Expiration Date Time.
      * The expiration date and time for Apple push notification certificate.
      */

@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
+import com.microsoft.graph.requests.GroupCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -74,6 +75,13 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime modifiedDateTime;
 
     /**
+     * The Access Packages Incompatible With.
+     * The access packages that are incompatible with this package. Read-only.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackagesIncompatibleWith;
+
+    /**
      * The Assignment Policies.
      * 
      */
@@ -91,6 +99,22 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 	@Nullable
     public AccessPackageCatalog catalog;
 
+    /**
+     * The Incompatible Access Packages.
+     * The access packages whose assigned users are ineligible to be assigned this access package.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageCollectionPage incompatibleAccessPackages;
+
+    /**
+     * The Incompatible Groups.
+     * The groups whose members are ineligible to be assigned this access package.
+     */
+    @SerializedName(value = "incompatibleGroups", alternate = {"IncompatibleGroups"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.GroupCollectionPage incompatibleGroups;
+
 
     /**
      * Sets the raw JSON object
@@ -101,8 +125,20 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("accessPackagesIncompatibleWith")) {
+            accessPackagesIncompatibleWith = serializer.deserializeObject(json.get("accessPackagesIncompatibleWith"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
+        }
+
         if (json.has("assignmentPolicies")) {
             assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage.class);
+        }
+
+        if (json.has("incompatibleAccessPackages")) {
+            incompatibleAccessPackages = serializer.deserializeObject(json.get("incompatibleAccessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
+        }
+
+        if (json.has("incompatibleGroups")) {
+            incompatibleGroups = serializer.deserializeObject(json.get("incompatibleGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
         }
     }
 }
