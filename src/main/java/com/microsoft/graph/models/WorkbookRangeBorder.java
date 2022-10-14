@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookRangeBorder extends Entity implements Parsable {
     /** HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange'). */
     private String _color;
@@ -21,6 +21,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * Instantiates a new workbookRangeBorder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookRangeBorder() {
         super();
         this.setOdataType("#microsoft.graph.workbookRangeBorder");
@@ -50,7 +51,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookRangeBorder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
             this.put("sideIndex", (n) -> { currentObject.setSideIndex(n.getStringValue()); });
             this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }
@@ -107,6 +110,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the sideIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSideIndex(@javax.annotation.Nullable final String value) {
         this._sideIndex = value;
     }
@@ -115,6 +119,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the style property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStyle(@javax.annotation.Nullable final String value) {
         this._style = value;
     }
@@ -123,6 +128,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the weight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final String value) {
         this._weight = value;
     }

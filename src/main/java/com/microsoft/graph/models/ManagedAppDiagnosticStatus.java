@@ -24,6 +24,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * Instantiates a new managedAppDiagnosticStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppDiagnosticStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedAppDiagnosticStatus");
@@ -53,7 +54,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppDiagnosticStatus currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("mitigationInstruction", (n) -> { currentObject.setMitigationInstruction(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("mitigationInstruction", this.getMitigationInstruction());
@@ -110,6 +112,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the mitigationInstruction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMitigationInstruction(@javax.annotation.Nullable final String value) {
         this._mitigationInstruction = value;
     }
@@ -126,6 +130,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -142,6 +148,7 @@ public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the validationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValidationName(@javax.annotation.Nullable final String value) {
         this._validationName = value;
     }

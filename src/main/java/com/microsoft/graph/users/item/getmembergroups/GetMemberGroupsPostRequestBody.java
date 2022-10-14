@@ -18,6 +18,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new getMemberGroupsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetMemberGroupsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetMemberGroupsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("securityEnabledOnly", (n) -> { currentObject.setSecurityEnabledOnly(n.getBooleanValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("securityEnabledOnly", this.getSecurityEnabledOnly());
@@ -73,6 +75,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the securityEnabledOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityEnabledOnly(@javax.annotation.Nullable final Boolean value) {
         this._securityEnabledOnly = value;
     }

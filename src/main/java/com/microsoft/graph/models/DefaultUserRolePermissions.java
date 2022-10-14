@@ -25,6 +25,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * Instantiates a new defaultUserRolePermissions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DefaultUserRolePermissions() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.defaultUserRolePermissions");
@@ -78,7 +79,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultUserRolePermissions currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowedToCreateApps", (n) -> { currentObject.setAllowedToCreateApps(n.getBooleanValue()); });
             this.put("allowedToCreateSecurityGroups", (n) -> { currentObject.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
             this.put("allowedToReadOtherUsers", (n) -> { currentObject.setAllowedToReadOtherUsers(n.getBooleanValue()); });
@@ -107,6 +108,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowedToCreateApps", this.getAllowedToCreateApps());
@@ -121,6 +123,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the allowedToCreateApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToCreateApps(@javax.annotation.Nullable final Boolean value) {
         this._allowedToCreateApps = value;
     }
@@ -137,6 +141,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the allowedToCreateSecurityGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToCreateSecurityGroups(@javax.annotation.Nullable final Boolean value) {
         this._allowedToCreateSecurityGroups = value;
     }
@@ -145,6 +150,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the allowedToReadOtherUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToReadOtherUsers(@javax.annotation.Nullable final Boolean value) {
         this._allowedToReadOtherUsers = value;
     }
@@ -153,6 +159,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the permissionGrantPoliciesAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionGrantPoliciesAssigned(@javax.annotation.Nullable final java.util.List<String> value) {
         this._permissionGrantPoliciesAssigned = value;
     }

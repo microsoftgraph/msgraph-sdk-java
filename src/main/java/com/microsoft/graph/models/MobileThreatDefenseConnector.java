@@ -30,6 +30,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * Instantiates a new mobileThreatDefenseConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileThreatDefenseConnector() {
         super();
         this.setOdataType("#microsoft.graph.mobileThreatDefenseConnector");
@@ -67,7 +68,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileThreatDefenseConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
             this.put("androidEnabled", (n) -> { currentObject.setAndroidEnabled(n.getBooleanValue()); });
             this.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { currentObject.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
@@ -131,6 +132,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the androidDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._androidDeviceBlockedOnMissingPartnerData = value;
     }
@@ -156,6 +159,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the androidEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidEnabled(@javax.annotation.Nullable final Boolean value) {
         this._androidEnabled = value;
     }
@@ -164,6 +168,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosDeviceBlockedOnMissingPartnerData(@javax.annotation.Nullable final Boolean value) {
         this._iosDeviceBlockedOnMissingPartnerData = value;
     }
@@ -172,6 +177,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the iosEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosEnabled(@javax.annotation.Nullable final Boolean value) {
         this._iosEnabled = value;
     }
@@ -180,6 +186,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastHeartbeatDateTime = value;
     }
@@ -188,6 +195,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final MobileThreatPartnerTenantState value) {
         this._partnerState = value;
     }
@@ -196,6 +204,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerUnresponsivenessThresholdInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnresponsivenessThresholdInDays(@javax.annotation.Nullable final Integer value) {
         this._partnerUnresponsivenessThresholdInDays = value;
     }
@@ -204,6 +213,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      * @param value Value to set for the partnerUnsupportedOsVersionBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerUnsupportedOsVersionBlocked(@javax.annotation.Nullable final Boolean value) {
         this._partnerUnsupportedOsVersionBlocked = value;
     }

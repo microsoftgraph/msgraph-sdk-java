@@ -27,6 +27,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethod");
@@ -56,7 +57,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TemporaryAccessPassAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("isUsable", (n) -> { currentObject.setIsUsable(n.getBooleanValue()); });
             this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
@@ -119,6 +120,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -143,6 +146,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the isUsable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUsable(@javax.annotation.Nullable final Boolean value) {
         this._isUsable = value;
     }
@@ -151,6 +155,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the isUsableOnce property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUsableOnce(@javax.annotation.Nullable final Boolean value) {
         this._isUsableOnce = value;
     }
@@ -159,6 +164,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the lifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._lifetimeInMinutes = value;
     }
@@ -167,6 +173,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the methodUsabilityReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMethodUsabilityReason(@javax.annotation.Nullable final String value) {
         this._methodUsabilityReason = value;
     }
@@ -175,6 +182,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -183,6 +191,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the temporaryAccessPass property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemporaryAccessPass(@javax.annotation.Nullable final String value) {
         this._temporaryAccessPass = value;
     }

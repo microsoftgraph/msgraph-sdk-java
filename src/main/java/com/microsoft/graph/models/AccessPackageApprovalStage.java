@@ -34,6 +34,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * Instantiates a new accessPackageApprovalStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageApprovalStage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageApprovalStage");
@@ -103,7 +104,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageApprovalStage currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("durationBeforeAutomaticDenial", (n) -> { currentObject.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
             this.put("durationBeforeEscalation", (n) -> { currentObject.setDurationBeforeEscalation(n.getPeriodValue()); });
             this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -152,6 +153,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
@@ -170,6 +172,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -178,6 +181,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the durationBeforeAutomaticDenial property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationBeforeAutomaticDenial(@javax.annotation.Nullable final Period value) {
         this._durationBeforeAutomaticDenial = value;
     }
@@ -186,6 +190,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the durationBeforeEscalation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationBeforeEscalation(@javax.annotation.Nullable final Period value) {
         this._durationBeforeEscalation = value;
     }
@@ -194,6 +199,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the escalationApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._escalationApprovers = value;
     }
@@ -202,6 +208,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the fallbackEscalationApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._fallbackEscalationApprovers = value;
     }
@@ -210,6 +217,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the fallbackPrimaryApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._fallbackPrimaryApprovers = value;
     }
@@ -218,6 +226,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the isApproverJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApproverJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isApproverJustificationRequired = value;
     }
@@ -226,6 +235,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the isEscalationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEscalationEnabled = value;
     }
@@ -234,6 +244,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -242,6 +253,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the primaryApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._primaryApprovers = value;
     }

@@ -22,6 +22,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new addToReviewSetPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddToReviewSetPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,7 +59,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddToReviewSetPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("additionalDataOptions", (n) -> { currentObject.setAdditionalDataOptions(n.getEnumValue(AdditionalDataOptions.class)); });
             this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         }};
@@ -76,6 +77,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("additionalDataOptions", this.getAdditionalDataOptions());
@@ -87,6 +89,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalDataOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDataOptions(@javax.annotation.Nullable final AdditionalDataOptions value) {
         this._additionalDataOptions = value;
     }
@@ -103,6 +107,7 @@ public class AddToReviewSetPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
         this._search = value;
     }

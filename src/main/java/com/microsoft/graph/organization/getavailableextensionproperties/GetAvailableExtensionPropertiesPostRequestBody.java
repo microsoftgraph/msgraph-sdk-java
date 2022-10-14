@@ -18,6 +18,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      * Instantiates a new getAvailableExtensionPropertiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetAvailableExtensionPropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetAvailableExtensionPropertiesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("isSyncedFromOnPremises", (n) -> { currentObject.setIsSyncedFromOnPremises(n.getBooleanValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isSyncedFromOnPremises", this.getIsSyncedFromOnPremises());
@@ -73,6 +75,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class GetAvailableExtensionPropertiesPostRequestBody implements Additiona
      * @param value Value to set for the isSyncedFromOnPremises property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSyncedFromOnPremises(@javax.annotation.Nullable final Boolean value) {
         this._isSyncedFromOnPremises = value;
     }

@@ -18,6 +18,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppProductCodeRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppProductCodeRule");
@@ -39,7 +40,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppProductCodeRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
             this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
             this.put("productVersionOperator", (n) -> { currentObject.setProductVersionOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
@@ -74,6 +75,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param value Value to set for the productCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
         this._productCode = value;
     }
@@ -94,6 +97,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param value Value to set for the productVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
         this._productVersion = value;
     }
@@ -102,6 +106,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param value Value to set for the productVersionOperator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersionOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
         this._productVersionOperator = value;
     }

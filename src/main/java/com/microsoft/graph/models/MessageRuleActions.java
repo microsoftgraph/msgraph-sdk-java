@@ -39,6 +39,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Instantiates a new messageRuleActions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.messageRuleActions");
@@ -92,7 +93,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRuleActions currentObject = this;
-        return new HashMap<>(12) {{
+        return new HashMap<String, Consumer<ParseNode>>(12) {{
             this.put("assignCategories", (n) -> { currentObject.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("copyToFolder", (n) -> { currentObject.setCopyToFolder(n.getStringValue()); });
             this.put("delete", (n) -> { currentObject.setDelete(n.getBooleanValue()); });
@@ -184,6 +185,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignCategories", this.getAssignCategories());
@@ -205,6 +207,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -213,6 +216,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._assignCategories = value;
     }
@@ -221,6 +225,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the copyToFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopyToFolder(@javax.annotation.Nullable final String value) {
         this._copyToFolder = value;
     }
@@ -229,6 +234,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelete(@javax.annotation.Nullable final Boolean value) {
         this._delete = value;
     }
@@ -237,6 +243,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forwardAsAttachmentTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForwardAsAttachmentTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._forwardAsAttachmentTo = value;
     }
@@ -245,6 +252,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forwardTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForwardTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._forwardTo = value;
     }
@@ -253,6 +261,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the markAsRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarkAsRead(@javax.annotation.Nullable final Boolean value) {
         this._markAsRead = value;
     }
@@ -261,6 +270,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the markImportance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarkImportance(@javax.annotation.Nullable final Importance value) {
         this._markImportance = value;
     }
@@ -269,6 +279,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the moveToFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMoveToFolder(@javax.annotation.Nullable final String value) {
         this._moveToFolder = value;
     }
@@ -277,6 +288,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -285,6 +297,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the permanentDelete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermanentDelete(@javax.annotation.Nullable final Boolean value) {
         this._permanentDelete = value;
     }
@@ -293,6 +306,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redirectTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._redirectTo = value;
     }
@@ -301,6 +315,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the stopProcessingRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStopProcessingRules(@javax.annotation.Nullable final Boolean value) {
         this._stopProcessingRules = value;
     }

@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ConnectionOperation extends Entity implements Parsable {
     /** If status is failed, provides more information about the error that caused the failure. */
     private PublicError _error;
@@ -19,6 +19,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      * Instantiates a new connectionOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConnectionOperation() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.connectionOperation");
@@ -48,7 +49,7 @@ public class ConnectionOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConnectionOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectionOperationStatus.class)); });
         }};
@@ -66,6 +67,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -77,6 +79,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }
@@ -85,6 +88,7 @@ public class ConnectionOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ConnectionOperationStatus value) {
         this._status = value;
     }

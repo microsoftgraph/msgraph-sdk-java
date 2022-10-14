@@ -17,6 +17,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * Instantiates a new ParticipantEndpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParticipantEndpoint() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.participantEndpoint");
@@ -46,7 +47,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParticipantEndpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(UserFeedback::createFromDiscriminatorValue)); });
             this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final UserFeedback value) {
         this._feedback = value;
     }
@@ -83,6 +86,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._identity = value;
     }

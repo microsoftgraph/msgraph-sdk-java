@@ -25,6 +25,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * Instantiates a new printMargin and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintMargin() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.printMargin");
@@ -62,7 +63,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintMargin currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("bottom", (n) -> { currentObject.setBottom(n.getIntegerValue()); });
             this.put("left", (n) -> { currentObject.setLeft(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("bottom", this.getBottom());
@@ -121,6 +123,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bottom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBottom(@javax.annotation.Nullable final Integer value) {
         this._bottom = value;
     }
@@ -137,6 +141,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the left property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLeft(@javax.annotation.Nullable final Integer value) {
         this._left = value;
     }
@@ -145,6 +150,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the right property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRight(@javax.annotation.Nullable final Integer value) {
         this._right = value;
     }
@@ -161,6 +168,7 @@ public class PrintMargin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
         this._top = value;
     }

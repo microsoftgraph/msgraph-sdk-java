@@ -18,6 +18,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse imple
      * Instantiates a new getOmaSettingPlainTextValueWithSecretReferenceValueIdResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("value", this.getValue());
@@ -73,6 +75,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse imple
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse imple
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

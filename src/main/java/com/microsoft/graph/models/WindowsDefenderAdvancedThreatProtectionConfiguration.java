@@ -16,6 +16,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderAdvancedThreatProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration");
@@ -53,7 +54,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderAdvancedThreatProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowSampleSharing", (n) -> { currentObject.setAllowSampleSharing(n.getBooleanValue()); });
             this.put("enableExpeditedTelemetryReporting", (n) -> { currentObject.setEnableExpeditedTelemetryReporting(n.getBooleanValue()); });
         }};
@@ -63,6 +64,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * @param value Value to set for the allowSampleSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowSampleSharing(@javax.annotation.Nullable final Boolean value) {
         this._allowSampleSharing = value;
     }
@@ -82,6 +85,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * @param value Value to set for the enableExpeditedTelemetryReporting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableExpeditedTelemetryReporting(@javax.annotation.Nullable final Boolean value) {
         this._enableExpeditedTelemetryReporting = value;
     }

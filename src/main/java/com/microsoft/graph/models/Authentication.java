@@ -32,6 +32,7 @@ public class Authentication extends Entity implements Parsable {
      * Instantiates a new authentication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Authentication() {
         super();
         this.setOdataType("#microsoft.graph.authentication");
@@ -69,7 +70,7 @@ public class Authentication extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Authentication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("emailMethods", (n) -> { currentObject.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
@@ -151,6 +152,7 @@ public class Authentication extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the emailMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailMethods(@javax.annotation.Nullable final java.util.List<EmailAuthenticationMethod> value) {
         this._emailMethods = value;
     }
@@ -178,6 +181,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the fido2Methods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFido2Methods(@javax.annotation.Nullable final java.util.List<Fido2AuthenticationMethod> value) {
         this._fido2Methods = value;
     }
@@ -186,6 +190,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the methods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMethods(@javax.annotation.Nullable final java.util.List<AuthenticationMethod> value) {
         this._methods = value;
     }
@@ -194,6 +199,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the microsoftAuthenticatorMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftAuthenticatorMethods(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
         this._microsoftAuthenticatorMethods = value;
     }
@@ -202,6 +208,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<LongRunningOperation> value) {
         this._operations = value;
     }
@@ -210,6 +217,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the passwordMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMethods(@javax.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
         this._passwordMethods = value;
     }
@@ -218,6 +226,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the phoneMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneMethods(@javax.annotation.Nullable final java.util.List<PhoneAuthenticationMethod> value) {
         this._phoneMethods = value;
     }
@@ -226,6 +235,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the softwareOathMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareOathMethods(@javax.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
         this._softwareOathMethods = value;
     }
@@ -234,6 +244,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the temporaryAccessPassMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemporaryAccessPassMethods(@javax.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
         this._temporaryAccessPassMethods = value;
     }
@@ -242,6 +253,7 @@ public class Authentication extends Entity implements Parsable {
      * @param value Value to set for the windowsHelloForBusinessMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsHelloForBusinessMethods(@javax.annotation.Nullable final java.util.List<WindowsHelloForBusinessAuthenticationMethod> value) {
         this._windowsHelloForBusinessMethods = value;
     }

@@ -20,6 +20,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * Instantiates a new IosStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.iosStoreApp");
@@ -65,7 +66,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableDeviceType(@javax.annotation.Nullable final IosDeviceType value) {
         this._applicableDeviceType = value;
     }
@@ -106,6 +109,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }
@@ -114,6 +118,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
@@ -122,6 +127,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final IosMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }

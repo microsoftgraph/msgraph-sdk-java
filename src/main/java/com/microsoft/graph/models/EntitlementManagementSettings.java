@@ -17,6 +17,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * Instantiates a new entitlementManagementSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagementSettings() {
         super();
         this.setOdataType("#microsoft.graph.entitlementManagementSettings");
@@ -54,7 +55,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EntitlementManagementSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { currentObject.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodValue()); });
             this.put("externalUserLifecycleAction", (n) -> { currentObject.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction.class)); });
         }};
@@ -64,6 +65,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationUntilExternalUserDeletedAfterBlocked(@javax.annotation.Nullable final Period value) {
         this._durationUntilExternalUserDeletedAfterBlocked = value;
     }
@@ -83,6 +86,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @param value Value to set for the externalUserLifecycleAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserLifecycleAction(@javax.annotation.Nullable final AccessPackageExternalUserLifecycleAction value) {
         this._externalUserLifecycleAction = value;
     }

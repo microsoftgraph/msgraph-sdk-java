@@ -22,6 +22,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new responseStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResponseStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.responseStatus");
@@ -51,7 +52,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResponseStatus currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("response", (n) -> { currentObject.setResponse(n.getEnumValue(ResponseType.class)); });
             this.put("time", (n) -> { currentObject.setTime(n.getOffsetDateTimeValue()); });
@@ -86,6 +87,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -98,6 +100,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -114,6 +118,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the response property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponse(@javax.annotation.Nullable final ResponseType value) {
         this._response = value;
     }
@@ -122,6 +127,7 @@ public class ResponseStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the time property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._time = value;
     }

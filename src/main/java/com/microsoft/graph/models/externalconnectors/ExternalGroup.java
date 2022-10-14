@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class ExternalGroup extends Entity implements Parsable {
     /** The description of the external group. Optional. */
     private String _description;
@@ -20,6 +20,7 @@ public class ExternalGroup extends Entity implements Parsable {
      * Instantiates a new externalGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalGroup() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.externalGroup");
@@ -57,7 +58,7 @@ public class ExternalGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
@@ -76,6 +77,7 @@ public class ExternalGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,6 +90,7 @@ public class ExternalGroup extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -96,6 +99,7 @@ public class ExternalGroup extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -104,6 +108,7 @@ public class ExternalGroup extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<Identity> value) {
         this._members = value;
     }

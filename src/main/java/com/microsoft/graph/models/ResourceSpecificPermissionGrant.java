@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
     /** ID of the service principal of the Azure AD app that has been granted access. Read-only. */
     private String _clientAppId;
@@ -20,9 +19,10 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     /** ID of the Azure AD app that is hosting the resource. Read-only. */
     private String _resourceAppId;
     /**
-     * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
+     * Instantiates a new ResourceSpecificPermissionGrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceSpecificPermissionGrant() {
         super();
         this.setOdataType("#microsoft.graph.resourceSpecificPermissionGrant");
@@ -30,7 +30,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceSpecificPermissionGrant
+     * @return a ResourceSpecificPermissionGrant
      */
     @javax.annotation.Nonnull
     public static ResourceSpecificPermissionGrant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceSpecificPermissionGrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientAppId", (n) -> { currentObject.setClientAppId(n.getStringValue()); });
             this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
             this.put("permission", (n) -> { currentObject.setPermission(n.getStringValue()); });
@@ -97,6 +97,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +112,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the clientAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppId(@javax.annotation.Nullable final String value) {
         this._clientAppId = value;
     }
@@ -119,6 +121,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the clientId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientId(@javax.annotation.Nullable final String value) {
         this._clientId = value;
     }
@@ -127,6 +130,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the permission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermission(@javax.annotation.Nullable final String value) {
         this._permission = value;
     }
@@ -135,6 +139,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the permissionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionType(@javax.annotation.Nullable final String value) {
         this._permissionType = value;
     }
@@ -143,6 +148,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
      * @param value Value to set for the resourceAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAppId(@javax.annotation.Nullable final String value) {
         this._resourceAppId = value;
     }

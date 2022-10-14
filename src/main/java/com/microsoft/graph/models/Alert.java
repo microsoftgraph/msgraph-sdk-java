@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class Alert extends Entity implements Parsable {
     /** Name or alias of the activity group (attacker) this alert is attributed to. */
     private String _activityGroupName;
@@ -92,6 +92,7 @@ public class Alert extends Entity implements Parsable {
      * Instantiates a new alert and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Alert() {
         super();
         this.setOdataType("#microsoft.graph.alert");
@@ -233,7 +234,7 @@ public class Alert extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Alert currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activityGroupName", (n) -> { currentObject.setActivityGroupName(n.getStringValue()); });
             this.put("alertDetections", (n) -> { currentObject.setAlertDetections(n.getCollectionOfObjectValues(AlertDetection::createFromDiscriminatorValue)); });
             this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
@@ -472,6 +473,7 @@ public class Alert extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -520,6 +522,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the activityGroupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupName(@javax.annotation.Nullable final String value) {
         this._activityGroupName = value;
     }
@@ -528,6 +531,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the alertDetections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlertDetections(@javax.annotation.Nullable final java.util.List<AlertDetection> value) {
         this._alertDetections = value;
     }
@@ -536,6 +540,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
         this._assignedTo = value;
     }
@@ -544,6 +549,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -552,6 +558,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -560,6 +567,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -568,6 +576,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -576,6 +585,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the cloudAppStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudAppStates(@javax.annotation.Nullable final java.util.List<CloudAppSecurityState> value) {
         this._cloudAppStates = value;
     }
@@ -584,6 +594,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<String> value) {
         this._comments = value;
     }
@@ -592,6 +603,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -600,6 +612,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -608,6 +621,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -616,6 +630,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the detectionIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._detectionIds = value;
     }
@@ -624,6 +639,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -632,6 +648,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final AlertFeedback value) {
         this._feedback = value;
     }
@@ -640,6 +657,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the fileStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileStates(@javax.annotation.Nullable final java.util.List<FileSecurityState> value) {
         this._fileStates = value;
     }
@@ -648,6 +666,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the historyStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistoryStates(@javax.annotation.Nullable final java.util.List<AlertHistoryState> value) {
         this._historyStates = value;
     }
@@ -656,6 +675,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the hostStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostStates(@javax.annotation.Nullable final java.util.List<HostSecurityState> value) {
         this._hostStates = value;
     }
@@ -664,6 +684,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the incidentIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncidentIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._incidentIds = value;
     }
@@ -672,6 +693,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the investigationSecurityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvestigationSecurityStates(@javax.annotation.Nullable final java.util.List<InvestigationSecurityState> value) {
         this._investigationSecurityStates = value;
     }
@@ -680,6 +702,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the lastEventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastEventDateTime = value;
     }
@@ -688,6 +711,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -696,6 +720,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the malwareStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareStates(@javax.annotation.Nullable final java.util.List<MalwareState> value) {
         this._malwareStates = value;
     }
@@ -704,6 +729,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the messageSecurityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageSecurityStates(@javax.annotation.Nullable final java.util.List<MessageSecurityState> value) {
         this._messageSecurityStates = value;
     }
@@ -712,6 +738,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the networkConnections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkConnections(@javax.annotation.Nullable final java.util.List<NetworkConnection> value) {
         this._networkConnections = value;
     }
@@ -720,6 +747,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the processes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcesses(@javax.annotation.Nullable final java.util.List<Process> value) {
         this._processes = value;
     }
@@ -728,6 +756,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the recommendedActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._recommendedActions = value;
     }
@@ -736,6 +765,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the registryKeyStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryKeyStates(@javax.annotation.Nullable final java.util.List<RegistryKeyState> value) {
         this._registryKeyStates = value;
     }
@@ -744,6 +774,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the securityResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityResources(@javax.annotation.Nullable final java.util.List<SecurityResource> value) {
         this._securityResources = value;
     }
@@ -752,6 +783,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final AlertSeverity value) {
         this._severity = value;
     }
@@ -760,6 +792,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the sourceMaterials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceMaterials(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sourceMaterials = value;
     }
@@ -768,6 +801,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AlertStatus value) {
         this._status = value;
     }
@@ -776,6 +810,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -784,6 +819,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -792,6 +828,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the triggers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTriggers(@javax.annotation.Nullable final java.util.List<AlertTrigger> value) {
         this._triggers = value;
     }
@@ -800,6 +837,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the uriClickSecurityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUriClickSecurityStates(@javax.annotation.Nullable final java.util.List<UriClickSecurityState> value) {
         this._uriClickSecurityStates = value;
     }
@@ -808,6 +846,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the userStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStates(@javax.annotation.Nullable final java.util.List<UserSecurityState> value) {
         this._userStates = value;
     }
@@ -816,6 +855,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }
@@ -824,6 +864,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the vulnerabilityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVulnerabilityStates(@javax.annotation.Nullable final java.util.List<VulnerabilityState> value) {
         this._vulnerabilityStates = value;
     }

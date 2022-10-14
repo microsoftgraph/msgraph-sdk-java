@@ -11,9 +11,10 @@ public class Todo extends Entity implements Parsable {
     /** The task lists in the users mailbox. */
     private java.util.List<TodoTaskList> _lists;
     /**
-     * Instantiates a new todo and sets the default values.
+     * Instantiates a new Todo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Todo() {
         super();
         this.setOdataType("#microsoft.graph.todo");
@@ -21,7 +22,7 @@ public class Todo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a todo
+     * @return a Todo
      */
     @javax.annotation.Nonnull
     public static Todo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +36,7 @@ public class Todo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Todo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Todo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Todo extends Entity implements Parsable {
      * @param value Value to set for the lists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLists(@javax.annotation.Nullable final java.util.List<TodoTaskList> value) {
         this._lists = value;
     }

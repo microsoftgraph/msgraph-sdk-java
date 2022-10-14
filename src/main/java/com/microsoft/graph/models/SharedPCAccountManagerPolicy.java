@@ -26,6 +26,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedPCAccountManagerPolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.sharedPCAccountManagerPolicy");
@@ -71,7 +72,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedPCAccountManagerPolicy currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("accountDeletionPolicy", (n) -> { currentObject.setAccountDeletionPolicy(n.getEnumValue(SharedPCAccountDeletionPolicyType.class)); });
             this.put("cacheAccountsAboveDiskFreePercentage", (n) -> { currentObject.setCacheAccountsAboveDiskFreePercentage(n.getIntegerValue()); });
             this.put("inactiveThresholdDays", (n) -> { currentObject.setInactiveThresholdDays(n.getIntegerValue()); });
@@ -108,6 +109,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accountDeletionPolicy", this.getAccountDeletionPolicy());
@@ -122,6 +124,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the accountDeletionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountDeletionPolicy(@javax.annotation.Nullable final SharedPCAccountDeletionPolicyType value) {
         this._accountDeletionPolicy = value;
     }
@@ -130,6 +133,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -138,6 +142,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the cacheAccountsAboveDiskFreePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheAccountsAboveDiskFreePercentage(@javax.annotation.Nullable final Integer value) {
         this._cacheAccountsAboveDiskFreePercentage = value;
     }
@@ -146,6 +151,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the inactiveThresholdDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInactiveThresholdDays(@javax.annotation.Nullable final Integer value) {
         this._inactiveThresholdDays = value;
     }
@@ -154,6 +160,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -162,6 +169,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the removeAccountsBelowDiskFreePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveAccountsBelowDiskFreePercentage(@javax.annotation.Nullable final Integer value) {
         this._removeAccountsBelowDiskFreePercentage = value;
     }

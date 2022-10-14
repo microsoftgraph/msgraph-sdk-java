@@ -29,6 +29,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * Instantiates a new unifiedApprovalStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedApprovalStage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.unifiedApprovalStage");
@@ -82,7 +83,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedApprovalStage currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("approvalStageTimeOutInDays", (n) -> { currentObject.setApprovalStageTimeOutInDays(n.getIntegerValue()); });
             this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
             this.put("escalationTimeInMinutes", (n) -> { currentObject.setEscalationTimeInMinutes(n.getIntegerValue()); });
@@ -129,6 +130,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("approvalStageTimeOutInDays", this.getApprovalStageTimeOutInDays());
@@ -145,6 +147,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the approvalStageTimeOutInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalStageTimeOutInDays(@javax.annotation.Nullable final Integer value) {
         this._approvalStageTimeOutInDays = value;
     }
@@ -161,6 +165,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escalationApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscalationApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._escalationApprovers = value;
     }
@@ -169,6 +174,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escalationTimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscalationTimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._escalationTimeInMinutes = value;
     }
@@ -177,6 +183,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isApproverJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApproverJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isApproverJustificationRequired = value;
     }
@@ -185,6 +192,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEscalationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEscalationEnabled = value;
     }
@@ -193,6 +201,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +210,7 @@ public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the primaryApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryApprovers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._primaryApprovers = value;
     }

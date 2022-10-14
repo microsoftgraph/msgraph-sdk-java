@@ -62,6 +62,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Instantiates a new deviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceConfiguration");
@@ -171,7 +172,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -222,6 +223,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -242,6 +244,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
         this._assignments = value;
     }
@@ -250,6 +253,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -258,6 +262,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -266,6 +271,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
         this._deviceSettingStateSummaries = value;
     }
@@ -274,6 +280,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
         this._deviceStatuses = value;
     }
@@ -282,6 +289,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
         this._deviceStatusOverview = value;
     }
@@ -290,6 +298,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -298,6 +307,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -306,6 +316,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
         this._userStatuses = value;
     }
@@ -314,6 +325,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatusOverview(@javax.annotation.Nullable final DeviceConfigurationUserOverview value) {
         this._userStatusOverview = value;
     }
@@ -322,6 +334,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

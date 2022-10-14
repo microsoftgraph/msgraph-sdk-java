@@ -16,6 +16,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryAddToReviewSetOperation() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryAddToReviewSetOperation");
@@ -37,7 +38,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryAddToReviewSetOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(EdiscoveryReviewSet::createFromDiscriminatorValue)); });
             this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final EdiscoveryReviewSet value) {
         this._reviewSet = value;
     }
@@ -82,6 +85,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
         this._search = value;
     }

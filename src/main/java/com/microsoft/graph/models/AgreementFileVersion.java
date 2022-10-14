@@ -13,6 +13,7 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
      * Instantiates a new agreementFileVersion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgreementFileVersion() {
         super();
         this.setOdataType("#microsoft.graph.agreementFileVersion");
@@ -34,7 +35,7 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementFileVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -42,6 +43,7 @@ public class AgreementFileVersion extends AgreementFileProperties implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

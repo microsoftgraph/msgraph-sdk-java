@@ -22,6 +22,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new usageDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UsageDetails() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.usageDetails");
@@ -51,7 +52,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UsageDetails currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("lastAccessedDateTime", (n) -> { currentObject.setLastAccessedDateTime(n.getOffsetDateTimeValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastAccessedDateTime", this.getLastAccessedDateTime());
@@ -98,6 +100,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastAccessedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAccessedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastAccessedDateTime = value;
     }
@@ -114,6 +118,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -122,6 +127,7 @@ public class UsageDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

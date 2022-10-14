@@ -28,6 +28,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
         this.setOdataType("#microsoft.graph.enrollmentTroubleshootingEvent");
@@ -81,7 +82,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
             this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(DeviceEnrollmentType.class)); });
             this.put("failureCategory", (n) -> { currentObject.setFailureCategory(n.getEnumValue(DeviceEnrollmentFailureReason.class)); });
@@ -129,6 +130,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -154,6 +157,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
         this._enrollmentType = value;
     }
@@ -162,6 +166,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the failureCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureCategory(@javax.annotation.Nullable final DeviceEnrollmentFailureReason value) {
         this._failureCategory = value;
     }
@@ -170,6 +175,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the failureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
         this._failureReason = value;
     }
@@ -178,6 +184,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
         this._managedDeviceIdentifier = value;
     }
@@ -186,6 +193,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -194,6 +202,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -202,6 +211,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

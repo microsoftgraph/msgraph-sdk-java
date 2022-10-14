@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of externalConnection entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Identity extends Entity implements Parsable {
     /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
     private IdentityType _type;
@@ -16,6 +16,7 @@ public class Identity extends Entity implements Parsable {
      * Instantiates a new identity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Identity() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.identity");
@@ -37,7 +38,7 @@ public class Identity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(IdentityType.class)); });
         }};
     }
@@ -54,6 +55,7 @@ public class Identity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -64,6 +66,7 @@ public class Identity extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final IdentityType value) {
         this._type = value;
     }

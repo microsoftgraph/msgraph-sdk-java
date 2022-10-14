@@ -14,6 +14,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentPointsGradeType() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentPointsGradeType");
@@ -35,7 +36,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentPointsGradeType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("maxPoints", (n) -> { currentObject.setMaxPoints(n.getFloatValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param value Value to set for the maxPoints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxPoints(@javax.annotation.Nullable final Float value) {
         this._maxPoints = value;
     }

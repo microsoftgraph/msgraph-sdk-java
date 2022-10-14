@@ -41,6 +41,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Instantiates a new workbookTable and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookTable() {
         super();
         this.setOdataType("#microsoft.graph.workbookTable");
@@ -70,7 +71,7 @@ public class WorkbookTable extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
             this.put("highlightFirstColumn", (n) -> { currentObject.setHighlightFirstColumn(n.getBooleanValue()); });
             this.put("highlightLastColumn", (n) -> { currentObject.setHighlightLastColumn(n.getBooleanValue()); });
@@ -196,6 +197,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +221,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<WorkbookTableColumn> value) {
         this._columns = value;
     }
@@ -227,6 +230,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightFirstColumn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighlightFirstColumn(@javax.annotation.Nullable final Boolean value) {
         this._highlightFirstColumn = value;
     }
@@ -235,6 +239,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightLastColumn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighlightLastColumn(@javax.annotation.Nullable final Boolean value) {
         this._highlightLastColumn = value;
     }
@@ -243,6 +248,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the legacyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegacyId(@javax.annotation.Nullable final String value) {
         this._legacyId = value;
     }
@@ -251,6 +257,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -259,6 +266,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the rows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRows(@javax.annotation.Nullable final java.util.List<WorkbookTableRow> value) {
         this._rows = value;
     }
@@ -267,6 +275,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowBandedColumns(@javax.annotation.Nullable final Boolean value) {
         this._showBandedColumns = value;
     }
@@ -275,6 +284,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowBandedRows(@javax.annotation.Nullable final Boolean value) {
         this._showBandedRows = value;
     }
@@ -283,6 +293,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showFilterButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowFilterButton(@javax.annotation.Nullable final Boolean value) {
         this._showFilterButton = value;
     }
@@ -291,6 +302,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowHeaders(@javax.annotation.Nullable final Boolean value) {
         this._showHeaders = value;
     }
@@ -299,6 +311,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showTotals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowTotals(@javax.annotation.Nullable final Boolean value) {
         this._showTotals = value;
     }
@@ -307,6 +320,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the sort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSort(@javax.annotation.Nullable final WorkbookTableSort value) {
         this._sort = value;
     }
@@ -315,6 +329,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the style property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStyle(@javax.annotation.Nullable final String value) {
         this._style = value;
     }
@@ -323,6 +338,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the worksheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
         this._worksheet = value;
     }

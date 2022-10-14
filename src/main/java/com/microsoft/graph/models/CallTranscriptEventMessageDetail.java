@@ -18,6 +18,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallTranscriptEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callTranscriptEventMessageDetail");
@@ -55,7 +56,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallTranscriptEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
             this.put("callTranscriptICalUid", (n) -> { currentObject.setCallTranscriptICalUid(n.getStringValue()); });
             this.put("meetingOrganizer", (n) -> { currentObject.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the callId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallId(@javax.annotation.Nullable final String value) {
         this._callId = value;
     }
@@ -94,6 +97,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the callTranscriptICalUid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallTranscriptICalUid(@javax.annotation.Nullable final String value) {
         this._callTranscriptICalUid = value;
     }
@@ -102,6 +106,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the meetingOrganizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingOrganizer(@javax.annotation.Nullable final IdentitySet value) {
         this._meetingOrganizer = value;
     }

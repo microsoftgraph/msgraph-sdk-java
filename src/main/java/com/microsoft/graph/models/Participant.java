@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
@@ -25,6 +25,7 @@ public class Participant extends Entity implements Parsable {
      * Instantiates a new participant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Participant() {
         super();
         this.setOdataType("#microsoft.graph.participant");
@@ -46,7 +47,7 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Participant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
             this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
@@ -108,6 +109,7 @@ public class Participant extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
         this._info = value;
     }
@@ -131,6 +134,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isInLobby property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInLobby(@javax.annotation.Nullable final Boolean value) {
         this._isInLobby = value;
     }
@@ -139,6 +143,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isMuted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMuted(@javax.annotation.Nullable final Boolean value) {
         this._isMuted = value;
     }
@@ -147,6 +152,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the mediaStreams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
         this._mediaStreams = value;
     }
@@ -155,6 +161,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final String value) {
         this._metadata = value;
     }
@@ -163,6 +170,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the recordingInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
         this._recordingInfo = value;
     }

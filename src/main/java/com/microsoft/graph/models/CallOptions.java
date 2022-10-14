@@ -13,9 +13,9 @@ import java.util.Objects;
 public class CallOptions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The hideBotAfterEscalation property */
+    /** Indicates whether to hide the app after the call is escalated. */
     private Boolean _hideBotAfterEscalation;
-    /** The isContentSharingNotificationEnabled property */
+    /** Indicates whether content sharing notifications should be enabled for the call. */
     private Boolean _isContentSharingNotificationEnabled;
     /** The OdataType property */
     private String _odataType;
@@ -23,6 +23,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      * Instantiates a new callOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallOptions() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.callOptions");
@@ -60,14 +61,14 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallOptions currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("hideBotAfterEscalation", (n) -> { currentObject.setHideBotAfterEscalation(n.getBooleanValue()); });
             this.put("isContentSharingNotificationEnabled", (n) -> { currentObject.setIsContentSharingNotificationEnabled(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the hideBotAfterEscalation property value. The hideBotAfterEscalation property
+     * Gets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -75,7 +76,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
         return this._hideBotAfterEscalation;
     }
     /**
-     * Gets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * Gets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -95,6 +96,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideBotAfterEscalation", this.getHideBotAfterEscalation());
@@ -107,22 +109,25 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the hideBotAfterEscalation property value. The hideBotAfterEscalation property
+     * Sets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
      * @param value Value to set for the hideBotAfterEscalation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideBotAfterEscalation(@javax.annotation.Nullable final Boolean value) {
         this._hideBotAfterEscalation = value;
     }
     /**
-     * Sets the isContentSharingNotificationEnabled property value. The isContentSharingNotificationEnabled property
+     * Sets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
      * @param value Value to set for the isContentSharingNotificationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsContentSharingNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isContentSharingNotificationEnabled = value;
     }
@@ -131,6 +136,7 @@ public class CallOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

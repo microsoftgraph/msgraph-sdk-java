@@ -25,6 +25,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * Instantiates a new deviceCompliancePolicyState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicyState() {
         super();
         this.setOdataType("#microsoft.graph.deviceCompliancePolicyState");
@@ -54,7 +55,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceCompliancePolicyState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
             this.put("settingCount", (n) -> { currentObject.setSettingCount(n.getIntegerValue()); });
@@ -108,6 +109,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -131,6 +134,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
         this._platformType = value;
     }
@@ -139,6 +143,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the settingCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCount(@javax.annotation.Nullable final Integer value) {
         this._settingCount = value;
     }
@@ -147,6 +152,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the settingStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingStates(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingState> value) {
         this._settingStates = value;
     }
@@ -155,6 +161,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._state = value;
     }
@@ -163,6 +170,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

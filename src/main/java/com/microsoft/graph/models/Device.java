@@ -58,9 +58,10 @@ public class Device extends DirectoryObject implements Parsable {
     /** Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
     private String _trustType;
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Device() {
         super();
         this.setOdataType("#microsoft.graph.device");
@@ -68,7 +69,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a device
+     * @return a Device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -154,7 +155,7 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Device currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("alternativeSecurityIds", (n) -> { currentObject.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
             this.put("approximateLastSignInDateTime", (n) -> { currentObject.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
@@ -306,6 +307,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -339,6 +341,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -347,6 +350,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the alternativeSecurityIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeSecurityIds(@javax.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
         this._alternativeSecurityIds = value;
     }
@@ -355,6 +359,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the approximateLastSignInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproximateLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._approximateLastSignInDateTime = value;
     }
@@ -363,6 +368,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the complianceExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._complianceExpirationDateTime = value;
     }
@@ -371,6 +377,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -379,6 +386,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceMetadata(@javax.annotation.Nullable final String value) {
         this._deviceMetadata = value;
     }
@@ -387,6 +395,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceVersion(@javax.annotation.Nullable final Integer value) {
         this._deviceVersion = value;
     }
@@ -395,6 +404,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -403,6 +413,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -411,6 +422,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isCompliant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
         this._isCompliant = value;
     }
@@ -419,6 +431,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
         this._isManaged = value;
     }
@@ -427,6 +440,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the mdmAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmAppId(@javax.annotation.Nullable final String value) {
         this._mdmAppId = value;
     }
@@ -435,6 +449,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -443,6 +458,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -451,6 +467,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -459,6 +476,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -467,6 +485,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
         this._operatingSystemVersion = value;
     }
@@ -475,6 +494,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhysicalIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._physicalIds = value;
     }
@@ -483,6 +503,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the profileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileType(@javax.annotation.Nullable final String value) {
         this._profileType = value;
     }
@@ -491,6 +512,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredOwners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredOwners = value;
     }
@@ -499,6 +521,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredUsers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredUsers = value;
     }
@@ -507,6 +530,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the systemLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemLabels(@javax.annotation.Nullable final java.util.List<String> value) {
         this._systemLabels = value;
     }
@@ -515,6 +539,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -523,6 +548,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the trustType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustType(@javax.annotation.Nullable final String value) {
         this._trustType = value;
     }

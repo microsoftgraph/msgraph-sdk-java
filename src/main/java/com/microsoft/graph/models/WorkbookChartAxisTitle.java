@@ -18,6 +18,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * Instantiates a new workbookChartAxisTitle and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAxisTitle() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartAxisTitle");
@@ -39,7 +40,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxisTitle currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisTitleFormat::createFromDiscriminatorValue)); });
             this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
             this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
@@ -74,6 +75,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAxisTitleFormat value) {
         this._format = value;
     }
@@ -94,6 +97,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }
@@ -102,6 +106,7 @@ public class WorkbookChartAxisTitle extends Entity implements Parsable {
      * @param value Value to set for the visible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
         this._visible = value;
     }

@@ -3,13 +3,15 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public enum BookingStaffRole implements ValuedEnum {
     Guest("guest"),
     Administrator("administrator"),
     Viewer("viewer"),
     ExternalGuest("externalGuest"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Scheduler("scheduler"),
+    TeamMember("teamMember");
     public final String value;
     BookingStaffRole(final String value) {
         this.value = value;
@@ -25,6 +27,8 @@ public enum BookingStaffRole implements ValuedEnum {
             case "viewer": return Viewer;
             case "externalGuest": return ExternalGuest;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "scheduler": return Scheduler;
+            case "teamMember": return TeamMember;
             default: return null;
         }
     }

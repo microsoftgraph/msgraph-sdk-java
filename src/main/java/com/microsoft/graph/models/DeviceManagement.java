@@ -82,6 +82,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * Instantiates a new DeviceManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagement() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagement");
@@ -207,7 +208,7 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applePushNotificationCertificate", (n) -> { currentObject.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
             this.put("complianceManagementPartners", (n) -> { currentObject.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
             this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
@@ -426,6 +427,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -470,6 +472,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the applePushNotificationCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
         this._applePushNotificationCertificate = value;
     }
@@ -478,6 +481,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the complianceManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceManagementPartners(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
         this._complianceManagementPartners = value;
     }
@@ -486,6 +490,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccessSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
         this._conditionalAccessSettings = value;
     }
@@ -494,6 +499,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the detectedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
         this._detectedApps = value;
     }
@@ -502,6 +508,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCategories(@javax.annotation.Nullable final java.util.List<DeviceCategory> value) {
         this._deviceCategories = value;
     }
@@ -510,6 +517,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
         this._deviceCompliancePolicies = value;
     }
@@ -518,6 +526,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicyDeviceStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyDeviceStateSummary(@javax.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
         this._deviceCompliancePolicyDeviceStateSummary = value;
     }
@@ -526,6 +535,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
         this._deviceCompliancePolicySettingStateSummaries = value;
     }
@@ -534,6 +544,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationDeviceStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationDeviceStateSummaries(@javax.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
         this._deviceConfigurationDeviceStateSummaries = value;
     }
@@ -542,6 +553,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
         this._deviceConfigurations = value;
     }
@@ -550,6 +562,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceEnrollmentConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
         this._deviceEnrollmentConfigurations = value;
     }
@@ -558,6 +571,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementPartners(@javax.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
         this._deviceManagementPartners = value;
     }
@@ -566,6 +580,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the exchangeConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
         this._exchangeConnectors = value;
     }
@@ -574,6 +589,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the importedWindowsAutopilotDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this._importedWindowsAutopilotDeviceIdentities = value;
     }
@@ -582,6 +598,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intuneAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
         this._intuneAccountId = value;
     }
@@ -590,6 +607,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intuneBrand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneBrand(@javax.annotation.Nullable final IntuneBrand value) {
         this._intuneBrand = value;
     }
@@ -598,6 +616,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the iosUpdateStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosUpdateStatuses(@javax.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
         this._iosUpdateStatuses = value;
     }
@@ -606,6 +625,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceOverview(@javax.annotation.Nullable final ManagedDeviceOverview value) {
         this._managedDeviceOverview = value;
     }
@@ -614,6 +634,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -622,6 +643,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileThreatDefenseConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
         this._mobileThreatDefenseConnectors = value;
     }
@@ -630,6 +652,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the notificationMessageTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageTemplates(@javax.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
         this._notificationMessageTemplates = value;
     }
@@ -638,6 +661,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the remoteAssistancePartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAssistancePartners(@javax.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
         this._remoteAssistancePartners = value;
     }
@@ -646,6 +670,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the reports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReports(@javax.annotation.Nullable final DeviceManagementReports value) {
         this._reports = value;
     }
@@ -654,6 +679,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the resourceOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceOperations(@javax.annotation.Nullable final java.util.List<ResourceOperation> value) {
         this._resourceOperations = value;
     }
@@ -662,6 +688,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -670,6 +697,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
         this._roleDefinitions = value;
     }
@@ -678,6 +706,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final DeviceManagementSettings value) {
         this._settings = value;
     }
@@ -686,6 +715,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the softwareUpdateStatusSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateStatusSummary(@javax.annotation.Nullable final SoftwareUpdateStatusSummary value) {
         this._softwareUpdateStatusSummary = value;
     }
@@ -694,6 +724,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the subscriptionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionState(@javax.annotation.Nullable final DeviceManagementSubscriptionState value) {
         this._subscriptionState = value;
     }
@@ -702,6 +733,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the telecomExpenseManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTelecomExpenseManagementPartners(@javax.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
         this._telecomExpenseManagementPartners = value;
     }
@@ -710,6 +742,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the termsAndConditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final java.util.List<TermsAndConditions> value) {
         this._termsAndConditions = value;
     }
@@ -718,6 +751,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the troubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
         this._troubleshootingEvents = value;
     }
@@ -726,6 +760,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsAutopilotDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
         this._windowsAutopilotDeviceIdentities = value;
     }
@@ -734,6 +769,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsInformationProtectionAppLearningSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionAppLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
         this._windowsInformationProtectionAppLearningSummaries = value;
     }
@@ -742,6 +778,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsInformationProtectionNetworkLearningSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
         this._windowsInformationProtectionNetworkLearningSummaries = value;
     }

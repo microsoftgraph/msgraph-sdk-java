@@ -18,6 +18,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * Instantiates a new TeamRenamedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamRenamedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamRenamedEventMessageDetail");
@@ -39,7 +40,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamRenamedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamDisplayName", (n) -> { currentObject.setTeamDisplayName(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -94,6 +97,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the teamDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamDisplayName(@javax.annotation.Nullable final String value) {
         this._teamDisplayName = value;
     }
@@ -102,6 +106,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

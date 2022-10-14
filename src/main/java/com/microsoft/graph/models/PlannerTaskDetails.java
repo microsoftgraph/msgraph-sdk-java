@@ -20,6 +20,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * Instantiates a new plannerTaskDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTaskDetails() {
         super();
         this.setOdataType("#microsoft.graph.plannerTaskDetails");
@@ -57,7 +58,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTaskDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
@@ -85,6 +86,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the checklist property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklist(@javax.annotation.Nullable final PlannerChecklistItems value) {
         this._checklist = value;
     }
@@ -106,6 +109,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -114,6 +118,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the previewType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
         this._previewType = value;
     }
@@ -122,6 +127,7 @@ public class PlannerTaskDetails extends Entity implements Parsable {
      * @param value Value to set for the references property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferences(@javax.annotation.Nullable final PlannerExternalReferences value) {
         this._references = value;
     }

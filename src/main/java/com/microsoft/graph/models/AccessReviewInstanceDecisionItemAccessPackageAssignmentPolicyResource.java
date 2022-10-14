@@ -16,6 +16,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource");
@@ -53,7 +54,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackageDisplayName", (n) -> { currentObject.setAccessPackageDisplayName(n.getStringValue()); });
             this.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * @param value Value to set for the accessPackageDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageDisplayName(@javax.annotation.Nullable final String value) {
         this._accessPackageDisplayName = value;
     }
@@ -82,6 +85,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * @param value Value to set for the accessPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageId(@javax.annotation.Nullable final String value) {
         this._accessPackageId = value;
     }

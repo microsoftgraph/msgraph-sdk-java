@@ -22,6 +22,7 @@ public class ItemActivity extends Entity implements Parsable {
      * Instantiates a new itemActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemActivity() {
         super();
         this.setOdataType("#microsoft.graph.itemActivity");
@@ -75,7 +76,7 @@ public class ItemActivity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("access", (n) -> { currentObject.setAccess(n.getObjectValue(AccessAction::createFromDiscriminatorValue)); });
             this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
             this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -87,6 +88,7 @@ public class ItemActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the access property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccess(@javax.annotation.Nullable final AccessAction value) {
         this._access = value;
     }
@@ -108,6 +111,7 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -116,6 +120,7 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the actor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActor(@javax.annotation.Nullable final IdentitySet value) {
         this._actor = value;
     }
@@ -124,6 +129,7 @@ public class ItemActivity extends Entity implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
         this._driveItem = value;
     }

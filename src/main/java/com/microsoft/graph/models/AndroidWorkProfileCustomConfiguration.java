@@ -14,6 +14,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileCustomConfiguration");
@@ -35,7 +36,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("omaSettings", (n) -> { currentObject.setOmaSettings(n.getCollectionOfObjectValues(OmaSetting::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * @param value Value to set for the omaSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOmaSettings(@javax.annotation.Nullable final java.util.List<OmaSetting> value) {
         this._omaSettings = value;
     }

@@ -20,6 +20,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * Instantiates a new EducationTeamsAppResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationTeamsAppResource() {
         super();
         this.setOdataType("#microsoft.graph.educationTeamsAppResource");
@@ -57,7 +58,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationTeamsAppResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appIconWebUrl", (n) -> { currentObject.setAppIconWebUrl(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("teamsEmbeddedContentUrl", (n) -> { currentObject.setTeamsEmbeddedContentUrl(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param value Value to set for the appIconWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppIconWebUrl(@javax.annotation.Nullable final String value) {
         this._appIconWebUrl = value;
     }
@@ -106,6 +109,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -114,6 +118,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param value Value to set for the teamsEmbeddedContentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsEmbeddedContentUrl(@javax.annotation.Nullable final String value) {
         this._teamsEmbeddedContentUrl = value;
     }
@@ -122,6 +127,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

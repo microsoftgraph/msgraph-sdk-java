@@ -14,6 +14,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      * Instantiates a new AadUserNotificationRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AadUserNotificationRecipient() {
         super();
         this.setOdataType("#microsoft.graph.aadUserNotificationRecipient");
@@ -35,7 +36,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AadUserNotificationRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AadUserNotificationRecipient extends TeamworkNotificationRecipient 
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

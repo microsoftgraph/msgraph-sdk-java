@@ -24,6 +24,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Instantiates a new printUsage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintUsage() {
         super();
         this.setOdataType("#microsoft.graph.printUsage");
@@ -69,7 +70,7 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintUsage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("completedBlackAndWhiteJobCount", (n) -> { currentObject.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
             this.put("completedColorJobCount", (n) -> { currentObject.setCompletedColorJobCount(n.getLongValue()); });
             this.put("incompleteJobCount", (n) -> { currentObject.setIncompleteJobCount(n.getLongValue()); });
@@ -97,6 +98,7 @@ public class PrintUsage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the completedBlackAndWhiteJobCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedBlackAndWhiteJobCount(@javax.annotation.Nullable final Long value) {
         this._completedBlackAndWhiteJobCount = value;
     }
@@ -118,6 +121,7 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the completedColorJobCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedColorJobCount(@javax.annotation.Nullable final Long value) {
         this._completedColorJobCount = value;
     }
@@ -126,6 +130,7 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the incompleteJobCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncompleteJobCount(@javax.annotation.Nullable final Long value) {
         this._incompleteJobCount = value;
     }
@@ -134,6 +139,7 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the usageDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageDate(@javax.annotation.Nullable final LocalDate value) {
         this._usageDate = value;
     }

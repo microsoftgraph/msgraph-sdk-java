@@ -23,6 +23,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new resultInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResultInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.resultInfo");
@@ -60,7 +61,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResultInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("code", (n) -> { currentObject.setCode(n.getIntegerValue()); });
             this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("code", this.getCode());
@@ -109,6 +111,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final Integer value) {
         this._code = value;
     }
@@ -125,6 +129,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -133,6 +138,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class ResultInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subcode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubcode(@javax.annotation.Nullable final Integer value) {
         this._subcode = value;
     }

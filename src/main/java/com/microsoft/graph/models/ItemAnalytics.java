@@ -18,6 +18,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * Instantiates a new itemAnalytics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemAnalytics() {
         super();
         this.setOdataType("#microsoft.graph.itemAnalytics");
@@ -47,7 +48,7 @@ public class ItemAnalytics extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemAnalytics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allTime", (n) -> { currentObject.setAllTime(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
             this.put("itemActivityStats", (n) -> { currentObject.setItemActivityStats(n.getCollectionOfObjectValues(ItemActivityStat::createFromDiscriminatorValue)); });
             this.put("lastSevenDays", (n) -> { currentObject.setLastSevenDays(n.getObjectValue(ItemActivityStat::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the allTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllTime(@javax.annotation.Nullable final ItemActivityStat value) {
         this._allTime = value;
     }
@@ -94,6 +97,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the itemActivityStats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemActivityStats(@javax.annotation.Nullable final java.util.List<ItemActivityStat> value) {
         this._itemActivityStats = value;
     }
@@ -102,6 +106,7 @@ public class ItemAnalytics extends Entity implements Parsable {
      * @param value Value to set for the lastSevenDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSevenDays(@javax.annotation.Nullable final ItemActivityStat value) {
         this._lastSevenDays = value;
     }

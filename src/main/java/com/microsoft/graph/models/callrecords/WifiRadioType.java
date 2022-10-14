@@ -3,7 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum WifiRadioType implements ValuedEnum {
     Unknown("unknown"),
     Wifi80211a("wifi80211a"),

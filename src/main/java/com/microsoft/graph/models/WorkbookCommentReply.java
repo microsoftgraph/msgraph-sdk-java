@@ -17,6 +17,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      * Instantiates a new workbookCommentReply and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookCommentReply() {
         super();
         this.setOdataType("#microsoft.graph.workbookCommentReply");
@@ -54,7 +55,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookCommentReply currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("contentType", (n) -> { currentObject.setContentType(n.getStringValue()); });
         }};
@@ -64,6 +65,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
     }
@@ -83,6 +86,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
         this._contentType = value;
     }

@@ -9,15 +9,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class PrintOperation extends Entity implements Parsable {
     /** The DateTimeOffset when the operation was created. Read-only. */
     private OffsetDateTime _createdDateTime;
     /** The status property */
     private PrintOperationStatus _status;
     /**
-     * Instantiates a new PrintOperation and sets the default values.
+     * Instantiates a new printOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintOperation() {
         super();
         this.setOdataType("#microsoft.graph.printOperation");
@@ -25,7 +27,7 @@ public class PrintOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintOperation
+     * @return a printOperation
      */
     @javax.annotation.Nonnull
     public static PrintOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +56,7 @@ public class PrintOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrintOperationStatus::createFromDiscriminatorValue)); });
         }};
@@ -72,6 +74,7 @@ public class PrintOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +86,7 @@ public class PrintOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -91,6 +95,7 @@ public class PrintOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrintOperationStatus value) {
         this._status = value;
     }

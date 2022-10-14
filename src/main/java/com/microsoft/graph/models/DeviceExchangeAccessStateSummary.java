@@ -28,6 +28,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * Instantiates a new deviceExchangeAccessStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceExchangeAccessStateSummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceExchangeAccessStateSummary");
@@ -73,7 +74,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceExchangeAccessStateSummary currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowedDeviceCount", (n) -> { currentObject.setAllowedDeviceCount(n.getIntegerValue()); });
             this.put("blockedDeviceCount", (n) -> { currentObject.setBlockedDeviceCount(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("allowedDeviceCount", this.getAllowedDeviceCount());
@@ -134,6 +136,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the allowedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._allowedDeviceCount = value;
     }
@@ -150,6 +154,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the blockedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._blockedDeviceCount = value;
     }
@@ -158,6 +163,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -166,6 +172,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the quarantinedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuarantinedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._quarantinedDeviceCount = value;
     }
@@ -174,6 +181,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the unavailableDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnavailableDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._unavailableDeviceCount = value;
     }
@@ -182,6 +190,7 @@ public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, P
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._unknownDeviceCount = value;
     }

@@ -18,6 +18,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new SchedulingGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SchedulingGroup() {
         super();
         this.setOdataType("#microsoft.graph.schedulingGroup");
@@ -47,7 +48,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SchedulingGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("userIds", (n) -> { currentObject.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -74,11 +75,11 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isActive", this.getIsActive());
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
     }
     /**
@@ -86,6 +87,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -94,6 +96,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }
@@ -102,6 +105,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the userIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userIds = value;
     }

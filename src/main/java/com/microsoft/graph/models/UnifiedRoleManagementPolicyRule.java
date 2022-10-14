@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /** Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
     private UnifiedRoleManagementPolicyRuleTarget _target;
@@ -20,6 +20,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyRule");
@@ -52,7 +53,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(UnifiedRoleManagementPolicyRuleTarget::createFromDiscriminatorValue)); });
         }};
     }
@@ -69,6 +70,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -79,6 +81,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final UnifiedRoleManagementPolicyRuleTarget value) {
         this._target = value;
     }

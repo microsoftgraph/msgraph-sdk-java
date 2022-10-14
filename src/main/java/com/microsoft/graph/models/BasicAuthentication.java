@@ -16,6 +16,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * Instantiates a new BasicAuthentication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BasicAuthentication() {
         super();
         this.setOdataType("#microsoft.graph.basicAuthentication");
@@ -37,7 +38,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BasicAuthentication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("username", (n) -> { currentObject.setUsername(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }
@@ -82,6 +85,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
      * @param value Value to set for the username property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsername(@javax.annotation.Nullable final String value) {
         this._username = value;
     }

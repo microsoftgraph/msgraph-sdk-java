@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -59,7 +60,7 @@ public class Group extends DirectoryObject implements Parsable {
     private Boolean _hideFromOutlookClients;
     /** When a group is associated with a team this property determines whether the team is in read-only mode.To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs. */
     private Boolean _isArchived;
-    /** Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not). */
+    /** Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not). */
     private Boolean _isAssignableToRole;
     /** Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). */
     private Boolean _isSubscribedByMail;
@@ -143,6 +144,7 @@ public class Group extends DirectoryObject implements Parsable {
      * Instantiates a new group and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Group() {
         super();
         this.setOdataType("#microsoft.graph.group");
@@ -316,7 +318,7 @@ public class Group extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Group currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptedSenders", (n) -> { currentObject.setAcceptedSenders(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("allowExternalSenders", (n) -> { currentObject.setAllowExternalSenders(n.getBooleanValue()); });
             this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
@@ -433,7 +435,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._isArchived;
     }
     /**
-     * Gets the isAssignableToRole property value. Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
+     * Gets the isAssignableToRole property value. Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -757,6 +759,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -831,6 +834,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the acceptedSenders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptedSenders(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._acceptedSenders = value;
     }
@@ -839,6 +843,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the allowExternalSenders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowExternalSenders(@javax.annotation.Nullable final Boolean value) {
         this._allowExternalSenders = value;
     }
@@ -847,6 +852,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignments = value;
     }
@@ -855,6 +861,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLabels(@javax.annotation.Nullable final java.util.List<AssignedLabel> value) {
         this._assignedLabels = value;
     }
@@ -863,6 +870,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this._assignedLicenses = value;
     }
@@ -871,6 +879,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the autoSubscribeNewMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoSubscribeNewMembers(@javax.annotation.Nullable final Boolean value) {
         this._autoSubscribeNewMembers = value;
     }
@@ -879,6 +888,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendar(@javax.annotation.Nullable final Calendar value) {
         this._calendar = value;
     }
@@ -887,6 +897,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._calendarView = value;
     }
@@ -895,6 +906,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final String value) {
         this._classification = value;
     }
@@ -903,6 +915,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the conversations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversations(@javax.annotation.Nullable final java.util.List<Conversation> value) {
         this._conversations = value;
     }
@@ -911,6 +924,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -919,6 +933,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedOnBehalfOf(@javax.annotation.Nullable final DirectoryObject value) {
         this._createdOnBehalfOf = value;
     }
@@ -927,6 +942,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -935,6 +951,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -943,6 +960,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
         this._drive = value;
     }
@@ -951,6 +969,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the drives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
         this._drives = value;
     }
@@ -959,6 +978,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._events = value;
     }
@@ -967,6 +987,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -975,6 +996,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -983,6 +1005,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the groupLifecyclePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupLifecyclePolicies(@javax.annotation.Nullable final java.util.List<GroupLifecyclePolicy> value) {
         this._groupLifecyclePolicies = value;
     }
@@ -991,6 +1014,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the groupTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._groupTypes = value;
     }
@@ -999,6 +1023,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the hasMembersWithLicenseErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasMembersWithLicenseErrors(@javax.annotation.Nullable final Boolean value) {
         this._hasMembersWithLicenseErrors = value;
     }
@@ -1007,6 +1032,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the hideFromAddressLists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideFromAddressLists(@javax.annotation.Nullable final Boolean value) {
         this._hideFromAddressLists = value;
     }
@@ -1015,6 +1041,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the hideFromOutlookClients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideFromOutlookClients(@javax.annotation.Nullable final Boolean value) {
         this._hideFromOutlookClients = value;
     }
@@ -1023,14 +1050,16 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the isArchived property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsArchived(@javax.annotation.Nullable final Boolean value) {
         this._isArchived = value;
     }
     /**
-     * Sets the isAssignableToRole property value. Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
+     * Sets the isAssignableToRole property value. Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
      * @param value Value to set for the isAssignableToRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssignableToRole(@javax.annotation.Nullable final Boolean value) {
         this._isAssignableToRole = value;
     }
@@ -1039,6 +1068,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the isSubscribedByMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSubscribedByMail(@javax.annotation.Nullable final Boolean value) {
         this._isSubscribedByMail = value;
     }
@@ -1047,6 +1077,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the licenseProcessingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseProcessingState(@javax.annotation.Nullable final LicenseProcessingState value) {
         this._licenseProcessingState = value;
     }
@@ -1055,6 +1086,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
         this._mail = value;
     }
@@ -1063,6 +1095,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailEnabled = value;
     }
@@ -1071,6 +1104,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -1079,6 +1113,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -1087,6 +1122,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._members = value;
     }
@@ -1095,6 +1131,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the membershipRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembershipRule(@javax.annotation.Nullable final String value) {
         this._membershipRule = value;
     }
@@ -1103,6 +1140,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the membershipRuleProcessingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembershipRuleProcessingState(@javax.annotation.Nullable final String value) {
         this._membershipRuleProcessingState = value;
     }
@@ -1111,6 +1149,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the membersWithLicenseErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembersWithLicenseErrors(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._membersWithLicenseErrors = value;
     }
@@ -1119,6 +1158,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onenote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
         this._onenote = value;
     }
@@ -1127,6 +1167,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDomainName(@javax.annotation.Nullable final String value) {
         this._onPremisesDomainName = value;
     }
@@ -1135,6 +1176,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -1143,6 +1185,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesNetBiosName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesNetBiosName(@javax.annotation.Nullable final String value) {
         this._onPremisesNetBiosName = value;
     }
@@ -1151,6 +1194,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this._onPremisesProvisioningErrors = value;
     }
@@ -1159,6 +1203,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSamAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSamAccountName(@javax.annotation.Nullable final String value) {
         this._onPremisesSamAccountName = value;
     }
@@ -1167,6 +1212,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._onPremisesSecurityIdentifier = value;
     }
@@ -1175,6 +1221,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -1183,6 +1230,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the owners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._owners = value;
     }
@@ -1191,6 +1239,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the permissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionGrants(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this._permissionGrants = value;
     }
@@ -1199,6 +1248,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
         this._photo = value;
     }
@@ -1207,6 +1257,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the photos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhotos(@javax.annotation.Nullable final java.util.List<ProfilePhoto> value) {
         this._photos = value;
     }
@@ -1215,6 +1266,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the planner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanner(@javax.annotation.Nullable final PlannerGroup value) {
         this._planner = value;
     }
@@ -1223,6 +1275,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredDataLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredDataLocation(@javax.annotation.Nullable final String value) {
         this._preferredDataLocation = value;
     }
@@ -1231,6 +1284,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
         this._preferredLanguage = value;
     }
@@ -1239,6 +1293,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._proxyAddresses = value;
     }
@@ -1247,6 +1302,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the rejectedSenders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRejectedSenders(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._rejectedSenders = value;
     }
@@ -1255,6 +1311,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the renewedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._renewedDateTime = value;
     }
@@ -1263,6 +1320,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityEnabled(@javax.annotation.Nullable final Boolean value) {
         this._securityEnabled = value;
     }
@@ -1271,6 +1329,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._securityIdentifier = value;
     }
@@ -1279,6 +1338,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<GroupSetting> value) {
         this._settings = value;
     }
@@ -1287,6 +1347,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the sites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSites(@javax.annotation.Nullable final java.util.List<Site> value) {
         this._sites = value;
     }
@@ -1295,6 +1356,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
         this._team = value;
     }
@@ -1303,6 +1365,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the theme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final String value) {
         this._theme = value;
     }
@@ -1311,6 +1374,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the threads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreads(@javax.annotation.Nullable final java.util.List<ConversationThread> value) {
         this._threads = value;
     }
@@ -1319,6 +1383,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -1327,6 +1392,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMembers = value;
     }
@@ -1335,6 +1401,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the unseenCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnseenCount(@javax.annotation.Nullable final Integer value) {
         this._unseenCount = value;
     }
@@ -1343,6 +1410,7 @@ public class Group extends DirectoryObject implements Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
         this._visibility = value;
     }

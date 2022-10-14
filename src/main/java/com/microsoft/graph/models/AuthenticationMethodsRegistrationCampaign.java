@@ -25,6 +25,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.authenticationMethodsRegistrationCampaign");
@@ -62,7 +63,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodsRegistrationCampaign currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("excludeTargets", (n) -> { currentObject.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
@@ -121,6 +123,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the excludeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeTargets(@javax.annotation.Nullable final java.util.List<ExcludeTarget> value) {
         this._excludeTargets = value;
     }
@@ -137,6 +141,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
         this._includeTargets = value;
     }
@@ -145,6 +150,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the snoozeDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSnoozeDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._snoozeDurationInDays = value;
     }
@@ -161,6 +168,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
         this._state = value;
     }

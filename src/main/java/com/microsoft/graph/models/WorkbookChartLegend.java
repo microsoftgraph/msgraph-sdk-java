@@ -20,6 +20,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Instantiates a new workbookChartLegend and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartLegend() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartLegend");
@@ -41,7 +42,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartLegend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
             this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
             this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartLegendFormat value) {
         this._format = value;
     }
@@ -106,6 +109,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the overlay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverlay(@javax.annotation.Nullable final Boolean value) {
         this._overlay = value;
     }
@@ -114,6 +118,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the position property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final String value) {
         this._position = value;
     }
@@ -122,6 +127,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the visible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
         this._visible = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable {
     /** The expected deadline of the action for the message. */
     private OffsetDateTime _actionRequiredByDateTime;
@@ -32,9 +33,10 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /** Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions. */
     private ServiceUpdateMessageViewpoint _viewPoint;
     /**
-     * Instantiates a new ServiceUpdateMessage and sets the default values.
+     * Instantiates a new serviceUpdateMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceUpdateMessage() {
         super();
         this.setOdataType("#microsoft.graph.serviceUpdateMessage");
@@ -42,7 +44,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceUpdateMessage
+     * @return a serviceUpdateMessage
      */
     @javax.annotation.Nonnull
     public static ServiceUpdateMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -96,7 +98,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("actionRequiredByDateTime", (n) -> { currentObject.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
             this.put("attachmentsArchive", (n) -> { currentObject.setAttachmentsArchive(n.getByteArrayValue()); });
@@ -163,6 +165,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +186,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the actionRequiredByDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionRequiredByDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._actionRequiredByDateTime = value;
     }
@@ -191,6 +195,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<ServiceAnnouncementAttachment> value) {
         this._attachments = value;
     }
@@ -199,6 +204,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachmentsArchive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentsArchive(@javax.annotation.Nullable final byte[] value) {
         this._attachmentsArchive = value;
     }
@@ -207,6 +213,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -215,6 +222,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ServiceUpdateCategory value) {
         this._category = value;
     }
@@ -223,6 +231,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -231,6 +240,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the isMajorChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMajorChange(@javax.annotation.Nullable final Boolean value) {
         this._isMajorChange = value;
     }
@@ -239,6 +249,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<String> value) {
         this._services = value;
     }
@@ -247,6 +258,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final ServiceUpdateSeverity value) {
         this._severity = value;
     }
@@ -255,6 +267,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -263,6 +276,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the viewPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setViewPoint(@javax.annotation.Nullable final ServiceUpdateMessageViewpoint value) {
         this._viewPoint = value;
     }

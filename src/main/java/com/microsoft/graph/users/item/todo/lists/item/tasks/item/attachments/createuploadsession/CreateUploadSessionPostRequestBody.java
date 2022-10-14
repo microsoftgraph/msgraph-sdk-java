@@ -19,6 +19,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateUploadSessionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,7 +56,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateUploadSessionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("attachmentInfo", (n) -> { currentObject.setAttachmentInfo(n.getObjectValue(AttachmentInfo::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attachmentInfo", this.getAttachmentInfo());
@@ -74,6 +76,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the attachmentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentInfo(@javax.annotation.Nullable final AttachmentInfo value) {
         this._attachmentInfo = value;
     }

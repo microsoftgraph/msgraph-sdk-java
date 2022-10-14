@@ -18,6 +18,7 @@ public class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new setPriorityPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetPriorityPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetPriorityPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("priority", this.getPriority());
@@ -73,6 +75,7 @@ public class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }

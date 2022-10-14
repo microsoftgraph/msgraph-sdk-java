@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /** Access package containing this policy. Read-only. */
     private AccessPackage _accessPackage;
@@ -40,6 +40,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentPolicy() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignmentPolicy");
@@ -125,7 +126,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
             this.put("allowedTargetScope", (n) -> { currentObject.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
             this.put("automaticRequestSettings", (n) -> { currentObject.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
@@ -186,6 +187,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -208,6 +210,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
         this._accessPackage = value;
     }
@@ -216,6 +219,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the allowedTargetScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedTargetScope(@javax.annotation.Nullable final AllowedTargetScope value) {
         this._allowedTargetScope = value;
     }
@@ -224,6 +228,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the automaticRequestSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticRequestSettings(@javax.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
         this._automaticRequestSettings = value;
     }
@@ -232,6 +237,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the catalog property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
         this._catalog = value;
     }
@@ -240,6 +246,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -248,6 +255,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -256,6 +264,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -264,6 +273,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the expiration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
         this._expiration = value;
     }
@@ -272,6 +282,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -280,6 +291,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the requestApprovalSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestApprovalSettings(@javax.annotation.Nullable final AccessPackageAssignmentApprovalSettings value) {
         this._requestApprovalSettings = value;
     }
@@ -288,6 +300,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the requestorSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestorSettings(@javax.annotation.Nullable final AccessPackageAssignmentRequestorSettings value) {
         this._requestorSettings = value;
     }
@@ -296,6 +309,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the reviewSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSettings(@javax.annotation.Nullable final AccessPackageAssignmentReviewSettings value) {
         this._reviewSettings = value;
     }
@@ -304,6 +318,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the specificAllowedTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpecificAllowedTargets(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._specificAllowedTargets = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class CalendarPermission extends Entity implements Parsable {
     /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
     private java.util.List<CalendarRoleType> _allowedRoles;
@@ -23,6 +23,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * Instantiates a new calendarPermission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CalendarPermission() {
         super();
         this.setOdataType("#microsoft.graph.calendarPermission");
@@ -60,7 +61,7 @@ public class CalendarPermission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarPermission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedRoles", (n) -> { currentObject.setAllowedRoles(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
             this.put("isInsideOrganization", (n) -> { currentObject.setIsInsideOrganization(n.getBooleanValue()); });
@@ -97,6 +98,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the allowedRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedRoles(@javax.annotation.Nullable final java.util.List<CalendarRoleType> value) {
         this._allowedRoles = value;
     }
@@ -119,6 +122,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
         this._emailAddress = value;
     }
@@ -127,6 +131,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the isInsideOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInsideOrganization(@javax.annotation.Nullable final Boolean value) {
         this._isInsideOrganization = value;
     }
@@ -135,6 +140,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the isRemovable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
         this._isRemovable = value;
     }
@@ -143,6 +149,7 @@ public class CalendarPermission extends Entity implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final CalendarRoleType value) {
         this._role = value;
     }

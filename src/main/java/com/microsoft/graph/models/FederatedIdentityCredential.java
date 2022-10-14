@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class FederatedIdentityCredential extends Entity implements Parsable {
     /** The audience that can appear in the external token. This field is mandatory and should be set to api://AzureADTokenExchange for Azure AD. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. This field can only accept a single value and has a limit of 600 characters. Required. */
     private java.util.List<String> _audiences;
@@ -23,6 +23,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * Instantiates a new federatedIdentityCredential and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FederatedIdentityCredential() {
         super();
         this.setOdataType("#microsoft.graph.federatedIdentityCredential");
@@ -60,7 +61,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FederatedIdentityCredential currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audiences", (n) -> { currentObject.setAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param value Value to set for the audiences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudiences(@javax.annotation.Nullable final java.util.List<String> value) {
         this._audiences = value;
     }
@@ -119,6 +122,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -127,6 +131,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
         this._issuer = value;
     }
@@ -135,6 +140,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -143,6 +149,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

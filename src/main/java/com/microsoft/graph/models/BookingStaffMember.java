@@ -14,6 +14,8 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     private String _displayName;
     /** The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required. */
     private String _emailAddress;
+    /** The isEmailNotificationEnabled property */
+    private Boolean _isEmailNotificationEnabled;
     /** The role property */
     private BookingStaffRole _role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
@@ -26,6 +28,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * Instantiates a new BookingStaffMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingStaffMember() {
         super();
         this.setOdataType("#microsoft.graph.bookingStaffMember");
@@ -71,15 +74,24 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingStaffMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("availabilityIsAffectedByPersonalCalendar", (n) -> { currentObject.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
+            this.put("isEmailNotificationEnabled", (n) -> { currentObject.setIsEmailNotificationEnabled(n.getBooleanValue()); });
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(BookingStaffRole.class)); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
             this.put("useBusinessHours", (n) -> { currentObject.setUseBusinessHours(n.getBooleanValue()); });
             this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
         }};
+    }
+    /**
+     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsEmailNotificationEnabled() {
+        return this._isEmailNotificationEnabled;
     }
     /**
      * Gets the role property value. The role property
@@ -118,12 +130,14 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
+        writer.writeBooleanValue("isEmailNotificationEnabled", this.getIsEmailNotificationEnabled());
         writer.writeEnumValue("role", this.getRole());
         writer.writeStringValue("timeZone", this.getTimeZone());
         writer.writeBooleanValue("useBusinessHours", this.getUseBusinessHours());
@@ -134,6 +148,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the availabilityIsAffectedByPersonalCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityIsAffectedByPersonalCalendar(@javax.annotation.Nullable final Boolean value) {
         this._availabilityIsAffectedByPersonalCalendar = value;
     }
@@ -142,6 +157,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -150,14 +166,25 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
+    }
+    /**
+     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * @param value Value to set for the isEmailNotificationEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isEmailNotificationEnabled = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final BookingStaffRole value) {
         this._role = value;
     }
@@ -166,6 +193,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
         this._timeZone = value;
     }
@@ -174,6 +202,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the useBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseBusinessHours(@javax.annotation.Nullable final Boolean value) {
         this._useBusinessHours = value;
     }
@@ -182,6 +211,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
      * @param value Value to set for the workingHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkingHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
         this._workingHours = value;
     }

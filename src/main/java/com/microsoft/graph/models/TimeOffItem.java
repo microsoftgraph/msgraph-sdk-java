@@ -14,6 +14,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      * Instantiates a new TimeOffItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOffItem() {
         super();
         this.setOdataType("#microsoft.graph.timeOffItem");
@@ -35,7 +36,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOffItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("timeOffReasonId", (n) -> { currentObject.setTimeOffReasonId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the timeOffReasonId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeOffReasonId(@javax.annotation.Nullable final String value) {
         this._timeOffReasonId = value;
     }

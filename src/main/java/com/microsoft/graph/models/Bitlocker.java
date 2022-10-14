@@ -14,6 +14,7 @@ public class Bitlocker extends Entity implements Parsable {
      * Instantiates a new Bitlocker and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Bitlocker() {
         super();
         this.setOdataType("#microsoft.graph.bitlocker");
@@ -35,7 +36,7 @@ public class Bitlocker extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Bitlocker currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("recoveryKeys", (n) -> { currentObject.setRecoveryKeys(n.getCollectionOfObjectValues(BitlockerRecoveryKey::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Bitlocker extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Bitlocker extends Entity implements Parsable {
      * @param value Value to set for the recoveryKeys property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecoveryKeys(@javax.annotation.Nullable final java.util.List<BitlockerRecoveryKey> value) {
         this._recoveryKeys = value;
     }

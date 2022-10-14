@@ -14,6 +14,7 @@ public class Initiator extends Identity implements Parsable {
      * Instantiates a new Initiator and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Initiator() {
         super();
         this.setOdataType("#microsoft.graph.initiator");
@@ -35,7 +36,7 @@ public class Initiator extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Initiator currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiatorType", (n) -> { currentObject.setInitiatorType(n.getEnumValue(InitiatorType.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Initiator extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Initiator extends Identity implements Parsable {
      * @param value Value to set for the initiatorType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatorType(@javax.annotation.Nullable final InitiatorType value) {
         this._initiatorType = value;
     }

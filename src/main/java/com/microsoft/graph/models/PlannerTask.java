@@ -64,6 +64,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Instantiates a new plannerTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTask() {
         super();
         this.setOdataType("#microsoft.graph.plannerTask");
@@ -205,7 +206,7 @@ public class PlannerTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeChecklistItemCount", (n) -> { currentObject.setActiveChecklistItemCount(n.getIntegerValue()); });
             this.put("appliedCategories", (n) -> { currentObject.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
             this.put("assignedToTaskBoardFormat", (n) -> { currentObject.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
@@ -318,6 +319,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -352,6 +354,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the activeChecklistItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveChecklistItemCount(@javax.annotation.Nullable final Integer value) {
         this._activeChecklistItemCount = value;
     }
@@ -360,6 +363,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the appliedCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedCategories(@javax.annotation.Nullable final PlannerAppliedCategories value) {
         this._appliedCategories = value;
     }
@@ -368,6 +372,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assignedToTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedToTaskBoardFormat(@javax.annotation.Nullable final PlannerAssignedToTaskBoardTaskFormat value) {
         this._assignedToTaskBoardFormat = value;
     }
@@ -376,6 +381,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assigneePriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssigneePriority(@javax.annotation.Nullable final String value) {
         this._assigneePriority = value;
     }
@@ -384,6 +390,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final PlannerAssignments value) {
         this._assignments = value;
     }
@@ -392,6 +399,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the bucketId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBucketId(@javax.annotation.Nullable final String value) {
         this._bucketId = value;
     }
@@ -400,6 +408,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the bucketTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBucketTaskBoardFormat(@javax.annotation.Nullable final PlannerBucketTaskBoardTaskFormat value) {
         this._bucketTaskBoardFormat = value;
     }
@@ -408,6 +417,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the checklistItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklistItemCount(@javax.annotation.Nullable final Integer value) {
         this._checklistItemCount = value;
     }
@@ -416,6 +426,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the completedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._completedBy = value;
     }
@@ -424,6 +435,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -432,6 +444,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the conversationThreadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationThreadId(@javax.annotation.Nullable final String value) {
         this._conversationThreadId = value;
     }
@@ -440,6 +453,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -448,6 +462,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -456,6 +471,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final PlannerTaskDetails value) {
         this._details = value;
     }
@@ -464,6 +480,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
     }
@@ -472,6 +489,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the hasDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasDescription(@javax.annotation.Nullable final Boolean value) {
         this._hasDescription = value;
     }
@@ -480,6 +498,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }
@@ -488,6 +507,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the percentComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPercentComplete(@javax.annotation.Nullable final Integer value) {
         this._percentComplete = value;
     }
@@ -496,6 +516,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the planId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanId(@javax.annotation.Nullable final String value) {
         this._planId = value;
     }
@@ -504,6 +525,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the previewType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
         this._previewType = value;
     }
@@ -512,6 +534,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -520,6 +543,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the progressTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgressTaskBoardFormat(@javax.annotation.Nullable final PlannerProgressTaskBoardTaskFormat value) {
         this._progressTaskBoardFormat = value;
     }
@@ -528,6 +552,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the referenceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceCount(@javax.annotation.Nullable final Integer value) {
         this._referenceCount = value;
     }
@@ -536,6 +561,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -544,6 +570,7 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

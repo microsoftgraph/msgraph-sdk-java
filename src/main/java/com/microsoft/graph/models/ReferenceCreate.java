@@ -17,6 +17,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
      * Instantiates a new ReferenceCreate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReferenceCreate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,7 +46,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceCreate currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
         }};
     }
@@ -62,6 +63,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.id", this.getOdataId());
@@ -72,6 +74,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -80,6 +83,7 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataId(@javax.annotation.Nullable final String value) {
         this._odataId = value;
     }

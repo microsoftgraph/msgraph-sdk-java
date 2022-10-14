@@ -19,6 +19,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MembersAddedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.membersAddedEventMessageDetail");
@@ -40,7 +41,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MembersAddedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkUserIdentity::createFromDiscriminatorValue)); });
             this.put("visibleHistoryStartDateTime", (n) -> { currentObject.setVisibleHistoryStartDateTime(n.getOffsetDateTimeValue()); });
@@ -75,6 +76,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -95,6 +98,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkUserIdentity> value) {
         this._members = value;
     }
@@ -103,6 +107,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
      * @param value Value to set for the visibleHistoryStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibleHistoryStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._visibleHistoryStartDateTime = value;
     }

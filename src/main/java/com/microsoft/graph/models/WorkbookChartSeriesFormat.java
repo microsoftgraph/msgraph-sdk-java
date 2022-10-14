@@ -16,6 +16,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartSeriesFormat() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartSeriesFormat");
@@ -37,7 +38,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartSeriesFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
             this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookChartFill value) {
         this._fill = value;
     }
@@ -82,6 +85,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * @param value Value to set for the line property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
         this._line = value;
     }

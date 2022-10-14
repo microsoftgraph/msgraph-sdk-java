@@ -21,6 +21,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionAppLockerFile");
@@ -50,7 +51,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionAppLockerFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
             this.put("fileHash", (n) -> { currentObject.setFileHash(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -107,6 +110,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final byte[] value) {
         this._file = value;
     }
@@ -115,6 +119,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the fileHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHash(@javax.annotation.Nullable final String value) {
         this._fileHash = value;
     }
@@ -123,6 +128,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

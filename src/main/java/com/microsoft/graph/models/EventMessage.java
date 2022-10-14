@@ -34,6 +34,7 @@ public class EventMessage extends Message implements Parsable {
      * Instantiates a new EventMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EventMessage() {
         super();
         this.setOdataType("#microsoft.graph.eventMessage");
@@ -79,7 +80,7 @@ public class EventMessage extends Message implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("event", (n) -> { currentObject.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
             this.put("isAllDay", (n) -> { currentObject.setIsAllDay(n.getBooleanValue()); });
@@ -161,6 +162,7 @@ public class EventMessage extends Message implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -180,6 +182,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._endDateTime = value;
     }
@@ -188,6 +191,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the event property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvent(@javax.annotation.Nullable final Event value) {
         this._event = value;
     }
@@ -196,6 +200,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the isAllDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAllDay(@javax.annotation.Nullable final Boolean value) {
         this._isAllDay = value;
     }
@@ -204,6 +209,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the isDelegated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDelegated(@javax.annotation.Nullable final Boolean value) {
         this._isDelegated = value;
     }
@@ -212,6 +218,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the isOutOfDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOutOfDate(@javax.annotation.Nullable final Boolean value) {
         this._isOutOfDate = value;
     }
@@ -220,6 +227,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final Location value) {
         this._location = value;
     }
@@ -228,6 +236,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the meetingMessageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingMessageType(@javax.annotation.Nullable final MeetingMessageType value) {
         this._meetingMessageType = value;
     }
@@ -236,6 +245,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -244,6 +254,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
     }
@@ -252,6 +263,7 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EventType value) {
         this._type = value;
     }

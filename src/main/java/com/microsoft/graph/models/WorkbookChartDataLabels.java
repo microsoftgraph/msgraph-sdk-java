@@ -30,6 +30,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * Instantiates a new workbookChartDataLabels and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartDataLabels() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartDataLabels");
@@ -51,7 +52,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartDataLabels currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartDataLabelFormat::createFromDiscriminatorValue)); });
             this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
             this.put("separator", (n) -> { currentObject.setSeparator(n.getStringValue()); });
@@ -140,6 +141,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartDataLabelFormat value) {
         this._format = value;
     }
@@ -166,6 +169,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the position property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final String value) {
         this._position = value;
     }
@@ -174,6 +178,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the separator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeparator(@javax.annotation.Nullable final String value) {
         this._separator = value;
     }
@@ -182,6 +187,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showBubbleSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowBubbleSize(@javax.annotation.Nullable final Boolean value) {
         this._showBubbleSize = value;
     }
@@ -190,6 +196,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showCategoryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowCategoryName(@javax.annotation.Nullable final Boolean value) {
         this._showCategoryName = value;
     }
@@ -198,6 +205,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showLegendKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowLegendKey(@javax.annotation.Nullable final Boolean value) {
         this._showLegendKey = value;
     }
@@ -206,6 +214,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowPercentage(@javax.annotation.Nullable final Boolean value) {
         this._showPercentage = value;
     }
@@ -214,6 +223,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showSeriesName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowSeriesName(@javax.annotation.Nullable final Boolean value) {
         this._showSeriesName = value;
     }
@@ -222,6 +232,7 @@ public class WorkbookChartDataLabels extends Entity implements Parsable {
      * @param value Value to set for the showValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowValue(@javax.annotation.Nullable final Boolean value) {
         this._showValue = value;
     }

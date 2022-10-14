@@ -37,6 +37,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * Instantiates a new workbookChart and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChart() {
         super();
         this.setOdataType("#microsoft.graph.workbookChart");
@@ -74,7 +75,7 @@ public class WorkbookChart extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChart currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("axes", (n) -> { currentObject.setAxes(n.getObjectValue(WorkbookChartAxes::createFromDiscriminatorValue)); });
             this.put("dataLabels", (n) -> { currentObject.setDataLabels(n.getObjectValue(WorkbookChartDataLabels::createFromDiscriminatorValue)); });
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAreaFormat::createFromDiscriminatorValue)); });
@@ -174,6 +175,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +197,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the axes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAxes(@javax.annotation.Nullable final WorkbookChartAxes value) {
         this._axes = value;
     }
@@ -203,6 +206,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the dataLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataLabels(@javax.annotation.Nullable final WorkbookChartDataLabels value) {
         this._dataLabels = value;
     }
@@ -211,6 +215,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAreaFormat value) {
         this._format = value;
     }
@@ -219,6 +224,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Double value) {
         this._height = value;
     }
@@ -227,6 +233,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the left property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLeft(@javax.annotation.Nullable final Double value) {
         this._left = value;
     }
@@ -235,6 +242,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the legend property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegend(@javax.annotation.Nullable final WorkbookChartLegend value) {
         this._legend = value;
     }
@@ -243,6 +251,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -251,6 +260,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the series property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeries(@javax.annotation.Nullable final java.util.List<WorkbookChartSeries> value) {
         this._series = value;
     }
@@ -259,6 +269,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final WorkbookChartTitle value) {
         this._title = value;
     }
@@ -267,6 +278,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Double value) {
         this._top = value;
     }
@@ -275,6 +287,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Double value) {
         this._width = value;
     }
@@ -283,6 +296,7 @@ public class WorkbookChart extends Entity implements Parsable {
      * @param value Value to set for the worksheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
         this._worksheet = value;
     }

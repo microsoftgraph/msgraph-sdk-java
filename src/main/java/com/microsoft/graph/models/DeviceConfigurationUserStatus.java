@@ -24,6 +24,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Instantiates a new deviceConfigurationUserStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationUserStatus() {
         super();
         this.setOdataType("#microsoft.graph.deviceConfigurationUserStatus");
@@ -53,7 +54,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationUserStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("devicesCount", (n) -> { currentObject.setDevicesCount(n.getIntegerValue()); });
             this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ComplianceStatus.class)); });
@@ -98,6 +99,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param value Value to set for the devicesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesCount(@javax.annotation.Nullable final Integer value) {
         this._devicesCount = value;
     }
@@ -120,6 +123,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -128,6 +132,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
         this._status = value;
     }
@@ -136,6 +141,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -144,6 +150,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

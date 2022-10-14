@@ -26,6 +26,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Instantiates a new accessPackageSubject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageSubject() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageSubject");
@@ -71,7 +72,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageSubject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectedOrganization", (n) -> { currentObject.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedOrganization(@javax.annotation.Nullable final ConnectedOrganization value) {
         this._connectedOrganization = value;
     }
@@ -142,6 +145,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -150,6 +154,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -158,6 +163,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the objectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectId(@javax.annotation.Nullable final String value) {
         this._objectId = value;
     }
@@ -166,6 +172,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._onPremisesSecurityIdentifier = value;
     }
@@ -174,6 +181,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the principalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
         this._principalName = value;
     }
@@ -182,6 +190,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * @param value Value to set for the subjectType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectType(@javax.annotation.Nullable final AccessPackageSubjectType value) {
         this._subjectType = value;
     }

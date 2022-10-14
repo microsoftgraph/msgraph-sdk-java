@@ -21,6 +21,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new invitePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InvitePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,7 +58,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InvitePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
         }};
@@ -75,6 +76,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -86,6 +88,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -102,6 +106,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this._participants = value;
     }

@@ -16,6 +16,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * Instantiates a new AccessReviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewSet() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewSet");
@@ -45,7 +46,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
             this.put("historyDefinitions", (n) -> { currentObject.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
         this._definitions = value;
     }
@@ -82,6 +85,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the historyDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistoryDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
         this._historyDefinitions = value;
     }

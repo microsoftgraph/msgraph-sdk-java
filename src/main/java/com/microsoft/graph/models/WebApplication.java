@@ -27,6 +27,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * Instantiates a new webApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.webApplication");
@@ -56,7 +57,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
             this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
             this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
@@ -133,6 +135,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
         this._homePageUrl = value;
     }
@@ -149,6 +153,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the implicitGrantSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplicitGrantSettings(@javax.annotation.Nullable final ImplicitGrantSettings value) {
         this._implicitGrantSettings = value;
     }
@@ -157,6 +162,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logoutUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
         this._logoutUrl = value;
     }
@@ -165,6 +171,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +180,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redirectUris property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUris(@javax.annotation.Nullable final java.util.List<String> value) {
         this._redirectUris = value;
     }
@@ -181,6 +189,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redirectUriSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUriSettings(@javax.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
         this._redirectUriSettings = value;
     }

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of applicationTemplate entities. */
 public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting. */
     private java.util.List<String> _categories;
@@ -26,9 +25,10 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
     private java.util.List<String> _supportedSingleSignOnModes;
     /**
-     * Instantiates a new applicationTemplate and sets the default values.
+     * Instantiates a new ApplicationTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplicationTemplate() {
         super();
         this.setOdataType("#microsoft.graph.applicationTemplate");
@@ -36,7 +36,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationTemplate
+     * @return a ApplicationTemplate
      */
     @javax.annotation.Nonnull
     public static ApplicationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -130,6 +130,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +148,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -155,6 +157,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -163,6 +166,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -171,6 +175,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
         this._homePageUrl = value;
     }
@@ -179,6 +184,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoUrl(@javax.annotation.Nullable final String value) {
         this._logoUrl = value;
     }
@@ -187,6 +193,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -195,6 +202,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedProvisioningTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedProvisioningTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedProvisioningTypes = value;
     }
@@ -203,6 +211,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedSingleSignOnModes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedSingleSignOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedSingleSignOnModes = value;
     }

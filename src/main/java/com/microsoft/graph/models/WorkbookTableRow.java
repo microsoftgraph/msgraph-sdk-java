@@ -17,6 +17,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * Instantiates a new workbookTableRow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookTableRow() {
         super();
         this.setOdataType("#microsoft.graph.workbookTableRow");
@@ -38,7 +39,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookTableRow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
             this.put("values", (n) -> { currentObject.setValues(n.getObjectValue(Json::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * @param value Value to set for the index property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
         this._index = value;
     }
@@ -83,6 +86,7 @@ public class WorkbookTableRow extends Entity implements Parsable {
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final Json value) {
         this._values = value;
     }

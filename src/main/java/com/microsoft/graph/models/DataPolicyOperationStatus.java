@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of dataPolicyOperation entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum DataPolicyOperationStatus implements ValuedEnum {
     NotStarted("notStarted"),
     Running("running"),

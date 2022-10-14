@@ -26,6 +26,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * Instantiates a new AuthorizationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthorizationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.authorizationPolicy");
@@ -95,7 +96,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthorizationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowedToSignUpEmailBasedSubscriptions", (n) -> { currentObject.setAllowedToSignUpEmailBasedSubscriptions(n.getBooleanValue()); });
             this.put("allowedToUseSSPR", (n) -> { currentObject.setAllowedToUseSSPR(n.getBooleanValue()); });
             this.put("allowEmailVerifiedUsersToJoinOrganization", (n) -> { currentObject.setAllowEmailVerifiedUsersToJoinOrganization(n.getBooleanValue()); });
@@ -118,6 +119,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToSignUpEmailBasedSubscriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToSignUpEmailBasedSubscriptions(@javax.annotation.Nullable final Boolean value) {
         this._allowedToSignUpEmailBasedSubscriptions = value;
     }
@@ -142,6 +145,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToUseSSPR property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedToUseSSPR(@javax.annotation.Nullable final Boolean value) {
         this._allowedToUseSSPR = value;
     }
@@ -150,6 +154,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowEmailVerifiedUsersToJoinOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowEmailVerifiedUsersToJoinOrganization(@javax.annotation.Nullable final Boolean value) {
         this._allowEmailVerifiedUsersToJoinOrganization = value;
     }
@@ -158,6 +163,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowInvitesFrom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowInvitesFrom(@javax.annotation.Nullable final AllowInvitesFrom value) {
         this._allowInvitesFrom = value;
     }
@@ -166,6 +172,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the blockMsolPowerShell property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockMsolPowerShell(@javax.annotation.Nullable final Boolean value) {
         this._blockMsolPowerShell = value;
     }
@@ -174,6 +181,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the defaultUserRolePermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultUserRolePermissions(@javax.annotation.Nullable final DefaultUserRolePermissions value) {
         this._defaultUserRolePermissions = value;
     }
@@ -182,6 +190,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the guestUserRoleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuestUserRoleId(@javax.annotation.Nullable final String value) {
         this._guestUserRoleId = value;
     }

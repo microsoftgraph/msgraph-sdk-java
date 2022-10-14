@@ -30,6 +30,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * Instantiates a new educationStudent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationStudent() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.educationStudent");
@@ -75,7 +76,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationStudent currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
             this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
             this.put("gender", (n) -> { currentObject.setGender(n.getEnumValue(EducationGender.class)); });
@@ -130,6 +131,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("birthDate", this.getBirthDate());
@@ -146,6 +148,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the birthDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthDate(@javax.annotation.Nullable final LocalDate value) {
         this._birthDate = value;
     }
@@ -162,6 +166,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -170,6 +175,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the gender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGender(@javax.annotation.Nullable final EducationGender value) {
         this._gender = value;
     }
@@ -178,6 +184,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the grade property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrade(@javax.annotation.Nullable final String value) {
         this._grade = value;
     }
@@ -186,6 +193,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the graduationYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGraduationYear(@javax.annotation.Nullable final String value) {
         this._graduationYear = value;
     }
@@ -194,6 +202,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -202,6 +211,7 @@ public class EducationStudent implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the studentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStudentNumber(@javax.annotation.Nullable final String value) {
         this._studentNumber = value;
     }

@@ -16,6 +16,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
      * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
         this.setOdataType("#microsoft.graph.plannerAssignedToTaskBoardTaskFormat");
@@ -37,7 +38,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerAssignedToTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("orderHintsByAssignee", (n) -> { currentObject.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
             this.put("unassignedOrderHint", (n) -> { currentObject.setUnassignedOrderHint(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
      * @param value Value to set for the orderHintsByAssignee property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHintsByAssignee(@javax.annotation.Nullable final PlannerOrderHintsByAssignee value) {
         this._orderHintsByAssignee = value;
     }
@@ -82,6 +85,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Pars
      * @param value Value to set for the unassignedOrderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnassignedOrderHint(@javax.annotation.Nullable final String value) {
         this._unassignedOrderHint = value;
     }

@@ -16,6 +16,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TabUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.tabUpdatedEventMessageDetail");
@@ -37,7 +38,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TabUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("tabId", (n) -> { currentObject.setTabId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -82,6 +85,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param value Value to set for the tabId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTabId(@javax.annotation.Nullable final String value) {
         this._tabId = value;
     }

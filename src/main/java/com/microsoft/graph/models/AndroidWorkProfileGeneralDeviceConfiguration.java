@@ -80,6 +80,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * Instantiates a new AndroidWorkProfileGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration");
@@ -101,7 +102,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
             this.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
             this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
@@ -415,6 +416,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -458,6 +460,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockFingerprintUnlock = value;
     }
@@ -466,6 +469,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockTrustAgents = value;
     }
@@ -474,6 +478,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -482,6 +487,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -490,6 +496,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -498,6 +505,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -506,6 +514,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -514,6 +523,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -522,6 +532,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireVerifyApps = value;
     }
@@ -530,6 +541,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockAddingAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockAddingAccounts(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockAddingAccounts = value;
     }
@@ -538,6 +550,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCamera(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCamera = value;
     }
@@ -546,6 +559,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockCrossProfileCallerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCallerId(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileCallerId = value;
     }
@@ -554,6 +568,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockCrossProfileContactsSearch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileContactsSearch(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileContactsSearch = value;
     }
@@ -562,6 +577,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockCrossProfileCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCopyPaste(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileCopyPaste = value;
     }
@@ -570,6 +586,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockNotificationsWhileDeviceLocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockNotificationsWhileDeviceLocked(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockNotificationsWhileDeviceLocked = value;
     }
@@ -578,6 +595,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBlockScreenCapture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockScreenCapture(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockScreenCapture = value;
     }
@@ -586,6 +604,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileBluetoothEnableContactSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBluetoothEnableContactSharing(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBluetoothEnableContactSharing = value;
     }
@@ -594,6 +613,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileDataSharingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileDataSharingType(@javax.annotation.Nullable final AndroidWorkProfileCrossProfileDataSharingType value) {
         this._workProfileDataSharingType = value;
     }
@@ -602,6 +622,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileDefaultAppPermissionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileDefaultAppPermissionPolicy(@javax.annotation.Nullable final AndroidWorkProfileDefaultAppPermissionPolicyType value) {
         this._workProfileDefaultAppPermissionPolicy = value;
     }
@@ -610,6 +631,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockFingerprintUnlock = value;
     }
@@ -618,6 +640,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockTrustAgents = value;
     }
@@ -626,6 +649,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordExpirationDays = value;
     }
@@ -634,6 +658,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumLength = value;
     }
@@ -642,6 +667,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinLetterCharacters = value;
     }
@@ -650,6 +676,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinLowerCaseCharacters = value;
     }
@@ -658,6 +685,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinNonLetterCharacters = value;
     }
@@ -666,6 +694,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinNumericCharacters = value;
     }
@@ -674,6 +703,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinSymbolCharacters = value;
     }
@@ -682,6 +712,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinUpperCaseCharacters = value;
     }
@@ -690,6 +721,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -698,6 +730,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordPreviousPasswordBlockCount = value;
     }
@@ -706,6 +739,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordRequiredType(@javax.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
         this._workProfilePasswordRequiredType = value;
     }
@@ -714,6 +748,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfilePasswordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -722,6 +757,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      * @param value Value to set for the workProfileRequirePassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileRequirePassword(@javax.annotation.Nullable final Boolean value) {
         this._workProfileRequirePassword = value;
     }

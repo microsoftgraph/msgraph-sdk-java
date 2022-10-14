@@ -24,6 +24,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TelecomExpenseManagementPartner() {
         super();
         this.setOdataType("#microsoft.graph.telecomExpenseManagementPartner");
@@ -69,7 +70,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TelecomExpenseManagementPartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appAuthorized", (n) -> { currentObject.setAppAuthorized(n.getBooleanValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
@@ -98,6 +99,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the appAuthorized property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppAuthorized(@javax.annotation.Nullable final Boolean value) {
         this._appAuthorized = value;
     }
@@ -120,6 +123,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -128,6 +132,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -136,6 +141,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastConnectionDateTime = value;
     }
@@ -144,6 +150,7 @@ public class TelecomExpenseManagementPartner extends Entity implements Parsable 
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

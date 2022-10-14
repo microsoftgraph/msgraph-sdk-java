@@ -14,6 +14,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      * Instantiates a new IosMobileAppIdentifier and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosMobileAppIdentifier() {
         super();
         this.setOdataType("#microsoft.graph.iosMobileAppIdentifier");
@@ -43,7 +44,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMobileAppIdentifier currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsa
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }

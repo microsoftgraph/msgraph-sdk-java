@@ -16,6 +16,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * Instantiates a new TeamJoiningEnabledEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamJoiningEnabledEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamJoiningEnabledEventMessageDetail");
@@ -37,7 +38,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamJoiningEnabledEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -82,6 +85,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

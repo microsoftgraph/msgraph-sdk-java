@@ -14,6 +14,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * Instantiates a new OrganizerMeetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizerMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.organizerMeetingInfo");
@@ -35,7 +36,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizerMeetingInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
         this._organizer = value;
     }

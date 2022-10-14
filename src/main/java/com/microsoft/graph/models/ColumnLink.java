@@ -15,6 +15,7 @@ public class ColumnLink extends Entity implements Parsable {
      * Instantiates a new columnLink and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ColumnLink() {
         super();
         this.setOdataType("#microsoft.graph.columnLink");
@@ -36,7 +37,7 @@ public class ColumnLink extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnLink currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
         }};
     }
@@ -53,6 +54,7 @@ public class ColumnLink extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class ColumnLink extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }

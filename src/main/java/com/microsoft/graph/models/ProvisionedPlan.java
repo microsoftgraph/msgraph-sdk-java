@@ -23,6 +23,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * Instantiates a new provisionedPlan and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisionedPlan() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.provisionedPlan");
@@ -60,7 +61,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisionedPlan currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("capabilityStatus", (n) -> { currentObject.setCapabilityStatus(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
@@ -109,6 +111,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the capabilityStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCapabilityStatus(@javax.annotation.Nullable final String value) {
         this._capabilityStatus = value;
     }
@@ -125,6 +129,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the provisioningStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningStatus(@javax.annotation.Nullable final String value) {
         this._provisioningStatus = value;
     }
@@ -141,6 +147,7 @@ public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
         this._service = value;
     }

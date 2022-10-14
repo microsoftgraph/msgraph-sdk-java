@@ -20,6 +20,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * Instantiates a new EducationRubricOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationRubricOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationRubricOutcome");
@@ -41,7 +42,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationRubricOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("publishedRubricQualityFeedback", (n) -> { currentObject.setPublishedRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
             this.put("publishedRubricQualitySelectedLevels", (n) -> { currentObject.setPublishedRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
             this.put("rubricQualityFeedback", (n) -> { currentObject.setRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
@@ -85,6 +86,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the publishedRubricQualityFeedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedRubricQualityFeedback(@javax.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
         this._publishedRubricQualityFeedback = value;
     }
@@ -106,6 +109,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the publishedRubricQualitySelectedLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedRubricQualitySelectedLevels(@javax.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
         this._publishedRubricQualitySelectedLevels = value;
     }
@@ -114,6 +118,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the rubricQualityFeedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRubricQualityFeedback(@javax.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
         this._rubricQualityFeedback = value;
     }
@@ -122,6 +127,7 @@ public class EducationRubricOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the rubricQualitySelectedLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRubricQualitySelectedLevels(@javax.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
         this._rubricQualitySelectedLevels = value;
     }

@@ -51,6 +51,7 @@ public class Site extends BaseItem implements Parsable {
      * Instantiates a new Site and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Site() {
         super();
         this.setOdataType("#microsoft.graph.site");
@@ -136,7 +137,7 @@ public class Site extends BaseItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Site currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
             this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
             this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
@@ -251,6 +252,7 @@ public class Site extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +281,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
         this._analytics = value;
     }
@@ -287,6 +290,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this._columns = value;
     }
@@ -295,6 +299,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the contentTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
         this._contentTypes = value;
     }
@@ -303,6 +308,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -311,6 +317,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
         this._drive = value;
     }
@@ -319,6 +326,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the drives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
         this._drives = value;
     }
@@ -327,6 +335,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }
@@ -335,6 +344,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the externalColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this._externalColumns = value;
     }
@@ -343,6 +353,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<BaseItem> value) {
         this._items = value;
     }
@@ -351,6 +362,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the lists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLists(@javax.annotation.Nullable final java.util.List<List> value) {
         this._lists = value;
     }
@@ -359,6 +371,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the onenote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
         this._onenote = value;
     }
@@ -367,6 +380,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this._operations = value;
     }
@@ -375,6 +389,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<Permission> value) {
         this._permissions = value;
     }
@@ -383,6 +398,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the root property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final Root value) {
         this._root = value;
     }
@@ -391,6 +407,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -399,6 +416,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the siteCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCollection(@javax.annotation.Nullable final SiteCollection value) {
         this._siteCollection = value;
     }
@@ -407,6 +425,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the sites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSites(@javax.annotation.Nullable final java.util.List<Site> value) {
         this._sites = value;
     }
@@ -415,6 +434,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the termStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermStore(@javax.annotation.Nullable final Store value) {
         this._termStore = value;
     }
@@ -423,6 +443,7 @@ public class Site extends BaseItem implements Parsable {
      * @param value Value to set for the termStores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermStores(@javax.annotation.Nullable final java.util.List<Store> value) {
         this._termStores = value;
     }

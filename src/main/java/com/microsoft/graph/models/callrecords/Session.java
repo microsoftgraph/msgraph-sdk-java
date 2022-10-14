@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the admin singleton. */
 public class Session extends Entity implements Parsable {
     /** Endpoint that answered the session. */
     private Endpoint _callee;
@@ -29,6 +29,7 @@ public class Session extends Entity implements Parsable {
      * Instantiates a new session and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Session() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.session");
@@ -82,7 +83,7 @@ public class Session extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Session currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callee", (n) -> { currentObject.setCallee(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
             this.put("caller", (n) -> { currentObject.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -121,6 +122,7 @@ public class Session extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -137,6 +139,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the callee property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallee(@javax.annotation.Nullable final Endpoint value) {
         this._callee = value;
     }
@@ -145,6 +148,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the caller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaller(@javax.annotation.Nullable final Endpoint value) {
         this._caller = value;
     }
@@ -153,6 +157,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -161,6 +166,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the failureInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureInfo(@javax.annotation.Nullable final FailureInfo value) {
         this._failureInfo = value;
     }
@@ -169,6 +175,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the modalities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._modalities = value;
     }
@@ -177,6 +184,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the segments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSegments(@javax.annotation.Nullable final java.util.List<Segment> value) {
         this._segments = value;
     }
@@ -185,6 +193,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

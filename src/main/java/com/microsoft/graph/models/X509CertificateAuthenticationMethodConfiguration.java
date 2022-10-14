@@ -18,6 +18,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public X509CertificateAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.x509CertificateAuthenticationMethodConfiguration");
@@ -55,7 +56,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final X509CertificateAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationModeConfiguration", (n) -> { currentObject.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
             this.put("certificateUserBindings", (n) -> { currentObject.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * @param value Value to set for the authenticationModeConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationModeConfiguration(@javax.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
         this._authenticationModeConfiguration = value;
     }
@@ -94,6 +97,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * @param value Value to set for the certificateUserBindings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateUserBindings(@javax.annotation.Nullable final java.util.List<X509CertificateUserBinding> value) {
         this._certificateUserBindings = value;
     }
@@ -102,6 +106,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }

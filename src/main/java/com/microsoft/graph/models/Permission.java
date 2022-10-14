@@ -36,6 +36,7 @@ public class Permission extends Entity implements Parsable {
      * Instantiates a new permission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Permission() {
         super();
         this.setOdataType("#microsoft.graph.permission");
@@ -65,7 +66,7 @@ public class Permission extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Permission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("grantedTo", (n) -> { currentObject.setGrantedTo(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("grantedToIdentities", (n) -> { currentObject.setGrantedToIdentities(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
@@ -164,6 +165,7 @@ public class Permission extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +186,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -192,6 +195,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the grantedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedTo(@javax.annotation.Nullable final IdentitySet value) {
         this._grantedTo = value;
     }
@@ -200,6 +204,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the grantedToIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedToIdentities(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
         this._grantedToIdentities = value;
     }
@@ -208,6 +213,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the grantedToIdentitiesV2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedToIdentitiesV2(@javax.annotation.Nullable final java.util.List<SharePointIdentitySet> value) {
         this._grantedToIdentitiesV2 = value;
     }
@@ -216,6 +222,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the grantedToV2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantedToV2(@javax.annotation.Nullable final SharePointIdentitySet value) {
         this._grantedToV2 = value;
     }
@@ -224,6 +231,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the hasPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasPassword(@javax.annotation.Nullable final Boolean value) {
         this._hasPassword = value;
     }
@@ -232,6 +240,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the inheritedFrom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInheritedFrom(@javax.annotation.Nullable final ItemReference value) {
         this._inheritedFrom = value;
     }
@@ -240,6 +249,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the invitation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitation(@javax.annotation.Nullable final SharingInvitation value) {
         this._invitation = value;
     }
@@ -248,6 +258,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the link property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLink(@javax.annotation.Nullable final SharingLink value) {
         this._link = value;
     }
@@ -256,6 +267,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roles = value;
     }
@@ -264,6 +276,7 @@ public class Permission extends Entity implements Parsable {
      * @param value Value to set for the shareId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShareId(@javax.annotation.Nullable final String value) {
         this._shareId = value;
     }

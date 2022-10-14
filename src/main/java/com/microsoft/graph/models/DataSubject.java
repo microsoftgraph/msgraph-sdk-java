@@ -25,6 +25,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * Instantiates a new dataSubject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataSubject() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.dataSubject");
@@ -62,7 +63,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DataSubject currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });
             this.put("lastName", (n) -> { currentObject.setLastName(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -121,6 +123,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -137,6 +141,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the firstName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstName(@javax.annotation.Nullable final String value) {
         this._firstName = value;
     }
@@ -145,6 +150,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastName(@javax.annotation.Nullable final String value) {
         this._lastName = value;
     }
@@ -153,6 +159,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class DataSubject implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the residency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResidency(@javax.annotation.Nullable final String value) {
         this._residency = value;
     }

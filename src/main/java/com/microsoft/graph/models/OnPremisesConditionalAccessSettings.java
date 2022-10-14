@@ -20,6 +20,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesConditionalAccessSettings() {
         super();
         this.setOdataType("#microsoft.graph.onPremisesConditionalAccessSettings");
@@ -57,7 +58,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesConditionalAccessSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
             this.put("excludedGroups", (n) -> { currentObject.setExcludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includedGroups", (n) -> { currentObject.setIncludedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -85,6 +86,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -106,6 +109,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param value Value to set for the excludedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludedGroups = value;
     }
@@ -114,6 +118,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param value Value to set for the includedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includedGroups = value;
     }
@@ -122,6 +127,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements Parsa
      * @param value Value to set for the overrideDefaultRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverrideDefaultRule(@javax.annotation.Nullable final Boolean value) {
         this._overrideDefaultRule = value;
     }

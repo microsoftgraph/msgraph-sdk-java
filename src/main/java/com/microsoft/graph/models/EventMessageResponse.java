@@ -16,6 +16,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * Instantiates a new EventMessageResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EventMessageResponse() {
         super();
         this.setOdataType("#microsoft.graph.eventMessageResponse");
@@ -37,7 +38,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EventMessageResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("proposedNewTime", (n) -> { currentObject.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
             this.put("responseType", (n) -> { currentObject.setResponseType(n.getEnumValue(ResponseType.class)); });
         }};
@@ -63,6 +64,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * @param value Value to set for the proposedNewTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProposedNewTime(@javax.annotation.Nullable final TimeSlot value) {
         this._proposedNewTime = value;
     }
@@ -82,6 +85,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * @param value Value to set for the responseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponseType(@javax.annotation.Nullable final ResponseType value) {
         this._responseType = value;
     }

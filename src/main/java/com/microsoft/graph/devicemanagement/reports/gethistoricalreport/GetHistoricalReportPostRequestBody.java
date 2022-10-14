@@ -32,6 +32,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new getHistoricalReportPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetHistoricalReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -60,7 +61,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetHistoricalReportPostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
+        return new HashMap<String, Consumer<ParseNode>>(8) {{
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -140,6 +141,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
@@ -157,6 +159,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +168,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the filter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilter(@javax.annotation.Nullable final String value) {
         this._filter = value;
     }
@@ -173,6 +177,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the groupBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._groupBy = value;
     }
@@ -181,6 +186,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -189,6 +195,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the orderBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._orderBy = value;
     }
@@ -197,6 +204,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final String value) {
         this._search = value;
     }
@@ -205,6 +213,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the select property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
         this._select = value;
     }
@@ -213,6 +222,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the skip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
         this._skip = value;
     }
@@ -221,6 +231,7 @@ public class GetHistoricalReportPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
         this._top = value;
     }

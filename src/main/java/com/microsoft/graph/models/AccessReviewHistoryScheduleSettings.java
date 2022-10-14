@@ -21,6 +21,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * Instantiates a new accessReviewHistoryScheduleSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewHistoryScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessReviewHistoryScheduleSettings");
@@ -50,7 +51,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewHistoryScheduleSettings currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
             this.put("reportRange", (n) -> { currentObject.setReportRange(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,6 +99,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -113,6 +117,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -121,6 +126,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
      * @param value Value to set for the reportRange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRange(@javax.annotation.Nullable final String value) {
         this._reportRange = value;
     }

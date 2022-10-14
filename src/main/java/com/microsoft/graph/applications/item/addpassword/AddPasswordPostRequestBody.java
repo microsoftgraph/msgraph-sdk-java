@@ -19,6 +19,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new addPasswordPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddPasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,7 +48,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddPasswordPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("passwordCredential", this.getPasswordCredential());
@@ -74,6 +76,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the passwordCredential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
         this._passwordCredential = value;
     }

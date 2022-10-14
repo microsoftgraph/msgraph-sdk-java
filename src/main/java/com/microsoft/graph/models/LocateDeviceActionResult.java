@@ -14,6 +14,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * Instantiates a new LocateDeviceActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LocateDeviceActionResult() {
         super();
         this.setOdataType("#microsoft.graph.locateDeviceActionResult");
@@ -43,7 +44,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocateDeviceActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceLocation", (n) -> { currentObject.setDeviceLocation(n.getObjectValue(DeviceGeoLocation::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param value Value to set for the deviceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLocation(@javax.annotation.Nullable final DeviceGeoLocation value) {
         this._deviceLocation = value;
     }

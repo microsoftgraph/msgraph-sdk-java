@@ -9,16 +9,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Event representing an general failure. */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** Id used for tracing the failure in the service. */
     private String _correlationId;
     /** Time when the event occurred . */
     private OffsetDateTime _eventDateTime;
     /**
-     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTroubleshootingEvent() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingEvent");
@@ -26,7 +26,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
         }};
@@ -73,6 +73,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -84,6 +85,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -92,6 +94,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }

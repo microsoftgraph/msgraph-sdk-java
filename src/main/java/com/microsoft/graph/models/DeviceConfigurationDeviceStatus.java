@@ -28,6 +28,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * Instantiates a new deviceConfigurationDeviceStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationDeviceStatus() {
         super();
         this.setOdataType("#microsoft.graph.deviceConfigurationDeviceStatus");
@@ -73,7 +74,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationDeviceStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("complianceGracePeriodExpirationDateTime", (n) -> { currentObject.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
             this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
@@ -120,6 +121,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._complianceGracePeriodExpirationDateTime = value;
     }
@@ -144,6 +147,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -152,6 +156,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -160,6 +165,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -168,6 +174,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
         this._status = value;
     }
@@ -176,6 +183,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -184,6 +192,7 @@ public class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

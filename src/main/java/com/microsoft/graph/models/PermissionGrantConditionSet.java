@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /** A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all. */
     private java.util.List<String> _clientApplicationIds;
@@ -29,6 +29,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Instantiates a new permissionGrantConditionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PermissionGrantConditionSet() {
         super();
         this.setOdataType("#microsoft.graph.permissionGrantConditionSet");
@@ -82,7 +83,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
@@ -130,6 +131,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationIds = value;
     }
@@ -155,6 +158,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationPublisherIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationPublisherIds = value;
     }
@@ -163,6 +167,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
         this._clientApplicationsFromVerifiedPublisherOnly = value;
     }
@@ -171,6 +176,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationTenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationTenantIds = value;
     }
@@ -179,6 +185,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissionClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionClassification(@javax.annotation.Nullable final String value) {
         this._permissionClassification = value;
     }
@@ -187,6 +194,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._permissions = value;
     }
@@ -195,6 +203,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionType(@javax.annotation.Nullable final PermissionType value) {
         this._permissionType = value;
     }
@@ -203,6 +212,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the resourceApplication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceApplication(@javax.annotation.Nullable final String value) {
         this._resourceApplication = value;
     }

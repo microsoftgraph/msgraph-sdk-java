@@ -33,6 +33,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * Instantiates a new property and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Property() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.externalConnectors.property");
@@ -70,7 +71,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Property currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
             this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
@@ -151,6 +152,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aliases", this.getAliases());
@@ -169,6 +171,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aliases property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAliases(@javax.annotation.Nullable final java.util.List<String> value) {
         this._aliases = value;
     }
@@ -185,6 +189,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isQueryable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsQueryable(@javax.annotation.Nullable final Boolean value) {
         this._isQueryable = value;
     }
@@ -193,6 +198,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRefinable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRefinable(@javax.annotation.Nullable final Boolean value) {
         this._isRefinable = value;
     }
@@ -201,6 +207,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRetrievable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRetrievable(@javax.annotation.Nullable final Boolean value) {
         this._isRetrievable = value;
     }
@@ -209,6 +216,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
         this._isSearchable = value;
     }
@@ -217,6 +225,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabels(@javax.annotation.Nullable final java.util.List<Label> value) {
         this._labels = value;
     }
@@ -225,6 +234,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -233,6 +243,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -241,6 +252,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PropertyType value) {
         this._type = value;
     }

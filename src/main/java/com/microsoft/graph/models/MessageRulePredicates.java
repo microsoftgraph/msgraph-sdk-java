@@ -77,6 +77,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * Instantiates a new messageRulePredicates and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.messageRulePredicates");
@@ -130,7 +131,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRulePredicates currentObject = this;
-        return new HashMap<>(31) {{
+        return new HashMap<String, Consumer<ParseNode>>(31) {{
             this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -393,6 +394,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("bodyContains", this.getBodyContains());
@@ -433,6 +435,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -441,6 +444,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bodyContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bodyContains = value;
     }
@@ -449,6 +453,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bodyOrSubjectContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyOrSubjectContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bodyOrSubjectContains = value;
     }
@@ -457,6 +462,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -465,6 +471,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fromAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFromAddresses(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._fromAddresses = value;
     }
@@ -473,6 +480,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -481,6 +489,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the headerContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._headerContains = value;
     }
@@ -489,6 +498,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -497,6 +507,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isApprovalRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequest(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequest = value;
     }
@@ -505,6 +516,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAutomaticForward property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutomaticForward(@javax.annotation.Nullable final Boolean value) {
         this._isAutomaticForward = value;
     }
@@ -513,6 +525,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAutomaticReply property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutomaticReply(@javax.annotation.Nullable final Boolean value) {
         this._isAutomaticReply = value;
     }
@@ -521,6 +534,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
         this._isEncrypted = value;
     }
@@ -529,6 +543,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isMeetingRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMeetingRequest(@javax.annotation.Nullable final Boolean value) {
         this._isMeetingRequest = value;
     }
@@ -537,6 +552,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isMeetingResponse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMeetingResponse(@javax.annotation.Nullable final Boolean value) {
         this._isMeetingResponse = value;
     }
@@ -545,6 +561,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isNonDeliveryReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsNonDeliveryReport(@javax.annotation.Nullable final Boolean value) {
         this._isNonDeliveryReport = value;
     }
@@ -553,6 +570,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPermissionControlled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPermissionControlled(@javax.annotation.Nullable final Boolean value) {
         this._isPermissionControlled = value;
     }
@@ -561,6 +579,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isReadReceipt property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadReceipt(@javax.annotation.Nullable final Boolean value) {
         this._isReadReceipt = value;
     }
@@ -569,6 +588,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSigned(@javax.annotation.Nullable final Boolean value) {
         this._isSigned = value;
     }
@@ -577,6 +597,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isVoicemail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsVoicemail(@javax.annotation.Nullable final Boolean value) {
         this._isVoicemail = value;
     }
@@ -585,6 +606,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageActionFlag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageActionFlag(@javax.annotation.Nullable final MessageActionFlag value) {
         this._messageActionFlag = value;
     }
@@ -593,6 +615,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notSentToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._notSentToMe = value;
     }
@@ -601,6 +624,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -609,6 +633,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._recipientContains = value;
     }
@@ -617,6 +642,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the senderContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._senderContains = value;
     }
@@ -625,6 +651,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivity(@javax.annotation.Nullable final Sensitivity value) {
         this._sensitivity = value;
     }
@@ -633,6 +660,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentCcMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentCcMe(@javax.annotation.Nullable final Boolean value) {
         this._sentCcMe = value;
     }
@@ -641,6 +669,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentOnlyToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentOnlyToMe(@javax.annotation.Nullable final Boolean value) {
         this._sentOnlyToMe = value;
     }
@@ -649,6 +678,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToAddresses(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._sentToAddresses = value;
     }
@@ -657,6 +687,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._sentToMe = value;
     }
@@ -665,6 +696,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToOrCcMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToOrCcMe(@javax.annotation.Nullable final Boolean value) {
         this._sentToOrCcMe = value;
     }
@@ -673,6 +705,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subjectContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._subjectContains = value;
     }
@@ -681,6 +714,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the withinSizeRange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWithinSizeRange(@javax.annotation.Nullable final SizeRange value) {
         this._withinSizeRange = value;
     }

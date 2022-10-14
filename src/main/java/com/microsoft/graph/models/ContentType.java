@@ -51,6 +51,7 @@ public class ContentType extends Entity implements Parsable {
      * Instantiates a new contentType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContentType() {
         super();
         this.setOdataType("#microsoft.graph.contentType");
@@ -144,7 +145,7 @@ public class ContentType extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentType currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("associatedHubsUrls", (n) -> { currentObject.setAssociatedHubsUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("base", (n) -> { currentObject.setBase(n.getObjectValue(ContentType::createFromDiscriminatorValue)); });
             this.put("baseTypes", (n) -> { currentObject.setBaseTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
@@ -251,6 +252,7 @@ public class ContentType extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +281,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the associatedHubsUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssociatedHubsUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._associatedHubsUrls = value;
     }
@@ -287,6 +290,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the base property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBase(@javax.annotation.Nullable final ContentType value) {
         this._base = value;
     }
@@ -295,6 +299,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the baseTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
         this._baseTypes = value;
     }
@@ -303,6 +308,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the columnLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumnLinks(@javax.annotation.Nullable final java.util.List<ColumnLink> value) {
         this._columnLinks = value;
     }
@@ -311,6 +317,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the columnPositions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumnPositions(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this._columnPositions = value;
     }
@@ -319,6 +326,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this._columns = value;
     }
@@ -327,6 +335,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -335,6 +344,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the documentSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentSet(@javax.annotation.Nullable final DocumentSet value) {
         this._documentSet = value;
     }
@@ -343,6 +353,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the documentTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentTemplate(@javax.annotation.Nullable final DocumentSetContent value) {
         this._documentTemplate = value;
     }
@@ -351,6 +362,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroup(@javax.annotation.Nullable final String value) {
         this._group = value;
     }
@@ -359,6 +371,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }
@@ -367,6 +380,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the inheritedFrom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInheritedFrom(@javax.annotation.Nullable final ItemReference value) {
         this._inheritedFrom = value;
     }
@@ -375,6 +389,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }
@@ -383,6 +398,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -391,6 +407,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the order property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrder(@javax.annotation.Nullable final ContentTypeOrder value) {
         this._order = value;
     }
@@ -399,6 +416,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the parentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentId(@javax.annotation.Nullable final String value) {
         this._parentId = value;
     }
@@ -407,6 +425,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the propagateChanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropagateChanges(@javax.annotation.Nullable final Boolean value) {
         this._propagateChanges = value;
     }
@@ -415,6 +434,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the readOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReadOnly(@javax.annotation.Nullable final Boolean value) {
         this._readOnly = value;
     }
@@ -423,6 +443,7 @@ public class ContentType extends Entity implements Parsable {
      * @param value Value to set for the sealed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSealed(@javax.annotation.Nullable final Boolean value) {
         this._sealed = value;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appCatalogs singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class TeamsAppDefinition extends Entity implements Parsable {
     /** The details of the bot specified in the Teams app manifest. */
     private TeamworkBot _bot;
@@ -32,6 +32,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Instantiates a new teamsAppDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppDefinition() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppDefinition");
@@ -85,7 +86,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bot", (n) -> { currentObject.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -142,6 +143,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the bot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBot(@javax.annotation.Nullable final TeamworkBot value) {
         this._bot = value;
     }
@@ -168,6 +171,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -176,6 +180,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -184,6 +189,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -192,6 +198,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -200,6 +207,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the publishingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final TeamsAppPublishingState value) {
         this._publishingState = value;
     }
@@ -208,6 +216,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the shortDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortDescription(@javax.annotation.Nullable final String value) {
         this._shortDescription = value;
     }
@@ -216,6 +225,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }
@@ -224,6 +234,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

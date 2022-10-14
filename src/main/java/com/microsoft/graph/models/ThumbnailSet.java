@@ -21,6 +21,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * Instantiates a new thumbnailSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ThumbnailSet() {
         super();
         this.setOdataType("#microsoft.graph.thumbnailSet");
@@ -42,7 +43,7 @@ public class ThumbnailSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ThumbnailSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("large", (n) -> { currentObject.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
             this.put("medium", (n) -> { currentObject.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
             this.put("small", (n) -> { currentObject.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
@@ -86,6 +87,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the large property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLarge(@javax.annotation.Nullable final Thumbnail value) {
         this._large = value;
     }
@@ -107,6 +110,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the medium property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedium(@javax.annotation.Nullable final Thumbnail value) {
         this._medium = value;
     }
@@ -115,6 +119,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the small property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmall(@javax.annotation.Nullable final Thumbnail value) {
         this._small = value;
     }
@@ -123,6 +128,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final Thumbnail value) {
         this._source = value;
     }

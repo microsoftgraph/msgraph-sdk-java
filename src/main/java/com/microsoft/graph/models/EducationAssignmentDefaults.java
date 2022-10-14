@@ -21,6 +21,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Instantiates a new EducationAssignmentDefaults and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentDefaults() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentDefaults");
@@ -66,7 +67,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentDefaults currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
             this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
             this.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
@@ -86,6 +87,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addedStudentAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedStudentAction(@javax.annotation.Nullable final EducationAddedStudentAction value) {
         this._addedStudentAction = value;
     }
@@ -107,6 +110,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addToCalendarAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToCalendarAction(@javax.annotation.Nullable final EducationAddToCalendarOptions value) {
         this._addToCalendarAction = value;
     }
@@ -115,6 +119,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the dueTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueTime(@javax.annotation.Nullable final LocalTime value) {
         this._dueTime = value;
     }
@@ -123,6 +128,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationChannelUrl(@javax.annotation.Nullable final String value) {
         this._notificationChannelUrl = value;
     }

@@ -23,6 +23,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new licenseUnitsDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LicenseUnitsDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.licenseUnitsDetail");
@@ -60,7 +61,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LicenseUnitsDetail currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("enabled", (n) -> { currentObject.setEnabled(n.getIntegerValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("suspended", (n) -> { currentObject.setSuspended(n.getIntegerValue()); });
@@ -96,6 +97,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
@@ -109,6 +111,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Integer value) {
         this._enabled = value;
     }
@@ -125,6 +129,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the suspended property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuspended(@javax.annotation.Nullable final Integer value) {
         this._suspended = value;
     }
@@ -141,6 +147,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the warning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarning(@javax.annotation.Nullable final Integer value) {
         this._warning = value;
     }

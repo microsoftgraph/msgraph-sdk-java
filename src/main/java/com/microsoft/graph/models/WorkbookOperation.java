@@ -19,6 +19,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      * Instantiates a new workbookOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookOperation() {
         super();
         this.setOdataType("#microsoft.graph.workbookOperation");
@@ -48,7 +49,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(WorkbookOperationError::createFromDiscriminatorValue)); });
             this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkbookOperationStatus.class)); });
@@ -75,6 +76,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final WorkbookOperationError value) {
         this._error = value;
     }
@@ -95,6 +98,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
         this._resourceLocation = value;
     }
@@ -103,6 +107,7 @@ public class WorkbookOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final WorkbookOperationStatus value) {
         this._status = value;
     }

@@ -60,6 +60,7 @@ public class ChatMessage extends Entity implements Parsable {
      * Instantiates a new chatMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessage() {
         super();
         this.setOdataType("#microsoft.graph.chatMessage");
@@ -145,7 +146,7 @@ public class ChatMessage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ChatMessageAttachment::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("channelIdentity", (n) -> { currentObject.setChannelIdentity(n.getObjectValue(ChannelIdentity::createFromDiscriminatorValue)); });
@@ -296,6 +297,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -328,6 +330,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<ChatMessageAttachment> value) {
         this._attachments = value;
     }
@@ -336,6 +339,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -344,6 +348,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the channelIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelIdentity(@javax.annotation.Nullable final ChannelIdentity value) {
         this._channelIdentity = value;
     }
@@ -352,6 +357,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the chatId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatId(@javax.annotation.Nullable final String value) {
         this._chatId = value;
     }
@@ -360,6 +366,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -368,6 +375,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deletedDateTime = value;
     }
@@ -376,6 +384,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the etag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEtag(@javax.annotation.Nullable final String value) {
         this._etag = value;
     }
@@ -384,6 +393,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the eventDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDetail(@javax.annotation.Nullable final EventMessageDetail value) {
         this._eventDetail = value;
     }
@@ -392,6 +402,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final ChatMessageFromIdentitySet value) {
         this._from = value;
     }
@@ -400,6 +411,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the hostedContents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostedContents(@javax.annotation.Nullable final java.util.List<ChatMessageHostedContent> value) {
         this._hostedContents = value;
     }
@@ -408,6 +420,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final ChatMessageImportance value) {
         this._importance = value;
     }
@@ -416,6 +429,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the lastEditedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastEditedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastEditedDateTime = value;
     }
@@ -424,6 +438,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -432,6 +447,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the locale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocale(@javax.annotation.Nullable final String value) {
         this._locale = value;
     }
@@ -440,6 +456,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the mentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<ChatMessageMention> value) {
         this._mentions = value;
     }
@@ -448,6 +465,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the messageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageType(@javax.annotation.Nullable final ChatMessageType value) {
         this._messageType = value;
     }
@@ -456,6 +474,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the policyViolation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyViolation(@javax.annotation.Nullable final ChatMessagePolicyViolation value) {
         this._policyViolation = value;
     }
@@ -464,6 +483,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the reactions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReactions(@javax.annotation.Nullable final java.util.List<ChatMessageReaction> value) {
         this._reactions = value;
     }
@@ -472,6 +492,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the replies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplies(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
         this._replies = value;
     }
@@ -480,6 +501,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the replyToId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyToId(@javax.annotation.Nullable final String value) {
         this._replyToId = value;
     }
@@ -488,6 +510,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -496,6 +519,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final String value) {
         this._summary = value;
     }
@@ -504,6 +528,7 @@ public class ChatMessage extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

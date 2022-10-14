@@ -27,6 +27,7 @@ public class Group extends Entity implements Parsable {
      * Instantiates a new group and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Group() {
         super();
         this.setOdataType("#microsoft.graph.termStore.group");
@@ -72,7 +73,7 @@ public class Group extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Group currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -110,6 +111,7 @@ public class Group extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +127,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -133,6 +136,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -141,6 +145,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -149,6 +154,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the parentSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSiteId(@javax.annotation.Nullable final String value) {
         this._parentSiteId = value;
     }
@@ -157,6 +163,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final TermGroupScope value) {
         this._scope = value;
     }
@@ -165,6 +172,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the sets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSets(@javax.annotation.Nullable final java.util.List<Set> value) {
         this._sets = value;
     }

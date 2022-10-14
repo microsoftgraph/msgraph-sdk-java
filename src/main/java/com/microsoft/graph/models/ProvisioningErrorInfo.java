@@ -27,6 +27,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new provisioningErrorInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisioningErrorInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.provisioningErrorInfo");
@@ -80,7 +81,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningErrorInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
             this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
             this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
@@ -133,6 +135,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
         this._additionalDetails = value;
     }
@@ -149,6 +153,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the errorCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
         this._errorCategory = value;
     }
@@ -157,6 +162,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -165,6 +171,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +180,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -181,6 +189,7 @@ public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
         this._recommendedAction = value;
     }

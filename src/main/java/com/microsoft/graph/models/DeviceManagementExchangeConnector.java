@@ -32,6 +32,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * Instantiates a new deviceManagementExchangeConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementExchangeConnector() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementExchangeConnector");
@@ -85,7 +86,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExchangeConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("connectorServerName", (n) -> { currentObject.setConnectorServerName(n.getStringValue()); });
             this.put("exchangeAlias", (n) -> { currentObject.setExchangeAlias(n.getStringValue()); });
             this.put("exchangeConnectorType", (n) -> { currentObject.setExchangeConnectorType(n.getEnumValue(DeviceManagementExchangeConnectorType.class)); });
@@ -142,6 +143,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the connectorServerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorServerName(@javax.annotation.Nullable final String value) {
         this._connectorServerName = value;
     }
@@ -168,6 +171,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the exchangeAlias property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeAlias(@javax.annotation.Nullable final String value) {
         this._exchangeAlias = value;
     }
@@ -176,6 +180,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the exchangeConnectorType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeConnectorType(@javax.annotation.Nullable final DeviceManagementExchangeConnectorType value) {
         this._exchangeConnectorType = value;
     }
@@ -184,6 +189,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the exchangeOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeOrganization(@javax.annotation.Nullable final String value) {
         this._exchangeOrganization = value;
     }
@@ -192,6 +198,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -200,6 +207,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the primarySmtpAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimarySmtpAddress(@javax.annotation.Nullable final String value) {
         this._primarySmtpAddress = value;
     }
@@ -208,6 +216,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the serverName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerName(@javax.annotation.Nullable final String value) {
         this._serverName = value;
     }
@@ -216,6 +225,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceManagementExchangeConnectorStatus value) {
         this._status = value;
     }
@@ -224,6 +234,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

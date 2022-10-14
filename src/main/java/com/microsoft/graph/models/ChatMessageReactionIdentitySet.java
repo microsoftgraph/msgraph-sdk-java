@@ -12,6 +12,7 @@ public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsa
      * Instantiates a new ChatMessageReactionIdentitySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageReactionIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.chatMessageReactionIdentitySet");
@@ -33,7 +34,7 @@ public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageReactionIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

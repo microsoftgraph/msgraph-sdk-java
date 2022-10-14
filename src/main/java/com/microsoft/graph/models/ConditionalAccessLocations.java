@@ -21,6 +21,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * Instantiates a new conditionalAccessLocations and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessLocations() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessLocations");
@@ -58,7 +59,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessLocations currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("excludeLocations", (n) -> { currentObject.setExcludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("includeLocations", (n) -> { currentObject.setIncludeLocations(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeLocations", this.getExcludeLocations());
@@ -97,6 +99,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the excludeLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeLocations(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludeLocations = value;
     }
@@ -113,6 +117,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the includeLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeLocations(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeLocations = value;
     }
@@ -121,6 +126,7 @@ public class ConditionalAccessLocations implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

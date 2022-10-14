@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
     /** The display name of the identityUserFlowAttribute within a user flow. */
     private String _displayName;
@@ -25,6 +25,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityUserFlowAttributeAssignment() {
         super();
         this.setOdataType("#microsoft.graph.identityUserFlowAttributeAssignment");
@@ -54,7 +55,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityUserFlowAttributeAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isOptional", (n) -> { currentObject.setIsOptional(n.getBooleanValue()); });
             this.put("requiresVerification", (n) -> { currentObject.setRequiresVerification(n.getBooleanValue()); });
@@ -108,6 +109,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -131,6 +134,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the isOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOptional(@javax.annotation.Nullable final Boolean value) {
         this._isOptional = value;
     }
@@ -139,6 +143,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the requiresVerification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresVerification(@javax.annotation.Nullable final Boolean value) {
         this._requiresVerification = value;
     }
@@ -147,6 +152,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the userAttribute property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAttribute(@javax.annotation.Nullable final IdentityUserFlowAttribute value) {
         this._userAttribute = value;
     }
@@ -155,6 +161,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the userAttributeValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAttributeValues(@javax.annotation.Nullable final java.util.List<UserAttributeValuesItem> value) {
         this._userAttributeValues = value;
     }
@@ -163,6 +170,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param value Value to set for the userInputType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserInputType(@javax.annotation.Nullable final IdentityUserFlowAttributeInputType value) {
         this._userInputType = value;
     }

@@ -24,6 +24,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new iosNetworkUsageRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosNetworkUsageRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.iosNetworkUsageRule");
@@ -69,7 +70,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosNetworkUsageRule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("cellularDataBlocked", (n) -> { currentObject.setCellularDataBlocked(n.getBooleanValue()); });
             this.put("cellularDataBlockWhenRoaming", (n) -> { currentObject.setCellularDataBlockWhenRoaming(n.getBooleanValue()); });
             this.put("managedApps", (n) -> { currentObject.setManagedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("cellularDataBlocked", this.getCellularDataBlocked());
@@ -110,6 +112,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cellularDataBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularDataBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cellularDataBlocked = value;
     }
@@ -126,6 +130,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cellularDataBlockWhenRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularDataBlockWhenRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularDataBlockWhenRoaming = value;
     }
@@ -134,6 +139,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the managedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._managedApps = value;
     }
@@ -142,6 +148,7 @@ public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

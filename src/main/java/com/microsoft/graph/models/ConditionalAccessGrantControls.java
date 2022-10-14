@@ -25,6 +25,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * Instantiates a new conditionalAccessGrantControls and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessGrantControls() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessGrantControls");
@@ -70,7 +71,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
             this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("builtInControls", this.getBuiltInControls());
@@ -121,6 +123,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the builtInControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuiltInControls(@javax.annotation.Nullable final java.util.List<ConditionalAccessGrantControl> value) {
         this._builtInControls = value;
     }
@@ -137,6 +141,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the customAuthenticationFactors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAuthenticationFactors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._customAuthenticationFactors = value;
     }
@@ -145,6 +150,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final String value) {
         this._operator = value;
     }
@@ -161,6 +168,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the termsOfUse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsOfUse(@javax.annotation.Nullable final java.util.List<String> value) {
         this._termsOfUse = value;
     }

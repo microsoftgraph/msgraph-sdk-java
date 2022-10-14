@@ -24,6 +24,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault() {
         super();
         this.setOdataType("#microsoft.graph.crossTenantAccessPolicyConfigurationDefault");
@@ -77,7 +78,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicyConfigurationDefault currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("b2bCollaborationInbound", (n) -> { currentObject.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("b2bCollaborationOutbound", (n) -> { currentObject.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
             this.put("b2bDirectConnectInbound", (n) -> { currentObject.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -107,6 +108,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the b2bCollaborationInbound property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2bCollaborationInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this._b2bCollaborationInbound = value;
     }
@@ -130,6 +133,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the b2bCollaborationOutbound property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2bCollaborationOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this._b2bCollaborationOutbound = value;
     }
@@ -138,6 +142,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the b2bDirectConnectInbound property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2bDirectConnectInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this._b2bDirectConnectInbound = value;
     }
@@ -146,6 +151,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the b2bDirectConnectOutbound property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this._b2bDirectConnectOutbound = value;
     }
@@ -154,6 +160,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the inboundTrust property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundTrust(@javax.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this._inboundTrust = value;
     }
@@ -162,6 +169,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      * @param value Value to set for the isServiceDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsServiceDefault(@javax.annotation.Nullable final Boolean value) {
         this._isServiceDefault = value;
     }

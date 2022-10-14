@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTask extends Entity implements Parsable {
     /** The attachments property */
     private java.util.List<AttachmentBase> _attachments;
@@ -54,6 +54,7 @@ public class TodoTask extends Entity implements Parsable {
      * Instantiates a new todoTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TodoTask() {
         super();
         this.setOdataType("#microsoft.graph.todoTask");
@@ -155,7 +156,7 @@ public class TodoTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(AttachmentBase::createFromDiscriminatorValue)); });
             this.put("attachmentSessions", (n) -> { currentObject.setAttachmentSessions(n.getCollectionOfObjectValues(AttachmentSession::createFromDiscriminatorValue)); });
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -263,6 +264,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -292,6 +294,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<AttachmentBase> value) {
         this._attachments = value;
     }
@@ -300,6 +303,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the attachmentSessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentSessions(@javax.annotation.Nullable final java.util.List<AttachmentSession> value) {
         this._attachmentSessions = value;
     }
@@ -308,6 +312,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -316,6 +321,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the bodyLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._bodyLastModifiedDateTime = value;
     }
@@ -324,6 +330,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -332,6 +339,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the checklistItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklistItems(@javax.annotation.Nullable final java.util.List<ChecklistItem> value) {
         this._checklistItems = value;
     }
@@ -340,6 +348,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._completedDateTime = value;
     }
@@ -348,6 +357,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -356,6 +366,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._dueDateTime = value;
     }
@@ -364,6 +375,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -372,6 +384,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -380,6 +393,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -388,6 +402,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the isReminderOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReminderOn(@javax.annotation.Nullable final Boolean value) {
         this._isReminderOn = value;
     }
@@ -396,6 +411,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -404,6 +420,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the linkedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkedResources(@javax.annotation.Nullable final java.util.List<LinkedResource> value) {
         this._linkedResources = value;
     }
@@ -412,6 +429,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -420,6 +438,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the reminderDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._reminderDateTime = value;
     }
@@ -428,6 +447,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
     }
@@ -436,6 +456,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final TaskStatus value) {
         this._status = value;
     }
@@ -444,6 +465,7 @@ public class TodoTask extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

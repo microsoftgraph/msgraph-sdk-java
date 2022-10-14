@@ -17,6 +17,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionNetworkLearningSummary");
@@ -46,7 +47,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionNetworkLearningSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
         }};
@@ -64,6 +65,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }
@@ -83,6 +86,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

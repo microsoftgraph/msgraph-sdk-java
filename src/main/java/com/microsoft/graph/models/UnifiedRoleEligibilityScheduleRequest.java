@@ -42,6 +42,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleRequest");
@@ -103,7 +104,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilityScheduleRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(UnifiedRoleScheduleRequestActions.class)); });
             this.put("appScope", (n) -> { currentObject.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
             this.put("appScopeId", (n) -> { currentObject.setAppScopeId(n.getStringValue()); });
@@ -206,6 +207,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -230,6 +232,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final UnifiedRoleScheduleRequestActions value) {
         this._action = value;
     }
@@ -238,6 +241,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the appScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScope(@javax.annotation.Nullable final AppScope value) {
         this._appScope = value;
     }
@@ -246,6 +250,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the appScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopeId(@javax.annotation.Nullable final String value) {
         this._appScopeId = value;
     }
@@ -254,6 +259,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the directoryScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
         this._directoryScope = value;
     }
@@ -262,6 +268,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the directoryScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
         this._directoryScopeId = value;
     }
@@ -270,6 +277,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
         this._isValidationOnly = value;
     }
@@ -278,6 +286,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -286,6 +295,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the principal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
         this._principal = value;
     }
@@ -294,6 +304,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the principalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
         this._principalId = value;
     }
@@ -302,6 +313,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -310,6 +322,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }
@@ -318,6 +331,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
         this._scheduleInfo = value;
     }
@@ -326,6 +340,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the targetSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetSchedule(@javax.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this._targetSchedule = value;
     }
@@ -334,6 +349,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the targetScheduleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetScheduleId(@javax.annotation.Nullable final String value) {
         this._targetScheduleId = value;
     }
@@ -342,6 +358,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the ticketInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketInfo(@javax.annotation.Nullable final TicketInfo value) {
         this._ticketInfo = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /** The createdBy property */
     private UserIdentity _createdBy;
@@ -30,9 +31,10 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /** Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. */
     private AccessReviewHistoryStatus _status;
     /**
-     * Instantiates a new AccessReviewHistoryDefinition and sets the default values.
+     * Instantiates a new accessReviewHistoryDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewHistoryDefinition() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewHistoryDefinition");
@@ -40,7 +42,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewHistoryDefinition
+     * @return a accessReviewHistoryDefinition
      */
     @javax.annotation.Nonnull
     public static AccessReviewHistoryDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +88,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewHistoryDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter.class)); });
@@ -152,6 +154,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +174,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._createdBy = value;
     }
@@ -179,6 +183,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -187,6 +192,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
         this._decisions = value;
     }
@@ -195,6 +201,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -203,6 +210,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstances(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryInstance> value) {
         this._instances = value;
     }
@@ -211,6 +219,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewHistoryPeriodEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewHistoryPeriodEndDateTime = value;
     }
@@ -219,6 +228,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewHistoryPeriodStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewHistoryPeriodStartDateTime = value;
     }
@@ -227,6 +237,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the scheduleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleSettings(@javax.annotation.Nullable final AccessReviewHistoryScheduleSettings value) {
         this._scheduleSettings = value;
     }
@@ -235,6 +246,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the scopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this._scopes = value;
     }
@@ -243,6 +255,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AccessReviewHistoryStatus value) {
         this._status = value;
     }

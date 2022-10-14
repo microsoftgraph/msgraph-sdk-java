@@ -21,6 +21,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * Instantiates a new rubricQualityFeedbackModel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RubricQualityFeedbackModel() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.rubricQualityFeedbackModel");
@@ -58,7 +59,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RubricQualityFeedbackModel currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("feedback", this.getFeedback());
@@ -97,6 +99,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final EducationItemBody value) {
         this._feedback = value;
     }
@@ -113,6 +117,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the qualityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityId(@javax.annotation.Nullable final String value) {
         this._qualityId = value;
     }

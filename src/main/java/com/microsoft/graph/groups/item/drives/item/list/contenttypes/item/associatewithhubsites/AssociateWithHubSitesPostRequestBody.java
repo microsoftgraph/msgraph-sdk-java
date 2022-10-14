@@ -20,6 +20,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
      * Instantiates a new associateWithHubSitesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssociateWithHubSitesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,7 +49,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssociateWithHubSitesPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("hubSiteUrls", (n) -> { currentObject.setHubSiteUrls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("propagateToExistingLists", (n) -> { currentObject.setPropagateToExistingLists(n.getBooleanValue()); });
         }};
@@ -74,6 +75,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("hubSiteUrls", this.getHubSiteUrls());
@@ -85,6 +87,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the hubSiteUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHubSiteUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._hubSiteUrls = value;
     }
@@ -101,6 +105,7 @@ public class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the propagateToExistingLists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropagateToExistingLists(@javax.annotation.Nullable final Boolean value) {
         this._propagateToExistingLists = value;
     }

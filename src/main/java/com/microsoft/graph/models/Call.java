@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class Call extends Entity implements Parsable {
     /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
@@ -15,7 +15,7 @@ public class Call extends Entity implements Parsable {
     private String _callbackUri;
     /** A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
     private String _callChainId;
-    /** The callOptions property */
+    /** Contains the optional features for the call. */
     private CallOptions _callOptions;
     /** The routing information on how the call was retargeted. Read-only. */
     private java.util.List<CallRoute> _callRoutes;
@@ -25,7 +25,7 @@ public class Call extends Entity implements Parsable {
     private java.util.List<ContentSharingSession> _contentSharingSessions;
     /** The direction of the call. The possible value are incoming or outgoing. Read-only. */
     private CallDirection _direction;
-    /** The incomingContext property */
+    /** Call context associated with an incoming call. */
     private IncomingContext _incomingContext;
     /** The media configuration. Required. */
     private MediaConfig _mediaConfig;
@@ -39,28 +39,29 @@ public class Call extends Entity implements Parsable {
     private java.util.List<CommsOperation> _operations;
     /** The participants property */
     private java.util.List<Participant> _participants;
-    /** The requestedModalities property */
+    /** The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. */
     private java.util.List<Modality> _requestedModalities;
-    /** The resultInfo property */
+    /** The result information. For example can hold termination reason. Read-only. */
     private ResultInfo _resultInfo;
-    /** The source property */
+    /** The originator of the call. */
     private ParticipantInfo _source;
-    /** The state property */
+    /** The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only. */
     private CallState _state;
-    /** The subject property */
+    /** The subject of the conversation. */
     private String _subject;
-    /** The targets property */
+    /** The targets of the call. Required information for creating peer to peer call. */
     private java.util.List<InvitationParticipantInfo> _targets;
     /** The tenantId property */
     private String _tenantId;
     /** The toneInfo property */
     private ToneInfo _toneInfo;
-    /** The transcription property */
+    /** The transcription information for the call. Read-only. */
     private CallTranscriptionInfo _transcription;
     /**
      * Instantiates a new call and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Call() {
         super();
         this.setOdataType("#microsoft.graph.call");
@@ -100,7 +101,7 @@ public class Call extends Entity implements Parsable {
         return this._callChainId;
     }
     /**
-     * Gets the callOptions property value. The callOptions property
+     * Gets the callOptions property value. Contains the optional features for the call.
      * @return a callOptions
      */
     @javax.annotation.Nullable
@@ -146,7 +147,7 @@ public class Call extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Call currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("audioRoutingGroups", (n) -> { currentObject.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
@@ -174,7 +175,7 @@ public class Call extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the incomingContext property value. The incomingContext property
+     * Gets the incomingContext property value. Call context associated with an incoming call.
      * @return a incomingContext
      */
     @javax.annotation.Nullable
@@ -230,7 +231,7 @@ public class Call extends Entity implements Parsable {
         return this._participants;
     }
     /**
-     * Gets the requestedModalities property value. The requestedModalities property
+     * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @return a modality
      */
     @javax.annotation.Nullable
@@ -238,7 +239,7 @@ public class Call extends Entity implements Parsable {
         return this._requestedModalities;
     }
     /**
-     * Gets the resultInfo property value. The resultInfo property
+     * Gets the resultInfo property value. The result information. For example can hold termination reason. Read-only.
      * @return a resultInfo
      */
     @javax.annotation.Nullable
@@ -246,7 +247,7 @@ public class Call extends Entity implements Parsable {
         return this._resultInfo;
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The originator of the call.
      * @return a participantInfo
      */
     @javax.annotation.Nullable
@@ -254,7 +255,7 @@ public class Call extends Entity implements Parsable {
         return this._source;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @return a callState
      */
     @javax.annotation.Nullable
@@ -262,7 +263,7 @@ public class Call extends Entity implements Parsable {
         return this._state;
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the conversation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -270,7 +271,7 @@ public class Call extends Entity implements Parsable {
         return this._subject;
     }
     /**
-     * Gets the targets property value. The targets property
+     * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @return a invitationParticipantInfo
      */
     @javax.annotation.Nullable
@@ -294,7 +295,7 @@ public class Call extends Entity implements Parsable {
         return this._toneInfo;
     }
     /**
-     * Gets the transcription property value. The transcription property
+     * Gets the transcription property value. The transcription information for the call. Read-only.
      * @return a callTranscriptionInfo
      */
     @javax.annotation.Nullable
@@ -306,6 +307,7 @@ public class Call extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -339,6 +341,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the audioRoutingGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioRoutingGroups(@javax.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
         this._audioRoutingGroups = value;
     }
@@ -347,6 +350,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callbackUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallbackUri(@javax.annotation.Nullable final String value) {
         this._callbackUri = value;
     }
@@ -355,14 +359,16 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callChainId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallChainId(@javax.annotation.Nullable final String value) {
         this._callChainId = value;
     }
     /**
-     * Sets the callOptions property value. The callOptions property
+     * Sets the callOptions property value. Contains the optional features for the call.
      * @param value Value to set for the callOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallOptions(@javax.annotation.Nullable final CallOptions value) {
         this._callOptions = value;
     }
@@ -371,6 +377,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the callRoutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallRoutes(@javax.annotation.Nullable final java.util.List<CallRoute> value) {
         this._callRoutes = value;
     }
@@ -379,6 +386,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
         this._chatInfo = value;
     }
@@ -387,6 +395,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the contentSharingSessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentSharingSessions(@javax.annotation.Nullable final java.util.List<ContentSharingSession> value) {
         this._contentSharingSessions = value;
     }
@@ -395,14 +404,16 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the direction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirection(@javax.annotation.Nullable final CallDirection value) {
         this._direction = value;
     }
     /**
-     * Sets the incomingContext property value. The incomingContext property
+     * Sets the incomingContext property value. Call context associated with an incoming call.
      * @param value Value to set for the incomingContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncomingContext(@javax.annotation.Nullable final IncomingContext value) {
         this._incomingContext = value;
     }
@@ -411,6 +422,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the mediaConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaConfig(@javax.annotation.Nullable final MediaConfig value) {
         this._mediaConfig = value;
     }
@@ -419,6 +431,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the mediaState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaState(@javax.annotation.Nullable final CallMediaState value) {
         this._mediaState = value;
     }
@@ -427,6 +440,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the meetingInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingInfo(@javax.annotation.Nullable final MeetingInfo value) {
         this._meetingInfo = value;
     }
@@ -435,6 +449,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the myParticipantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMyParticipantId(@javax.annotation.Nullable final String value) {
         this._myParticipantId = value;
     }
@@ -443,6 +458,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<CommsOperation> value) {
         this._operations = value;
     }
@@ -451,54 +467,61 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<Participant> value) {
         this._participants = value;
     }
     /**
-     * Sets the requestedModalities property value. The requestedModalities property
+     * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @param value Value to set for the requestedModalities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._requestedModalities = value;
     }
     /**
-     * Sets the resultInfo property value. The resultInfo property
+     * Sets the resultInfo property value. The result information. For example can hold termination reason. Read-only.
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
         this._resultInfo = value;
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The originator of the call.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final ParticipantInfo value) {
         this._source = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final CallState value) {
         this._state = value;
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the conversation.
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
     /**
-     * Sets the targets property value. The targets property
+     * Sets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @param value Value to set for the targets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargets(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this._targets = value;
     }
@@ -507,6 +530,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -515,14 +539,16 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the toneInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToneInfo(@javax.annotation.Nullable final ToneInfo value) {
         this._toneInfo = value;
     }
     /**
-     * Sets the transcription property value. The transcription property
+     * Sets the transcription property value. The transcription information for the call. Read-only.
      * @param value Value to set for the transcription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranscription(@javax.annotation.Nullable final CallTranscriptionInfo value) {
         this._transcription = value;
     }

@@ -18,6 +18,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * Instantiates a new EdiscoveryReviewTag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryReviewTag() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryReviewTag");
@@ -55,7 +56,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryReviewTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("childSelectability", (n) -> { currentObject.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
             this.put("childTags", (n) -> { currentObject.setChildTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
             this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * @param value Value to set for the childSelectability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildSelectability(@javax.annotation.Nullable final ChildSelectability value) {
         this._childSelectability = value;
     }
@@ -94,6 +97,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * @param value Value to set for the childTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this._childTags = value;
     }
@@ -102,6 +106,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final EdiscoveryReviewTag value) {
         this._parent = value;
     }

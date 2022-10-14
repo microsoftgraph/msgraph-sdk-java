@@ -18,6 +18,7 @@ public class Directory extends Entity implements Parsable {
      * Instantiates a new Directory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Directory() {
         super();
         this.setOdataType("#microsoft.graph.directory");
@@ -63,7 +64,7 @@ public class Directory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Directory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("administrativeUnits", (n) -> { currentObject.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
             this.put("deletedItems", (n) -> { currentObject.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("federationConfigurations", (n) -> { currentObject.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class Directory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
         this._administrativeUnits = value;
     }
@@ -94,6 +97,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the deletedItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedItems(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._deletedItems = value;
     }
@@ -102,6 +106,7 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the federationConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederationConfigurations(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._federationConfigurations = value;
     }

@@ -23,6 +23,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new convertIdResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConvertIdResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.convertIdResult");
@@ -60,7 +61,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConvertIdResult currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("errorDetails", (n) -> { currentObject.setErrorDetails(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("errorDetails", this.getErrorDetails());
@@ -109,6 +111,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the errorDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDetails(@javax.annotation.Nullable final GenericError value) {
         this._errorDetails = value;
     }
@@ -125,6 +129,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
         this._sourceId = value;
     }
@@ -141,6 +147,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetId(@javax.annotation.Nullable final String value) {
         this._targetId = value;
     }

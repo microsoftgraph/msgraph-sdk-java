@@ -19,6 +19,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * Instantiates a new ReferenceUpdate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReferenceUpdate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,7 +48,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceUpdate currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("@odata.id", (n) -> { currentObject.setOdataId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
         }};
@@ -73,6 +74,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.id", this.getOdataId());
@@ -84,6 +86,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -92,6 +95,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataId(@javax.annotation.Nullable final String value) {
         this._odataId = value;
     }
@@ -100,6 +104,7 @@ public class ReferenceUpdate implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

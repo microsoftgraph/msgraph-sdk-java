@@ -22,6 +22,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * Instantiates a new identityUserFlowAttribute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityUserFlowAttribute() {
         super();
         this.setOdataType("#microsoft.graph.identityUserFlowAttribute");
@@ -75,7 +76,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityUserFlowAttribute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(IdentityUserFlowAttributeDataType.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -95,6 +96,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -108,6 +110,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final IdentityUserFlowAttributeDataType value) {
         this._dataType = value;
     }
@@ -116,6 +119,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -124,6 +128,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -132,6 +137,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param value Value to set for the userFlowAttributeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowAttributeType(@javax.annotation.Nullable final IdentityUserFlowAttributeType value) {
         this._userFlowAttributeType = value;
     }

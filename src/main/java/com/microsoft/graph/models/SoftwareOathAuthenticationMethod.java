@@ -14,6 +14,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * Instantiates a new SoftwareOathAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SoftwareOathAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.softwareOathAuthenticationMethod");
@@ -35,7 +36,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SoftwareOathAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("secretKey", (n) -> { currentObject.setSecretKey(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param value Value to set for the secretKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecretKey(@javax.annotation.Nullable final String value) {
         this._secretKey = value;
     }
