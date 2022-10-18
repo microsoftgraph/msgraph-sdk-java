@@ -9,7 +9,6 @@ import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
 import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import okhttp3.OkHttpClient;
 
@@ -21,6 +20,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * Sets a few basic values for the GraphClientOptions to pass to the client.
      * @return the GraphClientOptions instance for the GraphServiceClient.
      */
+    @Nonull
     public static GraphClientOption getGraphClientOptions() {
         GraphClientOption graphClientOptions = new GraphClientOption();
         graphClientOptions.setGraphServiceTargetVersion("v1.0");
@@ -38,7 +38,7 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * Instantiate the GraphServiceClient using an AuthenticationProvider.
      * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      */
-    public GraphServiceClient(AuthenticationProvider authenticationProvider) {
+    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider) {
         super(new BaseGraphRequestAdapter(authenticationProvider, null, "v1.0" , getGraphClientOptions()));
     }
     /**
@@ -46,14 +46,15 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
      * @param tokenCredential The TokenCredential for this GraphServiceClient.
      * @param scopes The Scopes for this GraphServiceClient.
      */
-    public GraphServiceClient(TokenCredential tokenCredential, String... scopes) {
+    @SuppressWarnings("LambdaLast")
+    public GraphServiceClient(@Nonnull TokenCredential tokenCredential, @Nullable String... scopes) {
         this(new AzureIdentityAuthenticationProvider(tokenCredential, null, scopes));
     }
     /**
      * Instantiate the GraphServiceClient using an OkHttpClient
      * @param client The OkHttpClient for the GraphServiceClient.
      */
-    public GraphServiceClient(OkHttpClient client) {
+    public GraphServiceClient(@Nonnull OkHttpClient client) {
         super(new BaseGraphRequestAdapter(new AnonymousAuthenticationProvider(), null, "v1.0", client));
     }
 }
