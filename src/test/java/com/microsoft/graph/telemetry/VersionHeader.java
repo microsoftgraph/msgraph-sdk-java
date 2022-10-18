@@ -17,6 +17,6 @@ public class VersionHeader {
         final BaseRequest<Void> request = new BaseRequest<Void>("https://a.b.c/", GraphServiceClient.builder().authenticationProvider(mock(IAuthenticationProvider.class)).buildClient(), null, Void.class){};
         assertEquals(1, request.getHeaders().size());
         assertEquals("SdkVersion", request.getHeaders().get(0).getName());
-        assertEquals(String.format(BaseRequest.REQUEST_STATS_HEADER_VALUE_FORMAT_STRING, Constants.VERSION_NAME), request.getHeaders().get(0).getValue());
+        assertEquals(BaseRequest.REQUEST_STATS_HEADER_VALUE_FORMAT_STRING.concat(Constants.VERSION_NAME), request.getHeaders().get(0).getValue());
     }
 }
