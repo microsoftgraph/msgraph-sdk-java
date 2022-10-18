@@ -16,6 +16,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * Instantiates a new IosMobileAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosMobileAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosMobileAppConfiguration");
@@ -45,7 +46,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosMobileAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("encodedSettingXml", (n) -> { currentObject.setEncodedSettingXml(n.getByteArrayValue()); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(AppConfigurationSettingItem::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the encodedSettingXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncodedSettingXml(@javax.annotation.Nullable final byte[] value) {
         this._encodedSettingXml = value;
     }
@@ -82,6 +85,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
         this._settings = value;
     }

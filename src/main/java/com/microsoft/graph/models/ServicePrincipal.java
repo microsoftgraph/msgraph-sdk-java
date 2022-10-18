@@ -109,6 +109,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipal() {
         super();
         this.setOdataType("#microsoft.graph.servicePrincipal");
@@ -290,7 +291,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
             this.put("alternativeNames", (n) -> { currentObject.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -570,6 +571,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -627,6 +629,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -635,6 +638,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the addIns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddIns(@javax.annotation.Nullable final java.util.List<AddIn> value) {
         this._addIns = value;
     }
@@ -643,6 +647,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the alternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._alternativeNames = value;
     }
@@ -651,6 +656,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDescription(@javax.annotation.Nullable final String value) {
         this._appDescription = value;
     }
@@ -659,6 +665,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -667,6 +674,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -675,6 +683,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the applicationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationTemplateId(@javax.annotation.Nullable final String value) {
         this._applicationTemplateId = value;
     }
@@ -683,6 +692,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appOwnerOrganizationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppOwnerOrganizationId(@javax.annotation.Nullable final String value) {
         this._appOwnerOrganizationId = value;
     }
@@ -691,6 +701,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignedTo(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignedTo = value;
     }
@@ -699,6 +710,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignmentRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignmentRequired(@javax.annotation.Nullable final Boolean value) {
         this._appRoleAssignmentRequired = value;
     }
@@ -707,6 +719,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignments = value;
     }
@@ -715,6 +728,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoles(@javax.annotation.Nullable final java.util.List<AppRole> value) {
         this._appRoles = value;
     }
@@ -723,6 +737,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the claimsMappingPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this._claimsMappingPolicies = value;
     }
@@ -731,6 +746,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._createdObjects = value;
     }
@@ -739,6 +755,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the delegatedPermissionClassifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegatedPermissionClassifications(@javax.annotation.Nullable final java.util.List<DelegatedPermissionClassification> value) {
         this._delegatedPermissionClassifications = value;
     }
@@ -747,6 +764,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -755,6 +773,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the disabledByMicrosoftStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledByMicrosoftStatus(@javax.annotation.Nullable final String value) {
         this._disabledByMicrosoftStatus = value;
     }
@@ -763,6 +782,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -771,6 +791,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the endpoints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpoints(@javax.annotation.Nullable final java.util.List<Endpoint> value) {
         this._endpoints = value;
     }
@@ -779,6 +800,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
         this._federatedIdentityCredentials = value;
     }
@@ -787,6 +809,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the homepage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomepage(@javax.annotation.Nullable final String value) {
         this._homepage = value;
     }
@@ -795,6 +818,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this._homeRealmDiscoveryPolicies = value;
     }
@@ -803,6 +827,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final InformationalUrl value) {
         this._info = value;
     }
@@ -811,6 +836,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the keyCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredential> value) {
         this._keyCredentials = value;
     }
@@ -819,6 +845,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the loginUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginUrl(@javax.annotation.Nullable final String value) {
         this._loginUrl = value;
     }
@@ -827,6 +854,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the logoutUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
         this._logoutUrl = value;
     }
@@ -835,6 +863,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -843,6 +872,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -851,6 +881,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the notificationEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationEmailAddresses = value;
     }
@@ -859,6 +890,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2PermissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
         this._oauth2PermissionGrants = value;
     }
@@ -867,6 +899,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2PermissionScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
         this._oauth2PermissionScopes = value;
     }
@@ -875,6 +908,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedObjects = value;
     }
@@ -883,6 +917,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the owners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._owners = value;
     }
@@ -891,6 +926,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredential> value) {
         this._passwordCredentials = value;
     }
@@ -899,6 +935,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredSingleSignOnMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredSingleSignOnMode(@javax.annotation.Nullable final String value) {
         this._preferredSingleSignOnMode = value;
     }
@@ -907,6 +944,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredTokenSigningKeyThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredTokenSigningKeyThumbprint(@javax.annotation.Nullable final String value) {
         this._preferredTokenSigningKeyThumbprint = value;
     }
@@ -915,6 +953,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the replyUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._replyUrls = value;
     }
@@ -923,6 +962,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the resourceSpecificApplicationPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceSpecificApplicationPermissions(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermission> value) {
         this._resourceSpecificApplicationPermissions = value;
     }
@@ -931,6 +971,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the samlSingleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSamlSingleSignOnSettings(@javax.annotation.Nullable final SamlSingleSignOnSettings value) {
         this._samlSingleSignOnSettings = value;
     }
@@ -939,6 +980,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the servicePrincipalNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._servicePrincipalNames = value;
     }
@@ -947,6 +989,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the servicePrincipalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalType(@javax.annotation.Nullable final String value) {
         this._servicePrincipalType = value;
     }
@@ -955,6 +998,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the signInAudience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
         this._signInAudience = value;
     }
@@ -963,6 +1007,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -971,6 +1016,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenEncryptionKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
         this._tokenEncryptionKeyId = value;
     }
@@ -979,6 +1025,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this._tokenIssuancePolicies = value;
     }
@@ -987,6 +1034,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this._tokenLifetimePolicies = value;
     }
@@ -995,6 +1043,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -1003,6 +1052,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the verifiedPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
         this._verifiedPublisher = value;
     }

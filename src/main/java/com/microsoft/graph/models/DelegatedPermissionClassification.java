@@ -19,6 +19,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * Instantiates a new delegatedPermissionClassification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedPermissionClassification() {
         super();
         this.setOdataType("#microsoft.graph.delegatedPermissionClassification");
@@ -48,7 +49,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedPermissionClassification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(PermissionClassificationType.class)); });
             this.put("permissionId", (n) -> { currentObject.setPermissionId(n.getStringValue()); });
             this.put("permissionName", (n) -> { currentObject.setPermissionName(n.getStringValue()); });
@@ -75,6 +76,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final PermissionClassificationType value) {
         this._classification = value;
     }
@@ -95,6 +98,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * @param value Value to set for the permissionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionId(@javax.annotation.Nullable final String value) {
         this._permissionId = value;
     }
@@ -103,6 +107,7 @@ public class DelegatedPermissionClassification extends Entity implements Parsabl
      * @param value Value to set for the permissionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionName(@javax.annotation.Nullable final String value) {
         this._permissionName = value;
     }

@@ -18,6 +18,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * Instantiates a new ManagedAndroidStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAndroidStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidStoreApp");
@@ -47,7 +48,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAndroidStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }
@@ -94,6 +97,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -102,6 +106,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this._packageId = value;
     }

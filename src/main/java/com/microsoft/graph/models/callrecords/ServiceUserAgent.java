@@ -14,6 +14,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * Instantiates a new ServiceUserAgent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceUserAgent() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.serviceUserAgent");
@@ -35,7 +36,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUserAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(ServiceRole.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final ServiceRole value) {
         this._role = value;
     }

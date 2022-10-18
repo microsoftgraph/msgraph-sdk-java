@@ -23,6 +23,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * Instantiates a new teamworkOnlineMeetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkOnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkOnlineMeetingInfo");
@@ -60,7 +61,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkOnlineMeetingInfo currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("calendarEventId", (n) -> { currentObject.setCalendarEventId(n.getStringValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("calendarEventId", this.getCalendarEventId());
@@ -109,6 +111,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the calendarEventId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarEventId(@javax.annotation.Nullable final String value) {
         this._calendarEventId = value;
     }
@@ -125,6 +129,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._joinWebUrl = value;
     }
@@ -133,6 +138,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final TeamworkUserIdentity value) {
         this._organizer = value;
     }

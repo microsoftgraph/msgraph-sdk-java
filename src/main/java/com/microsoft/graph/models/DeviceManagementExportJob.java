@@ -34,6 +34,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Instantiates a new deviceManagementExportJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementExportJob() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementExportJob");
@@ -63,7 +64,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementExportJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
             this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(DeviceManagementReportFileFormat.class)); });
@@ -153,6 +154,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -180,6 +183,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the filter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilter(@javax.annotation.Nullable final String value) {
         this._filter = value;
     }
@@ -188,6 +192,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final DeviceManagementReportFileFormat value) {
         this._format = value;
     }
@@ -196,6 +201,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the localizationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizationType(@javax.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
         this._localizationType = value;
     }
@@ -204,6 +210,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the reportName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportName(@javax.annotation.Nullable final String value) {
         this._reportName = value;
     }
@@ -212,6 +219,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the requestDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestDateTime = value;
     }
@@ -220,6 +228,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the select property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
         this._select = value;
     }
@@ -228,6 +237,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the snapshotId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSnapshotId(@javax.annotation.Nullable final String value) {
         this._snapshotId = value;
     }
@@ -236,6 +246,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceManagementReportStatus value) {
         this._status = value;
     }
@@ -244,6 +255,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

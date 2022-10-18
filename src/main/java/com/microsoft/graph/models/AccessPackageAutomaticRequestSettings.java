@@ -24,6 +24,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAutomaticRequestSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageAutomaticRequestSettings");
@@ -53,7 +54,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAutomaticRequestSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("gracePeriodBeforeAccessRemoval", (n) -> { currentObject.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { currentObject.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
@@ -97,6 +98,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("gracePeriodBeforeAccessRemoval", this.getGracePeriodBeforeAccessRemoval());
@@ -110,6 +112,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param value Value to set for the gracePeriodBeforeAccessRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodBeforeAccessRemoval(@javax.annotation.Nullable final Period value) {
         this._gracePeriodBeforeAccessRemoval = value;
     }
@@ -126,6 +130,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveAccessWhenTargetLeavesAllowedTargets(@javax.annotation.Nullable final Boolean value) {
         this._removeAccessWhenTargetLeavesAllowedTargets = value;
     }
@@ -142,6 +148,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @param value Value to set for the requestAccessForAllowedTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestAccessForAllowedTargets(@javax.annotation.Nullable final Boolean value) {
         this._requestAccessForAllowedTargets = value;
     }

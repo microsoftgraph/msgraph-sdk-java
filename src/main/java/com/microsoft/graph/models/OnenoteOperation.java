@@ -20,6 +20,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Instantiates a new OnenoteOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenoteOperation() {
         super();
         this.setOdataType("#microsoft.graph.onenoteOperation");
@@ -49,7 +50,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenoteOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
             this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getStringValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final OnenoteOperationError value) {
         this._error = value;
     }
@@ -106,6 +109,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the percentComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPercentComplete(@javax.annotation.Nullable final String value) {
         this._percentComplete = value;
     }
@@ -114,6 +118,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -122,6 +127,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
         this._resourceLocation = value;
     }

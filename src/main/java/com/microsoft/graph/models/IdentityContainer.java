@@ -22,6 +22,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * Instantiates a new IdentityContainer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityContainer() {
         super();
         this.setOdataType("#microsoft.graph.identityContainer");
@@ -67,7 +68,7 @@ public class IdentityContainer extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityContainer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("apiConnectors", (n) -> { currentObject.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
             this.put("b2xUserFlows", (n) -> { currentObject.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
             this.put("conditionalAccess", (n) -> { currentObject.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
@@ -96,6 +97,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the apiConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiConnectors(@javax.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
         this._apiConnectors = value;
     }
@@ -118,6 +121,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the b2xUserFlows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2xUserFlows(@javax.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
         this._b2xUserFlows = value;
     }
@@ -126,6 +130,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccess(@javax.annotation.Nullable final ConditionalAccessRoot value) {
         this._conditionalAccess = value;
     }
@@ -134,6 +139,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the identityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._identityProviders = value;
     }
@@ -142,6 +148,7 @@ public class IdentityContainer extends Entity implements Parsable {
      * @param value Value to set for the userFlowAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowAttributes(@javax.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
         this._userFlowAttributes = value;
     }

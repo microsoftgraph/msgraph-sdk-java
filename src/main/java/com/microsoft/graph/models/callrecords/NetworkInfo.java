@@ -69,6 +69,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new networkInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NetworkInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.callRecords.networkInfo");
@@ -138,7 +139,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkInfo currentObject = this;
-        return new HashMap<>(27) {{
+        return new HashMap<String, Consumer<ParseNode>>(27) {{
             this.put("bandwidthLowEventRatio", (n) -> { currentObject.setBandwidthLowEventRatio(n.getFloatValue()); });
             this.put("basicServiceSetIdentifier", (n) -> { currentObject.setBasicServiceSetIdentifier(n.getStringValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });
@@ -349,6 +350,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeFloatValue("bandwidthLowEventRatio", this.getBandwidthLowEventRatio());
@@ -385,6 +387,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -393,6 +396,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bandwidthLowEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthLowEventRatio(@javax.annotation.Nullable final Float value) {
         this._bandwidthLowEventRatio = value;
     }
@@ -401,6 +405,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the basicServiceSetIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBasicServiceSetIdentifier(@javax.annotation.Nullable final String value) {
         this._basicServiceSetIdentifier = value;
     }
@@ -409,6 +414,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final NetworkConnectionType value) {
         this._connectionType = value;
     }
@@ -417,6 +423,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delayEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelayEventRatio(@javax.annotation.Nullable final Float value) {
         this._delayEventRatio = value;
     }
@@ -425,6 +432,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dnsSuffix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDnsSuffix(@javax.annotation.Nullable final String value) {
         this._dnsSuffix = value;
     }
@@ -433,6 +441,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -441,6 +450,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the linkSpeed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkSpeed(@javax.annotation.Nullable final Long value) {
         this._linkSpeed = value;
     }
@@ -449,6 +459,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the macAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddress(@javax.annotation.Nullable final String value) {
         this._macAddress = value;
     }
@@ -457,6 +468,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the networkTransportProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkTransportProtocol(@javax.annotation.Nullable final NetworkTransportProtocol value) {
         this._networkTransportProtocol = value;
     }
@@ -465,6 +477,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -473,6 +486,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
         this._port = value;
     }
@@ -481,6 +495,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the receivedQualityEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedQualityEventRatio(@javax.annotation.Nullable final Float value) {
         this._receivedQualityEventRatio = value;
     }
@@ -489,6 +504,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reflexiveIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReflexiveIPAddress(@javax.annotation.Nullable final String value) {
         this._reflexiveIPAddress = value;
     }
@@ -497,6 +513,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the relayIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelayIPAddress(@javax.annotation.Nullable final String value) {
         this._relayIPAddress = value;
     }
@@ -505,6 +522,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the relayPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelayPort(@javax.annotation.Nullable final Integer value) {
         this._relayPort = value;
     }
@@ -513,6 +531,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentQualityEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentQualityEventRatio(@javax.annotation.Nullable final Float value) {
         this._sentQualityEventRatio = value;
     }
@@ -521,6 +540,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subnet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubnet(@javax.annotation.Nullable final String value) {
         this._subnet = value;
     }
@@ -529,6 +549,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the traceRouteHops property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTraceRouteHops(@javax.annotation.Nullable final java.util.List<TraceRouteHop> value) {
         this._traceRouteHops = value;
     }
@@ -537,6 +558,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiBand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBand(@javax.annotation.Nullable final WifiBand value) {
         this._wifiBand = value;
     }
@@ -545,6 +567,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiBatteryCharge property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBatteryCharge(@javax.annotation.Nullable final Integer value) {
         this._wifiBatteryCharge = value;
     }
@@ -553,6 +576,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiChannel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiChannel(@javax.annotation.Nullable final Integer value) {
         this._wifiChannel = value;
     }
@@ -561,6 +585,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiMicrosoftDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiMicrosoftDriver(@javax.annotation.Nullable final String value) {
         this._wifiMicrosoftDriver = value;
     }
@@ -569,6 +594,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiMicrosoftDriverVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiMicrosoftDriverVersion(@javax.annotation.Nullable final String value) {
         this._wifiMicrosoftDriverVersion = value;
     }
@@ -577,6 +603,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiRadioType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiRadioType(@javax.annotation.Nullable final WifiRadioType value) {
         this._wifiRadioType = value;
     }
@@ -585,6 +612,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiSignalStrength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiSignalStrength(@javax.annotation.Nullable final Integer value) {
         this._wifiSignalStrength = value;
     }
@@ -593,6 +621,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiVendorDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiVendorDriver(@javax.annotation.Nullable final String value) {
         this._wifiVendorDriver = value;
     }
@@ -601,6 +630,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiVendorDriverVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiVendorDriverVersion(@javax.annotation.Nullable final String value) {
         this._wifiVendorDriverVersion = value;
     }

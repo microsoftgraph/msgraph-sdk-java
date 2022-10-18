@@ -16,6 +16,7 @@ public class UserConsentRequest extends Request implements Parsable {
      * Instantiates a new UserConsentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserConsentRequest() {
         super();
         this.setOdataType("#microsoft.graph.userConsentRequest");
@@ -45,7 +46,7 @@ public class UserConsentRequest extends Request implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserConsentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("approval", (n) -> { currentObject.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
             this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class UserConsentRequest extends Request implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UserConsentRequest extends Request implements Parsable {
      * @param value Value to set for the approval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproval(@javax.annotation.Nullable final Approval value) {
         this._approval = value;
     }
@@ -82,6 +85,7 @@ public class UserConsentRequest extends Request implements Parsable {
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }

@@ -29,6 +29,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * Instantiates a new automaticRepliesSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AutomaticRepliesSetting() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.automaticRepliesSetting");
@@ -74,7 +75,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AutomaticRepliesSetting currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("externalAudience", (n) -> { currentObject.setExternalAudience(n.getEnumValue(ExternalAudienceScope.class)); });
             this.put("externalReplyMessage", (n) -> { currentObject.setExternalReplyMessage(n.getStringValue()); });
             this.put("internalReplyMessage", (n) -> { currentObject.setInternalReplyMessage(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("externalAudience", this.getExternalAudience());
@@ -145,6 +147,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalAudience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAudience(@javax.annotation.Nullable final ExternalAudienceScope value) {
         this._externalAudience = value;
     }
@@ -161,6 +165,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalReplyMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalReplyMessage(@javax.annotation.Nullable final String value) {
         this._externalReplyMessage = value;
     }
@@ -169,6 +174,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the internalReplyMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalReplyMessage(@javax.annotation.Nullable final String value) {
         this._internalReplyMessage = value;
     }
@@ -177,6 +183,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -185,6 +192,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scheduledEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._scheduledEndDateTime = value;
     }
@@ -193,6 +201,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scheduledStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._scheduledStartDateTime = value;
     }
@@ -201,6 +210,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AutomaticRepliesStatus value) {
         this._status = value;
     }

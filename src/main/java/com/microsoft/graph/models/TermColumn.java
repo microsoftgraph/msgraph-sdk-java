@@ -27,6 +27,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new termColumn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermColumn() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.termColumn");
@@ -64,7 +65,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TermColumn currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowMultipleValues", (n) -> { currentObject.setAllowMultipleValues(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("parentTerm", (n) -> { currentObject.setParentTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
@@ -109,6 +110,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleValues", this.getAllowMultipleValues());
@@ -123,6 +125,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -131,6 +134,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowMultipleValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowMultipleValues(@javax.annotation.Nullable final Boolean value) {
         this._allowMultipleValues = value;
     }
@@ -139,6 +143,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -147,6 +152,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentTerm(@javax.annotation.Nullable final Term value) {
         this._parentTerm = value;
     }
@@ -155,6 +161,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showFullyQualifiedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowFullyQualifiedName(@javax.annotation.Nullable final Boolean value) {
         this._showFullyQualifiedName = value;
     }
@@ -163,6 +170,7 @@ public class TermColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the termSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermSet(@javax.annotation.Nullable final Set value) {
         this._termSet = value;
     }

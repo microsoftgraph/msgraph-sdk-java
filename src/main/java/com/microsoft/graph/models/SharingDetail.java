@@ -28,6 +28,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new sharingDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.sharingDetail");
@@ -57,7 +58,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharingDetail currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(InsightIdentity::createFromDiscriminatorValue)); });
             this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
@@ -119,12 +120,12 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
         writer.writeOffsetDateTimeValue("sharedDateTime", this.getSharedDateTime());
-        writer.writeObjectValue("sharingReference", this.getSharingReference());
         writer.writeStringValue("sharingSubject", this.getSharingSubject());
         writer.writeStringValue("sharingType", this.getSharingType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -134,6 +135,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +144,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -150,6 +153,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedBy(@javax.annotation.Nullable final InsightIdentity value) {
         this._sharedBy = value;
     }
@@ -158,6 +162,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._sharedDateTime = value;
     }
@@ -166,6 +171,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharingReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingReference(@javax.annotation.Nullable final ResourceReference value) {
         this._sharingReference = value;
     }
@@ -174,6 +180,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharingSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingSubject(@javax.annotation.Nullable final String value) {
         this._sharingSubject = value;
     }
@@ -182,6 +189,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingType(@javax.annotation.Nullable final String value) {
         this._sharingType = value;
     }

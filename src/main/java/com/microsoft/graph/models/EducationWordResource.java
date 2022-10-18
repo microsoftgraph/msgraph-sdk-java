@@ -14,6 +14,7 @@ public class EducationWordResource extends EducationResource implements Parsable
      * Instantiates a new EducationWordResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationWordResource() {
         super();
         this.setOdataType("#microsoft.graph.educationWordResource");
@@ -35,7 +36,7 @@ public class EducationWordResource extends EducationResource implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationWordResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fileUrl", (n) -> { currentObject.setFileUrl(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class EducationWordResource extends EducationResource implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationWordResource extends EducationResource implements Parsable
      * @param value Value to set for the fileUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileUrl(@javax.annotation.Nullable final String value) {
         this._fileUrl = value;
     }

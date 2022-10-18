@@ -23,6 +23,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * Instantiates a new aggregationOption and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AggregationOption() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.aggregationOption");
@@ -68,7 +69,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AggregationOption currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("bucketDefinition", (n) -> { currentObject.setBucketDefinition(n.getObjectValue(BucketAggregationDefinition::createFromDiscriminatorValue)); });
             this.put("field", (n) -> { currentObject.setField(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("bucketDefinition", this.getBucketDefinition());
@@ -109,6 +111,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bucketDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBucketDefinition(@javax.annotation.Nullable final BucketAggregationDefinition value) {
         this._bucketDefinition = value;
     }
@@ -125,6 +129,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the field property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setField(@javax.annotation.Nullable final String value) {
         this._field = value;
     }
@@ -133,6 +138,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
         this._size = value;
     }

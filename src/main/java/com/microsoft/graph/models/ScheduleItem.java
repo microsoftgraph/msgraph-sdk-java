@@ -29,6 +29,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Instantiates a new scheduleItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.scheduleItem");
@@ -66,7 +67,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleItem currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("isPrivate", (n) -> { currentObject.setIsPrivate(n.getBooleanValue()); });
             this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("end", this.getEnd());
@@ -145,6 +147,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._end = value;
     }
@@ -161,6 +165,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPrivate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPrivate(@javax.annotation.Nullable final Boolean value) {
         this._isPrivate = value;
     }
@@ -169,6 +174,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final String value) {
         this._location = value;
     }
@@ -177,6 +183,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -185,6 +192,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._start = value;
     }
@@ -193,6 +201,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final FreeBusyStatus value) {
         this._status = value;
     }
@@ -201,6 +210,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

@@ -19,6 +19,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionAppLearningSummary() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionAppLearningSummary");
@@ -64,7 +65,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionAppLearningSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
             this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getEnumValue(ApplicationType.class)); });
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
@@ -75,6 +76,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * @param value Value to set for the applicationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationName(@javax.annotation.Nullable final String value) {
         this._applicationName = value;
     }
@@ -95,6 +98,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * @param value Value to set for the applicationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationType(@javax.annotation.Nullable final ApplicationType value) {
         this._applicationType = value;
     }
@@ -103,6 +107,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }

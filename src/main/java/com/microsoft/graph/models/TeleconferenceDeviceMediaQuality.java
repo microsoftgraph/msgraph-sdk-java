@@ -63,6 +63,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teleconferenceDeviceMediaQuality");
@@ -157,7 +158,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<>(22) {{
+        return new HashMap<String, Consumer<ParseNode>>(22) {{
             this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
             this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
             this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
@@ -307,6 +308,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodValue("averageInboundJitter", this.getAverageInboundJitter());
@@ -338,6 +340,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -346,6 +349,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageInboundJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageInboundJitter(@javax.annotation.Nullable final Period value) {
         this._averageInboundJitter = value;
     }
@@ -354,6 +358,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageInboundPacketLossRateInPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageInboundPacketLossRateInPercentage(@javax.annotation.Nullable final Double value) {
         this._averageInboundPacketLossRateInPercentage = value;
     }
@@ -362,6 +367,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageInboundRoundTripDelay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageInboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
         this._averageInboundRoundTripDelay = value;
     }
@@ -370,6 +376,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageOutboundJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageOutboundJitter(@javax.annotation.Nullable final Period value) {
         this._averageOutboundJitter = value;
     }
@@ -378,6 +385,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageOutboundPacketLossRateInPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageOutboundPacketLossRateInPercentage(@javax.annotation.Nullable final Double value) {
         this._averageOutboundPacketLossRateInPercentage = value;
     }
@@ -386,6 +394,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the averageOutboundRoundTripDelay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageOutboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
         this._averageOutboundRoundTripDelay = value;
     }
@@ -394,6 +403,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the channelIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelIndex(@javax.annotation.Nullable final Integer value) {
         this._channelIndex = value;
     }
@@ -402,6 +412,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the inboundPackets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundPackets(@javax.annotation.Nullable final Long value) {
         this._inboundPackets = value;
     }
@@ -410,6 +421,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the localIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalIPAddress(@javax.annotation.Nullable final String value) {
         this._localIPAddress = value;
     }
@@ -418,6 +430,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the localPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalPort(@javax.annotation.Nullable final Integer value) {
         this._localPort = value;
     }
@@ -426,6 +439,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumInboundJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumInboundJitter(@javax.annotation.Nullable final Period value) {
         this._maximumInboundJitter = value;
     }
@@ -434,6 +448,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumInboundPacketLossRateInPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumInboundPacketLossRateInPercentage(@javax.annotation.Nullable final Double value) {
         this._maximumInboundPacketLossRateInPercentage = value;
     }
@@ -442,6 +457,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumInboundRoundTripDelay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumInboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
         this._maximumInboundRoundTripDelay = value;
     }
@@ -450,6 +466,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumOutboundJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumOutboundJitter(@javax.annotation.Nullable final Period value) {
         this._maximumOutboundJitter = value;
     }
@@ -458,6 +475,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumOutboundPacketLossRateInPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumOutboundPacketLossRateInPercentage(@javax.annotation.Nullable final Double value) {
         this._maximumOutboundPacketLossRateInPercentage = value;
     }
@@ -466,6 +484,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the maximumOutboundRoundTripDelay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumOutboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
         this._maximumOutboundRoundTripDelay = value;
     }
@@ -474,6 +493,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the mediaDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaDuration(@javax.annotation.Nullable final Period value) {
         this._mediaDuration = value;
     }
@@ -482,6 +502,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the networkLinkSpeedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkLinkSpeedInBytes(@javax.annotation.Nullable final Long value) {
         this._networkLinkSpeedInBytes = value;
     }
@@ -490,6 +511,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -498,6 +520,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the outboundPackets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutboundPackets(@javax.annotation.Nullable final Long value) {
         this._outboundPackets = value;
     }
@@ -506,6 +529,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the remoteIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteIPAddress(@javax.annotation.Nullable final String value) {
         this._remoteIPAddress = value;
     }
@@ -514,6 +538,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @param value Value to set for the remotePort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemotePort(@javax.annotation.Nullable final Integer value) {
         this._remotePort = value;
     }

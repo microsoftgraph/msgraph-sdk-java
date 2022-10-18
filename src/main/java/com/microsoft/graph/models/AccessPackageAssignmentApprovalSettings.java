@@ -23,6 +23,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageAssignmentApprovalSettings");
@@ -52,7 +53,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentApprovalSettings currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("isApprovalRequiredForAdd", (n) -> { currentObject.setIsApprovalRequiredForAdd(n.getBooleanValue()); });
             this.put("isApprovalRequiredForUpdate", (n) -> { currentObject.setIsApprovalRequiredForUpdate(n.getBooleanValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isApprovalRequiredForAdd", this.getIsApprovalRequiredForAdd());
@@ -109,6 +111,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the isApprovalRequiredForAdd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequiredForAdd(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequiredForAdd = value;
     }
@@ -125,6 +129,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the isApprovalRequiredForUpdate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequiredForUpdate(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequiredForUpdate = value;
     }
@@ -133,6 +138,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHo
      * @param value Value to set for the stages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<AccessPackageApprovalStage> value) {
         this._stages = value;
     }

@@ -46,6 +46,7 @@ public class Domain extends Entity implements Parsable {
      * Instantiates a new Domain and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Domain() {
         super();
         this.setOdataType("#microsoft.graph.domain");
@@ -99,7 +100,7 @@ public class Domain extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Domain currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getStringValue()); });
             this.put("availabilityStatus", (n) -> { currentObject.setAvailabilityStatus(n.getStringValue()); });
             this.put("domainNameReferences", (n) -> { currentObject.setDomainNameReferences(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -228,6 +229,7 @@ public class Domain extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -254,6 +256,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationType(@javax.annotation.Nullable final String value) {
         this._authenticationType = value;
     }
@@ -262,6 +265,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the availabilityStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityStatus(@javax.annotation.Nullable final String value) {
         this._availabilityStatus = value;
     }
@@ -270,6 +274,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the domainNameReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainNameReferences(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._domainNameReferences = value;
     }
@@ -278,6 +283,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the federationConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederationConfiguration(@javax.annotation.Nullable final java.util.List<InternalDomainFederation> value) {
         this._federationConfiguration = value;
     }
@@ -286,6 +292,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the isAdminManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAdminManaged(@javax.annotation.Nullable final Boolean value) {
         this._isAdminManaged = value;
     }
@@ -294,6 +301,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -302,6 +310,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the isInitial property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInitial(@javax.annotation.Nullable final Boolean value) {
         this._isInitial = value;
     }
@@ -310,6 +319,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the isRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRoot(@javax.annotation.Nullable final Boolean value) {
         this._isRoot = value;
     }
@@ -318,6 +328,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the isVerified property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsVerified(@javax.annotation.Nullable final Boolean value) {
         this._isVerified = value;
     }
@@ -326,6 +337,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -334,6 +346,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -342,6 +355,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the passwordNotificationWindowInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordNotificationWindowInDays(@javax.annotation.Nullable final Integer value) {
         this._passwordNotificationWindowInDays = value;
     }
@@ -350,6 +364,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the passwordValidityPeriodInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordValidityPeriodInDays(@javax.annotation.Nullable final Integer value) {
         this._passwordValidityPeriodInDays = value;
     }
@@ -358,6 +373,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the serviceConfigurationRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceConfigurationRecords(@javax.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
         this._serviceConfigurationRecords = value;
     }
@@ -366,6 +382,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final DomainState value) {
         this._state = value;
     }
@@ -374,6 +391,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the supportedServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedServices(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedServices = value;
     }
@@ -382,6 +400,7 @@ public class Domain extends Entity implements Parsable {
      * @param value Value to set for the verificationDnsRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerificationDnsRecords(@javax.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
         this._verificationDnsRecords = value;
     }

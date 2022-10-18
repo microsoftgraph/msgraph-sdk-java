@@ -36,6 +36,7 @@ public class CallRecord extends Entity implements Parsable {
      * Instantiates a new callRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallRecord() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.callRecord");
@@ -65,7 +66,7 @@ public class CallRecord extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -155,6 +156,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,6 +176,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -182,6 +185,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._joinWebUrl = value;
     }
@@ -190,6 +194,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -198,6 +203,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the modalities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._modalities = value;
     }
@@ -206,6 +212,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final IdentitySet value) {
         this._organizer = value;
     }
@@ -214,6 +221,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
         this._participants = value;
     }
@@ -222,6 +230,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the sessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessions(@javax.annotation.Nullable final java.util.List<Session> value) {
         this._sessions = value;
     }
@@ -230,6 +239,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -238,6 +248,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CallType value) {
         this._type = value;
     }
@@ -246,6 +257,7 @@ public class CallRecord extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Long value) {
         this._version = value;
     }

@@ -20,6 +20,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new checkinPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CheckinPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,7 +65,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CheckinPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("checkInAs", (n) -> { currentObject.setCheckInAs(n.getStringValue()); });
             this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
         }};
@@ -74,6 +75,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("checkInAs", this.getCheckInAs());
@@ -85,6 +87,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the checkInAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheckInAs(@javax.annotation.Nullable final String value) {
         this._checkInAs = value;
     }
@@ -101,6 +105,7 @@ public class CheckinPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
         this._comment = value;
     }

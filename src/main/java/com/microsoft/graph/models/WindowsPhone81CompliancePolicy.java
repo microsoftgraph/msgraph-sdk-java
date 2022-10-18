@@ -34,6 +34,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * Instantiates a new WindowsPhone81CompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81CompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81CompliancePolicy");
@@ -55,7 +56,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhone81CompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
             this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
             this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
@@ -162,6 +163,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -190,6 +193,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -198,6 +202,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -206,6 +211,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -214,6 +220,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -222,6 +229,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -230,6 +238,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -238,6 +247,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -246,6 +256,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -254,6 +265,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -262,6 +274,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }

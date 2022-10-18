@@ -15,6 +15,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      * Instantiates a new managedDeviceMobileAppConfigurationAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationAssignment() {
         super();
         this.setOdataType("#microsoft.graph.managedDeviceMobileAppConfigurationAssignment");
@@ -36,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceMobileAppConfigurationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

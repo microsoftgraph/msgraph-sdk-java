@@ -23,6 +23,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * Instantiates a new accessReviewReviewerScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewReviewerScope() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessReviewReviewerScope");
@@ -52,7 +53,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewReviewerScope currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +111,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +129,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
         this._query = value;
     }
@@ -133,6 +138,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param value Value to set for the queryRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
         this._queryRoot = value;
     }
@@ -141,6 +147,7 @@ public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
      * @param value Value to set for the queryType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
         this._queryType = value;
     }

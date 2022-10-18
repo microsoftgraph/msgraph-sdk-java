@@ -28,6 +28,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * Instantiates a new subjectRightsRequestHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestHistory() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.subjectRightsRequestHistory");
@@ -73,7 +74,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestHistory currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("changedBy", (n) -> { currentObject.setChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -119,6 +120,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("changedBy", this.getChangedBy());
@@ -134,6 +136,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the changedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._changedBy = value;
     }
@@ -150,6 +154,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -158,6 +163,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -166,6 +172,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the stage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final SubjectRightsRequestStage value) {
         this._stage = value;
     }
@@ -174,6 +181,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the stageStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageStatus(@javax.annotation.Nullable final SubjectRightsRequestStageStatus value) {
         this._stageStatus = value;
     }
@@ -182,6 +190,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

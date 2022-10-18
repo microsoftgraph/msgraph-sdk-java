@@ -41,6 +41,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.searchRequest");
@@ -110,7 +111,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchRequest currentObject = this;
-        return new HashMap<>(13) {{
+        return new HashMap<String, Consumer<ParseNode>>(13) {{
             this.put("aggregationFilters", (n) -> { currentObject.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
             this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -195,6 +196,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
@@ -217,6 +219,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -225,6 +228,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregationFilters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAggregationFilters(@javax.annotation.Nullable final java.util.List<String> value) {
         this._aggregationFilters = value;
     }
@@ -233,6 +237,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
         this._aggregations = value;
     }
@@ -241,6 +246,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentSources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._contentSources = value;
     }
@@ -249,6 +255,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enableTopResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableTopResults(@javax.annotation.Nullable final Boolean value) {
         this._enableTopResults = value;
     }
@@ -257,6 +264,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
         this._entityTypes = value;
     }
@@ -265,6 +273,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
         this._fields = value;
     }
@@ -273,6 +282,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Integer value) {
         this._from = value;
     }
@@ -281,6 +291,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -289,6 +300,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final SearchQuery value) {
         this._query = value;
     }
@@ -297,6 +309,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryAlterationOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryAlterationOptions(@javax.annotation.Nullable final SearchAlterationOptions value) {
         this._queryAlterationOptions = value;
     }
@@ -305,6 +318,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultTemplateOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultTemplateOptions(@javax.annotation.Nullable final ResultTemplateOption value) {
         this._resultTemplateOptions = value;
     }
@@ -313,6 +327,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
         this._size = value;
     }
@@ -321,6 +336,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sortProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortProperties(@javax.annotation.Nullable final java.util.List<SortProperty> value) {
         this._sortProperties = value;
     }

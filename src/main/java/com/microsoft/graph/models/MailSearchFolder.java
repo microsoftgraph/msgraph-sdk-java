@@ -20,6 +20,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * Instantiates a new MailSearchFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailSearchFolder() {
         super();
         this.setOdataType("#microsoft.graph.mailSearchFolder");
@@ -41,7 +42,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailSearchFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("filterQuery", (n) -> { currentObject.setFilterQuery(n.getStringValue()); });
             this.put("includeNestedFolders", (n) -> { currentObject.setIncludeNestedFolders(n.getBooleanValue()); });
             this.put("isSupported", (n) -> { currentObject.setIsSupported(n.getBooleanValue()); });
@@ -85,6 +86,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * @param value Value to set for the filterQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilterQuery(@javax.annotation.Nullable final String value) {
         this._filterQuery = value;
     }
@@ -106,6 +109,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * @param value Value to set for the includeNestedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeNestedFolders(@javax.annotation.Nullable final Boolean value) {
         this._includeNestedFolders = value;
     }
@@ -114,6 +118,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * @param value Value to set for the isSupported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSupported(@javax.annotation.Nullable final Boolean value) {
         this._isSupported = value;
     }
@@ -122,6 +127,7 @@ public class MailSearchFolder extends MailFolder implements Parsable {
      * @param value Value to set for the sourceFolderIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceFolderIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sourceFolderIds = value;
     }

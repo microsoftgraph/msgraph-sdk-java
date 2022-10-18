@@ -20,6 +20,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * Instantiates a new RichLongRunningOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RichLongRunningOperation() {
         super();
         this.setOdataType("#microsoft.graph.richLongRunningOperation");
@@ -49,7 +50,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RichLongRunningOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("percentageComplete", (n) -> { currentObject.setPercentageComplete(n.getIntegerValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }
@@ -106,6 +109,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param value Value to set for the percentageComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPercentageComplete(@javax.annotation.Nullable final Integer value) {
         this._percentageComplete = value;
     }
@@ -114,6 +118,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -122,6 +127,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

@@ -23,6 +23,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * Instantiates a new StsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StsPolicy() {
         super();
         this.setOdataType("#microsoft.graph.stsPolicy");
@@ -71,7 +72,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("definition", (n) -> { currentObject.setDefinition(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("isOrganizationDefault", (n) -> { currentObject.setIsOrganizationDefault(n.getBooleanValue()); });
@@ -90,6 +91,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -102,6 +104,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._appliesTo = value;
     }
@@ -110,6 +113,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final java.util.List<String> value) {
         this._definition = value;
     }
@@ -118,6 +122,7 @@ public class StsPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the isOrganizationDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOrganizationDefault(@javax.annotation.Nullable final Boolean value) {
         this._isOrganizationDefault = value;
     }

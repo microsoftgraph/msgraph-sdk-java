@@ -30,6 +30,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * Instantiates a new deviceManagementPartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementPartner() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementPartner");
@@ -59,7 +60,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementPartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isConfigured", (n) -> { currentObject.setIsConfigured(n.getBooleanValue()); });
             this.put("lastHeartbeatDateTime", (n) -> { currentObject.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
@@ -131,6 +132,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -156,6 +159,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the isConfigured property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsConfigured(@javax.annotation.Nullable final Boolean value) {
         this._isConfigured = value;
     }
@@ -164,6 +168,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the lastHeartbeatDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastHeartbeatDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastHeartbeatDateTime = value;
     }
@@ -172,6 +177,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the partnerAppType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerAppType(@javax.annotation.Nullable final DeviceManagementPartnerAppType value) {
         this._partnerAppType = value;
     }
@@ -180,6 +186,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the partnerState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerState(@javax.annotation.Nullable final DeviceManagementPartnerTenantState value) {
         this._partnerState = value;
     }
@@ -188,6 +195,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the singleTenantAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleTenantAppId(@javax.annotation.Nullable final String value) {
         this._singleTenantAppId = value;
     }
@@ -196,6 +204,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime = value;
     }
@@ -204,6 +213,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
      * @param value Value to set for the whenPartnerDevicesWillBeRemovedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWhenPartnerDevicesWillBeRemovedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._whenPartnerDevicesWillBeRemovedDateTime = value;
     }

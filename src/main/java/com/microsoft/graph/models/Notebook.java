@@ -28,6 +28,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * Instantiates a new Notebook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Notebook() {
         super();
         this.setOdataType("#microsoft.graph.notebook");
@@ -49,7 +50,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Notebook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
             this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(NotebookLinks::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -154,6 +157,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
         this._isShared = value;
     }
@@ -162,6 +166,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final NotebookLinks value) {
         this._links = value;
     }
@@ -170,6 +175,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the sectionGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroups(@javax.annotation.Nullable final java.util.List<SectionGroup> value) {
         this._sectionGroups = value;
     }
@@ -178,6 +184,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the sectionGroupsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
         this._sectionGroupsUrl = value;
     }
@@ -186,6 +193,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the sections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSections(@javax.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this._sections = value;
     }
@@ -194,6 +202,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the sectionsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionsUrl(@javax.annotation.Nullable final String value) {
         this._sectionsUrl = value;
     }
@@ -202,6 +211,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
      * @param value Value to set for the userRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRole(@javax.annotation.Nullable final OnenoteUserRole value) {
         this._userRole = value;
     }

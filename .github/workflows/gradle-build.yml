@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Gradle Build and Compare Package
 
 on:
   push:
@@ -21,12 +21,12 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
-      - name: Easy detect-secrets
+      - name: Detect Secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
-      - name: Grant execute permission for gradlew
+      - name: Grant Execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
@@ -65,7 +65,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
       - name: Download Current Build
@@ -74,7 +74,7 @@ jobs:
           name: drop
           path: artifacts/current/
       - name: Download Last Successful Build
-        uses: dawidd6/action-download-artifact@v2.23.0
+        uses: dawidd6/action-download-artifact@v2.24.0
         with: 
           workflow: preview-and-release.yml
           workflow_conclusion: success

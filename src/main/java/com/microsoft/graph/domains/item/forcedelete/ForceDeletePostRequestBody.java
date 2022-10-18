@@ -18,6 +18,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new forceDeletePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ForceDeletePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,7 +55,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ForceDeletePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("disableUserAccounts", (n) -> { currentObject.setDisableUserAccounts(n.getBooleanValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("disableUserAccounts", this.getDisableUserAccounts());
@@ -73,6 +75,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the disableUserAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableUserAccounts(@javax.annotation.Nullable final Boolean value) {
         this._disableUserAccounts = value;
     }

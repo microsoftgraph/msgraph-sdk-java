@@ -27,6 +27,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Instantiates a new UnifiedRoleAssignmentScheduleInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleAssignmentScheduleInstance");
@@ -72,7 +73,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentScheduleInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
             this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -119,6 +120,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivatedUsing(@javax.annotation.Nullable final UnifiedRoleEligibilityScheduleInstance value) {
         this._activatedUsing = value;
     }
@@ -143,6 +146,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentType(@javax.annotation.Nullable final String value) {
         this._assignmentType = value;
     }
@@ -151,6 +155,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -159,6 +164,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
         this._memberType = value;
     }
@@ -167,6 +173,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the roleAssignmentOriginId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentOriginId(@javax.annotation.Nullable final String value) {
         this._roleAssignmentOriginId = value;
     }
@@ -175,6 +182,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the roleAssignmentScheduleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentScheduleId(@javax.annotation.Nullable final String value) {
         this._roleAssignmentScheduleId = value;
     }
@@ -183,6 +191,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

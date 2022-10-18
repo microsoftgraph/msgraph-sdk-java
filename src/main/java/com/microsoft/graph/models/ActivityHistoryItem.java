@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class ActivityHistoryItem extends Entity implements Parsable {
     /** Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime. */
     private Integer _activeDurationSeconds;
@@ -32,6 +32,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Instantiates a new activityHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivityHistoryItem() {
         super();
         this.setOdataType("#microsoft.graph.activityHistoryItem");
@@ -85,7 +86,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivityHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeDurationSeconds", (n) -> { currentObject.setActiveDurationSeconds(n.getIntegerValue()); });
             this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(UserActivity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -142,6 +143,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the activeDurationSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDurationSeconds(@javax.annotation.Nullable final Integer value) {
         this._activeDurationSeconds = value;
     }
@@ -168,6 +171,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final UserActivity value) {
         this._activity = value;
     }
@@ -176,6 +180,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -184,6 +189,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -192,6 +198,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the lastActiveDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActiveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActiveDateTime = value;
     }
@@ -200,6 +207,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -208,6 +216,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startedDateTime = value;
     }
@@ -216,6 +225,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Status value) {
         this._status = value;
     }
@@ -224,6 +234,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param value Value to set for the userTimezone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTimezone(@javax.annotation.Nullable final String value) {
         this._userTimezone = value;
     }

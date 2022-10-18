@@ -28,6 +28,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * Instantiates a new certification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Certification() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.certification");
@@ -73,7 +74,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Certification currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
             this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
             this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
@@ -119,11 +120,10 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("certificationDetailsUrl", this.getCertificationDetailsUrl());
         writer.writeOffsetDateTimeValue("certificationExpirationDateTime", this.getCertificationExpirationDateTime());
-        writer.writeBooleanValue("isCertifiedByMicrosoft", this.getIsCertifiedByMicrosoft());
         writer.writeBooleanValue("isPublisherAttested", this.getIsPublisherAttested());
         writer.writeOffsetDateTimeValue("lastCertificationDateTime", this.getLastCertificationDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -134,6 +134,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificationDetailsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationDetailsUrl(@javax.annotation.Nullable final String value) {
         this._certificationDetailsUrl = value;
     }
@@ -150,6 +152,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificationExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._certificationExpirationDateTime = value;
     }
@@ -158,6 +161,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isCertifiedByMicrosoft property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCertifiedByMicrosoft(@javax.annotation.Nullable final Boolean value) {
         this._isCertifiedByMicrosoft = value;
     }
@@ -166,6 +170,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPublisherAttested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPublisherAttested(@javax.annotation.Nullable final Boolean value) {
         this._isPublisherAttested = value;
     }
@@ -174,6 +179,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastCertificationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCertificationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCertificationDateTime = value;
     }
@@ -182,6 +188,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

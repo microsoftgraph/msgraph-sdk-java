@@ -28,6 +28,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * Instantiates a new BookingCustomerInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingCustomerInformation() {
         super();
         this.setOdataType("#microsoft.graph.bookingCustomerInformation");
@@ -73,7 +74,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingCustomerInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
             this.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(BookingQuestionAnswer::createFromDiscriminatorValue)); });
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
         this._customerId = value;
     }
@@ -154,6 +157,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customQuestionAnswers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestionAnswers(@javax.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
         this._customQuestionAnswers = value;
     }
@@ -162,6 +166,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }
@@ -170,6 +175,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final Location value) {
         this._location = value;
     }
@@ -178,6 +184,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -186,6 +193,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -194,6 +202,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
         this._phone = value;
     }
@@ -202,6 +211,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
         this._timeZone = value;
     }

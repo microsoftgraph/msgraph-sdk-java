@@ -24,6 +24,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Instantiates a new SamlOrWsFedProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SamlOrWsFedProvider() {
         super();
         this.setOdataType("#microsoft.graph.samlOrWsFedProvider");
@@ -53,7 +54,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SamlOrWsFedProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("issuerUri", (n) -> { currentObject.setIssuerUri(n.getStringValue()); });
             this.put("metadataExchangeUri", (n) -> { currentObject.setMetadataExchangeUri(n.getStringValue()); });
             this.put("passiveSignInUri", (n) -> { currentObject.setPassiveSignInUri(n.getStringValue()); });
@@ -106,6 +107,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -120,6 +122,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the issuerUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuerUri(@javax.annotation.Nullable final String value) {
         this._issuerUri = value;
     }
@@ -128,6 +131,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the metadataExchangeUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadataExchangeUri(@javax.annotation.Nullable final String value) {
         this._metadataExchangeUri = value;
     }
@@ -136,6 +140,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the passiveSignInUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassiveSignInUri(@javax.annotation.Nullable final String value) {
         this._passiveSignInUri = value;
     }
@@ -144,6 +149,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the preferredAuthenticationProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredAuthenticationProtocol(@javax.annotation.Nullable final AuthenticationProtocol value) {
         this._preferredAuthenticationProtocol = value;
     }
@@ -152,6 +158,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the signingCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningCertificate(@javax.annotation.Nullable final String value) {
         this._signingCertificate = value;
     }

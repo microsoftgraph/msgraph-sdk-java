@@ -27,6 +27,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new teamMessagingSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamMessagingSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamMessagingSettings");
@@ -96,7 +97,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamMessagingSettings currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("allowChannelMentions", (n) -> { currentObject.setAllowChannelMentions(n.getBooleanValue()); });
             this.put("allowOwnerDeleteMessages", (n) -> { currentObject.setAllowOwnerDeleteMessages(n.getBooleanValue()); });
             this.put("allowTeamMentions", (n) -> { currentObject.setAllowTeamMentions(n.getBooleanValue()); });
@@ -118,6 +119,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowChannelMentions", this.getAllowChannelMentions());
@@ -133,6 +135,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowChannelMentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowChannelMentions(@javax.annotation.Nullable final Boolean value) {
         this._allowChannelMentions = value;
     }
@@ -149,6 +153,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowOwnerDeleteMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowOwnerDeleteMessages(@javax.annotation.Nullable final Boolean value) {
         this._allowOwnerDeleteMessages = value;
     }
@@ -157,6 +162,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowTeamMentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTeamMentions(@javax.annotation.Nullable final Boolean value) {
         this._allowTeamMentions = value;
     }
@@ -165,6 +171,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowUserDeleteMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUserDeleteMessages(@javax.annotation.Nullable final Boolean value) {
         this._allowUserDeleteMessages = value;
     }
@@ -173,6 +180,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowUserEditMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUserEditMessages(@javax.annotation.Nullable final Boolean value) {
         this._allowUserEditMessages = value;
     }
@@ -181,6 +189,7 @@ public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

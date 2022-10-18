@@ -24,6 +24,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * Instantiates a new eBookInstallSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EBookInstallSummary() {
         super();
         this.setOdataType("#microsoft.graph.eBookInstallSummary");
@@ -61,7 +62,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EBookInstallSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
             this.put("failedUserCount", (n) -> { currentObject.setFailedUserCount(n.getIntegerValue()); });
             this.put("installedDeviceCount", (n) -> { currentObject.setInstalledDeviceCount(n.getIntegerValue()); });
@@ -107,6 +108,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._failedDeviceCount = value;
     }
@@ -130,6 +133,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the failedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedUserCount(@javax.annotation.Nullable final Integer value) {
         this._failedUserCount = value;
     }
@@ -138,6 +142,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the installedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._installedDeviceCount = value;
     }
@@ -146,6 +151,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the installedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledUserCount(@javax.annotation.Nullable final Integer value) {
         this._installedUserCount = value;
     }
@@ -154,6 +160,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the notInstalledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._notInstalledDeviceCount = value;
     }
@@ -162,6 +169,7 @@ public class EBookInstallSummary extends Entity implements Parsable {
      * @param value Value to set for the notInstalledUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotInstalledUserCount(@javax.annotation.Nullable final Integer value) {
         this._notInstalledUserCount = value;
     }

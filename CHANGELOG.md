@@ -11,7 +11,69 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-## [5.35.0] - 2022-09-015
+## [5.38.0] - 2022-10-12
+
+### Added
+
+- AssignedTrainingInfo model. 
+- AttackSimulationRepeatOffender model. 
+- AttackSimulationSimulationUserCoverage model. 
+- AttackSimulationTrainingUserCoverage model. 
+- AttackSimulationUser model. 
+- EmailIdentity model. 
+- PayloadDeliveryPlatform model. 
+- RecommendedAction model. 
+- TrainingEventsContent model. 
+- TrainingStatus model. 
+- AccessPackageAssignmentAdditionalAccess models and related requests. 
+- AttackSimulationRoot model and related requests. 
+- AuthenticationContextClassReference model and related requests. 
+- ReportRootGetM365App models and related requests. 
+- SecurityReportsRoot models and related requests. 
+- Simulation models and related requests. 
+- TeamworkSendActivityNotificationToRecipients models and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
+## [5.37.0] - 2022-09-28
+
+### Added
+
+- AuthorizationInfo model. 
+- BroadcastMeetingCaptionSettings model. 
+- AddLargeGalleryViewOperation model and related requests. 
+- CallAddLargeGalleryView models and related requests. 
+- TeamworkTag models and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+
+## [5.36.0] - 2022-09-22
+
+### Added
+
+- MessagePinnedEventMessageDetail model. 
+- MessageUnpinnedEventMessageDetail model. 
+- RedirectUriSettings model. 
+- X509Certificate models. 
+- ContentSharingSession model and related requests. 
+- PinnedChatMessageInfo model and related requests. 
+- X509CertificateAuthentication models and related requests. 
+- ChatMessageReference requests. 
+- ChatMessageWithReference requests.
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+- Removed RestrictedSignIn models and related requests. 
+
+## [5.35.0] - 2022-09-15
 
 ### Added
 

@@ -18,6 +18,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * Instantiates a new CustomTimeZone and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomTimeZone() {
         super();
         this.setOdataType("#microsoft.graph.customTimeZone");
@@ -55,7 +56,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTimeZone currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("bias", (n) -> { currentObject.setBias(n.getIntegerValue()); });
             this.put("daylightOffset", (n) -> { currentObject.setDaylightOffset(n.getObjectValue(DaylightTimeZoneOffset::createFromDiscriminatorValue)); });
             this.put("standardOffset", (n) -> { currentObject.setStandardOffset(n.getObjectValue(StandardTimeZoneOffset::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * @param value Value to set for the bias property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBias(@javax.annotation.Nullable final Integer value) {
         this._bias = value;
     }
@@ -94,6 +97,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * @param value Value to set for the daylightOffset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDaylightOffset(@javax.annotation.Nullable final DaylightTimeZoneOffset value) {
         this._daylightOffset = value;
     }
@@ -102,6 +106,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      * @param value Value to set for the standardOffset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStandardOffset(@javax.annotation.Nullable final StandardTimeZoneOffset value) {
         this._standardOffset = value;
     }

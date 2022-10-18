@@ -33,6 +33,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestorSettings");
@@ -118,7 +119,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequestorSettings currentObject = this;
-        return new HashMap<>(9) {{
+        return new HashMap<String, Consumer<ParseNode>>(9) {{
             this.put("allowCustomAssignmentSchedule", (n) -> { currentObject.setAllowCustomAssignmentSchedule(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToAddAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToAddAccess(n.getBooleanValue()); });
             this.put("enableOnBehalfRequestorsToRemoveAccess", (n) -> { currentObject.setEnableOnBehalfRequestorsToRemoveAccess(n.getBooleanValue()); });
@@ -151,6 +152,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomAssignmentSchedule", this.getAllowCustomAssignmentSchedule());
@@ -169,6 +171,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the allowCustomAssignmentSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowCustomAssignmentSchedule(@javax.annotation.Nullable final Boolean value) {
         this._allowCustomAssignmentSchedule = value;
     }
@@ -185,6 +189,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToAddAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToAddAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableOnBehalfRequestorsToAddAccess = value;
     }
@@ -193,6 +198,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToRemoveAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableOnBehalfRequestorsToRemoveAccess = value;
     }
@@ -201,6 +207,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableOnBehalfRequestorsToUpdateAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableOnBehalfRequestorsToUpdateAccess = value;
     }
@@ -209,6 +216,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfAddAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableTargetsToSelfAddAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableTargetsToSelfAddAccess = value;
     }
@@ -217,6 +225,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfRemoveAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableTargetsToSelfRemoveAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableTargetsToSelfRemoveAccess = value;
     }
@@ -225,6 +234,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the enableTargetsToSelfUpdateAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableTargetsToSelfUpdateAccess(@javax.annotation.Nullable final Boolean value) {
         this._enableTargetsToSelfUpdateAccess = value;
     }
@@ -233,6 +243,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -241,6 +252,7 @@ public class AccessPackageAssignmentRequestorSettings implements AdditionalDataH
      * @param value Value to set for the onBehalfRequestors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnBehalfRequestors(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
         this._onBehalfRequestors = value;
     }

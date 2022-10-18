@@ -24,6 +24,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Instantiates a new DomainDnsSrvRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainDnsSrvRecord() {
         super();
         this.setOdataType("#microsoft.graph.domainDnsSrvRecord");
@@ -45,7 +46,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsSrvRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("nameTarget", (n) -> { currentObject.setNameTarget(n.getStringValue()); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
             this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
@@ -107,6 +108,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the nameTarget property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNameTarget(@javax.annotation.Nullable final String value) {
         this._nameTarget = value;
     }
@@ -130,6 +133,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
         this._port = value;
     }
@@ -138,6 +142,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -146,6 +151,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the protocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtocol(@javax.annotation.Nullable final String value) {
         this._protocol = value;
     }
@@ -154,6 +160,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
         this._service = value;
     }
@@ -162,6 +169,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the weight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final Integer value) {
         this._weight = value;
     }

@@ -16,6 +16,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      * Instantiates a new AttributeRuleMembers and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeRuleMembers() {
         super();
         this.setOdataType("#microsoft.graph.attributeRuleMembers");
@@ -45,7 +46,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeRuleMembers currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("membershipRule", (n) -> { currentObject.setMembershipRule(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -82,6 +85,7 @@ public class AttributeRuleMembers extends SubjectSet implements Parsable {
      * @param value Value to set for the membershipRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembershipRule(@javax.annotation.Nullable final String value) {
         this._membershipRule = value;
     }

@@ -32,6 +32,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Instantiates a new AndroidManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppProtection");
@@ -109,7 +110,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
             this.put("customBrowserDisplayName", (n) -> { currentObject.setCustomBrowserDisplayName(n.getStringValue()); });
             this.put("customBrowserPackageId", (n) -> { currentObject.setCustomBrowserPackageId(n.getStringValue()); });
@@ -151,6 +152,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -178,6 +181,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customBrowserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
         this._customBrowserDisplayName = value;
     }
@@ -186,6 +190,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customBrowserPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
         this._customBrowserPackageId = value;
     }
@@ -194,6 +199,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -202,6 +208,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -210,6 +217,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
@@ -218,6 +226,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the encryptAppData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
         this._encryptAppData = value;
     }
@@ -226,6 +235,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumRequiredPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredPatchVersion = value;
     }
@@ -234,6 +244,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumWarningPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningPatchVersion = value;
     }
@@ -242,6 +253,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }

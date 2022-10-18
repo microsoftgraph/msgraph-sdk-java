@@ -23,6 +23,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary() {
         super();
         this.setOdataType("#microsoft.graph.managedAppPolicyDeploymentSummary");
@@ -68,7 +69,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppPolicyDeploymentSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configurationDeployedUserCount", (n) -> { currentObject.setConfigurationDeployedUserCount(n.getIntegerValue()); });
             this.put("configurationDeploymentSummaryPerApp", (n) -> { currentObject.setConfigurationDeploymentSummaryPerApp(n.getCollectionOfObjectValues(ManagedAppPolicyDeploymentSummaryPerApp::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the configurationDeployedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationDeployedUserCount(@javax.annotation.Nullable final Integer value) {
         this._configurationDeployedUserCount = value;
     }
@@ -119,6 +122,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the configurationDeploymentSummaryPerApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationDeploymentSummaryPerApp(@javax.annotation.Nullable final java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> value) {
         this._configurationDeploymentSummaryPerApp = value;
     }
@@ -127,6 +131,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -135,6 +140,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the lastRefreshTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshTime = value;
     }
@@ -143,6 +149,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsabl
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

@@ -25,6 +25,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new securityVendorInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityVendorInformation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.securityVendorInformation");
@@ -54,7 +55,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityVendorInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provider", (n) -> { currentObject.setProvider(n.getStringValue()); });
             this.put("providerVersion", (n) -> { currentObject.setProviderVersion(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +123,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +141,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the provider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final String value) {
         this._provider = value;
     }
@@ -145,6 +150,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the providerVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderVersion(@javax.annotation.Nullable final String value) {
         this._providerVersion = value;
     }
@@ -153,6 +159,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the subProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubProvider(@javax.annotation.Nullable final String value) {
         this._subProvider = value;
     }
@@ -161,6 +168,7 @@ public class SecurityVendorInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
         this._vendor = value;
     }

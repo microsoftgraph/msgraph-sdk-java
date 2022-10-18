@@ -25,6 +25,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * Instantiates a new fileSecurityState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileSecurityState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.fileSecurityState");
@@ -54,7 +55,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileSecurityState currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("fileHash", (n) -> { currentObject.setFileHash(n.getObjectValue(FileHash::createFromDiscriminatorValue)); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("fileHash", this.getFileHash());
@@ -121,6 +123,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHash(@javax.annotation.Nullable final FileHash value) {
         this._fileHash = value;
     }
@@ -137,6 +141,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -145,6 +150,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }
@@ -161,6 +168,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }

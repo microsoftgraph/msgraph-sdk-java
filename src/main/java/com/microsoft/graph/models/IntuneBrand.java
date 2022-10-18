@@ -46,6 +46,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Instantiates a new intuneBrand and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.intuneBrand");
@@ -123,7 +124,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IntuneBrand currentObject = this;
-        return new HashMap<>(15) {{
+        return new HashMap<String, Consumer<ParseNode>>(15) {{
             this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
             this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
             this.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });
@@ -218,6 +219,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contactITEmailAddress", this.getContactITEmailAddress());
@@ -242,6 +244,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -250,6 +253,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
         this._contactITEmailAddress = value;
     }
@@ -258,6 +262,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITName(@javax.annotation.Nullable final String value) {
         this._contactITName = value;
     }
@@ -266,6 +271,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITNotes(@javax.annotation.Nullable final String value) {
         this._contactITNotes = value;
     }
@@ -274,6 +280,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITPhoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
         this._contactITPhoneNumber = value;
     }
@@ -282,6 +289,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the darkBackgroundLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDarkBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
         this._darkBackgroundLogo = value;
     }
@@ -290,6 +298,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -298,6 +307,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lightBackgroundLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
         this._lightBackgroundLogo = value;
     }
@@ -306,6 +316,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -314,6 +325,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
         this._onlineSupportSiteName = value;
     }
@@ -322,6 +334,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
         this._onlineSupportSiteUrl = value;
     }
@@ -330,6 +343,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
         this._privacyUrl = value;
     }
@@ -338,6 +352,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showDisplayNameNextToLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
         this._showDisplayNameNextToLogo = value;
     }
@@ -346,6 +361,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
         this._showLogo = value;
     }
@@ -354,6 +370,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showNameNextToLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
         this._showNameNextToLogo = value;
     }
@@ -362,6 +379,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the themeColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
         this._themeColor = value;
     }

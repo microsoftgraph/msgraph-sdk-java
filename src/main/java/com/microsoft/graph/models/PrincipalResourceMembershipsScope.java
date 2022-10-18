@@ -16,6 +16,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrincipalResourceMembershipsScope() {
         super();
         this.setOdataType("#microsoft.graph.principalResourceMembershipsScope");
@@ -37,7 +38,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrincipalResourceMembershipsScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("principalScopes", (n) -> { currentObject.setPrincipalScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
             this.put("resourceScopes", (n) -> { currentObject.setResourceScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param value Value to set for the principalScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this._principalScopes = value;
     }
@@ -82,6 +85,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param value Value to set for the resourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this._resourceScopes = value;
     }

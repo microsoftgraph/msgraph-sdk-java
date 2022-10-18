@@ -24,6 +24,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * Instantiates a new bitLockerRemovableDrivePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BitLockerRemovableDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.bitLockerRemovableDrivePolicy");
@@ -69,7 +70,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BitLockerRemovableDrivePolicy currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("blockCrossOrganizationWriteAccess", (n) -> { currentObject.setBlockCrossOrganizationWriteAccess(n.getBooleanValue()); });
             this.put("encryptionMethod", (n) -> { currentObject.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("blockCrossOrganizationWriteAccess", this.getBlockCrossOrganizationWriteAccess());
@@ -110,6 +112,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the blockCrossOrganizationWriteAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockCrossOrganizationWriteAccess(@javax.annotation.Nullable final Boolean value) {
         this._blockCrossOrganizationWriteAccess = value;
     }
@@ -126,6 +130,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the encryptionMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionMethod(@javax.annotation.Nullable final BitLockerEncryptionMethod value) {
         this._encryptionMethod = value;
     }
@@ -134,6 +139,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +148,7 @@ public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the requireEncryptionForWriteAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireEncryptionForWriteAccess(@javax.annotation.Nullable final Boolean value) {
         this._requireEncryptionForWriteAccess = value;
     }

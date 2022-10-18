@@ -21,6 +21,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleInstance");
@@ -50,7 +51,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleEligibilityScheduleInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
             this.put("roleEligibilityScheduleId", (n) -> { currentObject.setRoleEligibilityScheduleId(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -107,6 +110,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
         this._memberType = value;
     }
@@ -115,6 +119,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the roleEligibilityScheduleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleId(@javax.annotation.Nullable final String value) {
         this._roleEligibilityScheduleId = value;
     }
@@ -123,6 +128,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

@@ -14,6 +14,7 @@ public class AppHostedMediaConfig extends MediaConfig implements Parsable {
      * Instantiates a new AppHostedMediaConfig and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppHostedMediaConfig() {
         super();
         this.setOdataType("#microsoft.graph.appHostedMediaConfig");
@@ -43,7 +44,7 @@ public class AppHostedMediaConfig extends MediaConfig implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppHostedMediaConfig currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("blob", (n) -> { currentObject.setBlob(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AppHostedMediaConfig extends MediaConfig implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AppHostedMediaConfig extends MediaConfig implements Parsable {
      * @param value Value to set for the blob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlob(@javax.annotation.Nullable final String value) {
         this._blob = value;
     }

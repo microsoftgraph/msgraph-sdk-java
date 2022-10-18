@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class OutlookCategory extends Entity implements Parsable {
     /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below. */
     private CategoryColor _color;
@@ -17,6 +17,7 @@ public class OutlookCategory extends Entity implements Parsable {
      * Instantiates a new outlookCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookCategory() {
         super();
         this.setOdataType("#microsoft.graph.outlookCategory");
@@ -54,7 +55,7 @@ public class OutlookCategory extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("color", (n) -> { currentObject.setColor(n.getEnumValue(CategoryColor.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
         }};
@@ -64,6 +65,7 @@ public class OutlookCategory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class OutlookCategory extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final CategoryColor value) {
         this._color = value;
     }
@@ -83,6 +86,7 @@ public class OutlookCategory extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

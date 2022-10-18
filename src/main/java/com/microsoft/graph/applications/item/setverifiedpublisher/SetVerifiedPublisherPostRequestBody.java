@@ -18,6 +18,7 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
      * Instantiates a new setVerifiedPublisherPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetVerifiedPublisherPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SetVerifiedPublisherPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("verifiedPublisherId", (n) -> { currentObject.setVerifiedPublisherId(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("verifiedPublisherId", this.getVerifiedPublisherId());
@@ -73,6 +75,7 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the verifiedPublisherId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedPublisherId(@javax.annotation.Nullable final String value) {
         this._verifiedPublisherId = value;
     }

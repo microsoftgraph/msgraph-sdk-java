@@ -20,6 +20,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * Instantiates a new ClientUserAgent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClientUserAgent() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.clientUserAgent");
@@ -57,7 +58,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClientUserAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
             this.put("communicationServiceId", (n) -> { currentObject.setCommunicationServiceId(n.getStringValue()); });
             this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(ClientPlatform.class)); });
@@ -85,6 +86,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADAppId(@javax.annotation.Nullable final String value) {
         this._azureADAppId = value;
     }
@@ -106,6 +109,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the communicationServiceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommunicationServiceId(@javax.annotation.Nullable final String value) {
         this._communicationServiceId = value;
     }
@@ -114,6 +118,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final ClientPlatform value) {
         this._platform = value;
     }
@@ -122,6 +127,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the productFamily property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductFamily(@javax.annotation.Nullable final ProductFamily value) {
         this._productFamily = value;
     }

@@ -14,6 +14,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudAppSecuritySessionControl() {
         super();
         this.setOdataType("#microsoft.graph.cloudAppSecuritySessionControl");
@@ -43,7 +44,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudAppSecuritySessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cloudAppSecurityType", (n) -> { currentObject.setCloudAppSecurityType(n.getEnumValue(CloudAppSecuritySessionControlType.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
      * @param value Value to set for the cloudAppSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudAppSecurityType(@javax.annotation.Nullable final CloudAppSecuritySessionControlType value) {
         this._cloudAppSecurityType = value;
     }

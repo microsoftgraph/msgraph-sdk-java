@@ -31,6 +31,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new createPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -83,7 +84,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreatePostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("certificateSigningRequest", (n) -> { currentObject.setCertificateSigningRequest(n.getObjectValue(PrintCertificateSigningRequest::createFromDiscriminatorValue)); });
             this.put("connectorId", (n) -> { currentObject.setConnectorId(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -130,6 +131,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("certificateSigningRequest", this.getCertificateSigningRequest());
@@ -146,6 +148,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificateSigningRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateSigningRequest(@javax.annotation.Nullable final PrintCertificateSigningRequest value) {
         this._certificateSigningRequest = value;
     }
@@ -162,6 +166,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the connectorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorId(@javax.annotation.Nullable final String value) {
         this._connectorId = value;
     }
@@ -170,6 +175,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -178,6 +184,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasPhysicalDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasPhysicalDevice(@javax.annotation.Nullable final Boolean value) {
         this._hasPhysicalDevice = value;
     }
@@ -186,6 +193,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -194,6 +202,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -202,6 +211,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the physicalDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhysicalDeviceId(@javax.annotation.Nullable final String value) {
         this._physicalDeviceId = value;
     }

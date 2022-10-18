@@ -19,6 +19,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new queryPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public QueryPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,7 +48,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QueryPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("requests", (n) -> { currentObject.setRequests(n.getCollectionOfObjectValues(SearchRequest::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("requests", this.getRequests());
@@ -74,6 +76,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the requests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequests(@javax.annotation.Nullable final java.util.List<SearchRequest> value) {
         this._requests = value;
     }

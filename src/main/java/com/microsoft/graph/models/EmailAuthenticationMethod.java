@@ -14,6 +14,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      * Instantiates a new EmailAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.emailAuthenticationMethod");
@@ -43,7 +44,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }

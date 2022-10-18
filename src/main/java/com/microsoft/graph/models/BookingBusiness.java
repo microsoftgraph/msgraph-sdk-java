@@ -30,6 +30,8 @@ public class BookingBusiness extends Entity implements Parsable {
     private String _email;
     /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
     private Boolean _isPublished;
+    /** The languageTag property */
+    private String _languageTag;
     /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
     private String _phone;
     /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
@@ -46,6 +48,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * Instantiates a new BookingBusiness and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingBusiness() {
         super();
         this.setOdataType("#microsoft.graph.bookingBusiness");
@@ -147,7 +150,7 @@ public class BookingBusiness extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BookingBusiness currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
             this.put("appointments", (n) -> { currentObject.setAppointments(n.getCollectionOfObjectValues(BookingAppointment::createFromDiscriminatorValue)); });
             this.put("businessHours", (n) -> { currentObject.setBusinessHours(n.getCollectionOfObjectValues(BookingWorkHours::createFromDiscriminatorValue)); });
@@ -159,6 +162,7 @@ public class BookingBusiness extends Entity implements Parsable {
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
             this.put("isPublished", (n) -> { currentObject.setIsPublished(n.getBooleanValue()); });
+            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
             this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
             this.put("publicUrl", (n) -> { currentObject.setPublicUrl(n.getStringValue()); });
             this.put("schedulingPolicy", (n) -> { currentObject.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
@@ -174,6 +178,14 @@ public class BookingBusiness extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getIsPublished() {
         return this._isPublished;
+    }
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getLanguageTag() {
+        return this._languageTag;
     }
     /**
      * Gets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
@@ -228,6 +240,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -241,9 +254,8 @@ public class BookingBusiness extends Entity implements Parsable {
         writer.writeStringValue("defaultCurrencyIso", this.getDefaultCurrencyIso());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
-        writer.writeBooleanValue("isPublished", this.getIsPublished());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeStringValue("phone", this.getPhone());
-        writer.writeStringValue("publicUrl", this.getPublicUrl());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeCollectionOfObjectValues("staffMembers", this.getStaffMembers());
@@ -254,6 +266,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
         this._address = value;
     }
@@ -262,6 +275,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the appointments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointments(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
         this._appointments = value;
     }
@@ -270,6 +284,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the businessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
         this._businessHours = value;
     }
@@ -278,6 +293,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the businessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessType(@javax.annotation.Nullable final String value) {
         this._businessType = value;
     }
@@ -286,6 +302,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<BookingAppointment> value) {
         this._calendarView = value;
     }
@@ -294,6 +311,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the customers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomers(@javax.annotation.Nullable final java.util.List<BookingCustomerBase> value) {
         this._customers = value;
     }
@@ -302,6 +320,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<BookingCustomQuestion> value) {
         this._customQuestions = value;
     }
@@ -310,6 +329,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the defaultCurrencyIso property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultCurrencyIso(@javax.annotation.Nullable final String value) {
         this._defaultCurrencyIso = value;
     }
@@ -318,6 +338,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -326,6 +347,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -334,14 +356,25 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the isPublished property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPublished(@javax.annotation.Nullable final Boolean value) {
         this._isPublished = value;
+    }
+    /**
+     * Sets the languageTag property value. The languageTag property
+     * @param value Value to set for the languageTag property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+        this._languageTag = value;
     }
     /**
      * Sets the phone property value. The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
         this._phone = value;
     }
@@ -350,6 +383,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the publicUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicUrl(@javax.annotation.Nullable final String value) {
         this._publicUrl = value;
     }
@@ -358,6 +392,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the schedulingPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedulingPolicy(@javax.annotation.Nullable final BookingSchedulingPolicy value) {
         this._schedulingPolicy = value;
     }
@@ -366,6 +401,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<BookingService> value) {
         this._services = value;
     }
@@ -374,6 +410,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the staffMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStaffMembers(@javax.annotation.Nullable final java.util.List<BookingStaffMemberBase> value) {
         this._staffMembers = value;
     }
@@ -382,6 +419,7 @@ public class BookingBusiness extends Entity implements Parsable {
      * @param value Value to set for the webSiteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebSiteUrl(@javax.annotation.Nullable final String value) {
         this._webSiteUrl = value;
     }

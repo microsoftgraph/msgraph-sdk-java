@@ -18,6 +18,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      * Instantiates a new TeamsAppUpgradedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppUpgradedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppUpgradedEventMessageDetail");
@@ -39,7 +40,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppUpgradedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamsAppDisplayName", (n) -> { currentObject.setTeamsAppDisplayName(n.getStringValue()); });
             this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -94,6 +97,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      * @param value Value to set for the teamsAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppDisplayName(@javax.annotation.Nullable final String value) {
         this._teamsAppDisplayName = value;
     }
@@ -102,6 +106,7 @@ public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail imple
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }

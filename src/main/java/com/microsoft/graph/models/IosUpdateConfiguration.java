@@ -21,6 +21,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * Instantiates a new IosUpdateConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosUpdateConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosUpdateConfiguration");
@@ -58,7 +59,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosUpdateConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
             this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
             this.put("scheduledInstallDays", (n) -> { currentObject.setScheduledInstallDays(n.getCollectionOfEnumValues(DayOfWeek.class)); });
@@ -86,6 +87,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the activeHoursEnd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
         this._activeHoursEnd = value;
     }
@@ -107,6 +110,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the activeHoursStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
         this._activeHoursStart = value;
     }
@@ -115,6 +119,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the scheduledInstallDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledInstallDays(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this._scheduledInstallDays = value;
     }
@@ -123,6 +128,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the utcTimeOffsetInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUtcTimeOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
         this._utcTimeOffsetInMinutes = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
     /** User source or SharePoint site data source as non-custodial data source. */
     private DataSource _dataSource;
@@ -17,6 +17,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryNoncustodialDataSource() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryNoncustodialDataSource");
@@ -46,7 +47,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryNoncustodialDataSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("dataSource", (n) -> { currentObject.setDataSource(n.getObjectValue(DataSource::createFromDiscriminatorValue)); });
             this.put("lastIndexOperation", (n) -> { currentObject.setLastIndexOperation(n.getObjectValue(EdiscoveryIndexOperation::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      * @param value Value to set for the dataSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSource(@javax.annotation.Nullable final DataSource value) {
         this._dataSource = value;
     }
@@ -83,6 +86,7 @@ public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implem
      * @param value Value to set for the lastIndexOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastIndexOperation(@javax.annotation.Nullable final EdiscoveryIndexOperation value) {
         this._lastIndexOperation = value;
     }

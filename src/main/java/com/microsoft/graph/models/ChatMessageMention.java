@@ -23,6 +23,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * Instantiates a new chatMessageMention and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageMention() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.chatMessageMention");
@@ -52,7 +53,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMention currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("id", (n) -> { currentObject.setId(n.getIntegerValue()); });
             this.put("mentioned", (n) -> { currentObject.setMentioned(n.getObjectValue(ChatMessageMentionedIdentitySet::createFromDiscriminatorValue)); });
             this.put("mentionText", (n) -> { currentObject.setMentionText(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("id", this.getId());
@@ -109,6 +111,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final Integer value) {
         this._id = value;
     }
@@ -125,6 +129,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mentioned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentioned(@javax.annotation.Nullable final ChatMessageMentionedIdentitySet value) {
         this._mentioned = value;
     }
@@ -133,6 +138,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mentionText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentionText(@javax.annotation.Nullable final String value) {
         this._mentionText = value;
     }
@@ -141,6 +147,7 @@ public class ChatMessageMention implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

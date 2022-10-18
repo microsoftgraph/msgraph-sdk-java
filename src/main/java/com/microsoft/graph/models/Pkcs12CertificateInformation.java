@@ -25,6 +25,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * Instantiates a new pkcs12CertificateInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Pkcs12CertificateInformation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.pkcs12CertificateInformation");
@@ -54,7 +55,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Pkcs12CertificateInformation currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
             this.put("notAfter", (n) -> { currentObject.setNotAfter(n.getLongValue()); });
             this.put("notBefore", (n) -> { currentObject.setNotBefore(n.getLongValue()); });
@@ -107,6 +108,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isActive", this.getIsActive());
@@ -121,6 +123,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }
@@ -137,6 +141,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notAfter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotAfter(@javax.annotation.Nullable final Long value) {
         this._notAfter = value;
     }
@@ -145,6 +150,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notBefore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotBefore(@javax.annotation.Nullable final Long value) {
         this._notBefore = value;
     }
@@ -153,6 +159,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsa
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
         this._thumbprint = value;
     }

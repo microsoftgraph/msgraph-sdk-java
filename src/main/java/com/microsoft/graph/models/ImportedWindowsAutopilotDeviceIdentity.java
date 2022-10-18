@@ -27,6 +27,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentity() {
         super();
         this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentity");
@@ -56,7 +57,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedUserPrincipalName", (n) -> { currentObject.setAssignedUserPrincipalName(n.getStringValue()); });
             this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
             this.put("hardwareIdentifier", (n) -> { currentObject.setHardwareIdentifier(n.getByteArrayValue()); });
@@ -119,6 +120,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the assignedUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._assignedUserPrincipalName = value;
     }
@@ -143,6 +146,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the groupTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupTag(@javax.annotation.Nullable final String value) {
         this._groupTag = value;
     }
@@ -151,6 +155,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the hardwareIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHardwareIdentifier(@javax.annotation.Nullable final byte[] value) {
         this._hardwareIdentifier = value;
     }
@@ -159,6 +164,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the importId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportId(@javax.annotation.Nullable final String value) {
         this._importId = value;
     }
@@ -167,6 +173,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
         this._productKey = value;
     }
@@ -175,6 +182,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -183,6 +191,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Pa
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityState value) {
         this._state = value;
     }

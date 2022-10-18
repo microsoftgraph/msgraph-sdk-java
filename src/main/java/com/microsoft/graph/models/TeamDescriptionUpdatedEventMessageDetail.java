@@ -18,6 +18,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * Instantiates a new TeamDescriptionUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamDescriptionUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamDescriptionUpdatedEventMessageDetail");
@@ -39,7 +40,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamDescriptionUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("teamDescription", (n) -> { currentObject.setTeamDescription(n.getStringValue()); });
             this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -94,6 +97,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * @param value Value to set for the teamDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamDescription(@javax.annotation.Nullable final String value) {
         this._teamDescription = value;
     }
@@ -102,6 +106,7 @@ public class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

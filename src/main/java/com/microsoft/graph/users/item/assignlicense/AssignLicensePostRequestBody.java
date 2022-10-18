@@ -21,6 +21,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new assignLicensePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignLicensePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,7 +58,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignLicensePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<String, Consumer<ParseNode>>(2) {{
             this.put("addLicenses", (n) -> { currentObject.setAddLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
             this.put("removeLicenses", (n) -> { currentObject.setRemoveLicenses(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
@@ -75,6 +76,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("addLicenses", this.getAddLicenses());
@@ -86,6 +88,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the addLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this._addLicenses = value;
     }
@@ -102,6 +106,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the removeLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._removeLicenses = value;
     }

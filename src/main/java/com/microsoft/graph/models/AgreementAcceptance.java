@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
     /** The identifier of the agreement file accepted by the user. */
     private String _agreementFileId;
@@ -40,6 +40,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Instantiates a new agreementAcceptance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgreementAcceptance() {
         super();
         this.setOdataType("#microsoft.graph.agreementAcceptance");
@@ -117,7 +118,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementAcceptance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("agreementFileId", (n) -> { currentObject.setAgreementFileId(n.getStringValue()); });
             this.put("agreementId", (n) -> { currentObject.setAgreementId(n.getStringValue()); });
             this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
@@ -186,6 +187,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -208,6 +210,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the agreementFileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementFileId(@javax.annotation.Nullable final String value) {
         this._agreementFileId = value;
     }
@@ -216,6 +219,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the agreementId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementId(@javax.annotation.Nullable final String value) {
         this._agreementId = value;
     }
@@ -224,6 +228,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -232,6 +237,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -240,6 +246,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceOSType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOSType(@javax.annotation.Nullable final String value) {
         this._deviceOSType = value;
     }
@@ -248,6 +255,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOSVersion(@javax.annotation.Nullable final String value) {
         this._deviceOSVersion = value;
     }
@@ -256,6 +264,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -264,6 +273,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the recordedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._recordedDateTime = value;
     }
@@ -272,6 +282,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AgreementAcceptanceState value) {
         this._state = value;
     }
@@ -280,6 +291,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -288,6 +300,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
@@ -296,6 +309,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -304,6 +318,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

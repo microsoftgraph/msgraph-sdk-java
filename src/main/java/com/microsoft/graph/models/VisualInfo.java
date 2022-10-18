@@ -27,6 +27,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new visualInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VisualInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.visualInfo");
@@ -96,7 +97,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VisualInfo currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("attribution", (n) -> { currentObject.setAttribution(n.getObjectValue(ImageInfo::createFromDiscriminatorValue)); });
             this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
             this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -118,6 +119,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attribution", this.getAttribution());
@@ -133,6 +135,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attribution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttribution(@javax.annotation.Nullable final ImageInfo value) {
         this._attribution = value;
     }
@@ -149,6 +153,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the backgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundColor(@javax.annotation.Nullable final String value) {
         this._backgroundColor = value;
     }
@@ -157,6 +162,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final Json value) {
         this._content = value;
     }
@@ -165,6 +171,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -173,6 +180,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayText(@javax.annotation.Nullable final String value) {
         this._displayText = value;
     }
@@ -181,6 +189,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

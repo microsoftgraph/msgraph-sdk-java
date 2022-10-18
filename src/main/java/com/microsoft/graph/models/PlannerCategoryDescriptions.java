@@ -67,6 +67,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.plannerCategoryDescriptions");
@@ -296,7 +297,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerCategoryDescriptions currentObject = this;
-        return new HashMap<>(26) {{
+        return new HashMap<String, Consumer<ParseNode>>(26) {{
             this.put("category1", (n) -> { currentObject.setCategory1(n.getStringValue()); });
             this.put("category10", (n) -> { currentObject.setCategory10(n.getStringValue()); });
             this.put("category11", (n) -> { currentObject.setCategory11(n.getStringValue()); });
@@ -338,6 +339,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("category1", this.getCategory1());
@@ -373,6 +375,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -381,6 +384,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory1(@javax.annotation.Nullable final String value) {
         this._category1 = value;
     }
@@ -389,6 +393,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category10 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory10(@javax.annotation.Nullable final String value) {
         this._category10 = value;
     }
@@ -397,6 +402,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category11 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory11(@javax.annotation.Nullable final String value) {
         this._category11 = value;
     }
@@ -405,6 +411,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category12 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory12(@javax.annotation.Nullable final String value) {
         this._category12 = value;
     }
@@ -413,6 +420,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category13 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory13(@javax.annotation.Nullable final String value) {
         this._category13 = value;
     }
@@ -421,6 +429,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category14 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory14(@javax.annotation.Nullable final String value) {
         this._category14 = value;
     }
@@ -429,6 +438,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category15 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory15(@javax.annotation.Nullable final String value) {
         this._category15 = value;
     }
@@ -437,6 +447,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category16 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory16(@javax.annotation.Nullable final String value) {
         this._category16 = value;
     }
@@ -445,6 +456,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category17 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory17(@javax.annotation.Nullable final String value) {
         this._category17 = value;
     }
@@ -453,6 +465,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category18 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory18(@javax.annotation.Nullable final String value) {
         this._category18 = value;
     }
@@ -461,6 +474,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category19 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory19(@javax.annotation.Nullable final String value) {
         this._category19 = value;
     }
@@ -469,6 +483,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory2(@javax.annotation.Nullable final String value) {
         this._category2 = value;
     }
@@ -477,6 +492,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category20 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory20(@javax.annotation.Nullable final String value) {
         this._category20 = value;
     }
@@ -485,6 +501,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category21 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory21(@javax.annotation.Nullable final String value) {
         this._category21 = value;
     }
@@ -493,6 +510,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category22 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory22(@javax.annotation.Nullable final String value) {
         this._category22 = value;
     }
@@ -501,6 +519,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category23 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory23(@javax.annotation.Nullable final String value) {
         this._category23 = value;
     }
@@ -509,6 +528,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category24 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory24(@javax.annotation.Nullable final String value) {
         this._category24 = value;
     }
@@ -517,6 +537,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category25 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory25(@javax.annotation.Nullable final String value) {
         this._category25 = value;
     }
@@ -525,6 +546,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category3 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory3(@javax.annotation.Nullable final String value) {
         this._category3 = value;
     }
@@ -533,6 +555,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory4(@javax.annotation.Nullable final String value) {
         this._category4 = value;
     }
@@ -541,6 +564,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category5 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory5(@javax.annotation.Nullable final String value) {
         this._category5 = value;
     }
@@ -549,6 +573,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category6 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory6(@javax.annotation.Nullable final String value) {
         this._category6 = value;
     }
@@ -557,6 +582,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category7 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory7(@javax.annotation.Nullable final String value) {
         this._category7 = value;
     }
@@ -565,6 +591,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category8 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory8(@javax.annotation.Nullable final String value) {
         this._category8 = value;
     }
@@ -573,6 +600,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the category9 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory9(@javax.annotation.Nullable final String value) {
         this._category9 = value;
     }
@@ -581,6 +609,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

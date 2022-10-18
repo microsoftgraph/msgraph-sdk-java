@@ -14,6 +14,7 @@ public class IPv4CidrRange extends IpRange implements Parsable {
      * Instantiates a new IPv4CidrRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IPv4CidrRange() {
         super();
         this.setOdataType("#microsoft.graph.iPv4CidrRange");
@@ -43,7 +44,7 @@ public class IPv4CidrRange extends IpRange implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IPv4CidrRange currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("cidrAddress", (n) -> { currentObject.setCidrAddress(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class IPv4CidrRange extends IpRange implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class IPv4CidrRange extends IpRange implements Parsable {
      * @param value Value to set for the cidrAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCidrAddress(@javax.annotation.Nullable final String value) {
         this._cidrAddress = value;
     }

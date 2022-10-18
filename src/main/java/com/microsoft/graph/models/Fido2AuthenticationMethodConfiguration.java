@@ -20,6 +20,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * Instantiates a new Fido2AuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Fido2AuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.fido2AuthenticationMethodConfiguration");
@@ -41,7 +42,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Fido2AuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
             this.put("isAttestationEnforced", (n) -> { currentObject.setIsAttestationEnforced(n.getBooleanValue()); });
             this.put("isSelfServiceRegistrationAllowed", (n) -> { currentObject.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });
@@ -85,6 +86,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }
@@ -106,6 +109,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the isAttestationEnforced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAttestationEnforced(@javax.annotation.Nullable final Boolean value) {
         this._isAttestationEnforced = value;
     }
@@ -114,6 +118,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the isSelfServiceRegistrationAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSelfServiceRegistrationAllowed(@javax.annotation.Nullable final Boolean value) {
         this._isSelfServiceRegistrationAllowed = value;
     }
@@ -122,6 +127,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the keyRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyRestrictions(@javax.annotation.Nullable final Fido2KeyRestrictions value) {
         this._keyRestrictions = value;
     }

@@ -48,6 +48,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Instantiates a new CopyNotebookModel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.CopyNotebookModel");
@@ -101,7 +102,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CopyNotebookModel currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
             this.put("createdByIdentity", (n) -> { currentObject.setCreatedByIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdTime", (n) -> { currentObject.setCreatedTime(n.getOffsetDateTimeValue()); });
@@ -229,6 +230,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("createdBy", this.getCreatedBy());
@@ -254,6 +256,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -262,6 +265,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
         this._createdBy = value;
     }
@@ -270,6 +274,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdByIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._createdByIdentity = value;
     }
@@ -278,6 +283,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdTime = value;
     }
@@ -286,6 +292,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -294,6 +301,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -302,6 +310,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
         this._isShared = value;
     }
@@ -310,6 +319,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
         this._lastModifiedBy = value;
     }
@@ -318,6 +328,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedByIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedByIdentity = value;
     }
@@ -326,6 +337,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedTime = value;
     }
@@ -334,6 +346,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final NotebookLinks value) {
         this._links = value;
     }
@@ -342,6 +355,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -350,6 +364,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -358,6 +373,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sectionGroupsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
         this._sectionGroupsUrl = value;
     }
@@ -366,6 +382,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sectionsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionsUrl(@javax.annotation.Nullable final String value) {
         this._sectionsUrl = value;
     }
@@ -374,6 +391,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the self property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelf(@javax.annotation.Nullable final String value) {
         this._self = value;
     }
@@ -382,6 +400,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRole(@javax.annotation.Nullable final OnenoteUserRole value) {
         this._userRole = value;
     }

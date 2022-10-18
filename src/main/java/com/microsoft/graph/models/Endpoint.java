@@ -23,6 +23,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Instantiates a new endpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Endpoint() {
         super();
         this.setOdataType("#microsoft.graph.endpoint");
@@ -52,7 +53,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Endpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("capability", (n) -> { currentObject.setCapability(n.getStringValue()); });
             this.put("providerId", (n) -> { currentObject.setProviderId(n.getStringValue()); });
             this.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the capability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCapability(@javax.annotation.Nullable final String value) {
         this._capability = value;
     }
@@ -119,6 +122,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderId(@javax.annotation.Nullable final String value) {
         this._providerId = value;
     }
@@ -127,6 +131,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderName(@javax.annotation.Nullable final String value) {
         this._providerName = value;
     }
@@ -135,6 +140,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the providerResourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderResourceId(@javax.annotation.Nullable final String value) {
         this._providerResourceId = value;
     }
@@ -143,6 +149,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param value Value to set for the uri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUri(@javax.annotation.Nullable final String value) {
         this._uri = value;
     }

@@ -18,6 +18,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * Instantiates a new officeGraphInsights and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OfficeGraphInsights() {
         super();
         this.setOdataType("#microsoft.graph.officeGraphInsights");
@@ -39,7 +40,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeGraphInsights currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("shared", (n) -> { currentObject.setShared(n.getCollectionOfObjectValues(SharedInsight::createFromDiscriminatorValue)); });
             this.put("trending", (n) -> { currentObject.setTrending(n.getCollectionOfObjectValues(Trending::createFromDiscriminatorValue)); });
             this.put("used", (n) -> { currentObject.setUsed(n.getCollectionOfObjectValues(UsedInsight::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * @param value Value to set for the shared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShared(@javax.annotation.Nullable final java.util.List<SharedInsight> value) {
         this._shared = value;
     }
@@ -94,6 +97,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * @param value Value to set for the trending property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrending(@javax.annotation.Nullable final java.util.List<Trending> value) {
         this._trending = value;
     }
@@ -102,6 +106,7 @@ public class OfficeGraphInsights extends Entity implements Parsable {
      * @param value Value to set for the used property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsed(@javax.annotation.Nullable final java.util.List<UsedInsight> value) {
         this._used = value;
     }

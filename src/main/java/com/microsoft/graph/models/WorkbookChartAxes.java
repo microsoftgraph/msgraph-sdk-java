@@ -18,6 +18,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * Instantiates a new workbookChartAxes and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAxes() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartAxes");
@@ -47,7 +48,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxes currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categoryAxis", (n) -> { currentObject.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
             this.put("seriesAxis", (n) -> { currentObject.setSeriesAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
             this.put("valueAxis", (n) -> { currentObject.setValueAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the categoryAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
         this._categoryAxis = value;
     }
@@ -94,6 +97,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the seriesAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeriesAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
         this._seriesAxis = value;
     }
@@ -102,6 +106,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the valueAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
         this._valueAxis = value;
     }

@@ -17,6 +17,7 @@ public class Schema extends Entity implements Parsable {
      * Instantiates a new schema and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Schema() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.schema");
@@ -46,7 +47,7 @@ public class Schema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
             this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class Schema extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the baseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseType(@javax.annotation.Nullable final String value) {
         this._baseType = value;
     }
@@ -83,6 +86,7 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<Property> value) {
         this._properties = value;
     }

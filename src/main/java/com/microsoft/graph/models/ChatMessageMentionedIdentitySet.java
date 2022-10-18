@@ -14,6 +14,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageMentionedIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
@@ -43,7 +44,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageMentionedIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("conversation", (n) -> { currentObject.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param value Value to set for the conversation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversation(@javax.annotation.Nullable final TeamworkConversationIdentity value) {
         this._conversation = value;
     }

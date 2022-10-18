@@ -80,6 +80,8 @@ public class ManagedDevice extends Entity implements Parsable {
     private ManagedDeviceOwnerType _managedDeviceOwnerType;
     /** The managementAgent property */
     private ManagementAgentType _managementAgent;
+    /** Reports device management certificate expiration date. This property is read-only. */
+    private OffsetDateTime _managementCertificateExpirationDate;
     /** Manufacturer of the device. This property is read-only. */
     private String _manufacturer;
     /** MEID. This property is read-only. */
@@ -102,6 +104,8 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _remoteAssistanceSessionErrorDetails;
     /** Url that allows a Remote Assistance session to be established with the device. This property is read-only. */
     private String _remoteAssistanceSessionUrl;
+    /** Reports if the managed iOS device is user approval enrollment. This property is read-only. */
+    private Boolean _requireUserEnrollmentApproval;
     /** SerialNumber. This property is read-only. */
     private String _serialNumber;
     /** Subscriber Carrier. This property is read-only. */
@@ -116,12 +120,15 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _userId;
     /** Device user principal name. This property is read-only. */
     private String _userPrincipalName;
+    /** The primary users associated with the managed device. */
+    private java.util.List<User> _users;
     /** Wi-Fi MAC. This property is read-only. */
     private String _wiFiMacAddress;
     /**
      * Instantiates a new managedDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDevice() {
         super();
         this.setOdataType("#microsoft.graph.managedDevice");
@@ -343,7 +350,7 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activationLockBypassCode", (n) -> { currentObject.setActivationLockBypassCode(n.getStringValue()); });
             this.put("androidSecurityPatchLevel", (n) -> { currentObject.setAndroidSecurityPatchLevel(n.getStringValue()); });
             this.put("azureADDeviceId", (n) -> { currentObject.setAzureADDeviceId(n.getStringValue()); });
@@ -379,6 +386,7 @@ public class ManagedDevice extends Entity implements Parsable {
             this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
             this.put("managedDeviceOwnerType", (n) -> { currentObject.setManagedDeviceOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
             this.put("managementAgent", (n) -> { currentObject.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
+            this.put("managementCertificateExpirationDate", (n) -> { currentObject.setManagementCertificateExpirationDate(n.getOffsetDateTimeValue()); });
             this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
             this.put("meid", (n) -> { currentObject.setMeid(n.getStringValue()); });
             this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
@@ -390,6 +398,7 @@ public class ManagedDevice extends Entity implements Parsable {
             this.put("physicalMemoryInBytes", (n) -> { currentObject.setPhysicalMemoryInBytes(n.getLongValue()); });
             this.put("remoteAssistanceSessionErrorDetails", (n) -> { currentObject.setRemoteAssistanceSessionErrorDetails(n.getStringValue()); });
             this.put("remoteAssistanceSessionUrl", (n) -> { currentObject.setRemoteAssistanceSessionUrl(n.getStringValue()); });
+            this.put("requireUserEnrollmentApproval", (n) -> { currentObject.setRequireUserEnrollmentApproval(n.getBooleanValue()); });
             this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
             this.put("subscriberCarrier", (n) -> { currentObject.setSubscriberCarrier(n.getStringValue()); });
             this.put("totalStorageSpaceInBytes", (n) -> { currentObject.setTotalStorageSpaceInBytes(n.getLongValue()); });
@@ -397,6 +406,7 @@ public class ManagedDevice extends Entity implements Parsable {
             this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
             this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+            this.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
             this.put("wiFiMacAddress", (n) -> { currentObject.setWiFiMacAddress(n.getStringValue()); });
         }};
     }
@@ -479,6 +489,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
         return this._managementAgent;
+    }
+    /**
+     * Gets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getManagementCertificateExpirationDate() {
+        return this._managementCertificateExpirationDate;
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device. This property is read-only.
@@ -569,6 +587,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._remoteAssistanceSessionUrl;
     }
     /**
+     * Gets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getRequireUserEnrollmentApproval() {
+        return this._requireUserEnrollmentApproval;
+    }
+    /**
      * Gets the serialNumber property value. SerialNumber. This property is read-only.
      * @return a string
      */
@@ -625,6 +651,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._userPrincipalName;
     }
     /**
+     * Gets the users property value. The primary users associated with the managed device.
+     * @return a user
+     */
+    @javax.annotation.Nullable
+    public java.util.List<User> getUsers() {
+        return this._users;
+    }
+    /**
      * Gets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @return a string
      */
@@ -637,69 +671,31 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("activationLockBypassCode", this.getActivationLockBypassCode());
-        writer.writeStringValue("androidSecurityPatchLevel", this.getAndroidSecurityPatchLevel());
-        writer.writeStringValue("azureADDeviceId", this.getAzureADDeviceId());
-        writer.writeBooleanValue("azureADRegistered", this.getAzureADRegistered());
-        writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
         writer.writeEnumValue("complianceState", this.getComplianceState());
-        writer.writeObjectValue("configurationManagerClientEnabledFeatures", this.getConfigurationManagerClientEnabledFeatures());
-        writer.writeCollectionOfObjectValues("deviceActionResults", this.getDeviceActionResults());
         writer.writeObjectValue("deviceCategory", this.getDeviceCategory());
-        writer.writeStringValue("deviceCategoryDisplayName", this.getDeviceCategoryDisplayName());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicyStates", this.getDeviceCompliancePolicyStates());
         writer.writeCollectionOfObjectValues("deviceConfigurationStates", this.getDeviceConfigurationStates());
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
-        writer.writeObjectValue("deviceHealthAttestationState", this.getDeviceHealthAttestationState());
-        writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
-        writer.writeBooleanValue("easActivated", this.getEasActivated());
-        writer.writeOffsetDateTimeValue("easActivationDateTime", this.getEasActivationDateTime());
-        writer.writeStringValue("easDeviceId", this.getEasDeviceId());
-        writer.writeStringValue("emailAddress", this.getEmailAddress());
-        writer.writeOffsetDateTimeValue("enrolledDateTime", this.getEnrolledDateTime());
-        writer.writeStringValue("ethernetMacAddress", this.getEthernetMacAddress());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
-        writer.writeOffsetDateTimeValue("exchangeLastSuccessfulSyncDateTime", this.getExchangeLastSuccessfulSyncDateTime());
-        writer.writeLongValue("freeStorageSpaceInBytes", this.getFreeStorageSpaceInBytes());
-        writer.writeStringValue("iccid", this.getIccid());
-        writer.writeStringValue("imei", this.getImei());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
-        writer.writeBooleanValue("isSupervised", this.getIsSupervised());
-        writer.writeStringValue("jailBroken", this.getJailBroken());
-        writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
-        writer.writeStringValue("manufacturer", this.getManufacturer());
-        writer.writeStringValue("meid", this.getMeid());
-        writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writeStringValue("operatingSystem", this.getOperatingSystem());
-        writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
-        writer.writeStringValue("phoneNumber", this.getPhoneNumber());
-        writer.writeLongValue("physicalMemoryInBytes", this.getPhysicalMemoryInBytes());
-        writer.writeStringValue("remoteAssistanceSessionErrorDetails", this.getRemoteAssistanceSessionErrorDetails());
-        writer.writeStringValue("remoteAssistanceSessionUrl", this.getRemoteAssistanceSessionUrl());
-        writer.writeStringValue("serialNumber", this.getSerialNumber());
-        writer.writeStringValue("subscriberCarrier", this.getSubscriberCarrier());
-        writer.writeLongValue("totalStorageSpaceInBytes", this.getTotalStorageSpaceInBytes());
-        writer.writeStringValue("udid", this.getUdid());
-        writer.writeStringValue("userDisplayName", this.getUserDisplayName());
-        writer.writeStringValue("userId", this.getUserId());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
-        writer.writeStringValue("wiFiMacAddress", this.getWiFiMacAddress());
+        writer.writeCollectionOfObjectValues("users", this.getUsers());
     }
     /**
      * Sets the activationLockBypassCode property value. Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
      * @param value Value to set for the activationLockBypassCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivationLockBypassCode(@javax.annotation.Nullable final String value) {
         this._activationLockBypassCode = value;
     }
@@ -708,6 +704,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the androidSecurityPatchLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
         this._androidSecurityPatchLevel = value;
     }
@@ -716,6 +713,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the azureADDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADDeviceId(@javax.annotation.Nullable final String value) {
         this._azureADDeviceId = value;
     }
@@ -724,6 +722,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the azureADRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADRegistered(@javax.annotation.Nullable final Boolean value) {
         this._azureADRegistered = value;
     }
@@ -732,6 +731,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._complianceGracePeriodExpirationDateTime = value;
     }
@@ -740,6 +740,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the complianceState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceState(@javax.annotation.Nullable final ComplianceState value) {
         this._complianceState = value;
     }
@@ -748,6 +749,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the configurationManagerClientEnabledFeatures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationManagerClientEnabledFeatures(@javax.annotation.Nullable final ConfigurationManagerClientEnabledFeatures value) {
         this._configurationManagerClientEnabledFeatures = value;
     }
@@ -756,6 +758,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceActionResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceActionResults(@javax.annotation.Nullable final java.util.List<DeviceActionResult> value) {
         this._deviceActionResults = value;
     }
@@ -764,6 +767,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCategory(@javax.annotation.Nullable final DeviceCategory value) {
         this._deviceCategory = value;
     }
@@ -772,6 +776,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceCategoryDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCategoryDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceCategoryDisplayName = value;
     }
@@ -780,6 +785,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicyStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyStates(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicyState> value) {
         this._deviceCompliancePolicyStates = value;
     }
@@ -788,6 +794,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationStates(@javax.annotation.Nullable final java.util.List<DeviceConfigurationState> value) {
         this._deviceConfigurationStates = value;
     }
@@ -796,6 +803,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceEnrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
         this._deviceEnrollmentType = value;
     }
@@ -804,6 +812,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceHealthAttestationState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceHealthAttestationState(@javax.annotation.Nullable final DeviceHealthAttestationState value) {
         this._deviceHealthAttestationState = value;
     }
@@ -812,6 +821,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -820,6 +830,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceRegistrationState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRegistrationState(@javax.annotation.Nullable final DeviceRegistrationState value) {
         this._deviceRegistrationState = value;
     }
@@ -828,6 +839,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the easActivated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasActivated(@javax.annotation.Nullable final Boolean value) {
         this._easActivated = value;
     }
@@ -836,6 +848,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the easActivationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasActivationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._easActivationDateTime = value;
     }
@@ -844,6 +857,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the easDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasDeviceId(@javax.annotation.Nullable final String value) {
         this._easDeviceId = value;
     }
@@ -852,6 +866,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }
@@ -860,6 +875,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the enrolledDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrolledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._enrolledDateTime = value;
     }
@@ -868,6 +884,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the ethernetMacAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEthernetMacAddress(@javax.annotation.Nullable final String value) {
         this._ethernetMacAddress = value;
     }
@@ -876,6 +893,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the exchangeAccessState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeAccessState(@javax.annotation.Nullable final DeviceManagementExchangeAccessState value) {
         this._exchangeAccessState = value;
     }
@@ -884,6 +902,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the exchangeAccessStateReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeAccessStateReason(@javax.annotation.Nullable final DeviceManagementExchangeAccessStateReason value) {
         this._exchangeAccessStateReason = value;
     }
@@ -892,6 +911,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the exchangeLastSuccessfulSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._exchangeLastSuccessfulSyncDateTime = value;
     }
@@ -900,6 +920,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the freeStorageSpaceInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFreeStorageSpaceInBytes(@javax.annotation.Nullable final Long value) {
         this._freeStorageSpaceInBytes = value;
     }
@@ -908,6 +929,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the iccid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIccid(@javax.annotation.Nullable final String value) {
         this._iccid = value;
     }
@@ -916,6 +938,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the imei property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImei(@javax.annotation.Nullable final String value) {
         this._imei = value;
     }
@@ -924,6 +947,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the isEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
         this._isEncrypted = value;
     }
@@ -932,6 +956,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the isSupervised property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
         this._isSupervised = value;
     }
@@ -940,6 +965,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the jailBroken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJailBroken(@javax.annotation.Nullable final String value) {
         this._jailBroken = value;
     }
@@ -948,6 +974,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -956,6 +983,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
@@ -964,6 +992,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceOwnerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
         this._managedDeviceOwnerType = value;
     }
@@ -972,14 +1001,25 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
         this._managementAgent = value;
+    }
+    /**
+     * Sets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
+     * @param value Value to set for the managementCertificateExpirationDate property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setManagementCertificateExpirationDate(@javax.annotation.Nullable final OffsetDateTime value) {
+        this._managementCertificateExpirationDate = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -988,6 +1028,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the meid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeid(@javax.annotation.Nullable final String value) {
         this._meid = value;
     }
@@ -996,6 +1037,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -1004,6 +1046,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -1012,6 +1055,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -1020,6 +1064,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -1028,6 +1073,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the partnerReportedThreatState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartnerReportedThreatState(@javax.annotation.Nullable final ManagedDevicePartnerReportedHealthState value) {
         this._partnerReportedThreatState = value;
     }
@@ -1036,6 +1082,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -1044,6 +1091,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the physicalMemoryInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhysicalMemoryInBytes(@javax.annotation.Nullable final Long value) {
         this._physicalMemoryInBytes = value;
     }
@@ -1052,6 +1100,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the remoteAssistanceSessionErrorDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAssistanceSessionErrorDetails(@javax.annotation.Nullable final String value) {
         this._remoteAssistanceSessionErrorDetails = value;
     }
@@ -1060,14 +1109,25 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the remoteAssistanceSessionUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAssistanceSessionUrl(@javax.annotation.Nullable final String value) {
         this._remoteAssistanceSessionUrl = value;
+    }
+    /**
+     * Sets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     * @param value Value to set for the requireUserEnrollmentApproval property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRequireUserEnrollmentApproval(@javax.annotation.Nullable final Boolean value) {
+        this._requireUserEnrollmentApproval = value;
     }
     /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -1076,6 +1136,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the subscriberCarrier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriberCarrier(@javax.annotation.Nullable final String value) {
         this._subscriberCarrier = value;
     }
@@ -1084,6 +1145,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the totalStorageSpaceInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalStorageSpaceInBytes(@javax.annotation.Nullable final Long value) {
         this._totalStorageSpaceInBytes = value;
     }
@@ -1092,6 +1154,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the udid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUdid(@javax.annotation.Nullable final String value) {
         this._udid = value;
     }
@@ -1100,6 +1163,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -1108,6 +1172,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -1116,14 +1181,25 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
+    }
+    /**
+     * Sets the users property value. The primary users associated with the managed device.
+     * @param value Value to set for the users property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUsers(@javax.annotation.Nullable final java.util.List<User> value) {
+        this._users = value;
     }
     /**
      * Sets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @param value Value to set for the wiFiMacAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiMacAddress(@javax.annotation.Nullable final String value) {
         this._wiFiMacAddress = value;
     }

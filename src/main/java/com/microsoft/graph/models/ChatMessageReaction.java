@@ -24,6 +24,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * Instantiates a new chatMessageReaction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessageReaction() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.chatMessageReaction");
@@ -61,7 +62,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessageReaction currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("reactionType", (n) -> { currentObject.setReactionType(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -110,6 +112,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -126,6 +130,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reactionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReactionType(@javax.annotation.Nullable final String value) {
         this._reactionType = value;
     }
@@ -142,6 +148,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final ChatMessageReactionIdentitySet value) {
         this._user = value;
     }

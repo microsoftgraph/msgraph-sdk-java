@@ -23,6 +23,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new personOrGroupColumn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonOrGroupColumn() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.personOrGroupColumn");
@@ -76,7 +77,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonOrGroupColumn currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("allowMultipleSelection", (n) -> { currentObject.setAllowMultipleSelection(n.getBooleanValue()); });
             this.put("chooseFromType", (n) -> { currentObject.setChooseFromType(n.getStringValue()); });
             this.put("displayAs", (n) -> { currentObject.setDisplayAs(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleSelection", this.getAllowMultipleSelection());
@@ -109,6 +111,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowMultipleSelection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowMultipleSelection(@javax.annotation.Nullable final Boolean value) {
         this._allowMultipleSelection = value;
     }
@@ -125,6 +129,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the chooseFromType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChooseFromType(@javax.annotation.Nullable final String value) {
         this._chooseFromType = value;
     }
@@ -133,6 +138,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayAs(@javax.annotation.Nullable final String value) {
         this._displayAs = value;
     }
@@ -141,6 +147,7 @@ public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

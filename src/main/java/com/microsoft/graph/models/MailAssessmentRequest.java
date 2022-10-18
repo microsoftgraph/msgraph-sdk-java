@@ -18,6 +18,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Instantiates a new MailAssessmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.mailAssessmentRequest");
@@ -47,7 +48,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
             this.put("messageUri", (n) -> { currentObject.setMessageUri(n.getStringValue()); });
             this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the destinationRoutingReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
         this._destinationRoutingReason = value;
     }
@@ -94,6 +97,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the messageUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageUri(@javax.annotation.Nullable final String value) {
         this._messageUri = value;
     }
@@ -102,6 +106,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the recipientEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmail(@javax.annotation.Nullable final String value) {
         this._recipientEmail = value;
     }

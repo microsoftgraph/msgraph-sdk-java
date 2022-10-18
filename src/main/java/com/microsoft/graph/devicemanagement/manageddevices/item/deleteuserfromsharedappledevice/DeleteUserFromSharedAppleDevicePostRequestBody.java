@@ -18,6 +18,7 @@ public class DeleteUserFromSharedAppleDevicePostRequestBody implements Additiona
      * Instantiates a new deleteUserFromSharedAppleDevicePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeleteUserFromSharedAppleDevicePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class DeleteUserFromSharedAppleDevicePostRequestBody implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeleteUserFromSharedAppleDevicePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class DeleteUserFromSharedAppleDevicePostRequestBody implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
@@ -73,6 +75,7 @@ public class DeleteUserFromSharedAppleDevicePostRequestBody implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class DeleteUserFromSharedAppleDevicePostRequestBody implements Additiona
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

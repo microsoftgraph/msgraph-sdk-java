@@ -25,6 +25,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Instantiates a new scoredEmailAddress and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.scoredEmailAddress");
@@ -62,7 +63,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScoredEmailAddress currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
             this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
@@ -121,6 +123,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
         this._address = value;
     }
@@ -137,6 +141,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the itemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
     }
@@ -145,6 +150,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the relevanceScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelevanceScore(@javax.annotation.Nullable final Double value) {
         this._relevanceScore = value;
     }
@@ -161,6 +168,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the selectionLikelihood property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelectionLikelihood(@javax.annotation.Nullable final SelectionLikelihoodInfo value) {
         this._selectionLikelihood = value;
     }

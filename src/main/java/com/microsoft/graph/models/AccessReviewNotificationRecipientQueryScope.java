@@ -18,6 +18,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      * Instantiates a new AccessReviewNotificationRecipientQueryScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewNotificationRecipientQueryScope() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewNotificationRecipientQueryScope");
@@ -39,7 +40,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewNotificationRecipientQueryScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("query", (n) -> { currentObject.setQuery(n.getStringValue()); });
             this.put("queryRoot", (n) -> { currentObject.setQueryRoot(n.getStringValue()); });
             this.put("queryType", (n) -> { currentObject.setQueryType(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      * @param value Value to set for the query property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuery(@javax.annotation.Nullable final String value) {
         this._query = value;
     }
@@ -94,6 +97,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      * @param value Value to set for the queryRoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryRoot(@javax.annotation.Nullable final String value) {
         this._queryRoot = value;
     }
@@ -102,6 +106,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
      * @param value Value to set for the queryType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryType(@javax.annotation.Nullable final String value) {
         this._queryType = value;
     }

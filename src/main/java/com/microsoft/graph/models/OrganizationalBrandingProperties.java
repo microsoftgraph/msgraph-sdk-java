@@ -35,6 +35,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * Instantiates a new organizationalBrandingProperties and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalBrandingProperties() {
         super();
         this.setOdataType("#microsoft.graph.organizationalBrandingProperties");
@@ -112,7 +113,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBrandingProperties currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
             this.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
             this.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });
@@ -162,6 +163,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -181,6 +183,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundColor(@javax.annotation.Nullable final String value) {
         this._backgroundColor = value;
     }
@@ -189,6 +192,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImage(@javax.annotation.Nullable final byte[] value) {
         this._backgroundImage = value;
     }
@@ -197,6 +201,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundImageRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImageRelativeUrl(@javax.annotation.Nullable final String value) {
         this._backgroundImageRelativeUrl = value;
     }
@@ -205,6 +210,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the bannerLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogo(@javax.annotation.Nullable final byte[] value) {
         this._bannerLogo = value;
     }
@@ -213,6 +219,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the bannerLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogoRelativeUrl(@javax.annotation.Nullable final String value) {
         this._bannerLogoRelativeUrl = value;
     }
@@ -221,6 +228,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the cdnList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCdnList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._cdnList = value;
     }
@@ -229,6 +237,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the signInPageText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInPageText(@javax.annotation.Nullable final String value) {
         this._signInPageText = value;
     }
@@ -237,6 +246,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogo(@javax.annotation.Nullable final byte[] value) {
         this._squareLogo = value;
     }
@@ -245,6 +255,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoRelativeUrl(@javax.annotation.Nullable final String value) {
         this._squareLogoRelativeUrl = value;
     }
@@ -253,6 +264,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the usernameHintText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameHintText(@javax.annotation.Nullable final String value) {
         this._usernameHintText = value;
     }

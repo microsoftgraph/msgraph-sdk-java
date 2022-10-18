@@ -16,6 +16,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicy() {
         super();
         this.setOdataType("#microsoft.graph.crossTenantAccessPolicy");
@@ -45,7 +46,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
             this.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the default property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final CrossTenantAccessPolicyConfigurationDefault value) {
         this._default_escaped = value;
     }
@@ -82,6 +85,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the partners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartners(@javax.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
         this._partners = value;
     }

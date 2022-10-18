@@ -26,6 +26,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * Instantiates a new InternalDomainFederation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InternalDomainFederation() {
         super();
         this.setOdataType("#microsoft.graph.internalDomainFederation");
@@ -63,7 +64,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InternalDomainFederation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activeSignInUri", (n) -> { currentObject.setActiveSignInUri(n.getStringValue()); });
             this.put("federatedIdpMfaBehavior", (n) -> { currentObject.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior.class)); });
             this.put("isSignedAuthenticationRequestRequired", (n) -> { currentObject.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
@@ -118,6 +119,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the activeSignInUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveSignInUri(@javax.annotation.Nullable final String value) {
         this._activeSignInUri = value;
     }
@@ -142,6 +145,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the federatedIdpMfaBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedIdpMfaBehavior(@javax.annotation.Nullable final FederatedIdpMfaBehavior value) {
         this._federatedIdpMfaBehavior = value;
     }
@@ -150,6 +154,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the isSignedAuthenticationRequestRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSignedAuthenticationRequestRequired(@javax.annotation.Nullable final Boolean value) {
         this._isSignedAuthenticationRequestRequired = value;
     }
@@ -158,6 +163,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the nextSigningCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNextSigningCertificate(@javax.annotation.Nullable final String value) {
         this._nextSigningCertificate = value;
     }
@@ -166,6 +172,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the promptLoginBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPromptLoginBehavior(@javax.annotation.Nullable final PromptLoginBehavior value) {
         this._promptLoginBehavior = value;
     }
@@ -174,6 +181,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the signingCertificateUpdateStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningCertificateUpdateStatus(@javax.annotation.Nullable final SigningCertificateUpdateStatus value) {
         this._signingCertificateUpdateStatus = value;
     }
@@ -182,6 +190,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
      * @param value Value to set for the signOutUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignOutUri(@javax.annotation.Nullable final String value) {
         this._signOutUri = value;
     }

@@ -36,6 +36,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * Instantiates a new photo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Photo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.photo");
@@ -97,7 +98,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Photo currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("cameraMake", (n) -> { currentObject.setCameraMake(n.getStringValue()); });
             this.put("cameraModel", (n) -> { currentObject.setCameraModel(n.getStringValue()); });
             this.put("exposureDenominator", (n) -> { currentObject.setExposureDenominator(n.getDoubleValue()); });
@@ -163,6 +164,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("cameraMake", this.getCameraMake());
@@ -182,6 +184,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cameraMake property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraMake(@javax.annotation.Nullable final String value) {
         this._cameraMake = value;
     }
@@ -198,6 +202,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cameraModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraModel(@javax.annotation.Nullable final String value) {
         this._cameraModel = value;
     }
@@ -206,6 +211,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exposureDenominator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExposureDenominator(@javax.annotation.Nullable final Double value) {
         this._exposureDenominator = value;
     }
@@ -214,6 +220,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exposureNumerator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExposureNumerator(@javax.annotation.Nullable final Double value) {
         this._exposureNumerator = value;
     }
@@ -222,6 +229,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFNumber(@javax.annotation.Nullable final Double value) {
         this._fNumber = value;
     }
@@ -230,6 +238,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the focalLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFocalLength(@javax.annotation.Nullable final Double value) {
         this._focalLength = value;
     }
@@ -238,6 +247,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the iso property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIso(@javax.annotation.Nullable final Integer value) {
         this._iso = value;
     }
@@ -246,6 +256,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -254,6 +265,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the orientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final Integer value) {
         this._orientation = value;
     }
@@ -262,6 +274,7 @@ public class Photo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the takenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTakenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._takenDateTime = value;
     }

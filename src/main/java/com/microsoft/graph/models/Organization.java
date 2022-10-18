@@ -63,6 +63,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * Instantiates a new Organization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Organization() {
         super();
         this.setOdataType("#microsoft.graph.organization");
@@ -164,7 +165,7 @@ public class Organization extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Organization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
             this.put("branding", (n) -> { currentObject.setBranding(n.getObjectValue(OrganizationalBranding::createFromDiscriminatorValue)); });
             this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -317,6 +318,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -351,6 +353,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this._assignedPlans = value;
     }
@@ -359,6 +362,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the branding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBranding(@javax.annotation.Nullable final OrganizationalBranding value) {
         this._branding = value;
     }
@@ -367,6 +371,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._businessPhones = value;
     }
@@ -375,6 +380,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the certificateBasedAuthConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateBasedAuthConfiguration(@javax.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
         this._certificateBasedAuthConfiguration = value;
     }
@@ -383,6 +389,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
         this._city = value;
     }
@@ -391,6 +398,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the country property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountry(@javax.annotation.Nullable final String value) {
         this._country = value;
     }
@@ -399,6 +407,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the countryLetterCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryLetterCode(@javax.annotation.Nullable final String value) {
         this._countryLetterCode = value;
     }
@@ -407,6 +416,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -415,6 +425,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -423,6 +434,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -431,6 +443,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the marketingNotificationEmails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarketingNotificationEmails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._marketingNotificationEmails = value;
     }
@@ -439,6 +452,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobileDeviceManagementAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileDeviceManagementAuthority(@javax.annotation.Nullable final MdmAuthority value) {
         this._mobileDeviceManagementAuthority = value;
     }
@@ -447,6 +461,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -455,6 +470,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -463,6 +479,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
         this._postalCode = value;
     }
@@ -471,6 +488,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
         this._preferredLanguage = value;
     }
@@ -479,6 +497,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the privacyProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyProfile(@javax.annotation.Nullable final PrivacyProfile value) {
         this._privacyProfile = value;
     }
@@ -487,6 +506,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this._provisionedPlans = value;
     }
@@ -495,6 +515,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityComplianceNotificationMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityComplianceNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._securityComplianceNotificationMails = value;
     }
@@ -503,6 +524,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityComplianceNotificationPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityComplianceNotificationPhones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._securityComplianceNotificationPhones = value;
     }
@@ -511,6 +533,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -519,6 +542,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the street property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreet(@javax.annotation.Nullable final String value) {
         this._street = value;
     }
@@ -527,6 +551,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the technicalNotificationMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnicalNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._technicalNotificationMails = value;
     }
@@ -535,6 +560,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the tenantType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantType(@javax.annotation.Nullable final String value) {
         this._tenantType = value;
     }
@@ -543,6 +569,7 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the verifiedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedDomains(@javax.annotation.Nullable final java.util.List<VerifiedDomain> value) {
         this._verifiedDomains = value;
     }

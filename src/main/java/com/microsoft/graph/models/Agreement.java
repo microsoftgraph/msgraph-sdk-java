@@ -30,6 +30,7 @@ public class Agreement extends Entity implements Parsable {
      * Instantiates a new agreement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Agreement() {
         super();
         this.setOdataType("#microsoft.graph.agreement");
@@ -67,7 +68,7 @@ public class Agreement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Agreement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("acceptances", (n) -> { currentObject.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(AgreementFile::createFromDiscriminatorValue)); });
@@ -131,6 +132,7 @@ public class Agreement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the acceptances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this._acceptances = value;
     }
@@ -156,6 +159,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -164,6 +168,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final AgreementFile value) {
         this._file = value;
     }
@@ -172,6 +177,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the files property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFiles(@javax.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
         this._files = value;
     }
@@ -180,6 +186,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPerDeviceAcceptanceRequired(@javax.annotation.Nullable final Boolean value) {
         this._isPerDeviceAcceptanceRequired = value;
     }
@@ -188,6 +195,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the isViewingBeforeAcceptanceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsViewingBeforeAcceptanceRequired(@javax.annotation.Nullable final Boolean value) {
         this._isViewingBeforeAcceptanceRequired = value;
     }
@@ -196,6 +204,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the termsExpiration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsExpiration(@javax.annotation.Nullable final TermsExpiration value) {
         this._termsExpiration = value;
     }
@@ -204,6 +213,7 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the userReacceptRequiredFrequency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserReacceptRequiredFrequency(@javax.annotation.Nullable final Period value) {
         this._userReacceptRequiredFrequency = value;
     }

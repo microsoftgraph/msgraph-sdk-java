@@ -29,6 +29,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * Instantiates a new quota and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Quota() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.quota");
@@ -66,7 +67,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Quota currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("deleted", (n) -> { currentObject.setDeleted(n.getLongValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("remaining", (n) -> { currentObject.setRemaining(n.getLongValue()); });
@@ -129,6 +130,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("deleted", this.getDeleted());
@@ -145,6 +147,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeleted(@javax.annotation.Nullable final Long value) {
         this._deleted = value;
     }
@@ -161,6 +165,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -169,6 +174,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remaining property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemaining(@javax.annotation.Nullable final Long value) {
         this._remaining = value;
     }
@@ -177,6 +183,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -185,6 +192,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the storagePlanInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStoragePlanInformation(@javax.annotation.Nullable final StoragePlanInformation value) {
         this._storagePlanInformation = value;
     }
@@ -193,6 +201,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the total property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Long value) {
         this._total = value;
     }
@@ -201,6 +210,7 @@ public class Quota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the used property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsed(@javax.annotation.Nullable final Long value) {
         this._used = value;
     }

@@ -14,6 +14,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * Instantiates a new ClientCertificateAuthentication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClientCertificateAuthentication() {
         super();
         this.setOdataType("#microsoft.graph.clientCertificateAuthentication");
@@ -43,7 +44,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClientCertificateAuthentication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateList", (n) -> { currentObject.setCertificateList(n.getCollectionOfObjectValues(Pkcs12CertificateInformation::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * @param value Value to set for the certificateList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateList(@javax.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
         this._certificateList = value;
     }

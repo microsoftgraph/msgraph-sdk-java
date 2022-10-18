@@ -18,6 +18,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * Instantiates a new AuditLogRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuditLogRoot() {
         super();
         this.setOdataType("#microsoft.graph.auditLogRoot");
@@ -47,7 +48,7 @@ public class AuditLogRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditLogRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("directoryAudits", (n) -> { currentObject.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
             this.put("provisioning", (n) -> { currentObject.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
             this.put("signIns", (n) -> { currentObject.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @param value Value to set for the directoryAudits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryAudits(@javax.annotation.Nullable final java.util.List<DirectoryAudit> value) {
         this._directoryAudits = value;
     }
@@ -94,6 +97,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @param value Value to set for the provisioning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioning(@javax.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this._provisioning = value;
     }
@@ -102,6 +106,7 @@ public class AuditLogRoot extends Entity implements Parsable {
      * @param value Value to set for the signIns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignIns(@javax.annotation.Nullable final java.util.List<SignIn> value) {
         this._signIns = value;
     }

@@ -18,6 +18,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * Instantiates a new authenticationFlowsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationFlowsPolicy() {
         super();
         this.setOdataType("#microsoft.graph.authenticationFlowsPolicy");
@@ -55,7 +56,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationFlowsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("selfServiceSignUp", (n) -> { currentObject.setSelfServiceSignUp(n.getObjectValue(SelfServiceSignUpAuthenticationFlowConfiguration::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -94,6 +97,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
      * @param value Value to set for the selfServiceSignUp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelfServiceSignUp(@javax.annotation.Nullable final SelfServiceSignUpAuthenticationFlowConfiguration value) {
         this._selfServiceSignUp = value;
     }

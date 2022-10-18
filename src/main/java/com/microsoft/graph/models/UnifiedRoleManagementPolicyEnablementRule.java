@@ -14,6 +14,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      * Instantiates a new UnifiedRoleManagementPolicyEnablementRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyEnablementRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyEnablementRule");
@@ -43,7 +44,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyEnablementRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enabledRules", (n) -> { currentObject.setEnabledRules(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -52,6 +53,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
      * @param value Value to set for the enabledRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledRules(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enabledRules = value;
     }

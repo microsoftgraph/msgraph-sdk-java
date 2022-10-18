@@ -15,6 +15,7 @@ public class CasesRoot extends Entity implements Parsable {
      * Instantiates a new casesRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CasesRoot() {
         super();
         this.setOdataType("#microsoft.graph.security.casesRoot");
@@ -44,7 +45,7 @@ public class CasesRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CasesRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ediscoveryCases", (n) -> { currentObject.setEdiscoveryCases(n.getCollectionOfObjectValues(EdiscoveryCase::createFromDiscriminatorValue)); });
         }};
     }
@@ -53,6 +54,7 @@ public class CasesRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class CasesRoot extends Entity implements Parsable {
      * @param value Value to set for the ediscoveryCases property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdiscoveryCases(@javax.annotation.Nullable final java.util.List<EdiscoveryCase> value) {
         this._ediscoveryCases = value;
     }

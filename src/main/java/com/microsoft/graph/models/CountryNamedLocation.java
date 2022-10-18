@@ -18,6 +18,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * Instantiates a new CountryNamedLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CountryNamedLocation() {
         super();
         this.setOdataType("#microsoft.graph.countryNamedLocation");
@@ -55,7 +56,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CountryNamedLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("countriesAndRegions", (n) -> { currentObject.setCountriesAndRegions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("countryLookupMethod", (n) -> { currentObject.setCountryLookupMethod(n.getEnumValue(CountryLookupMethodType.class)); });
             this.put("includeUnknownCountriesAndRegions", (n) -> { currentObject.setIncludeUnknownCountriesAndRegions(n.getBooleanValue()); });
@@ -74,6 +75,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the countriesAndRegions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountriesAndRegions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._countriesAndRegions = value;
     }
@@ -94,6 +97,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the countryLookupMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryLookupMethod(@javax.annotation.Nullable final CountryLookupMethodType value) {
         this._countryLookupMethod = value;
     }
@@ -102,6 +106,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the includeUnknownCountriesAndRegions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeUnknownCountriesAndRegions(@javax.annotation.Nullable final Boolean value) {
         this._includeUnknownCountriesAndRegions = value;
     }

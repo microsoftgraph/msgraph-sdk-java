@@ -23,6 +23,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Instantiates a new columnValidation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ColumnValidation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.columnValidation");
@@ -68,7 +69,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ColumnValidation currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("defaultLanguage", (n) -> { currentObject.setDefaultLanguage(n.getStringValue()); });
             this.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
             this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultLanguage", this.getDefaultLanguage());
@@ -109,6 +111,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the defaultLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguage(@javax.annotation.Nullable final String value) {
         this._defaultLanguage = value;
     }
@@ -125,6 +129,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the descriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptions(@javax.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
         this._descriptions = value;
     }
@@ -133,6 +138,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the formula property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormula(@javax.annotation.Nullable final String value) {
         this._formula = value;
     }
@@ -141,6 +147,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
