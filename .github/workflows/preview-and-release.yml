@@ -26,7 +26,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
       - name: Easy detect-secrets
@@ -58,7 +58,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 18
           distribution: 'adopt'
           cache: gradle
       - name: Easy detect-secrets
@@ -107,7 +107,7 @@ jobs:
         run: .\Scripts\getLatestVersion.ps1
         shell: pwsh
       - name: Create tag
-        uses: rickstaa/action-create-tag@v1.3.7
+        uses: rickstaa/action-create-tag@v1.3.9
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
