@@ -11,6 +11,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
 import com.microsoft.graph.models.TeamworkOnlineMeetingInfo;
+import com.microsoft.graph.models.ChatViewpoint;
+import com.microsoft.graph.models.ChatMessageInfo;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
@@ -88,6 +90,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public String topic;
 
     /**
+     * The Viewpoint.
+     * Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     */
+    @SerializedName(value = "viewpoint", alternate = {"Viewpoint"})
+    @Expose
+	@Nullable
+    public ChatViewpoint viewpoint;
+
+    /**
      * The Web Url.
      * The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
      */
@@ -104,6 +115,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.TeamsAppInstallationCollectionPage installedApps;
+
+    /**
+     * The Last Message Preview.
+     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     */
+    @SerializedName(value = "lastMessagePreview", alternate = {"LastMessagePreview"})
+    @Expose
+	@Nullable
+    public ChatMessageInfo lastMessagePreview;
 
     /**
      * The Members.

@@ -116,4 +116,24 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
     public com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder policies(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ConditionalAccessTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ConditionalAccessTemplateCollectionRequestBuilder templates() {
+        return new com.microsoft.graph.requests.ConditionalAccessTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("templates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ConditionalAccessTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ConditionalAccessTemplateRequestBuilder templates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ConditionalAccessTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("templates") + "/" + id, getClient(), null);
+    }
 }

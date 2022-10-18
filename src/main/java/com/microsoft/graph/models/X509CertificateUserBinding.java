@@ -39,7 +39,7 @@ public class X509CertificateUserBinding implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -48,7 +48,7 @@ public class X509CertificateUserBinding implements IJsonBackedObject {
 
     /**
      * The User Property.
-     * 
+     * Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      */
     @SerializedName(value = "userProperty", alternate = {"UserProperty"})
     @Expose
@@ -57,7 +57,7 @@ public class X509CertificateUserBinding implements IJsonBackedObject {
 
     /**
      * The X509Certificate Field.
-     * 
+     * The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
      */
     @SerializedName(value = "x509CertificateField", alternate = {"X509CertificateField"})
     @Expose
