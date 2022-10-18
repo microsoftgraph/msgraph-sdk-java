@@ -36,6 +36,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Instantiates a new DeviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration");
@@ -65,7 +66,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentWindowsHelloForBusinessConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("enhancedBiometricsState", (n) -> { currentObject.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
             this.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
             this.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
@@ -173,6 +174,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +196,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the enhancedBiometricsState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnhancedBiometricsState(@javax.annotation.Nullable final Enablement value) {
         this._enhancedBiometricsState = value;
     }
@@ -202,6 +205,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinExpirationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinExpirationInDays(@javax.annotation.Nullable final Integer value) {
         this._pinExpirationInDays = value;
     }
@@ -210,6 +214,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinLowercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinLowercaseCharactersUsage = value;
     }
@@ -218,6 +223,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMaximumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMaximumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMaximumLength = value;
     }
@@ -226,6 +232,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMinimumLength = value;
     }
@@ -234,6 +241,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinPreviousBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinPreviousBlockCount(@javax.annotation.Nullable final Integer value) {
         this._pinPreviousBlockCount = value;
     }
@@ -242,6 +250,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinSpecialCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinSpecialCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinSpecialCharactersUsage = value;
     }
@@ -250,6 +259,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinUppercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinUppercaseCharactersUsage = value;
     }
@@ -258,6 +268,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the remotePassportEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemotePassportEnabled(@javax.annotation.Nullable final Boolean value) {
         this._remotePassportEnabled = value;
     }
@@ -266,6 +277,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the securityDeviceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDeviceRequired(@javax.annotation.Nullable final Boolean value) {
         this._securityDeviceRequired = value;
     }
@@ -274,6 +286,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final Enablement value) {
         this._state = value;
     }
@@ -282,6 +295,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the unlockWithBiometricsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnlockWithBiometricsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._unlockWithBiometricsEnabled = value;
     }

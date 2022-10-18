@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     /** Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification. */
     private java.util.List<UserFlowLanguagePage> _defaultPages;
@@ -21,6 +21,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * Instantiates a new userFlowLanguageConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserFlowLanguageConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.userFlowLanguageConfiguration");
@@ -58,7 +59,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserFlowLanguageConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("defaultPages", (n) -> { currentObject.setDefaultPages(n.getCollectionOfObjectValues(UserFlowLanguagePage::createFromDiscriminatorValue)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
@@ -86,6 +87,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * @param value Value to set for the defaultPages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultPages(@javax.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
         this._defaultPages = value;
     }
@@ -107,6 +110,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -115,6 +119,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -123,6 +128,7 @@ public class UserFlowLanguageConfiguration extends Entity implements Parsable {
      * @param value Value to set for the overridesPages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverridesPages(@javax.annotation.Nullable final java.util.List<UserFlowLanguagePage> value) {
         this._overridesPages = value;
     }

@@ -16,6 +16,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      * Instantiates a new DirectoryRoleTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryRoleTemplate() {
         super();
         this.setOdataType("#microsoft.graph.directoryRoleTemplate");
@@ -53,7 +54,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectoryRoleTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -82,6 +85,7 @@ public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

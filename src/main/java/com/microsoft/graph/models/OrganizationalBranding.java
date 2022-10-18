@@ -14,6 +14,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * Instantiates a new OrganizationalBranding and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalBranding() {
         super();
         this.setOdataType("#microsoft.graph.organizationalBranding");
@@ -35,7 +36,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OrganizationalBranding currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      * @param value Value to set for the localizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
         this._localizations = value;
     }

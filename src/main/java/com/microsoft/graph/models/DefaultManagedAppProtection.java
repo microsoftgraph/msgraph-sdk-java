@@ -36,6 +36,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * Instantiates a new DefaultManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DefaultManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.defaultManagedAppProtection");
@@ -121,7 +122,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DefaultManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDataEncryptionType", (n) -> { currentObject.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
             this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
             this.put("customSettings", (n) -> { currentObject.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
@@ -173,6 +174,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +196,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
         this._appDataEncryptionType = value;
     }
@@ -202,6 +205,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -210,6 +214,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the customSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customSettings = value;
     }
@@ -218,6 +223,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -226,6 +232,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -234,6 +241,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
@@ -242,6 +250,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the encryptAppData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
         this._encryptAppData = value;
     }
@@ -250,6 +259,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the faceIdBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
         this._faceIdBlocked = value;
     }
@@ -258,6 +268,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumRequiredPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredPatchVersion = value;
     }
@@ -266,6 +277,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredSdkVersion = value;
     }
@@ -274,6 +286,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the minimumWarningPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningPatchVersion = value;
     }
@@ -282,6 +295,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }

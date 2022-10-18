@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class UnifiedRoleAssignment extends Entity implements Parsable {
     /** Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand. */
     private AppScope _appScope;
@@ -31,6 +31,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Instantiates a new unifiedRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignment() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleAssignment");
@@ -92,7 +93,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appScope", (n) -> { currentObject.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
             this.put("appScopeId", (n) -> { currentObject.setAppScopeId(n.getStringValue()); });
             this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
@@ -141,6 +142,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the appScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScope(@javax.annotation.Nullable final AppScope value) {
         this._appScope = value;
     }
@@ -167,6 +170,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the appScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopeId(@javax.annotation.Nullable final String value) {
         this._appScopeId = value;
     }
@@ -175,6 +179,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the condition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCondition(@javax.annotation.Nullable final String value) {
         this._condition = value;
     }
@@ -183,6 +188,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the directoryScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
         this._directoryScope = value;
     }
@@ -191,6 +197,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the directoryScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
         this._directoryScopeId = value;
     }
@@ -199,6 +206,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the principal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
         this._principal = value;
     }
@@ -207,6 +215,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the principalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
         this._principalId = value;
     }
@@ -215,6 +224,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -223,6 +233,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }

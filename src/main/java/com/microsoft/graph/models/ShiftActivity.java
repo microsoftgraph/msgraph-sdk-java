@@ -30,6 +30,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * Instantiates a new shiftActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ShiftActivity() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.shiftActivity");
@@ -83,7 +84,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ShiftActivity currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -130,6 +131,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
@@ -146,6 +148,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -162,6 +166,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -170,6 +175,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -178,6 +184,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPaid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPaid(@javax.annotation.Nullable final Boolean value) {
         this._isPaid = value;
     }
@@ -186,6 +193,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -194,6 +202,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -202,6 +211,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the theme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTheme(@javax.annotation.Nullable final ScheduleEntityTheme value) {
         this._theme = value;
     }

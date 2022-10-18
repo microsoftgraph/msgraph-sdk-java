@@ -18,6 +18,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
      * Instantiates a new managedAppStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppStatus() {
         super();
         this.setOdataType("#microsoft.graph.managedAppStatus");
@@ -54,7 +55,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
         }};
@@ -72,6 +73,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +85,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -91,6 +94,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

@@ -15,6 +15,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      * Instantiates a new ListItemVersion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ListItemVersion() {
         super();
         this.setOdataType("#microsoft.graph.listItemVersion");
@@ -43,7 +44,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ListItemVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("fields", (n) -> { currentObject.setFields(n.getObjectValue(FieldValueSet::createFromDiscriminatorValue)); });
         }};
     }
@@ -60,6 +61,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +72,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
         this._fields = value;
     }

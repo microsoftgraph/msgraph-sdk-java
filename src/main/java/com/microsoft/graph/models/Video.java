@@ -37,6 +37,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Instantiates a new video and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Video() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.video");
@@ -114,7 +115,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Video currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("audioBitsPerSample", (n) -> { currentObject.setAudioBitsPerSample(n.getIntegerValue()); });
             this.put("audioChannels", (n) -> { currentObject.setAudioChannels(n.getIntegerValue()); });
             this.put("audioFormat", (n) -> { currentObject.setAudioFormat(n.getStringValue()); });
@@ -173,6 +174,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("audioBitsPerSample", this.getAudioBitsPerSample());
@@ -193,6 +195,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +204,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audioBitsPerSample property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioBitsPerSample(@javax.annotation.Nullable final Integer value) {
         this._audioBitsPerSample = value;
     }
@@ -209,6 +213,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audioChannels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioChannels(@javax.annotation.Nullable final Integer value) {
         this._audioChannels = value;
     }
@@ -217,6 +222,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audioFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioFormat(@javax.annotation.Nullable final String value) {
         this._audioFormat = value;
     }
@@ -225,6 +231,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audioSamplesPerSecond property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioSamplesPerSecond(@javax.annotation.Nullable final Integer value) {
         this._audioSamplesPerSecond = value;
     }
@@ -233,6 +240,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bitrate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitrate(@javax.annotation.Nullable final Integer value) {
         this._bitrate = value;
     }
@@ -241,6 +249,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Long value) {
         this._duration = value;
     }
@@ -249,6 +258,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fourCC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFourCC(@javax.annotation.Nullable final String value) {
         this._fourCC = value;
     }
@@ -257,6 +267,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the frameRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrameRate(@javax.annotation.Nullable final Double value) {
         this._frameRate = value;
     }
@@ -265,6 +276,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
     }
@@ -273,6 +285,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -281,6 +294,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
         this._width = value;
     }

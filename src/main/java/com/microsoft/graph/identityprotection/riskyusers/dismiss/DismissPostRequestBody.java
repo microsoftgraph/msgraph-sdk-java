@@ -18,6 +18,7 @@ public class DismissPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new dismissPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DismissPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class DismissPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DismissPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("userIds", (n) -> { currentObject.setUserIds(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
@@ -63,6 +64,7 @@ public class DismissPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
@@ -73,6 +75,7 @@ public class DismissPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class DismissPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userIds = value;
     }

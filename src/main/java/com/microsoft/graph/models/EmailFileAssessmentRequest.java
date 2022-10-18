@@ -18,6 +18,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Instantiates a new EmailFileAssessmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailFileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.emailFileAssessmentRequest");
@@ -55,7 +56,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailFileAssessmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("contentData", (n) -> { currentObject.setContentData(n.getStringValue()); });
             this.put("destinationRoutingReason", (n) -> { currentObject.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
             this.put("recipientEmail", (n) -> { currentObject.setRecipientEmail(n.getStringValue()); });
@@ -74,6 +75,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the contentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentData(@javax.annotation.Nullable final String value) {
         this._contentData = value;
     }
@@ -94,6 +97,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the destinationRoutingReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
         this._destinationRoutingReason = value;
     }
@@ -102,6 +106,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the recipientEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmail(@javax.annotation.Nullable final String value) {
         this._recipientEmail = value;
     }

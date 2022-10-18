@@ -28,6 +28,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * Instantiates a new workbookChartAxis and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAxis() {
         super();
         this.setOdataType("#microsoft.graph.workbookChartAxis");
@@ -49,7 +50,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookChartAxis currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartAxisFormat::createFromDiscriminatorValue)); });
             this.put("majorGridlines", (n) -> { currentObject.setMajorGridlines(n.getObjectValue(WorkbookChartGridlines::createFromDiscriminatorValue)); });
             this.put("majorUnit", (n) -> { currentObject.setMajorUnit(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -129,6 +130,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartAxisFormat value) {
         this._format = value;
     }
@@ -154,6 +157,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the majorGridlines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMajorGridlines(@javax.annotation.Nullable final WorkbookChartGridlines value) {
         this._majorGridlines = value;
     }
@@ -162,6 +166,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the majorUnit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMajorUnit(@javax.annotation.Nullable final Json value) {
         this._majorUnit = value;
     }
@@ -170,6 +175,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the maximum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximum(@javax.annotation.Nullable final Json value) {
         this._maximum = value;
     }
@@ -178,6 +184,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the minimum property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimum(@javax.annotation.Nullable final Json value) {
         this._minimum = value;
     }
@@ -186,6 +193,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the minorGridlines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinorGridlines(@javax.annotation.Nullable final WorkbookChartGridlines value) {
         this._minorGridlines = value;
     }
@@ -194,6 +202,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the minorUnit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinorUnit(@javax.annotation.Nullable final Json value) {
         this._minorUnit = value;
     }
@@ -202,6 +211,7 @@ public class WorkbookChartAxis extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final WorkbookChartAxisTitle value) {
         this._title = value;
     }

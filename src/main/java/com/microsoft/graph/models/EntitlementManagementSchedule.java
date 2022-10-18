@@ -24,6 +24,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * Instantiates a new entitlementManagementSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagementSchedule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.entitlementManagementSchedule");
@@ -61,7 +62,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EntitlementManagementSchedule currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("expiration", (n) -> { currentObject.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
@@ -97,6 +98,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("expiration", this.getExpiration());
@@ -110,6 +112,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the expiration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
         this._expiration = value;
     }
@@ -126,6 +130,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -142,6 +148,7 @@ public class EntitlementManagementSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

@@ -30,6 +30,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * Instantiates a new windowsInformationProtectionApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionApp() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsInformationProtectionApp");
@@ -91,7 +92,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionApp currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("denied", (n) -> { currentObject.setDenied(n.getBooleanValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -129,6 +130,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("denied", this.getDenied());
@@ -144,6 +146,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -152,6 +155,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the denied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDenied(@javax.annotation.Nullable final Boolean value) {
         this._denied = value;
     }
@@ -160,6 +164,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -168,6 +173,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -176,6 +182,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -184,6 +191,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
         this._productName = value;
     }
@@ -192,6 +200,7 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
      * @param value Value to set for the publisherName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherName(@javax.annotation.Nullable final String value) {
         this._publisherName = value;
     }

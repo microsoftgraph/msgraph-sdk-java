@@ -27,6 +27,7 @@ public class DetectedApp extends Entity implements Parsable {
      * Instantiates a new detectedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DetectedApp() {
         super();
         this.setOdataType("#microsoft.graph.detectedApp");
@@ -64,7 +65,7 @@ public class DetectedApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
@@ -119,6 +120,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }
@@ -143,6 +146,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -151,6 +155,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -159,6 +164,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DetectedAppPlatformType value) {
         this._platform = value;
     }
@@ -167,6 +173,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -175,6 +182,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the sizeInByte property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSizeInByte(@javax.annotation.Nullable final Long value) {
         this._sizeInByte = value;
     }
@@ -183,6 +191,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

@@ -23,6 +23,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * Instantiates a new alertDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AlertDetection() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.alertDetection");
@@ -60,7 +61,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AlertDetection currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getStringValue()); });
             this.put("method", (n) -> { currentObject.setMethod(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -96,6 +97,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("detectionType", this.getDetectionType());
@@ -109,6 +111,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final String value) {
         this._detectionType = value;
     }
@@ -125,6 +129,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the method property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMethod(@javax.annotation.Nullable final String value) {
         this._method = value;
     }
@@ -133,6 +138,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -141,6 +147,7 @@ public class AlertDetection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

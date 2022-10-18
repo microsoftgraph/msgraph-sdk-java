@@ -14,6 +14,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      * Instantiates a new TokenMeetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TokenMeetingInfo() {
         super();
         this.setOdataType("#microsoft.graph.tokenMeetingInfo");
@@ -35,7 +36,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TokenMeetingInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("token", (n) -> { currentObject.setToken(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class TokenMeetingInfo extends MeetingInfo implements Parsable {
      * @param value Value to set for the token property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToken(@javax.annotation.Nullable final String value) {
         this._token = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class CalendarGroup extends Entity implements Parsable {
     /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
     private java.util.List<Calendar> _calendars;
@@ -21,6 +21,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * Instantiates a new calendarGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CalendarGroup() {
         super();
         this.setOdataType("#microsoft.graph.calendarGroup");
@@ -66,7 +67,7 @@ public class CalendarGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CalendarGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
             this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
             this.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
@@ -86,6 +87,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param value Value to set for the calendars property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendars(@javax.annotation.Nullable final java.util.List<Calendar> value) {
         this._calendars = value;
     }
@@ -107,6 +110,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -115,6 +119,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param value Value to set for the classId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassId(@javax.annotation.Nullable final String value) {
         this._classId = value;
     }
@@ -123,6 +128,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }

@@ -14,6 +14,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.identitySecurityDefaultsEnforcementPolicy");
@@ -35,7 +36,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentitySecurityDefaultsEnforcementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implem
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }

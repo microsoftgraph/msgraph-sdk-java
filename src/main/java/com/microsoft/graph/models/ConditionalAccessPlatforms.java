@@ -21,6 +21,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * Instantiates a new conditionalAccessPlatforms and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessPlatforms() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessPlatforms");
@@ -58,7 +59,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPlatforms currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
             this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("excludePlatforms", this.getExcludePlatforms());
@@ -97,6 +99,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the excludePlatforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludePlatforms(@javax.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
         this._excludePlatforms = value;
     }
@@ -113,6 +117,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the includePlatforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludePlatforms(@javax.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
         this._includePlatforms = value;
     }
@@ -121,6 +126,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

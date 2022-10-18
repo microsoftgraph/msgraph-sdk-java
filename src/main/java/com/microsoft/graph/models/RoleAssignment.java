@@ -22,6 +22,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * Instantiates a new roleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleAssignment() {
         super();
         this.setOdataType("#microsoft.graph.roleAssignment");
@@ -66,7 +67,7 @@ public class RoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("resourceScopes", (n) -> { currentObject.setResourceScopes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -94,6 +95,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,6 +109,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -115,6 +118,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +127,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScopes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._resourceScopes = value;
     }
@@ -131,6 +136,7 @@ public class RoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final RoleDefinition value) {
         this._roleDefinition = value;
     }

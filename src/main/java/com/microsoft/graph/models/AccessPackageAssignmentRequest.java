@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand. */
     private AccessPackage _accessPackage;
@@ -32,6 +32,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignmentRequest");
@@ -85,7 +86,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
             this.put("assignment", (n) -> { currentObject.setAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
             this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -142,6 +143,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
         this._accessPackage = value;
     }
@@ -168,6 +171,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the assignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignment(@javax.annotation.Nullable final AccessPackageAssignment value) {
         this._assignment = value;
     }
@@ -176,6 +180,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -184,6 +189,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -192,6 +198,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestor(@javax.annotation.Nullable final AccessPackageSubject value) {
         this._requestor = value;
     }
@@ -200,6 +207,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final AccessPackageRequestType value) {
         this._requestType = value;
     }
@@ -208,6 +216,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final EntitlementManagementSchedule value) {
         this._schedule = value;
     }
@@ -216,6 +225,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AccessPackageRequestState value) {
         this._state = value;
     }
@@ -224,6 +234,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

@@ -9,14 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** The eventDateTime property */
+    /** Date and time when the event occurred. */
     private OffsetDateTime _eventDateTime;
-    /** The initiator property */
+    /** Initiator of the event. */
     private IdentitySet _initiator;
     /**
      * Instantiates a new MessageUnpinnedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageUnpinnedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.messageUnpinnedEventMessageDetail");
@@ -32,7 +33,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
         return new MessageUnpinnedEventMessageDetail();
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. Date and time when the event occurred.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -46,13 +47,13 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageUnpinnedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         }};
     }
     /**
-     * Gets the initiator property value. The initiator property
+     * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -64,6 +65,7 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -71,18 +73,20 @@ public class MessageUnpinnedEventMessageDetail extends EventMessageDetail implem
         writer.writeObjectValue("initiator", this.getInitiator());
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. Date and time when the event occurred.
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
     /**
-     * Sets the initiator property value. The initiator property
+     * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

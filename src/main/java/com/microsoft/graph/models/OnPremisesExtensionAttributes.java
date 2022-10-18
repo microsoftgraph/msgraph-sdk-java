@@ -47,6 +47,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * Instantiates a new onPremisesExtensionAttributes and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesExtensionAttributes() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.onPremisesExtensionAttributes");
@@ -196,7 +197,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesExtensionAttributes currentObject = this;
-        return new HashMap<>(16) {{
+        return new HashMap<String, Consumer<ParseNode>>(16) {{
             this.put("extensionAttribute1", (n) -> { currentObject.setExtensionAttribute1(n.getStringValue()); });
             this.put("extensionAttribute10", (n) -> { currentObject.setExtensionAttribute10(n.getStringValue()); });
             this.put("extensionAttribute11", (n) -> { currentObject.setExtensionAttribute11(n.getStringValue()); });
@@ -228,6 +229,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("extensionAttribute1", this.getExtensionAttribute1());
@@ -253,6 +255,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -261,6 +264,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute1(@javax.annotation.Nullable final String value) {
         this._extensionAttribute1 = value;
     }
@@ -269,6 +273,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute10 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute10(@javax.annotation.Nullable final String value) {
         this._extensionAttribute10 = value;
     }
@@ -277,6 +282,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute11 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute11(@javax.annotation.Nullable final String value) {
         this._extensionAttribute11 = value;
     }
@@ -285,6 +291,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute12 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute12(@javax.annotation.Nullable final String value) {
         this._extensionAttribute12 = value;
     }
@@ -293,6 +300,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute13 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute13(@javax.annotation.Nullable final String value) {
         this._extensionAttribute13 = value;
     }
@@ -301,6 +309,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute14 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute14(@javax.annotation.Nullable final String value) {
         this._extensionAttribute14 = value;
     }
@@ -309,6 +318,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute15 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute15(@javax.annotation.Nullable final String value) {
         this._extensionAttribute15 = value;
     }
@@ -317,6 +327,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute2(@javax.annotation.Nullable final String value) {
         this._extensionAttribute2 = value;
     }
@@ -325,6 +336,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute3 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute3(@javax.annotation.Nullable final String value) {
         this._extensionAttribute3 = value;
     }
@@ -333,6 +345,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute4(@javax.annotation.Nullable final String value) {
         this._extensionAttribute4 = value;
     }
@@ -341,6 +354,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute5 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute5(@javax.annotation.Nullable final String value) {
         this._extensionAttribute5 = value;
     }
@@ -349,6 +363,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute6 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute6(@javax.annotation.Nullable final String value) {
         this._extensionAttribute6 = value;
     }
@@ -357,6 +372,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute7 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute7(@javax.annotation.Nullable final String value) {
         this._extensionAttribute7 = value;
     }
@@ -365,6 +381,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute8 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute8(@javax.annotation.Nullable final String value) {
         this._extensionAttribute8 = value;
     }
@@ -373,6 +390,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the extensionAttribute9 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttribute9(@javax.annotation.Nullable final String value) {
         this._extensionAttribute9 = value;
     }
@@ -381,6 +399,7 @@ public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

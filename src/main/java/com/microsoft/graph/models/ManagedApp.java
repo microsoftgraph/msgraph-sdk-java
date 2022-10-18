@@ -21,6 +21,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      * Instantiates a new ManagedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedApp() {
         super();
         this.setOdataType("#microsoft.graph.managedApp");
@@ -61,7 +62,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appAvailability", (n) -> { currentObject.setAppAvailability(n.getEnumValue(ManagedAppAvailability.class)); });
             this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
         }};
@@ -79,6 +80,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,6 +92,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      * @param value Value to set for the appAvailability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppAvailability(@javax.annotation.Nullable final ManagedAppAvailability value) {
         this._appAvailability = value;
     }
@@ -98,6 +101,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

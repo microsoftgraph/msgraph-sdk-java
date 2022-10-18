@@ -29,6 +29,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Instantiates a new applicationTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplicationTemplate() {
         super();
         this.setOdataType("#microsoft.graph.applicationTemplate");
@@ -74,7 +75,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
@@ -130,6 +131,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -155,6 +158,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -163,6 +167,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -171,6 +176,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
         this._homePageUrl = value;
     }
@@ -179,6 +185,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoUrl(@javax.annotation.Nullable final String value) {
         this._logoUrl = value;
     }
@@ -187,6 +194,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -195,6 +203,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedProvisioningTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedProvisioningTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedProvisioningTypes = value;
     }
@@ -203,6 +212,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedSingleSignOnModes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedSingleSignOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedSingleSignOnModes = value;
     }

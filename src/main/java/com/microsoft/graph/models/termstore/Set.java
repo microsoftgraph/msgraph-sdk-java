@@ -31,6 +31,7 @@ public class Set extends Entity implements Parsable {
      * Instantiates a new set and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Set() {
         super();
         this.setOdataType("#microsoft.graph.termStore.set");
@@ -76,7 +77,7 @@ public class Set extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Set currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -132,6 +133,7 @@ public class Set extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,6 +151,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<Term> value) {
         this._children = value;
     }
@@ -157,6 +160,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -165,6 +169,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -173,6 +178,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the localizedNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizedNames(@javax.annotation.Nullable final java.util.List<LocalizedName> value) {
         this._localizedNames = value;
     }
@@ -181,6 +187,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the parentGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentGroup(@javax.annotation.Nullable final Group value) {
         this._parentGroup = value;
     }
@@ -189,6 +196,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._properties = value;
     }
@@ -197,6 +205,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the relations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelations(@javax.annotation.Nullable final java.util.List<Relation> value) {
         this._relations = value;
     }
@@ -205,6 +214,7 @@ public class Set extends Entity implements Parsable {
      * @param value Value to set for the terms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTerms(@javax.annotation.Nullable final java.util.List<Term> value) {
         this._terms = value;
     }

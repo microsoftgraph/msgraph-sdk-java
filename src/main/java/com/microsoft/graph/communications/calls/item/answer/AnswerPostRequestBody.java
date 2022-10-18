@@ -29,6 +29,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new answerPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AnswerPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -81,7 +82,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("acceptedModalities", (n) -> { currentObject.setAcceptedModalities(n.getCollectionOfEnumValues(Modality.class)); });
             this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
             this.put("callOptions", (n) -> { currentObject.setCallOptions(n.getObjectValue(IncomingCallOptions::createFromDiscriminatorValue)); });
@@ -110,6 +111,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("acceptedModalities", this.getAcceptedModalities());
@@ -124,6 +126,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acceptedModalities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
         this._acceptedModalities = value;
     }
@@ -132,6 +135,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -140,6 +144,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callbackUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallbackUri(@javax.annotation.Nullable final String value) {
         this._callbackUri = value;
     }
@@ -148,6 +153,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallOptions(@javax.annotation.Nullable final IncomingCallOptions value) {
         this._callOptions = value;
     }
@@ -156,6 +162,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaConfig(@javax.annotation.Nullable final MediaConfig value) {
         this._mediaConfig = value;
     }
@@ -164,6 +171,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the participantCapacity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipantCapacity(@javax.annotation.Nullable final Integer value) {
         this._participantCapacity = value;
     }

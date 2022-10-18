@@ -14,6 +14,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemServicePrincipalResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource");
@@ -43,7 +44,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewInstanceDecisionItemServicePrincipalResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }

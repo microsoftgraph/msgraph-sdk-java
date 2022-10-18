@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class SharedInsight extends Entity implements Parsable {
     /** Details about the shared item. Read only. */
     private SharingDetail _lastShared;
@@ -25,6 +25,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Instantiates a new sharedInsight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedInsight() {
         super();
         this.setOdataType("#microsoft.graph.sharedInsight");
@@ -46,7 +47,7 @@ public class SharedInsight extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SharedInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("lastShared", (n) -> { currentObject.setLastShared(n.getObjectValue(SharingDetail::createFromDiscriminatorValue)); });
             this.put("lastSharedMethod", (n) -> { currentObject.setLastSharedMethod(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
             this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
@@ -108,14 +109,13 @@ public class SharedInsight extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("lastShared", this.getLastShared());
         writer.writeObjectValue("lastSharedMethod", this.getLastSharedMethod());
         writer.writeObjectValue("resource", this.getResource());
-        writer.writeObjectValue("resourceReference", this.getResourceReference());
-        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
         writer.writeCollectionOfObjectValues("sharingHistory", this.getSharingHistory());
     }
     /**
@@ -123,6 +123,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the lastShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastShared(@javax.annotation.Nullable final SharingDetail value) {
         this._lastShared = value;
     }
@@ -131,6 +132,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the lastSharedMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSharedMethod(@javax.annotation.Nullable final Entity value) {
         this._lastSharedMethod = value;
     }
@@ -139,6 +141,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final Entity value) {
         this._resource = value;
     }
@@ -147,6 +150,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceReference(@javax.annotation.Nullable final ResourceReference value) {
         this._resourceReference = value;
     }
@@ -155,6 +159,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceVisualization(@javax.annotation.Nullable final ResourceVisualization value) {
         this._resourceVisualization = value;
     }
@@ -163,6 +168,7 @@ public class SharedInsight extends Entity implements Parsable {
      * @param value Value to set for the sharingHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingHistory(@javax.annotation.Nullable final java.util.List<SharingDetail> value) {
         this._sharingHistory = value;
     }

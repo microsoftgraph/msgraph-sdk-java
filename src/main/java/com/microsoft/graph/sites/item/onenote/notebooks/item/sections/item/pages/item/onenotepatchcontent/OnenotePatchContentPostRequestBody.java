@@ -19,6 +19,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new onenotePatchContentPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenotePatchContentPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,7 +56,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenotePatchContentPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("commands", (n) -> { currentObject.setCommands(n.getCollectionOfObjectValues(OnenotePatchContentCommand::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("commands", this.getCommands());
@@ -74,6 +76,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class OnenotePatchContentPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the commands property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommands(@javax.annotation.Nullable final java.util.List<OnenotePatchContentCommand> value) {
         this._commands = value;
     }

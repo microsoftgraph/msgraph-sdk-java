@@ -23,6 +23,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * Instantiates a new extensionProperty and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExtensionProperty() {
         super();
         this.setOdataType("#microsoft.graph.extensionProperty");
@@ -60,7 +61,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExtensionProperty currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("dataType", (n) -> { currentObject.setDataType(n.getStringValue()); });
             this.put("isSyncedFromOnPremises", (n) -> { currentObject.setIsSyncedFromOnPremises(n.getBooleanValue()); });
@@ -97,6 +98,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -119,6 +122,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final String value) {
         this._dataType = value;
     }
@@ -127,6 +131,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param value Value to set for the isSyncedFromOnPremises property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSyncedFromOnPremises(@javax.annotation.Nullable final Boolean value) {
         this._isSyncedFromOnPremises = value;
     }
@@ -135,6 +140,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -143,6 +149,7 @@ public class ExtensionProperty extends DirectoryObject implements Parsable {
      * @param value Value to set for the targetObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetObjects(@javax.annotation.Nullable final java.util.List<String> value) {
         this._targetObjects = value;
     }

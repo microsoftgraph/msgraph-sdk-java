@@ -20,6 +20,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Instantiates a new SignInFrequencySessionControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignInFrequencySessionControl() {
         super();
         this.setOdataType("#microsoft.graph.signInFrequencySessionControl");
@@ -49,7 +50,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInFrequencySessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("authenticationType", (n) -> { currentObject.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
             this.put("frequencyInterval", (n) -> { currentObject.setFrequencyInterval(n.getEnumValue(SignInFrequencyInterval.class)); });
             this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SigninFrequencyType.class)); });
@@ -85,6 +86,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationType(@javax.annotation.Nullable final SignInFrequencyAuthenticationType value) {
         this._authenticationType = value;
     }
@@ -106,6 +109,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the frequencyInterval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrequencyInterval(@javax.annotation.Nullable final SignInFrequencyInterval value) {
         this._frequencyInterval = value;
     }
@@ -114,6 +118,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SigninFrequencyType value) {
         this._type = value;
     }
@@ -122,6 +127,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
         this._value = value;
     }

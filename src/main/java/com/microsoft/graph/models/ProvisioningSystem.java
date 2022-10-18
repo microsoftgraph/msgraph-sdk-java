@@ -14,6 +14,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
      * Instantiates a new ProvisioningSystem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisioningSystem() {
         super();
         this.setOdataType("#microsoft.graph.provisioningSystem");
@@ -43,7 +44,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisioningSystem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ProvisioningSystem extends Identity implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final DetailsInfo value) {
         this._details = value;
     }

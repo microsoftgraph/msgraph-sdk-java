@@ -16,6 +16,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * Instantiates a new IosVppAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVppAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.iosVppAppAssignmentSettings");
@@ -37,7 +38,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("useDeviceLicensing", (n) -> { currentObject.setUseDeviceLicensing(n.getBooleanValue()); });
             this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the useDeviceLicensing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceLicensing(@javax.annotation.Nullable final Boolean value) {
         this._useDeviceLicensing = value;
     }
@@ -82,6 +85,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the vpnConfigurationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
         this._vpnConfigurationId = value;
     }

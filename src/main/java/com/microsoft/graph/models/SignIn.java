@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class SignIn extends Entity implements Parsable {
     /** App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
     private String _appDisplayName;
@@ -60,6 +60,7 @@ public class SignIn extends Entity implements Parsable {
      * Instantiates a new signIn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignIn() {
         super();
         this.setOdataType("#microsoft.graph.signIn");
@@ -145,7 +146,7 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignIn currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appliedConditionalAccessPolicies", (n) -> { currentObject.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
@@ -296,6 +297,7 @@ public class SignIn extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -328,6 +330,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -336,6 +339,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -344,6 +348,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
         this._appliedConditionalAccessPolicies = value;
     }
@@ -352,6 +357,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the clientAppUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppUsed(@javax.annotation.Nullable final String value) {
         this._clientAppUsed = value;
     }
@@ -360,6 +366,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccessStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessStatus(@javax.annotation.Nullable final ConditionalAccessStatus value) {
         this._conditionalAccessStatus = value;
     }
@@ -368,6 +375,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -376,6 +384,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -384,6 +393,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the deviceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDetail(@javax.annotation.Nullable final DeviceDetail value) {
         this._deviceDetail = value;
     }
@@ -392,6 +402,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -400,6 +411,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the isInteractive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInteractive(@javax.annotation.Nullable final Boolean value) {
         this._isInteractive = value;
     }
@@ -408,6 +420,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final SignInLocation value) {
         this._location = value;
     }
@@ -416,6 +429,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceDisplayName(@javax.annotation.Nullable final String value) {
         this._resourceDisplayName = value;
     }
@@ -424,6 +438,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -432,6 +447,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._riskDetail = value;
     }
@@ -440,6 +456,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskEventTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskEventTypes(@javax.annotation.Nullable final java.util.List<RiskEventType> value) {
         this._riskEventTypes = value;
     }
@@ -448,6 +465,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskEventTypes_v2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskEventTypes_v2(@javax.annotation.Nullable final java.util.List<String> value) {
         this._riskEventTypes_v2 = value;
     }
@@ -456,6 +474,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskLevelAggregated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelAggregated(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevelAggregated = value;
     }
@@ -464,6 +483,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskLevelDuringSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelDuringSignIn(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevelDuringSignIn = value;
     }
@@ -472,6 +492,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
         this._riskState = value;
     }
@@ -480,6 +501,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SignInStatus value) {
         this._status = value;
     }
@@ -488,6 +510,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -496,6 +519,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -504,6 +528,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

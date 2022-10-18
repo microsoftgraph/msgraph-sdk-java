@@ -30,6 +30,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * Instantiates a new ServiceHealthIssue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceHealthIssue() {
         super();
         this.setOdataType("#microsoft.graph.serviceHealthIssue");
@@ -75,7 +76,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceHealthIssue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(ServiceHealthClassificationType.class)); });
             this.put("feature", (n) -> { currentObject.setFeature(n.getStringValue()); });
             this.put("featureGroup", (n) -> { currentObject.setFeatureGroup(n.getStringValue()); });
@@ -140,6 +141,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +160,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final ServiceHealthClassificationType value) {
         this._classification = value;
     }
@@ -166,6 +169,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the feature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final String value) {
         this._feature = value;
     }
@@ -174,6 +178,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the featureGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureGroup(@javax.annotation.Nullable final String value) {
         this._featureGroup = value;
     }
@@ -182,6 +187,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the impactDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImpactDescription(@javax.annotation.Nullable final String value) {
         this._impactDescription = value;
     }
@@ -190,6 +196,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the isResolved property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsResolved(@javax.annotation.Nullable final Boolean value) {
         this._isResolved = value;
     }
@@ -198,6 +205,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the origin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrigin(@javax.annotation.Nullable final ServiceHealthOrigin value) {
         this._origin = value;
     }
@@ -206,6 +214,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the posts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosts(@javax.annotation.Nullable final java.util.List<ServiceHealthIssuePost> value) {
         this._posts = value;
     }
@@ -214,6 +223,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
         this._service = value;
     }
@@ -222,6 +232,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ServiceHealthStatus value) {
         this._status = value;
     }

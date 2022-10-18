@@ -22,6 +22,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * Instantiates a new remoteAssistancePartner and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoteAssistancePartner() {
         super();
         this.setOdataType("#microsoft.graph.remoteAssistancePartner");
@@ -51,7 +52,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoteAssistancePartner currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
             this.put("onboardingStatus", (n) -> { currentObject.setOnboardingStatus(n.getEnumValue(RemoteAssistanceOnboardingStatus.class)); });
@@ -87,6 +88,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -108,6 +111,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastConnectionDateTime = value;
     }
@@ -116,6 +120,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingStatus(@javax.annotation.Nullable final RemoteAssistanceOnboardingStatus value) {
         this._onboardingStatus = value;
     }
@@ -124,6 +129,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
      * @param value Value to set for the onboardingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnboardingUrl(@javax.annotation.Nullable final String value) {
         this._onboardingUrl = value;
     }

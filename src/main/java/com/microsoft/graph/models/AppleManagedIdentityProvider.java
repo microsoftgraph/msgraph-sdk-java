@@ -20,6 +20,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * Instantiates a new AppleManagedIdentityProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleManagedIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.appleManagedIdentityProvider");
@@ -57,7 +58,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleManagedIdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("certificateData", (n) -> { currentObject.setCertificateData(n.getStringValue()); });
             this.put("developerId", (n) -> { currentObject.setDeveloperId(n.getStringValue()); });
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * @param value Value to set for the certificateData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateData(@javax.annotation.Nullable final String value) {
         this._certificateData = value;
     }
@@ -106,6 +109,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * @param value Value to set for the developerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeveloperId(@javax.annotation.Nullable final String value) {
         this._developerId = value;
     }
@@ -114,6 +118,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * @param value Value to set for the keyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyId(@javax.annotation.Nullable final String value) {
         this._keyId = value;
     }
@@ -122,6 +127,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      * @param value Value to set for the serviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceId(@javax.annotation.Nullable final String value) {
         this._serviceId = value;
     }

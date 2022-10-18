@@ -23,6 +23,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Instantiates a new subjectRightsRequestStageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestStageDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.subjectRightsRequestStageDetail");
@@ -60,7 +61,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestStageDetail currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(SubjectRightsRequestStage.class)); });
@@ -96,6 +97,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
@@ -109,6 +111,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }
@@ -125,6 +129,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the stage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final SubjectRightsRequestStage value) {
         this._stage = value;
     }
@@ -141,6 +147,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStageStatus value) {
         this._status = value;
     }

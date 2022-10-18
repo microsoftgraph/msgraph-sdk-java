@@ -18,7 +18,7 @@ public class Application extends DirectoryObject implements Parsable {
     private String _appId;
     /** Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne). */
     private String _applicationTemplateId;
-    /** The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
+    /** The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
     private java.util.List<AppRole> _appRoles;
     /** Specifies the certification status of the application. */
     private Certification _certification;
@@ -96,6 +96,7 @@ public class Application extends DirectoryObject implements Parsable {
      * Instantiates a new application and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Application() {
         super();
         this.setOdataType("#microsoft.graph.application");
@@ -143,7 +144,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._applicationTemplateId;
     }
     /**
-     * Gets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @return a appRole
      */
     @javax.annotation.Nullable
@@ -229,7 +230,7 @@ public class Application extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Application currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
             this.put("api", (n) -> { currentObject.setApi(n.getObjectValue(ApiApplication::createFromDiscriminatorValue)); });
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
@@ -494,6 +495,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -544,6 +546,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the addIns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddIns(@javax.annotation.Nullable final java.util.List<AddIn> value) {
         this._addIns = value;
     }
@@ -552,6 +555,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the api property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApi(@javax.annotation.Nullable final ApiApplication value) {
         this._api = value;
     }
@@ -560,6 +564,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -568,14 +573,16 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the applicationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationTemplateId(@javax.annotation.Nullable final String value) {
         this._applicationTemplateId = value;
     }
     /**
-     * Sets the appRoles property value. The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+     * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @param value Value to set for the appRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoles(@javax.annotation.Nullable final java.util.List<AppRole> value) {
         this._appRoles = value;
     }
@@ -584,6 +591,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the certification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertification(@javax.annotation.Nullable final Certification value) {
         this._certification = value;
     }
@@ -592,6 +600,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -600,6 +609,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedOnBehalfOf(@javax.annotation.Nullable final DirectoryObject value) {
         this._createdOnBehalfOf = value;
     }
@@ -608,6 +618,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the defaultRedirectUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultRedirectUri(@javax.annotation.Nullable final String value) {
         this._defaultRedirectUri = value;
     }
@@ -616,6 +627,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -624,6 +636,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the disabledByMicrosoftStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledByMicrosoftStatus(@javax.annotation.Nullable final String value) {
         this._disabledByMicrosoftStatus = value;
     }
@@ -632,6 +645,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -640,6 +654,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensionProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionProperties(@javax.annotation.Nullable final java.util.List<ExtensionProperty> value) {
         this._extensionProperties = value;
     }
@@ -648,6 +663,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
         this._federatedIdentityCredentials = value;
     }
@@ -656,6 +672,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the groupMembershipClaims property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupMembershipClaims(@javax.annotation.Nullable final String value) {
         this._groupMembershipClaims = value;
     }
@@ -664,6 +681,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this._homeRealmDiscoveryPolicies = value;
     }
@@ -672,6 +690,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the identifierUris property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentifierUris(@javax.annotation.Nullable final java.util.List<String> value) {
         this._identifierUris = value;
     }
@@ -680,6 +699,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final InformationalUrl value) {
         this._info = value;
     }
@@ -688,6 +708,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the isDeviceOnlyAuthSupported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeviceOnlyAuthSupported(@javax.annotation.Nullable final Boolean value) {
         this._isDeviceOnlyAuthSupported = value;
     }
@@ -696,6 +717,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the isFallbackPublicClient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFallbackPublicClient(@javax.annotation.Nullable final Boolean value) {
         this._isFallbackPublicClient = value;
     }
@@ -704,6 +726,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the keyCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredential> value) {
         this._keyCredentials = value;
     }
@@ -712,6 +735,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the logo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogo(@javax.annotation.Nullable final byte[] value) {
         this._logo = value;
     }
@@ -720,6 +744,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -728,6 +753,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2RequirePostResponse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2RequirePostResponse(@javax.annotation.Nullable final Boolean value) {
         this._oauth2RequirePostResponse = value;
     }
@@ -736,6 +762,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the optionalClaims property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptionalClaims(@javax.annotation.Nullable final OptionalClaims value) {
         this._optionalClaims = value;
     }
@@ -744,6 +771,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the owners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._owners = value;
     }
@@ -752,6 +780,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the parentalControlSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentalControlSettings(@javax.annotation.Nullable final ParentalControlSettings value) {
         this._parentalControlSettings = value;
     }
@@ -760,6 +789,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredential> value) {
         this._passwordCredentials = value;
     }
@@ -768,6 +798,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the publicClient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicClient(@javax.annotation.Nullable final PublicClientApplication value) {
         this._publicClient = value;
     }
@@ -776,6 +807,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the publisherDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherDomain(@javax.annotation.Nullable final String value) {
         this._publisherDomain = value;
     }
@@ -784,6 +816,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the requiredResourceAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredResourceAccess(@javax.annotation.Nullable final java.util.List<RequiredResourceAccess> value) {
         this._requiredResourceAccess = value;
     }
@@ -792,6 +825,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the samlMetadataUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSamlMetadataUrl(@javax.annotation.Nullable final String value) {
         this._samlMetadataUrl = value;
     }
@@ -800,6 +834,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the serviceManagementReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceManagementReference(@javax.annotation.Nullable final String value) {
         this._serviceManagementReference = value;
     }
@@ -808,6 +843,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the signInAudience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
         this._signInAudience = value;
     }
@@ -816,6 +852,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the spa property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpa(@javax.annotation.Nullable final SpaApplication value) {
         this._spa = value;
     }
@@ -824,6 +861,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -832,6 +870,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenEncryptionKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
         this._tokenEncryptionKeyId = value;
     }
@@ -840,6 +879,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this._tokenIssuancePolicies = value;
     }
@@ -848,6 +888,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this._tokenLifetimePolicies = value;
     }
@@ -856,6 +897,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the verifiedPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
         this._verifiedPublisher = value;
     }
@@ -864,6 +906,7 @@ public class Application extends DirectoryObject implements Parsable {
      * @param value Value to set for the web property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeb(@javax.annotation.Nullable final WebApplication value) {
         this._web = value;
     }

@@ -16,6 +16,7 @@ public class Presence extends Entity implements Parsable {
      * Instantiates a new presence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Presence() {
         super();
         this.setOdataType("#microsoft.graph.presence");
@@ -53,7 +54,7 @@ public class Presence extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Presence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
             this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class Presence extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class Presence extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
         this._activity = value;
     }
@@ -82,6 +85,7 @@ public class Presence extends Entity implements Parsable {
      * @param value Value to set for the availability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
         this._availability = value;
     }

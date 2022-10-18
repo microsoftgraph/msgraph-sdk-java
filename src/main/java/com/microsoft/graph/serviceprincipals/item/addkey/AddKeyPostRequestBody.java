@@ -24,6 +24,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new addKeyPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,7 +53,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddKeyPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<String, Consumer<ParseNode>>(3) {{
             this.put("keyCredential", (n) -> { currentObject.setKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
             this.put("passwordCredential", (n) -> { currentObject.setPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
             this.put("proof", (n) -> { currentObject.setProof(n.getStringValue()); });
@@ -87,6 +88,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("keyCredential", this.getKeyCredential());
@@ -99,6 +101,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the keyCredential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyCredential(@javax.annotation.Nullable final KeyCredential value) {
         this._keyCredential = value;
     }
@@ -115,6 +119,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the passwordCredential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
         this._passwordCredential = value;
     }
@@ -123,6 +128,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the proof property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProof(@javax.annotation.Nullable final String value) {
         this._proof = value;
     }

@@ -17,6 +17,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      * Instantiates a new deviceComplianceScheduledActionForRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScheduledActionForRule() {
         super();
         this.setOdataType("#microsoft.graph.deviceComplianceScheduledActionForRule");
@@ -38,7 +39,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScheduledActionForRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("ruleName", (n) -> { currentObject.setRuleName(n.getStringValue()); });
             this.put("scheduledActionConfigurations", (n) -> { currentObject.setScheduledActionConfigurations(n.getCollectionOfObjectValues(DeviceComplianceActionItem::createFromDiscriminatorValue)); });
         }};
@@ -64,6 +65,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      * @param value Value to set for the ruleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleName(@javax.annotation.Nullable final String value) {
         this._ruleName = value;
     }
@@ -83,6 +86,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements Pa
      * @param value Value to set for the scheduledActionConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledActionConfigurations(@javax.annotation.Nullable final java.util.List<DeviceComplianceActionItem> value) {
         this._scheduledActionConfigurations = value;
     }

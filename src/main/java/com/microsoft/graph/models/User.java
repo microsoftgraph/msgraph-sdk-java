@@ -27,6 +27,8 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AssignedPlan> _assignedPlans;
     /** The authentication methods that are supported for the user. */
     private Authentication _authentication;
+    /** The authorizationInfo property */
+    private AuthorizationInfo _authorizationInfo;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. */
     private OffsetDateTime _birthday;
     /** The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith). */
@@ -247,6 +249,7 @@ public class User extends DirectoryObject implements Parsable {
      * Instantiates a new User and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public User() {
         super();
         this.setOdataType("#microsoft.graph.user");
@@ -332,6 +335,14 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public Authentication getAuthentication() {
         return this._authentication;
+    }
+    /**
+     * Gets the authorizationInfo property value. The authorizationInfo property
+     * @return a authorizationInfo
+     */
+    @javax.annotation.Nullable
+    public AuthorizationInfo getAuthorizationInfo() {
+        return this._authorizationInfo;
     }
     /**
      * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
@@ -596,7 +607,7 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final User currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("aboutMe", (n) -> { currentObject.setAboutMe(n.getStringValue()); });
             this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
             this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
@@ -606,6 +617,7 @@ public class User extends DirectoryObject implements Parsable {
             this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
             this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
             this.put("authentication", (n) -> { currentObject.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
+            this.put("authorizationInfo", (n) -> { currentObject.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
             this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
             this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
@@ -1329,6 +1341,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -1341,6 +1354,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("assignedLicenses", this.getAssignedLicenses());
         writer.writeCollectionOfObjectValues("assignedPlans", this.getAssignedPlans());
         writer.writeObjectValue("authentication", this.getAuthentication());
+        writer.writeObjectValue("authorizationInfo", this.getAuthorizationInfo());
         writer.writeOffsetDateTimeValue("birthday", this.getBirthday());
         writer.writeCollectionOfPrimitiveValues("businessPhones", this.getBusinessPhones());
         writer.writeObjectValue("calendar", this.getCalendar());
@@ -1455,6 +1469,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the aboutMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAboutMe(@javax.annotation.Nullable final String value) {
         this._aboutMe = value;
     }
@@ -1463,6 +1478,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -1471,6 +1487,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<UserActivity> value) {
         this._activities = value;
     }
@@ -1479,6 +1496,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ageGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgeGroup(@javax.annotation.Nullable final String value) {
         this._ageGroup = value;
     }
@@ -1487,6 +1505,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this._agreementAcceptances = value;
     }
@@ -1495,6 +1514,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignments = value;
     }
@@ -1503,6 +1523,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this._assignedLicenses = value;
     }
@@ -1511,6 +1532,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this._assignedPlans = value;
     }
@@ -1519,14 +1541,25 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the authentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthentication(@javax.annotation.Nullable final Authentication value) {
         this._authentication = value;
+    }
+    /**
+     * Sets the authorizationInfo property value. The authorizationInfo property
+     * @param value Value to set for the authorizationInfo property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthorizationInfo(@javax.annotation.Nullable final AuthorizationInfo value) {
+        this._authorizationInfo = value;
     }
     /**
      * Sets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
      * @param value Value to set for the birthday property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final OffsetDateTime value) {
         this._birthday = value;
     }
@@ -1535,6 +1568,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._businessPhones = value;
     }
@@ -1543,6 +1577,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendar(@javax.annotation.Nullable final Calendar value) {
         this._calendar = value;
     }
@@ -1551,6 +1586,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendarGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarGroups(@javax.annotation.Nullable final java.util.List<CalendarGroup> value) {
         this._calendarGroups = value;
     }
@@ -1559,6 +1595,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendars property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendars(@javax.annotation.Nullable final java.util.List<Calendar> value) {
         this._calendars = value;
     }
@@ -1567,6 +1604,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._calendarView = value;
     }
@@ -1575,6 +1613,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the chats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChats(@javax.annotation.Nullable final java.util.List<Chat> value) {
         this._chats = value;
     }
@@ -1583,6 +1622,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
         this._city = value;
     }
@@ -1591,6 +1631,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
         this._companyName = value;
     }
@@ -1599,6 +1640,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the consentProvidedForMinor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConsentProvidedForMinor(@javax.annotation.Nullable final String value) {
         this._consentProvidedForMinor = value;
     }
@@ -1607,6 +1649,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the contactFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactFolders(@javax.annotation.Nullable final java.util.List<ContactFolder> value) {
         this._contactFolders = value;
     }
@@ -1615,6 +1658,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<Contact> value) {
         this._contacts = value;
     }
@@ -1623,6 +1667,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the country property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountry(@javax.annotation.Nullable final String value) {
         this._country = value;
     }
@@ -1631,6 +1676,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -1639,6 +1685,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._createdObjects = value;
     }
@@ -1647,6 +1694,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the creationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationType(@javax.annotation.Nullable final String value) {
         this._creationType = value;
     }
@@ -1655,6 +1703,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -1663,6 +1712,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceEnrollmentLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentLimit(@javax.annotation.Nullable final Integer value) {
         this._deviceEnrollmentLimit = value;
     }
@@ -1671,6 +1721,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceManagementTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
         this._deviceManagementTroubleshootingEvents = value;
     }
@@ -1679,6 +1730,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the directReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._directReports = value;
     }
@@ -1687,6 +1739,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -1695,6 +1748,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
         this._drive = value;
     }
@@ -1703,6 +1757,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the drives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
         this._drives = value;
     }
@@ -1711,6 +1766,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeHireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._employeeHireDate = value;
     }
@@ -1719,6 +1775,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeId(@javax.annotation.Nullable final String value) {
         this._employeeId = value;
     }
@@ -1727,6 +1784,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeOrgData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeOrgData(@javax.annotation.Nullable final EmployeeOrgData value) {
         this._employeeOrgData = value;
     }
@@ -1735,6 +1793,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeType(@javax.annotation.Nullable final String value) {
         this._employeeType = value;
     }
@@ -1743,6 +1802,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._events = value;
     }
@@ -1751,6 +1811,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -1759,6 +1820,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the externalUserState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserState(@javax.annotation.Nullable final String value) {
         this._externalUserState = value;
     }
@@ -1767,6 +1829,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the externalUserStateChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserStateChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._externalUserStateChangeDateTime = value;
     }
@@ -1775,6 +1838,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the faxNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaxNumber(@javax.annotation.Nullable final String value) {
         this._faxNumber = value;
     }
@@ -1783,6 +1847,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the followedSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFollowedSites(@javax.annotation.Nullable final java.util.List<Site> value) {
         this._followedSites = value;
     }
@@ -1791,6 +1856,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -1799,6 +1865,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the hireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._hireDate = value;
     }
@@ -1807,6 +1874,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the identities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentities(@javax.annotation.Nullable final java.util.List<ObjectIdentity> value) {
         this._identities = value;
     }
@@ -1815,6 +1883,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the imAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._imAddresses = value;
     }
@@ -1823,6 +1892,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the inferenceClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassification value) {
         this._inferenceClassification = value;
     }
@@ -1831,6 +1901,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final OfficeGraphInsights value) {
         this._insights = value;
     }
@@ -1839,6 +1910,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the interests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterests(@javax.annotation.Nullable final java.util.List<String> value) {
         this._interests = value;
     }
@@ -1847,6 +1919,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the isResourceAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsResourceAccount(@javax.annotation.Nullable final Boolean value) {
         this._isResourceAccount = value;
     }
@@ -1855,6 +1928,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
     }
@@ -1863,6 +1937,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the joinedTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinedTeams(@javax.annotation.Nullable final java.util.List<Team> value) {
         this._joinedTeams = value;
     }
@@ -1871,6 +1946,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the lastPasswordChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastPasswordChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastPasswordChangeDateTime = value;
     }
@@ -1879,6 +1955,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the legalAgeGroupClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegalAgeGroupClassification(@javax.annotation.Nullable final String value) {
         this._legalAgeGroupClassification = value;
     }
@@ -1887,6 +1964,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the licenseAssignmentStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseAssignmentStates(@javax.annotation.Nullable final java.util.List<LicenseAssignmentState> value) {
         this._licenseAssignmentStates = value;
     }
@@ -1895,6 +1973,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the licenseDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseDetails(@javax.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this._licenseDetails = value;
     }
@@ -1903,6 +1982,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
         this._mail = value;
     }
@@ -1911,6 +1991,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailboxSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxSettings(@javax.annotation.Nullable final MailboxSettings value) {
         this._mailboxSettings = value;
     }
@@ -1919,6 +2000,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailFolders(@javax.annotation.Nullable final java.util.List<MailFolder> value) {
         this._mailFolders = value;
     }
@@ -1927,6 +2009,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -1935,6 +2018,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the managedAppRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
         this._managedAppRegistrations = value;
     }
@@ -1943,6 +2027,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -1951,6 +2036,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final DirectoryObject value) {
         this._manager = value;
     }
@@ -1959,6 +2045,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -1967,6 +2054,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<Message> value) {
         this._messages = value;
     }
@@ -1975,6 +2063,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
         this._mobilePhone = value;
     }
@@ -1983,6 +2072,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mySite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMySite(@javax.annotation.Nullable final String value) {
         this._mySite = value;
     }
@@ -1991,6 +2081,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2PermissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
         this._oauth2PermissionGrants = value;
     }
@@ -1999,6 +2090,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
         this._officeLocation = value;
     }
@@ -2007,6 +2099,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onenote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
         this._onenote = value;
     }
@@ -2015,6 +2108,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
         this._onlineMeetings = value;
     }
@@ -2023,6 +2117,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDistinguishedName(@javax.annotation.Nullable final String value) {
         this._onPremisesDistinguishedName = value;
     }
@@ -2031,6 +2126,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDomainName(@javax.annotation.Nullable final String value) {
         this._onPremisesDomainName = value;
     }
@@ -2039,6 +2135,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesExtensionAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesExtensionAttributes(@javax.annotation.Nullable final OnPremisesExtensionAttributes value) {
         this._onPremisesExtensionAttributes = value;
     }
@@ -2047,6 +2144,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesImmutableId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesImmutableId(@javax.annotation.Nullable final String value) {
         this._onPremisesImmutableId = value;
     }
@@ -2055,6 +2153,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -2063,6 +2162,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this._onPremisesProvisioningErrors = value;
     }
@@ -2071,6 +2171,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSamAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSamAccountName(@javax.annotation.Nullable final String value) {
         this._onPremisesSamAccountName = value;
     }
@@ -2079,6 +2180,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._onPremisesSecurityIdentifier = value;
     }
@@ -2087,6 +2189,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -2095,6 +2198,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._onPremisesUserPrincipalName = value;
     }
@@ -2103,6 +2207,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the otherMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherMails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._otherMails = value;
     }
@@ -2111,6 +2216,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the outlook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlook(@javax.annotation.Nullable final OutlookUser value) {
         this._outlook = value;
     }
@@ -2119,6 +2225,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedDevices = value;
     }
@@ -2127,6 +2234,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedObjects = value;
     }
@@ -2135,6 +2243,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
         this._passwordPolicies = value;
     }
@@ -2143,6 +2252,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
         this._passwordProfile = value;
     }
@@ -2151,6 +2261,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the pastProjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPastProjects(@javax.annotation.Nullable final java.util.List<String> value) {
         this._pastProjects = value;
     }
@@ -2159,6 +2270,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the people property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeople(@javax.annotation.Nullable final java.util.List<Person> value) {
         this._people = value;
     }
@@ -2167,6 +2279,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
         this._photo = value;
     }
@@ -2175,6 +2288,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the photos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhotos(@javax.annotation.Nullable final java.util.List<ProfilePhoto> value) {
         this._photos = value;
     }
@@ -2183,6 +2297,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the planner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanner(@javax.annotation.Nullable final PlannerUser value) {
         this._planner = value;
     }
@@ -2191,6 +2306,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
         this._postalCode = value;
     }
@@ -2199,6 +2315,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredDataLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredDataLocation(@javax.annotation.Nullable final String value) {
         this._preferredDataLocation = value;
     }
@@ -2207,6 +2324,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
         this._preferredLanguage = value;
     }
@@ -2215,6 +2333,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredName(@javax.annotation.Nullable final String value) {
         this._preferredName = value;
     }
@@ -2223,6 +2342,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the presence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresence(@javax.annotation.Nullable final Presence value) {
         this._presence = value;
     }
@@ -2231,6 +2351,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this._provisionedPlans = value;
     }
@@ -2239,6 +2360,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._proxyAddresses = value;
     }
@@ -2247,6 +2369,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredDevices = value;
     }
@@ -2255,6 +2378,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the responsibilities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsibilities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._responsibilities = value;
     }
@@ -2263,6 +2387,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<String> value) {
         this._schools = value;
     }
@@ -2271,6 +2396,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the scopedRoleMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedRoleMemberOf(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedRoleMemberOf = value;
     }
@@ -2279,6 +2405,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._securityIdentifier = value;
     }
@@ -2287,6 +2414,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final UserSettings value) {
         this._settings = value;
     }
@@ -2295,6 +2423,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
         this._showInAddressList = value;
     }
@@ -2303,6 +2432,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the signInSessionsValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInSessionsValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._signInSessionsValidFromDateTime = value;
     }
@@ -2311,6 +2441,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the skills property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkills(@javax.annotation.Nullable final java.util.List<String> value) {
         this._skills = value;
     }
@@ -2319,6 +2450,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -2327,6 +2459,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the streetAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreetAddress(@javax.annotation.Nullable final String value) {
         this._streetAddress = value;
     }
@@ -2335,6 +2468,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -2343,6 +2477,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the teamwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamwork(@javax.annotation.Nullable final UserTeamwork value) {
         this._teamwork = value;
     }
@@ -2351,6 +2486,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the todo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTodo(@javax.annotation.Nullable final Todo value) {
         this._todo = value;
     }
@@ -2359,6 +2495,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -2367,6 +2504,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageLocation(@javax.annotation.Nullable final String value) {
         this._usageLocation = value;
     }
@@ -2375,6 +2513,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -2383,6 +2522,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final String value) {
         this._userType = value;
     }

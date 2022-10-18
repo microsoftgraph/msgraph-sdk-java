@@ -23,6 +23,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * Instantiates a new chatMessagePolicyViolationPolicyTip and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessagePolicyViolationPolicyTip() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.chatMessagePolicyViolationPolicyTip");
@@ -60,7 +61,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessagePolicyViolationPolicyTip currentObject = this;
-        return new HashMap<>(4) {{
+        return new HashMap<String, Consumer<ParseNode>>(4) {{
             this.put("complianceUrl", (n) -> { currentObject.setComplianceUrl(n.getStringValue()); });
             this.put("generalText", (n) -> { currentObject.setGeneralText(n.getStringValue()); });
             this.put("matchedConditionDescriptions", (n) -> { currentObject.setMatchedConditionDescriptions(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -96,6 +97,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("complianceUrl", this.getComplianceUrl());
@@ -109,6 +111,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param value Value to set for the complianceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceUrl(@javax.annotation.Nullable final String value) {
         this._complianceUrl = value;
     }
@@ -125,6 +129,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param value Value to set for the generalText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeneralText(@javax.annotation.Nullable final String value) {
         this._generalText = value;
     }
@@ -133,6 +138,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param value Value to set for the matchedConditionDescriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchedConditionDescriptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._matchedConditionDescriptions = value;
     }
@@ -141,6 +147,7 @@ public class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

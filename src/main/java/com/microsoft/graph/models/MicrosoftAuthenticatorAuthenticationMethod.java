@@ -23,6 +23,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethod");
@@ -76,7 +77,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
             this.put("deviceTag", (n) -> { currentObject.setDeviceTag(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -119,6 +122,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the device property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Device value) {
         this._device = value;
     }
@@ -127,6 +131,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the deviceTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceTag(@javax.annotation.Nullable final String value) {
         this._deviceTag = value;
     }
@@ -135,6 +140,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -143,6 +149,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      * @param value Value to set for the phoneAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneAppVersion(@javax.annotation.Nullable final String value) {
         this._phoneAppVersion = value;
     }

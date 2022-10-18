@@ -16,6 +16,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.emailAuthenticationMethodConfiguration");
@@ -45,7 +46,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmailAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("allowExternalIdToUseEmailOtp", (n) -> { currentObject.setAllowExternalIdToUseEmailOtp(n.getEnumValue(ExternalEmailOtpState.class)); });
             this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the allowExternalIdToUseEmailOtp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowExternalIdToUseEmailOtp(@javax.annotation.Nullable final ExternalEmailOtpState value) {
         this._allowExternalIdToUseEmailOtp = value;
     }
@@ -82,6 +85,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }

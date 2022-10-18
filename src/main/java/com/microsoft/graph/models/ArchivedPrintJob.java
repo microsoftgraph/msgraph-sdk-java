@@ -36,6 +36,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * Instantiates a new archivedPrintJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ArchivedPrintJob() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.archivedPrintJob");
@@ -113,7 +114,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ArchivedPrintJob currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
             this.put("acquiredDateTime", (n) -> { currentObject.setAcquiredDateTime(n.getOffsetDateTimeValue()); });
             this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
@@ -163,6 +164,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acquiredByPrinter", this.getAcquiredByPrinter());
@@ -182,6 +184,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acquiredByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
         this._acquiredByPrinter = value;
     }
@@ -190,6 +193,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acquiredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcquiredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._acquiredDateTime = value;
     }
@@ -198,6 +202,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -206,6 +211,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the completionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completionDateTime = value;
     }
@@ -214,6 +220,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the copiesPrinted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopiesPrinted(@javax.annotation.Nullable final Integer value) {
         this._copiesPrinted = value;
     }
@@ -222,6 +229,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._createdBy = value;
     }
@@ -230,6 +238,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -238,6 +247,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -246,6 +256,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -254,6 +265,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the printerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterId(@javax.annotation.Nullable final String value) {
         this._printerId = value;
     }
@@ -262,6 +274,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingState(@javax.annotation.Nullable final PrintJobProcessingState value) {
         this._processingState = value;
     }

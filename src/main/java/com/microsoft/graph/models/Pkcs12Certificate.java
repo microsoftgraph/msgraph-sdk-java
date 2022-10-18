@@ -16,6 +16,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * Instantiates a new Pkcs12Certificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Pkcs12Certificate() {
         super();
         this.setOdataType("#microsoft.graph.pkcs12Certificate");
@@ -37,7 +38,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Pkcs12Certificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
             this.put("pkcs12Value", (n) -> { currentObject.setPkcs12Value(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }
@@ -82,6 +85,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
      * @param value Value to set for the pkcs12Value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPkcs12Value(@javax.annotation.Nullable final String value) {
         this._pkcs12Value = value;
     }

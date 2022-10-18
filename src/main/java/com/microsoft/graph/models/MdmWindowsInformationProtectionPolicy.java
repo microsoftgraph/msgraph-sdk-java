@@ -12,6 +12,7 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
      * Instantiates a new MdmWindowsInformationProtectionPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MdmWindowsInformationProtectionPolicy() {
         super();
         this.setOdataType("#microsoft.graph.mdmWindowsInformationProtectionPolicy");
@@ -33,7 +34,7 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MdmWindowsInformationProtectionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
         }};
     }
     /**
@@ -41,6 +42,7 @@ public class MdmWindowsInformationProtectionPolicy extends WindowsInformationPro
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

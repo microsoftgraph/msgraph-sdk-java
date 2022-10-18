@@ -14,6 +14,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyApprovalRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyApprovalRule");
@@ -35,7 +36,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyApprovalRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("setting", (n) -> { currentObject.setSetting(n.getObjectValue(ApprovalSettings::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
      * @param value Value to set for the setting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final ApprovalSettings value) {
         this._setting = value;
     }

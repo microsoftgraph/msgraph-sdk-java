@@ -20,6 +20,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectPartnerReference() {
         super();
         this.setOdataType("#microsoft.graph.directoryObjectPartnerReference");
@@ -65,7 +66,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectoryObjectPartnerReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("externalPartnerTenantId", (n) -> { currentObject.setExternalPartnerTenantId(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -106,6 +109,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -114,6 +118,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param value Value to set for the externalPartnerTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalPartnerTenantId(@javax.annotation.Nullable final String value) {
         this._externalPartnerTenantId = value;
     }
@@ -122,6 +127,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param value Value to set for the objectType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectType(@javax.annotation.Nullable final String value) {
         this._objectType = value;
     }

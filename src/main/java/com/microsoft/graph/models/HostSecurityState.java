@@ -35,6 +35,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Instantiates a new hostSecurityState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.hostSecurityState");
@@ -64,7 +65,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HostSecurityState currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<String, Consumer<ParseNode>>(10) {{
             this.put("fqdn", (n) -> { currentObject.setFqdn(n.getStringValue()); });
             this.put("isAzureAdJoined", (n) -> { currentObject.setIsAzureAdJoined(n.getBooleanValue()); });
             this.put("isAzureAdRegistered", (n) -> { currentObject.setIsAzureAdRegistered(n.getBooleanValue()); });
@@ -162,6 +163,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fqdn", this.getFqdn());
@@ -181,6 +183,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -189,6 +192,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fqdn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFqdn(@javax.annotation.Nullable final String value) {
         this._fqdn = value;
     }
@@ -197,6 +201,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAzureAdJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdJoined(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdJoined = value;
     }
@@ -205,6 +210,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAzureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdRegistered = value;
     }
@@ -213,6 +219,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isHybridAzureDomainJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHybridAzureDomainJoined(@javax.annotation.Nullable final Boolean value) {
         this._isHybridAzureDomainJoined = value;
     }
@@ -221,6 +228,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the netBiosName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetBiosName(@javax.annotation.Nullable final String value) {
         this._netBiosName = value;
     }
@@ -229,6 +237,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -237,6 +246,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the os property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
         this._os = value;
     }
@@ -245,6 +255,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privateIpAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivateIpAddress(@javax.annotation.Nullable final String value) {
         this._privateIpAddress = value;
     }
@@ -253,6 +264,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publicIpAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicIpAddress(@javax.annotation.Nullable final String value) {
         this._publicIpAddress = value;
     }
@@ -261,6 +273,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }

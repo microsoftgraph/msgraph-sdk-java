@@ -25,6 +25,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new imageInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.imageInfo");
@@ -78,7 +79,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImageInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
             this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
             this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("addImageQuery", this.getAddImageQuery());
@@ -121,6 +123,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the addImageQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddImageQuery(@javax.annotation.Nullable final Boolean value) {
         this._addImageQuery = value;
     }
@@ -129,6 +132,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -137,6 +141,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternateText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateText(@javax.annotation.Nullable final String value) {
         this._alternateText = value;
     }
@@ -145,6 +150,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternativeText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeText(@javax.annotation.Nullable final String value) {
         this._alternativeText = value;
     }
@@ -153,6 +159,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the iconUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconUrl(@javax.annotation.Nullable final String value) {
         this._iconUrl = value;
     }
@@ -161,6 +168,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

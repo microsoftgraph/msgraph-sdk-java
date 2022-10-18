@@ -17,6 +17,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyExpirationRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyExpirationRule");
@@ -38,7 +39,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyExpirationRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isExpirationRequired", (n) -> { currentObject.setIsExpirationRequired(n.getBooleanValue()); });
             this.put("maximumDuration", (n) -> { currentObject.setMaximumDuration(n.getPeriodValue()); });
         }};
@@ -64,6 +65,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * @param value Value to set for the isExpirationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExpirationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isExpirationRequired = value;
     }
@@ -83,6 +86,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * @param value Value to set for the maximumDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumDuration(@javax.annotation.Nullable final Period value) {
         this._maximumDuration = value;
     }

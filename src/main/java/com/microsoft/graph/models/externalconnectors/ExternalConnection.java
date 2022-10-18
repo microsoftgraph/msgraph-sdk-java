@@ -30,6 +30,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Instantiates a new externalConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalConnection() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.externalConnection");
@@ -67,7 +68,7 @@ public class ExternalConnection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
@@ -131,6 +132,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -141,13 +143,13 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeObjectValue("schema", this.getSchema());
-        writer.writeEnumValue("state", this.getState());
     }
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      * @param value Value to set for the configuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final Configuration value) {
         this._configuration = value;
     }
@@ -156,6 +158,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -164,6 +167,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the groups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<ExternalGroup> value) {
         this._groups = value;
     }
@@ -172,6 +176,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<ExternalItem> value) {
         this._items = value;
     }
@@ -180,6 +185,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -188,6 +194,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<ConnectionOperation> value) {
         this._operations = value;
     }
@@ -196,6 +203,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final Schema value) {
         this._schema = value;
     }
@@ -204,6 +212,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConnectionState value) {
         this._state = value;
     }

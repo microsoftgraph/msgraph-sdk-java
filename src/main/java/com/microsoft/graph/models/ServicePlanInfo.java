@@ -25,6 +25,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new servicePlanInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePlanInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.servicePlanInfo");
@@ -62,7 +63,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePlanInfo currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
             this.put("provisioningStatus", (n) -> { currentObject.setProvisioningStatus(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appliesTo", this.getAppliesTo());
@@ -121,6 +123,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final String value) {
         this._appliesTo = value;
     }
@@ -137,6 +141,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +150,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the provisioningStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningStatus(@javax.annotation.Nullable final String value) {
         this._provisioningStatus = value;
     }
@@ -153,6 +159,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePlanId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanId(@javax.annotation.Nullable final String value) {
         this._servicePlanId = value;
     }
@@ -161,6 +168,7 @@ public class ServicePlanInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePlanName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanName(@javax.annotation.Nullable final String value) {
         this._servicePlanName = value;
     }

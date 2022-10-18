@@ -25,6 +25,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new teamFunSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamFunSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamFunSettings");
@@ -78,7 +79,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamFunSettings currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("allowCustomMemes", (n) -> { currentObject.setAllowCustomMemes(n.getBooleanValue()); });
             this.put("allowGiphy", (n) -> { currentObject.setAllowGiphy(n.getBooleanValue()); });
             this.put("allowStickersAndMemes", (n) -> { currentObject.setAllowStickersAndMemes(n.getBooleanValue()); });
@@ -107,6 +108,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowCustomMemes", this.getAllowCustomMemes());
@@ -121,6 +123,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowCustomMemes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowCustomMemes(@javax.annotation.Nullable final Boolean value) {
         this._allowCustomMemes = value;
     }
@@ -137,6 +141,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowGiphy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowGiphy(@javax.annotation.Nullable final Boolean value) {
         this._allowGiphy = value;
     }
@@ -145,6 +150,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowStickersAndMemes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowStickersAndMemes(@javax.annotation.Nullable final Boolean value) {
         this._allowStickersAndMemes = value;
     }
@@ -153,6 +159,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the giphyContentRating property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGiphyContentRating(@javax.annotation.Nullable final GiphyRatingType value) {
         this._giphyContentRating = value;
     }
@@ -161,6 +168,7 @@ public class TeamFunSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

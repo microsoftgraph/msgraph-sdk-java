@@ -29,6 +29,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyRuleTarget");
@@ -74,7 +75,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyRuleTarget currentObject = this;
-        return new HashMap<>(7) {{
+        return new HashMap<String, Consumer<ParseNode>>(7) {{
             this.put("caller", (n) -> { currentObject.setCaller(n.getStringValue()); });
             this.put("enforcedSettings", (n) -> { currentObject.setEnforcedSettings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("inheritableSettings", (n) -> { currentObject.setInheritableSettings(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -129,6 +130,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("caller", this.getCaller());
@@ -145,6 +147,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the caller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaller(@javax.annotation.Nullable final String value) {
         this._caller = value;
     }
@@ -161,6 +165,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the enforcedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedSettings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enforcedSettings = value;
     }
@@ -169,6 +174,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the inheritableSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInheritableSettings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._inheritableSettings = value;
     }
@@ -177,6 +183,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the level property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLevel(@javax.annotation.Nullable final String value) {
         this._level = value;
     }
@@ -185,6 +192,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -193,6 +201,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> value) {
         this._operations = value;
     }
@@ -201,6 +210,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param value Value to set for the targetObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._targetObjects = value;
     }

@@ -20,6 +20,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * Instantiates a new ManagedAndroidLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAndroidLobApp() {
         super();
         this.setOdataType("#microsoft.graph.managedAndroidLobApp");
@@ -41,7 +42,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAndroidLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
             this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
             this.put("versionCode", (n) -> { currentObject.setVersionCode(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final AndroidMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -106,6 +109,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this._packageId = value;
     }
@@ -114,6 +118,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the versionCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionCode(@javax.annotation.Nullable final String value) {
         this._versionCode = value;
     }
@@ -122,6 +127,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsabl
      * @param value Value to set for the versionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionName(@javax.annotation.Nullable final String value) {
         this._versionName = value;
     }

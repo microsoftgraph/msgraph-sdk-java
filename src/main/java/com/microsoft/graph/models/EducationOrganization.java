@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreementAcceptance entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public class EducationOrganization extends Entity implements Parsable {
     /** Organization description. */
     private String _description;
@@ -22,6 +22,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Instantiates a new educationOrganization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationOrganization() {
         super();
         this.setOdataType("#microsoft.graph.educationOrganization");
@@ -82,7 +83,7 @@ public class EducationOrganization extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationOrganization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
@@ -94,6 +95,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,6 +109,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -115,6 +118,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +127,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the externalSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
         this._externalSource = value;
     }
@@ -131,6 +136,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
         this._externalSourceDetail = value;
     }

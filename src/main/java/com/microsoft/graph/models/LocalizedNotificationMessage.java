@@ -24,6 +24,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Instantiates a new localizedNotificationMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LocalizedNotificationMessage() {
         super();
         this.setOdataType("#microsoft.graph.localizedNotificationMessage");
@@ -45,7 +46,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LocalizedNotificationMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
             this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
@@ -98,6 +99,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -120,6 +123,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -128,6 +132,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the locale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocale(@javax.annotation.Nullable final String value) {
         this._locale = value;
     }
@@ -136,6 +141,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the messageTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageTemplate(@javax.annotation.Nullable final String value) {
         this._messageTemplate = value;
     }
@@ -144,6 +150,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

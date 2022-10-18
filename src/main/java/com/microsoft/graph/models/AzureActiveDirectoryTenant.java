@@ -16,6 +16,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      * Instantiates a new AzureActiveDirectoryTenant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureActiveDirectoryTenant() {
         super();
         this.setOdataType("#microsoft.graph.azureActiveDirectoryTenant");
@@ -45,7 +46,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureActiveDirectoryTenant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
         }};
@@ -63,6 +64,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -82,6 +85,7 @@ public class AzureActiveDirectoryTenant extends IdentitySource implements Parsab
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

@@ -16,6 +16,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * Instantiates a new EducationFeedbackOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationFeedbackOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackOutcome");
@@ -45,7 +46,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFeedbackOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
             this.put("publishedFeedback", (n) -> { currentObject.setPublishedFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
         }};
@@ -63,6 +64,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final EducationFeedback value) {
         this._feedback = value;
     }
@@ -82,6 +85,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the publishedFeedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedFeedback(@javax.annotation.Nullable final EducationFeedback value) {
         this._publishedFeedback = value;
     }

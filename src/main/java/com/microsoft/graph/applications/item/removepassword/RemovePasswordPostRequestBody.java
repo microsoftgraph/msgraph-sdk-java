@@ -18,6 +18,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new removePasswordPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemovePasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,7 +47,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemovePasswordPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("keyId", (n) -> { currentObject.setKeyId(n.getStringValue()); });
         }};
     }
@@ -63,6 +64,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("keyId", this.getKeyId());
@@ -73,6 +75,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the keyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyId(@javax.annotation.Nullable final String value) {
         this._keyId = value;
     }

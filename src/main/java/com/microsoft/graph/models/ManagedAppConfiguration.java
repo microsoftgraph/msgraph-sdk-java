@@ -15,6 +15,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * Instantiates a new ManagedAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.managedAppConfiguration");
@@ -51,7 +52,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("customSettings", (n) -> { currentObject.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         }};
     }
@@ -60,6 +61,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +72,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param value Value to set for the customSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customSettings = value;
     }

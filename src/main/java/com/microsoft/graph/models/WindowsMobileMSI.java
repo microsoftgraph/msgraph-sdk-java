@@ -20,6 +20,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * Instantiates a new WindowsMobileMSI and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMobileMSI() {
         super();
         this.setOdataType("#microsoft.graph.windowsMobileMSI");
@@ -49,7 +50,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsMobileMSI currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
             this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
             this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
@@ -85,6 +86,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the commandLine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommandLine(@javax.annotation.Nullable final String value) {
         this._commandLine = value;
     }
@@ -106,6 +109,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
         this._ignoreVersionDetection = value;
     }
@@ -114,6 +118,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the productCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
         this._productCode = value;
     }
@@ -122,6 +127,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the productVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
         this._productVersion = value;
     }

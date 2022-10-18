@@ -19,6 +19,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * Instantiates a new audioRoutingGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AudioRoutingGroup() {
         super();
         this.setOdataType("#microsoft.graph.audioRoutingGroup");
@@ -40,7 +41,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AudioRoutingGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("receivers", (n) -> { currentObject.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("routingMode", (n) -> { currentObject.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
             this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -75,6 +76,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the receivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._receivers = value;
     }
@@ -95,6 +98,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the routingMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoutingMode(@javax.annotation.Nullable final RoutingMode value) {
         this._routingMode = value;
     }
@@ -103,6 +107,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the sources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sources = value;
     }

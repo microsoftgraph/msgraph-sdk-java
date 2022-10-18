@@ -37,6 +37,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeleconferenceDeviceQuality() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teleconferenceDeviceQuality");
@@ -122,7 +123,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceQuality currentObject = this;
-        return new HashMap<>(11) {{
+        return new HashMap<String, Consumer<ParseNode>>(11) {{
             this.put("callChainId", (n) -> { currentObject.setCallChainId(n.getStringValue()); });
             this.put("cloudServiceDeploymentEnvironment", (n) -> { currentObject.setCloudServiceDeploymentEnvironment(n.getStringValue()); });
             this.put("cloudServiceDeploymentId", (n) -> { currentObject.setCloudServiceDeploymentId(n.getStringValue()); });
@@ -173,6 +174,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("callChainId", this.getCallChainId());
@@ -193,6 +195,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +204,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the callChainId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallChainId(@javax.annotation.Nullable final String value) {
         this._callChainId = value;
     }
@@ -209,6 +213,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceDeploymentEnvironment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudServiceDeploymentEnvironment(@javax.annotation.Nullable final String value) {
         this._cloudServiceDeploymentEnvironment = value;
     }
@@ -217,6 +222,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceDeploymentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudServiceDeploymentId(@javax.annotation.Nullable final String value) {
         this._cloudServiceDeploymentId = value;
     }
@@ -225,6 +231,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceInstanceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudServiceInstanceName(@javax.annotation.Nullable final String value) {
         this._cloudServiceInstanceName = value;
     }
@@ -233,6 +240,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudServiceName(@javax.annotation.Nullable final String value) {
         this._cloudServiceName = value;
     }
@@ -241,6 +249,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDescription(@javax.annotation.Nullable final String value) {
         this._deviceDescription = value;
     }
@@ -249,6 +258,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -257,6 +267,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the mediaLegId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaLegId(@javax.annotation.Nullable final String value) {
         this._mediaLegId = value;
     }
@@ -265,6 +276,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the mediaQualityList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaQualityList(@javax.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
         this._mediaQualityList = value;
     }
@@ -273,6 +285,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -281,6 +294,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the participantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipantId(@javax.annotation.Nullable final String value) {
         this._participantId = value;
     }

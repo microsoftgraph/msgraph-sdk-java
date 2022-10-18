@@ -18,6 +18,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      * Instantiates a new ChannelDeletedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChannelDeletedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.channelDeletedEventMessageDetail");
@@ -55,7 +56,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelDeletedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("channelDisplayName", (n) -> { currentObject.setChannelDisplayName(n.getStringValue()); });
             this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
             this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -74,6 +75,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the channelDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelDisplayName(@javax.annotation.Nullable final String value) {
         this._channelDisplayName = value;
     }
@@ -94,6 +97,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the channelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
         this._channelId = value;
     }
@@ -102,6 +106,7 @@ public class ChannelDeletedEventMessageDetail extends EventMessageDetail impleme
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

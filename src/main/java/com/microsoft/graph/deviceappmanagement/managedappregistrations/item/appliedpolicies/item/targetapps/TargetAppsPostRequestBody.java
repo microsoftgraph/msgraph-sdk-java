@@ -19,6 +19,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new targetAppsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TargetAppsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,7 +56,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TargetAppsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<String, Consumer<ParseNode>>(1) {{
             this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         }};
     }
@@ -64,6 +65,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("apps", this.getApps());
@@ -74,6 +76,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class TargetAppsPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }

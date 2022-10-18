@@ -27,6 +27,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * Instantiates a new chatMessagePolicyViolation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChatMessagePolicyViolation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.chatMessagePolicyViolation");
@@ -64,7 +65,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChatMessagePolicyViolation currentObject = this;
-        return new HashMap<>(6) {{
+        return new HashMap<String, Consumer<ParseNode>>(6) {{
             this.put("dlpAction", (n) -> { currentObject.setDlpAction(n.getEnumValue(ChatMessagePolicyViolationDlpActionTypes.class)); });
             this.put("justificationText", (n) -> { currentObject.setJustificationText(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -118,6 +119,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dlpAction", this.getDlpAction());
@@ -133,6 +135,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the dlpAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDlpAction(@javax.annotation.Nullable final ChatMessagePolicyViolationDlpActionTypes value) {
         this._dlpAction = value;
     }
@@ -149,6 +153,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the justificationText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustificationText(@javax.annotation.Nullable final String value) {
         this._justificationText = value;
     }
@@ -157,6 +162,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -165,6 +171,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the policyTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTip(@javax.annotation.Nullable final ChatMessagePolicyViolationPolicyTip value) {
         this._policyTip = value;
     }
@@ -173,6 +180,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAction(@javax.annotation.Nullable final ChatMessagePolicyViolationUserActionTypes value) {
         this._userAction = value;
     }
@@ -181,6 +189,7 @@ public class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the verdictDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerdictDetails(@javax.annotation.Nullable final ChatMessagePolicyViolationVerdictDetailsTypes value) {
         this._verdictDetails = value;
     }

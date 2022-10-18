@@ -25,6 +25,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * Instantiates a new onenotePatchContentCommand and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenotePatchContentCommand() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.onenotePatchContentCommand");
@@ -70,7 +71,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnenotePatchContentCommand currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(OnenotePatchActionType.class)); });
             this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
             this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
@@ -107,6 +108,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -121,6 +123,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final OnenotePatchActionType value) {
         this._action = value;
     }
@@ -129,6 +132,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -137,6 +141,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
     }
@@ -145,6 +150,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the position property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final OnenotePatchInsertPosition value) {
         this._position = value;
     }
@@ -161,6 +168,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
         this._target = value;
     }

@@ -14,6 +14,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat() {
         super();
         this.setOdataType("#microsoft.graph.plannerProgressTaskBoardTaskFormat");
@@ -35,7 +36,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerProgressTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsab
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }

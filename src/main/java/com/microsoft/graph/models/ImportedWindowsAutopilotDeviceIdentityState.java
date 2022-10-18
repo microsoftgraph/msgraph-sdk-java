@@ -25,6 +25,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityState");
@@ -86,7 +87,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedWindowsAutopilotDeviceIdentityState currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
             this.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
             this.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
@@ -107,6 +108,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceErrorCode", this.getDeviceErrorCode());
@@ -121,6 +123,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the deviceErrorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceErrorCode(@javax.annotation.Nullable final Integer value) {
         this._deviceErrorCode = value;
     }
@@ -137,6 +141,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the deviceErrorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceErrorName(@javax.annotation.Nullable final String value) {
         this._deviceErrorName = value;
     }
@@ -145,6 +150,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the deviceImportStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceImportStatus(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityImportStatus value) {
         this._deviceImportStatus = value;
     }
@@ -153,6 +159,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the deviceRegistrationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRegistrationId(@javax.annotation.Nullable final String value) {
         this._deviceRegistrationId = value;
     }
@@ -161,6 +168,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

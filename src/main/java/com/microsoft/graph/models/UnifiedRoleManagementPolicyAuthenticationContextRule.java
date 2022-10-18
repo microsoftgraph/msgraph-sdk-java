@@ -16,6 +16,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyAuthenticationContextRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule");
@@ -45,7 +46,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyAuthenticationContextRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("claimValue", (n) -> { currentObject.setClaimValue(n.getStringValue()); });
             this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
         }};
@@ -63,6 +64,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      * @param value Value to set for the claimValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimValue(@javax.annotation.Nullable final String value) {
         this._claimValue = value;
     }
@@ -82,6 +85,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }

@@ -26,6 +26,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * Instantiates a new appListItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppListItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.appListItem");
@@ -71,7 +72,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppListItem currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<String, Consumer<ParseNode>>(5) {{
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
             this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
@@ -108,6 +109,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -122,6 +124,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -138,6 +142,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._appStoreUrl = value;
     }
@@ -146,6 +151,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -154,6 +160,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -162,6 +169,7 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }

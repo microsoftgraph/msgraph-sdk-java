@@ -14,6 +14,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      * Instantiates a new DomainDnsCnameRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainDnsCnameRecord() {
         super();
         this.setOdataType("#microsoft.graph.domainDnsCnameRecord");
@@ -43,7 +44,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsCnameRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("canonicalName", (n) -> { currentObject.setCanonicalName(n.getStringValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the canonicalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCanonicalName(@javax.annotation.Nullable final String value) {
         this._canonicalName = value;
     }

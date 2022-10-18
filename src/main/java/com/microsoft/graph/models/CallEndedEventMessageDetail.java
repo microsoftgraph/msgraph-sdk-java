@@ -23,6 +23,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * Instantiates a new CallEndedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallEndedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callEndedEventMessageDetail");
@@ -76,7 +77,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CallEndedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("callDuration", (n) -> { currentObject.setCallDuration(n.getPeriodValue()); });
             this.put("callEventType", (n) -> { currentObject.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
             this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
@@ -97,6 +98,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the callDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallDuration(@javax.annotation.Nullable final Period value) {
         this._callDuration = value;
     }
@@ -119,6 +122,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the callEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallEventType(@javax.annotation.Nullable final TeamworkCallEventType value) {
         this._callEventType = value;
     }
@@ -127,6 +131,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the callId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallId(@javax.annotation.Nullable final String value) {
         this._callId = value;
     }
@@ -135,6 +140,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the callParticipants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallParticipants(@javax.annotation.Nullable final java.util.List<CallParticipantInfo> value) {
         this._callParticipants = value;
     }
@@ -143,6 +149,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

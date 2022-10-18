@@ -14,6 +14,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      * Instantiates a new Windows10CustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10CustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10CustomConfiguration");
@@ -35,7 +36,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10CustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("omaSettings", (n) -> { currentObject.setOmaSettings(n.getCollectionOfObjectValues(OmaSetting::createFromDiscriminatorValue)); });
         }};
     }
@@ -52,6 +53,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the omaSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOmaSettings(@javax.annotation.Nullable final java.util.List<OmaSetting> value) {
         this._omaSettings = value;
     }

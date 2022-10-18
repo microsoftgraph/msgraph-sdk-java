@@ -14,6 +14,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * Instantiates a new Windows10EnterpriseModernAppManagementConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EnterpriseModernAppManagementConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration");
@@ -35,7 +36,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EnterpriseModernAppManagementConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("uninstallBuiltInApps", (n) -> { currentObject.setUninstallBuiltInApps(n.getBooleanValue()); });
         }};
     }
@@ -52,6 +53,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * @param value Value to set for the uninstallBuiltInApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallBuiltInApps(@javax.annotation.Nullable final Boolean value) {
         this._uninstallBuiltInApps = value;
     }
