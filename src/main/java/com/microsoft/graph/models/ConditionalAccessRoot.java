@@ -13,6 +13,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationContextClassReferenceCollectionPage;
 import com.microsoft.graph.requests.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
+import com.microsoft.graph.requests.ConditionalAccessTemplateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +57,15 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage policies;
 
+    /**
+     * The Templates.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     */
+    @SerializedName(value = "templates", alternate = {"Templates"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ConditionalAccessTemplateCollectionPage templates;
+
 
     /**
      * Sets the raw JSON object
@@ -76,6 +86,10 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("policies")) {
             policies = serializer.deserializeObject(json.get("policies"), com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage.class);
+        }
+
+        if (json.has("templates")) {
+            templates = serializer.deserializeObject(json.get("templates"), com.microsoft.graph.requests.ConditionalAccessTemplateCollectionPage.class);
         }
     }
 }

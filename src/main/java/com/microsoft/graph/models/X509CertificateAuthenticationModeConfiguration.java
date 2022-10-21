@@ -42,7 +42,7 @@ public class X509CertificateAuthenticationModeConfiguration implements IJsonBack
 
     /**
      * The Rules.
-     * 
+     * Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose
@@ -51,7 +51,7 @@ public class X509CertificateAuthenticationModeConfiguration implements IJsonBack
 
     /**
      * The X509Certificate Authentication Default Mode.
-     * 
+     * The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      */
     @SerializedName(value = "x509CertificateAuthenticationDefaultMode", alternate = {"X509CertificateAuthenticationDefaultMode"})
     @Expose

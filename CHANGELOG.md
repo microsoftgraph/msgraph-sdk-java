@@ -11,6 +11,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.39.0] - 2022-10-20
+
+### Added
+
+- AuthenticationMethodFeatureConfiguration model. 
+- ChatViewpoint model. 
+- ConditionalAccessPolicyDetail model. 
+- FeatureTarget models. 
+- MicrosoftAuthenticatorFeatureSettings model. 
+- TemplateScenarios model. 
+- ChatHideForUser models and related requests. 
+- ChatMarkChatReadForUser models and related requests. 
+- ChatMarkChatUnreadForUser models and related requests. 
+- ChatMessageInfo model and related requests. 
+- ChatUnhideForUser models and related requests. 
+- ConditionalAccessTemplate model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+- Bumped Microsoft-Graph-Core to 2.0.14
+
 ## [5.38.0] - 2022-10-12
 
 ### Added

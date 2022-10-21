@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.MicrosoftAuthenticatorFeatureSettings;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodTargetCollectionPage;
 
@@ -28,8 +29,17 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
 
 
     /**
+     * The Feature Settings.
+     * A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
+     */
+    @SerializedName(value = "featureSettings", alternate = {"FeatureSettings"})
+    @Expose
+	@Nullable
+    public MicrosoftAuthenticatorFeatureSettings featureSettings;
+
+    /**
      * The Include Targets.
-     * A collection of users or groups who are enabled to use the authentication method.
+     * A collection of users or groups who are enabled to use the authentication method. Expanded by default.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose
