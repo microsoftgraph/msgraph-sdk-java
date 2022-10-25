@@ -6,8 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -20,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Managed Device Enrollment Failure Details Request Builder.
  */
-public class ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootManagedDeviceEnrollmentFailureDetails

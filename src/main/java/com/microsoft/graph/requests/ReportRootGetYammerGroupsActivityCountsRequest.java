@@ -4,7 +4,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests;
-import com.microsoft.graph.models.Report;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.requests.ReportRootGetYammerGroupsActivityCountsRequest;
 
@@ -21,7 +20,7 @@ import com.microsoft.graph.models.ReportRootGetYammerGroupsActivityCountsParamet
 /**
  * The class for the Report Root Get Yammer Groups Activity Counts Request.
  */
-public class ReportRootGetYammerGroupsActivityCountsRequest extends BaseRequest<Report> {
+public class ReportRootGetYammerGroupsActivityCountsRequest extends BaseRequest<java.io.InputStream> {
     /**
      * The request for this ReportRootGetYammerGroupsActivityCounts
      *
@@ -30,27 +29,27 @@ public class ReportRootGetYammerGroupsActivityCountsRequest extends BaseRequest<
      * @param requestOptions the options for this request
      */
     public ReportRootGetYammerGroupsActivityCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, Report.class);
+        super(requestUrl, client, requestOptions, java.io.InputStream.class);
     }
 
     /**
-     * Gets the Report
+     * Gets the java.io.InputStream
      *
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Report> getAsync() {
+    public java.util.concurrent.CompletableFuture<java.io.InputStream> getAsync() {
         return sendAsync(HttpMethod.GET, null);
     }
 
     /**
-     * Gets the Report
+     * Gets the java.io.InputStream
      *
-     * @return the Report
+     * @return the java.io.InputStream
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    public Report get() throws ClientException {
+    public java.io.InputStream get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

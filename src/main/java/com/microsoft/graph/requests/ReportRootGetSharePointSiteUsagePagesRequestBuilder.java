@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetSharePointSiteUsagePagesRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetSharePointSiteUsagePagesParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get Share Point Site Usage Pages Request Builder.
  */
-public class ReportRootGetSharePointSiteUsagePagesRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootGetSharePointSiteUsagePagesRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootGetSharePointSiteUsagePages
