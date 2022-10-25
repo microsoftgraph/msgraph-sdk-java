@@ -1,7 +1,7 @@
 package com.microsoft.graph.identity.b2xuserflows.item.languages.item;
 
 import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.DefaultPagesRequestBuilder;
-import com.microsoft.graph.identity.b2xuserflows.item.languages.item.defaultpages.item.UserFlowLanguagePageItemRequestBuilder;
+import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.item.UserFlowLanguagePageItemRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.languages.item.overridespages.OverridesPagesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;

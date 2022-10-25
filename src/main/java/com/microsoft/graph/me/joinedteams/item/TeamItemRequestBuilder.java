@@ -1,13 +1,13 @@
 package com.microsoft.graph.me.joinedteams.item;
 
 import com.microsoft.graph.me.joinedteams.item.allchannels.AllChannelsRequestBuilder;
+import com.microsoft.graph.me.joinedteams.item.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.channels.ChannelsRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.clone.CloneRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.group.GroupRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.incomingchannels.IncomingChannelsRequestBuilder;
-import com.microsoft.graph.me.joinedteams.item.incomingchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.me.joinedteams.item.members.item.ConversationMemberItemRequestBuilder;

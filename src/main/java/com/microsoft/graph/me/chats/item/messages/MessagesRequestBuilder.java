@@ -91,7 +91,7 @@ public class MessagesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body 
      * @return a RequestInformation
      */
@@ -100,7 +100,7 @@ public class MessagesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class MessagesRequestBuilder {
         }
     }
     /**
-     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body 
      * @return a CompletableFuture of chatMessage
      */
@@ -191,7 +191,7 @@ public class MessagesRequestBuilder {
         }
     }
     /**
-     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage

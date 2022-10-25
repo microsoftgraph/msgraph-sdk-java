@@ -66,7 +66,7 @@ public class AttachmentsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -74,7 +74,7 @@ public class AttachmentsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,7 +129,7 @@ public class AttachmentsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @return a CompletableFuture of AttachmentCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class AttachmentsRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentCollectionResponse
      */
@@ -209,7 +209,7 @@ public class AttachmentsRequestBuilder {
             }};
         }
     }
-    /** Retrieve a list of attachment objects attached to a message. */
+    /** Retrieve a list of attachment objects. */
     public class AttachmentsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

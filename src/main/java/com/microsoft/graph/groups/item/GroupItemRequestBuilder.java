@@ -417,7 +417,7 @@ public class GroupItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body 
      * @return a RequestInformation
      */
@@ -426,7 +426,7 @@ public class GroupItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -624,7 +624,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body 
      * @return a CompletableFuture of group
      */
@@ -644,7 +644,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group

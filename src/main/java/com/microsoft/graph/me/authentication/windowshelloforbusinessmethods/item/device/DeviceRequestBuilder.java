@@ -7,8 +7,8 @@ import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.memberof.MemberOfRequestBuilder;
-import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
+import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.restore.RestoreRequestBuilder;
 import com.microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.device.transitivememberof.TransitiveMemberOfRequestBuilder;

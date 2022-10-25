@@ -14,7 +14,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The published time of the post. */
     private OffsetDateTime _createdDateTime;
-    /** The content of the service issue post. */
+    /** The content of the service issue post. The supported value for the contentType property is html. */
     private ItemBody _description;
     /** The OdataType property */
     private String _odataType;
@@ -56,7 +56,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the description property value. The content of the service issue post.
+     * Gets the description property value. The content of the service issue post. The supported value for the contentType property is html.
      * @return a itemBody
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the description property value. The content of the service issue post.
+     * Sets the description property value. The content of the service issue post. The supported value for the contentType property is html.
      * @param value Value to set for the description property.
      * @return a void
      */

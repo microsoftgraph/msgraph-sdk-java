@@ -96,7 +96,7 @@ public class MembersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Add a conversationMember to a channel.
      * @param body 
      * @return a RequestInformation
      */
@@ -105,7 +105,7 @@ public class MembersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Add a conversationMember to a channel.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -168,7 +168,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Add a conversationMember to a channel.
      * @param body 
      * @return a CompletableFuture of conversationMember
      */
@@ -188,7 +188,7 @@ public class MembersRequestBuilder {
         }
     }
     /**
-     * Add a conversationMember to a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Add a conversationMember to a channel.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember

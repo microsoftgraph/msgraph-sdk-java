@@ -1,10 +1,10 @@
 package com.microsoft.graph.groups.item.sites.item.termstore.sets.item;
 
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.children.ChildrenRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.children.item.TermItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.parentgroup.ParentGroupRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.relations.RelationsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.terms.item.TermItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.sets.item.terms.TermsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Set;

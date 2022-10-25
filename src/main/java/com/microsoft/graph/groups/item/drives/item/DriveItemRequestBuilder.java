@@ -2,7 +2,7 @@ package com.microsoft.graph.groups.item.drives.item;
 
 import com.microsoft.graph.groups.item.drives.item.bundles.BundlesRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.following.FollowingRequestBuilder;
-import com.microsoft.graph.groups.item.drives.item.items.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.groups.item.drives.item.following.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.list.ListRequestBuilder;
 import com.microsoft.graph.groups.item.drives.item.recent.RecentRequestBuilder;

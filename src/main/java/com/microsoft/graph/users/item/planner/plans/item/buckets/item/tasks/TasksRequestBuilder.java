@@ -60,7 +60,7 @@ public class TasksRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Retrieve a list of **plannerTask** objects associated to a plannerBucket object.
+     * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TasksRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of **plannerTask** objects associated to a plannerBucket object.
+     * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class TasksRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of **plannerTask** objects associated to a plannerBucket object.
+     * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -142,7 +142,7 @@ public class TasksRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of **plannerTask** objects associated to a plannerBucket object.
+     * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerTaskCollectionResponse
      */
@@ -203,7 +203,7 @@ public class TasksRequestBuilder {
             }};
         }
     }
-    /** Retrieve a list of **plannerTask** objects associated to a plannerBucket object. */
+    /** Retrieve a list of plannerTask objects associated to a plannerBucket object. */
     public class TasksRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
