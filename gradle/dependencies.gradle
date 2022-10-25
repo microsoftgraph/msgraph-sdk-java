@@ -6,7 +6,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
     testImplementation 'org.mockito:mockito-inline:4.8.1'
     
-    api 'com.google.code.gson:gson:2.9.1'
+    api 'com.google.code.gson:gson:2.10'
     
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     
