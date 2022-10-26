@@ -12,7 +12,6 @@ import com.microsoft.graph.models.InvitedUserMessageInfo;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Entity;
 
-
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
