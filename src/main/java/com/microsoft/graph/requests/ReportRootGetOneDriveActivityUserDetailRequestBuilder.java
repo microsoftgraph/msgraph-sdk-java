@@ -6,8 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetOneDriveActivityUserDetailRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetOneDriveActivityUserDetailParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -20,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get One Drive Activity User Detail Request Builder.
  */
-public class ReportRootGetOneDriveActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootGetOneDriveActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootGetOneDriveActivityUserDetail

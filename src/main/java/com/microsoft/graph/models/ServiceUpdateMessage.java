@@ -42,7 +42,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Body.
-     * The content type and content of the service message body.
+     * The content type and content of the service message body. The supported value for the contentType property is html.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose

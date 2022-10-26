@@ -8,7 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
 import com.microsoft.graph.models.ArchivedPrintJob;
 import java.util.Arrays;
 import java.util.EnumSet;

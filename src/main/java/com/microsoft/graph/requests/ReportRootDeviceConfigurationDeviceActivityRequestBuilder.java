@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootDeviceConfigurationDeviceActivityRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Device Configuration Device Activity Request Builder.
  */
-public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootDeviceConfigurationDeviceActivity

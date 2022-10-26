@@ -50,7 +50,7 @@ public class ServiceHealthIssuePost implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The content of the service issue post.
+     * The content of the service issue post. The supported value for the contentType property is html.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

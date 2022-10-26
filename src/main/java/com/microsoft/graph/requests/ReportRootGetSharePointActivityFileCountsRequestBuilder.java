@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetSharePointActivityFileCountsRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetSharePointActivityFileCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get Share Point Activity File Counts Request Builder.
  */
-public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootGetSharePointActivityFileCounts
