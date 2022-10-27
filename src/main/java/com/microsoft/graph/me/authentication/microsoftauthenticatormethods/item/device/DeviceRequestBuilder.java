@@ -6,8 +6,8 @@ import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.MemberOfRequestBuilder;
-import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.restore.RestoreRequestBuilder;

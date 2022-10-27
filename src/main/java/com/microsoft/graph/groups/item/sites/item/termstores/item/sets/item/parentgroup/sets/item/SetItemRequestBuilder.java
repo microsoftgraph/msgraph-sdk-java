@@ -1,9 +1,9 @@
 package com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item;
 
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.children.ChildrenRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.children.item.TermItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.relations.item.RelationItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.relations.RelationsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.terms.item.TermItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstores.item.sets.item.parentgroup.sets.item.terms.TermsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.termstore.Set;

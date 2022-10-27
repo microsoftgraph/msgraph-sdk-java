@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity. */
 public class ManagedDeviceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ManagedDevice> _value;

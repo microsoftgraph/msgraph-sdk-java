@@ -30,6 +30,7 @@ import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilde
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
@@ -58,7 +59,6 @@ import com.microsoft.graph.users.item.managedappregistrations.ManagedAppRegistra
 import com.microsoft.graph.users.item.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.ManagedDevicesRequestBuilder;
 import com.microsoft.graph.users.item.manager.ManagerRequestBuilder;
-import com.microsoft.graph.users.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.users.item.messages.item.MessageItemRequestBuilder;
 import com.microsoft.graph.users.item.messages.MessagesRequestBuilder;

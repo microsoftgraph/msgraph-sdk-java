@@ -60,7 +60,7 @@ public class HistoryRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read the properties and relationships of a riskyUserHistoryItem object.
+     * Get the riskyUserHistoryItems from the history navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class HistoryRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a riskyUserHistoryItem object.
+     * Get the riskyUserHistoryItems from the history navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class HistoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a riskyUserHistoryItem object.
+     * Get the riskyUserHistoryItems from the history navigation property.
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -142,7 +142,7 @@ public class HistoryRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a riskyUserHistoryItem object.
+     * Get the riskyUserHistoryItems from the history navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskyUserHistoryItemCollectionResponse
      */
@@ -203,7 +203,7 @@ public class HistoryRequestBuilder {
             }};
         }
     }
-    /** Read the properties and relationships of a riskyUserHistoryItem object. */
+    /** Get the riskyUserHistoryItems from the history navigation property. */
     public class HistoryRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

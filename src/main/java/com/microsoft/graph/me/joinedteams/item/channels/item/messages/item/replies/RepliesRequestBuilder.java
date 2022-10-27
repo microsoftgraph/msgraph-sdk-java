@@ -91,7 +91,7 @@ public class RepliesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body 
      * @return a RequestInformation
      */
@@ -100,7 +100,7 @@ public class RepliesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class RepliesRequestBuilder {
         }
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body 
      * @return a CompletableFuture of chatMessage
      */
@@ -191,7 +191,7 @@ public class RepliesRequestBuilder {
         }
     }
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage

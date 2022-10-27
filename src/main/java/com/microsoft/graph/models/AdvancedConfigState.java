@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+/** Provides operations to manage the collection of agreement entities. */
 public enum AdvancedConfigState implements ValuedEnum {
     Default_escaped("default_escaped"),
     Enabled("enabled"),

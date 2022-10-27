@@ -1,13 +1,13 @@
 package com.microsoft.graph.reports.getyammerdeviceusageuserdetailwithdate;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.Report;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.Collection;
@@ -74,7 +74,6 @@ public class GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -85,19 +84,19 @@ public class GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
     }
     /**
      * Invoke function getYammerDeviceUsageUserDetail
-     * @return a CompletableFuture of Report
+     * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Report> get() {
+    public java.util.concurrent.CompletableFuture<InputStream> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Report::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Report>() {{
+            return new java.util.concurrent.CompletableFuture<InputStream>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -105,19 +104,19 @@ public class GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
     /**
      * Invoke function getYammerDeviceUsageUserDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Report
+     * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendAsync(requestInfo, Report::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Report>() {{
+            return new java.util.concurrent.CompletableFuture<InputStream>() {{
                 this.completeExceptionally(ex);
             }};
         }
