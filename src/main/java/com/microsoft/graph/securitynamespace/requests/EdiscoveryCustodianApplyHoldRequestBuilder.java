@@ -68,6 +68,7 @@ public class EdiscoveryCustodianApplyHoldRequestBuilder extends BaseActionReques
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

@@ -68,6 +68,7 @@ public class EdiscoveryCustodianRemoveHoldRequestBuilder extends BaseActionReque
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

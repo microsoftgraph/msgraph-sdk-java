@@ -82,6 +82,15 @@ public class Invitation extends Entity implements IJsonBackedObject {
     public String inviteRedirectUrl;
 
     /**
+     * The Reset Redemption.
+     * 
+     */
+    @SerializedName(value = "resetRedemption", alternate = {"ResetRedemption"})
+    @Expose
+	@Nullable
+    public Boolean resetRedemption;
+
+    /**
      * The Send Invitation Message.
      * Indicates whether an email should be sent to the user being invited. The default is false.
      */

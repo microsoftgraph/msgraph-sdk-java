@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetYammerGroupsActivityCountsRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetYammerGroupsActivityCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get Yammer Groups Activity Counts Request Builder.
  */
-public class ReportRootGetYammerGroupsActivityCountsRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootGetYammerGroupsActivityCountsRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootGetYammerGroupsActivityCounts

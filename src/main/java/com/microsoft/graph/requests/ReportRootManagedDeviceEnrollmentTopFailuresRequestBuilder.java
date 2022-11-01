@@ -70,6 +70,9 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends 
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            request.addFunctionOption(option);
+        }
         return request;
     }
 }

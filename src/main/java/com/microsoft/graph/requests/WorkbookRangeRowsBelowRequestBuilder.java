@@ -69,6 +69,9 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBui
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            request.addFunctionOption(option);
+        }
         return request;
     }
 
