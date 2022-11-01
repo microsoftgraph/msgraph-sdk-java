@@ -16,7 +16,6 @@ import com.microsoft.graph.users.item.calendargroups.item.CalendarGroupItemReque
 import com.microsoft.graph.users.item.calendars.CalendarsRequestBuilder;
 import com.microsoft.graph.users.item.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.users.item.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.users.item.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.users.item.chats.ChatsRequestBuilder;
 import com.microsoft.graph.users.item.chats.item.ChatItemRequestBuilder;
@@ -27,14 +26,15 @@ import com.microsoft.graph.users.item.contactfolders.item.ContactFolderItemReque
 import com.microsoft.graph.users.item.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.users.item.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.users.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
-import com.microsoft.graph.users.item.directreports.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.users.item.events.EventsRequestBuilder;
+import com.microsoft.graph.users.item.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
 import com.microsoft.graph.users.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.users.item.extensions.item.ExtensionItemRequestBuilder;

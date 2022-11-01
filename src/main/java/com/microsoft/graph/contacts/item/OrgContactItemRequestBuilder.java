@@ -6,9 +6,9 @@ import com.microsoft.graph.contacts.item.directreports.DirectReportsRequestBuild
 import com.microsoft.graph.contacts.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.contacts.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.contacts.item.manager.ManagerRequestBuilder;
+import com.microsoft.graph.contacts.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.contacts.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.contacts.item.restore.RestoreRequestBuilder;
-import com.microsoft.graph.contacts.item.transitivememberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.contacts.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrgContact;

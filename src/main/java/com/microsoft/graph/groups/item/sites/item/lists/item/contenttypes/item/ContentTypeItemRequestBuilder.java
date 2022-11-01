@@ -6,8 +6,8 @@ import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.b
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columns.ColumnsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.ispublished.IsPublishedRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.contenttypes.item.publish.PublishRequestBuilder;

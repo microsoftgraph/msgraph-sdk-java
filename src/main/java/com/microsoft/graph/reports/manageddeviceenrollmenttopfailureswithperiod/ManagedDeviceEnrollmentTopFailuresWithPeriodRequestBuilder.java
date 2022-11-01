@@ -1,13 +1,13 @@
 package com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.graph.models.Report;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
@@ -73,6 +73,7 @@ public class ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -83,19 +84,19 @@ public class ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
     }
     /**
      * Invoke function managedDeviceEnrollmentTopFailures
-     * @return a CompletableFuture of InputStream
+     * @return a CompletableFuture of report
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get() {
+    public java.util.concurrent.CompletableFuture<Report> get() {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Report::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<InputStream>() {{
+            return new java.util.concurrent.CompletableFuture<Report>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -103,19 +104,19 @@ public class ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
     /**
      * Invoke function managedDeviceEnrollmentTopFailures
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InputStream
+     * @return a CompletableFuture of report
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
                 put("4XX", ODataError::createFromDiscriminatorValue);
                 put("5XX", ODataError::createFromDiscriminatorValue);
             }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Report::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<InputStream>() {{
+            return new java.util.concurrent.CompletableFuture<Report>() {{
                 this.completeExceptionally(ex);
             }};
         }

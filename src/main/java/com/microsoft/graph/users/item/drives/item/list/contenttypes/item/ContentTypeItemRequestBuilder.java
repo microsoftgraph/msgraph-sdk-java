@@ -8,8 +8,8 @@ import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.basetyp
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.ColumnLinksRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnlinks.item.ColumnLinkItemRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.ColumnPositionsRequestBuilder;
-import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.copytodefaultcontentlocation.CopyToDefaultContentLocationRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.ispublished.IsPublishedRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.contenttypes.item.publish.PublishRequestBuilder;

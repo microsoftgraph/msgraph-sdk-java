@@ -7,10 +7,10 @@ import com.microsoft.graph.education.classes.item.assignments.AssignmentsRequest
 import com.microsoft.graph.education.classes.item.assignments.item.EducationAssignmentItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignmentsettings.AssignmentSettingsRequestBuilder;
 import com.microsoft.graph.education.classes.item.group.GroupRequestBuilder;
+import com.microsoft.graph.education.classes.item.members.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.members.MembersRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.item.EducationSchoolItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.schools.SchoolsRequestBuilder;
-import com.microsoft.graph.education.classes.item.teachers.item.EducationUserItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.teachers.TeachersRequestBuilder;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.odataerrors.ODataError;

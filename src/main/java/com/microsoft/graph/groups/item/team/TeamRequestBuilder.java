@@ -1,9 +1,9 @@
 package com.microsoft.graph.groups.item.team;
 
 import com.microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
-import com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
 import com.microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.group.GroupRequestBuilder;

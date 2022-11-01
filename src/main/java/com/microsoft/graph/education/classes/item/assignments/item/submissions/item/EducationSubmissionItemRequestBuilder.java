@@ -3,11 +3,11 @@ package com.microsoft.graph.education.classes.item.assignments.item.submissions.
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.outcomes.item.EducationOutcomeItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
-import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.return_escaped.ReturnRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.submit.SubmitRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.submittedresources.item.EducationSubmissionResourceItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.submittedresources.SubmittedResourcesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.unsubmit.UnsubmitRequestBuilder;
 import com.microsoft.graph.models.EducationSubmission;
