@@ -40,7 +40,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * 
+     * Optional. Whether to hide the participant from the roster.
      */
     @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose
@@ -67,7 +67,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Remove From Default Audio Routing Group.
-     * 
+     * Optional. Whether to remove them from the main mixer.
      */
     @SerializedName(value = "removeFromDefaultAudioRoutingGroup", alternate = {"RemoveFromDefaultAudioRoutingGroup"})
     @Expose
