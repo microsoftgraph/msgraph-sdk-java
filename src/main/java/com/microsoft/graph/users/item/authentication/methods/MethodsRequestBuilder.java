@@ -60,7 +60,7 @@ public class MethodsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authenticationMethod objects. This API returns only authentication methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class MethodsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authenticationMethod objects. This API returns only authentication methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -123,7 +123,7 @@ public class MethodsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authenticationMethod objects. This API returns only authentication methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @return a CompletableFuture of AuthenticationMethodCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -142,7 +142,7 @@ public class MethodsRequestBuilder {
         }
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authenticationMethod objects. This API returns only authentication methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationMethodCollectionResponse
      */
@@ -203,7 +203,7 @@ public class MethodsRequestBuilder {
             }};
         }
     }
-    /** Represents all authentication methods registered to a user. */
+    /** Retrieve a list of authenticationMethod objects. This API returns only authentication methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods. */
     public class MethodsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

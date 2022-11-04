@@ -2,13 +2,13 @@ package com.microsoft.graph.groups.item.sites.item;
 
 import com.microsoft.graph.groups.item.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.columns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.ContentTypesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.item.ContentTypeItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.externalcolumns.item.ColumnDefinitionItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;

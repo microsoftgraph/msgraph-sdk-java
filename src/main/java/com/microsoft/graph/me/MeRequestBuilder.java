@@ -25,6 +25,7 @@ import com.microsoft.graph.me.contactfolders.item.ContactFolderItemRequestBuilde
 import com.microsoft.graph.me.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.me.contacts.item.ContactItemRequestBuilder;
 import com.microsoft.graph.me.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.me.createdobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.me.devicemanagementtroubleshootingevents.item.DeviceManagementTroubleshootingEventItemRequestBuilder;
 import com.microsoft.graph.me.directreports.DirectReportsRequestBuilder;
@@ -66,7 +67,6 @@ import com.microsoft.graph.me.onlinemeetings.item.OnlineMeetingItemRequestBuilde
 import com.microsoft.graph.me.onlinemeetings.OnlineMeetingsRequestBuilder;
 import com.microsoft.graph.me.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.me.owneddevices.OwnedDevicesRequestBuilder;
-import com.microsoft.graph.me.ownedobjects.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.me.people.item.PersonItemRequestBuilder;
 import com.microsoft.graph.me.people.PeopleRequestBuilder;

@@ -26,6 +26,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class containing the base properties for Intune mobile apps. */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;
@@ -58,7 +59,7 @@ public class MobileApp extends Entity implements Parsable {
     /** Indicates the publishing state of an app. */
     private MobileAppPublishingState _publishingState;
     /**
-     * Instantiates a new MobileApp and sets the default values.
+     * Instantiates a new mobileApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -69,7 +70,7 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileApp
+     * @return a mobileApp
      */
     @javax.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

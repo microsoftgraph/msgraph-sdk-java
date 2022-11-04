@@ -11,7 +11,7 @@ import java.util.Objects;
 public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The hidden property */
+    /** Optional. Whether to hide the participant from the roster. */
     private Boolean _hidden;
     /** The identity property */
     private IdentitySet _identity;
@@ -19,7 +19,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private String _odataType;
     /** Optional. The ID of the target participant. */
     private String _participantId;
-    /** The removeFromDefaultAudioRoutingGroup property */
+    /** Optional. Whether to remove them from the main mixer. */
     private Boolean _removeFromDefaultAudioRoutingGroup;
     /** Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully. */
     private String _replacesCallId;
@@ -67,7 +67,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the hidden property value. The hidden property
+     * Gets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         return this._participantId;
     }
     /**
-     * Gets the removeFromDefaultAudioRoutingGroup property value. The removeFromDefaultAudioRoutingGroup property
+     * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the hidden property value. The hidden property
+     * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @param value Value to set for the hidden property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
         this._participantId = value;
     }
     /**
-     * Sets the removeFromDefaultAudioRoutingGroup property value. The removeFromDefaultAudioRoutingGroup property
+     * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @param value Value to set for the removeFromDefaultAudioRoutingGroup property.
      * @return a void
      */

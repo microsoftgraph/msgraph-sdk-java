@@ -4,7 +4,7 @@ import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.drives.item.bundles.BundlesRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.following.FollowingRequestBuilder;
-import com.microsoft.graph.users.item.drives.item.following.item.DriveItemItemRequestBuilder;
+import com.microsoft.graph.users.item.drives.item.items.item.DriveItemItemRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.list.ListRequestBuilder;
 import com.microsoft.graph.users.item.drives.item.recent.RecentRequestBuilder;

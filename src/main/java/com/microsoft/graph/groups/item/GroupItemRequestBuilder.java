@@ -26,6 +26,7 @@ import com.microsoft.graph.groups.item.grouplifecyclepolicies.GroupLifecyclePoli
 import com.microsoft.graph.groups.item.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
 import com.microsoft.graph.groups.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.groups.item.members.MembersRequestBuilder;
+import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.memberswithlicenseerrors.MembersWithLicenseErrorsRequestBuilder;
 import com.microsoft.graph.groups.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.groups.item.owners.OwnersRequestBuilder;
@@ -49,7 +50,6 @@ import com.microsoft.graph.groups.item.team.TeamRequestBuilder;
 import com.microsoft.graph.groups.item.threads.item.ConversationThreadItemRequestBuilder;
 import com.microsoft.graph.groups.item.threads.ThreadsRequestBuilder;
 import com.microsoft.graph.groups.item.transitivememberof.TransitiveMemberOfRequestBuilder;
-import com.microsoft.graph.groups.item.transitivemembers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.transitivemembers.TransitiveMembersRequestBuilder;
 import com.microsoft.graph.groups.item.unsubscribebymail.UnsubscribeByMailRequestBuilder;
 import com.microsoft.graph.groups.item.validateproperties.ValidatePropertiesRequestBuilder;

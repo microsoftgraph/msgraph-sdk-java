@@ -3,7 +3,7 @@ package com.microsoft.graph.policies.rolemanagementpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.EffectiveRulesRequestBuilder;
-import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.RulesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
