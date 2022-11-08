@@ -24,22 +24,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class TargetedManagedAppConfigurationItemRequestBuilder {
-    /** The apps property */
+    /** Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity. */
     @javax.annotation.Nonnull
     public AppsRequestBuilder apps() {
         return new AppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deploymentSummary property */
+    /** Provides operations to manage the deploymentSummary property of the microsoft.graph.targetedManagedAppConfiguration entity. */
     @javax.annotation.Nonnull
     public DeploymentSummaryRequestBuilder deploymentSummary() {
         return new DeploymentSummaryRequestBuilder(pathParameters, requestAdapter);
@@ -48,7 +48,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The targetApps property */
+    /** Provides operations to call the targetApps method. */
     @javax.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
@@ -56,7 +56,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.apps.item collection
+     * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
      * @param id Unique identifier of the item
      * @return a ManagedMobileAppItemRequestBuilder
      */
@@ -68,7 +68,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         return new ManagedMobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
      * @param id Unique identifier of the item
      * @return a TargetedManagedAppPolicyAssignmentItemRequestBuilder
      */

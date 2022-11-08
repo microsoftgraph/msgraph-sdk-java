@@ -28,27 +28,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the list property of the microsoft.graph.drive entity. */
 public class ListRequestBuilder {
-    /** The columns property */
+    /** Provides operations to manage the columns property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contentTypes property */
+    /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
         return new ContentTypesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The drive property */
+    /** Provides operations to manage the drive property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The items property */
+    /** Provides operations to manage the items property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +57,7 @@ public class ListRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The subscriptions property */
+    /** Provides operations to manage the subscriptions property of the microsoft.graph.list entity. */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
@@ -65,7 +65,7 @@ public class ListRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.columns.item collection
+     * Provides operations to manage the columns property of the microsoft.graph.list entity.
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
@@ -106,7 +106,7 @@ public class ListRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.contentTypes.item collection
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -287,7 +287,7 @@ public class ListRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param id Unique identifier of the item
      * @return a ListItemItemRequestBuilder
      */
@@ -299,7 +299,7 @@ public class ListRequestBuilder {
         return new ListItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.list entity.
      * @param id Unique identifier of the item
      * @return a RichLongRunningOperationItemRequestBuilder
      */
@@ -353,7 +353,7 @@ public class ListRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.list.subscriptions.item collection
+     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */

@@ -22,19 +22,19 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the shares property of the microsoft.graph.print entity. */
 public class PrinterShareItemRequestBuilder {
-    /** The allowedGroups property */
+    /** Provides operations to manage the allowedGroups property of the microsoft.graph.printerShare entity. */
     @javax.annotation.Nonnull
     public AllowedGroupsRequestBuilder allowedGroups() {
         return new AllowedGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The allowedUsers property */
+    /** Provides operations to manage the allowedUsers property of the microsoft.graph.printerShare entity. */
     @javax.annotation.Nonnull
     public AllowedUsersRequestBuilder allowedUsers() {
         return new AllowedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The printer property */
+    /** Provides operations to manage the printer property of the microsoft.graph.printerShare entity. */
     @javax.annotation.Nonnull
     public PrinterRequestBuilder printer() {
         return new PrinterRequestBuilder(pathParameters, requestAdapter);

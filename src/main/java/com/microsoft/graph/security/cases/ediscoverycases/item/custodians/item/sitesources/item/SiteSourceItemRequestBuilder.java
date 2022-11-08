@@ -22,7 +22,7 @@ public class SiteSourceItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The site property */
+    /** Provides operations to manage the site property of the microsoft.graph.security.siteSource entity. */
     @javax.annotation.Nonnull
     public SiteRequestBuilder site() {
         return new SiteRequestBuilder(pathParameters, requestAdapter);

@@ -24,27 +24,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The categories property */
+    /** Provides operations to manage the categories property of the microsoft.graph.mobileApp entity. */
     @javax.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedMobileLobApp property */
+    /** Casts the previous resource to managedMobileLobApp. */
     @javax.annotation.Nonnull
     public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
         return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileLobApp property */
+    /** Casts the previous resource to mobileLobApp. */
     @javax.annotation.Nonnull
     public MobileLobAppRequestBuilder mobileLobApp() {
         return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);
@@ -56,7 +56,7 @@ public class MobileAppItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
      * @param id Unique identifier of the item
      * @return a MobileAppAssignmentItemRequestBuilder
      */
@@ -68,7 +68,7 @@ public class MobileAppItemRequestBuilder {
         return new MobileAppAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item.categories.item collection
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */

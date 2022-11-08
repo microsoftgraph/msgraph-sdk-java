@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the filesFolder property of the microsoft.graph.channel entity. */
 public class FilesFolderRequestBuilder {
-    /** The content property */
+    /** Provides operations to manage the media for the user entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);

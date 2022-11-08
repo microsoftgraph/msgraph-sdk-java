@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity. */
 public class DeviceEnrollmentConfigurationItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +35,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The setPriority property */
+    /** Provides operations to call the setPriority method. */
     @javax.annotation.Nonnull
     public SetPriorityRequestBuilder setPriority() {
         return new SetPriorityRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +43,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceEnrollmentConfigurations.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
      * @param id Unique identifier of the item
      * @return a EnrollmentConfigurationAssignmentItemRequestBuilder
      */

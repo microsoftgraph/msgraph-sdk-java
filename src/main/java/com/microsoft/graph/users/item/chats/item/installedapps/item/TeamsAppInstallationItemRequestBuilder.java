@@ -24,17 +24,17 @@ public class TeamsAppInstallationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The teamsApp property */
+    /** Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity. */
     @javax.annotation.Nonnull
     public TeamsAppRequestBuilder teamsApp() {
         return new TeamsAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The teamsAppDefinition property */
+    /** Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity. */
     @javax.annotation.Nonnull
     public TeamsAppDefinitionRequestBuilder teamsAppDefinition() {
         return new TeamsAppDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The upgrade property */
+    /** Provides operations to call the upgrade method. */
     @javax.annotation.Nonnull
     public UpgradeRequestBuilder upgrade() {
         return new UpgradeRequestBuilder(pathParameters, requestAdapter);

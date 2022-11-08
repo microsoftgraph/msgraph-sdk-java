@@ -26,22 +26,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatuses property */
+    /** Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
     @javax.annotation.Nonnull
     public DeviceStatusesRequestBuilder deviceStatuses() {
         return new DeviceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatusSummary property */
+    /** Provides operations to manage the deviceStatusSummary property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
     @javax.annotation.Nonnull
     public DeviceStatusSummaryRequestBuilder deviceStatusSummary() {
         return new DeviceStatusSummaryRequestBuilder(pathParameters, requestAdapter);
@@ -52,18 +52,18 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userStatuses property */
+    /** Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
     @javax.annotation.Nonnull
     public UserStatusesRequestBuilder userStatuses() {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The userStatusSummary property */
+    /** Provides operations to manage the userStatusSummary property of the microsoft.graph.managedDeviceMobileAppConfiguration entity. */
     @javax.annotation.Nonnull
     public UserStatusSummaryRequestBuilder userStatusSummary() {
         return new UserStatusSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
      */
@@ -234,7 +234,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
      */
@@ -327,7 +327,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
+     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
      */

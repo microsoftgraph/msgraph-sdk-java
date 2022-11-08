@@ -23,7 +23,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The results property */
+    /** Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity. */
     @javax.annotation.Nonnull
     public ResultsRequestBuilder results() {
         return new ResultsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.informationProtection.threatAssessmentRequests.item.results.item collection
+     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
      * @param id Unique identifier of the item
      * @return a ThreatAssessmentResultItemRequestBuilder
      */

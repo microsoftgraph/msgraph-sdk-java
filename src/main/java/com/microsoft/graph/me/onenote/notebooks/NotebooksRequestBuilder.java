@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
 public class NotebooksRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getNotebookFromWebUrl property */
+    /** Provides operations to call the getNotebookFromWebUrl method. */
     @javax.annotation.Nonnull
     public GetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl() {
         return new GetNotebookFromWebUrlRequestBuilder(pathParameters, requestAdapter);

@@ -29,27 +29,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity. */
 public class AccessReviewInstanceItemRequestBuilder {
-    /** The acceptRecommendations property */
+    /** Provides operations to call the acceptRecommendations method. */
     @javax.annotation.Nonnull
     public AcceptRecommendationsRequestBuilder acceptRecommendations() {
         return new AcceptRecommendationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The applyDecisions property */
+    /** Provides operations to call the applyDecisions method. */
     @javax.annotation.Nonnull
     public ApplyDecisionsRequestBuilder applyDecisions() {
         return new ApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The batchRecordDecisions property */
+    /** Provides operations to call the batchRecordDecisions method. */
     @javax.annotation.Nonnull
     public BatchRecordDecisionsRequestBuilder batchRecordDecisions() {
         return new BatchRecordDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contactedReviewers property */
+    /** Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity. */
     @javax.annotation.Nonnull
     public ContactedReviewersRequestBuilder contactedReviewers() {
         return new ContactedReviewersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The decisions property */
+    /** Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity. */
     @javax.annotation.Nonnull
     public DecisionsRequestBuilder decisions() {
         return new DecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -58,22 +58,22 @@ public class AccessReviewInstanceItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resetDecisions property */
+    /** Provides operations to call the resetDecisions method. */
     @javax.annotation.Nonnull
     public ResetDecisionsRequestBuilder resetDecisions() {
         return new ResetDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sendReminder property */
+    /** Provides operations to call the sendReminder method. */
     @javax.annotation.Nonnull
     public SendReminderRequestBuilder sendReminder() {
         return new SendReminderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The stages property */
+    /** Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity. */
     @javax.annotation.Nonnull
     public StagesRequestBuilder stages() {
         return new StagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The stop property */
+    /** Provides operations to call the stop method. */
     @javax.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -110,7 +110,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.contactedReviewers.item collection
+     * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewReviewerItemRequestBuilder
      */
@@ -213,7 +213,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.decisions.item collection
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */
@@ -345,7 +345,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item collection
+     * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewStageItemRequestBuilder
      */

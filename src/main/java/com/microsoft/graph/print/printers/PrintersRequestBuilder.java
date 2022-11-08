@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the printers property of the microsoft.graph.print entity. */
 public class PrintersRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The create property */
+    /** Provides operations to call the create method. */
     @javax.annotation.Nonnull
     public CreateRequestBuilder create() {
         return new CreateRequestBuilder(pathParameters, requestAdapter);

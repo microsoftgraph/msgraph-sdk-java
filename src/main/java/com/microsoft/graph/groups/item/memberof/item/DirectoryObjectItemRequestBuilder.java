@@ -23,22 +23,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the memberOf property of the microsoft.graph.group entity. */
 public class DirectoryObjectItemRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The device property */
+    /** Casts the previous resource to device. */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The orgContact property */
+    /** Casts the previous resource to orgContact. */
     @javax.annotation.Nonnull
     public OrgContactRequestBuilder orgContact() {
         return new OrgContactRequestBuilder(pathParameters, requestAdapter);
@@ -47,14 +47,14 @@ public class DirectoryObjectItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);

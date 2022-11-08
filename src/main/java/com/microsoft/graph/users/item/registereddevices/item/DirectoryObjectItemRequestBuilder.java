@@ -20,17 +20,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the registeredDevices property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
-    /** The appRoleAssignment property */
+    /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull
     public AppRoleAssignmentRequestBuilder appRoleAssignment() {
         return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The device property */
+    /** Casts the previous resource to device. */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The endpoint property */
+    /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
     public EndpointRequestBuilder endpoint() {
         return new EndpointRequestBuilder(pathParameters, requestAdapter);

@@ -22,7 +22,7 @@ public class SettingsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resetToDefault property */
+    /** Provides operations to call the resetToDefault method. */
     @javax.annotation.Nonnull
     public ResetToDefaultRequestBuilder resetToDefault() {
         return new ResetToDefaultRequestBuilder(pathParameters, requestAdapter);

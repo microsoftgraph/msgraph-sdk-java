@@ -35,76 +35,76 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the messages property of the microsoft.graph.user entity. */
 public class MessageItemRequestBuilder {
-    /** The attachments property */
+    /** Provides operations to manage the attachments property of the microsoft.graph.message entity. */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Content property */
+    /** Provides operations to manage the media for the user entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The copy property */
+    /** Provides operations to call the copy method. */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createForward property */
+    /** Provides operations to call the createForward method. */
     @javax.annotation.Nonnull
     public CreateForwardRequestBuilder createForward() {
         return new CreateForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createReply property */
+    /** Provides operations to call the createReply method. */
     @javax.annotation.Nonnull
     public CreateReplyRequestBuilder createReply() {
         return new CreateReplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createReplyAll property */
+    /** Provides operations to call the createReplyAll method. */
     @javax.annotation.Nonnull
     public CreateReplyAllRequestBuilder createReplyAll() {
         return new CreateReplyAllRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.message entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The forward property */
+    /** Provides operations to call the forward method. */
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The move property */
+    /** Provides operations to call the move method. */
     @javax.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The multiValueExtendedProperties property */
+    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.message entity. */
     @javax.annotation.Nonnull
     public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
         return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The reply property */
+    /** Provides operations to call the reply method. */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The replyAll property */
+    /** Provides operations to call the replyAll method. */
     @javax.annotation.Nonnull
     public ReplyAllRequestBuilder replyAll() {
         return new ReplyAllRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The send property */
+    /** Provides operations to call the send method. */
     @javax.annotation.Nonnull
     public SendRequestBuilder send() {
         return new SendRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The singleValueExtendedProperties property */
+    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity. */
     @javax.annotation.Nonnull
     public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -112,7 +112,7 @@ public class MessageItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.me.messages.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.message entity.
      * @param id Unique identifier of the item
      * @return a AttachmentItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class MessageItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.messages.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.message entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -334,7 +334,7 @@ public class MessageItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.messages.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.message entity.
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -388,7 +388,7 @@ public class MessageItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.messages.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity.
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

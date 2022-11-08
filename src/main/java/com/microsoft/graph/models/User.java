@@ -21,7 +21,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AgreementAcceptance> _agreementAcceptances;
     /** Represents the app roles a user has been granted for an application. Supports $expand. */
     private java.util.List<AppRoleAssignment> _appRoleAssignments;
-    /** The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections). */
+    /** The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections). */
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not). */
     private java.util.List<AssignedPlan> _assignedPlans;
@@ -55,7 +55,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<Contact> _contacts;
     /** The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _country;
-    /** The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in). */
+    /** The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only.  Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in). */
     private OffsetDateTime _createdDateTime;
     /** Directory objects that were created by the user. Read-only. Nullable. */
     private java.util.List<DirectoryObject> _createdObjects;
@@ -119,7 +119,7 @@ public class User extends DirectoryObject implements Parsable {
     private OffsetDateTime _lastPasswordChangeDateTime;
     /** Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select. */
     private String _legalAgeGroupClassification;
-    /** State of license assignments for this user. Read-only. Returned only on $select. */
+    /** State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select. */
     private java.util.List<LicenseAssignmentState> _licenseAssignmentStates;
     /** A collection of this user's license details. Read-only. */
     private java.util.List<LicenseDetails> _licenseDetails;
@@ -313,7 +313,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._appRoleAssignments;
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
      * @return a assignedLicense
      */
     @javax.annotation.Nullable
@@ -449,7 +449,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._country;
     }
     /**
-     * Gets the createdDateTime property value. The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+     * Gets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only.  Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -833,7 +833,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._legalAgeGroupClassification;
     }
     /**
-     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @return a licenseAssignmentState
      */
     @javax.annotation.Nullable
@@ -1519,7 +1519,7 @@ public class User extends DirectoryObject implements Parsable {
         this._appRoleAssignments = value;
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
@@ -1672,7 +1672,7 @@ public class User extends DirectoryObject implements Parsable {
         this._country = value;
     }
     /**
-     * Sets the createdDateTime property value. The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+     * Sets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only.  Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -1960,7 +1960,7 @@ public class User extends DirectoryObject implements Parsable {
         this._legalAgeGroupClassification = value;
     }
     /**
-     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @param value Value to set for the licenseAssignmentStates property.
      * @return a void
      */

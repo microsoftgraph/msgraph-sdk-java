@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the cases property of the microsoft.graph.security entity. */
 public class CasesRequestBuilder {
-    /** The ediscoveryCases property */
+    /** Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity. */
     @javax.annotation.Nonnull
     public EdiscoveryCasesRequestBuilder ediscoveryCases() {
         return new EdiscoveryCasesRequestBuilder(pathParameters, requestAdapter);
@@ -190,7 +190,7 @@ public class CasesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item collection
+     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryCaseItemRequestBuilder
      */

@@ -46,57 +46,57 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceAppManagement singleton. */
 public class DeviceAppManagementRequestBuilder {
-    /** The androidManagedAppProtections property */
+    /** Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public AndroidManagedAppProtectionsRequestBuilder androidManagedAppProtections() {
         return new AndroidManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The defaultManagedAppProtections property */
+    /** Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public DefaultManagedAppProtectionsRequestBuilder defaultManagedAppProtections() {
         return new DefaultManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The iosManagedAppProtections property */
+    /** Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public IosManagedAppProtectionsRequestBuilder iosManagedAppProtections() {
         return new IosManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppPolicies property */
+    /** Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppPoliciesRequestBuilder managedAppPolicies() {
         return new ManagedAppPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppRegistrations property */
+    /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppStatuses property */
+    /** Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppStatusesRequestBuilder managedAppStatuses() {
         return new ManagedAppStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedEBooks property */
+    /** Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedEBooksRequestBuilder managedEBooks() {
         return new ManagedEBooksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mdmWindowsInformationProtectionPolicies property */
+    /** Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MdmWindowsInformationProtectionPoliciesRequestBuilder mdmWindowsInformationProtectionPolicies() {
         return new MdmWindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileAppCategories property */
+    /** Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppCategoriesRequestBuilder mobileAppCategories() {
         return new MobileAppCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileAppConfigurations property */
+    /** Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder mobileAppConfigurations() {
         return new MobileAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileApps property */
+    /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppsRequestBuilder mobileApps() {
         return new MobileAppsRequestBuilder(pathParameters, requestAdapter);
@@ -105,30 +105,30 @@ public class DeviceAppManagementRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The syncMicrosoftStoreForBusinessApps property */
+    /** Provides operations to call the syncMicrosoftStoreForBusinessApps method. */
     @javax.annotation.Nonnull
     public SyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps() {
         return new SyncMicrosoftStoreForBusinessAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The targetedManagedAppConfigurations property */
+    /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public TargetedManagedAppConfigurationsRequestBuilder targetedManagedAppConfigurations() {
         return new TargetedManagedAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The vppTokens property */
+    /** Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public VppTokensRequestBuilder vppTokens() {
         return new VppTokensRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsInformationProtectionPolicies property */
+    /** Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionPoliciesRequestBuilder windowsInformationProtectionPolicies() {
         return new WindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item collection
+     * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a AndroidManagedAppProtectionItemRequestBuilder
      */
@@ -232,7 +232,7 @@ public class DeviceAppManagementRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item collection
+     * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a DefaultManagedAppProtectionItemRequestBuilder
      */
@@ -283,7 +283,7 @@ public class DeviceAppManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item collection
+     * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a IosManagedAppProtectionItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class DeviceAppManagementRequestBuilder {
         return new IosManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppPolicies.item collection
+     * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
@@ -307,7 +307,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item collection
+     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppRegistrationItemRequestBuilder
      */
@@ -319,7 +319,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppStatuses.item collection
+     * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppStatusItemRequestBuilder
      */
@@ -331,7 +331,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedAppStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item collection
+     * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedEBookItemRequestBuilder
      */
@@ -343,7 +343,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedEBookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
+     * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MdmWindowsInformationProtectionPolicyItemRequestBuilder
      */
@@ -355,7 +355,7 @@ public class DeviceAppManagementRequestBuilder {
         return new MdmWindowsInformationProtectionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppCategories.item collection
+     * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */
@@ -367,7 +367,7 @@ public class DeviceAppManagementRequestBuilder {
         return new MobileAppCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item collection
+     * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
      */
@@ -379,7 +379,7 @@ public class DeviceAppManagementRequestBuilder {
         return new ManagedDeviceMobileAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item collection
+     * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MobileAppItemRequestBuilder
      */
@@ -433,7 +433,7 @@ public class DeviceAppManagementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
+     * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a TargetedManagedAppConfigurationItemRequestBuilder
      */
@@ -445,7 +445,7 @@ public class DeviceAppManagementRequestBuilder {
         return new TargetedManagedAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.vppTokens.item collection
+     * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a VppTokenItemRequestBuilder
      */
@@ -457,7 +457,7 @@ public class DeviceAppManagementRequestBuilder {
         return new VppTokenItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
+     * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionPolicyItemRequestBuilder
      */

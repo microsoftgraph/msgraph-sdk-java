@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the termStores property of the microsoft.graph.site entity. */
 public class StoreItemRequestBuilder {
-    /** The groups property */
+    /** Provides operations to manage the groups property of the microsoft.graph.termStore.store entity. */
     @javax.annotation.Nonnull
     public GroupsRequestBuilder groups() {
         return new GroupsRequestBuilder(pathParameters, requestAdapter);
@@ -30,7 +30,7 @@ public class StoreItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sets property */
+    /** Provides operations to manage the sets property of the microsoft.graph.termStore.store entity. */
     @javax.annotation.Nonnull
     public SetsRequestBuilder sets() {
         return new SetsRequestBuilder(pathParameters, requestAdapter);
@@ -236,7 +236,7 @@ public class StoreItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStores.item.groups.item collection
+     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class StoreItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStores.item.sets.item collection
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

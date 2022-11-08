@@ -7,8 +7,8 @@ import com.microsoft.graph.devices.item.extensions.item.ExtensionItemRequestBuil
 import com.microsoft.graph.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.devices.item.memberof.MemberOfRequestBuilder;
-import com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
+import com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.devices.item.registeredusers.RegisteredUsersRequestBuilder;
 import com.microsoft.graph.devices.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
@@ -29,56 +29,56 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of device entities. */
 public class DeviceItemRequestBuilder {
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The memberOf property */
+    /** Provides operations to manage the memberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The registeredOwners property */
+    /** Provides operations to manage the registeredOwners property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredOwnersRequestBuilder registeredOwners() {
         return new RegisteredOwnersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The registeredUsers property */
+    /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredUsersRequestBuilder registeredUsers() {
         return new RegisteredUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMemberOf property */
+    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
@@ -245,7 +245,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -296,7 +296,7 @@ public class DeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class DeviceItemRequestBuilder {
         return new com.microsoft.graph.devices.item.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.registeredUsers.item collection
+     * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class DeviceItemRequestBuilder {
         return new com.microsoft.graph.devices.item.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.devices.item.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

@@ -1,5 +1,6 @@
 package com.microsoft.graph.devicemanagement.devicemanagementpartners.item;
 
+import com.microsoft.graph.devicemanagement.devicemanagementpartners.item.terminate.TerminateRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementPartner;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
@@ -21,6 +22,11 @@ public class DeviceManagementPartnerItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
+    /** Provides operations to call the terminate method. */
+    @javax.annotation.Nonnull
+    public TerminateRequestBuilder terminate() {
+        return new TerminateRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**

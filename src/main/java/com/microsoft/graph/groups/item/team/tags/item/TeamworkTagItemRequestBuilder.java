@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the tags property of the microsoft.graph.team entity. */
 public class TeamworkTagItemRequestBuilder {
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.teamworkTag entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class TeamworkTagItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.tags.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
      * @param id Unique identifier of the item
      * @return a TeamworkTagMemberItemRequestBuilder
      */

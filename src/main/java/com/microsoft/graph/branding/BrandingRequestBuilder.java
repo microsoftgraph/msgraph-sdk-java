@@ -22,17 +22,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the organizationalBranding singleton. */
 public class BrandingRequestBuilder {
-    /** The backgroundImage property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public BackgroundImageRequestBuilder backgroundImage() {
         return new BackgroundImageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The bannerLogo property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public BannerLogoRequestBuilder bannerLogo() {
         return new BannerLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The localizations property */
+    /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
     @javax.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
         return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
@@ -41,7 +41,7 @@ public class BrandingRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The squareLogo property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
@@ -180,7 +180,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.branding.localizations.item collection
+     * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
      * @param id Unique identifier of the item
      * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */

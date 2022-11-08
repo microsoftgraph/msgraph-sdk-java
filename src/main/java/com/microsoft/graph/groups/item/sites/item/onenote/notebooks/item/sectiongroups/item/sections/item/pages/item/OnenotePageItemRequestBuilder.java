@@ -23,27 +23,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity. */
 public class OnenotePageItemRequestBuilder {
-    /** The content property */
+    /** Provides operations to manage the media for the group entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The copyToSection property */
+    /** Provides operations to call the copyToSection method. */
     @javax.annotation.Nonnull
     public CopyToSectionRequestBuilder copyToSection() {
         return new CopyToSectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The onenotePatchContent property */
+    /** Provides operations to call the onenotePatchContent method. */
     @javax.annotation.Nonnull
     public OnenotePatchContentRequestBuilder onenotePatchContent() {
         return new OnenotePatchContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parentNotebook property */
+    /** Provides operations to manage the parentNotebook property of the microsoft.graph.onenotePage entity. */
     @javax.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
         return new ParentNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parentSection property */
+    /** Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity. */
     @javax.annotation.Nonnull
     public ParentSectionRequestBuilder parentSection() {
         return new ParentSectionRequestBuilder(pathParameters, requestAdapter);

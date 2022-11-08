@@ -16,13 +16,13 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String _agreementId;
     /** The display name of the device used for accepting the agreement. */
     private String _deviceDisplayName;
-    /** The unique identifier of the device used for accepting the agreement. */
+    /** The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values. */
     private String _deviceId;
     /** The operating system used to accept the agreement. */
     private String _deviceOSType;
     /** The operating system version of the device used to accept the agreement. */
     private String _deviceOSVersion;
-    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values. */
     private OffsetDateTime _expirationDateTime;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _recordedDateTime;
@@ -32,7 +32,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String _userDisplayName;
     /** Email of the user when the acceptance was recorded. */
     private String _userEmail;
-    /** The identifier of the user who accepted the agreement. */
+    /** The identifier of the user who accepted the agreement. Supports $filter (eq). */
     private String _userId;
     /** UPN of the user when the acceptance was recorded. */
     private String _userPrincipalName;
@@ -80,7 +80,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceDisplayName;
     }
     /**
-     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceOSVersion;
     }
     /**
-     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._userEmail;
     }
     /**
-     * Gets the userId property value. The identifier of the user who accepted the agreement.
+     * Gets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -233,7 +233,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._deviceDisplayName = value;
     }
     /**
-     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
@@ -260,7 +260,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._deviceOSVersion = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
@@ -305,7 +305,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this._userEmail = value;
     }
     /**
-     * Sets the userId property value. The identifier of the user who accepted the agreement.
+     * Sets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      * @param value Value to set for the userId property.
      * @return a void
      */

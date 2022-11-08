@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity. */
 public class TeamsAppItemRequestBuilder {
-    /** The appDefinitions property */
+    /** Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity. */
     @javax.annotation.Nonnull
     public AppDefinitionsRequestBuilder appDefinitions() {
         return new AppDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class TeamsAppItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.appCatalogs.teamsApps.item.appDefinitions.item collection
+     * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
      * @param id Unique identifier of the item
      * @return a TeamsAppDefinitionItemRequestBuilder
      */

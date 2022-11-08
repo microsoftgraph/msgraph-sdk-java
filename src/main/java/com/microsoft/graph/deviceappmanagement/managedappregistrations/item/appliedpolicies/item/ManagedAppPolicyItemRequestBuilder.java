@@ -22,7 +22,7 @@ public class ManagedAppPolicyItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The targetApps property */
+    /** Provides operations to call the targetApps method. */
     @javax.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);

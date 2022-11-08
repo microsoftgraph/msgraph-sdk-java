@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity. */
 public class ExternalGroupItemRequestBuilder {
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class ExternalGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.connections.item.groups.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
      * @param id Unique identifier of the item
      * @return a IdentityItemRequestBuilder
      */

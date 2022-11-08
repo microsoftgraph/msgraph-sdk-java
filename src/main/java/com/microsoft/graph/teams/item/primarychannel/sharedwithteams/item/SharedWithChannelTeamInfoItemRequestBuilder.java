@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity. */
 public class SharedWithChannelTeamInfoItemRequestBuilder {
-    /** The allowedMembers property */
+    /** Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity. */
     @javax.annotation.Nonnull
     public AllowedMembersRequestBuilder allowedMembers() {
         return new AllowedMembersRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.primaryChannel.sharedWithTeams.item.allowedMembers.item collection
+     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */

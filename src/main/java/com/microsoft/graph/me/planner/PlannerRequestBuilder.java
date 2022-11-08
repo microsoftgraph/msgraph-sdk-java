@@ -23,14 +23,14 @@ import java.util.Objects;
 public class PlannerRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The plans property */
+    /** Provides operations to manage the plans property of the microsoft.graph.plannerUser entity. */
     @javax.annotation.Nonnull
     public PlansRequestBuilder plans() {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The tasks property */
+    /** Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity. */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -278,7 +278,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.planner.plans.item collection
+     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class PlannerRequestBuilder {
         return new PlannerPlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.planner.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

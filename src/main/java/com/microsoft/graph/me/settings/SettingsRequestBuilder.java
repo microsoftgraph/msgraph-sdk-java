@@ -22,7 +22,7 @@ public class SettingsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The shiftPreferences property */
+    /** Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity. */
     @javax.annotation.Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(pathParameters, requestAdapter);

@@ -19,14 +19,14 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity. */
 public class GroupLifecyclePolicyItemRequestBuilder {
-    /** The addGroup property */
+    /** Provides operations to call the addGroup method. */
     @javax.annotation.Nonnull
     public AddGroupRequestBuilder addGroup() {
         return new AddGroupRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The removeGroup property */
+    /** Provides operations to call the removeGroup method. */
     @javax.annotation.Nonnull
     public RemoveGroupRequestBuilder removeGroup() {
         return new RemoveGroupRequestBuilder(pathParameters, requestAdapter);

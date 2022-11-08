@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the outlook property of the microsoft.graph.user entity. */
 public class OutlookRequestBuilder {
-    /** The masterCategories property */
+    /** Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity. */
     @javax.annotation.Nonnull
     public MasterCategoriesRequestBuilder masterCategories() {
         return new MasterCategoriesRequestBuilder(pathParameters, requestAdapter);
@@ -132,7 +132,7 @@ public class OutlookRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.outlook.masterCategories.item collection
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
      * @param id Unique identifier of the item
      * @return a OutlookCategoryItemRequestBuilder
      */

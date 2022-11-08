@@ -25,26 +25,26 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity. */
 public class ConditionalAccessRequestBuilder {
-    /** The authenticationContextClassReferences property */
+    /** Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity. */
     @javax.annotation.Nonnull
     public AuthenticationContextClassReferencesRequestBuilder authenticationContextClassReferences() {
         return new AuthenticationContextClassReferencesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The namedLocations property */
+    /** Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity. */
     @javax.annotation.Nonnull
     public NamedLocationsRequestBuilder namedLocations() {
         return new NamedLocationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The policies property */
+    /** Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity. */
     @javax.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The templates property */
+    /** Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity. */
     @javax.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +52,7 @@ public class ConditionalAccessRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.authenticationContextClassReferences.item collection
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
      * @param id Unique identifier of the item
      * @return a AuthenticationContextClassReferenceItemRequestBuilder
      */
@@ -262,7 +262,7 @@ public class ConditionalAccessRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.namedLocations.item collection
+     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
      * @param id Unique identifier of the item
      * @return a NamedLocationItemRequestBuilder
      */
@@ -316,7 +316,7 @@ public class ConditionalAccessRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.policies.item collection
+     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyItemRequestBuilder
      */
@@ -328,7 +328,7 @@ public class ConditionalAccessRequestBuilder {
         return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.conditionalAccess.templates.item collection
+     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
      * @param id Unique identifier of the item
      * @return a ConditionalAccessTemplateItemRequestBuilder
      */

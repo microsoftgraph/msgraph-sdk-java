@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity. */
 public class TeamsAppDefinitionItemRequestBuilder {
-    /** The bot property */
+    /** Provides operations to manage the bot property of the microsoft.graph.teamsAppDefinition entity. */
     @javax.annotation.Nonnull
     public BotRequestBuilder bot() {
         return new BotRequestBuilder(pathParameters, requestAdapter);

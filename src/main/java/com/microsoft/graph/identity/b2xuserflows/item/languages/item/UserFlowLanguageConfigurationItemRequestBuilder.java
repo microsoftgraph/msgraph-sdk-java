@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class UserFlowLanguageConfigurationItemRequestBuilder {
-    /** The defaultPages property */
+    /** Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
     @javax.annotation.Nonnull
     public DefaultPagesRequestBuilder defaultPages() {
         return new DefaultPagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The overridesPages property */
+    /** Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
     @javax.annotation.Nonnull
     public OverridesPagesRequestBuilder overridesPages() {
         return new OverridesPagesRequestBuilder(pathParameters, requestAdapter);
@@ -157,7 +157,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
+     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param id Unique identifier of the item
      * @return a UserFlowLanguagePageItemRequestBuilder
      */
@@ -247,7 +247,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
+     * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param id Unique identifier of the item
      * @return a UserFlowLanguagePageItemRequestBuilder
      */

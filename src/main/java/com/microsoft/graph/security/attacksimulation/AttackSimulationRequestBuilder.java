@@ -25,12 +25,12 @@ public class AttackSimulationRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The simulationAutomations property */
+    /** Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity. */
     @javax.annotation.Nonnull
     public SimulationAutomationsRequestBuilder simulationAutomations() {
         return new SimulationAutomationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The simulations property */
+    /** Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity. */
     @javax.annotation.Nonnull
     public SimulationsRequestBuilder simulations() {
         return new SimulationsRequestBuilder(pathParameters, requestAdapter);
@@ -278,7 +278,7 @@ public class AttackSimulationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulationAutomations.item collection
+     * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
      * @param id Unique identifier of the item
      * @return a SimulationAutomationItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class AttackSimulationRequestBuilder {
         return new SimulationAutomationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulations.item collection
+     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
      * @param id Unique identifier of the item
      * @return a SimulationItemRequestBuilder
      */

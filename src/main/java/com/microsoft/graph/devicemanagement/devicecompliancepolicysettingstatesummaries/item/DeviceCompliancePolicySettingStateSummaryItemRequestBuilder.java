@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
-    /** The deviceComplianceSettingStates property */
+    /** Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity. */
     @javax.annotation.Nonnull
     public DeviceComplianceSettingStatesRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStatesRequestBuilder(pathParameters, requestAdapter);
@@ -190,7 +190,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicySettingStateSummaries.item.deviceComplianceSettingStates.item collection
+     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
      * @param id Unique identifier of the item
      * @return a DeviceComplianceSettingStateItemRequestBuilder
      */

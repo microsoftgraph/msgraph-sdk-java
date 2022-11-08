@@ -25,12 +25,12 @@ public class IdentityProtectionRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The riskDetections property */
+    /** Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity. */
     @javax.annotation.Nonnull
     public RiskDetectionsRequestBuilder riskDetections() {
         return new RiskDetectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The riskyUsers property */
+    /** Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity. */
     @javax.annotation.Nonnull
     public RiskyUsersRequestBuilder riskyUsers() {
         return new RiskyUsersRequestBuilder(pathParameters, requestAdapter);
@@ -211,7 +211,7 @@ public class IdentityProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityProtection.riskDetections.item collection
+     * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
      * @param id Unique identifier of the item
      * @return a RiskDetectionItemRequestBuilder
      */
@@ -223,7 +223,7 @@ public class IdentityProtectionRequestBuilder {
         return new RiskDetectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityProtection.riskyUsers.item collection
+     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
      * @param id Unique identifier of the item
      * @return a RiskyUserItemRequestBuilder
      */

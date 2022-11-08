@@ -27,46 +27,46 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity. */
 public class EducationSubmissionItemRequestBuilder {
-    /** The outcomes property */
+    /** Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity. */
     @javax.annotation.Nonnull
     public OutcomesRequestBuilder outcomes() {
         return new OutcomesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The reassign property */
+    /** Provides operations to call the reassign method. */
     @javax.annotation.Nonnull
     public ReassignRequestBuilder reassign() {
         return new ReassignRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resources property */
+    /** Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity. */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The return property */
+    /** Provides operations to call the return method. */
     @javax.annotation.Nonnull
     public ReturnRequestBuilder return_escaped() {
         return new ReturnRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setUpResourcesFolder property */
+    /** Provides operations to call the setUpResourcesFolder method. */
     @javax.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
         return new SetUpResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The submit property */
+    /** Provides operations to call the submit method. */
     @javax.annotation.Nonnull
     public SubmitRequestBuilder submit() {
         return new SubmitRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The submittedResources property */
+    /** Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity. */
     @javax.annotation.Nonnull
     public SubmittedResourcesRequestBuilder submittedResources() {
         return new SubmittedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unsubmit property */
+    /** Provides operations to call the unsubmit method. */
     @javax.annotation.Nonnull
     public UnsubmitRequestBuilder unsubmit() {
         return new UnsubmitRequestBuilder(pathParameters, requestAdapter);
@@ -272,7 +272,7 @@ public class EducationSubmissionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.submissions.item.outcomes.item collection
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
      * @param id Unique identifier of the item
      * @return a EducationOutcomeItemRequestBuilder
      */
@@ -326,7 +326,7 @@ public class EducationSubmissionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.submissions.item.resources.item collection
+     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
      * @param id Unique identifier of the item
      * @return a EducationSubmissionResourceItemRequestBuilder
      */
@@ -338,7 +338,7 @@ public class EducationSubmissionItemRequestBuilder {
         return new com.microsoft.graph.education.classes.item.assignments.item.submissions.item.resources.item.EducationSubmissionResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.submissions.item.submittedResources.item collection
+     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
      * @param id Unique identifier of the item
      * @return a EducationSubmissionResourceItemRequestBuilder
      */

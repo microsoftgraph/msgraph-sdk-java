@@ -23,7 +23,7 @@ public class ApprovalItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The stages property */
+    /** Provides operations to manage the stages property of the microsoft.graph.approval entity. */
     @javax.annotation.Nonnull
     public StagesRequestBuilder stages() {
         return new StagesRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class ApprovalItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
+     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
      * @param id Unique identifier of the item
      * @return a ApprovalStageItemRequestBuilder
      */

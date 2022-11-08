@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity. */
 public class PrintTaskTriggerItemRequestBuilder {
-    /** The definition property */
+    /** Provides operations to manage the definition property of the microsoft.graph.printTaskTrigger entity. */
     @javax.annotation.Nonnull
     public DefinitionRequestBuilder definition() {
         return new DefinitionRequestBuilder(pathParameters, requestAdapter);

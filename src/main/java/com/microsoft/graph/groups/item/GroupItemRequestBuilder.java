@@ -1,6 +1,7 @@
 package com.microsoft.graph.groups.item;
 
 import com.microsoft.graph.groups.item.acceptedsenders.AcceptedSendersRequestBuilder;
+import com.microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.addfavorite.AddFavoriteRequestBuilder;
 import com.microsoft.graph.groups.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.groups.item.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
@@ -26,7 +27,6 @@ import com.microsoft.graph.groups.item.grouplifecyclepolicies.GroupLifecyclePoli
 import com.microsoft.graph.groups.item.grouplifecyclepolicies.item.GroupLifecyclePolicyItemRequestBuilder;
 import com.microsoft.graph.groups.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.groups.item.members.MembersRequestBuilder;
-import com.microsoft.graph.groups.item.memberswithlicenseerrors.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.groups.item.memberswithlicenseerrors.MembersWithLicenseErrorsRequestBuilder;
 import com.microsoft.graph.groups.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.groups.item.owners.OwnersRequestBuilder;
@@ -70,213 +70,213 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of group entities. */
 public class GroupItemRequestBuilder {
-    /** The acceptedSenders property */
+    /** Provides operations to manage the acceptedSenders property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public AcceptedSendersRequestBuilder acceptedSenders() {
         return new AcceptedSendersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The addFavorite property */
+    /** Provides operations to call the addFavorite method. */
     @javax.annotation.Nonnull
     public AddFavoriteRequestBuilder addFavorite() {
         return new AddFavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The appRoleAssignments property */
+    /** Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignLicense property */
+    /** Provides operations to call the assignLicense method. */
     @javax.annotation.Nonnull
     public AssignLicenseRequestBuilder assignLicense() {
         return new AssignLicenseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The calendar property */
+    /** Provides operations to manage the calendar property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The calendarView property */
+    /** Provides operations to manage the calendarView property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkGrantedPermissionsForApp property */
+    /** Provides operations to call the checkGrantedPermissionsForApp method. */
     @javax.annotation.Nonnull
     public CheckGrantedPermissionsForAppRequestBuilder checkGrantedPermissionsForApp() {
         return new CheckGrantedPermissionsForAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The conversations property */
+    /** Provides operations to manage the conversations property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public ConversationsRequestBuilder conversations() {
         return new ConversationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createdOnBehalfOf property */
+    /** Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public CreatedOnBehalfOfRequestBuilder createdOnBehalfOf() {
         return new CreatedOnBehalfOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The drive property */
+    /** Provides operations to manage the drive property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The drives property */
+    /** Provides operations to manage the drives property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The events property */
+    /** Provides operations to manage the events property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The groupLifecyclePolicies property */
+    /** Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
         return new GroupLifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The memberOf property */
+    /** Provides operations to manage the memberOf property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The membersWithLicenseErrors property */
+    /** Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public MembersWithLicenseErrorsRequestBuilder membersWithLicenseErrors() {
         return new MembersWithLicenseErrorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The onenote property */
+    /** Provides operations to manage the onenote property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The owners property */
+    /** Provides operations to manage the owners property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public OwnersRequestBuilder owners() {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The permissionGrants property */
+    /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The photo property */
+    /** Provides operations to manage the photo property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The photos property */
+    /** Provides operations to manage the photos property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public PhotosRequestBuilder photos() {
         return new PhotosRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The planner property */
+    /** Provides operations to manage the planner property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The rejectedSenders property */
+    /** Provides operations to manage the rejectedSenders property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public RejectedSendersRequestBuilder rejectedSenders() {
         return new RejectedSendersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeFavorite property */
+    /** Provides operations to call the removeFavorite method. */
     @javax.annotation.Nonnull
     public RemoveFavoriteRequestBuilder removeFavorite() {
         return new RemoveFavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The renew property */
+    /** Provides operations to call the renew method. */
     @javax.annotation.Nonnull
     public RenewRequestBuilder renew() {
         return new RenewRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resetUnseenCount property */
+    /** Provides operations to call the resetUnseenCount method. */
     @javax.annotation.Nonnull
     public ResetUnseenCountRequestBuilder resetUnseenCount() {
         return new ResetUnseenCountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The settings property */
+    /** Provides operations to manage the settings property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sites property */
+    /** Provides operations to manage the sites property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The subscribeByMail property */
+    /** Provides operations to call the subscribeByMail method. */
     @javax.annotation.Nonnull
     public SubscribeByMailRequestBuilder subscribeByMail() {
         return new SubscribeByMailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The team property */
+    /** Provides operations to manage the team property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The threads property */
+    /** Provides operations to manage the threads property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public ThreadsRequestBuilder threads() {
         return new ThreadsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMemberOf property */
+    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMembers property */
+    /** Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity. */
     @javax.annotation.Nonnull
     public TransitiveMembersRequestBuilder transitiveMembers() {
         return new TransitiveMembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unsubscribeByMail property */
+    /** Provides operations to call the unsubscribeByMail method. */
     @javax.annotation.Nonnull
     public UnsubscribeByMailRequestBuilder unsubscribeByMail() {
         return new UnsubscribeByMailRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The validateProperties property */
+    /** Provides operations to call the validateProperties method. */
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -294,7 +294,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.acceptedsenders.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.appRoleAssignments.item collection
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a AppRoleAssignmentItemRequestBuilder
      */
@@ -306,7 +306,7 @@ public class GroupItemRequestBuilder {
         return new AppRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.calendarView.item collection
+     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
@@ -347,7 +347,7 @@ public class GroupItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.conversations.item collection
+     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a ConversationItemRequestBuilder
      */
@@ -489,7 +489,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item collection
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
      */
@@ -501,7 +501,7 @@ public class GroupItemRequestBuilder {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.events.item collection
+     * Provides operations to manage the events property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a EventItemRequestBuilder
      */
@@ -513,7 +513,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.events.item.EventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -564,7 +564,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.groupLifecyclePolicies.item collection
+     * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a GroupLifecyclePolicyItemRequestBuilder
      */
@@ -576,7 +576,7 @@ public class GroupItemRequestBuilder {
         return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -600,7 +600,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.members.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.membersWithLicenseErrors.item collection
+     * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -666,7 +666,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.permissionGrants.item collection
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
@@ -678,7 +678,7 @@ public class GroupItemRequestBuilder {
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.photos.item collection
+     * Provides operations to manage the photos property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a ProfilePhotoItemRequestBuilder
      */
@@ -702,7 +702,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.rejectedsenders.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.settings.item collection
+     * Provides operations to manage the settings property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a GroupSettingItemRequestBuilder
      */
@@ -714,7 +714,7 @@ public class GroupItemRequestBuilder {
         return new GroupSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item collection
+     * Provides operations to manage the sites property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a SiteItemRequestBuilder
      */
@@ -726,7 +726,7 @@ public class GroupItemRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.threads.item collection
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a ConversationThreadItemRequestBuilder
      */
@@ -738,7 +738,7 @@ public class GroupItemRequestBuilder {
         return new ConversationThreadItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -750,7 +750,7 @@ public class GroupItemRequestBuilder {
         return new com.microsoft.graph.groups.item.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.transitiveMembers.item collection
+     * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

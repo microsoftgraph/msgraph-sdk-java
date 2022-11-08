@@ -22,7 +22,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sync property */
+    /** Provides operations to call the sync method. */
     @javax.annotation.Nonnull
     public SyncRequestBuilder sync() {
         return new SyncRequestBuilder(pathParameters, requestAdapter);

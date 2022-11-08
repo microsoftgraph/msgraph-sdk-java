@@ -29,51 +29,51 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
 public class ContentTypeItemRequestBuilder {
-    /** The associateWithHubSites property */
+    /** Provides operations to call the associateWithHubSites method. */
     @javax.annotation.Nonnull
     public AssociateWithHubSitesRequestBuilder associateWithHubSites() {
         return new AssociateWithHubSitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The base property */
+    /** Provides operations to manage the base property of the microsoft.graph.contentType entity. */
     @javax.annotation.Nonnull
     public BaseRequestBuilder base() {
         return new BaseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The baseTypes property */
+    /** Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity. */
     @javax.annotation.Nonnull
     public BaseTypesRequestBuilder baseTypes() {
         return new BaseTypesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The columnLinks property */
+    /** Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity. */
     @javax.annotation.Nonnull
     public ColumnLinksRequestBuilder columnLinks() {
         return new ColumnLinksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The columnPositions property */
+    /** Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity. */
     @javax.annotation.Nonnull
     public ColumnPositionsRequestBuilder columnPositions() {
         return new ColumnPositionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The columns property */
+    /** Provides operations to manage the columns property of the microsoft.graph.contentType entity. */
     @javax.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The copyToDefaultContentLocation property */
+    /** Provides operations to call the copyToDefaultContentLocation method. */
     @javax.annotation.Nonnull
     public CopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation() {
         return new CopyToDefaultContentLocationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The publish property */
+    /** Provides operations to call the publish method. */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The unpublish property */
+    /** Provides operations to call the unpublish method. */
     @javax.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
@@ -81,7 +81,7 @@ public class ContentTypeItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.contentTypes.item.baseTypes.item collection
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
      * @param id Unique identifier of the item
      * @return a ContentTypeItemRequestBuilder
      */
@@ -93,7 +93,7 @@ public class ContentTypeItemRequestBuilder {
         return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.contentTypes.item.columnLinks.item collection
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
      * @param id Unique identifier of the item
      * @return a ColumnLinkItemRequestBuilder
      */
@@ -105,7 +105,7 @@ public class ContentTypeItemRequestBuilder {
         return new ColumnLinkItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.contentTypes.item.columnPositions.item collection
+     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */
@@ -117,7 +117,7 @@ public class ContentTypeItemRequestBuilder {
         return new com.microsoft.graph.groups.item.drives.item.list.contenttypes.item.columnpositions.item.ColumnDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.contentTypes.item.columns.item collection
+     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
      * @param id Unique identifier of the item
      * @return a ColumnDefinitionItemRequestBuilder
      */

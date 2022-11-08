@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the activities property of the microsoft.graph.user entity. */
 public class UserActivityItemRequestBuilder {
-    /** The historyItems property */
+    /** Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity. */
     @javax.annotation.Nonnull
     public HistoryItemsRequestBuilder historyItems() {
         return new HistoryItemsRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class UserActivityItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.activities.item.historyItems.item collection
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
      * @param id Unique identifier of the item
      * @return a ActivityHistoryItemItemRequestBuilder
      */

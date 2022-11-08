@@ -25,22 +25,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedEBookItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStates property */
+    /** Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity. */
     @javax.annotation.Nonnull
     public DeviceStatesRequestBuilder deviceStates() {
         return new DeviceStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The installSummary property */
+    /** Provides operations to manage the installSummary property of the microsoft.graph.managedEBook entity. */
     @javax.annotation.Nonnull
     public InstallSummaryRequestBuilder installSummary() {
         return new InstallSummaryRequestBuilder(pathParameters, requestAdapter);
@@ -51,13 +51,13 @@ public class ManagedEBookItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userStateSummary property */
+    /** Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity. */
     @javax.annotation.Nonnull
     public UserStateSummaryRequestBuilder userStateSummary() {
         return new UserStateSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
      * @param id Unique identifier of the item
      * @return a ManagedEBookAssignmentItemRequestBuilder
      */
@@ -228,7 +228,7 @@ public class ManagedEBookItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.deviceStates.item collection
+     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
      * @param id Unique identifier of the item
      * @return a DeviceInstallStateItemRequestBuilder
      */
@@ -321,7 +321,7 @@ public class ManagedEBookItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
      * @param id Unique identifier of the item
      * @return a UserInstallStateSummaryItemRequestBuilder
      */

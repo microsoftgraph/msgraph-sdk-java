@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the participants property of the microsoft.graph.call entity. */
 public class ParticipantItemRequestBuilder {
-    /** The mute property */
+    /** Provides operations to call the mute method. */
     @javax.annotation.Nonnull
     public MuteRequestBuilder mute() {
         return new MuteRequestBuilder(pathParameters, requestAdapter);
@@ -29,12 +29,12 @@ public class ParticipantItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The startHoldMusic property */
+    /** Provides operations to call the startHoldMusic method. */
     @javax.annotation.Nonnull
     public StartHoldMusicRequestBuilder startHoldMusic() {
         return new StartHoldMusicRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The stopHoldMusic property */
+    /** Provides operations to call the stopHoldMusic method. */
     @javax.annotation.Nonnull
     public StopHoldMusicRequestBuilder stopHoldMusic() {
         return new StopHoldMusicRequestBuilder(pathParameters, requestAdapter);

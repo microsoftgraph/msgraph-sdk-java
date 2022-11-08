@@ -3,9 +3,9 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.searches.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoverySearch;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.AdditionalSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.additionalsources.item.DataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.item.DataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.estimatestatistics.EstimateStatisticsRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
@@ -25,32 +25,32 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoverySearchItemRequestBuilder {
-    /** The additionalSources property */
+    /** Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public AdditionalSourcesRequestBuilder additionalSources() {
         return new AdditionalSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The addToReviewSetOperation property */
+    /** Provides operations to manage the addToReviewSetOperation property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public AddToReviewSetOperationRequestBuilder addToReviewSetOperation() {
         return new AddToReviewSetOperationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The custodianSources property */
+    /** Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public CustodianSourcesRequestBuilder custodianSources() {
         return new CustodianSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The estimateStatistics property */
+    /** Provides operations to call the estimateStatistics method. */
     @javax.annotation.Nonnull
     public EstimateStatisticsRequestBuilder estimateStatistics() {
         return new EstimateStatisticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The lastEstimateStatisticsOperation property */
+    /** Provides operations to manage the lastEstimateStatisticsOperation property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public LastEstimateStatisticsOperationRequestBuilder lastEstimateStatisticsOperation() {
         return new LastEstimateStatisticsOperationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The noncustodialSources property */
+    /** Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public NoncustodialSourcesRequestBuilder noncustodialSources() {
         return new NoncustodialSourcesRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +62,7 @@ public class EdiscoverySearchItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.additionalSources.item collection
+     * Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
@@ -194,7 +194,7 @@ public class EdiscoverySearchItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.custodianSources.item collection
+     * Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param id Unique identifier of the item
      * @return a DataSourceItemRequestBuilder
      */
@@ -284,7 +284,7 @@ public class EdiscoverySearchItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item.noncustodialSources.item collection
+     * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
      */

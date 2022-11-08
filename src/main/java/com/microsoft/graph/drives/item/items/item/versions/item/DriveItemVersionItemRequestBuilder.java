@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the versions property of the microsoft.graph.driveItem entity. */
 public class DriveItemVersionItemRequestBuilder {
-    /** The content property */
+    /** Provides operations to manage the media for the drive entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
@@ -28,7 +28,7 @@ public class DriveItemVersionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restoreVersion property */
+    /** Provides operations to call the restoreVersion method. */
     @javax.annotation.Nonnull
     public RestoreVersionRequestBuilder restoreVersion() {
         return new RestoreVersionRequestBuilder(pathParameters, requestAdapter);

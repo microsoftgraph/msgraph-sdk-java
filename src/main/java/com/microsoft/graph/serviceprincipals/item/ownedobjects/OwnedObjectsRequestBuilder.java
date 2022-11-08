@@ -23,27 +23,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity. */
 public class OwnedObjectsRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The appRoleAssignment property */
+    /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull
     public AppRoleAssignmentRequestBuilder appRoleAssignment() {
         return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The endpoint property */
+    /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
     public EndpointRequestBuilder endpoint() {
         return new EndpointRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +52,7 @@ public class OwnedObjectsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);

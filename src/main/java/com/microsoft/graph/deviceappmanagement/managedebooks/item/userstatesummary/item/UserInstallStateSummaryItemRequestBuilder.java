@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity. */
 public class UserInstallStateSummaryItemRequestBuilder {
-    /** The deviceStates property */
+    /** Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity. */
     @javax.annotation.Nonnull
     public DeviceStatesRequestBuilder deviceStates() {
         return new DeviceStatesRequestBuilder(pathParameters, requestAdapter);
@@ -190,7 +190,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
+     * Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity.
      * @param id Unique identifier of the item
      * @return a DeviceInstallStateItemRequestBuilder
      */

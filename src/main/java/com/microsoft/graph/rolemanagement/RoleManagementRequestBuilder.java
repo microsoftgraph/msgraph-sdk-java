@@ -19,12 +19,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleManagement singleton. */
 public class RoleManagementRequestBuilder {
-    /** The directory property */
+    /** Provides operations to manage the directory property of the microsoft.graph.roleManagement entity. */
     @javax.annotation.Nonnull
     public DirectoryRequestBuilder directory() {
         return new DirectoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The entitlementManagement property */
+    /** Provides operations to manage the entitlementManagement property of the microsoft.graph.roleManagement entity. */
     @javax.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);

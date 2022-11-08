@@ -37,42 +37,42 @@ public class DirectoryRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleAssignments property */
+    /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentScheduleInstances property */
+    /** Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
         return new RoleAssignmentScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentScheduleRequests property */
+    /** Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
         return new RoleAssignmentScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleAssignmentSchedules property */
+    /** Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
         return new RoleAssignmentSchedulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleDefinitions property */
+    /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
         return new RoleDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilityScheduleInstances property */
+    /** Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
         return new RoleEligibilityScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilityScheduleRequests property */
+    /** Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
         return new RoleEligibilityScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleEligibilitySchedules property */
+    /** Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity. */
     @javax.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
         return new RoleEligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
@@ -320,7 +320,7 @@ public class DirectoryRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignments.item collection
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleInstances.item collection
+     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
      */
@@ -344,7 +344,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentScheduleRequests.item collection
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
      */
@@ -356,7 +356,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleAssignmentSchedules.item collection
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleAssignmentScheduleItemRequestBuilder
      */
@@ -368,7 +368,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleAssignmentScheduleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleDefinitions.item collection
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
@@ -380,7 +380,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleDefinitionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleInstances.item collection
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
      */
@@ -392,7 +392,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilityScheduleRequests.item collection
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
      */
@@ -404,7 +404,7 @@ public class DirectoryRequestBuilder {
         return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.directory.roleEligibilitySchedules.item collection
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleEligibilityScheduleItemRequestBuilder
      */

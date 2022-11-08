@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of resourceSpecificPermissionGrant entities. */
 public class PermissionGrantsRequestBuilder {
-    /** The getAvailableExtensionProperties property */
+    /** Provides operations to call the getAvailableExtensionProperties method. */
     @javax.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
         return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getByIds property */
+    /** Provides operations to call the getByIds method. */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
         return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +37,7 @@ public class PermissionGrantsRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The validateProperties property */
+    /** Provides operations to call the validateProperties method. */
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);

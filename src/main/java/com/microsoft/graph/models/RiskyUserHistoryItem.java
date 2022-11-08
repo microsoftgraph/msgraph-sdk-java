@@ -11,9 +11,9 @@ import java.util.Objects;
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /** The activity related to user risk level change. */
     private RiskUserActivity _activity;
-    /** The id of actor that does the operation. */
+    /** The ID of actor that does the operation. */
     private String _initiatedBy;
-    /** The id of the user. */
+    /** The ID of the user. */
     private String _userId;
     /**
      * Instantiates a new riskyUserHistoryItem and sets the default values.
@@ -56,7 +56,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
         }};
     }
     /**
-     * Gets the initiatedBy property value. The id of actor that does the operation.
+     * Gets the initiatedBy property value. The ID of actor that does the operation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
         return this._initiatedBy;
     }
     /**
-     * Gets the userId property value. The id of the user.
+     * Gets the userId property value. The ID of the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
         this._activity = value;
     }
     /**
-     * Sets the initiatedBy property value. The id of actor that does the operation.
+     * Sets the initiatedBy property value. The ID of actor that does the operation.
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
@@ -103,7 +103,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
         this._initiatedBy = value;
     }
     /**
-     * Sets the userId property value. The id of the user.
+     * Sets the userId property value. The ID of the user.
      * @param value Value to set for the userId property.
      * @return a void
      */

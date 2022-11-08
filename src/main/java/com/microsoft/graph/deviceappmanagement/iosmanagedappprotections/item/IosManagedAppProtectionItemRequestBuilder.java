@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
 public class IosManagedAppProtectionItemRequestBuilder {
-    /** The apps property */
+    /** Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity. */
     @javax.annotation.Nonnull
     public AppsRequestBuilder apps() {
         return new AppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deploymentSummary property */
+    /** Provides operations to manage the deploymentSummary property of the microsoft.graph.iosManagedAppProtection entity. */
     @javax.annotation.Nonnull
     public DeploymentSummaryRequestBuilder deploymentSummary() {
         return new DeploymentSummaryRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +37,7 @@ public class IosManagedAppProtectionItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item.apps.item collection
+     * Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity.
      * @param id Unique identifier of the item
      * @return a ManagedMobileAppItemRequestBuilder
      */

@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity. */
 public class UserAttributeAssignmentsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -30,7 +30,7 @@ public class UserAttributeAssignmentsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The setOrder property */
+    /** Provides operations to call the setOrder method. */
     @javax.annotation.Nonnull
     public SetOrderRequestBuilder setOrder() {
         return new SetOrderRequestBuilder(pathParameters, requestAdapter);

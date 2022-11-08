@@ -3,11 +3,11 @@ package com.microsoft.graph.groups.item.team;
 import com.microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
 import com.microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
-import com.microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
 import com.microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.groups.item.team.group.GroupRequestBuilder;
 import com.microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsRequestBuilder;
+import com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.groups.item.team.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import com.microsoft.graph.groups.item.team.members.item.ConversationMemberItemRequestBuilder;
@@ -39,91 +39,91 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the team property of the microsoft.graph.group entity. */
 public class TeamRequestBuilder {
-    /** The allChannels property */
+    /** Provides operations to manage the allChannels property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public AllChannelsRequestBuilder allChannels() {
         return new AllChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The archive property */
+    /** Provides operations to call the archive method. */
     @javax.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The channels property */
+    /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
         return new ChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The clone property */
+    /** Provides operations to call the clone method. */
     @javax.annotation.Nonnull
     public CloneRequestBuilder clone() {
         return new CloneRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The completeMigration property */
+    /** Provides operations to call the completeMigration method. */
     @javax.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Provides operations to manage the group property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The incomingChannels property */
+    /** Provides operations to manage the incomingChannels property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public IncomingChannelsRequestBuilder incomingChannels() {
         return new IncomingChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The installedApps property */
+    /** Provides operations to manage the installedApps property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The photo property */
+    /** Provides operations to manage the photo property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The primaryChannel property */
+    /** Provides operations to manage the primaryChannel property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public PrimaryChannelRequestBuilder primaryChannel() {
         return new PrimaryChannelRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The schedule property */
+    /** Provides operations to manage the schedule property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public ScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sendActivityNotification property */
+    /** Provides operations to call the sendActivityNotification method. */
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tags property */
+    /** Provides operations to manage the tags property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The template property */
+    /** Provides operations to manage the template property of the microsoft.graph.team entity. */
     @javax.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unarchive property */
+    /** Provides operations to call the unarchive method. */
     @javax.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
@@ -131,7 +131,7 @@ public class TeamRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.allChannels.item collection
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
@@ -143,7 +143,7 @@ public class TeamRequestBuilder {
         return new com.microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.channels.item collection
+     * Provides operations to manage the channels property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
@@ -353,7 +353,7 @@ public class TeamRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.incomingChannels.item collection
+     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a ChannelItemRequestBuilder
      */
@@ -365,7 +365,7 @@ public class TeamRequestBuilder {
         return new com.microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.installedApps.item collection
+     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -377,7 +377,7 @@ public class TeamRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -389,7 +389,7 @@ public class TeamRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a TeamsAsyncOperationItemRequestBuilder
      */
@@ -443,7 +443,7 @@ public class TeamRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.team.tags.item collection
+     * Provides operations to manage the tags property of the microsoft.graph.team entity.
      * @param id Unique identifier of the item
      * @return a TeamworkTagItemRequestBuilder
      */

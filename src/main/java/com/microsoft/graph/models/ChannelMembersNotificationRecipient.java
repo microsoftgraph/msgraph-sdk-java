@@ -1,0 +1,92 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
+    /** The channelId property */
+    private String _channelId;
+    /** The teamId property */
+    private String _teamId;
+    /**
+     * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public ChannelMembersNotificationRecipient() {
+        super();
+        this.setOdataType("#microsoft.graph.channelMembersNotificationRecipient");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a ChannelMembersNotificationRecipient
+     */
+    @javax.annotation.Nonnull
+    public static ChannelMembersNotificationRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new ChannelMembersNotificationRecipient();
+    }
+    /**
+     * Gets the channelId property value. The channelId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getChannelId() {
+        return this._channelId;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final ChannelMembersNotificationRecipient currentObject = this;
+        return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
+            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the teamId property value. The teamId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTeamId() {
+        return this._teamId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("channelId", this.getChannelId());
+        writer.writeStringValue("teamId", this.getTeamId());
+    }
+    /**
+     * Sets the channelId property value. The channelId property
+     * @param value Value to set for the channelId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setChannelId(@javax.annotation.Nullable final String value) {
+        this._channelId = value;
+    }
+    /**
+     * Sets the teamId property value. The teamId property
+     * @param value Value to set for the teamId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTeamId(@javax.annotation.Nullable final String value) {
+        this._teamId = value;
+    }
+}

@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
 public class OrganizationalBrandingLocalizationItemRequestBuilder {
-    /** The backgroundImage property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public BackgroundImageRequestBuilder backgroundImage() {
         return new BackgroundImageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The bannerLogo property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public BannerLogoRequestBuilder bannerLogo() {
         return new BannerLogoRequestBuilder(pathParameters, requestAdapter);
@@ -34,7 +34,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The squareLogo property */
+    /** Provides operations to manage the media for the organizationalBranding entity. */
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);

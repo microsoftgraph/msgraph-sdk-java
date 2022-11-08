@@ -10,6 +10,8 @@ import java.util.Objects;
 public class DeviceManagement extends Entity implements Parsable {
     /** Apple push notification certificate. */
     private ApplePushNotificationCertificate _applePushNotificationCertificate;
+    /** The Audit Events */
+    private java.util.List<AuditEvent> _auditEvents;
     /** The list of Compliance Management Partners configured by the tenant. */
     private java.util.List<ComplianceManagementPartner> _complianceManagementPartners;
     /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
@@ -104,6 +106,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public ApplePushNotificationCertificate getApplePushNotificationCertificate() {
         return this._applePushNotificationCertificate;
+    }
+    /**
+     * Gets the auditEvents property value. The Audit Events
+     * @return a auditEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuditEvent> getAuditEvents() {
+        return this._auditEvents;
     }
     /**
      * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
@@ -210,6 +220,7 @@ public class DeviceManagement extends Entity implements Parsable {
         final DeviceManagement currentObject = this;
         return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
             this.put("applePushNotificationCertificate", (n) -> { currentObject.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
+            this.put("auditEvents", (n) -> { currentObject.setAuditEvents(n.getCollectionOfObjectValues(AuditEvent::createFromDiscriminatorValue)); });
             this.put("complianceManagementPartners", (n) -> { currentObject.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
             this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
             this.put("detectedApps", (n) -> { currentObject.setDetectedApps(n.getCollectionOfObjectValues(DetectedApp::createFromDiscriminatorValue)); });
@@ -432,6 +443,7 @@ public class DeviceManagement extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("applePushNotificationCertificate", this.getApplePushNotificationCertificate());
+        writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
         writer.writeCollectionOfObjectValues("complianceManagementPartners", this.getComplianceManagementPartners());
         writer.writeObjectValue("conditionalAccessSettings", this.getConditionalAccessSettings());
         writer.writeCollectionOfObjectValues("detectedApps", this.getDetectedApps());
@@ -475,6 +487,15 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
         this._applePushNotificationCertificate = value;
+    }
+    /**
+     * Sets the auditEvents property value. The Audit Events
+     * @param value Value to set for the auditEvents property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuditEvents(@javax.annotation.Nullable final java.util.List<AuditEvent> value) {
+        this._auditEvents = value;
     }
     /**
      * Sets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.

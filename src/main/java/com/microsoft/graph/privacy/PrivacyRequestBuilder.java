@@ -23,7 +23,7 @@ public class PrivacyRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The subjectRightsRequests property */
+    /** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity. */
     @javax.annotation.Nonnull
     public SubjectRightsRequestsRequestBuilder subjectRightsRequests() {
         return new SubjectRightsRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -204,7 +204,7 @@ public class PrivacyRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.privacy.subjectRightsRequests.item collection
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
      * @param id Unique identifier of the item
      * @return a SubjectRightsRequestItemRequestBuilder
      */

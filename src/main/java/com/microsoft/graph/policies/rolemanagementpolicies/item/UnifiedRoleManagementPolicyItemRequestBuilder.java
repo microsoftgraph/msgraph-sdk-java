@@ -3,7 +3,7 @@ package com.microsoft.graph.policies.rolemanagementpolicies.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.EffectiveRulesRequestBuilder;
-import com.microsoft.graph.policies.rolemanagementpolicies.item.effectiverules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
+import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.item.UnifiedRoleManagementPolicyRuleItemRequestBuilder;
 import com.microsoft.graph.policies.rolemanagementpolicies.item.rules.RulesRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity. */
 public class UnifiedRoleManagementPolicyItemRequestBuilder {
-    /** The effectiveRules property */
+    /** Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
     @javax.annotation.Nonnull
     public EffectiveRulesRequestBuilder effectiveRules() {
         return new EffectiveRulesRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The rules property */
+    /** Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
     @javax.annotation.Nonnull
     public RulesRequestBuilder rules() {
         return new RulesRequestBuilder(pathParameters, requestAdapter);
@@ -196,7 +196,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item.effectiveRules.item collection
+     * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */
@@ -289,7 +289,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item.rules.item collection
+     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyRuleItemRequestBuilder
      */

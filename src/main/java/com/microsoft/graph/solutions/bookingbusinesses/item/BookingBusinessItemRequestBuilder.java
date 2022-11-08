@@ -31,51 +31,51 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
 public class BookingBusinessItemRequestBuilder {
-    /** The appointments property */
+    /** Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public AppointmentsRequestBuilder appointments() {
         return new AppointmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The calendarView property */
+    /** Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customers property */
+    /** Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public CustomersRequestBuilder customers() {
         return new CustomersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The customQuestions property */
+    /** Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public CustomQuestionsRequestBuilder customQuestions() {
         return new CustomQuestionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getStaffAvailability property */
+    /** Provides operations to call the getStaffAvailability method. */
     @javax.annotation.Nonnull
     public GetStaffAvailabilityRequestBuilder getStaffAvailability() {
         return new GetStaffAvailabilityRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The publish property */
+    /** Provides operations to call the publish method. */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The services property */
+    /** Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public ServicesRequestBuilder services() {
         return new ServicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The staffMembers property */
+    /** Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity. */
     @javax.annotation.Nonnull
     public StaffMembersRequestBuilder staffMembers() {
         return new StaffMembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unpublish property */
+    /** Provides operations to call the unpublish method. */
     @javax.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
@@ -83,7 +83,7 @@ public class BookingBusinessItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.appointments.item collection
+     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingAppointmentItemRequestBuilder
      */
@@ -95,7 +95,7 @@ public class BookingBusinessItemRequestBuilder {
         return new com.microsoft.graph.solutions.bookingbusinesses.item.appointments.item.BookingAppointmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.calendarView.item collection
+     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingAppointmentItemRequestBuilder
      */
@@ -227,7 +227,7 @@ public class BookingBusinessItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.customers.item collection
+     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingCustomerBaseItemRequestBuilder
      */
@@ -239,7 +239,7 @@ public class BookingBusinessItemRequestBuilder {
         return new BookingCustomerBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.customQuestions.item collection
+     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingCustomQuestionItemRequestBuilder
      */
@@ -371,7 +371,7 @@ public class BookingBusinessItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.services.item collection
+     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingServiceItemRequestBuilder
      */
@@ -383,7 +383,7 @@ public class BookingBusinessItemRequestBuilder {
         return new BookingServiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item.staffMembers.item collection
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
      * @param id Unique identifier of the item
      * @return a BookingStaffMemberBaseItemRequestBuilder
      */

@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class WindowsAutopilotDeviceIdentityItemRequestBuilder {
-    /** The assignUserToDevice property */
+    /** Provides operations to call the assignUserToDevice method. */
     @javax.annotation.Nonnull
     public AssignUserToDeviceRequestBuilder assignUserToDevice() {
         return new AssignUserToDeviceRequestBuilder(pathParameters, requestAdapter);
@@ -29,12 +29,12 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The unassignUserFromDevice property */
+    /** Provides operations to call the unassignUserFromDevice method. */
     @javax.annotation.Nonnull
     public UnassignUserFromDeviceRequestBuilder unassignUserFromDevice() {
         return new UnassignUserFromDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The updateDeviceProperties property */
+    /** Provides operations to call the updateDeviceProperties method. */
     @javax.annotation.Nonnull
     public UpdateDevicePropertiesRequestBuilder updateDeviceProperties() {
         return new UpdateDevicePropertiesRequestBuilder(pathParameters, requestAdapter);

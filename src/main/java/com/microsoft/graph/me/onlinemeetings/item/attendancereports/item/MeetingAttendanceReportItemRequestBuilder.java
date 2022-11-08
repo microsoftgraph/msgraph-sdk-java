@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity. */
 public class MeetingAttendanceReportItemRequestBuilder {
-    /** The attendanceRecords property */
+    /** Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity. */
     @javax.annotation.Nonnull
     public AttendanceRecordsRequestBuilder attendanceRecords() {
         return new AttendanceRecordsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class MeetingAttendanceReportItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.me.onlineMeetings.item.attendanceReports.item.attendanceRecords.item collection
+     * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
      * @param id Unique identifier of the item
      * @return a AttendanceRecordItemRequestBuilder
      */

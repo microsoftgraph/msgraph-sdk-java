@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity. */
 public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The import property */
+    /** Provides operations to call the import method. */
     @javax.annotation.Nonnull
     public ImportRequestBuilder import_escaped() {
         return new ImportRequestBuilder(pathParameters, requestAdapter);

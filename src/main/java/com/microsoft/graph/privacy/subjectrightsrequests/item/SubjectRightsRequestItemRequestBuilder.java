@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity. */
 public class SubjectRightsRequestItemRequestBuilder {
-    /** The notes property */
+    /** Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity. */
     @javax.annotation.Nonnull
     public NotesRequestBuilder notes() {
         return new NotesRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class SubjectRightsRequestItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The team property */
+    /** Provides operations to manage the team property of the microsoft.graph.subjectRightsRequest entity. */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
@@ -253,7 +253,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         return new GetFinalReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.privacy.subjectRightsRequests.item.notes.item collection
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
      * @param id Unique identifier of the item
      * @return a AuthoredNoteItemRequestBuilder
      */

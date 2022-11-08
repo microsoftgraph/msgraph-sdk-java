@@ -28,37 +28,37 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of organization entities. */
 public class OrganizationItemRequestBuilder {
-    /** The branding property */
+    /** Provides operations to manage the branding property of the microsoft.graph.organization entity. */
     @javax.annotation.Nonnull
     public BrandingRequestBuilder branding() {
         return new BrandingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The certificateBasedAuthConfiguration property */
+    /** Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity. */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.organization entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
@@ -67,12 +67,12 @@ public class OrganizationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setMobileDeviceManagementAuthority property */
+    /** Provides operations to call the setMobileDeviceManagementAuthority method. */
     @javax.annotation.Nonnull
     public SetMobileDeviceManagementAuthorityRequestBuilder setMobileDeviceManagementAuthority() {
         return new SetMobileDeviceManagementAuthorityRequestBuilder(pathParameters, requestAdapter);
@@ -80,7 +80,7 @@ public class OrganizationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.organization.item.certificateBasedAuthConfiguration.item collection
+     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
      * @param id Unique identifier of the item
      * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
@@ -251,7 +251,7 @@ public class OrganizationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.organization.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */

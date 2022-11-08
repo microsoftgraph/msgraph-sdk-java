@@ -23,12 +23,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
 public class AdministrativeUnitItemRequestBuilder {
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.administrativeUnit entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +37,7 @@ public class AdministrativeUnitItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The scopedRoleMembers property */
+    /** Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity. */
     @javax.annotation.Nonnull
     public ScopedRoleMembersRequestBuilder scopedRoleMembers() {
         return new ScopedRoleMembersRequestBuilder(pathParameters, requestAdapter);
@@ -204,7 +204,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -309,7 +309,7 @@ public class AdministrativeUnitItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item.scopedRoleMembers.item collection
+     * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */

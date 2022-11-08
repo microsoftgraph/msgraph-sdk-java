@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity. */
 public class UserScopeTeamsAppInstallationItemRequestBuilder {
-    /** The chat property */
+    /** Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity. */
     @javax.annotation.Nonnull
     public ChatRequestBuilder chat() {
         return new ChatRequestBuilder(pathParameters, requestAdapter);

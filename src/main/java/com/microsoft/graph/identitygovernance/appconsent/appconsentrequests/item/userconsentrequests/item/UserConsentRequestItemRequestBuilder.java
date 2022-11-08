@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity. */
 public class UserConsentRequestItemRequestBuilder {
-    /** The approval property */
+    /** Provides operations to manage the approval property of the microsoft.graph.userConsentRequest entity. */
     @javax.annotation.Nonnull
     public ApprovalRequestBuilder approval() {
         return new ApprovalRequestBuilder(pathParameters, requestAdapter);

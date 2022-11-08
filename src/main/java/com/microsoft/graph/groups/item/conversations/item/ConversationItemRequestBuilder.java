@@ -23,7 +23,7 @@ public class ConversationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The threads property */
+    /** Provides operations to manage the threads property of the microsoft.graph.conversation entity. */
     @javax.annotation.Nonnull
     public ThreadsRequestBuilder threads() {
         return new ThreadsRequestBuilder(pathParameters, requestAdapter);
@@ -196,7 +196,7 @@ public class ConversationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.conversations.item.threads.item collection
+     * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
      * @param id Unique identifier of the item
      * @return a ConversationThreadItemRequestBuilder
      */

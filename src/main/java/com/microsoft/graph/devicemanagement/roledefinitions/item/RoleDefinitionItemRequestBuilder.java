@@ -23,7 +23,7 @@ public class RoleDefinitionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleAssignments property */
+    /** Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity. */
     @javax.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class RoleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.roleDefinitions.item.roleAssignments.item collection
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
      * @param id Unique identifier of the item
      * @return a RoleAssignmentItemRequestBuilder
      */

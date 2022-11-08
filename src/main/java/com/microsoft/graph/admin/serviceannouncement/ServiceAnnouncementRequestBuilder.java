@@ -23,17 +23,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity. */
 public class ServiceAnnouncementRequestBuilder {
-    /** The healthOverviews property */
+    /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
     @javax.annotation.Nonnull
     public HealthOverviewsRequestBuilder healthOverviews() {
         return new HealthOverviewsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The issues property */
+    /** Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity. */
     @javax.annotation.Nonnull
     public IssuesRequestBuilder issues() {
         return new IssuesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messages property */
+    /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
@@ -243,7 +243,7 @@ public class ServiceAnnouncementRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item collection
+     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
      * @param id Unique identifier of the item
      * @return a ServiceHealthItemRequestBuilder
      */
@@ -255,7 +255,7 @@ public class ServiceAnnouncementRequestBuilder {
         return new ServiceHealthItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.issues.item collection
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
      * @param id Unique identifier of the item
      * @return a ServiceHealthIssueItemRequestBuilder
      */
@@ -267,7 +267,7 @@ public class ServiceAnnouncementRequestBuilder {
         return new ServiceHealthIssueItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
      * @param id Unique identifier of the item
      * @return a ServiceUpdateMessageItemRequestBuilder
      */

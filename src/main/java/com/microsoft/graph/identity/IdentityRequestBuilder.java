@@ -26,22 +26,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityContainer singleton. */
 public class IdentityRequestBuilder {
-    /** The apiConnectors property */
+    /** Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity. */
     @javax.annotation.Nonnull
     public ApiConnectorsRequestBuilder apiConnectors() {
         return new ApiConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The b2xUserFlows property */
+    /** Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity. */
     @javax.annotation.Nonnull
     public B2xUserFlowsRequestBuilder b2xUserFlows() {
         return new B2xUserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The conditionalAccess property */
+    /** Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity. */
     @javax.annotation.Nonnull
     public ConditionalAccessRequestBuilder conditionalAccess() {
         return new ConditionalAccessRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identityProviders property */
+    /** Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity. */
     @javax.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
@@ -52,13 +52,13 @@ public class IdentityRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userFlowAttributes property */
+    /** Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity. */
     @javax.annotation.Nonnull
     public UserFlowAttributesRequestBuilder userFlowAttributes() {
         return new UserFlowAttributesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.apiConnectors.item collection
+     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
      * @param id Unique identifier of the item
      * @return a IdentityApiConnectorItemRequestBuilder
      */
@@ -70,7 +70,7 @@ public class IdentityRequestBuilder {
         return new IdentityApiConnectorItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item collection
+     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
      * @param id Unique identifier of the item
      * @return a B2xIdentityUserFlowItemRequestBuilder
      */
@@ -213,7 +213,7 @@ public class IdentityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.identityProviders.item collection
+     * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */
@@ -267,7 +267,7 @@ public class IdentityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.userFlowAttributes.item collection
+     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowAttributeItemRequestBuilder
      */

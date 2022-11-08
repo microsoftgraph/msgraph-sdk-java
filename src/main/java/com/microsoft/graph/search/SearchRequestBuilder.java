@@ -20,7 +20,7 @@ import java.util.Objects;
 public class SearchRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The query property */
+    /** Provides operations to call the query method. */
     @javax.annotation.Nonnull
     public QueryRequestBuilder query() {
         return new QueryRequestBuilder(pathParameters, requestAdapter);

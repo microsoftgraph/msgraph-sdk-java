@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
 public class ServiceHealthItemRequestBuilder {
-    /** The issues property */
+    /** Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity. */
     @javax.annotation.Nonnull
     public IssuesRequestBuilder issues() {
         return new IssuesRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class ServiceHealthItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
+     * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
      * @param id Unique identifier of the item
      * @return a ServiceHealthIssueItemRequestBuilder
      */

@@ -26,27 +26,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRoleItemRequestBuilder {
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.directoryRole entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -55,12 +55,12 @@ public class DirectoryRoleItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The scopedMembers property */
+    /** Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity. */
     @javax.annotation.Nonnull
     public ScopedMembersRequestBuilder scopedMembers() {
         return new ScopedMembersRequestBuilder(pathParameters, requestAdapter);
@@ -320,7 +320,7 @@ public class DirectoryRoleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directoryRoles.item.scopedMembers.item collection
+     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */

@@ -23,7 +23,7 @@ public class SessionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The segments property */
+    /** Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity. */
     @javax.annotation.Nonnull
     public SegmentsRequestBuilder segments() {
         return new SegmentsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class SessionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.callRecords.item.sessions.item.segments.item collection
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
      * @param id Unique identifier of the item
      * @return a SegmentItemRequestBuilder
      */

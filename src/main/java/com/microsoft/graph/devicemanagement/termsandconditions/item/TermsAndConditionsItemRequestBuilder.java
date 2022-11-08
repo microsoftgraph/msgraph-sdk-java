@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity. */
 public class TermsAndConditionsItemRequestBuilder {
-    /** The acceptanceStatuses property */
+    /** Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity. */
     @javax.annotation.Nonnull
     public AcceptanceStatusesRequestBuilder acceptanceStatuses() {
         return new AcceptanceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +38,7 @@ public class TermsAndConditionsItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.termsAndConditions.item.acceptanceStatuses.item collection
+     * Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity.
      * @param id Unique identifier of the item
      * @return a TermsAndConditionsAcceptanceStatusItemRequestBuilder
      */
@@ -50,7 +50,7 @@ public class TermsAndConditionsItemRequestBuilder {
         return new TermsAndConditionsAcceptanceStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.termsAndConditions.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.termsAndConditions entity.
      * @param id Unique identifier of the item
      * @return a TermsAndConditionsAssignmentItemRequestBuilder
      */

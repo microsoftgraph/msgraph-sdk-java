@@ -1,7 +1,6 @@
 package com.microsoft.graph.identity.conditionalaccess.templates;
 
 import com.microsoft.graph.identity.conditionalaccess.templates.count.CountRequestBuilder;
-import com.microsoft.graph.models.ConditionalAccessTemplate;
 import com.microsoft.graph.models.ConditionalAccessTemplateCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.HttpMethod;
@@ -19,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity. */
 public class TemplatesRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -90,39 +89,6 @@ public class TemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to templates for identity
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ConditionalAccessTemplate body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to templates for identity
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ConditionalAccessTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<TemplatesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final TemplatesRequestBuilderPostRequestConfiguration requestConfig = new TemplatesRequestBuilderPostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * Get a list of the conditionalAccessTemplate objects and their properties.
      * @return a CompletableFuture of ConditionalAccessTemplateCollectionResponse
      */
@@ -157,48 +123,6 @@ public class TemplatesRequestBuilder {
             return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplateCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
             return new java.util.concurrent.CompletableFuture<ConditionalAccessTemplateCollectionResponse>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
-    }
-    /**
-     * Create new navigation property to templates for identity
-     * @param body 
-     * @return a CompletableFuture of conditionalAccessTemplate
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> post(@javax.annotation.Nonnull final ConditionalAccessTemplate body) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ConditionalAccessTemplate>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
-    }
-    /**
-     * Create new navigation property to templates for identity
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessTemplate
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> post(@javax.annotation.Nonnull final ConditionalAccessTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<TemplatesRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ConditionalAccessTemplate>() {{
                 this.completeExceptionally(ex);
             }};
         }
@@ -255,22 +179,6 @@ public class TemplatesRequestBuilder {
          */
         @javax.annotation.Nullable
         public TemplatesRequestBuilderGetRequestConfiguration() {
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class TemplatesRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new templatesRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public TemplatesRequestBuilderPostRequestConfiguration() {
         }
     }
 }

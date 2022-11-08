@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the lists property of the microsoft.graph.todo entity. */
 public class TodoTaskListItemRequestBuilder {
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
@@ -30,7 +30,7 @@ public class TodoTaskListItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The tasks property */
+    /** Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity. */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -197,7 +197,7 @@ public class TodoTaskListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.todo.lists.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -290,7 +290,7 @@ public class TodoTaskListItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.todo.lists.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
      * @param id Unique identifier of the item
      * @return a TodoTaskItemRequestBuilder
      */

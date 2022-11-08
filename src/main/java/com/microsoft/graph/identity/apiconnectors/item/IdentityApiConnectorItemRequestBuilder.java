@@ -22,7 +22,7 @@ public class IdentityApiConnectorItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The uploadClientCertificate property */
+    /** Provides operations to call the uploadClientCertificate method. */
     @javax.annotation.Nonnull
     public UploadClientCertificateRequestBuilder uploadClientCertificate() {
         return new UploadClientCertificateRequestBuilder(pathParameters, requestAdapter);

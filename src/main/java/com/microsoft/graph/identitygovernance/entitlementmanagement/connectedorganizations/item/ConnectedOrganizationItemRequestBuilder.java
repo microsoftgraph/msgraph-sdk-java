@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity. */
 public class ConnectedOrganizationItemRequestBuilder {
-    /** The externalSponsors property */
+    /** Provides operations to manage the externalSponsors property of the microsoft.graph.connectedOrganization entity. */
     @javax.annotation.Nonnull
     public ExternalSponsorsRequestBuilder externalSponsors() {
         return new ExternalSponsorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The internalSponsors property */
+    /** Provides operations to manage the internalSponsors property of the microsoft.graph.connectedOrganization entity. */
     @javax.annotation.Nonnull
     public InternalSponsorsRequestBuilder internalSponsors() {
         return new InternalSponsorsRequestBuilder(pathParameters, requestAdapter);

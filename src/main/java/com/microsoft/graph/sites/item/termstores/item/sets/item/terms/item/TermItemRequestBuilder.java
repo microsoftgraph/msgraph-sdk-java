@@ -21,21 +21,21 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the terms property of the microsoft.graph.termStore.set entity. */
 public class TermItemRequestBuilder {
-    /** The children property */
+    /** Provides operations to manage the children property of the microsoft.graph.termStore.term entity. */
     @javax.annotation.Nonnull
     public ChildrenRequestBuilder children() {
         return new ChildrenRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The relations property */
+    /** Provides operations to manage the relations property of the microsoft.graph.termStore.term entity. */
     @javax.annotation.Nonnull
     public RelationsRequestBuilder relations() {
         return new RelationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The set property */
+    /** Provides operations to manage the set property of the microsoft.graph.termStore.term entity. */
     @javax.annotation.Nonnull
     public SetRequestBuilder set() {
         return new SetRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +43,7 @@ public class TermItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item.sets.item.terms.item.children.item collection
+     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
      * @param id Unique identifier of the item
      * @return a TermItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class TermItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item.sets.item.terms.item.relations.item collection
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
      * @param id Unique identifier of the item
      * @return a RelationItemRequestBuilder
      */

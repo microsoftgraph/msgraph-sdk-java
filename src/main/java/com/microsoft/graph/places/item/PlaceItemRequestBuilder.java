@@ -22,7 +22,7 @@ public class PlaceItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The room property */
+    /** Casts the previous resource to room. */
     @javax.annotation.Nonnull
     public RoomRequestBuilder room() {
         return new RoomRequestBuilder(pathParameters, requestAdapter);

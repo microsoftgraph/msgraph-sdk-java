@@ -23,7 +23,7 @@ public class SimulationAutomationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The runs property */
+    /** Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity. */
     @javax.annotation.Nonnull
     public RunsRequestBuilder runs() {
         return new RunsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class SimulationAutomationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.attackSimulation.simulationAutomations.item.runs.item collection
+     * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
      * @param id Unique identifier of the item
      * @return a SimulationAutomationRunItemRequestBuilder
      */

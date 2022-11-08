@@ -21,7 +21,7 @@ import java.util.Objects;
 public class BitlockerRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The recoveryKeys property */
+    /** Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity. */
     @javax.annotation.Nonnull
     public RecoveryKeysRequestBuilder recoveryKeys() {
         return new RecoveryKeysRequestBuilder(pathParameters, requestAdapter);
@@ -129,7 +129,7 @@ public class BitlockerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.informationProtection.bitlocker.recoveryKeys.item collection
+     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
      * @param id Unique identifier of the item
      * @return a BitlockerRecoveryKeyItemRequestBuilder
      */

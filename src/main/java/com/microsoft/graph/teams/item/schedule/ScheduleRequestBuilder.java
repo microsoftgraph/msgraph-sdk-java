@@ -36,17 +36,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the schedule property of the microsoft.graph.team entity. */
 public class ScheduleRequestBuilder {
-    /** The offerShiftRequests property */
+    /** Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public OfferShiftRequestsRequestBuilder offerShiftRequests() {
         return new OfferShiftRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The openShiftChangeRequests property */
+    /** Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public OpenShiftChangeRequestsRequestBuilder openShiftChangeRequests() {
         return new OpenShiftChangeRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The openShifts property */
+    /** Provides operations to manage the openShifts property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public OpenShiftsRequestBuilder openShifts() {
         return new OpenShiftsRequestBuilder(pathParameters, requestAdapter);
@@ -55,37 +55,37 @@ public class ScheduleRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The schedulingGroups property */
+    /** Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public SchedulingGroupsRequestBuilder schedulingGroups() {
         return new SchedulingGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The share property */
+    /** Provides operations to call the share method. */
     @javax.annotation.Nonnull
     public ShareRequestBuilder share() {
         return new ShareRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shifts property */
+    /** Provides operations to manage the shifts property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public ShiftsRequestBuilder shifts() {
         return new ShiftsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The swapShiftsChangeRequests property */
+    /** Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public SwapShiftsChangeRequestsRequestBuilder swapShiftsChangeRequests() {
         return new SwapShiftsChangeRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The timeOffReasons property */
+    /** Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public TimeOffReasonsRequestBuilder timeOffReasons() {
         return new TimeOffReasonsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The timeOffRequests property */
+    /** Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public TimeOffRequestsRequestBuilder timeOffRequests() {
         return new TimeOffRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The timesOff property */
+    /** Provides operations to manage the timesOff property of the microsoft.graph.schedule entity. */
     @javax.annotation.Nonnull
     public TimesOffRequestBuilder timesOff() {
         return new TimesOffRequestBuilder(pathParameters, requestAdapter);
@@ -291,7 +291,7 @@ public class ScheduleRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.offerShiftRequests.item collection
+     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a OfferShiftRequestItemRequestBuilder
      */
@@ -303,7 +303,7 @@ public class ScheduleRequestBuilder {
         return new OfferShiftRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.openShiftChangeRequests.item collection
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a OpenShiftChangeRequestItemRequestBuilder
      */
@@ -315,7 +315,7 @@ public class ScheduleRequestBuilder {
         return new OpenShiftChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.openShifts.item collection
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a OpenShiftItemRequestBuilder
      */
@@ -369,7 +369,7 @@ public class ScheduleRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.schedulingGroups.item collection
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a SchedulingGroupItemRequestBuilder
      */
@@ -381,7 +381,7 @@ public class ScheduleRequestBuilder {
         return new SchedulingGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.shifts.item collection
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a ShiftItemRequestBuilder
      */
@@ -393,7 +393,7 @@ public class ScheduleRequestBuilder {
         return new ShiftItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.swapShiftsChangeRequests.item collection
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a SwapShiftsChangeRequestItemRequestBuilder
      */
@@ -405,7 +405,7 @@ public class ScheduleRequestBuilder {
         return new SwapShiftsChangeRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timeOffReasons.item collection
+     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a TimeOffReasonItemRequestBuilder
      */
@@ -417,7 +417,7 @@ public class ScheduleRequestBuilder {
         return new TimeOffReasonItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timeOffRequests.item collection
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a TimeOffRequestItemRequestBuilder
      */
@@ -429,7 +429,7 @@ public class ScheduleRequestBuilder {
         return new TimeOffRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item.schedule.timesOff.item collection
+     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
      * @param id Unique identifier of the item
      * @return a TimeOffItemRequestBuilder
      */

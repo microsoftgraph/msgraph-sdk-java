@@ -3,9 +3,7 @@ package com.microsoft.graph.reports;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
-import com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
-import com.microsoft.graph.reports.dailyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
 import com.microsoft.graph.reports.getemailactivitycountswithperiod.GetEmailActivityCountsWithPeriodRequestBuilder;
@@ -102,7 +100,9 @@ import com.microsoft.graph.reports.manageddeviceenrollmentfailuredetails.Managed
 import com.microsoft.graph.reports.manageddeviceenrollmentfailuredetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailures.ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
+import com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.reports.monthlyprintusagebyuser.item.PrintUsageByUserItemRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
 import com.microsoft.kiota.HttpMethod;
@@ -122,22 +122,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reportRoot singleton. */
 public class ReportsRequestBuilder {
-    /** The dailyPrintUsageByPrinter property */
+    /** Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter() {
         return new DailyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dailyPrintUsageByUser property */
+    /** Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public DailyPrintUsageByUserRequestBuilder dailyPrintUsageByUser() {
         return new DailyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageByPrinter property */
+    /** Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter() {
         return new MonthlyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The monthlyPrintUsageByUser property */
+    /** Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByUserRequestBuilder monthlyPrintUsageByUser() {
         return new MonthlyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
@@ -146,7 +146,7 @@ public class ReportsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The security property */
+    /** Provides operations to manage the security property of the microsoft.graph.reportRoot entity. */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
@@ -246,7 +246,7 @@ public class ReportsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageByPrinter.item collection
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
@@ -258,7 +258,7 @@ public class ReportsRequestBuilder {
         return new com.microsoft.graph.reports.dailyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.dailyPrintUsageByUser.item collection
+     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */
@@ -1273,7 +1273,7 @@ public class ReportsRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageByPrinter.item collection
+     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByPrinterItemRequestBuilder
      */
@@ -1285,7 +1285,7 @@ public class ReportsRequestBuilder {
         return new com.microsoft.graph.reports.monthlyprintusagebyprinter.item.PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.reports.monthlyPrintUsageByUser.item collection
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param id Unique identifier of the item
      * @return a PrintUsageByUserItemRequestBuilder
      */

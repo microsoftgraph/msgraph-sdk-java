@@ -22,7 +22,7 @@ public class AuthenticationMethodItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resetPassword property */
+    /** Provides operations to call the resetPassword method. */
     @javax.annotation.Nonnull
     public ResetPasswordRequestBuilder resetPassword() {
         return new ResetPasswordRequestBuilder(pathParameters, requestAdapter);

@@ -23,7 +23,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The scheduledActionConfigurations property */
+    /** Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity. */
     @javax.annotation.Nonnull
     public ScheduledActionConfigurationsRequestBuilder scheduledActionConfigurations() {
         return new ScheduledActionConfigurationsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
+     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
      * @param id Unique identifier of the item
      * @return a DeviceComplianceActionItemItemRequestBuilder
      */

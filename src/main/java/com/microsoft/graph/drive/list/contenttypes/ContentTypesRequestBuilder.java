@@ -22,17 +22,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
 public class ContentTypesRequestBuilder {
-    /** The addCopy property */
+    /** Provides operations to call the addCopy method. */
     @javax.annotation.Nonnull
     public AddCopyRequestBuilder addCopy() {
         return new AddCopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The addCopyFromContentTypeHub property */
+    /** Provides operations to call the addCopyFromContentTypeHub method. */
     @javax.annotation.Nonnull
     public AddCopyFromContentTypeHubRequestBuilder addCopyFromContentTypeHub() {
         return new AddCopyFromContentTypeHubRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

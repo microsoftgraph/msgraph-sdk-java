@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the driveItem property of the microsoft.graph.listItem entity. */
 public class DriveItemRequestBuilder {
-    /** The content property */
+    /** Provides operations to manage the media for the site entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);

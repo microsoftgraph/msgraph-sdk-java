@@ -6,8 +6,8 @@ import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.extensions.item.ExtensionItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.getmemberobjects.GetMemberObjectsRequestBuilder;
-import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.RegisteredUsersRequestBuilder;
 import com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.restore.RestoreRequestBuilder;
@@ -29,56 +29,56 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the device property of the microsoft.graph.microsoftAuthenticatorAuthenticationMethod entity. */
 public class DeviceRequestBuilder {
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The memberOf property */
+    /** Provides operations to manage the memberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The registeredOwners property */
+    /** Provides operations to manage the registeredOwners property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredOwnersRequestBuilder registeredOwners() {
         return new RegisteredOwnersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The registeredUsers property */
+    /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public RegisteredUsersRequestBuilder registeredUsers() {
         return new RegisteredUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMemberOf property */
+    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity. */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
@@ -245,7 +245,7 @@ public class DeviceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -296,7 +296,7 @@ public class DeviceRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -362,7 +362,7 @@ public class DeviceRequestBuilder {
         return new com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.registeredUsers.item collection
+     * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -374,7 +374,7 @@ public class DeviceRequestBuilder {
         return new com.microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item.device.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

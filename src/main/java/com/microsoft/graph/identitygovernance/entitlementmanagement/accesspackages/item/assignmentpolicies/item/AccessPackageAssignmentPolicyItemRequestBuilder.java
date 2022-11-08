@@ -19,12 +19,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity. */
 public class AccessPackageAssignmentPolicyItemRequestBuilder {
-    /** The accessPackage property */
+    /** Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
     @javax.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
         return new AccessPackageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The catalog property */
+    /** Provides operations to manage the catalog property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
     @javax.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
         return new CatalogRequestBuilder(pathParameters, requestAdapter);

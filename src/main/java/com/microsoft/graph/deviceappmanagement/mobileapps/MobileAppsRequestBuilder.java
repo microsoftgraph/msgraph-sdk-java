@@ -21,17 +21,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
 public class MobileAppsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedMobileLobApp property */
+    /** Casts the previous resource to managedMobileLobApp. */
     @javax.annotation.Nonnull
     public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
         return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileLobApp property */
+    /** Casts the previous resource to mobileLobApp. */
     @javax.annotation.Nonnull
     public MobileLobAppRequestBuilder mobileLobApp() {
         return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);

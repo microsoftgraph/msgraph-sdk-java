@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
 public class DirectoryObjectItemRequestBuilder {
-    /** The appRoleAssignment property */
+    /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull
     public AppRoleAssignmentRequestBuilder appRoleAssignment() {
         return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The endpoint property */
+    /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
     public EndpointRequestBuilder endpoint() {
         return new EndpointRequestBuilder(pathParameters, requestAdapter);
@@ -35,14 +35,14 @@ public class DirectoryObjectItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);

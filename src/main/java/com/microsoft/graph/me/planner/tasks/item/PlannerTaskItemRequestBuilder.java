@@ -21,24 +21,24 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity. */
 public class PlannerTaskItemRequestBuilder {
-    /** The assignedToTaskBoardFormat property */
+    /** Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
     @javax.annotation.Nonnull
     public AssignedToTaskBoardFormatRequestBuilder assignedToTaskBoardFormat() {
         return new AssignedToTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The bucketTaskBoardFormat property */
+    /** Provides operations to manage the bucketTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
     @javax.annotation.Nonnull
     public BucketTaskBoardFormatRequestBuilder bucketTaskBoardFormat() {
         return new BucketTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The details property */
+    /** Provides operations to manage the details property of the microsoft.graph.plannerTask entity. */
     @javax.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The progressTaskBoardFormat property */
+    /** Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
     @javax.annotation.Nonnull
     public ProgressTaskBoardFormatRequestBuilder progressTaskBoardFormat() {
         return new ProgressTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);

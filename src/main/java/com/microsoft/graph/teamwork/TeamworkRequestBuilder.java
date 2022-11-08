@@ -24,14 +24,14 @@ public class TeamworkRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sendActivityNotificationToRecipients property */
+    /** Provides operations to call the sendActivityNotificationToRecipients method. */
     @javax.annotation.Nonnull
     public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
         return new SendActivityNotificationToRecipientsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The workforceIntegrations property */
+    /** Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity. */
     @javax.annotation.Nonnull
     public WorkforceIntegrationsRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationsRequestBuilder(pathParameters, requestAdapter);
@@ -210,7 +210,7 @@ public class TeamworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teamwork.workforceIntegrations.item collection
+     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
      * @param id Unique identifier of the item
      * @return a WorkforceIntegrationItemRequestBuilder
      */

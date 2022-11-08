@@ -8,7 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** The VPN Configuration Id to apply for this app. */
+    /** When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE. */
+    private Boolean _isRemovable;
+    /** When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE. */
+    private Boolean _uninstallOnDeviceRemoval;
+    /** This is the unique identifier (Id) of the VPN Configuration to apply to the app. */
     private String _vpnConfigurationId;
     /**
      * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
@@ -37,11 +41,29 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosLobAppAssignmentSettings currentObject = this;
         return new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers()) {{
+            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
+            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
             this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Gets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsRemovable() {
+        return this._isRemovable;
+    }
+    /**
+     * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getUninstallOnDeviceRemoval() {
+        return this._uninstallOnDeviceRemoval;
+    }
+    /**
+     * Gets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,10 +79,30 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("isRemovable", this.getIsRemovable());
+        writer.writeBooleanValue("uninstallOnDeviceRemoval", this.getUninstallOnDeviceRemoval());
         writer.writeStringValue("vpnConfigurationId", this.getVpnConfigurationId());
     }
     /**
-     * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Sets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+     * @param value Value to set for the isRemovable property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
+        this._isRemovable = value;
+    }
+    /**
+     * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+     * @param value Value to set for the uninstallOnDeviceRemoval property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
+        this._uninstallOnDeviceRemoval = value;
+    }
+    /**
+     * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @param value Value to set for the vpnConfigurationId property.
      * @return a void
      */

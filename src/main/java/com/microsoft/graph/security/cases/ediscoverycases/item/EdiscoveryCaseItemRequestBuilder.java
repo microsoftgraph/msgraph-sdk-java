@@ -32,51 +32,51 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity. */
 public class EdiscoveryCaseItemRequestBuilder {
-    /** The close property */
+    /** Provides operations to call the close method. */
     @javax.annotation.Nonnull
     public CloseRequestBuilder close() {
         return new CloseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The custodians property */
+    /** Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public CustodiansRequestBuilder custodians() {
         return new CustodiansRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The noncustodialDataSources property */
+    /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder noncustodialDataSources() {
         return new NoncustodialDataSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The reopen property */
+    /** Provides operations to call the reopen method. */
     @javax.annotation.Nonnull
     public ReopenRequestBuilder reopen() {
         return new ReopenRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The reviewSets property */
+    /** Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public ReviewSetsRequestBuilder reviewSets() {
         return new ReviewSetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The searches property */
+    /** Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public SearchesRequestBuilder searches() {
         return new SearchesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The settings property */
+    /** Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tags property */
+    /** Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
@@ -204,7 +204,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item collection
+     * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryCustodianItemRequestBuilder
      */
@@ -294,7 +294,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.noncustodialDataSources.item collection
+     * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryNoncustodialDataSourceItemRequestBuilder
      */
@@ -306,7 +306,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoveryNoncustodialDataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a CaseOperationItemRequestBuilder
      */
@@ -360,7 +360,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item collection
+     * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewSetItemRequestBuilder
      */
@@ -372,7 +372,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoveryReviewSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.searches.item collection
+     * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a EdiscoverySearchItemRequestBuilder
      */
@@ -384,7 +384,7 @@ public class EdiscoveryCaseItemRequestBuilder {
         return new EdiscoverySearchItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item collection
+     * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewTagItemRequestBuilder
      */

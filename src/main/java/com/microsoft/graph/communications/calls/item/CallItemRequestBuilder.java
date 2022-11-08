@@ -39,96 +39,96 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
 public class CallItemRequestBuilder {
-    /** The addLargeGalleryView property */
+    /** Provides operations to call the addLargeGalleryView method. */
     @javax.annotation.Nonnull
     public AddLargeGalleryViewRequestBuilder addLargeGalleryView() {
         return new AddLargeGalleryViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The answer property */
+    /** Provides operations to call the answer method. */
     @javax.annotation.Nonnull
     public AnswerRequestBuilder answer() {
         return new AnswerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The audioRoutingGroups property */
+    /** Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity. */
     @javax.annotation.Nonnull
     public AudioRoutingGroupsRequestBuilder audioRoutingGroups() {
         return new AudioRoutingGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cancelMediaProcessing property */
+    /** Provides operations to call the cancelMediaProcessing method. */
     @javax.annotation.Nonnull
     public CancelMediaProcessingRequestBuilder cancelMediaProcessing() {
         return new CancelMediaProcessingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The changeScreenSharingRole property */
+    /** Provides operations to call the changeScreenSharingRole method. */
     @javax.annotation.Nonnull
     public ChangeScreenSharingRoleRequestBuilder changeScreenSharingRole() {
         return new ChangeScreenSharingRoleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contentSharingSessions property */
+    /** Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity. */
     @javax.annotation.Nonnull
     public ContentSharingSessionsRequestBuilder contentSharingSessions() {
         return new ContentSharingSessionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The keepAlive property */
+    /** Provides operations to call the keepAlive method. */
     @javax.annotation.Nonnull
     public KeepAliveRequestBuilder keepAlive() {
         return new KeepAliveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mute property */
+    /** Provides operations to call the mute method. */
     @javax.annotation.Nonnull
     public MuteRequestBuilder mute() {
         return new MuteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.call entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The participants property */
+    /** Provides operations to manage the participants property of the microsoft.graph.call entity. */
     @javax.annotation.Nonnull
     public ParticipantsRequestBuilder participants() {
         return new ParticipantsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The playPrompt property */
+    /** Provides operations to call the playPrompt method. */
     @javax.annotation.Nonnull
     public PlayPromptRequestBuilder playPrompt() {
         return new PlayPromptRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The recordResponse property */
+    /** Provides operations to call the recordResponse method. */
     @javax.annotation.Nonnull
     public RecordResponseRequestBuilder recordResponse() {
         return new RecordResponseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The redirect property */
+    /** Provides operations to call the redirect method. */
     @javax.annotation.Nonnull
     public RedirectRequestBuilder redirect() {
         return new RedirectRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The reject property */
+    /** Provides operations to call the reject method. */
     @javax.annotation.Nonnull
     public RejectRequestBuilder reject() {
         return new RejectRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The subscribeToTone property */
+    /** Provides operations to call the subscribeToTone method. */
     @javax.annotation.Nonnull
     public SubscribeToToneRequestBuilder subscribeToTone() {
         return new SubscribeToToneRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transfer property */
+    /** Provides operations to call the transfer method. */
     @javax.annotation.Nonnull
     public TransferRequestBuilder transfer() {
         return new TransferRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unmute property */
+    /** Provides operations to call the unmute method. */
     @javax.annotation.Nonnull
     public UnmuteRequestBuilder unmute() {
         return new UnmuteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The updateRecordingStatus property */
+    /** Provides operations to call the updateRecordingStatus method. */
     @javax.annotation.Nonnull
     public UpdateRecordingStatusRequestBuilder updateRecordingStatus() {
         return new UpdateRecordingStatusRequestBuilder(pathParameters, requestAdapter);
@@ -136,7 +136,7 @@ public class CallItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.calls.item.audioRoutingGroups.item collection
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
      * @param id Unique identifier of the item
      * @return a AudioRoutingGroupItemRequestBuilder
      */
@@ -177,7 +177,7 @@ public class CallItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.calls.item.contentSharingSessions.item collection
+     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
      * @param id Unique identifier of the item
      * @return a ContentSharingSessionItemRequestBuilder
      */
@@ -358,7 +358,7 @@ public class CallItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.calls.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
      * @param id Unique identifier of the item
      * @return a CommsOperationItemRequestBuilder
      */
@@ -370,7 +370,7 @@ public class CallItemRequestBuilder {
         return new CommsOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.calls.item.participants.item collection
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
      * @param id Unique identifier of the item
      * @return a ParticipantItemRequestBuilder
      */

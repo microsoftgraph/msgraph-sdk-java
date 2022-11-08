@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity. */
 public class InferenceClassificationRequestBuilder {
-    /** The overrides property */
+    /** Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity. */
     @javax.annotation.Nonnull
     public OverridesRequestBuilder overrides() {
         return new OverridesRequestBuilder(pathParameters, requestAdapter);
@@ -162,7 +162,7 @@ public class InferenceClassificationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.inferenceClassification.overrides.item collection
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
      * @param id Unique identifier of the item
      * @return a InferenceClassificationOverrideItemRequestBuilder
      */

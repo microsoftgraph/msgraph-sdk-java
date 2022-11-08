@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the file property of the microsoft.graph.agreement entity. */
 public class FileRequestBuilder {
-    /** The localizations property */
+    /** Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity. */
     @javax.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
         return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class FileRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
+     * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
      * @param id Unique identifier of the item
      * @return a AgreementFileLocalizationItemRequestBuilder
      */

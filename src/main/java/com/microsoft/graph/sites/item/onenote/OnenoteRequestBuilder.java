@@ -29,17 +29,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the onenote property of the microsoft.graph.site entity. */
 public class OnenoteRequestBuilder {
-    /** The notebooks property */
+    /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public NotebooksRequestBuilder notebooks() {
         return new NotebooksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The pages property */
+    /** Provides operations to manage the pages property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public PagesRequestBuilder pages() {
         return new PagesRequestBuilder(pathParameters, requestAdapter);
@@ -48,17 +48,17 @@ public class OnenoteRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resources property */
+    /** Provides operations to manage the resources property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sectionGroups property */
+    /** Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public SectionGroupsRequestBuilder sectionGroups() {
         return new SectionGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sections property */
+    /** Provides operations to manage the sections property of the microsoft.graph.onenote entity. */
     @javax.annotation.Nonnull
     public SectionsRequestBuilder sections() {
         return new SectionsRequestBuilder(pathParameters, requestAdapter);
@@ -264,7 +264,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.notebooks.item collection
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a NotebookItemRequestBuilder
      */
@@ -276,7 +276,7 @@ public class OnenoteRequestBuilder {
         return new NotebookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a OnenoteOperationItemRequestBuilder
      */
@@ -288,7 +288,7 @@ public class OnenoteRequestBuilder {
         return new OnenoteOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.pages.item collection
+     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a OnenotePageItemRequestBuilder
      */
@@ -342,7 +342,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.resources.item collection
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a OnenoteResourceItemRequestBuilder
      */
@@ -354,7 +354,7 @@ public class OnenoteRequestBuilder {
         return new OnenoteResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.sectionGroups.item collection
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -366,7 +366,7 @@ public class OnenoteRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.sections.item collection
+     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

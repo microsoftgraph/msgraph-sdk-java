@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity. */
 public class AccessReviewsRequestBuilder {
-    /** The definitions property */
+    /** Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity. */
     @javax.annotation.Nonnull
     public DefinitionsRequestBuilder definitions() {
         return new DefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The historyDefinitions property */
+    /** Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity. */
     @javax.annotation.Nonnull
     public HistoryDefinitionsRequestBuilder historyDefinitions() {
         return new HistoryDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -158,7 +158,7 @@ public class AccessReviewsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item collection
+     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewScheduleDefinitionItemRequestBuilder
      */
@@ -248,7 +248,7 @@ public class AccessReviewsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item collection
+     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewHistoryDefinitionItemRequestBuilder
      */

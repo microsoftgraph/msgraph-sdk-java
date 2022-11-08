@@ -23,36 +23,36 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryNoncustodialDataSourceItemRequestBuilder {
-    /** The applyHold property */
+    /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
     public ApplyHoldRequestBuilder applyHold() {
         return new ApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dataSource property */
+    /** Provides operations to manage the dataSource property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity. */
     @javax.annotation.Nonnull
     public DataSourceRequestBuilder dataSource() {
         return new DataSourceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The lastIndexOperation property */
+    /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity. */
     @javax.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
         return new LastIndexOperationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The release property */
+    /** Provides operations to call the release method. */
     @javax.annotation.Nonnull
     public ReleaseRequestBuilder release() {
         return new ReleaseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeHold property */
+    /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
     public RemoveHoldRequestBuilder removeHold() {
         return new RemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The updateIndex property */
+    /** Provides operations to call the updateIndex method. */
     @javax.annotation.Nonnull
     public UpdateIndexRequestBuilder updateIndex() {
         return new UpdateIndexRequestBuilder(pathParameters, requestAdapter);

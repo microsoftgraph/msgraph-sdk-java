@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
 public class EdiscoveryReviewSetQueryItemRequestBuilder {
-    /** The applyTags property */
+    /** Provides operations to call the applyTags method. */
     @javax.annotation.Nonnull
     public ApplyTagsRequestBuilder applyTags() {
         return new ApplyTagsRequestBuilder(pathParameters, requestAdapter);

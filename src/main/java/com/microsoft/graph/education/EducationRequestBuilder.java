@@ -24,12 +24,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the educationRoot singleton. */
 public class EducationRequestBuilder {
-    /** The classes property */
+    /** Provides operations to manage the classes property of the microsoft.graph.educationRoot entity. */
     @javax.annotation.Nonnull
     public ClassesRequestBuilder classes() {
         return new ClassesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The me property */
+    /** Provides operations to manage the me property of the microsoft.graph.educationRoot entity. */
     @javax.annotation.Nonnull
     public MeRequestBuilder me() {
         return new MeRequestBuilder(pathParameters, requestAdapter);
@@ -38,20 +38,20 @@ public class EducationRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The schools property */
+    /** Provides operations to manage the schools property of the microsoft.graph.educationRoot entity. */
     @javax.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The users property */
+    /** Provides operations to manage the users property of the microsoft.graph.educationRoot entity. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item collection
+     * Provides operations to manage the classes property of the microsoft.graph.educationRoot entity.
      * @param id Unique identifier of the item
      * @return a EducationClassItemRequestBuilder
      */
@@ -236,7 +236,7 @@ public class EducationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.schools.item collection
+     * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
      * @param id Unique identifier of the item
      * @return a EducationSchoolItemRequestBuilder
      */
@@ -248,7 +248,7 @@ public class EducationRequestBuilder {
         return new EducationSchoolItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.users.item collection
+     * Provides operations to manage the users property of the microsoft.graph.educationRoot entity.
      * @param id Unique identifier of the item
      * @return a EducationUserItemRequestBuilder
      */

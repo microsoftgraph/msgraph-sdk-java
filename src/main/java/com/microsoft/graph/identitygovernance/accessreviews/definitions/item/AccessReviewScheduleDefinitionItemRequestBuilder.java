@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity. */
 public class AccessReviewScheduleDefinitionItemRequestBuilder {
-    /** The instances property */
+    /** Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity. */
     @javax.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The stop property */
+    /** Provides operations to call the stop method. */
     @javax.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -235,7 +235,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item collection
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceItemRequestBuilder
      */

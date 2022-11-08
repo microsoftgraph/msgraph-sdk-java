@@ -23,27 +23,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the sections property of the microsoft.graph.onenote entity. */
 public class OnenoteSectionItemRequestBuilder {
-    /** The copyToNotebook property */
+    /** Provides operations to call the copyToNotebook method. */
     @javax.annotation.Nonnull
     public CopyToNotebookRequestBuilder copyToNotebook() {
         return new CopyToNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The copyToSectionGroup property */
+    /** Provides operations to call the copyToSectionGroup method. */
     @javax.annotation.Nonnull
     public CopyToSectionGroupRequestBuilder copyToSectionGroup() {
         return new CopyToSectionGroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The pages property */
+    /** Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity. */
     @javax.annotation.Nonnull
     public PagesRequestBuilder pages() {
         return new PagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parentNotebook property */
+    /** Provides operations to manage the parentNotebook property of the microsoft.graph.onenoteSection entity. */
     @javax.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
         return new ParentNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parentSectionGroup property */
+    /** Provides operations to manage the parentSectionGroup property of the microsoft.graph.onenoteSection entity. */
     @javax.annotation.Nonnull
     public ParentSectionGroupRequestBuilder parentSectionGroup() {
         return new ParentSectionGroupRequestBuilder(pathParameters, requestAdapter);
@@ -253,7 +253,7 @@ public class OnenoteSectionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.onenote.sections.item.pages.item collection
+     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
      * @param id Unique identifier of the item
      * @return a OnenotePageItemRequestBuilder
      */

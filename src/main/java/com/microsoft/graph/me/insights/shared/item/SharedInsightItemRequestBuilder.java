@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity. */
 public class SharedInsightItemRequestBuilder {
-    /** The lastSharedMethod property */
+    /** Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity. */
     @javax.annotation.Nonnull
     public LastSharedMethodRequestBuilder lastSharedMethod() {
         return new LastSharedMethodRequestBuilder(pathParameters, requestAdapter);
@@ -28,7 +28,7 @@ public class SharedInsightItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resource property */
+    /** Provides operations to manage the resource property of the microsoft.graph.sharedInsight entity. */
     @javax.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);

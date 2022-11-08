@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the presence property of the microsoft.graph.user entity. */
 public class PresenceRequestBuilder {
-    /** The clearPresence property */
+    /** Provides operations to call the clearPresence method. */
     @javax.annotation.Nonnull
     public ClearPresenceRequestBuilder clearPresence() {
         return new ClearPresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The clearUserPreferredPresence property */
+    /** Provides operations to call the clearUserPreferredPresence method. */
     @javax.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
         return new ClearUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -35,12 +35,12 @@ public class PresenceRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The setPresence property */
+    /** Provides operations to call the setPresence method. */
     @javax.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setUserPreferredPresence property */
+    /** Provides operations to call the setUserPreferredPresence method. */
     @javax.annotation.Nonnull
     public SetUserPreferredPresenceRequestBuilder setUserPreferredPresence() {
         return new SetUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);

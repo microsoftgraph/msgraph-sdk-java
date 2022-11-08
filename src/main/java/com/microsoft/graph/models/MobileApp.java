@@ -5,6 +5,8 @@ import com.microsoft.graph.models.AndroidStoreApp;
 import com.microsoft.graph.models.IosLobApp;
 import com.microsoft.graph.models.IosStoreApp;
 import com.microsoft.graph.models.IosVppApp;
+import com.microsoft.graph.models.MacOSLobApp;
+import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
 import com.microsoft.graph.models.MacOSOfficeSuiteApp;
 import com.microsoft.graph.models.ManagedAndroidLobApp;
 import com.microsoft.graph.models.ManagedAndroidStoreApp;
@@ -84,6 +86,8 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.iosLobApp": return new IosLobApp();
                 case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
                 case "#microsoft.graph.iosVppApp": return new IosVppApp();
+                case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
+                case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
                 case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
                 case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();
                 case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();

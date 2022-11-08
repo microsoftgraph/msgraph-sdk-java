@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleDefinitionItemRequestBuilder {
-    /** The inheritsPermissionsFrom property */
+    /** Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity. */
     @javax.annotation.Nonnull
     public InheritsPermissionsFromRequestBuilder inheritsPermissionsFrom() {
         return new InheritsPermissionsFromRequestBuilder(pathParameters, requestAdapter);
@@ -228,7 +228,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.roleManagement.entitlementManagement.roleDefinitions.item.inheritsPermissionsFrom.item collection
+     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleDefinitionItemRequestBuilder
      */
