@@ -21,6 +21,7 @@ import com.microsoft.graph.models.ManagedDeviceOverview;
 import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
+import com.microsoft.graph.requests.AuditEventCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
@@ -104,6 +105,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.TermsAndConditionsCollectionPage termsAndConditions;
+
+    /**
+     * The Audit Events.
+     * The Audit Events
+     */
+    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AuditEventCollectionPage auditEvents;
 
     /**
      * The Device Compliance Policies.
@@ -387,6 +397,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("termsAndConditions")) {
             termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), com.microsoft.graph.requests.TermsAndConditionsCollectionPage.class);
+        }
+
+        if (json.has("auditEvents")) {
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.requests.AuditEventCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicies")) {

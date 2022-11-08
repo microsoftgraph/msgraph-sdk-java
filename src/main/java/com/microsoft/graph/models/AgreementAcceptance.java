@@ -55,7 +55,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * The unique identifier of the device used for accepting the agreement.
+     * The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -82,7 +82,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -127,7 +127,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The identifier of the user who accepted the agreement.
+     * The identifier of the user who accepted the agreement. Supports $filter (eq).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
