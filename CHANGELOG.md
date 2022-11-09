@@ -11,6 +11,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.41.0] - 2022-11-09
+
+### Added
+
+- AuditActor model.
+- AuditProperty model. 
+- AuditResource model. 
+- ChannelMembersNotificationRecipient model. 
+- ChatMembersNotificationRecipient model. 
+- MacOSLobChildApp model. 
+- MacOSMinimumOperatingSystem model. 
+- MicrosoftEdgeChannel model. 
+- TeamMembersNotificationRecipient model. 
+- AuditEvent models and related requests. 
+- DeviceManagementPartnerTerminate models and related requests. 
+- EducationAssignmentSetUpFeedbackResourcesFolder models and related requests. 
+- EducationFeedbackResourceOutcome models and related requests. 
+- MacOSLobApp models and related requests. 
+- MacOSMicrosoftEdgeApp model and related requests. 
+ 
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Classes related to the removed and added models/requests have been updated to reflect the addition and removal of these models/requests.
+- Remove withRequireChangeOnNextSignIn from AuthenticationMethodResetPasswordParameterSet as this only applied for certain first party apps and shouldn't have been added prior.  
+
 ## [5.40.0] - 2022-11-03
 
 ### Added
