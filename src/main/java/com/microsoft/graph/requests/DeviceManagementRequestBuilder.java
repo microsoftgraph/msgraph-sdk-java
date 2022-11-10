@@ -80,6 +80,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AuditEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuditEventCollectionRequestBuilder auditEvents() {
+        return new com.microsoft.graph.requests.AuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuditEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuditEventRequestBuilder auditEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeviceCompliancePolicy collection
      *
      * @return the collection request builder

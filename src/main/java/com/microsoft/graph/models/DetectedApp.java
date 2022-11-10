@@ -48,7 +48,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Platform.
-     * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). Possible values are: unknown, windows, windowsMobile, windowsHolographic, ios, macOS, chromeOS, androidOSP, androidDeviceAdministrator, androidWorkProfile, androidDedicatedAndFullyManaged.
+     * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). Possible values are: unknown, windows, windowsMobile, windowsHolographic, ios, macOS, chromeOS, androidOSP, androidDeviceAdministrator, androidWorkProfile, androidDedicatedAndFullyManaged, unknownFutureValue.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
