@@ -41,118 +41,118 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the managedDevices property of the microsoft.graph.user entity. */
 public class ManagedDeviceItemRequestBuilder {
-    /** The bypassActivationLock property */
+    /** Provides operations to call the bypassActivationLock method. */
     @javax.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cleanWindowsDevice property */
+    /** Provides operations to call the cleanWindowsDevice method. */
     @javax.annotation.Nonnull
     public CleanWindowsDeviceRequestBuilder cleanWindowsDevice() {
         return new CleanWindowsDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deleteUserFromSharedAppleDevice property */
+    /** Provides operations to call the deleteUserFromSharedAppleDevice method. */
     @javax.annotation.Nonnull
     public DeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice() {
         return new DeleteUserFromSharedAppleDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceCategory property */
+    /** Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceCompliancePolicyStates property */
+    /** Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceConfigurationStates property */
+    /** Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public DeviceConfigurationStatesRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The disableLostMode property */
+    /** Provides operations to call the disableLostMode method. */
     @javax.annotation.Nonnull
     public DisableLostModeRequestBuilder disableLostMode() {
         return new DisableLostModeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The locateDevice property */
+    /** Provides operations to call the locateDevice method. */
     @javax.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The logoutSharedAppleDeviceActiveUser property */
+    /** Provides operations to call the logoutSharedAppleDeviceActiveUser method. */
     @javax.annotation.Nonnull
     public LogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
         return new LogoutSharedAppleDeviceActiveUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The rebootNow property */
+    /** Provides operations to call the rebootNow method. */
     @javax.annotation.Nonnull
     public RebootNowRequestBuilder rebootNow() {
         return new RebootNowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The recoverPasscode property */
+    /** Provides operations to call the recoverPasscode method. */
     @javax.annotation.Nonnull
     public RecoverPasscodeRequestBuilder recoverPasscode() {
         return new RecoverPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The remoteLock property */
+    /** Provides operations to call the remoteLock method. */
     @javax.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The requestRemoteAssistance property */
+    /** Provides operations to call the requestRemoteAssistance method. */
     @javax.annotation.Nonnull
     public RequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
         return new RequestRemoteAssistanceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The resetPasscode property */
+    /** Provides operations to call the resetPasscode method. */
     @javax.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The retire property */
+    /** Provides operations to call the retire method. */
     @javax.annotation.Nonnull
     public RetireRequestBuilder retire() {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shutDown property */
+    /** Provides operations to call the shutDown method. */
     @javax.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
         return new ShutDownRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The syncDevice property */
+    /** Provides operations to call the syncDevice method. */
     @javax.annotation.Nonnull
     public SyncDeviceRequestBuilder syncDevice() {
         return new SyncDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The updateWindowsDeviceAccount property */
+    /** Provides operations to call the updateWindowsDeviceAccount method. */
     @javax.annotation.Nonnull
     public UpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount() {
         return new UpdateWindowsDeviceAccountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The users property */
+    /** Provides operations to manage the users property of the microsoft.graph.managedDevice entity. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsDefenderScan property */
+    /** Provides operations to call the windowsDefenderScan method. */
     @javax.annotation.Nonnull
     public WindowsDefenderScanRequestBuilder windowsDefenderScan() {
         return new WindowsDefenderScanRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsDefenderUpdateSignatures property */
+    /** Provides operations to call the windowsDefenderUpdateSignatures method. */
     @javax.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The wipe property */
+    /** Provides operations to call the wipe method. */
     @javax.annotation.Nonnull
     public WipeRequestBuilder wipe() {
         return new WipeRequestBuilder(pathParameters, requestAdapter);
@@ -317,7 +317,7 @@ public class ManagedDeviceItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.managedDevices.item.deviceCompliancePolicyStates.item collection
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyStateItemRequestBuilder
      */
@@ -329,7 +329,7 @@ public class ManagedDeviceItemRequestBuilder {
         return new DeviceCompliancePolicyStateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.managedDevices.item.deviceConfigurationStates.item collection
+     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationStateItemRequestBuilder
      */

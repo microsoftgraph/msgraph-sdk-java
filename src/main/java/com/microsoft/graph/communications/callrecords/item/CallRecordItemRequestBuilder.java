@@ -23,7 +23,7 @@ public class CallRecordItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sessions property */
+    /** Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity. */
     @javax.annotation.Nonnull
     public SessionsRequestBuilder sessions() {
         return new SessionsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class CallRecordItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.callRecords.item.sessions.item collection
+     * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
      * @param id Unique identifier of the item
      * @return a SessionItemRequestBuilder
      */

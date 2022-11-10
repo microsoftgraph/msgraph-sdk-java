@@ -21,19 +21,19 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity. */
 public class CustodiansRequestBuilder {
-    /** The applyHold property */
+    /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
     public ApplyHoldRequestBuilder applyHold() {
         return new ApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The removeHold property */
+    /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
     public RemoveHoldRequestBuilder removeHold() {
         return new RemoveHoldRequestBuilder(pathParameters, requestAdapter);

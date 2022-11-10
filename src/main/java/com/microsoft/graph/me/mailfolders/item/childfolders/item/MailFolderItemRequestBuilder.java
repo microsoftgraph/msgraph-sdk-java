@@ -27,27 +27,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity. */
 public class MailFolderItemRequestBuilder {
-    /** The copy property */
+    /** Provides operations to call the copy method. */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messageRules property */
+    /** Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity. */
     @javax.annotation.Nonnull
     public MessageRulesRequestBuilder messageRules() {
         return new MessageRulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messages property */
+    /** Provides operations to manage the messages property of the microsoft.graph.mailFolder entity. */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The move property */
+    /** Provides operations to call the move method. */
     @javax.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The multiValueExtendedProperties property */
+    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity. */
     @javax.annotation.Nonnull
     public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
         return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -56,7 +56,7 @@ public class MailFolderItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The singleValueExtendedProperties property */
+    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity. */
     @javax.annotation.Nonnull
     public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -262,7 +262,7 @@ public class MailFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.mailFolders.item.childFolders.item.messageRules.item collection
+     * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
      * @param id Unique identifier of the item
      * @return a MessageRuleItemRequestBuilder
      */
@@ -274,7 +274,7 @@ public class MailFolderItemRequestBuilder {
         return new MessageRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.mailFolders.item.childFolders.item.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
      * @param id Unique identifier of the item
      * @return a MessageItemRequestBuilder
      */
@@ -286,7 +286,7 @@ public class MailFolderItemRequestBuilder {
         return new MessageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.mailFolders.item.childFolders.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity.
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -340,7 +340,7 @@ public class MailFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.mailFolders.item.childFolders.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity.
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to servicePrincipal. */
+/** Provides operations to call the instantiate method. */
 public class DelegatedPermissionClassification extends Entity implements Parsable {
     /** The classification value being given. Possible value: low. Does not support $filter. */
     private PermissionClassificationType _classification;

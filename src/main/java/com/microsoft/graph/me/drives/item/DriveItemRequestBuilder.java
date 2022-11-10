@@ -27,22 +27,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the drives property of the microsoft.graph.user entity. */
 public class DriveItemRequestBuilder {
-    /** The bundles property */
+    /** Provides operations to manage the bundles property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public BundlesRequestBuilder bundles() {
         return new BundlesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The following property */
+    /** Provides operations to manage the following property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public FollowingRequestBuilder following() {
         return new FollowingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The items property */
+    /** Provides operations to manage the items property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The list property */
+    /** Provides operations to manage the list property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(pathParameters, requestAdapter);
@@ -51,12 +51,12 @@ public class DriveItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The root property */
+    /** Provides operations to manage the root property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public RootRequestBuilder root() {
         return new RootRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The special property */
+    /** Provides operations to manage the special property of the microsoft.graph.drive entity. */
     @javax.annotation.Nonnull
     public SpecialRequestBuilder special() {
         return new SpecialRequestBuilder(pathParameters, requestAdapter);
@@ -64,7 +64,7 @@ public class DriveItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.bundles.item collection
+     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -235,7 +235,7 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.following.item collection
+     * Provides operations to manage the following property of the microsoft.graph.drive entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -286,7 +286,7 @@ public class DriveItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.drive entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -366,7 +366,7 @@ public class DriveItemRequestBuilder {
         return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.drives.item.special.item collection
+     * Provides operations to manage the special property of the microsoft.graph.drive entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */

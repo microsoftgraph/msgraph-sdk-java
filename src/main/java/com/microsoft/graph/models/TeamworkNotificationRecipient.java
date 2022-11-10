@@ -1,6 +1,9 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.AadUserNotificationRecipient;
+import com.microsoft.graph.models.ChannelMembersNotificationRecipient;
+import com.microsoft.graph.models.ChatMembersNotificationRecipient;
+import com.microsoft.graph.models.TeamMembersNotificationRecipient;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -36,6 +39,9 @@ public class TeamworkNotificationRecipient implements AdditionalDataHolder, Pars
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.aadUserNotificationRecipient": return new AadUserNotificationRecipient();
+                case "#microsoft.graph.channelMembersNotificationRecipient": return new ChannelMembersNotificationRecipient();
+                case "#microsoft.graph.chatMembersNotificationRecipient": return new ChatMembersNotificationRecipient();
+                case "#microsoft.graph.teamMembersNotificationRecipient": return new TeamMembersNotificationRecipient();
             }
         }
         return new TeamworkNotificationRecipient();

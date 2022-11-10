@@ -24,17 +24,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity. */
 public class ExternalConnectionItemRequestBuilder {
-    /** The groups property */
+    /** Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity. */
     @javax.annotation.Nonnull
     public GroupsRequestBuilder groups() {
         return new GroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The items property */
+    /** Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity. */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +43,7 @@ public class ExternalConnectionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The schema property */
+    /** Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity. */
     @javax.annotation.Nonnull
     public SchemaRequestBuilder schema() {
         return new SchemaRequestBuilder(pathParameters, requestAdapter);
@@ -249,7 +249,7 @@ public class ExternalConnectionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.external.connections.item.groups.item collection
+     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param id Unique identifier of the item
      * @return a ExternalGroupItemRequestBuilder
      */
@@ -261,7 +261,7 @@ public class ExternalConnectionItemRequestBuilder {
         return new ExternalGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.external.connections.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param id Unique identifier of the item
      * @return a ExternalItemItemRequestBuilder
      */
@@ -273,7 +273,7 @@ public class ExternalConnectionItemRequestBuilder {
         return new ExternalItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.external.connections.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param id Unique identifier of the item
      * @return a ConnectionOperationItemRequestBuilder
      */

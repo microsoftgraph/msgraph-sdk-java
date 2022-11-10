@@ -22,7 +22,7 @@ public class TrendingItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resource property */
+    /** Provides operations to manage the resource property of the microsoft.graph.trending entity. */
     @javax.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);

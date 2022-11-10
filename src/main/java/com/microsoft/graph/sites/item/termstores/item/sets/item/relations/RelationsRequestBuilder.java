@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the relations property of the microsoft.graph.termStore.set entity. */
 public class RelationsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

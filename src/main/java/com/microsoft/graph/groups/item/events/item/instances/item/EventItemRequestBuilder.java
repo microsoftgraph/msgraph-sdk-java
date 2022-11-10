@@ -33,47 +33,47 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the instances property of the microsoft.graph.event entity. */
 public class EventItemRequestBuilder {
-    /** The accept property */
+    /** Provides operations to call the accept method. */
     @javax.annotation.Nonnull
     public AcceptRequestBuilder accept() {
         return new AcceptRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The attachments property */
+    /** Provides operations to manage the attachments property of the microsoft.graph.event entity. */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The calendar property */
+    /** Provides operations to manage the calendar property of the microsoft.graph.event entity. */
     @javax.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cancel property */
+    /** Provides operations to call the cancel method. */
     @javax.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The decline property */
+    /** Provides operations to call the decline method. */
     @javax.annotation.Nonnull
     public DeclineRequestBuilder decline() {
         return new DeclineRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dismissReminder property */
+    /** Provides operations to call the dismissReminder method. */
     @javax.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
         return new DismissReminderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.event entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The forward property */
+    /** Provides operations to call the forward method. */
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The multiValueExtendedProperties property */
+    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity. */
     @javax.annotation.Nonnull
     public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
         return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -82,17 +82,17 @@ public class EventItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The singleValueExtendedProperties property */
+    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity. */
     @javax.annotation.Nonnull
     public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The snoozeReminder property */
+    /** Provides operations to call the snoozeReminder method. */
     @javax.annotation.Nonnull
     public SnoozeReminderRequestBuilder snoozeReminder() {
         return new SnoozeReminderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tentativelyAccept property */
+    /** Provides operations to call the tentativelyAccept method. */
     @javax.annotation.Nonnull
     public TentativelyAcceptRequestBuilder tentativelyAccept() {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
@@ -100,7 +100,7 @@ public class EventItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.events.item.instances.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      * @param id Unique identifier of the item
      * @return a AttachmentItemRequestBuilder
      */
@@ -171,7 +171,7 @@ public class EventItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.events.item.instances.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -222,7 +222,7 @@ public class EventItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.events.item.instances.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -234,7 +234,7 @@ public class EventItemRequestBuilder {
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.events.item.instances.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

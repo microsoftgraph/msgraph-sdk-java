@@ -8,7 +8,7 @@ import java.util.Objects;
 public class DirectoryObjectItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    /** Provides operations to manage the collection of group entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

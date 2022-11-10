@@ -25,41 +25,41 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of sharedDriveItem entities. */
 public class SharedDriveItemItemRequestBuilder {
-    /** The driveItem property */
+    /** Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The items property */
+    /** Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The list property */
+    /** Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The listItem property */
+    /** Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The permission property */
+    /** Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public PermissionRequestBuilder permission() {
         return new PermissionRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The root property */
+    /** Provides operations to manage the root property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public RootRequestBuilder root() {
         return new RootRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The site property */
+    /** Provides operations to manage the site property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public SiteRequestBuilder site() {
         return new SiteRequestBuilder(pathParameters, requestAdapter);
@@ -265,7 +265,7 @@ public class SharedDriveItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.shares.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */

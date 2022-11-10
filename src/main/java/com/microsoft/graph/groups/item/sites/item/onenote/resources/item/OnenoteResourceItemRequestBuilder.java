@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the resources property of the microsoft.graph.onenote entity. */
 public class OnenoteResourceItemRequestBuilder {
-    /** The content property */
+    /** Provides operations to manage the media for the group entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);

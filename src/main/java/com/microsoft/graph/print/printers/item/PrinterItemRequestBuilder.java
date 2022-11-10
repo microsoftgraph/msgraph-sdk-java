@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the printers property of the microsoft.graph.print entity. */
 public class PrinterItemRequestBuilder {
-    /** The connectors property */
+    /** Provides operations to manage the connectors property of the microsoft.graph.printer entity. */
     @javax.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
         return new ConnectorsRequestBuilder(pathParameters, requestAdapter);
@@ -33,17 +33,17 @@ public class PrinterItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restoreFactoryDefaults property */
+    /** Provides operations to call the restoreFactoryDefaults method. */
     @javax.annotation.Nonnull
     public RestoreFactoryDefaultsRequestBuilder restoreFactoryDefaults() {
         return new RestoreFactoryDefaultsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shares property */
+    /** Provides operations to manage the shares property of the microsoft.graph.printer entity. */
     @javax.annotation.Nonnull
     public SharesRequestBuilder shares() {
         return new SharesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The taskTriggers property */
+    /** Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity. */
     @javax.annotation.Nonnull
     public TaskTriggersRequestBuilder taskTriggers() {
         return new TaskTriggersRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +51,7 @@ public class PrinterItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.print.printers.item.connectors.item collection
+     * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
      * @param id Unique identifier of the item
      * @return a PrintConnectorItemRequestBuilder
      */
@@ -303,7 +303,7 @@ public class PrinterItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.printers.item.shares.item collection
+     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
      * @param id Unique identifier of the item
      * @return a PrinterShareItemRequestBuilder
      */
@@ -315,7 +315,7 @@ public class PrinterItemRequestBuilder {
         return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.printers.item.taskTriggers.item collection
+     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
      * @param id Unique identifier of the item
      * @return a PrintTaskTriggerItemRequestBuilder
      */

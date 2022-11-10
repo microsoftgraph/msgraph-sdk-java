@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
 public class ListItemVersionItemRequestBuilder {
-    /** The fields property */
+    /** Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity. */
     @javax.annotation.Nonnull
     public FieldsRequestBuilder fields() {
         return new FieldsRequestBuilder(pathParameters, requestAdapter);
@@ -28,7 +28,7 @@ public class ListItemVersionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restoreVersion property */
+    /** Provides operations to call the restoreVersion method. */
     @javax.annotation.Nonnull
     public RestoreVersionRequestBuilder restoreVersion() {
         return new RestoreVersionRequestBuilder(pathParameters, requestAdapter);

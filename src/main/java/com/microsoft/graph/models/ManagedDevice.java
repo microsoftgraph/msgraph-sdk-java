@@ -60,9 +60,9 @@ public class ManagedDevice extends Entity implements Parsable {
     private DeviceManagementExchangeAccessStateReason _exchangeAccessStateReason;
     /** Last time the device contacted Exchange. This property is read-only. */
     private OffsetDateTime _exchangeLastSuccessfulSyncDateTime;
-    /** Free Storage in Bytes. This property is read-only. */
+    /** Free Storage in Bytes. Default value is 0. Read-only. This property is read-only. */
     private Long _freeStorageSpaceInBytes;
-    /** Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only. */
+    /** Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only. */
     private String _iccid;
     /** IMEI. This property is read-only. */
     private String _imei;
@@ -88,7 +88,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _meid;
     /** Model of the device. This property is read-only. */
     private String _model;
-    /** Notes on the device created by IT Admin */
+    /** Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported. */
     private String _notes;
     /** Operating system of the device. Windows, iOS, etc. This property is read-only. */
     private String _operatingSystem;
@@ -98,7 +98,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private ManagedDevicePartnerReportedHealthState _partnerReportedThreatState;
     /** Phone number of the device. This property is read-only. */
     private String _phoneNumber;
-    /** Total Memory in Bytes. This property is read-only. */
+    /** Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only. */
     private Long _physicalMemoryInBytes;
     /** An error string that identifies issues when creating Remote Assistance session objects. This property is read-only. */
     private String _remoteAssistanceSessionErrorDetails;
@@ -112,7 +112,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private String _subscriberCarrier;
     /** Total Storage in Bytes. This property is read-only. */
     private Long _totalStorageSpaceInBytes;
-    /** Unique Device Identifier for iOS and macOS devices. This property is read-only. */
+    /** Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only. */
     private String _udid;
     /** User display name. This property is read-only. */
     private String _userDisplayName;
@@ -411,7 +411,7 @@ public class ManagedDevice extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. This property is read-only.
+     * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -419,7 +419,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._freeStorageSpaceInBytes;
     }
     /**
-     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -523,7 +523,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._model;
     }
     /**
-     * Gets the notes property value. Notes on the device created by IT Admin
+     * Gets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -563,7 +563,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._phoneNumber;
     }
     /**
-     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. This property is read-only.
+     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -619,7 +619,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this._totalStorageSpaceInBytes;
     }
     /**
-     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -916,7 +916,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._exchangeLastSuccessfulSyncDateTime = value;
     }
     /**
-     * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. This property is read-only.
+     * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @param value Value to set for the freeStorageSpaceInBytes property.
      * @return a void
      */
@@ -925,7 +925,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._freeStorageSpaceInBytes = value;
     }
     /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the iccid property.
      * @return a void
      */
@@ -1042,7 +1042,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._model = value;
     }
     /**
-     * Sets the notes property value. Notes on the device created by IT Admin
+     * Sets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
      * @param value Value to set for the notes property.
      * @return a void
      */
@@ -1087,7 +1087,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._phoneNumber = value;
     }
     /**
-     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. This property is read-only.
+     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
      * @param value Value to set for the physicalMemoryInBytes property.
      * @return a void
      */
@@ -1150,7 +1150,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this._totalStorageSpaceInBytes = value;
     }
     /**
-     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the udid property.
      * @return a void
      */

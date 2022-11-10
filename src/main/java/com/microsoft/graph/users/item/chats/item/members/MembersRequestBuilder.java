@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the members property of the microsoft.graph.chat entity. */
 public class MembersRequestBuilder {
-    /** The add property */
+    /** Provides operations to call the add method. */
     @javax.annotation.Nonnull
     public AddRequestBuilder add() {
         return new AddRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

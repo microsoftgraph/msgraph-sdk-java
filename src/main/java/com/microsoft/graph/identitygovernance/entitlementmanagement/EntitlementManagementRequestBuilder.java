@@ -32,37 +32,37 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
 public class EntitlementManagementRequestBuilder {
-    /** The accessPackageAssignmentApprovals property */
+    /** Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder accessPackageAssignmentApprovals() {
         return new AccessPackageAssignmentApprovalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The accessPackages property */
+    /** Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentPolicies property */
+    /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public AssignmentPoliciesRequestBuilder assignmentPolicies() {
         return new AssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentRequests property */
+    /** Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public AssignmentRequestsRequestBuilder assignmentRequests() {
         return new AssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The catalogs property */
+    /** Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public CatalogsRequestBuilder catalogs() {
         return new CatalogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The connectedOrganizations property */
+    /** Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
@@ -71,7 +71,7 @@ public class EntitlementManagementRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The settings property */
+    /** Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity. */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
@@ -79,7 +79,7 @@ public class EntitlementManagementRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a ApprovalItemRequestBuilder
      */
@@ -91,7 +91,7 @@ public class EntitlementManagementRequestBuilder {
         return new ApprovalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.accessPackages.item collection
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */
@@ -103,7 +103,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.assignmentPolicies.item collection
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentPolicyItemRequestBuilder
      */
@@ -115,7 +115,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.assignmentRequests.item collection
+     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentRequestItemRequestBuilder
      */
@@ -127,7 +127,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageAssignmentItemRequestBuilder
      */
@@ -139,7 +139,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item collection
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageCatalogItemRequestBuilder
      */
@@ -151,7 +151,7 @@ public class EntitlementManagementRequestBuilder {
         return new AccessPackageCatalogItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.connectedOrganizations.item collection
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
      * @param id Unique identifier of the item
      * @return a ConnectedOrganizationItemRequestBuilder
      */

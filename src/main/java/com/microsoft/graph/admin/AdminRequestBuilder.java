@@ -22,7 +22,7 @@ public class AdminRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The serviceAnnouncement property */
+    /** Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity. */
     @javax.annotation.Nonnull
     public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new ServiceAnnouncementRequestBuilder(pathParameters, requestAdapter);

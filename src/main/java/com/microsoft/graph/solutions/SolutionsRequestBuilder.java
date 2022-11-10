@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the solutionsRoot singleton. */
 public class SolutionsRequestBuilder {
-    /** The bookingBusinesses property */
+    /** Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity. */
     @javax.annotation.Nonnull
     public BookingBusinessesRequestBuilder bookingBusinesses() {
         return new BookingBusinessesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The bookingCurrencies property */
+    /** Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity. */
     @javax.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
         return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +38,7 @@ public class SolutionsRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingBusinesses.item collection
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
      * @param id Unique identifier of the item
      * @return a BookingBusinessItemRequestBuilder
      */
@@ -50,7 +50,7 @@ public class SolutionsRequestBuilder {
         return new BookingBusinessItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.solutions.bookingCurrencies.item collection
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
      * @param id Unique identifier of the item
      * @return a BookingCurrencyItemRequestBuilder
      */

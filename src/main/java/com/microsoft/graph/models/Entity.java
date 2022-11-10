@@ -56,6 +56,7 @@ import com.microsoft.graph.models.AttachmentSession;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.AudioRoutingGroup;
+import com.microsoft.graph.models.AuditEvent;
 import com.microsoft.graph.models.AuditLogRoot;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.AuthenticationContextClassReference;
@@ -185,6 +186,7 @@ import com.microsoft.graph.models.EducationAssignmentSettings;
 import com.microsoft.graph.models.EducationCategory;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.EducationFeedbackOutcome;
+import com.microsoft.graph.models.EducationFeedbackResourceOutcome;
 import com.microsoft.graph.models.EducationOrganization;
 import com.microsoft.graph.models.EducationOutcome;
 import com.microsoft.graph.models.EducationPointsOutcome;
@@ -275,6 +277,8 @@ import com.microsoft.graph.models.MacOSCompliancePolicy;
 import com.microsoft.graph.models.MacOSCustomConfiguration;
 import com.microsoft.graph.models.MacOSDeviceFeaturesConfiguration;
 import com.microsoft.graph.models.MacOSGeneralDeviceConfiguration;
+import com.microsoft.graph.models.MacOSLobApp;
+import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
 import com.microsoft.graph.models.MacOSOfficeSuiteApp;
 import com.microsoft.graph.models.MailAssessmentRequest;
 import com.microsoft.graph.models.MailFolder;
@@ -736,6 +740,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.attackSimulationRoot": return new AttackSimulationRoot();
             case "#microsoft.graph.attendanceRecord": return new AttendanceRecord();
             case "#microsoft.graph.audioRoutingGroup": return new AudioRoutingGroup();
+            case "#microsoft.graph.auditEvent": return new AuditEvent();
             case "#microsoft.graph.auditLogRoot": return new AuditLogRoot();
             case "#microsoft.graph.authentication": return new Authentication();
             case "#microsoft.graph.authenticationContextClassReference": return new AuthenticationContextClassReference();
@@ -865,6 +870,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.educationCategory": return new EducationCategory();
             case "#microsoft.graph.educationClass": return new EducationClass();
             case "#microsoft.graph.educationFeedbackOutcome": return new EducationFeedbackOutcome();
+            case "#microsoft.graph.educationFeedbackResourceOutcome": return new EducationFeedbackResourceOutcome();
             case "#microsoft.graph.educationOrganization": return new EducationOrganization();
             case "#microsoft.graph.educationOutcome": return new EducationOutcome();
             case "#microsoft.graph.educationPointsOutcome": return new EducationPointsOutcome();
@@ -956,6 +962,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.macOSCustomConfiguration": return new MacOSCustomConfiguration();
             case "#microsoft.graph.macOSDeviceFeaturesConfiguration": return new MacOSDeviceFeaturesConfiguration();
             case "#microsoft.graph.macOSGeneralDeviceConfiguration": return new MacOSGeneralDeviceConfiguration();
+            case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
+            case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
             case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
             case "#microsoft.graph.mailAssessmentRequest": return new MailAssessmentRequest();
             case "#microsoft.graph.mailFolder": return new MailFolder();
@@ -1176,10 +1184,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
             case "#microsoft.graph.teamworkTag": return new TeamworkTag();
             case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
-            case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
-            case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
-            case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
-            case "#microsoft.graph.termsAndConditions": return new TermsAndConditions();
         }
         return null;
     }
@@ -1191,6 +1195,10 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();
+            case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
+            case "#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration": return new TemporaryAccessPassAuthenticationMethodConfiguration();
+            case "#microsoft.graph.termsAndConditions": return new TermsAndConditions();
             case "#microsoft.graph.termsAndConditionsAcceptanceStatus": return new TermsAndConditionsAcceptanceStatus();
             case "#microsoft.graph.termsAndConditionsAssignment": return new TermsAndConditionsAssignment();
             case "#microsoft.graph.termsOfUseContainer": return new TermsOfUseContainer();

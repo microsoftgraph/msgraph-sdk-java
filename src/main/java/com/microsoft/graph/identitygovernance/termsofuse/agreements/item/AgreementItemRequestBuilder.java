@@ -22,17 +22,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity. */
 public class AgreementItemRequestBuilder {
-    /** The acceptances property */
+    /** Provides operations to manage the acceptances property of the microsoft.graph.agreement entity. */
     @javax.annotation.Nonnull
     public AcceptancesRequestBuilder acceptances() {
         return new AcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The file property */
+    /** Provides operations to manage the file property of the microsoft.graph.agreement entity. */
     @javax.annotation.Nonnull
     public FileRequestBuilder file() {
         return new FileRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The files property */
+    /** Provides operations to manage the files property of the microsoft.graph.agreement entity. */
     @javax.annotation.Nonnull
     public FilesRequestBuilder files() {
         return new FilesRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +44,7 @@ public class AgreementItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.acceptances.item collection
+     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -215,7 +215,7 @@ public class AgreementItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item.files.item collection
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
      * @param id Unique identifier of the item
      * @return a AgreementFileLocalizationItemRequestBuilder
      */

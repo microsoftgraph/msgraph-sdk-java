@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
 public class UnifiedGroupSourceItemRequestBuilder {
-    /** The group property */
+    /** Provides operations to manage the group property of the microsoft.graph.security.unifiedGroupSource entity. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);

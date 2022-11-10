@@ -20,19 +20,19 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the sites property of the microsoft.graph.group entity. */
 public class SitesRequestBuilder {
-    /** The add property */
+    /** Provides operations to call the add method. */
     @javax.annotation.Nonnull
     public AddRequestBuilder add() {
         return new AddRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The remove property */
+    /** Provides operations to call the remove method. */
     @javax.annotation.Nonnull
     public RemoveRequestBuilder remove() {
         return new RemoveRequestBuilder(pathParameters, requestAdapter);

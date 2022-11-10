@@ -120,354 +120,354 @@ import java.util.HashMap;
 import java.util.Objects;
 /** The main entry point of the SDK, exposes the configuration and the fluent API. */
 public class BaseGraphServiceClient {
-    /** The admin property */
+    /** Provides operations to manage the admin singleton. */
     @javax.annotation.Nonnull
     public AdminRequestBuilder admin() {
         return new AdminRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agreementAcceptances property */
+    /** Provides operations to manage the collection of agreementAcceptance entities. */
     @javax.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
         return new AgreementAcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agreements property */
+    /** Provides operations to manage the collection of agreement entities. */
     @javax.annotation.Nonnull
     public AgreementsRequestBuilder agreements() {
         return new AgreementsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The appCatalogs property */
+    /** Provides operations to manage the appCatalogs singleton. */
     @javax.annotation.Nonnull
     public AppCatalogsRequestBuilder appCatalogs() {
         return new AppCatalogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The applications property */
+    /** Provides operations to manage the collection of application entities. */
     @javax.annotation.Nonnull
     public ApplicationsRequestBuilder applications() {
         return new ApplicationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The applicationTemplates property */
+    /** Provides operations to manage the collection of applicationTemplate entities. */
     @javax.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder applicationTemplates() {
         return new ApplicationTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The auditLogs property */
+    /** Provides operations to manage the auditLogRoot singleton. */
     @javax.annotation.Nonnull
     public AuditLogsRequestBuilder auditLogs() {
         return new AuditLogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authenticationMethodConfigurations property */
+    /** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
         return new AuthenticationMethodConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authenticationMethodsPolicy property */
+    /** Provides operations to manage the authenticationMethodsPolicy singleton. */
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The branding property */
+    /** Provides operations to manage the organizationalBranding singleton. */
     @javax.annotation.Nonnull
     public BrandingRequestBuilder branding() {
         return new BrandingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The certificateBasedAuthConfiguration property */
+    /** Provides operations to manage the collection of certificateBasedAuthConfiguration entities. */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The chats property */
+    /** Provides operations to manage the collection of chat entities. */
     @javax.annotation.Nonnull
     public ChatsRequestBuilder chats() {
         return new ChatsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The communications property */
+    /** Provides operations to manage the cloudCommunications singleton. */
     @javax.annotation.Nonnull
     public CommunicationsRequestBuilder communications() {
         return new CommunicationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The compliance property */
+    /** Provides operations to manage the compliance singleton. */
     @javax.annotation.Nonnull
     public ComplianceRequestBuilder compliance() {
         return new ComplianceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The connections property */
+    /** Provides operations to manage the collection of externalConnection entities. */
     @javax.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contacts property */
+    /** Provides operations to manage the collection of orgContact entities. */
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contracts property */
+    /** Provides operations to manage the collection of contract entities. */
     @javax.annotation.Nonnull
     public ContractsRequestBuilder contracts() {
         return new ContractsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dataPolicyOperations property */
+    /** Provides operations to manage the collection of dataPolicyOperation entities. */
     @javax.annotation.Nonnull
     public DataPolicyOperationsRequestBuilder dataPolicyOperations() {
         return new DataPolicyOperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceAppManagement property */
+    /** Provides operations to manage the deviceAppManagement singleton. */
     @javax.annotation.Nonnull
     public DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new DeviceAppManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceManagement property */
+    /** Provides operations to manage the deviceManagement singleton. */
     @javax.annotation.Nonnull
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The devices property */
+    /** Provides operations to manage the collection of device entities. */
     @javax.annotation.Nonnull
     public DevicesRequestBuilder devices() {
         return new DevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directory property */
+    /** Provides operations to manage the directory singleton. */
     @javax.annotation.Nonnull
     public DirectoryRequestBuilder directory() {
         return new DirectoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directoryObjects property */
+    /** Provides operations to manage the collection of directoryObject entities. */
     @javax.annotation.Nonnull
     public DirectoryObjectsRequestBuilder directoryObjects() {
         return new DirectoryObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directoryRoles property */
+    /** Provides operations to manage the collection of directoryRole entities. */
     @javax.annotation.Nonnull
     public DirectoryRolesRequestBuilder directoryRoles() {
         return new DirectoryRolesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directoryRoleTemplates property */
+    /** Provides operations to manage the collection of directoryRoleTemplate entities. */
     @javax.annotation.Nonnull
     public DirectoryRoleTemplatesRequestBuilder directoryRoleTemplates() {
         return new DirectoryRoleTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The domainDnsRecords property */
+    /** Provides operations to manage the collection of domainDnsRecord entities. */
     @javax.annotation.Nonnull
     public DomainDnsRecordsRequestBuilder domainDnsRecords() {
         return new DomainDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The domains property */
+    /** Provides operations to manage the collection of domain entities. */
     @javax.annotation.Nonnull
     public DomainsRequestBuilder domains() {
         return new DomainsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The drive property */
+    /** Provides operations to manage the drive singleton. */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The drives property */
+    /** Provides operations to manage the collection of drive entities. */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The education property */
+    /** Provides operations to manage the educationRoot singleton. */
     @javax.annotation.Nonnull
     public EducationRequestBuilder education() {
         return new EducationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The external property */
+    /** Provides operations to manage the external singleton. */
     @javax.annotation.Nonnull
     public ExternalRequestBuilder external() {
         return new ExternalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The groupLifecyclePolicies property */
+    /** Provides operations to manage the collection of groupLifecyclePolicy entities. */
     @javax.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
         return new GroupLifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The groups property */
+    /** Provides operations to manage the collection of group entities. */
     @javax.annotation.Nonnull
     public GroupsRequestBuilder groups() {
         return new GroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The groupSettings property */
+    /** Provides operations to manage the collection of groupSetting entities. */
     @javax.annotation.Nonnull
     public GroupSettingsRequestBuilder groupSettings() {
         return new GroupSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The groupSettingTemplates property */
+    /** Provides operations to manage the collection of groupSettingTemplate entities. */
     @javax.annotation.Nonnull
     public GroupSettingTemplatesRequestBuilder groupSettingTemplates() {
         return new GroupSettingTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identity property */
+    /** Provides operations to manage the identityContainer singleton. */
     @javax.annotation.Nonnull
     public IdentityRequestBuilder identity() {
         return new IdentityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identityGovernance property */
+    /** Provides operations to manage the identityGovernance singleton. */
     @javax.annotation.Nonnull
     public IdentityGovernanceRequestBuilder identityGovernance() {
         return new IdentityGovernanceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identityProtection property */
+    /** Provides operations to manage the identityProtectionRoot singleton. */
     @javax.annotation.Nonnull
     public IdentityProtectionRequestBuilder identityProtection() {
         return new IdentityProtectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identityProviders property */
+    /** Provides operations to manage the collection of identityProvider entities. */
     @javax.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The informationProtection property */
+    /** Provides operations to manage the informationProtection singleton. */
     @javax.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The invitations property */
+    /** Provides operations to manage the collection of invitation entities. */
     @javax.annotation.Nonnull
     public InvitationsRequestBuilder invitations() {
         return new InvitationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The localizations property */
+    /** Provides operations to manage the collection of organizationalBrandingLocalization entities. */
     @javax.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
         return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The me property */
+    /** Provides operations to manage the user singleton. */
     @javax.annotation.Nonnull
     public MeRequestBuilder me() {
         return new MeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The oauth2PermissionGrants property */
+    /** Provides operations to manage the collection of oAuth2PermissionGrant entities. */
     @javax.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
         return new Oauth2PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The organization property */
+    /** Provides operations to manage the collection of organization entities. */
     @javax.annotation.Nonnull
     public OrganizationRequestBuilder organization() {
         return new OrganizationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The permissionGrants property */
+    /** Provides operations to manage the collection of resourceSpecificPermissionGrant entities. */
     @javax.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The places property */
+    /** Provides operations to manage the collection of place entities. */
     @javax.annotation.Nonnull
     public PlacesRequestBuilder places() {
         return new PlacesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The planner property */
+    /** Provides operations to manage the planner singleton. */
     @javax.annotation.Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The policies property */
+    /** Provides operations to manage the policyRoot singleton. */
     @javax.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The print property */
+    /** Provides operations to manage the print singleton. */
     @javax.annotation.Nonnull
     public PrintRequestBuilder print() {
         return new PrintRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The privacy property */
+    /** Provides operations to manage the privacy singleton. */
     @javax.annotation.Nonnull
     public PrivacyRequestBuilder privacy() {
         return new PrivacyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The reports property */
+    /** Provides operations to manage the reportRoot singleton. */
     @javax.annotation.Nonnull
     public ReportsRequestBuilder reports() {
         return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleManagement property */
+    /** Provides operations to manage the roleManagement singleton. */
     @javax.annotation.Nonnull
     public RoleManagementRequestBuilder roleManagement() {
         return new RoleManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The schemaExtensions property */
+    /** Provides operations to manage the collection of schemaExtension entities. */
     @javax.annotation.Nonnull
     public SchemaExtensionsRequestBuilder schemaExtensions() {
         return new SchemaExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The scopedRoleMemberships property */
+    /** Provides operations to manage the collection of scopedRoleMembership entities. */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipsRequestBuilder scopedRoleMemberships() {
         return new ScopedRoleMembershipsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The search property */
+    /** Provides operations to manage the searchEntity singleton. */
     @javax.annotation.Nonnull
     public SearchRequestBuilder search() {
         return new SearchRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The security property */
+    /** Provides operations to manage the security singleton. */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The servicePrincipals property */
+    /** Provides operations to manage the collection of servicePrincipal entities. */
     @javax.annotation.Nonnull
     public ServicePrincipalsRequestBuilder servicePrincipals() {
         return new ServicePrincipalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shares property */
+    /** Provides operations to manage the collection of sharedDriveItem entities. */
     @javax.annotation.Nonnull
     public SharesRequestBuilder shares() {
         return new SharesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sites property */
+    /** Provides operations to manage the collection of site entities. */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The solutions property */
+    /** Provides operations to manage the solutionsRoot singleton. */
     @javax.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The subscribedSkus property */
+    /** Provides operations to manage the collection of subscribedSku entities. */
     @javax.annotation.Nonnull
     public SubscribedSkusRequestBuilder subscribedSkus() {
         return new SubscribedSkusRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The subscriptions property */
+    /** Provides operations to manage the collection of subscription entities. */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The teams property */
+    /** Provides operations to manage the collection of team entities. */
     @javax.annotation.Nonnull
     public TeamsRequestBuilder teams() {
         return new TeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The teamsTemplates property */
+    /** Provides operations to manage the collection of teamsTemplate entities. */
     @javax.annotation.Nonnull
     public TeamsTemplatesRequestBuilder teamsTemplates() {
         return new TeamsTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The teamwork property */
+    /** Provides operations to manage the teamwork singleton. */
     @javax.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The users property */
+    /** Provides operations to manage the collection of user entities. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The workbooks property */
+    /** Provides operations to manage the collection of driveItem entities. */
     @javax.annotation.Nonnull
     public WorkbooksRequestBuilder workbooks() {
         return new WorkbooksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.agreementAcceptances.item collection
+     * Provides operations to manage the collection of agreementAcceptance entities.
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -479,7 +479,7 @@ public class BaseGraphServiceClient {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.agreements.item collection
+     * Provides operations to manage the collection of agreement entities.
      * @param id Unique identifier of the item
      * @return a AgreementItemRequestBuilder
      */
@@ -491,7 +491,7 @@ public class BaseGraphServiceClient {
         return new AgreementItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applications.item collection
+     * Provides operations to manage the collection of application entities.
      * @param id Unique identifier of the item
      * @return a ApplicationItemRequestBuilder
      */
@@ -503,7 +503,7 @@ public class BaseGraphServiceClient {
         return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.applicationTemplates.item collection
+     * Provides operations to manage the collection of applicationTemplate entities.
      * @param id Unique identifier of the item
      * @return a ApplicationTemplateItemRequestBuilder
      */
@@ -515,7 +515,7 @@ public class BaseGraphServiceClient {
         return new ApplicationTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.authenticationMethodConfigurations.item collection
+     * Provides operations to manage the collection of authenticationMethodConfiguration entities.
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */
@@ -527,7 +527,7 @@ public class BaseGraphServiceClient {
         return new AuthenticationMethodConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.certificateBasedAuthConfiguration.item collection
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
      * @param id Unique identifier of the item
      * @return a CertificateBasedAuthConfigurationItemRequestBuilder
      */
@@ -539,7 +539,7 @@ public class BaseGraphServiceClient {
         return new CertificateBasedAuthConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item collection
+     * Provides operations to manage the collection of chat entities.
      * @param id Unique identifier of the item
      * @return a ChatItemRequestBuilder
      */
@@ -551,7 +551,7 @@ public class BaseGraphServiceClient {
         return new ChatItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.connections.item collection
+     * Provides operations to manage the collection of externalConnection entities.
      * @param id Unique identifier of the item
      * @return a ExternalConnectionItemRequestBuilder
      */
@@ -582,7 +582,7 @@ public class BaseGraphServiceClient {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.contacts.item collection
+     * Provides operations to manage the collection of orgContact entities.
      * @param id Unique identifier of the item
      * @return a OrgContactItemRequestBuilder
      */
@@ -594,7 +594,7 @@ public class BaseGraphServiceClient {
         return new OrgContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.contracts.item collection
+     * Provides operations to manage the collection of contract entities.
      * @param id Unique identifier of the item
      * @return a ContractItemRequestBuilder
      */
@@ -606,7 +606,7 @@ public class BaseGraphServiceClient {
         return new ContractItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.dataPolicyOperations.item collection
+     * Provides operations to manage the collection of dataPolicyOperation entities.
      * @param id Unique identifier of the item
      * @return a DataPolicyOperationItemRequestBuilder
      */
@@ -618,7 +618,7 @@ public class BaseGraphServiceClient {
         return new DataPolicyOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.devices.item collection
+     * Provides operations to manage the collection of device entities.
      * @param id Unique identifier of the item
      * @return a DeviceItemRequestBuilder
      */
@@ -630,7 +630,7 @@ public class BaseGraphServiceClient {
         return new DeviceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directoryObjects.item collection
+     * Provides operations to manage the collection of directoryObject entities.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -642,7 +642,7 @@ public class BaseGraphServiceClient {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directoryRoles.item collection
+     * Provides operations to manage the collection of directoryRole entities.
      * @param id Unique identifier of the item
      * @return a DirectoryRoleItemRequestBuilder
      */
@@ -654,7 +654,7 @@ public class BaseGraphServiceClient {
         return new DirectoryRoleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directoryRoleTemplates.item collection
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
      * @param id Unique identifier of the item
      * @return a DirectoryRoleTemplateItemRequestBuilder
      */
@@ -666,7 +666,7 @@ public class BaseGraphServiceClient {
         return new DirectoryRoleTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domainDnsRecords.item collection
+     * Provides operations to manage the collection of domainDnsRecord entities.
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */
@@ -678,7 +678,7 @@ public class BaseGraphServiceClient {
         return new DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domains.item collection
+     * Provides operations to manage the collection of domain entities.
      * @param id Unique identifier of the item
      * @return a DomainItemRequestBuilder
      */
@@ -690,7 +690,7 @@ public class BaseGraphServiceClient {
         return new DomainItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.drives.item collection
+     * Provides operations to manage the collection of drive entities.
      * @param id Unique identifier of the item
      * @return a DriveItemRequestBuilder
      */
@@ -702,7 +702,7 @@ public class BaseGraphServiceClient {
         return new DriveItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groupLifecyclePolicies.item collection
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
      * @param id Unique identifier of the item
      * @return a GroupLifecyclePolicyItemRequestBuilder
      */
@@ -714,7 +714,7 @@ public class BaseGraphServiceClient {
         return new GroupLifecyclePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item collection
+     * Provides operations to manage the collection of group entities.
      * @param id Unique identifier of the item
      * @return a GroupItemRequestBuilder
      */
@@ -726,7 +726,7 @@ public class BaseGraphServiceClient {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groupSettings.item collection
+     * Provides operations to manage the collection of groupSetting entities.
      * @param id Unique identifier of the item
      * @return a GroupSettingItemRequestBuilder
      */
@@ -738,7 +738,7 @@ public class BaseGraphServiceClient {
         return new GroupSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groupSettingTemplates.item collection
+     * Provides operations to manage the collection of groupSettingTemplate entities.
      * @param id Unique identifier of the item
      * @return a GroupSettingTemplateItemRequestBuilder
      */
@@ -750,7 +750,7 @@ public class BaseGraphServiceClient {
         return new GroupSettingTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityProviders.item collection
+     * Provides operations to manage the collection of identityProvider entities.
      * @param id Unique identifier of the item
      * @return a IdentityProviderItemRequestBuilder
      */
@@ -762,7 +762,7 @@ public class BaseGraphServiceClient {
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.invitations.item collection
+     * Provides operations to manage the collection of invitation entities.
      * @param id Unique identifier of the item
      * @return a InvitationItemRequestBuilder
      */
@@ -774,7 +774,7 @@ public class BaseGraphServiceClient {
         return new InvitationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.localizations.item collection
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
      * @param id Unique identifier of the item
      * @return a OrganizationalBrandingLocalizationItemRequestBuilder
      */
@@ -786,7 +786,7 @@ public class BaseGraphServiceClient {
         return new OrganizationalBrandingLocalizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.oauth2PermissionGrants.item collection
+     * Provides operations to manage the collection of oAuth2PermissionGrant entities.
      * @param id Unique identifier of the item
      * @return a OAuth2PermissionGrantItemRequestBuilder
      */
@@ -798,7 +798,7 @@ public class BaseGraphServiceClient {
         return new OAuth2PermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.organization.item collection
+     * Provides operations to manage the collection of organization entities.
      * @param id Unique identifier of the item
      * @return a OrganizationItemRequestBuilder
      */
@@ -810,7 +810,7 @@ public class BaseGraphServiceClient {
         return new OrganizationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.permissionGrants.item collection
+     * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
      * @param id Unique identifier of the item
      * @return a ResourceSpecificPermissionGrantItemRequestBuilder
      */
@@ -822,7 +822,7 @@ public class BaseGraphServiceClient {
         return new ResourceSpecificPermissionGrantItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.places.item collection
+     * Provides operations to manage the collection of place entities.
      * @param id Unique identifier of the item
      * @return a PlaceItemRequestBuilder
      */
@@ -834,7 +834,7 @@ public class BaseGraphServiceClient {
         return new PlaceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.schemaExtensions.item collection
+     * Provides operations to manage the collection of schemaExtension entities.
      * @param id Unique identifier of the item
      * @return a SchemaExtensionItemRequestBuilder
      */
@@ -846,7 +846,7 @@ public class BaseGraphServiceClient {
         return new SchemaExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.scopedRoleMemberships.item collection
+     * Provides operations to manage the collection of scopedRoleMembership entities.
      * @param id Unique identifier of the item
      * @return a ScopedRoleMembershipItemRequestBuilder
      */
@@ -858,7 +858,7 @@ public class BaseGraphServiceClient {
         return new ScopedRoleMembershipItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.servicePrincipals.item collection
+     * Provides operations to manage the collection of servicePrincipal entities.
      * @param id Unique identifier of the item
      * @return a ServicePrincipalItemRequestBuilder
      */
@@ -870,7 +870,7 @@ public class BaseGraphServiceClient {
         return new ServicePrincipalItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.shares.item collection
+     * Provides operations to manage the collection of sharedDriveItem entities.
      * @param id Unique identifier of the item
      * @return a SharedDriveItemItemRequestBuilder
      */
@@ -882,7 +882,7 @@ public class BaseGraphServiceClient {
         return new SharedDriveItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item collection
+     * Provides operations to manage the collection of site entities.
      * @param id Unique identifier of the item
      * @return a SiteItemRequestBuilder
      */
@@ -894,7 +894,7 @@ public class BaseGraphServiceClient {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.subscribedSkus.item collection
+     * Provides operations to manage the collection of subscribedSku entities.
      * @param id Unique identifier of the item
      * @return a SubscribedSkuItemRequestBuilder
      */
@@ -906,7 +906,7 @@ public class BaseGraphServiceClient {
         return new SubscribedSkuItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.subscriptions.item collection
+     * Provides operations to manage the collection of subscription entities.
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */
@@ -918,7 +918,7 @@ public class BaseGraphServiceClient {
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teams.item collection
+     * Provides operations to manage the collection of team entities.
      * @param id Unique identifier of the item
      * @return a TeamItemRequestBuilder
      */
@@ -930,7 +930,7 @@ public class BaseGraphServiceClient {
         return new TeamItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.teamsTemplates.item collection
+     * Provides operations to manage the collection of teamsTemplate entities.
      * @param id Unique identifier of the item
      * @return a TeamsTemplateItemRequestBuilder
      */
@@ -942,7 +942,7 @@ public class BaseGraphServiceClient {
         return new TeamsTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item collection
+     * Provides operations to manage the collection of user entities.
      * @param id Unique identifier of the item
      * @return a UserItemRequestBuilder
      */
@@ -954,7 +954,7 @@ public class BaseGraphServiceClient {
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.workbooks.item collection
+     * Provides operations to manage the collection of driveItem entities.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */

@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity. */
 public class AccessReviewHistoryDefinitionItemRequestBuilder {
-    /** The instances property */
+    /** Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity. */
     @javax.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.historyDefinitions.item.instances.item collection
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewHistoryInstanceItemRequestBuilder
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to endpoint. */
+/** Provides operations to call the instantiate method. */
 public class Endpoint extends DirectoryObject implements Parsable {
     /** The capability property */
     private String _capability;

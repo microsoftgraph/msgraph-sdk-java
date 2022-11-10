@@ -26,29 +26,29 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the cloudCommunications singleton. */
 public class CommunicationsRequestBuilder {
-    /** The callRecords property */
+    /** Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity. */
     @javax.annotation.Nonnull
     public CallRecordsRequestBuilder callRecords() {
         return new CallRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The calls property */
+    /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
     @javax.annotation.Nonnull
     public CallsRequestBuilder calls() {
         return new CallsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPresencesByUserId property */
+    /** Provides operations to call the getPresencesByUserId method. */
     @javax.annotation.Nonnull
     public GetPresencesByUserIdRequestBuilder getPresencesByUserId() {
         return new GetPresencesByUserIdRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The onlineMeetings property */
+    /** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
     @javax.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
         return new OnlineMeetingsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The presences property */
+    /** Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity. */
     @javax.annotation.Nonnull
     public PresencesRequestBuilder presences() {
         return new PresencesRequestBuilder(pathParameters, requestAdapter);
@@ -58,7 +58,7 @@ public class CommunicationsRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.callRecords.item collection
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
      * @param id Unique identifier of the item
      * @return a CallRecordItemRequestBuilder
      */
@@ -70,7 +70,7 @@ public class CommunicationsRequestBuilder {
         return new CallRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.calls.item collection
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
      * @param id Unique identifier of the item
      * @return a CallItemRequestBuilder
      */
@@ -213,7 +213,7 @@ public class CommunicationsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.onlineMeetings.item collection
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
      * @param id Unique identifier of the item
      * @return a OnlineMeetingItemRequestBuilder
      */
@@ -267,7 +267,7 @@ public class CommunicationsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.communications.presences.item collection
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
      * @param id Unique identifier of the item
      * @return a PresenceItemRequestBuilder
      */

@@ -30,46 +30,46 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
 public class ChannelItemRequestBuilder {
-    /** The completeMigration property */
+    /** Provides operations to call the completeMigration method. */
     @javax.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The filesFolder property */
+    /** Provides operations to manage the filesFolder property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messages property */
+    /** Provides operations to manage the messages property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The provisionEmail property */
+    /** Provides operations to call the provisionEmail method. */
     @javax.annotation.Nonnull
     public ProvisionEmailRequestBuilder provisionEmail() {
         return new ProvisionEmailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeEmail property */
+    /** Provides operations to call the removeEmail method. */
     @javax.annotation.Nonnull
     public RemoveEmailRequestBuilder removeEmail() {
         return new RemoveEmailRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sharedWithTeams property */
+    /** Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tabs property */
+    /** Provides operations to manage the tabs property of the microsoft.graph.channel entity. */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
@@ -283,7 +283,7 @@ public class ChannelItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.joinedTeams.item.channels.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -295,7 +295,7 @@ public class ChannelItemRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.joinedTeams.item.channels.item.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
@@ -349,7 +349,7 @@ public class ChannelItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.joinedTeams.item.channels.item.sharedWithTeams.item collection
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a SharedWithChannelTeamInfoItemRequestBuilder
      */
@@ -361,7 +361,7 @@ public class ChannelItemRequestBuilder {
         return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.joinedTeams.item.channels.item.tabs.item collection
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */

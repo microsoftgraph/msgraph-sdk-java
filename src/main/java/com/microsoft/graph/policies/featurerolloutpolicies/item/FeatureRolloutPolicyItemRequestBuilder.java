@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
 public class FeatureRolloutPolicyItemRequestBuilder {
-    /** The appliesTo property */
+    /** Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity. */
     @javax.annotation.Nonnull
     public AppliesToRequestBuilder appliesTo() {
         return new AppliesToRequestBuilder(pathParameters, requestAdapter);

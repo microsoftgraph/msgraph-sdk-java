@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the calendarGroups property of the microsoft.graph.user entity. */
 public class CalendarGroupItemRequestBuilder {
-    /** The calendars property */
+    /** Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity. */
     @javax.annotation.Nonnull
     public CalendarsRequestBuilder calendars() {
         return new CalendarsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class CalendarGroupItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.calendarGroups.item.calendars.item collection
+     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
      * @param id Unique identifier of the item
      * @return a CalendarItemRequestBuilder
      */

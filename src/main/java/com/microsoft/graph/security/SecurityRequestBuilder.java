@@ -25,17 +25,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the security singleton. */
 public class SecurityRequestBuilder {
-    /** The alerts property */
+    /** Provides operations to manage the alerts property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The attackSimulation property */
+    /** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public AttackSimulationRequestBuilder attackSimulation() {
         return new AttackSimulationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The cases property */
+    /** Provides operations to manage the cases property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public CasesRequestBuilder cases() {
         return new CasesRequestBuilder(pathParameters, requestAdapter);
@@ -44,12 +44,12 @@ public class SecurityRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The secureScoreControlProfiles property */
+    /** Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfilesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The secureScores property */
+    /** Provides operations to manage the secureScores property of the microsoft.graph.security entity. */
     @javax.annotation.Nonnull
     public SecureScoresRequestBuilder secureScores() {
         return new SecureScoresRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +57,7 @@ public class SecurityRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.security.alerts.item collection
+     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @param id Unique identifier of the item
      * @return a AlertItemRequestBuilder
      */
@@ -242,7 +242,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.secureScoreControlProfiles.item collection
+     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
      * @param id Unique identifier of the item
      * @return a SecureScoreControlProfileItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class SecurityRequestBuilder {
         return new SecureScoreControlProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.secureScores.item collection
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
      * @param id Unique identifier of the item
      * @return a SecureScoreItemRequestBuilder
      */

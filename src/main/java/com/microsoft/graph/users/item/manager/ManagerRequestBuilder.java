@@ -20,7 +20,7 @@ import java.util.Objects;
 public class ManagerRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    /** Provides operations to manage the collection of user entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

@@ -23,24 +23,24 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the externalSponsors property of the microsoft.graph.connectedOrganization entity. */
 public class ExternalSponsorsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getAvailableExtensionProperties property */
+    /** Provides operations to call the getAvailableExtensionProperties method. */
     @javax.annotation.Nonnull
     public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
         return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getByIds property */
+    /** Provides operations to call the getByIds method. */
     @javax.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
         return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    /** Provides operations to manage the collection of identityGovernance entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
@@ -49,7 +49,7 @@ public class ExternalSponsorsRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The validateProperties property */
+    /** Provides operations to call the validateProperties method. */
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);

@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity. */
 public class PinnedChatMessageInfoItemRequestBuilder {
-    /** The message property */
+    /** Provides operations to manage the message property of the microsoft.graph.pinnedChatMessageInfo entity. */
     @javax.annotation.Nonnull
     public MessageRequestBuilder message() {
         return new MessageRequestBuilder(pathParameters, requestAdapter);

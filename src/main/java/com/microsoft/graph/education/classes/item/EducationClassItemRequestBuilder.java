@@ -29,32 +29,32 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the classes property of the microsoft.graph.educationRoot entity. */
 public class EducationClassItemRequestBuilder {
-    /** The assignmentCategories property */
+    /** Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public AssignmentCategoriesRequestBuilder assignmentCategories() {
         return new AssignmentCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentDefaults property */
+    /** Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public AssignmentDefaultsRequestBuilder assignmentDefaults() {
         return new AssignmentDefaultsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentSettings property */
+    /** Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public AssignmentSettingsRequestBuilder assignmentSettings() {
         return new AssignmentSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Provides operations to manage the group property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -63,12 +63,12 @@ public class EducationClassItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The schools property */
+    /** Provides operations to manage the schools property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The teachers property */
+    /** Provides operations to manage the teachers property of the microsoft.graph.educationClass entity. */
     @javax.annotation.Nonnull
     public TeachersRequestBuilder teachers() {
         return new TeachersRequestBuilder(pathParameters, requestAdapter);
@@ -76,7 +76,7 @@ public class EducationClassItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignmentCategories.item collection
+     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
      * @param id Unique identifier of the item
      * @return a EducationCategoryItemRequestBuilder
      */
@@ -88,7 +88,7 @@ public class EducationClassItemRequestBuilder {
         return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
      * @param id Unique identifier of the item
      * @return a EducationAssignmentItemRequestBuilder
      */
@@ -352,7 +352,7 @@ public class EducationClassItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.schools.item collection
+     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      * @param id Unique identifier of the item
      * @return a EducationSchoolItemRequestBuilder
      */

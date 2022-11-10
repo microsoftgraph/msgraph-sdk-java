@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of applicationTemplate entities. */
 public class ApplicationTemplateItemRequestBuilder {
-    /** The instantiate property */
+    /** Provides operations to call the instantiate method. */
     @javax.annotation.Nonnull
     public InstantiateRequestBuilder instantiate() {
         return new InstantiateRequestBuilder(pathParameters, requestAdapter);

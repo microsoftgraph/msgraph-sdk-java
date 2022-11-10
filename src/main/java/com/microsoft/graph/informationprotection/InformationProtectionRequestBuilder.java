@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the informationProtection singleton. */
 public class InformationProtectionRequestBuilder {
-    /** The bitlocker property */
+    /** Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity. */
     @javax.annotation.Nonnull
     public BitlockerRequestBuilder bitlocker() {
         return new BitlockerRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class InformationProtectionRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The threatAssessmentRequests property */
+    /** Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity. */
     @javax.annotation.Nonnull
     public ThreatAssessmentRequestsRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -210,7 +210,7 @@ public class InformationProtectionRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.informationProtection.threatAssessmentRequests.item collection
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
      * @param id Unique identifier of the item
      * @return a ThreatAssessmentRequestItemRequestBuilder
      */

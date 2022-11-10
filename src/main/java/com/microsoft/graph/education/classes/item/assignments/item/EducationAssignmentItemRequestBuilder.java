@@ -6,6 +6,7 @@ import com.microsoft.graph.education.classes.item.assignments.item.publish.Publi
 import com.microsoft.graph.education.classes.item.assignments.item.resources.item.EducationAssignmentResourceItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.rubric.RubricRequestBuilder;
+import com.microsoft.graph.education.classes.item.assignments.item.setupfeedbackresourcesfolder.SetUpFeedbackResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.item.EducationSubmissionItemRequestBuilder;
 import com.microsoft.graph.education.classes.item.assignments.item.submissions.SubmissionsRequestBuilder;
@@ -26,36 +27,41 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the assignments property of the microsoft.graph.educationClass entity. */
 public class EducationAssignmentItemRequestBuilder {
-    /** The categories property */
+    /** Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity. */
     @javax.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The publish property */
+    /** Provides operations to call the publish method. */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resources property */
+    /** Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity. */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The rubric property */
+    /** Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity. */
     @javax.annotation.Nonnull
     public RubricRequestBuilder rubric() {
         return new RubricRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The setUpResourcesFolder property */
+    /** Provides operations to call the setUpFeedbackResourcesFolder method. */
+    @javax.annotation.Nonnull
+    public SetUpFeedbackResourcesFolderRequestBuilder setUpFeedbackResourcesFolder() {
+        return new SetUpFeedbackResourcesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the setUpResourcesFolder method. */
     @javax.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
         return new SetUpResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The submissions property */
+    /** Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity. */
     @javax.annotation.Nonnull
     public SubmissionsRequestBuilder submissions() {
         return new SubmissionsRequestBuilder(pathParameters, requestAdapter);
@@ -315,7 +321,7 @@ public class EducationAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.resources.item collection
+     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
      * @param id Unique identifier of the item
      * @return a EducationAssignmentResourceItemRequestBuilder
      */
@@ -327,7 +333,7 @@ public class EducationAssignmentItemRequestBuilder {
         return new EducationAssignmentResourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.education.classes.item.assignments.item.submissions.item collection
+     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
      * @param id Unique identifier of the item
      * @return a EducationSubmissionItemRequestBuilder
      */

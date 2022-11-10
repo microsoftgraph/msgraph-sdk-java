@@ -21,7 +21,7 @@ import java.util.Objects;
 public class PlannerRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The plans property */
+    /** Provides operations to manage the plans property of the microsoft.graph.plannerGroup entity. */
     @javax.annotation.Nonnull
     public PlansRequestBuilder plans() {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.planner.plans.item collection
+     * Provides operations to manage the plans property of the microsoft.graph.plannerGroup entity.
      * @param id Unique identifier of the item
      * @return a PlannerPlanItemRequestBuilder
      */

@@ -5,8 +5,8 @@ import com.microsoft.graph.domains.item.domainnamereferences.item.DirectoryObjec
 import com.microsoft.graph.domains.item.federationconfiguration.FederationConfigurationRequestBuilder;
 import com.microsoft.graph.domains.item.federationconfiguration.item.InternalDomainFederationItemRequestBuilder;
 import com.microsoft.graph.domains.item.forcedelete.ForceDeleteRequestBuilder;
+import com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
-import com.microsoft.graph.domains.item.verificationdnsrecords.item.DomainDnsRecordItemRequestBuilder;
 import com.microsoft.graph.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
 import com.microsoft.graph.domains.item.verify.VerifyRequestBuilder;
 import com.microsoft.graph.models.Domain;
@@ -26,17 +26,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of domain entities. */
 public class DomainItemRequestBuilder {
-    /** The domainNameReferences property */
+    /** Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity. */
     @javax.annotation.Nonnull
     public DomainNameReferencesRequestBuilder domainNameReferences() {
         return new DomainNameReferencesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The federationConfiguration property */
+    /** Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity. */
     @javax.annotation.Nonnull
     public FederationConfigurationRequestBuilder federationConfiguration() {
         return new FederationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The forceDelete property */
+    /** Provides operations to call the forceDelete method. */
     @javax.annotation.Nonnull
     public ForceDeleteRequestBuilder forceDelete() {
         return new ForceDeleteRequestBuilder(pathParameters, requestAdapter);
@@ -45,19 +45,19 @@ public class DomainItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The serviceConfigurationRecords property */
+    /** Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity. */
     @javax.annotation.Nonnull
     public ServiceConfigurationRecordsRequestBuilder serviceConfigurationRecords() {
         return new ServiceConfigurationRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The verificationDnsRecords property */
+    /** Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity. */
     @javax.annotation.Nonnull
     public VerificationDnsRecordsRequestBuilder verificationDnsRecords() {
         return new VerificationDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The verify property */
+    /** Provides operations to call the verify method. */
     @javax.annotation.Nonnull
     public VerifyRequestBuilder verify() {
         return new VerifyRequestBuilder(pathParameters, requestAdapter);
@@ -222,7 +222,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domains.item.domainNameReferences.item collection
+     * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -234,7 +234,7 @@ public class DomainItemRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domains.item.federationConfiguration.item collection
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
      * @param id Unique identifier of the item
      * @return a InternalDomainFederationItemRequestBuilder
      */
@@ -327,7 +327,7 @@ public class DomainItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domains.item.serviceConfigurationRecords.item collection
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */
@@ -339,7 +339,7 @@ public class DomainItemRequestBuilder {
         return new com.microsoft.graph.domains.item.serviceconfigurationrecords.item.DomainDnsRecordItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.domains.item.verificationDnsRecords.item collection
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
      * @param id Unique identifier of the item
      * @return a DomainDnsRecordItemRequestBuilder
      */

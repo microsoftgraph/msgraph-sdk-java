@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity. */
 public class AppConsentRequestBuilder {
-    /** The appConsentRequests property */
+    /** Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity. */
     @javax.annotation.Nonnull
     public AppConsentRequestsRequestBuilder appConsentRequests() {
         return new AppConsentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class AppConsentRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item collection
+     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
      * @param id Unique identifier of the item
      * @return a AppConsentRequestItemRequestBuilder
      */

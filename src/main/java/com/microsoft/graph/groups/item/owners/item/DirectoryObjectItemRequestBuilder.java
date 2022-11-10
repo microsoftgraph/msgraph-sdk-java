@@ -12,43 +12,43 @@ import java.util.HashMap;
 import java.util.Objects;
 /** Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id} */
 public class DirectoryObjectItemRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The device property */
+    /** Casts the previous resource to device. */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The orgContact property */
+    /** Casts the previous resource to orgContact. */
     @javax.annotation.Nonnull
     public OrgContactRequestBuilder orgContact() {
         return new OrgContactRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    /** Provides operations to manage the collection of group entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);

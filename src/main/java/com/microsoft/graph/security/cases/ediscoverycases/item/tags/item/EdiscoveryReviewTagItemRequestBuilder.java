@@ -19,12 +19,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryReviewTagItemRequestBuilder {
-    /** The childTags property */
+    /** Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity. */
     @javax.annotation.Nonnull
     public ChildTagsRequestBuilder childTags() {
         return new ChildTagsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parent property */
+    /** Provides operations to manage the parent property of the microsoft.graph.security.ediscoveryReviewTag entity. */
     @javax.annotation.Nonnull
     public ParentRequestBuilder parent() {
         return new ParentRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +36,7 @@ public class EdiscoveryReviewTagItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.tags.item.childTags.item collection
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewTagItemRequestBuilder
      */

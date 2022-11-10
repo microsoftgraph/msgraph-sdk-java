@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
 public class UserFlowLanguagePageItemRequestBuilder {
-    /** The Content property */
+    /** Provides operations to manage the media for the identityContainer entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);

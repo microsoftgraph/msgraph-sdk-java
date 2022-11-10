@@ -52,7 +52,7 @@ public class AddLargeGalleryViewRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param body 
      * @return a RequestInformation
      */
@@ -61,7 +61,7 @@ public class AddLargeGalleryViewRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -85,7 +85,7 @@ public class AddLargeGalleryViewRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param body 
      * @return a CompletableFuture of addLargeGalleryViewOperation
      */
@@ -105,7 +105,7 @@ public class AddLargeGalleryViewRequestBuilder {
         }
     }
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of addLargeGalleryViewOperation

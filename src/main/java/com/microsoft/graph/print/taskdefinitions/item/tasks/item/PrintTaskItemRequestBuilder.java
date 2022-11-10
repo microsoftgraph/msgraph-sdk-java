@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity. */
 public class PrintTaskItemRequestBuilder {
-    /** The definition property */
+    /** Provides operations to manage the definition property of the microsoft.graph.printTask entity. */
     @javax.annotation.Nonnull
     public DefinitionRequestBuilder definition() {
         return new DefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -28,7 +28,7 @@ public class PrintTaskItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The trigger property */
+    /** Provides operations to manage the trigger property of the microsoft.graph.printTask entity. */
     @javax.annotation.Nonnull
     public TriggerRequestBuilder trigger() {
         return new TriggerRequestBuilder(pathParameters, requestAdapter);

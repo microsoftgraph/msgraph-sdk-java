@@ -24,17 +24,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the contactFolders property of the microsoft.graph.user entity. */
 public class ContactFolderItemRequestBuilder {
-    /** The childFolders property */
+    /** Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity. */
     @javax.annotation.Nonnull
     public ChildFoldersRequestBuilder childFolders() {
         return new ChildFoldersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The contacts property */
+    /** Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity. */
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The multiValueExtendedProperties property */
+    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity. */
     @javax.annotation.Nonnull
     public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
         return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +43,7 @@ public class ContactFolderItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The singleValueExtendedProperties property */
+    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity. */
     @javax.annotation.Nonnull
     public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
         return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +51,7 @@ public class ContactFolderItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.childFolders.item collection
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
      * @param id Unique identifier of the item
      * @return a ContactFolderItemRequestBuilder
      */
@@ -92,7 +92,7 @@ public class ContactFolderItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.contacts.item collection
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
      * @param id Unique identifier of the item
      * @return a ContactItemRequestBuilder
      */
@@ -273,7 +273,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param id Unique identifier of the item
      * @return a MultiValueLegacyExtendedPropertyItemRequestBuilder
      */
@@ -327,7 +327,7 @@ public class ContactFolderItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.contactFolders.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param id Unique identifier of the item
      * @return a SingleValueLegacyExtendedPropertyItemRequestBuilder
      */

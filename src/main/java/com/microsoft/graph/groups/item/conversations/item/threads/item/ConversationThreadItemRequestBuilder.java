@@ -22,12 +22,12 @@ import java.util.Objects;
 public class ConversationThreadItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The posts property */
+    /** Provides operations to manage the posts property of the microsoft.graph.conversationThread entity. */
     @javax.annotation.Nonnull
     public PostsRequestBuilder posts() {
         return new PostsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The reply property */
+    /** Provides operations to call the reply method. */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
@@ -277,7 +277,7 @@ public class ConversationThreadItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.conversations.item.threads.item.posts.item collection
+     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
      * @param id Unique identifier of the item
      * @return a PostItemRequestBuilder
      */

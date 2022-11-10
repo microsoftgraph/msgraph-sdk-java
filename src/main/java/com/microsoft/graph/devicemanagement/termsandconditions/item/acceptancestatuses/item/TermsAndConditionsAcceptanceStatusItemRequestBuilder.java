@@ -22,7 +22,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The termsAndConditions property */
+    /** Provides operations to manage the termsAndConditions property of the microsoft.graph.termsAndConditionsAcceptanceStatus entity. */
     @javax.annotation.Nonnull
     public TermsAndConditionsRequestBuilder termsAndConditions() {
         return new TermsAndConditionsRequestBuilder(pathParameters, requestAdapter);

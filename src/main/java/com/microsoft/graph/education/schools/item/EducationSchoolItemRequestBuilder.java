@@ -22,12 +22,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the schools property of the microsoft.graph.educationRoot entity. */
 public class EducationSchoolItemRequestBuilder {
-    /** The administrativeUnit property */
+    /** Provides operations to manage the administrativeUnit property of the microsoft.graph.educationSchool entity. */
     @javax.annotation.Nonnull
     public AdministrativeUnitRequestBuilder administrativeUnit() {
         return new AdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The classes property */
+    /** Provides operations to manage the classes property of the microsoft.graph.educationSchool entity. */
     @javax.annotation.Nonnull
     public ClassesRequestBuilder classes() {
         return new ClassesRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +38,7 @@ public class EducationSchoolItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The users property */
+    /** Provides operations to manage the users property of the microsoft.graph.educationSchool entity. */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);

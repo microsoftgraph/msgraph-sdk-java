@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity. */
 public class AccessReviewStageItemRequestBuilder {
-    /** The decisions property */
+    /** Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity. */
     @javax.annotation.Nonnull
     public DecisionsRequestBuilder decisions() {
         return new DecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class AccessReviewStageItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The stop property */
+    /** Provides operations to call the stop method. */
     @javax.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -157,7 +157,7 @@ public class AccessReviewStageItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item collection
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
      * @param id Unique identifier of the item
      * @return a AccessReviewInstanceDecisionItemItemRequestBuilder
      */

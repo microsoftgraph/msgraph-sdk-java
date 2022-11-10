@@ -29,27 +29,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity. */
 public class DeviceConfigurationItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceSettingStateSummaries property */
+    /** Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder deviceSettingStateSummaries() {
         return new DeviceSettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatuses property */
+    /** Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public DeviceStatusesRequestBuilder deviceStatuses() {
         return new DeviceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatusOverview property */
+    /** Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceStatusOverviewRequestBuilder(pathParameters, requestAdapter);
@@ -60,18 +60,18 @@ public class DeviceConfigurationItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userStatuses property */
+    /** Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public UserStatusesRequestBuilder userStatuses() {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The userStatusOverview property */
+    /** Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceConfiguration entity. */
     @javax.annotation.Nonnull
     public UserStatusOverviewRequestBuilder userStatusOverview() {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationAssignmentItemRequestBuilder
      */
@@ -242,7 +242,7 @@ public class DeviceConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceSettingStateSummaries.item collection
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
      * @param id Unique identifier of the item
      * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class DeviceConfigurationItemRequestBuilder {
         return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.deviceStatuses.item collection
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity.
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationDeviceStatusItemRequestBuilder
      */
@@ -357,7 +357,7 @@ public class DeviceConfigurationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceConfigurations.item.userStatuses.item collection
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
      * @param id Unique identifier of the item
      * @return a DeviceConfigurationUserStatusItemRequestBuilder
      */

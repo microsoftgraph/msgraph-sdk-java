@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
 public class PermissionItemRequestBuilder {
-    /** The grant property */
+    /** Provides operations to call the grant method. */
     @javax.annotation.Nonnull
     public GrantRequestBuilder grant() {
         return new GrantRequestBuilder(pathParameters, requestAdapter);

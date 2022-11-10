@@ -23,7 +23,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The tasks property */
+    /** Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity. */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class PrintTaskDefinitionItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.taskDefinitions.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
      * @param id Unique identifier of the item
      * @return a PrintTaskItemRequestBuilder
      */

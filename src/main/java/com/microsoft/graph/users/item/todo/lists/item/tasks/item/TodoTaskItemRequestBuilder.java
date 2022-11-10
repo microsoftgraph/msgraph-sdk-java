@@ -27,27 +27,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity. */
 public class TodoTaskItemRequestBuilder {
-    /** The attachments property */
+    /** Provides operations to manage the attachments property of the microsoft.graph.todoTask entity. */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The attachmentSessions property */
+    /** Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity. */
     @javax.annotation.Nonnull
     public AttachmentSessionsRequestBuilder attachmentSessions() {
         return new AttachmentSessionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checklistItems property */
+    /** Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity. */
     @javax.annotation.Nonnull
     public ChecklistItemsRequestBuilder checklistItems() {
         return new ChecklistItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The extensions property */
+    /** Provides operations to manage the extensions property of the microsoft.graph.todoTask entity. */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The linkedResources property */
+    /** Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity. */
     @javax.annotation.Nonnull
     public LinkedResourcesRequestBuilder linkedResources() {
         return new LinkedResourcesRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +59,7 @@ public class TodoTaskItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item.tasks.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
      * @param id Unique identifier of the item
      * @return a AttachmentBaseItemRequestBuilder
      */
@@ -71,7 +71,7 @@ public class TodoTaskItemRequestBuilder {
         return new AttachmentBaseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item.tasks.item.attachmentSessions.item collection
+     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
      * @param id Unique identifier of the item
      * @return a AttachmentSessionItemRequestBuilder
      */
@@ -83,7 +83,7 @@ public class TodoTaskItemRequestBuilder {
         return new AttachmentSessionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item.tasks.item.checklistItems.item collection
+     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
      * @param id Unique identifier of the item
      * @return a ChecklistItemItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class TodoTaskItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item.tasks.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTask entity.
      * @param id Unique identifier of the item
      * @return a ExtensionItemRequestBuilder
      */
@@ -305,7 +305,7 @@ public class TodoTaskItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.todo.lists.item.tasks.item.linkedResources.item collection
+     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
      * @param id Unique identifier of the item
      * @return a LinkedResourceItemRequestBuilder
      */

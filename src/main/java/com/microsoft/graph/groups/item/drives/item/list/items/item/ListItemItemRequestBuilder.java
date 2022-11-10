@@ -26,22 +26,22 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the items property of the microsoft.graph.list entity. */
 public class ListItemItemRequestBuilder {
-    /** The analytics property */
+    /** Provides operations to manage the analytics property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The documentSetVersions property */
+    /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public DocumentSetVersionsRequestBuilder documentSetVersions() {
         return new DocumentSetVersionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The driveItem property */
+    /** Provides operations to manage the driveItem property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The fields property */
+    /** Provides operations to manage the fields property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public FieldsRequestBuilder fields() {
         return new FieldsRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +52,7 @@ public class ListItemItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The versions property */
+    /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
@@ -217,7 +217,7 @@ public class ListItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.items.item.documentSetVersions.item collection
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
      * @param id Unique identifier of the item
      * @return a DocumentSetVersionItemRequestBuilder
      */
@@ -332,7 +332,7 @@ public class ListItemItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.list.items.item.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
      * @param id Unique identifier of the item
      * @return a ListItemVersionItemRequestBuilder
      */

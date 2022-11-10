@@ -25,7 +25,7 @@ public class AppConsentRequestItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userConsentRequests property */
+    /** Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity. */
     @javax.annotation.Nonnull
     public UserConsentRequestsRequestBuilder userConsentRequests() {
         return new UserConsentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class AppConsentRequestItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item collection
+     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
      * @param id Unique identifier of the item
      * @return a UserConsentRequestItemRequestBuilder
      */

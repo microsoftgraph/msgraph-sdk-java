@@ -27,19 +27,19 @@ public class InsightsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The shared property */
+    /** Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity. */
     @javax.annotation.Nonnull
     public SharedRequestBuilder shared() {
         return new SharedRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The trending property */
+    /** Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity. */
     @javax.annotation.Nonnull
     public TrendingRequestBuilder trending() {
         return new TrendingRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The used property */
+    /** Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity. */
     @javax.annotation.Nonnull
     public UsedRequestBuilder used() {
         return new UsedRequestBuilder(pathParameters, requestAdapter);
@@ -285,7 +285,7 @@ public class InsightsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.insights.shared.item collection
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
      * @param id Unique identifier of the item
      * @return a SharedInsightItemRequestBuilder
      */
@@ -297,7 +297,7 @@ public class InsightsRequestBuilder {
         return new SharedInsightItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.insights.trending.item collection
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
      * @param id Unique identifier of the item
      * @return a TrendingItemRequestBuilder
      */
@@ -309,7 +309,7 @@ public class InsightsRequestBuilder {
         return new TrendingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.insights.used.item collection
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
      * @param id Unique identifier of the item
      * @return a UsedInsightItemRequestBuilder
      */

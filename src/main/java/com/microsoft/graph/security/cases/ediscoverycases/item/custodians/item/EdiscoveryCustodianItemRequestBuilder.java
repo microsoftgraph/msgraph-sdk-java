@@ -29,53 +29,53 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryCustodianItemRequestBuilder {
-    /** The activate property */
+    /** Provides operations to call the activate method. */
     @javax.annotation.Nonnull
     public ActivateRequestBuilder activate() {
         return new ActivateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The applyHold property */
+    /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
     public ApplyHoldRequestBuilder applyHold() {
         return new ApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The lastIndexOperation property */
+    /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
         return new LastIndexOperationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The release property */
+    /** Provides operations to call the release method. */
     @javax.annotation.Nonnull
     public ReleaseRequestBuilder release() {
         return new ReleaseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The removeHold property */
+    /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
     public RemoveHoldRequestBuilder removeHold() {
         return new RemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The siteSources property */
+    /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public SiteSourcesRequestBuilder siteSources() {
         return new SiteSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unifiedGroupSources property */
+    /** Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public UnifiedGroupSourcesRequestBuilder unifiedGroupSources() {
         return new UnifiedGroupSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The updateIndex property */
+    /** Provides operations to call the updateIndex method. */
     @javax.annotation.Nonnull
     public UpdateIndexRequestBuilder updateIndex() {
         return new UpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userSources property */
+    /** Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
     public UserSourcesRequestBuilder userSources() {
         return new UserSourcesRequestBuilder(pathParameters, requestAdapter);
@@ -321,7 +321,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.siteSources.item collection
+     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param id Unique identifier of the item
      * @return a SiteSourceItemRequestBuilder
      */
@@ -333,7 +333,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         return new SiteSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.unifiedGroupSources.item collection
+     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param id Unique identifier of the item
      * @return a UnifiedGroupSourceItemRequestBuilder
      */
@@ -345,7 +345,7 @@ public class EdiscoveryCustodianItemRequestBuilder {
         return new UnifiedGroupSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.custodians.item.userSources.item collection
+     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param id Unique identifier of the item
      * @return a UserSourceItemRequestBuilder
      */

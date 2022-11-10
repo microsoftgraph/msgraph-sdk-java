@@ -10,7 +10,7 @@ import java.util.Objects;
 public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /** The name of the timeOffReason. Required. */
     private String _displayName;
-    /** Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required. */
+    /** Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required. */
     private TimeOffReasonIconType _iconType;
     /** Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required. */
     private Boolean _isActive;
@@ -55,7 +55,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
         }};
     }
     /**
-     * Gets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @return a timeOffReasonIconType
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @param value Value to set for the iconType property.
      * @return a void
      */

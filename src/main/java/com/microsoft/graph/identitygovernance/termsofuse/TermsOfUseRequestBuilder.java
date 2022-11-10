@@ -21,12 +21,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity. */
 public class TermsOfUseRequestBuilder {
-    /** The agreementAcceptances property */
+    /** Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity. */
     @javax.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
         return new AgreementAcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The agreements property */
+    /** Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity. */
     @javax.annotation.Nonnull
     public AgreementsRequestBuilder agreements() {
         return new AgreementsRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +38,7 @@ public class TermsOfUseRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreementAcceptances.item collection
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
      * @param id Unique identifier of the item
      * @return a AgreementAcceptanceItemRequestBuilder
      */
@@ -50,7 +50,7 @@ public class TermsOfUseRequestBuilder {
         return new AgreementAcceptanceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.termsOfUse.agreements.item collection
+     * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
      * @param id Unique identifier of the item
      * @return a AgreementItemRequestBuilder
      */

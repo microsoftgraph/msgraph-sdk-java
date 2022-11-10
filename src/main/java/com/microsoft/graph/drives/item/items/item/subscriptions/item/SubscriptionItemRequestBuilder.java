@@ -20,7 +20,7 @@ import java.util.Objects;
 public class SubscriptionItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The reauthorize property */
+    /** Provides operations to call the reauthorize method. */
     @javax.annotation.Nonnull
     public ReauthorizeRequestBuilder reauthorize() {
         return new ReauthorizeRequestBuilder(pathParameters, requestAdapter);

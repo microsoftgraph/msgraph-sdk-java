@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyUserItemRequestBuilder {
-    /** The history property */
+    /** Provides operations to manage the history property of the microsoft.graph.riskyUser entity. */
     @javax.annotation.Nonnull
     public HistoryRequestBuilder history() {
         return new HistoryRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class RiskyUserItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identityProtection.riskyUsers.item.history.item collection
+     * Provides operations to manage the history property of the microsoft.graph.riskyUser entity.
      * @param id Unique identifier of the item
      * @return a RiskyUserHistoryItemItemRequestBuilder
      */

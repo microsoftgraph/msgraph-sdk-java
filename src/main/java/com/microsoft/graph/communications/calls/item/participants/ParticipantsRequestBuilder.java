@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the participants property of the microsoft.graph.call entity. */
 public class ParticipantsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The invite property */
+    /** Provides operations to call the invite method. */
     @javax.annotation.Nonnull
     public InviteRequestBuilder invite() {
         return new InviteRequestBuilder(pathParameters, requestAdapter);

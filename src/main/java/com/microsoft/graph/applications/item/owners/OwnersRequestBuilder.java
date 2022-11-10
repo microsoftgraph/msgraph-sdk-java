@@ -23,38 +23,38 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the owners property of the microsoft.graph.application entity. */
 public class OwnersRequestBuilder {
-    /** The appRoleAssignment property */
+    /** Casts the previous resource to appRoleAssignment. */
     @javax.annotation.Nonnull
     public AppRoleAssignmentRequestBuilder appRoleAssignment() {
         return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The endpoint property */
+    /** Casts the previous resource to endpoint. */
     @javax.annotation.Nonnull
     public EndpointRequestBuilder endpoint() {
         return new EndpointRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    /** Provides operations to manage the collection of application entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
+    /** Casts the previous resource to servicePrincipal. */
     @javax.annotation.Nonnull
     public ServicePrincipalRequestBuilder servicePrincipal() {
         return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);

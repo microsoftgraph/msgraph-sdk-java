@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity. */
 public class ScopedRoleMembershipCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ScopedRoleMembership> _value;

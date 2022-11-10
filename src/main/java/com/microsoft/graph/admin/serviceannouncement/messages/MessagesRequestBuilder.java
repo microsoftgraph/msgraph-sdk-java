@@ -25,27 +25,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
 public class MessagesRequestBuilder {
-    /** The archive property */
+    /** Provides operations to call the archive method. */
     @javax.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The favorite property */
+    /** Provides operations to call the favorite method. */
     @javax.annotation.Nonnull
     public FavoriteRequestBuilder favorite() {
         return new FavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The markRead property */
+    /** Provides operations to call the markRead method. */
     @javax.annotation.Nonnull
     public MarkReadRequestBuilder markRead() {
         return new MarkReadRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The markUnread property */
+    /** Provides operations to call the markUnread method. */
     @javax.annotation.Nonnull
     public MarkUnreadRequestBuilder markUnread() {
         return new MarkUnreadRequestBuilder(pathParameters, requestAdapter);
@@ -54,12 +54,12 @@ public class MessagesRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The unarchive property */
+    /** Provides operations to call the unarchive method. */
     @javax.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unfavorite property */
+    /** Provides operations to call the unfavorite method. */
     @javax.annotation.Nonnull
     public UnfavoriteRequestBuilder unfavorite() {
         return new UnfavoriteRequestBuilder(pathParameters, requestAdapter);

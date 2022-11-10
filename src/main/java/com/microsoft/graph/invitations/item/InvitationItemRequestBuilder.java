@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of invitation entities. */
 public class InvitationItemRequestBuilder {
-    /** The invitedUser property */
+    /** Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity. */
     @javax.annotation.Nonnull
     public InvitedUserRequestBuilder invitedUser() {
         return new InvitedUserRequestBuilder(pathParameters, requestAdapter);

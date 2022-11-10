@@ -22,7 +22,7 @@ public class TeamsTabItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The teamsApp property */
+    /** Provides operations to manage the teamsApp property of the microsoft.graph.teamsTab entity. */
     @javax.annotation.Nonnull
     public TeamsAppRequestBuilder teamsApp() {
         return new TeamsAppRequestBuilder(pathParameters, requestAdapter);

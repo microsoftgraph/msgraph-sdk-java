@@ -22,7 +22,7 @@ public class ColumnDefinitionItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sourceColumn property */
+    /** Provides operations to manage the sourceColumn property of the microsoft.graph.columnDefinition entity. */
     @javax.annotation.Nonnull
     public SourceColumnRequestBuilder sourceColumn() {
         return new SourceColumnRequestBuilder(pathParameters, requestAdapter);

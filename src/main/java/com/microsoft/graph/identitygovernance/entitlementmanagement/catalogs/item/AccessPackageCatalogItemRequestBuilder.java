@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageCatalogItemRequestBuilder {
-    /** The accessPackages property */
+    /** Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity. */
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class AccessPackageCatalogItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
      * @param id Unique identifier of the item
      * @return a AccessPackageItemRequestBuilder
      */

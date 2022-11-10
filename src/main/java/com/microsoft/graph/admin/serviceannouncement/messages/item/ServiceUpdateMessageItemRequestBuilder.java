@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
 public class ServiceUpdateMessageItemRequestBuilder {
-    /** The attachments property */
+    /** Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity. */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The attachmentsArchive property */
+    /** Provides operations to manage the media for the admin entity. */
     @javax.annotation.Nonnull
     public AttachmentsArchiveRequestBuilder attachmentsArchive() {
         return new AttachmentsArchiveRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +37,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.admin.serviceAnnouncement.messages.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
      * @param id Unique identifier of the item
      * @return a ServiceAnnouncementAttachmentItemRequestBuilder
      */

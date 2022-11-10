@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity. */
 public class DetectedAppItemRequestBuilder {
-    /** The managedDevices property */
+    /** Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity. */
     @javax.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
         return new ManagedDevicesRequestBuilder(pathParameters, requestAdapter);
@@ -229,7 +229,7 @@ public class DetectedAppItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.detectedApps.item.managedDevices.item collection
+     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceItemRequestBuilder
      */

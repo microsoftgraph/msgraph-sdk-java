@@ -22,12 +22,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity. */
 public class SectionGroupItemRequestBuilder {
-    /** The parentNotebook property */
+    /** Provides operations to manage the parentNotebook property of the microsoft.graph.sectionGroup entity. */
     @javax.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
         return new ParentNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The parentSectionGroup property */
+    /** Provides operations to manage the parentSectionGroup property of the microsoft.graph.sectionGroup entity. */
     @javax.annotation.Nonnull
     public ParentSectionGroupRequestBuilder parentSectionGroup() {
         return new ParentSectionGroupRequestBuilder(pathParameters, requestAdapter);
@@ -36,12 +36,12 @@ public class SectionGroupItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sectionGroups property */
+    /** Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity. */
     @javax.annotation.Nonnull
     public SectionGroupsRequestBuilder sectionGroups() {
         return new SectionGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The sections property */
+    /** Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity. */
     @javax.annotation.Nonnull
     public SectionsRequestBuilder sections() {
         return new SectionsRequestBuilder(pathParameters, requestAdapter);
@@ -289,7 +289,7 @@ public class SectionGroupItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.sectionGroups.item.sectionGroups.item collection
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
      * @param id Unique identifier of the item
      * @return a SectionGroupItemRequestBuilder
      */
@@ -301,7 +301,7 @@ public class SectionGroupItemRequestBuilder {
         return new SectionGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.onenote.sectionGroups.item.sections.item collection
+     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
      * @param id Unique identifier of the item
      * @return a OnenoteSectionItemRequestBuilder
      */

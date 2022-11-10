@@ -19,12 +19,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
 public class PhoneAuthenticationMethodItemRequestBuilder {
-    /** The disableSmsSignIn property */
+    /** Provides operations to call the disableSmsSignIn method. */
     @javax.annotation.Nonnull
     public DisableSmsSignInRequestBuilder disableSmsSignIn() {
         return new DisableSmsSignInRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The enableSmsSignIn property */
+    /** Provides operations to call the enableSmsSignIn method. */
     @javax.annotation.Nonnull
     public EnableSmsSignInRequestBuilder enableSmsSignIn() {
         return new EnableSmsSignInRequestBuilder(pathParameters, requestAdapter);

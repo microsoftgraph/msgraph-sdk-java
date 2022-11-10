@@ -43,86 +43,86 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the policyRoot singleton. */
 public class PoliciesRequestBuilder {
-    /** The activityBasedTimeoutPolicies property */
+    /** Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public ActivityBasedTimeoutPoliciesRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The adminConsentRequestPolicy property */
+    /** Provides operations to manage the adminConsentRequestPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
         return new AdminConsentRequestPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authenticationFlowsPolicy property */
+    /** Provides operations to manage the authenticationFlowsPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
         return new AuthenticationFlowsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authenticationMethodsPolicy property */
+    /** Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The authorizationPolicy property */
+    /** Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public AuthorizationPolicyRequestBuilder authorizationPolicy() {
         return new AuthorizationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The claimsMappingPolicies property */
+    /** Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The conditionalAccessPolicies property */
+    /** Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The crossTenantAccessPolicy property */
+    /** Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
         return new CrossTenantAccessPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The featureRolloutPolicies property */
+    /** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The homeRealmDiscoveryPolicies property */
+    /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The identitySecurityDefaultsEnforcementPolicy property */
+    /** Provides operations to manage the identitySecurityDefaultsEnforcementPolicy property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The permissionGrantPolicies property */
+    /** Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleManagementPolicies property */
+    /** Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public RoleManagementPoliciesRequestBuilder roleManagementPolicies() {
         return new RoleManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The roleManagementPolicyAssignments property */
+    /** Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public RoleManagementPolicyAssignmentsRequestBuilder roleManagementPolicyAssignments() {
         return new RoleManagementPolicyAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tokenIssuancePolicies property */
+    /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tokenLifetimePolicies property */
+    /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity. */
     @javax.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -130,7 +130,7 @@ public class PoliciesRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.activityBasedTimeoutPolicies.item collection
+     * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a ActivityBasedTimeoutPolicyItemRequestBuilder
      */
@@ -142,7 +142,7 @@ public class PoliciesRequestBuilder {
         return new ActivityBasedTimeoutPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.claimsMappingPolicies.item collection
+     * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a ClaimsMappingPolicyItemRequestBuilder
      */
@@ -154,7 +154,7 @@ public class PoliciesRequestBuilder {
         return new ClaimsMappingPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.conditionalAccessPolicies.item collection
+     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a ConditionalAccessPolicyItemRequestBuilder
      */
@@ -258,7 +258,7 @@ public class PoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.featureRolloutPolicies.item collection
+     * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a FeatureRolloutPolicyItemRequestBuilder
      */
@@ -309,7 +309,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.homeRealmDiscoveryPolicies.item collection
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a HomeRealmDiscoveryPolicyItemRequestBuilder
      */
@@ -363,7 +363,7 @@ public class PoliciesRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item collection
+     * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a PermissionGrantPolicyItemRequestBuilder
      */
@@ -375,7 +375,7 @@ public class PoliciesRequestBuilder {
         return new PermissionGrantPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicies.item collection
+     * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyItemRequestBuilder
      */
@@ -387,7 +387,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.roleManagementPolicyAssignments.item collection
+     * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
      */
@@ -399,7 +399,7 @@ public class PoliciesRequestBuilder {
         return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.tokenIssuancePolicies.item collection
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a TokenIssuancePolicyItemRequestBuilder
      */
@@ -411,7 +411,7 @@ public class PoliciesRequestBuilder {
         return new TokenIssuancePolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.tokenLifetimePolicies.item collection
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
      * @param id Unique identifier of the item
      * @return a TokenLifetimePolicyItemRequestBuilder
      */

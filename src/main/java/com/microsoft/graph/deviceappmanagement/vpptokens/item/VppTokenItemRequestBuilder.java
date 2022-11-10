@@ -22,7 +22,7 @@ public class VppTokenItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The syncLicenses property */
+    /** Provides operations to call the syncLicenses method. */
     @javax.annotation.Nonnull
     public SyncLicensesRequestBuilder syncLicenses() {
         return new SyncLicensesRequestBuilder(pathParameters, requestAdapter);

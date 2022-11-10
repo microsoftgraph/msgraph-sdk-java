@@ -1,8 +1,8 @@
 package com.microsoft.graph.deviceappmanagement.managedappregistrations.item;
 
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.AppliedPoliciesRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.appliedpolicies.item.ManagedAppPolicyItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.IntendedPoliciesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.item.ManagedAppOperationItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.managedappregistrations.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.models.ManagedAppRegistration;
@@ -22,17 +22,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity. */
 public class ManagedAppRegistrationItemRequestBuilder {
-    /** The appliedPolicies property */
+    /** Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity. */
     @javax.annotation.Nonnull
     public AppliedPoliciesRequestBuilder appliedPolicies() {
         return new AppliedPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The intendedPolicies property */
+    /** Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity. */
     @javax.annotation.Nonnull
     public IntendedPoliciesRequestBuilder intendedPolicies() {
         return new IntendedPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +44,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.appliedPolicies.item collection
+     * Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.intendedPolicies.item collection
+     * Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
@@ -266,7 +266,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         return new com.microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppOperationItemRequestBuilder
      */

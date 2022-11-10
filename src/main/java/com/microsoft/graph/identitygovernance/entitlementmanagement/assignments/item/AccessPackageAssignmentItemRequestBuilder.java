@@ -21,26 +21,26 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity. */
 public class AccessPackageAssignmentItemRequestBuilder {
-    /** The accessPackage property */
+    /** Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity. */
     @javax.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
         return new AccessPackageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignmentPolicy property */
+    /** Provides operations to manage the assignmentPolicy property of the microsoft.graph.accessPackageAssignment entity. */
     @javax.annotation.Nonnull
     public AssignmentPolicyRequestBuilder assignmentPolicy() {
         return new AssignmentPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The reprocess property */
+    /** Provides operations to call the reprocess method. */
     @javax.annotation.Nonnull
     public ReprocessRequestBuilder reprocess() {
         return new ReprocessRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The target property */
+    /** Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity. */
     @javax.annotation.Nonnull
     public TargetRequestBuilder target() {
         return new TargetRequestBuilder(pathParameters, requestAdapter);

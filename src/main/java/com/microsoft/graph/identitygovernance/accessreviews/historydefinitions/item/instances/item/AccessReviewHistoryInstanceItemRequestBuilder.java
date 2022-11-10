@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity. */
 public class AccessReviewHistoryInstanceItemRequestBuilder {
-    /** The generateDownloadUri property */
+    /** Provides operations to call the generateDownloadUri method. */
     @javax.annotation.Nonnull
     public GenerateDownloadUriRequestBuilder generateDownloadUri() {
         return new GenerateDownloadUriRequestBuilder(pathParameters, requestAdapter);

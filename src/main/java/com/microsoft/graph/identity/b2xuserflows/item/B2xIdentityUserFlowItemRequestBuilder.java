@@ -25,12 +25,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity. */
 public class B2xIdentityUserFlowItemRequestBuilder {
-    /** The identityProviders property */
+    /** Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The languages property */
+    /** Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public LanguagesRequestBuilder languages() {
         return new LanguagesRequestBuilder(pathParameters, requestAdapter);
@@ -41,12 +41,12 @@ public class B2xIdentityUserFlowItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userAttributeAssignments property */
+    /** Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public UserAttributeAssignmentsRequestBuilder userAttributeAssignments() {
         return new UserAttributeAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The userFlowIdentityProviders property */
+    /** Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2xIdentityUserFlow entity. */
     @javax.annotation.Nonnull
     public UserFlowIdentityProvidersRequestBuilder userFlowIdentityProviders() {
         return new UserFlowIdentityProvidersRequestBuilder(pathParameters, requestAdapter);
@@ -250,7 +250,7 @@ public class B2xIdentityUserFlowItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.identityProviders.item collection
+     * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a IdentityProviderItemRequestBuilder
      */
@@ -262,7 +262,7 @@ public class B2xIdentityUserFlowItemRequestBuilder {
         return new IdentityProviderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.languages.item collection
+     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a UserFlowLanguageConfigurationItemRequestBuilder
      */
@@ -316,7 +316,7 @@ public class B2xIdentityUserFlowItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.identity.b2xUserFlows.item.userAttributeAssignments.item collection
+     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param id Unique identifier of the item
      * @return a IdentityUserFlowAttributeAssignmentItemRequestBuilder
      */

@@ -46,109 +46,109 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the root property of the microsoft.graph.drive entity. */
 public class RootRequestBuilder {
-    /** The analytics property */
+    /** Provides operations to manage the analytics property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkin property */
+    /** Provides operations to call the checkin method. */
     @javax.annotation.Nonnull
     public CheckinRequestBuilder checkin() {
         return new CheckinRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkout property */
+    /** Provides operations to call the checkout method. */
     @javax.annotation.Nonnull
     public CheckoutRequestBuilder checkout() {
         return new CheckoutRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The children property */
+    /** Provides operations to manage the children property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public ChildrenRequestBuilder children() {
         return new ChildrenRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The content property */
+    /** Provides operations to manage the media for the group entity. */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The copy property */
+    /** Provides operations to call the copy method. */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createLink property */
+    /** Provides operations to call the createLink method. */
     @javax.annotation.Nonnull
     public CreateLinkRequestBuilder createLink() {
         return new CreateLinkRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The createUploadSession property */
+    /** Provides operations to call the createUploadSession method. */
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The follow property */
+    /** Provides operations to call the follow method. */
     @javax.annotation.Nonnull
     public FollowRequestBuilder follow() {
         return new FollowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The invite property */
+    /** Provides operations to call the invite method. */
     @javax.annotation.Nonnull
     public InviteRequestBuilder invite() {
         return new InviteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The listItem property */
+    /** Provides operations to manage the listItem property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The permissions property */
+    /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The preview property */
+    /** Provides operations to call the preview method. */
     @javax.annotation.Nonnull
     public PreviewRequestBuilder preview() {
         return new PreviewRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The subscriptions property */
+    /** Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The thumbnails property */
+    /** Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public ThumbnailsRequestBuilder thumbnails() {
         return new ThumbnailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unfollow property */
+    /** Provides operations to call the unfollow method. */
     @javax.annotation.Nonnull
     public UnfollowRequestBuilder unfollow() {
         return new UnfollowRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The validatePermission property */
+    /** Provides operations to call the validatePermission method. */
     @javax.annotation.Nonnull
     public ValidatePermissionRequestBuilder validatePermission() {
         return new ValidatePermissionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The versions property */
+    /** Provides operations to manage the versions property of the microsoft.graph.driveItem entity. */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.root.children.item collection
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
      * @param id Unique identifier of the item
      * @return a DriveItemItemRequestBuilder
      */
@@ -440,7 +440,7 @@ public class RootRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.root.permissions.item collection
+     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
      * @param id Unique identifier of the item
      * @return a PermissionItemRequestBuilder
      */
@@ -462,7 +462,7 @@ public class RootRequestBuilder {
         return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.root.subscriptions.item collection
+     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
      * @param id Unique identifier of the item
      * @return a SubscriptionItemRequestBuilder
      */
@@ -474,7 +474,7 @@ public class RootRequestBuilder {
         return new SubscriptionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.root.thumbnails.item collection
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
      * @param id Unique identifier of the item
      * @return a ThumbnailSetItemRequestBuilder
      */
@@ -486,7 +486,7 @@ public class RootRequestBuilder {
         return new ThumbnailSetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.drives.item.root.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
      * @param id Unique identifier of the item
      * @return a DriveItemVersionItemRequestBuilder
      */

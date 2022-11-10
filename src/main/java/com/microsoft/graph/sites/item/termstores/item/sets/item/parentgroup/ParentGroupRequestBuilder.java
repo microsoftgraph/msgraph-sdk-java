@@ -23,7 +23,7 @@ public class ParentGroupRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sets property */
+    /** Provides operations to manage the sets property of the microsoft.graph.termStore.group entity. */
     @javax.annotation.Nonnull
     public SetsRequestBuilder sets() {
         return new SetsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class ParentGroupRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.sites.item.termStores.item.sets.item.parentGroup.sets.item collection
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
      * @param id Unique identifier of the item
      * @return a SetItemRequestBuilder
      */

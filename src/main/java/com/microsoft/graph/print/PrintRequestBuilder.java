@@ -29,36 +29,36 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the print singleton. */
 public class PrintRequestBuilder {
-    /** The connectors property */
+    /** Provides operations to manage the connectors property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
         return new ConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The printers property */
+    /** Provides operations to manage the printers property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public PrintersRequestBuilder printers() {
         return new PrintersRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The services property */
+    /** Provides operations to manage the services property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public ServicesRequestBuilder services() {
         return new ServicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The shares property */
+    /** Provides operations to manage the shares property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public SharesRequestBuilder shares() {
         return new SharesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The taskDefinitions property */
+    /** Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity. */
     @javax.annotation.Nonnull
     public TaskDefinitionsRequestBuilder taskDefinitions() {
         return new TaskDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -66,7 +66,7 @@ public class PrintRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.print.connectors.item collection
+     * Provides operations to manage the connectors property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrintConnectorItemRequestBuilder
      */
@@ -209,7 +209,7 @@ public class PrintRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrintOperationItemRequestBuilder
      */
@@ -263,7 +263,7 @@ public class PrintRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.printers.item collection
+     * Provides operations to manage the printers property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrinterItemRequestBuilder
      */
@@ -275,7 +275,7 @@ public class PrintRequestBuilder {
         return new PrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.services.item collection
+     * Provides operations to manage the services property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrintServiceItemRequestBuilder
      */
@@ -287,7 +287,7 @@ public class PrintRequestBuilder {
         return new PrintServiceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.shares.item collection
+     * Provides operations to manage the shares property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrinterShareItemRequestBuilder
      */
@@ -299,7 +299,7 @@ public class PrintRequestBuilder {
         return new PrinterShareItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.print.taskDefinitions.item collection
+     * Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity.
      * @param id Unique identifier of the item
      * @return a PrintTaskDefinitionItemRequestBuilder
      */

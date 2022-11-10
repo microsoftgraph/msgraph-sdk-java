@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity. */
 public class PermissionGrantPolicyItemRequestBuilder {
-    /** The excludes property */
+    /** Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity. */
     @javax.annotation.Nonnull
     public ExcludesRequestBuilder excludes() {
         return new ExcludesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The includes property */
+    /** Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity. */
     @javax.annotation.Nonnull
     public IncludesRequestBuilder includes() {
         return new IncludesRequestBuilder(pathParameters, requestAdapter);
@@ -196,7 +196,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item.excludes.item collection
+     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param id Unique identifier of the item
      * @return a PermissionGrantConditionSetItemRequestBuilder
      */
@@ -247,7 +247,7 @@ public class PermissionGrantPolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.permissionGrantPolicies.item.includes.item collection
+     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param id Unique identifier of the item
      * @return a PermissionGrantConditionSetItemRequestBuilder
      */

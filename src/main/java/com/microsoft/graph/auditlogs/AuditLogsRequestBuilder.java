@@ -23,21 +23,21 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the auditLogRoot singleton. */
 public class AuditLogsRequestBuilder {
-    /** The directoryAudits property */
+    /** Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity. */
     @javax.annotation.Nonnull
     public DirectoryAuditsRequestBuilder directoryAudits() {
         return new DirectoryAuditsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The provisioning property */
+    /** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
     @javax.annotation.Nonnull
     public ProvisioningRequestBuilder provisioning() {
         return new ProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The signIns property */
+    /** Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity. */
     @javax.annotation.Nonnull
     public SignInsRequestBuilder signIns() {
         return new SignInsRequestBuilder(pathParameters, requestAdapter);
@@ -137,7 +137,7 @@ public class AuditLogsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.auditLogs.directoryAudits.item collection
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
      * @param id Unique identifier of the item
      * @return a DirectoryAuditItemRequestBuilder
      */
@@ -230,7 +230,7 @@ public class AuditLogsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.auditLogs.provisioning.item collection
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
      * @param id Unique identifier of the item
      * @return a ProvisioningObjectSummaryItemRequestBuilder
      */
@@ -242,7 +242,7 @@ public class AuditLogsRequestBuilder {
         return new ProvisioningObjectSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.auditLogs.signIns.item collection
+     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
      * @param id Unique identifier of the item
      * @return a SignInItemRequestBuilder
      */

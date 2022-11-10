@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
 public class ProvisioningObjectSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ProvisioningObjectSummary> _value;

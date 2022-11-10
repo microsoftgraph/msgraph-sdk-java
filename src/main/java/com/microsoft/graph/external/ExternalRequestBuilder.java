@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the external singleton. */
 public class ExternalRequestBuilder {
-    /** The connections property */
+    /** Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity. */
     @javax.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class ExternalRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.external.connections.item collection
+     * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
      * @param id Unique identifier of the item
      * @return a ExternalConnectionItemRequestBuilder
      */

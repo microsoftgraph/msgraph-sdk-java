@@ -33,61 +33,61 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of chat entities. */
 public class ChatItemRequestBuilder {
-    /** The hideForUser property */
+    /** Provides operations to call the hideForUser method. */
     @javax.annotation.Nonnull
     public HideForUserRequestBuilder hideForUser() {
         return new HideForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The installedApps property */
+    /** Provides operations to manage the installedApps property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The lastMessagePreview property */
+    /** Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public LastMessagePreviewRequestBuilder lastMessagePreview() {
         return new LastMessagePreviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The markChatReadForUser property */
+    /** Provides operations to call the markChatReadForUser method. */
     @javax.annotation.Nonnull
     public MarkChatReadForUserRequestBuilder markChatReadForUser() {
         return new MarkChatReadForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The markChatUnreadForUser property */
+    /** Provides operations to call the markChatUnreadForUser method. */
     @javax.annotation.Nonnull
     public MarkChatUnreadForUserRequestBuilder markChatUnreadForUser() {
         return new MarkChatUnreadForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The members property */
+    /** Provides operations to manage the members property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The messages property */
+    /** Provides operations to manage the messages property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The pinnedMessages property */
+    /** Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public PinnedMessagesRequestBuilder pinnedMessages() {
         return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sendActivityNotification property */
+    /** Provides operations to call the sendActivityNotification method. */
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The tabs property */
+    /** Provides operations to manage the tabs property of the microsoft.graph.chat entity. */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unhideForUser property */
+    /** Provides operations to call the unhideForUser method. */
     @javax.annotation.Nonnull
     public UnhideForUserRequestBuilder unhideForUser() {
         return new UnhideForUserRequestBuilder(pathParameters, requestAdapter);
@@ -293,7 +293,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item.installedApps.item collection
+     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
      * @param id Unique identifier of the item
      * @return a TeamsAppInstallationItemRequestBuilder
      */
@@ -305,7 +305,7 @@ public class ChatItemRequestBuilder {
         return new TeamsAppInstallationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.chat entity.
      * @param id Unique identifier of the item
      * @return a ConversationMemberItemRequestBuilder
      */
@@ -317,7 +317,7 @@ public class ChatItemRequestBuilder {
         return new ConversationMemberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.chat entity.
      * @param id Unique identifier of the item
      * @return a ChatMessageItemRequestBuilder
      */
@@ -371,7 +371,7 @@ public class ChatItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item.pinnedMessages.item collection
+     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
      * @param id Unique identifier of the item
      * @return a PinnedChatMessageInfoItemRequestBuilder
      */
@@ -383,7 +383,7 @@ public class ChatItemRequestBuilder {
         return new PinnedChatMessageInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.chats.item.tabs.item collection
+     * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
      * @param id Unique identifier of the item
      * @return a TeamsTabItemRequestBuilder
      */

@@ -25,7 +25,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The versions property */
+    /** Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity. */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +271,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.agreements.item.file.localizations.item.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
      * @param id Unique identifier of the item
      * @return a AgreementFileVersionItemRequestBuilder
      */

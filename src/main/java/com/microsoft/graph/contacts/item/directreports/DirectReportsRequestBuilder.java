@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the directReports property of the microsoft.graph.orgContact entity. */
 public class DirectReportsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The orgContact property */
+    /** Casts the previous resource to orgContact. */
     @javax.annotation.Nonnull
     public OrgContactRequestBuilder orgContact() {
         return new OrgContactRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +36,7 @@ public class DirectReportsRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The user property */
+    /** Casts the previous resource to user. */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);

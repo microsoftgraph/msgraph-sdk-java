@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
 public class CallsRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The logTeleconferenceDeviceQuality property */
+    /** Provides operations to call the logTeleconferenceDeviceQuality method. */
     @javax.annotation.Nonnull
     public LogTeleconferenceDeviceQualityRequestBuilder logTeleconferenceDeviceQuality() {
         return new LogTeleconferenceDeviceQualityRequestBuilder(pathParameters, requestAdapter);

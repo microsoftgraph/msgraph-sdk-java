@@ -36,92 +36,92 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reports property of the microsoft.graph.deviceManagement entity. */
 public class ReportsRequestBuilder {
-    /** The exportJobs property */
+    /** Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity. */
     @javax.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
         return new ExportJobsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCachedReport property */
+    /** Provides operations to call the getCachedReport method. */
     @javax.annotation.Nonnull
     public GetCachedReportRequestBuilder getCachedReport() {
         return new GetCachedReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyNonComplianceReport property */
+    /** Provides operations to call the getCompliancePolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyNonComplianceReportRequestBuilder getCompliancePolicyNonComplianceReport() {
         return new GetCompliancePolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getCompliancePolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetCompliancePolicyNonComplianceSummaryReportRequestBuilder getCompliancePolicyNonComplianceSummaryReport() {
         return new GetCompliancePolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getComplianceSettingNonComplianceReport property */
+    /** Provides operations to call the getComplianceSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetComplianceSettingNonComplianceReportRequestBuilder getComplianceSettingNonComplianceReport() {
         return new GetComplianceSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyNonComplianceReport property */
+    /** Provides operations to call the getConfigurationPolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceReportRequestBuilder getConfigurationPolicyNonComplianceReport() {
         return new GetConfigurationPolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationPolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder getConfigurationPolicyNonComplianceSummaryReport() {
         return new GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getConfigurationSettingNonComplianceReport property */
+    /** Provides operations to call the getConfigurationSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport() {
         return new GetConfigurationSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceManagementIntentPerSettingContributingProfiles property */
+    /** Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method. */
     @javax.annotation.Nonnull
     public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
         return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceManagementIntentSettingsReport property */
+    /** Provides operations to call the getDeviceManagementIntentSettingsReport method. */
     @javax.annotation.Nonnull
     public GetDeviceManagementIntentSettingsReportRequestBuilder getDeviceManagementIntentSettingsReport() {
         return new GetDeviceManagementIntentSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getDeviceNonComplianceReport property */
+    /** Provides operations to call the getDeviceNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport() {
         return new GetDeviceNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getHistoricalReport property */
+    /** Provides operations to call the getHistoricalReport method. */
     @javax.annotation.Nonnull
     public GetHistoricalReportRequestBuilder getHistoricalReport() {
         return new GetHistoricalReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getNoncompliantDevicesAndSettingsReport property */
+    /** Provides operations to call the getNoncompliantDevicesAndSettingsReport method. */
     @javax.annotation.Nonnull
     public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
         return new GetNoncompliantDevicesAndSettingsReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceMetadata property */
+    /** Provides operations to call the getPolicyNonComplianceMetadata method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceMetadataRequestBuilder getPolicyNonComplianceMetadata() {
         return new GetPolicyNonComplianceMetadataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceReport property */
+    /** Provides operations to call the getPolicyNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceReportRequestBuilder getPolicyNonComplianceReport() {
         return new GetPolicyNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getPolicyNonComplianceSummaryReport property */
+    /** Provides operations to call the getPolicyNonComplianceSummaryReport method. */
     @javax.annotation.Nonnull
     public GetPolicyNonComplianceSummaryReportRequestBuilder getPolicyNonComplianceSummaryReport() {
         return new GetPolicyNonComplianceSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getReportFilters property */
+    /** Provides operations to call the getReportFilters method. */
     @javax.annotation.Nonnull
     public GetReportFiltersRequestBuilder getReportFilters() {
         return new GetReportFiltersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getSettingNonComplianceReport property */
+    /** Provides operations to call the getSettingNonComplianceReport method. */
     @javax.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport() {
         return new GetSettingNonComplianceReportRequestBuilder(pathParameters, requestAdapter);
@@ -292,7 +292,7 @@ public class ReportsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.reports.exportJobs.item collection
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
      * @param id Unique identifier of the item
      * @return a DeviceManagementExportJobItemRequestBuilder
      */

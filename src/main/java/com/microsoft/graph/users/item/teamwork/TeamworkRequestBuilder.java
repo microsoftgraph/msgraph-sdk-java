@@ -22,12 +22,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the teamwork property of the microsoft.graph.user entity. */
 public class TeamworkRequestBuilder {
-    /** The associatedTeams property */
+    /** Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity. */
     @javax.annotation.Nonnull
     public AssociatedTeamsRequestBuilder associatedTeams() {
         return new AssociatedTeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The installedApps property */
+    /** Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity. */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +36,7 @@ public class TeamworkRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sendActivityNotification property */
+    /** Provides operations to call the sendActivityNotification method. */
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +44,7 @@ public class TeamworkRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.teamwork.associatedTeams.item collection
+     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
      * @param id Unique identifier of the item
      * @return a AssociatedTeamInfoItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class TeamworkRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.users.item.teamwork.installedApps.item collection
+     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
      * @param id Unique identifier of the item
      * @return a UserScopeTeamsAppInstallationItemRequestBuilder
      */

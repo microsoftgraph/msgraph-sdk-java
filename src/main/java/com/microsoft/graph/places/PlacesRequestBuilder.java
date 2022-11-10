@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of place entities. */
 public class PlacesRequestBuilder {
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class PlacesRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The room property */
+    /** Casts the previous resource to room. */
     @javax.annotation.Nonnull
     public RoomRequestBuilder room() {
         return new RoomRequestBuilder(pathParameters, requestAdapter);

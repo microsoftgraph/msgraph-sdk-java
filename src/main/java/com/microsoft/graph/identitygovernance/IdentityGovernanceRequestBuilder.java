@@ -21,17 +21,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityGovernance singleton. */
 public class IdentityGovernanceRequestBuilder {
-    /** The accessReviews property */
+    /** Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity. */
     @javax.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
         return new AccessReviewsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The appConsent property */
+    /** Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity. */
     @javax.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The entitlementManagement property */
+    /** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
     @javax.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
@@ -40,7 +40,7 @@ public class IdentityGovernanceRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The termsOfUse property */
+    /** Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity. */
     @javax.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);

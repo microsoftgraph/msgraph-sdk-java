@@ -24,7 +24,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder {
     private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userAttribute property */
+    /** Provides operations to manage the userAttribute property of the microsoft.graph.identityUserFlowAttributeAssignment entity. */
     @javax.annotation.Nonnull
     public UserAttributeRequestBuilder userAttribute() {
         return new UserAttributeRequestBuilder(pathParameters, requestAdapter);

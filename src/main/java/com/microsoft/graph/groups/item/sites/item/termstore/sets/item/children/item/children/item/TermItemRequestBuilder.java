@@ -22,14 +22,14 @@ import java.util.Objects;
 public class TermItemRequestBuilder {
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The relations property */
+    /** Provides operations to manage the relations property of the microsoft.graph.termStore.term entity. */
     @javax.annotation.Nonnull
     public RelationsRequestBuilder relations() {
         return new RelationsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The set property */
+    /** Provides operations to manage the set property of the microsoft.graph.termStore.term entity. */
     @javax.annotation.Nonnull
     public SetRequestBuilder set() {
         return new SetRequestBuilder(pathParameters, requestAdapter);
@@ -277,7 +277,7 @@ public class TermItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.sites.item.termStore.sets.item.children.item.children.item.relations.item collection
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
      * @param id Unique identifier of the item
      * @return a RelationItemRequestBuilder
      */

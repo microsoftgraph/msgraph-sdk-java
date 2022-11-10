@@ -22,7 +22,7 @@ public class RoleAssignmentItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleDefinition property */
+    /** Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity. */
     @javax.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);

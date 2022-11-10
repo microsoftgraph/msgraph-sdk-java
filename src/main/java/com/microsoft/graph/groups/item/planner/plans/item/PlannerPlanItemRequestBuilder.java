@@ -22,12 +22,12 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the plans property of the microsoft.graph.plannerGroup entity. */
 public class PlannerPlanItemRequestBuilder {
-    /** The buckets property */
+    /** Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity. */
     @javax.annotation.Nonnull
     public BucketsRequestBuilder buckets() {
         return new BucketsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The details property */
+    /** Provides operations to manage the details property of the microsoft.graph.plannerPlan entity. */
     @javax.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +36,7 @@ public class PlannerPlanItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The tasks property */
+    /** Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity. */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +44,7 @@ public class PlannerPlanItemRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.planner.plans.item.buckets.item collection
+     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
      * @param id Unique identifier of the item
      * @return a PlannerBucketItemRequestBuilder
      */
@@ -296,7 +296,7 @@ public class PlannerPlanItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.groups.item.planner.plans.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
      * @param id Unique identifier of the item
      * @return a PlannerTaskItemRequestBuilder
      */

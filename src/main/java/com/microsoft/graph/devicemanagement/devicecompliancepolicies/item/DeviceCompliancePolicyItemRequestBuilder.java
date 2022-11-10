@@ -31,27 +31,27 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity. */
 public class DeviceCompliancePolicyItemRequestBuilder {
-    /** The assign property */
+    /** Provides operations to call the assign method. */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The assignments property */
+    /** Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceSettingStateSummaries property */
+    /** Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder deviceSettingStateSummaries() {
         return new DeviceSettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatuses property */
+    /** Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public DeviceStatusesRequestBuilder deviceStatuses() {
         return new DeviceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceStatusOverview property */
+    /** Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceStatusOverviewRequestBuilder(pathParameters, requestAdapter);
@@ -60,30 +60,30 @@ public class DeviceCompliancePolicyItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The scheduleActionsForRules property */
+    /** Provides operations to call the scheduleActionsForRules method. */
     @javax.annotation.Nonnull
     public ScheduleActionsForRulesRequestBuilder scheduleActionsForRules() {
         return new ScheduleActionsForRulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The scheduledActionsForRule property */
+    /** Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public ScheduledActionsForRuleRequestBuilder scheduledActionsForRule() {
         return new ScheduledActionsForRuleRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The userStatuses property */
+    /** Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public UserStatusesRequestBuilder userStatuses() {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The userStatusOverview property */
+    /** Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity. */
     @javax.annotation.Nonnull
     public UserStatusOverviewRequestBuilder userStatusOverview() {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param id Unique identifier of the item
      * @return a DeviceCompliancePolicyAssignmentItemRequestBuilder
      */
@@ -254,7 +254,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param id Unique identifier of the item
      * @return a SettingStateDeviceSummaryItemRequestBuilder
      */
@@ -266,7 +266,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         return new SettingStateDeviceSummaryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param id Unique identifier of the item
      * @return a DeviceComplianceDeviceStatusItemRequestBuilder
      */
@@ -359,7 +359,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
+     * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param id Unique identifier of the item
      * @return a DeviceComplianceScheduledActionForRuleItemRequestBuilder
      */
@@ -371,7 +371,7 @@ public class DeviceCompliancePolicyItemRequestBuilder {
         return new DeviceComplianceScheduledActionForRuleItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param id Unique identifier of the item
      * @return a DeviceComplianceUserStatusItemRequestBuilder
      */

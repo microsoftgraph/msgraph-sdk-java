@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleAssignmentScheduleItemRequestBuilder {
-    /** The activatedUsing property */
+    /** Provides operations to manage the activatedUsing property of the microsoft.graph.unifiedRoleAssignmentSchedule entity. */
     @javax.annotation.Nonnull
     public ActivatedUsingRequestBuilder activatedUsing() {
         return new ActivatedUsingRequestBuilder(pathParameters, requestAdapter);

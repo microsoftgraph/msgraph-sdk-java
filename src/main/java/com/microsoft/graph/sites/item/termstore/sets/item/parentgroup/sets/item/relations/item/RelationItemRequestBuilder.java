@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the relations property of the microsoft.graph.termStore.set entity. */
 public class RelationItemRequestBuilder {
-    /** The fromTerm property */
+    /** Provides operations to manage the fromTerm property of the microsoft.graph.termStore.relation entity. */
     @javax.annotation.Nonnull
     public FromTermRequestBuilder fromTerm() {
         return new FromTermRequestBuilder(pathParameters, requestAdapter);
@@ -29,12 +29,12 @@ public class RelationItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The set property */
+    /** Provides operations to manage the set property of the microsoft.graph.termStore.relation entity. */
     @javax.annotation.Nonnull
     public SetRequestBuilder set() {
         return new SetRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The toTerm property */
+    /** Provides operations to manage the toTerm property of the microsoft.graph.termStore.relation entity. */
     @javax.annotation.Nonnull
     public ToTermRequestBuilder toTerm() {
         return new ToTermRequestBuilder(pathParameters, requestAdapter);

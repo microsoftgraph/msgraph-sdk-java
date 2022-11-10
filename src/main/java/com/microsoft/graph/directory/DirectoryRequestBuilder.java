@@ -23,17 +23,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the directory singleton. */
 public class DirectoryRequestBuilder {
-    /** The administrativeUnits property */
+    /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
     @javax.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
         return new AdministrativeUnitsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deletedItems property */
+    /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
     @javax.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The federationConfigurations property */
+    /** Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity. */
     @javax.annotation.Nonnull
     public FederationConfigurationsRequestBuilder federationConfigurations() {
         return new FederationConfigurationsRequestBuilder(pathParameters, requestAdapter);
@@ -45,7 +45,7 @@ public class DirectoryRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.administrativeUnits.item collection
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
      * @param id Unique identifier of the item
      * @return a AdministrativeUnitItemRequestBuilder
      */
@@ -149,7 +149,7 @@ public class DirectoryRequestBuilder {
         return requestInfo;
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.deletedItems.item collection
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -161,7 +161,7 @@ public class DirectoryRequestBuilder {
         return new DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.directory.federationConfigurations.item collection
+     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
      * @param id Unique identifier of the item
      * @return a IdentityProviderBaseItemRequestBuilder
      */

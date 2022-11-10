@@ -23,7 +23,7 @@ public class AppCatalogsRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The teamsApps property */
+    /** Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity. */
     @javax.annotation.Nonnull
     public TeamsAppsRequestBuilder teamsApps() {
         return new TeamsAppsRequestBuilder(pathParameters, requestAdapter);
@@ -204,7 +204,7 @@ public class AppCatalogsRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.appCatalogs.teamsApps.item collection
+     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
      * @param id Unique identifier of the item
      * @return a TeamsAppItemRequestBuilder
      */

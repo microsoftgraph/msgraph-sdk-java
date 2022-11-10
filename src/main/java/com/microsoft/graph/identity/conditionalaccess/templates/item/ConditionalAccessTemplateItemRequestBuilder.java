@@ -53,34 +53,6 @@ public class ConditionalAccessTemplateItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete navigation property templates for identity
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation() throws URISyntaxException {
-        return createDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property templates for identity
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration requestConfig = new ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      * @return a RequestInformation
      */
@@ -109,78 +81,6 @@ public class ConditionalAccessTemplateItemRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Update the navigation property templates in identity
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ConditionalAccessTemplate body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property templates in identity
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final ConditionalAccessTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration requestConfig = new ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Delete navigation property templates for identity
-     * @return a CompletableFuture of void
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Void>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
-    }
-    /**
-     * Delete navigation property templates for identity
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<Void>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
     }
     /**
      * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
@@ -221,64 +121,6 @@ public class ConditionalAccessTemplateItemRequestBuilder {
             }};
         }
     }
-    /**
-     * Update the navigation property templates in identity
-     * @param body 
-     * @return a CompletableFuture of conditionalAccessTemplate
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> patch(@javax.annotation.Nonnull final ConditionalAccessTemplate body) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ConditionalAccessTemplate>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
-    }
-    /**
-     * Update the navigation property templates in identity
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessTemplate
-     */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> patch(@javax.annotation.Nonnull final ConditionalAccessTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, ConditionalAccessTemplate::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            return new java.util.concurrent.CompletableFuture<ConditionalAccessTemplate>() {{
-                this.completeExceptionally(ex);
-            }};
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration() {
-        }
-    }
     /** Read-only. Nullable. Returns a collection of the specified Conditional Access templates. */
     public class ConditionalAccessTemplateItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
@@ -307,22 +149,6 @@ public class ConditionalAccessTemplateItemRequestBuilder {
          */
         @javax.annotation.Nullable
         public ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration() {
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public java.util.List<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        @javax.annotation.Nullable
-        public ConditionalAccessTemplateItemRequestBuilderPatchRequestConfiguration() {
         }
     }
 }

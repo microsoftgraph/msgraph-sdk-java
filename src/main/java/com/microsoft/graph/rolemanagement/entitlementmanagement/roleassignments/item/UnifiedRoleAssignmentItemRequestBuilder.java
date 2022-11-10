@@ -21,26 +21,26 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
 public class UnifiedRoleAssignmentItemRequestBuilder {
-    /** The appScope property */
+    /** Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity. */
     @javax.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
         return new AppScopeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directoryScope property */
+    /** Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignment entity. */
     @javax.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
         return new DirectoryScopeRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The principal property */
+    /** Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignment entity. */
     @javax.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The roleDefinition property */
+    /** Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleAssignment entity. */
     @javax.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);

@@ -21,17 +21,17 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity. */
 public class RiskyUsersRequestBuilder {
-    /** The confirmCompromised property */
+    /** Provides operations to call the confirmCompromised method. */
     @javax.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
         return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The Count property */
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The dismiss property */
+    /** Provides operations to call the dismiss method. */
     @javax.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
         return new DismissRequestBuilder(pathParameters, requestAdapter);

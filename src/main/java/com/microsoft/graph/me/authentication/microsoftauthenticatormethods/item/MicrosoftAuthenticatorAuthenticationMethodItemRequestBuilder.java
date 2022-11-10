@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
 public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
-    /** The device property */
+    /** Provides operations to manage the device property of the microsoft.graph.microsoftAuthenticatorAuthenticationMethod entity. */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);

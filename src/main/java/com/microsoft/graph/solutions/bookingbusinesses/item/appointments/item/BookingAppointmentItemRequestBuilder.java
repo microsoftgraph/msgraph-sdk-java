@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity. */
 public class BookingAppointmentItemRequestBuilder {
-    /** The cancel property */
+    /** Provides operations to call the cancel method. */
     @javax.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);

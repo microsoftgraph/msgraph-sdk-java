@@ -27,37 +27,37 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the collection of orgContact entities. */
 public class OrgContactItemRequestBuilder {
-    /** The checkMemberGroups property */
+    /** Provides operations to call the checkMemberGroups method. */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The checkMemberObjects property */
+    /** Provides operations to call the checkMemberObjects method. */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The directReports property */
+    /** Provides operations to manage the directReports property of the microsoft.graph.orgContact entity. */
     @javax.annotation.Nonnull
     public DirectReportsRequestBuilder directReports() {
         return new DirectReportsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberGroups property */
+    /** Provides operations to call the getMemberGroups method. */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The getMemberObjects property */
+    /** Provides operations to call the getMemberObjects method. */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The manager property */
+    /** Provides operations to manage the manager property of the microsoft.graph.orgContact entity. */
     @javax.annotation.Nonnull
     public ManagerRequestBuilder manager() {
         return new ManagerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The memberOf property */
+    /** Provides operations to manage the memberOf property of the microsoft.graph.orgContact entity. */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
@@ -66,12 +66,12 @@ public class OrgContactItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The restore property */
+    /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The transitiveMemberOf property */
+    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity. */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
@@ -238,7 +238,7 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.contacts.item.directReports.item collection
+     * Provides operations to manage the directReports property of the microsoft.graph.orgContact entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -289,7 +289,7 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.contacts.item.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.orgContact entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */
@@ -343,7 +343,7 @@ public class OrgContactItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.contacts.item.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity.
      * @param id Unique identifier of the item
      * @return a DirectoryObjectItemRequestBuilder
      */

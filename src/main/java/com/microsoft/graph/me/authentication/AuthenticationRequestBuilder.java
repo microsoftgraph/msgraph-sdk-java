@@ -37,58 +37,58 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the authentication property of the microsoft.graph.user entity. */
 public class AuthenticationRequestBuilder {
-    /** The emailMethods property */
+    /** Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public EmailMethodsRequestBuilder emailMethods() {
         return new EmailMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The fido2Methods property */
+    /** Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public Fido2MethodsRequestBuilder fido2Methods() {
         return new Fido2MethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The methods property */
+    /** Provides operations to manage the methods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public MethodsRequestBuilder methods() {
         return new MethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The microsoftAuthenticatorMethods property */
+    /** Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public MicrosoftAuthenticatorMethodsRequestBuilder microsoftAuthenticatorMethods() {
         return new MicrosoftAuthenticatorMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The operations property */
+    /** Provides operations to manage the operations property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The passwordMethods property */
+    /** Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public PasswordMethodsRequestBuilder passwordMethods() {
         return new PasswordMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The phoneMethods property */
+    /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public PhoneMethodsRequestBuilder phoneMethods() {
         return new PhoneMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The softwareOathMethods property */
+    /** Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public SoftwareOathMethodsRequestBuilder softwareOathMethods() {
         return new SoftwareOathMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The temporaryAccessPassMethods property */
+    /** Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public TemporaryAccessPassMethodsRequestBuilder temporaryAccessPassMethods() {
         return new TemporaryAccessPassMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
-    /** The windowsHelloForBusinessMethods property */
+    /** Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity. */
     @javax.annotation.Nonnull
     public WindowsHelloForBusinessMethodsRequestBuilder windowsHelloForBusinessMethods() {
         return new WindowsHelloForBusinessMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -253,7 +253,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.emailMethods.item collection
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a EmailAuthenticationMethodItemRequestBuilder
      */
@@ -265,7 +265,7 @@ public class AuthenticationRequestBuilder {
         return new EmailAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.fido2Methods.item collection
+     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a Fido2AuthenticationMethodItemRequestBuilder
      */
@@ -316,7 +316,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.methods.item collection
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodItemRequestBuilder
      */
@@ -328,7 +328,7 @@ public class AuthenticationRequestBuilder {
         return new AuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.microsoftAuthenticatorMethods.item collection
+     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
      */
@@ -340,7 +340,7 @@ public class AuthenticationRequestBuilder {
         return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a LongRunningOperationItemRequestBuilder
      */
@@ -352,7 +352,7 @@ public class AuthenticationRequestBuilder {
         return new LongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.passwordMethods.item collection
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a PasswordAuthenticationMethodItemRequestBuilder
      */
@@ -406,7 +406,7 @@ public class AuthenticationRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.phoneMethods.item collection
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a PhoneAuthenticationMethodItemRequestBuilder
      */
@@ -418,7 +418,7 @@ public class AuthenticationRequestBuilder {
         return new PhoneAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.softwareOathMethods.item collection
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a SoftwareOathAuthenticationMethodItemRequestBuilder
      */
@@ -430,7 +430,7 @@ public class AuthenticationRequestBuilder {
         return new SoftwareOathAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.temporaryAccessPassMethods.item collection
+     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a TemporaryAccessPassAuthenticationMethodItemRequestBuilder
      */
@@ -442,7 +442,7 @@ public class AuthenticationRequestBuilder {
         return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.me.authentication.windowsHelloForBusinessMethods.item collection
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
      * @param id Unique identifier of the item
      * @return a WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
      */

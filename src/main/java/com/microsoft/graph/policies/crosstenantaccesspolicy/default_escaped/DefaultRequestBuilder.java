@@ -22,7 +22,7 @@ public class DefaultRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The resetToSystemDefault property */
+    /** Provides operations to call the resetToSystemDefault method. */
     @javax.annotation.Nonnull
     public ResetToSystemDefaultRequestBuilder resetToSystemDefault() {
         return new ResetToSystemDefaultRequestBuilder(pathParameters, requestAdapter);

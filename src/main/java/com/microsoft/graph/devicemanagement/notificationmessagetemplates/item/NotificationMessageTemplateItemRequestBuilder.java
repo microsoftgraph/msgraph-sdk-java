@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity. */
 public class NotificationMessageTemplateItemRequestBuilder {
-    /** The localizedNotificationMessages property */
+    /** Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity. */
     @javax.annotation.Nonnull
     public LocalizedNotificationMessagesRequestBuilder localizedNotificationMessages() {
         return new LocalizedNotificationMessagesRequestBuilder(pathParameters, requestAdapter);
@@ -29,7 +29,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
     private HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private RequestAdapter requestAdapter;
-    /** The sendTestMessage property */
+    /** Provides operations to call the sendTestMessage method. */
     @javax.annotation.Nonnull
     public SendTestMessageRequestBuilder sendTestMessage() {
         return new SendTestMessageRequestBuilder(pathParameters, requestAdapter);
@@ -235,7 +235,7 @@ public class NotificationMessageTemplateItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceManagement.notificationMessageTemplates.item.localizedNotificationMessages.item collection
+     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
      * @param id Unique identifier of the item
      * @return a LocalizedNotificationMessageItemRequestBuilder
      */

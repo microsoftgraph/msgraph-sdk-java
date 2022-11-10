@@ -20,14 +20,14 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity. */
 public class EdiscoveryReviewSetItemRequestBuilder {
-    /** The addToReviewSet property */
+    /** Provides operations to call the addToReviewSet method. */
     @javax.annotation.Nonnull
     public AddToReviewSetRequestBuilder addToReviewSet() {
         return new AddToReviewSetRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private HashMap<String, Object> pathParameters;
-    /** The queries property */
+    /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
     @javax.annotation.Nonnull
     public QueriesRequestBuilder queries() {
         return new QueriesRequestBuilder(pathParameters, requestAdapter);
@@ -277,7 +277,7 @@ public class EdiscoveryReviewSetItemRequestBuilder {
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.security.cases.ediscoveryCases.item.reviewSets.item.queries.item collection
+     * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
      * @param id Unique identifier of the item
      * @return a EdiscoveryReviewSetQueryItemRequestBuilder
      */

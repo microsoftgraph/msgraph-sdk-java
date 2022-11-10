@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity. */
 public class AuthenticationMethodsPolicyRequestBuilder {
-    /** The authenticationMethodConfigurations property */
+    /** Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity. */
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
         return new AuthenticationMethodConfigurationsRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +31,7 @@ public class AuthenticationMethodsPolicyRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private String urlTemplate;
     /**
-     * Gets an item from the com.Microsoft.Graph.policies.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
+     * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
      * @param id Unique identifier of the item
      * @return a AuthenticationMethodConfigurationItemRequestBuilder
      */
