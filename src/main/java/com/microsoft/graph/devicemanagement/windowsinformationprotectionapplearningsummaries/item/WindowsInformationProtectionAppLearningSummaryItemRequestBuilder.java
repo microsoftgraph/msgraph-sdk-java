@@ -66,14 +66,14 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.DELETE;
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
-            final WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration requestConfig = new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration();
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -94,7 +94,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -102,7 +102,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -126,7 +126,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -136,7 +136,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration requestConfig = new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -168,7 +168,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a CompletableFuture of void
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -207,7 +207,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -248,7 +248,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
      * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> patch(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> patch(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -264,7 +264,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration {
+    public class DeleteRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -272,15 +272,15 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration and sets the default values.
+         * Instantiates a new DeleteRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration() {
+        public DeleteRequestConfiguration() {
         }
     }
     /** The windows information protection app learning summaries. */
-    public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -300,17 +300,17 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetQueryParameters queryParameters = new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration() {
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -318,11 +318,11 @@ public class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration() {
+        public PatchRequestConfiguration() {
         }
     }
 }

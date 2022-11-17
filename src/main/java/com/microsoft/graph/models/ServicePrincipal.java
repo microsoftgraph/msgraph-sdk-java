@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServicePrincipal extends DirectoryObject implements Parsable {
-    /** true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
+    /** true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -124,7 +124,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return new ServicePrincipal();
     }
     /**
-     * Gets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+     * Gets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -624,7 +624,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
     }
     /**
-     * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+     * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** The chatId property */
+    /** The unique identifier for the chat whose members should receive the notifications. */
     private String _chatId;
     /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
@@ -30,7 +30,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
         return new ChatMembersNotificationRecipient();
     }
     /**
-     * Gets the chatId property value. The chatId property
+     * Gets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
         writer.writeStringValue("chatId", this.getChatId());
     }
     /**
-     * Sets the chatId property value. The chatId property
+     * Sets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      * @param value Value to set for the chatId property.
      * @return a void
      */

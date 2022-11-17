@@ -65,7 +65,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -73,7 +73,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration requestConfig = new GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -106,7 +106,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
      * @return a CompletableFuture of getAttackSimulationRepeatOffendersResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAttackSimulationRepeatOffendersResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -121,7 +121,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
         }
     }
     /** Invoke function getAttackSimulationRepeatOffenders */
-    public class GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -153,13 +153,13 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters queryParameters = new GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new getAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration() {
+        public GetRequestConfiguration() {
         }
     }
 }

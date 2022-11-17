@@ -10,7 +10,7 @@ import java.util.Objects;
 public class PlannerPlanDetails extends Entity implements Parsable {
     /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan. */
     private PlannerCategoryDescriptions _categoryDescriptions;
-    /** Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group. */
+    /** Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group. */
     private PlannerUserIds _sharedWith;
     /**
      * Instantiates a new plannerPlanDetails and sets the default values.
@@ -52,7 +52,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Gets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
      * @return a plannerUserIds
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class PlannerPlanDetails extends Entity implements Parsable {
         this._categoryDescriptions = value;
     }
     /**
-     * Sets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
      * @param value Value to set for the sharedWith property.
      * @return a void
      */
