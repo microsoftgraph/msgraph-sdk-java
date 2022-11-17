@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** The channelId property */
+    /** The unique identifier for the channel whose members should receive the notification. */
     private String _channelId;
-    /** The teamId property */
+    /** The unique identifier for the team under which the channel resides. */
     private String _teamId;
     /**
      * Instantiates a new ChannelMembersNotificationRecipient and sets the default values.
@@ -32,7 +32,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
         return new ChannelMembersNotificationRecipient();
     }
     /**
-     * Gets the channelId property value. The channelId property
+     * Gets the channelId property value. The unique identifier for the channel whose members should receive the notification.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
         }};
     }
     /**
-     * Gets the teamId property value. The teamId property
+     * Gets the teamId property value. The unique identifier for the team under which the channel resides.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
         writer.writeStringValue("teamId", this.getTeamId());
     }
     /**
-     * Sets the channelId property value. The channelId property
+     * Sets the channelId property value. The unique identifier for the channel whose members should receive the notification.
      * @param value Value to set for the channelId property.
      * @return a void
      */
@@ -81,7 +81,7 @@ public class ChannelMembersNotificationRecipient extends TeamworkNotificationRec
         this._channelId = value;
     }
     /**
-     * Sets the teamId property value. The teamId property
+     * Sets the teamId property value. The unique identifier for the team under which the channel resides.
      * @param value Value to set for the teamId property.
      * @return a void
      */

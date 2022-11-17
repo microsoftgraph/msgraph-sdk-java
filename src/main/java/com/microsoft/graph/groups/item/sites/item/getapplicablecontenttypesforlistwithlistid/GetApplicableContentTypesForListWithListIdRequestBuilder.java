@@ -67,7 +67,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -75,7 +75,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration requestConfig = new GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -108,7 +108,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
      * @return a CompletableFuture of getApplicableContentTypesForListWithListIdResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetApplicableContentTypesForListWithListIdResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetApplicableContentTypesForListWithListIdResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -123,7 +123,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         }
     }
     /** Invoke function getApplicableContentTypesForList */
-    public class GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -163,13 +163,13 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters queryParameters = new GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new getApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration() {
+        public GetRequestConfiguration() {
         }
     }
 }

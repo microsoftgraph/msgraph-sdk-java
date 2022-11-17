@@ -3,7 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Provides operations to manage the collection of agreementAcceptance entities. */
 public enum NetworkConnectionType implements ValuedEnum {
     Unknown("unknown"),
     Wired("wired"),

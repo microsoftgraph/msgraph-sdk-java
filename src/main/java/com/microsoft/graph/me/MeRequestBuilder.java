@@ -14,7 +14,6 @@ import com.microsoft.graph.me.calendargroups.item.CalendarGroupItemRequestBuilde
 import com.microsoft.graph.me.calendars.CalendarsRequestBuilder;
 import com.microsoft.graph.me.calendars.item.CalendarItemRequestBuilder;
 import com.microsoft.graph.me.calendarview.CalendarViewRequestBuilder;
-import com.microsoft.graph.me.calendarview.item.EventItemRequestBuilder;
 import com.microsoft.graph.me.changepassword.ChangePasswordRequestBuilder;
 import com.microsoft.graph.me.chats.ChatsRequestBuilder;
 import com.microsoft.graph.me.chats.item.ChatItemRequestBuilder;
@@ -32,6 +31,7 @@ import com.microsoft.graph.me.drive.DriveRequestBuilder;
 import com.microsoft.graph.me.drives.DrivesRequestBuilder;
 import com.microsoft.graph.me.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.me.events.EventsRequestBuilder;
+import com.microsoft.graph.me.events.item.EventItemRequestBuilder;
 import com.microsoft.graph.me.exportpersonaldata.ExportPersonalDataRequestBuilder;
 import com.microsoft.graph.me.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.me.extensions.item.ExtensionItemRequestBuilder;
@@ -65,7 +65,6 @@ import com.microsoft.graph.me.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.me.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.graph.me.onlinemeetings.OnlineMeetingsRequestBuilder;
 import com.microsoft.graph.me.outlook.OutlookRequestBuilder;
-import com.microsoft.graph.me.owneddevices.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.me.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.me.people.item.PersonItemRequestBuilder;
@@ -87,6 +86,7 @@ import com.microsoft.graph.me.sendmail.SendMailRequestBuilder;
 import com.microsoft.graph.me.settings.SettingsRequestBuilder;
 import com.microsoft.graph.me.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.me.todo.TodoRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.me.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.graph.me.translateexchangeids.TranslateExchangeIdsRequestBuilder;
 import com.microsoft.graph.me.wipemanagedappregistrationsbydevicetag.WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
@@ -586,7 +586,7 @@ public class MeRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -594,7 +594,7 @@ public class MeRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final MeRequestBuilderGetRequestConfiguration requestConfig = new MeRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -618,7 +618,7 @@ public class MeRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PATCH;
@@ -628,7 +628,7 @@ public class MeRequestBuilder {
         requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final MeRequestBuilderPatchRequestConfiguration requestConfig = new MeRequestBuilderPatchRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addRequestHeaders(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
@@ -732,7 +732,7 @@ public class MeRequestBuilder {
      * @return a CompletableFuture of user
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -921,7 +921,7 @@ public class MeRequestBuilder {
      * @return a CompletableFuture of user
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<MeRequestBuilderPatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
@@ -1009,7 +1009,7 @@ public class MeRequestBuilder {
         return new com.microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Retrieve the properties and relationships of user object. */
-    public class MeRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -1020,7 +1020,7 @@ public class MeRequestBuilder {
         public String[] select;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class MeRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -1029,17 +1029,17 @@ public class MeRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public MeRequestBuilderGetQueryParameters queryParameters = new MeRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new meRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public MeRequestBuilderGetRequestConfiguration() {
+        public GetRequestConfiguration() {
         }
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class MeRequestBuilderPatchRequestConfiguration {
+    public class PatchRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -1047,11 +1047,11 @@ public class MeRequestBuilder {
         @javax.annotation.Nullable
         public java.util.List<RequestOption> options = Collections.emptyList();
         /**
-         * Instantiates a new meRequestBuilderPatchRequestConfiguration and sets the default values.
+         * Instantiates a new PatchRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public MeRequestBuilderPatchRequestConfiguration() {
+        public PatchRequestConfiguration() {
         }
     }
 }

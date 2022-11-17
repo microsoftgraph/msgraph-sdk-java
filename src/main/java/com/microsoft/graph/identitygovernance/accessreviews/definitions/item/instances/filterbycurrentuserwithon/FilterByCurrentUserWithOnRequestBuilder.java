@@ -67,7 +67,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.GET;
         }};
@@ -75,7 +75,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         requestInfo.pathParameters = pathParameters;
         requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
-            final FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration requestConfig = new FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.addQueryParameters(requestConfig.queryParameters);
             requestInfo.addRequestHeaders(requestConfig.headers);
@@ -108,7 +108,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
      * @return a CompletableFuture of filterByCurrentUserWithOnResponse
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FilterByCurrentUserWithOnResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<FilterByCurrentUserWithOnResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>(2) {{
@@ -123,7 +123,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         }
     }
     /** Invoke function filterByCurrentUser */
-    public class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters {
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         public Integer top;
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration {
+    public class GetRequestConfiguration {
         /** Request headers */
         @javax.annotation.Nullable
         public HashMap<String, String> headers = new HashMap<>();
@@ -163,13 +163,13 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         public java.util.List<RequestOption> options = Collections.emptyList();
         /** Request query parameters */
         @javax.annotation.Nullable
-        public FilterByCurrentUserWithOnRequestBuilderGetQueryParameters queryParameters = new FilterByCurrentUserWithOnRequestBuilderGetQueryParameters();
+        public GetQueryParameters queryParameters = new GetQueryParameters();
         /**
-         * Instantiates a new filterByCurrentUserWithOnRequestBuilderGetRequestConfiguration and sets the default values.
+         * Instantiates a new GetRequestConfiguration and sets the default values.
          * @return a void
          */
         @javax.annotation.Nullable
-        public FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration() {
+        public GetRequestConfiguration() {
         }
     }
 }
