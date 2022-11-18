@@ -111,7 +111,7 @@ jobs:
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         with:
           workflow: Git Release
           token: ${{ secrets.PERSONAL_TOKEN }}
