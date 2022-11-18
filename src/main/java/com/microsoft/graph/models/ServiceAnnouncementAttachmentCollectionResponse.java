@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity. */
 public class ServiceAnnouncementAttachmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ServiceAnnouncementAttachment> _value;

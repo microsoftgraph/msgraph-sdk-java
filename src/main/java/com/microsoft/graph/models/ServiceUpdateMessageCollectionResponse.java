@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
 public class ServiceUpdateMessageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
     private java.util.List<ServiceUpdateMessage> _value;
